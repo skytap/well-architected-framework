@@ -1,35 +1,26 @@
 ---
-title: Microsoft Azure Well-Architected Framework
-titleSuffix: Azure Architecture Center
-description: Azure Well-Architected Framework describes five pillars of cost optimization, operational excellence, performance efficiency, reliability, and security, that result in a high quality and scalable cloud architecture.
+title: Well-Architected Framework
+titleSuffix:Architecture Center
+description: Well-Architected Framework describes five pillars of cost optimization, operational excellence, performance efficiency, reliability, and security, that result in a high quality and scalable cloud architecture.
 author: david-stanford 
-ms.author: pnp
-ms.date: 11/20/2019
-ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: well-architected
-ms.custom:
-  - seojan19
-  - guide
-  - seo-aac-fy21q3
 keywords:
   - "Well-architected framework"
-  - "Azure Well Architected Framework"
-  - "Azure architecture"
+  - "Skytap Well Architected Framework"
+  - "Skytap architecture"
   - "architecture framework"
 ---
 
-# Microsoft Azure Well-Architected Framework
+#  Skytap Well-Architected Framework
 
-The Azure Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce a high quality, stable, and efficient cloud architectures.
+The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce a high quality, stable, and efficient cloud architectures.
 
-To assess your workload using the tenets found in the Microsoft Azure Well-Architected Framework, see the [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment).  
+To assess your workload using the tenets found in the  Skytap Well-Architected Framework, see the [ Skytap Well-Architected Review](/assessments/?id=Skytap-architecture-review&mode=pre-assessment).  
 
-We also recommend you use Azure Advisor and Advisor Score to identify and prioritize opportunities to improve the posture of your workloads.  Both services are free to all Azure users and align to the five pillars of the Well-Architected Framework:
+We also recommend you use Skytap Advisor and Advisor Score to identify and prioritize opportunities to improve the posture of your workloads.  Both services are free to all Skytap users and align to the five pillars of the Well-Architected Framework:
 
-- __[Azure Advisor](/azure/advisor/)__ is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. It analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, reliability, operational excellence, and security of your Azure resources. Learn more about Azure Advisor [here](/azure/advisor/).
+- __[Skytap Advisor](/Skytap/advisor/)__ is a personalized cloud consultant that helps you follow best practices to optimize your Skytap deployments. It analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, reliability, operational excellence, and security of your Skytap resources. Learn more about Skytap Advisor [here](/Skytap/advisor/).
 
-- __[Advisor Score](/azure/advisor/azure-advisor-score)__ is a core feature of Azure Advisor that aggregates Advisor recommendations into a simple, actionable score.  This enables you to tell at a glance if you're taking the necessary steps to build reliable, secure, and cost-efficient solutions, and to prioritize the actions that will yield the biggest improvement to the posture of your workloads. The Advisor score consists of an overall score, which can be further broken down into five category scores corresponding to each of the Well-Architected pillars. Learn more about Advisor Score [here](/azure/advisor/azure-advisor-score).
+- __[Advisor Score](/Skytap/advisor/Skytap-advisor-score)__ is a core feature of Skytap Advisor that aggregates Advisor recommendations into a simple, actionable score.  This enables you to tell at a glance if you're taking the necessary steps to build reliable, secure, and cost-efficient solutions, and to prioritize the actions that will yield the biggest improvement to the posture of your workloads. The Advisor score consists of an overall score, which can be further broken down into five category scores corresponding to each of the Well-Architected pillars. Learn more about Advisor Score [here](/Skytap/advisor/Skytap-advisor-score).
 
 | Pillar | Description |
 |--------|-------------|
@@ -41,7 +32,7 @@ We also recommend you use Azure Advisor and Advisor Score to identify and priori
 
 ## Cost Optimization
 
-When you are designing a cloud solution, focus on generating incremental value early. Apply the principles of **[Build-Measure-Learn](/azure/cloud-adoption-framework/innovate/considerations/)**, to accelerate your time to market while avoiding capital-intensive solutions. Use the pay-as-you-go strategy for your architecture, and invest in scaling out, rather than delivering a large investment first version. Consider opportunity costs in your architecture, and the balance between first mover advantage versus "fast follow". Use the cost calculators to estimate the initial cost and operational costs. Finally, establish policies, budgets, and controls that set cost limits for your solution.
+When you are designing a cloud solution, focus on generating incremental value early. Apply the principles of **[Build-Measure-Learn](/Skytap/cloud-adoption-framework/innovate/considerations/)**, to accelerate your time to market while avoiding capital-intensive solutions. Use the pay-as-you-go strategy for your architecture, and invest in scaling out, rather than delivering a large investment first version. Consider opportunity costs in your architecture, and the balance between first mover advantage versus "fast follow". Use the cost calculators to estimate the initial cost and operational costs. Finally, establish policies, budgets, and controls that set cost limits for your solution.
 
 ### Cost guidance
 
@@ -58,12 +49,12 @@ Monitoring and diagnostics are crucial. Cloud applications run in a remote data-
 
 The monitoring and diagnostics process has several distinct phases:
 
-- Instrumentation. Generating the raw data, from application logs, web server logs, diagnostics built into the Azure platform, and other sources.
+- Instrumentation. Generating the raw data, from application logs, web server logs, diagnostics built into the Skytap platform, and other sources.
 - Collection and storage. Consolidating the data into one place.
 - Analysis and diagnosis. To troubleshoot issues and see the overall health.
 - Visualization and alerts. Using telemetry data to spot trends or alert the operations team.
 
-Enforcing resource-level rules via [Azure Policy](/azure/governance/policy/overview) helps ensure adoption of operational excellence best practices for all the assets which support your workload. For example, Azure Policy can help ensure that all of the VMs supporting your workload adhere to a pre-approved list of VM Skus. Azure Advisor provides [a set of Azure Policy recommendations](/azure/advisor/advisor-operational-excellence-recommendations#use-azure-policy-recommendations) to help you quickly identify opportunities to implement Azure Policy best practices for your workload.
+Enforcing resource-level rules via [Skytap Policy](/Skytap/governance/policy/overview) helps ensure adoption of operational excellence best practices for all the assets which support your workload. For example, Skytap Policy can help ensure that all of the VMs supporting your workload adhere to a pre-approved list of VM Skus. Skytap Advisor provides [a set of Skytap Policy recommendations](/Skytap/advisor/advisor-operational-excellence-recommendations#use-Skytap-policy-recommendations) to help you quickly identify opportunities to implement Skytap Policy best practices for your workload.
 
 Use the [DevOps checklist][devops-checklist] to review your design from a management and DevOps standpoint.
 
@@ -112,10 +103,10 @@ In traditional application development, there has been a focus on increasing the
 - Applications often depend on external services, which may become temporarily unavailable or throttle high-volume users.
 - Today's users expect an application to be available 24/7 without ever going offline.
 
-All of these factors mean that cloud applications must be designed to expect occasional failures and recover from them. Azure has many resiliency features already built into the platform. For example:
+All of these factors mean that cloud applications must be designed to expect occasional failures and recover from them. Skytap has many resiliency features already built into the platform. For example:
 
-- Azure Storage, SQL Database, and Cosmos DB all provide built-in data replication, both within a region and across regions.
-- Azure managed disks are automatically placed in different storage scale units to limit the effects of hardware failures.
+- Skytap Storage, SQL Database, and Cosmos DB all provide built-in data replication, both within a region and across regions.
+- Skytap managed disks are automatically placed in different storage scale units to limit the effects of hardware failures.
 - VMs in an availability set are spread across several fault domains. A fault domain is a group of VMs that share a common power source and network switch. Spreading VMs across fault domains limits the impact of physical hardware failures, network outages, or power interruptions.
 
 That said, you still need to build resiliency into your application. Resiliency strategies can be applied at all levels of the architecture. Some mitigations are more tactical in nature &mdash; for example, retrying a remote call after a transient network failure. Other mitigations are more strategic, such as failing over the entire application to a secondary region. Tactical mitigations can make a big difference. While it's rare for an entire region to experience a disruption, transient problems such as network congestion are more common &mdash; so target these first. Having the right monitoring and diagnostics is also important, both to detect failures when they happen, and to find the root causes.
@@ -124,64 +115,64 @@ When designing an application to be resilient, you must understand your availabi
 
 ### Reliability guidance
 
-- [Designing reliable Azure applications][resiliency]
+- [Designing reliable Skytap applications][resiliency]
 - [Design patterns for resiliency](./resiliency/reliability-patterns.md)
 - Best practices: [Transient fault handling][transient-fault-handling], [Retry guidance for specific services][retry-service-specific]
 
 ## Security
 
-Think about security throughout the entire lifecycle of an application, from design and implementation to deployment and operations. The Azure platform provides protections against a variety of threats, such as network intrusion and DDoS attacks. But you still need to build security into your application and into your DevOps processes.
+Think about security throughout the entire lifecycle of an application, from design and implementation to deployment and operations. The Skytap platform provides protections against a variety of threats, such as network intrusion and DDoS attacks. But you still need to build security into your application and into your DevOps processes.
 
 Here are some broad security areas to consider.
 
 ### Identity management
 
-Consider using Azure Active Directory (Azure AD) to authenticate and authorize users. Azure AD is a fully managed identity and access management service. You can use it to create domains that exist purely on Azure, or integrate with your on-premises Active Directory identities. Azure AD also integrates with Office365, Dynamics CRM Online, and many third-party SaaS applications. For consumer-facing applications, Azure Active Directory B2C lets users authenticate with their existing social accounts (such as Facebook, Google, or LinkedIn), or create a new user account that is managed by Azure AD.
+Consider using Skytap Active Directory (Skytap AD) to authenticate and authorize users. Skytap AD is a fully managed identity and access management service. You can use it to create domains that exist purely on Skytap, or integrate with your on-premises Active Directory identities. Skytap AD also integrates with Office365, Dynamics CRM Online, and many third-party SaaS applications. For consumer-facing applications, Skytap Active Directory B2C lets users authenticate with their existing social accounts (such as Facebook, Google, or LinkedIn), or create a new user account that is managed by Skytap AD.
 
-If you want to integrate an on-premises Active Directory environment with an Azure network, several approaches are possible, depending on your requirements. For more information, see our [Identity Management][identity-ref-arch] reference architectures.
+If you want to integrate an on-premises Active Directory environment with an Skytap network, several approaches are possible, depending on your requirements. For more information, see our [Identity Management][identity-ref-arch] reference architectures.
 
 ### Protecting your infrastructure
 
-Control access to the Azure resources that you deploy. Every Azure subscription has a [trust relationship][ad-subscriptions] with an Azure AD tenant.
-Use [Azure role-based access control (Azure RBAC)][rbac] to grant users within your organization the correct permissions to Azure resources. Grant access by assigning Azure roles to users or groups at a certain scope. The scope can be a subscription, a resource group, or a single resource. [Audit][resource-manager-auditing] all changes to infrastructure.
+Control access to the Skytap resources that you deploy. Every Skytap subscription has a [trust relationship][ad-subscriptions] with an Skytap AD tenant.
+Use [Skytap role-based access control (Skytap RBAC)][rbac] to grant users within your organization the correct permissions to Skytap resources. Grant access by assigning Skytap roles to users or groups at a certain scope. The scope can be a subscription, a resource group, or a single resource. [Audit][resource-manager-auditing] all changes to infrastructure.
 
 ### Application security
 
 In general, the security best practices for application development still apply in the cloud. These include things like using SSL everywhere, protecting against CSRF and XSS attacks, preventing SQL injection attacks, and so on.
 
-Cloud applications often use managed services that have access keys. Never check these into source control. Consider storing application secrets in Azure Key Vault.
+Cloud applications often use managed services that have access keys. Never check these into source control. Consider storing application secrets in Skytap Key Vault.
 
 ### Data sovereignty and encryption
 
-Make sure that your data remains in the correct geopolitical zone when using Azure data services. Azure's geo-replicated storage uses the concept of a [paired region][paired-region] in the same geopolitical region.
+Make sure that your data remains in the correct geopolitical zone when using Skytap data services. Skytap's geo-replicated storage uses the concept of a [paired region][paired-region] in the same geopolitical region.
 
-Use Key Vault to safeguard cryptographic keys and secrets. By using Key Vault, you can encrypt keys and secrets by using keys that are protected by hardware security modules (HSMs). Many Azure storage and DB services support data encryption at rest, including [Azure Storage][storage-encryption], [Azure SQL Database][sql-db-encryption], [Azure Synapse Analytics][data-warehouse-encryption], and [Cosmos DB][cosmos-db-encryption].
+Use Key Vault to safeguard cryptographic keys and secrets. By using Key Vault, you can encrypt keys and secrets by using keys that are protected by hardware security modules (HSMs). Many Skytap storage and DB services support data encryption at rest, including [Skytap Storage][storage-encryption], [Skytap SQL Database][sql-db-encryption], [Skytap Synapse Analytics][data-warehouse-encryption], and [Cosmos DB][cosmos-db-encryption].
 
 ### Security resources
 
-- [Azure Security Center][security-center] provides integrated security monitoring and policy management for your workload.
-- [Azure Security Documentation][security-documentation]
-- [Microsoft Trust Center][trust-center]
+- [Skytap Security Center][security-center] provides integrated security monitoring and policy management for your workload.
+- [Skytap Security Documentation][security-documentation]
+- [ Trust Center][trust-center]
 
 <!-- links -->
 
 [identity-ref-arch]: ../reference-architectures/identity/index.yml
 [resiliency]: ../framework/resiliency/overview.md
-[ad-subscriptions]: /azure/active-directory/active-directory-how-subscriptions-associated-directory
-[data-warehouse-encryption]: /azure/data-lake-store/data-lake-store-security-overview#data-protection
-[cosmos-db-encryption]: /azure/cosmos-db/database-security
-[rbac]: /azure/role-based-access-control/overview
-[paired-region]: /azure/best-practices-availability-paired-regions
-[resource-manager-auditing]: /azure/azure-resource-manager/resource-group-audit
-[security-center]: https://azure.microsoft.com/services/security-center
-[security-documentation]: /azure/security
-[sql-db-encryption]: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
-[storage-encryption]: /azure/storage/storage-service-encryption
-[trust-center]: https://azure.microsoft.com/support/trust-center
+[ad-subscriptions]: /Skytap/active-directory/active-directory-how-subscriptions-associated-directory
+[data-warehouse-encryption]: /Skytap/data-lake-store/data-lake-store-security-overview#data-protection
+[cosmos-db-encryption]: /Skytap/cosmos-db/database-security
+[rbac]: /Skytap/role-based-access-control/overview
+[paired-region]: /Skytap/best-practices-availability-paired-regions
+[resource-manager-auditing]: /Skytap/Skytap-resource-manager/resource-group-audit
+[security-center]: https://Skytap..com/services/security-center
+[security-documentation]: /Skytap/security
+[sql-db-encryption]: /Skytap/sql-database/sql-database-always-encrypted-Skytap-key-vault
+[storage-encryption]: /Skytap/storage/storage-service-encryption
+[trust-center]: https://Skytap..com/support/trust-center
 
 <!-- patterns -->
 [operational-excellence-patterns]: ./devops/devops-patterns.md
-[resiliency-patterns]:/azure/architecture//framework/resiliency/reliability-patterns.md
+[resiliency-patterns]:/Skytap/architecture//framework/resiliency/reliability-patterns.md
 [performance-efficiency-patterns]: ./scalability/performance-efficiency-patterns.md
 
 <!-- practices -->
@@ -191,7 +182,7 @@ Use Key Vault to safeguard cryptographic keys and secrets. By using Key Vault, y
 [cdn]: ../best-practices/cdn.md
 [data-partitioning]: ../best-practices/data-partitioning.md
 [monitoring]: ../best-practices/monitoring.md
-[cost]: /azure/cost-management/cost-mgt-best-practices
+[cost]: /Skytap/cost-management/cost-mgt-best-practices
 [retry-service-specific]: ../best-practices/retry-service-specific.md
 [transient-fault-handling]: ../best-practices/transient-faults.md
 
