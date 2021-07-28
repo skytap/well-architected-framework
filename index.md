@@ -18,9 +18,9 @@ The Skytap Well-Architected Framework is a set of guiding tenets that can be use
 | Pillar | Description |
 |--------|-------------|
 | [Cost Optimization][cost-pillar] | Managing costs to maximize the value delivered. |
-| [Operational Excellence][devops-pillar] | Operations processes that keep a system running in production. |
-| [Performance Efficiency][scalability-pillar] | The ability of a system to adapt to changes in load. |
-| [Reliability][resiliency-pillar] | The ability of a system to recover from failures and continue to function. |
+| [Operational Excellence][devops-pillar] | Operational best practices and processes that keep a system running in production. |
+| [Scalability and Performance efficiency][scalability-pillar] | The ability of a system to adapt to changes in load. |
+| [Resiliency][resiliency-pillar] | The ability of a system to recover from failures and continue to function. |
 | [Security][security-pillar] | Protecting applications and data from threats. |
 
 ## Cost Optimization
@@ -55,7 +55,7 @@ Enforcing resource-level rules Policy helps ensure adoption of operational excel
 - [Design patterns for operational excellence](./devops/devops-patterns.md)
 - Best practices: [Monitoring and diagnostics][monitoring]
 
-## Performance efficiency
+## Scalability and Performance efficiency
 
 Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. The main ways to achieve this are by using scaling appropriately and implementing PaaS offerings that have scaling built in.
 
@@ -84,9 +84,9 @@ Use the [Performance efficiency checklist](scalability/performance-efficiency.md
 - [Design patterns for performance efficiency](./scalability/performance-efficiency-patterns.md)
 - Best practices: [Autoscaling][autoscale], [Background jobs][background-jobs], [Caching][caching], [CDN][cdn], [Data partitioning][data-partitioning]
 
-## Reliability
+## Resiliency
 
-A reliable workload is one that is both resilient and available. Resiliency is the ability of the system to recover from failures and continue to function. The goal of resiliency is to return the application to a fully functioning state after a failure occurs. Availability is whether your users can access your workload when they need to.
+A resilient workload is one that is both reliable and available. Resiliency is the ability of the system to recover from failures and continue to function. The goal of resiliency is to return the application to a fully functioning state after a failure occurs. Availability is whether your users can access your workload when they need to.
 
 In traditional application development, there has been a focus on increasing the mean time between failures (MTBF). Effort was spent trying to prevent the system from failing. In cloud computing, a different mindset is required, due to several factors:
 
