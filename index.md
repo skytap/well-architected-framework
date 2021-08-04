@@ -8,31 +8,24 @@ keywords:
   - "Skytap Well Architected Framework"
   - "Skytap architecture"
   - "architecture framework"
+  - "markdown"
 ---
 
-#  Skytap Well-Architected Framework
+#  Skytap Well-Architected Framework 
 
 The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce a high quality, stable, and efficient cloud architectures.
-
-To assess your workload using the tenets found in the  Skytap Well-Architected Framework, see the [ Skytap Well-Architected Review](/assessments/?id=Skytap-architecture-review&mode=pre-assessment).  
-
-We also recommend you use Skytap Advisor and Advisor Score to identify and prioritize opportunities to improve the posture of your workloads.  Both services are free to all Skytap users and align to the five pillars of the Well-Architected Framework:
-
-- __[Skytap Advisor](/Skytap/advisor/)__ is a personalized cloud consultant that helps you follow best practices to optimize your Skytap deployments. It analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, reliability, operational excellence, and security of your Skytap resources. Learn more about Skytap Advisor [here](/Skytap/advisor/).
-
-- __[Advisor Score](/Skytap/advisor/Skytap-advisor-score)__ is a core feature of Skytap Advisor that aggregates Advisor recommendations into a simple, actionable score.  This enables you to tell at a glance if you're taking the necessary steps to build reliable, secure, and cost-efficient solutions, and to prioritize the actions that will yield the biggest improvement to the posture of your workloads. The Advisor score consists of an overall score, which can be further broken down into five category scores corresponding to each of the Well-Architected pillars. Learn more about Advisor Score [here](/Skytap/advisor/Skytap-advisor-score).
 
 | Pillar | Description |
 |--------|-------------|
 | [Cost Optimization][cost-pillar] | Managing costs to maximize the value delivered. |
-| [Operational Excellence][devops-pillar] | Operations processes that keep a system running in production. |
-| [Performance Efficiency][scalability-pillar] | The ability of a system to adapt to changes in load. |
-| [Reliability][resiliency-pillar] | The ability of a system to recover from failures and continue to function. |
+| [Operational Excellence][devops-pillar] | Operational best practices and processes that keep a system running in production. |
+| [Scalability and Performance efficiency][scalability-pillar] | The ability of a system to adapt to changes in load. |
+| [Resiliency][resiliency-pillar] | The ability of a system to recover from failures and continue to function. |
 | [Security][security-pillar] | Protecting applications and data from threats. |
 
 ## Cost Optimization
 
-When you are designing a cloud solution, focus on generating incremental value early. Apply the principles of **[Build-Measure-Learn](/Skytap/cloud-adoption-framework/innovate/considerations/)**, to accelerate your time to market while avoiding capital-intensive solutions. Use the pay-as-you-go strategy for your architecture, and invest in scaling out, rather than delivering a large investment first version. Consider opportunity costs in your architecture, and the balance between first mover advantage versus "fast follow". Use the cost calculators to estimate the initial cost and operational costs. Finally, establish policies, budgets, and controls that set cost limits for your solution.
+When you are designing a cloud solution, focus on generating incremental value early. Use the pay-as-you-go strategy for your architecture, and invest in scaling out, rather than delivering a large investment first version. Consider opportunity costs in your architecture, and the balance between first mover advantage versus "fast follow". Use the cost calculators to estimate the initial cost and operational costs. Finally, establish policies, budgets, and controls that set cost limits for your solution.
 
 ### Cost guidance
 
@@ -54,16 +47,15 @@ The monitoring and diagnostics process has several distinct phases:
 - Analysis and diagnosis. To troubleshoot issues and see the overall health.
 - Visualization and alerts. Using telemetry data to spot trends or alert the operations team.
 
-Enforcing resource-level rules via [Skytap Policy](/Skytap/governance/policy/overview) helps ensure adoption of operational excellence best practices for all the assets which support your workload. For example, Skytap Policy can help ensure that all of the VMs supporting your workload adhere to a pre-approved list of VM Skus. Skytap Advisor provides [a set of Skytap Policy recommendations](/Skytap/advisor/advisor-operational-excellence-recommendations#use-Skytap-policy-recommendations) to help you quickly identify opportunities to implement Skytap Policy best practices for your workload.
+Enforcing resource-level rules Policy helps ensure adoption of operational excellence best practices for all the assets which support your workload. For example, Skytap Policy can help ensure that all of the VMs supporting your workload adhere to a pre-approved list of VM Skus. 
 
-Use the [DevOps checklist][devops-checklist] to review your design from a management and DevOps standpoint.
 
 ### Operational excellence guidance
 
 - [Design patterns for operational excellence](./devops/devops-patterns.md)
 - Best practices: [Monitoring and diagnostics][monitoring]
 
-## Performance efficiency
+## Scalability and Performance efficiency
 
 Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. The main ways to achieve this are by using scaling appropriately and implementing PaaS offerings that have scaling built in.
 
@@ -92,9 +84,9 @@ Use the [Performance efficiency checklist](scalability/performance-efficiency.md
 - [Design patterns for performance efficiency](./scalability/performance-efficiency-patterns.md)
 - Best practices: [Autoscaling][autoscale], [Background jobs][background-jobs], [Caching][caching], [CDN][cdn], [Data partitioning][data-partitioning]
 
-## Reliability
+## Resiliency
 
-A reliable workload is one that is both resilient and available. Resiliency is the ability of the system to recover from failures and continue to function. The goal of resiliency is to return the application to a fully functioning state after a failure occurs. Availability is whether your users can access your workload when they need to.
+A resilient workload is one that is both reliable and available. Resiliency is the ability of the system to recover from failures and continue to function. The goal of resiliency is to return the application to a fully functioning state after a failure occurs. Availability is whether your users can access your workload when they need to.
 
 In traditional application development, there has been a focus on increasing the mean time between failures (MTBF). Effort was spent trying to prevent the system from failing. In cloud computing, a different mindset is required, due to several factors:
 
