@@ -18,7 +18,7 @@ The Skytap Well-Architected Framework is a set of guiding tenets that can be use
 | Pillar | Description |
 |--------|-------------|
 | [Cost Optimization][cost-pillar] | Managing costs to maximize the value delivered. |
-| [Operational Excellence][devops-pillar] | Operational best practices and processes that keep a system running in production. |
+| [Operational Excellence](Operations\overview.md) | Operational best practices and processes that keep a system running in production. |
 | [Scalability and Performance efficiency][scalability-pillar] | The ability of a system to adapt to changes in load. |
 | [Resiliency][resiliency-pillar] | The ability of a system to recover from failures and continue to function. |
 | [Security][security-pillar] | Protecting applications and data from threats. |

@@ -21,11 +21,11 @@ These are the disciplines we group in the operational excellence pillar:
 
 | Operational excellence disciplines | Description |
 |-------------------|-------------|
-| [Application design][app-design] | Provides guidance on how to design, build, and orchestrate workloads with DevOps principles in mind  |
-| [Monitoring][monitoring] | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
-| [Application performance management][performance] | The monitoring and management of performance and availability of software applications through DevOps |
-| [Code deployment][deployment] | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
-| [Infrastructure provisioning][iac] | Frequently known as "Automation" or "Infrastructure as code", this discipline refers to best practices for deploying the platform where your application will run on |
+| [Discovery](../operations/discovery.md) | Provides guidance on how to design, build, and orchestrate workloads with DevOps principles in mind  |
+| [Connectivity](../operations/connectivity.md) | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
+| [Sizing and Design](../operations/sizing_design.md) | The monitoring and management of performance and availability of software applications through DevOps |
+| [EcoSystem](../operations/ecosystem.md) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
+| [Migration](../operations/migration.md) | Frequently known as "Automation" or "Infrastructure as code", this discipline refers to best practices for deploying the platform where your application will run on |
 | [Testing][testing] | Testing is fundamental to be prepared for the unexpected and to catch mistakes before they impact users |
 
 <!-- devops disciplines -->

@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\cost",
+    "\\hybrid",
+    "\\resiliency",
+    "\\scalability",
+    "\\security"
   ],
   "PreviewInSolutionExplorer": false
 }
