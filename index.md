@@ -2,7 +2,7 @@
 title: Well-Architected Framework
 titleSuffix:Architecture Center
 description: Well-Architected Framework describes five pillars of cost optimization, operational excellence, performance efficiency, reliability, and security, that result in a high quality and scalable cloud architecture.
-author: david-stanford 
+author: matthew-romero 
 keywords:
   - "Well-architected framework"
   - "Skytap Well Architected Framework"
