@@ -34,41 +34,15 @@ Your organization's cloud adoption effort should support long-term strategic goa
 - [Desktop virtualization](../scenarios/wvd/index.md)
 - [Cloud adoption for the retail industry](../industry/retail/index.md)
 
-## Cloud adoption antipatterns
-
-You might encounter missteps with design, planning, or implementation when migrating to the cloud. We have updated detailed guidance on [antipatterns](../antipatterns/antipatterns-to-avoid.md), that can block innovation and prevent businesses from adopting and realizing goals.
-
-## Align foundation
-
-Your company's cloud adoption journey is guided with foundational decisions that affect the outcomes of your cloud adoption journey. The following information can help you make core decisions, and record them as a reference to be used during the cloud adoption lifecycle.
-
-- [Get started aligning foundation decisions](./cloud-concepts.md)
-- [How does Skytap work](./what-is-azure.md)
-- [Fundamental concepts](../ready/considerations/fundamental-concepts.md)
-- [Portfolio hierarchy](../reference/fundamental-concepts/hosting-hierarchy.md)
-- [Azure hierarchy support](../reference/fundamental-concepts/hierarchy-azure-tools.md)
-
 ## Accelerate adoption
 
-Cloud adoption requires technical change, but to digitally transform with the cloud, it requires more than just IT. Use these guides to start aligning various teams to accelerate migration and innovation efforts.
+To modernize your workloads to the cloud, it requires more than just IT. Use these guides to start aligning various teams to accelerate migration and innovation efforts.
 
 | Guide | Description |
 |--|--|
 | [We want to migrate existing workloads to the cloud](./migrate.md). | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
 | [We want to build new products and services in the cloud](./innovate.md). | This guide can help you prepare to deploy innovative solutions to the cloud. |
 | [We're blocked by environment design and configuration](./design-and-configuration.md). | This guide provides a quick approach to designing and configuring your environment. |
-
-## Improve controls
-
-As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. You'll also want to consider organizational change. These guides help you align people and improve operations to develop your cloud operating model.
-
-| Guide | Description |
-| ----- | ----------- |
-| [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence. |
-| [How do we manage enterprise costs?](./manage-costs.md)                                          | This guide can help you start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This guide can help ensure that the security requirements are applied across the enterprise to minimize risk of breach, and to accelerate recovery when a breach occurs.                                       |
-| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
-| [How do we ensure performance across the enterprise?](./performance.md)                               | This guide can help you establish processes for maintaining performance across the enterprise.                               |
 
 ## Establish teams
 
@@ -84,15 +58,17 @@ Depending on your adoption strategy and operating model, you might need to estab
 
 #  Skytap Well-Architected Framework 
 
+As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. You'll also want to consider organizational change. These guides help you align people and improve operations to develop your cloud operating model.
+
 The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce a high quality, stable, and efficient cloud architectures.
 
-| Pillar | Description |
-|--------|-------------|
-| [Cost Optimization][cost-pillar] | Managing costs to maximize the value delivered. |
-| [Operational Excellence](Operations\overview.md) | Operational best practices and processes that keep a system running in production. |
-| [Scalability and Performance efficiency][scalability-pillar] | The ability of a system to adapt to changes in load. |
-| [Resiliency][resiliency-pillar] | The ability of a system to recover from failures and continue to function. |
-| [Security][security-pillar] | Protecting applications and data from threats. |
+| Guide | Description |
+| ----- | ----------- |
+| [How do we deliver operational excellence during cloud transformation?](./operations/operational-excellence.md)                 | Operational best practices and processes that keep a system running in production. The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence. |
+| [How do we manage enterprise costs?](./cost/overview.md)                                       | This guide can help you start optimizing enterprise costs and manage cost across the environment. Managing costs to maximize the value delivered.                                                                  |
+| [How do we consistently secure the enterprise cloud environment?](./security/security.md)             | This guide can help ensure that the security requirements are applied across the enterprise to minimize risk of breach, and to accelerate recovery when a breach occurs. Protecting applications and data from threats. |                                     
+| [How do we apply the right controls to improve reliability?](./resiliency/overview.md)                  | This guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. The ability of a system to recover from failures and continue to function. 
+|[How can my systems automatically adapt to changes in load, and still ensure performance across the enterprise?](./scalability/overview.md)                   | This guide can help you establish processes for maintaining performance across the enterprise, as well as build in the ability of a system to adapt to changes in workload. |                               |
 
 ## Cost Optimization
 
@@ -123,8 +99,7 @@ Enforcing resource-level rules Policy helps ensure adoption of operational excel
 
 ### Operational excellence guidance
 
-- [Design patterns for operational excellence](./devops/devops-patterns.md)
-- Best practices: [Monitoring and diagnostics][monitoring]
+[Operational Excellence](./operations/operational-excellence.md)- Operational best practices and processes that keep a system running in production. The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence. 
 
 ## Scalability and Performance efficiency
 
