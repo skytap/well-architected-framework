@@ -18,11 +18,9 @@ The Skytap Well-Architected Framework can help you get started with several diff
 Each of the following links takes you to questions that are typically asked when an organization is trying to accomplish a certain goal during their cloud adoption journey.
 
 - [Choose the cloud adoption scenario that best supports your strategy](#cloud-adoption-scenarios)
-- [Examine antipatterns across methodologies and their solutions](#cloud-adoption-antipatterns)
-- [Align foundational concepts to onboard a person, project, or team](#align-foundation)
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)
-- [Improve controls to ensure proper operations of the cloud](#improve-controls)
 - [Establish teams to support adoption and operations](#establish-teams)
+- [Improve controls to ensure proper operations of the cloud](#skytap-well--architected-framework)
 
 ## Cloud adoption scenarios
 
@@ -31,7 +29,6 @@ Your organization's cloud adoption effort should support long-term strategic goa
 - [Hybrid and multicloud adoption scenario](../scenarios/hybrid/scenario-overview.md)
 - [Modern application platform scenario](../scenarios/aks/index.md)
 - [SAP adoption scenario](../scenarios/sap/index.md)
-- [Desktop virtualization](../scenarios/wvd/index.md)
 - [Cloud adoption for the retail industry](../industry/retail/index.md)
 
 ## Accelerate adoption
@@ -58,8 +55,7 @@ Depending on your adoption strategy and operating model, you might need to estab
 
 #  Skytap Well-Architected Framework 
 
-As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. You'll also want to consider organizational change. These guides help you align people and improve operations to develop your cloud operating model.
-
+As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. 
 The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce a high quality, stable, and efficient cloud architectures.
 
 | Guide | Description |
