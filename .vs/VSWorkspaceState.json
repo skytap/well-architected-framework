@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\cost",
-    "\\resiliency",
-    "\\scalability",
-    "\\security"
+    ""
   ],
-  "SelectedNode": "\\scalability",
+  "SelectedNode": "\\C:\\Users\\Matthew\\Source\\Repos\\skytap\\well-architected-framework",
   "PreviewInSolutionExplorer": false
 }
