@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\cost",
-    "\\hybrid",
     "\\resiliency",
     "\\scalability",
     "\\security"
   ],
+  "SelectedNode": "\\scalability",
   "PreviewInSolutionExplorer": false
 }
