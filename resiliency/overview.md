@@ -1,14 +1,13 @@
 ---
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
-author: v-aangie
-ms.date: 02/17/2021
-ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: well-architected
-ms.custom:
-  - fasttrack-edit
-  - overview
+author: matthew-romero 
+keywords:
+  - "Well-architected framework"
+  - "Skytap Well Architected Framework"
+  - "Skytap architecture"
+  - "architecture framework"
+  - "markdown"
 ---
 
 # Principles of the reliability pillar
@@ -49,5 +48,7 @@ To assess your workload using the tenets found in the Microsoft Azure Well-Archi
 
 ## Next step
 
->[!div class="nextstepaction"]
+
 >[Design](./design-checklist.md)
+>[Solutions](./solutions/overview.md)
+
