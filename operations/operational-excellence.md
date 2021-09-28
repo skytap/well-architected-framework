@@ -1,14 +1,12 @@
 ---
 title: Overview of the operational excellence pillar
 description: Describes the operational excellence pillar.
-author: david-stanford
-ms.date: 10/21/2019
-ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: well-architected
-ms.custom:
-  - fasttrack-edit
-  - overview
+keywords:
+  - "Well-architected framework"
+  - "Skytap Well Architected Framework"
+  - "Skytap architecture"
+  - "architecture framework"
+  - "markdown"
 ---
 
 # Overview of the operational excellence pillar
