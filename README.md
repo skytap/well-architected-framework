@@ -157,11 +157,6 @@ When designing an application to be resilient, you must understand your availabi
 
 Think about security throughout the entire lifecycle of an application, from design and implementation to deployment and operations. The Skytap platform provides protections against a variety of threats, such as network intrusion and DDoS attacks. But you still need to build security into your application and into your DevOps processes.
 
-### Protecting your infrastructure
-
-Control access to the Skytap resources that you deploy. Every Skytap subscription has a [trust relationship][ad-subscriptions] with an Skytap AD tenant.
-Use [Skytap role-based access control (Skytap RBAC)][rbac] to grant users within your organization the correct permissions to Skytap resources. Grant access by assigning Skytap roles to users or groups at a certain scope. The scope can be a subscription, a resource group, or a single resource. [Audit][resource-manager-auditing] all changes to infrastructure.
-
 ### Application security
 
 In general, the security best practices for application development still apply in the cloud. These include things like using SSL everywhere, protecting against CSRF and XSS attacks, preventing SQL injection attacks, and so on.
