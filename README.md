@@ -17,10 +17,10 @@ The Skytap Well-Architected Framework can help you get started with several diff
 
 Each of the following links takes you to questions that are typically asked when an organization is trying to accomplish a certain goal during their cloud adoption journey.
 
-- [Choose the cloud adoption scenario that best supports your strategy](#cloud-adoption-scenarios)
-- [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)
-- [Establish teams to support adoption and operations](#establish-teams)
-- [Improve controls to ensure proper operations of the cloud](#skytap-well--architected-framework)
+- [Choose the cloud adoption scenario that best supports your strategy](#cloud-adoption-scenarios.)
+- [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption.)
+- [Establish teams to support adoption and operations](#establish-teams.)
+- [Improve controls to ensure proper operations of the cloud](#skytap-well--architected-framework.)
 
 ## Cloud adoption scenarios
 
