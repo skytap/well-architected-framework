@@ -157,14 +157,6 @@ When designing an application to be resilient, you must understand your availabi
 
 Think about security throughout the entire lifecycle of an application, from design and implementation to deployment and operations. The Skytap platform provides protections against a variety of threats, such as network intrusion and DDoS attacks. But you still need to build security into your application and into your DevOps processes.
 
-Here are some broad security areas to consider.
-
-### Identity management
-
-Consider using Skytap Active Directory (Skytap AD) to authenticate and authorize users. Skytap AD is a fully managed identity and access management service. You can use it to create domains that exist purely on Skytap, or integrate with your on-premises Active Directory identities. Skytap AD also integrates with Office365, Dynamics CRM Online, and many third-party SaaS applications. For consumer-facing applications, Skytap Active Directory B2C lets users authenticate with their existing social accounts (such as Facebook, Google, or LinkedIn), or create a new user account that is managed by Skytap AD.
-
-If you want to integrate an on-premises Active Directory environment with an Skytap network, several approaches are possible, depending on your requirements. For more information, see our [Identity Management][identity-ref-arch] reference architectures.
-
 ### Protecting your infrastructure
 
 Control access to the Skytap resources that you deploy. Every Skytap subscription has a [trust relationship][ad-subscriptions] with an Skytap AD tenant.
@@ -176,17 +168,6 @@ In general, the security best practices for application development still apply 
 
 Cloud applications often use managed services that have access keys. Never check these into source control. Consider storing application secrets in Skytap Key Vault.
 
-### Data sovereignty and encryption
-
-Make sure that your data remains in the correct geopolitical zone when using Skytap data services. Skytap's geo-replicated storage uses the concept of a [paired region][paired-region] in the same geopolitical region.
-
-Use Key Vault to safeguard cryptographic keys and secrets. By using Key Vault, you can encrypt keys and secrets by using keys that are protected by hardware security modules (HSMs). Many Skytap storage and DB services support data encryption at rest, including [Skytap Storage][storage-encryption], [Skytap SQL Database][sql-db-encryption], [Skytap Synapse Analytics][data-warehouse-encryption], and [Cosmos DB][cosmos-db-encryption].
-
-### Security resources
-
-- [Skytap Security Center][security-center] provides integrated security monitoring and policy management for your workload.
-- [Skytap Security Documentation][security-documentation]
-- [ Trust Center][trust-center]
 
 <!-- links -->
 
