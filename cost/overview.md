@@ -1,13 +1,13 @@
 ---
 title: Principles of cost optimization
 description: Describes the Principles of cost optimization.
-author: david-stanford
-ms.date: 05/13/2020
-ms.topic: conceptual
-ms.service: architecture-center
-ms.subservice: well-architected
-ms.custom:
-  - overview
+author: matthew-romero 
+keywords:
+  - "Well-architected framework"
+  - "Skytap Well Architected Framework"
+  - "Skytap architecture"
+  - "architecture framework"
+  - "markdown"
 ---
 
 # Principles of cost optimization

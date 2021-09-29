@@ -1,4 +1,16 @@
-Draft Version: 11.28.21 \#1
+---
+title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
+description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native - Draft Version: 11.28.21
+author: tony-perez 
+keywords:
+  - "Well-architected framework"
+  - "Skytap Well Architected Framework"
+  - "Skytap architecture"
+  - "architecture framework"
+  - "expressroute"
+  - "markdown"
+---
+---Draft Version: 11.28.21 \#1
 
 =====================================================
 
@@ -11,9 +23,11 @@ Create the initial Skytap environment that contains your VMs or LPARs.
 Login to the Azure portal and access your Skytap subscription. You
 should land on the Dashboard page of Skytap.
 
-![](./media/image6.png){width="5.83125in" height="0.7008716097987752in"}
+![](./media/image6.png)
+{width="5.83125in" height="0.7008716097987752in"}
 
-![](./media/image30.png){width="6.5in" height="3.5in"}
+![](./media/image30.png)
+{width="6.5in" height="3.5in"}
 
 Select \"AIX 7.1\" in the search field. Select US-Texas-M-1 as the
 Region. Finally, select the AIX Template that matches your criteria.
@@ -22,7 +36,8 @@ You should see this page, make note of the default subnet that is
 created, you will use that value 10.0.0.0/24 when defining your Express
 Route Connection.
 
-![](./media/image45.png){width="6.5in" height="4.611111111111111in"}
+![](./media/image45.png)
+{width="6.5in" height="4.611111111111111in"}
 
 **[TASK \#2: Create an Express Route Definition in Skytap]{.underline}**
 
@@ -30,8 +45,8 @@ Create an Express Route definition in Skytap using the following steps.
 
 From the Manage Tab, Select \"Public IP\"
 
-![](./media/image33.png){width="5.93125in"
-height="1.8154943132108488in"}
+![](./media/image33.png)
+{width="5.93125in" height="1.8154943132108488in"}
 
 Allocate a public IP address.
 
@@ -42,20 +57,20 @@ traffic stays within the Azure datacenter.
 
 Click:
 
-![](./media/image4.png){width="2.3895833333333334in"
-height="0.8019280402449693in"}
+![](./media/image4.png)
+{width="2.3895833333333334in" height="0.8019280402449693in"}
 
 Select the region where the connection will be created, in this case,
 Texas-M1 which is \"South Central\" in Azure.
 
-![](./media/image24.png){width="4.347916666666666in"
-height="2.6516043307086616in"}
+![](./media/image24.png)
+{width="4.347916666666666in" height="2.6516043307086616in"}
 
 The new unattached IP address will be used in defining the Azure side of
 the Express Route connection.
 
-![](./media/image18.png){width="3.5145833333333334in"
-height="3.0616732283464567in"}
+![](./media/image18.png)
+{width="3.5145833333333334in" height="3.0616732283464567in"}
 
 Now define a new WAN connection in the Skytap user interface.
 
