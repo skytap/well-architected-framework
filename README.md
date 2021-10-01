@@ -38,18 +38,6 @@ To modernize your workloads to the cloud, it requires more than just IT. Use the
 | [We want to build new products and services in the cloud](./innovate.md). | This guide can help you prepare to deploy innovative solutions to the cloud. |
 | [We're blocked by environment design and configuration](./design-and-configuration.md). | This guide provides a quick approach to designing and configuring your environment. |
 
-## Establish teams
-
-Depending on your adoption strategy and operating model, you might need to establish a few teams. This section helps you get those new teams started.
-
-| Guide | Description |
-| ----- | ----------- |
-| [How do we align our organization?](./org-alignment.md)                               | This guide can help you establish an appropriately staffed organizational structure.                               |
-| [Do I need a cloud strategy team?](./team/cloud-strategy.md)     | This team ensures that cloud adoption efforts progress in alignment with business outcomes.                                |
-| [What does a cloud adoption team do?](./team/cloud-adoption.md)     | This team implements technical solutions outlined in the plan, and in accordance with governance requirements.             |
-| [How do I build a cloud governance team?](./team/cloud-governance.md) | This team ensure that risks and risk tolerance are properly evaluated and managed.                                         |
-| [How does a cloud operations team work?](./team/cloud-operations.md) | This team focuses on monitoring, repairing, and the remediation of issues related to traditional IT operations and assets. |
-
 #  Skytap Well-Architected Framework 
 
 As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. 
