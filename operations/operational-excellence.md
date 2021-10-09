@@ -23,9 +23,9 @@ These are the disciplines we group in the operational excellence pillar:
 
 | Operational excellence disciplines | Description |
 |-------------------|-------------|
-| [Phase 01 - Discovery](./discovery.md) | Provides guidance on how to design, build, and orchestrate workloads with DevOps principles in mind  |
-| [Phase 02 - Connectivity](./connectivity.md) | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
-| [Phase 03 - Sizing and Design](./sizing_design.md) | The monitoring and management of performance and availability of software applications through DevOps |
-| [Phase 04 - EcoSystem](./ecosystem.md) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
-| [Phase 05 - Migration](./migration.md) | Frequently known as "Automation" or "Infrastructure as code", this discipline refers to best practices for deploying the platform where your application will run on |
-| [Phase 06 - Testing](./testing.md) | Testing is fundamental to be prepared for the unexpected and to catch mistakes before they impact users |
+| [Phase 01A - Discovery](./discovery.md) | Provides guidance on how to design, build, and orchestrate workloads with DevOps principles in mind  |
+| [Phase 01B - Connectivity](./connectivity.md) | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
+| [Phase 01C - Sizing and Design](./sizing_design.md) | The monitoring and management of performance and availability of software applications through DevOps |
+| [Phase 01D - EcoSystem](./ecosystem.md) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
+| [Phase 01E - Migration](./migration.md) | Frequently known as "Automation" or "Infrastructure as code", this discipline refers to best practices for deploying the platform where your application will run on |
+| [Phase 01F - Testing](./testing.md) | Testing is fundamental to be prepared for the unexpected and to catch mistakes before they impact users |
