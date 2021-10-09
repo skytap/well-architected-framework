@@ -1,6 +1,4 @@
-Gathering Infrastructure and/or Performance data
-
-For Power (IBMi, AIX/VIOS, Linux)
+**Gathering Infrastructure and/or Performance data for Power (IBMi, AIX/VIOS, Linux)**
 
 **Goal** -- Shorten the time required to optimize the performance in
 Skytap's cloud.

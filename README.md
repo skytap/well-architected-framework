@@ -19,24 +19,8 @@ The following links take you to questions that are typically asked when an organ
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption.)
 - [Improve controls to ensure proper operations of the cloud](#skytap-well--architected-framework.)
 
-Having defined your immediate goals, what is your ideal scenario as a starting point in adoption?
-
-Have you aligned your business and technical outcomes with your starting point?
-
-Do you have a multi-faceted team?
-
-Are you aligning the control mechanisms in the right fashion?
 
 
-## Accelerate adoption
-
-To modernize your workloads to the cloud, it requires more than just IT. Use these guides to start aligning various teams to accelerate migration and innovation efforts.
-
-| Guide | Description |
-|--|--|
-| [We want to migrate existing workloads to the cloud](./migrate.md). | This guide is a great starting point if your primary focus is migrating on-premises workloads to the cloud. |
-| [We want to build new products and services in the cloud](./innovate.md). | This guide can help you prepare to deploy innovative solutions to the cloud. |
-| [We're blocked by environment design and configuration](./design-and-configuration.md). | This guide provides a quick approach to designing and configuring your environment. |
 
 #  Skytap Well-Architected Framework 
 
