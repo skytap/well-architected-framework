@@ -16,8 +16,8 @@ keywords:
 The Skytap Well-Architected Framework helps you get started with several different guides. This article groups the guides to help you find the one that best aligns with the current state of your workloads and goals in moving to Skytap for Azure. 
 
 The following links take you to questions that are typically asked when an organization is trying to accomplish one or many goals during their cloud adoption journey.
-- [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption.)
-- [Improve controls to ensure proper operations of the cloud](#skytap-well--architected-framework.)
+- [Adopt the cloud to deliver business and technical outcomes sooner](./accelerateadoption.md)
+- [Improve design and deployments to ensure proper operations of the cloud](./operations/operational-excellence.md)  
 
 
 
