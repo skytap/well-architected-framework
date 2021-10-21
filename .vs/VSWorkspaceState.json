@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\scalability",
+    "\\security"
   ],
-  "SelectedNode": "\\C:\\Users\\Matthew\\Source\\Repos\\well-architected-framework",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
