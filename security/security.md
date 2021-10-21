@@ -72,4 +72,4 @@ and platform.
 
 ## Next steps
 
-[Key Security Areas](./security/keysecurityareas.md)  
+[Key Security Areas](./keysecurityareas.md)  
