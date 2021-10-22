@@ -72,4 +72,5 @@ and platform.
 
 ## Next steps
 
-[Key Security Areas](./keysecurityareas.md)  
+[Key Security Areas](./keysecurityareas.md)
+[Security Management](./securitymanagement.md)  
