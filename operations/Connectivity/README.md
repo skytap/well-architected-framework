@@ -1,8 +1,6 @@
-<https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/app-design>
+## **Task: Connectivity**
 
-Task Connectivity
-
-Summary
+**Summary**
 
 Building a reliable application in the cloud is different from
 traditional application development. While historically you may have
@@ -13,7 +11,6 @@ failures altogether, the goal is to minimize the effects of a single
 failing component. Failures you can expect here are inherent to highly
 distributed systems, not a feature of Azure.
 
-Key Points
 
 ## **Key Points**
 
