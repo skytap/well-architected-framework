@@ -18,7 +18,7 @@ itself. This document outlines architectural elements necessary to
 achieve a robust implementation on the Skytap platform and best
 practices for how your Skytap account should be configured.
 
-![](.//media/image2.png){width="6.375in" height="3.013888888888889in"}
+<img src="./media/image2.png" width="6000" alt="Sytap Secuurity Control Map">
 
 *Figure 1 - Control Map*
 
@@ -40,8 +40,7 @@ Similar to other cloud services, Skytap operates a shared responsibility
 model with regards to security. Skytap is accountable for the platform
 and customers are accountable for the way they use that platform.
 
-![](.//media/image3.png){width="5.2962390638670165in"
-height="5.098958880139983in"}
+<img src="./media/image3.png" width="500" alt="Sytap Secuurity Control Map">
 
 *Figure 2 -- Shared Responsibility Model*
 
@@ -72,5 +71,6 @@ and platform.
 
 ## Next steps
 
-[Key Security Areas](./keysecurityareas.md)
-[Security Management](./securitymanagement.md)  
+* [Key Security Areas](./keysecurityareas.md)
+
+* [Security Management](./securitymanagement.md)  
