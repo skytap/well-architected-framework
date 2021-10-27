@@ -1,13 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cost",
-    "\\hybrid",
-    "\\operations",
-    "\\operations\\ExpressRoute",
-    "\\resiliency",
-    "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\BRMS",
     "\\scalability",
     "\\security"
   ],
