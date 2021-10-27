@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cost",
     "\\hybrid",
     "\\operations",
-    "\\operations\\ExpressRoute",
-    "\\resiliency",
+    "\\operations\\Connectivity",
+    "\\operations\\Discovery",
+    "\\operations\\Ecosystems",
     "\\resiliency\\solutions",
     "\\resiliency\\solutions\\BRMS",
     "\\scalability",
     "\\security"
   ],
+  "SelectedNode": "\\operations\\Discovery\\WAFIntroPlanMigrate.md",
   "PreviewInSolutionExplorer": false
 }
