@@ -1,15 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cost",
     "\\hybrid",
     "\\operations",
-    "\\operations\\ExpressRoute",
-    "\\resiliency",
-    "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\BRMS",
+    "\\operations\\Connectivity",
+    "\\operations\\Discovery",
+    "\\operations\\Ecosystems",
     "\\scalability",
     "\\security"
   ],
+  "SelectedNode": "\\operations\\Connectivity\\README.md",
   "PreviewInSolutionExplorer": false
 }
