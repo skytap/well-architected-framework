@@ -1,0 +1,30 @@
+***Skytap for Azure Support and Limits (IBM i)***
+
+
+**Compute**
+
+LPAR Sizing and OS Support
+for Power
+
+<li>S922 System p Frames
+<li>IBM i P10 License Class
+<li>Up to 4 vCPU / 512 GB RAM per LPAR
+<li>CPW up to 42472 per LPAR
+<li>Supports:
+IBM i:  7.2 TR 9, 7.3 TR 5, 7.4
+
+
+**Network**
+
+<li>IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises		<li>Range: 1 GB/s Limit
+<li>Layer 2 networking in environment
+ <li>Range: Burst to 2.7 GB/s Limit
+<li>10 NICs Per Host
+<li>10 VPN Connections Per Account
+
+
+**Storage**
+<li> Limit of 32 Disks for POWER
+<li>Each Disk Limited to 2TB 
+<li>Storage performance scalability with VM/LPAR RAM capacity
+<li>IOPS up to 30K per LPAR

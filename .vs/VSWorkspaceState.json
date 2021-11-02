@@ -6,11 +6,9 @@
     "\\operations\\Connectivity",
     "\\operations\\Discovery",
     "\\operations\\Ecosystems",
-    "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\BRMS",
     "\\scalability",
     "\\security"
   ],
-  "SelectedNode": "\\operations\\Discovery\\WAFIntroPlanMigrate.md",
+  "SelectedNode": "\\operations\\Connectivity\\README.md",
   "PreviewInSolutionExplorer": false
 }
