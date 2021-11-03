@@ -15,4 +15,4 @@
 <li>Performance tuning features optimize performance for your environment (e.g. parallel applies and database caching)
 <li>Active-active replication with built-in conflict resolution delivers RTO in seconds (as quickly as moving users to another active server)
 </li>
-<img src=/.media/preciselyhotmigrationtopo.png>
+<img src="/.media/preciselyhotmigrationtopo.png" width="6000" alt="preciselytopo">

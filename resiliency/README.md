@@ -44,4 +44,4 @@ They provide a guide for the questions that follow.
 **Solutions**
  >[Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
   
- >Cold (Warm) Migrations (Backup and Restore)
+ >[Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
