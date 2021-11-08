@@ -34,6 +34,18 @@ They provide a guide for the questions that follow.
 
 - **Address security-related risks -** Identifying and addressing security-related risks helps to minimize application downtime and data loss caused by unexpected security exposures.
 
+
+## Definitions
+
+**RTO**: Downtime of services, apps and infrastructure for business continuity – i.e., the amount of time it takes to get back up and running in the event of a disaster or outage.
+
+**RPO**: Frequency of data backup – i.e., the amount of time in which data may be lost.
+
+The two numbers above, combined with contingencies like distance, amount of data rate change and available bandwidth will determine whether to employ a High Availability Tool or a Disaster Recovery Tool.
+
+This is VERY similar to a WARM versus HOT migration, and the same tools may be utilized.
+<img src="./media/backuptypes.png">
+
 ## Next step
 
 **Design**

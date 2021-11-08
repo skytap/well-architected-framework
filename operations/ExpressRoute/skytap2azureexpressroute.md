@@ -16,15 +16,14 @@ keywords:
 
 EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 
-**[TASK \#1: Create Skytap Environment]{.underline}**
+**[Skytap + Azure Express Route - Step 01 - Create Skytap Environment]{.underline}**
 
 Create the initial Skytap environment that contains your VMs or LPARs.
 
 Login to the Azure portal and access your Skytap subscription. You
 should land on the Dashboard page of Skytap.
 
-![](./media/image6.png)
-{width="5.83125in" height="0.7008716097987752in"}
+<img src="./media/image6.png" width="700">
 
 ![](./media/image30.png)
 {width="6.5in" height="3.5in"}
@@ -39,7 +38,15 @@ Route Connection.
 ![](./media/image45.png)
 {width="6.5in" height="4.611111111111111in"}
 
-**[TASK \#2: Create an Express Route Definition in Skytap]{.underline}**
+**[Skytap + Azure Express Route - Step 02 - Create an Express Route Definition in Skytap]{.underline}**
+
+In Skytap – Establish Private Network Connection with Express Route
+
+Configure a Virtual Network Gateway in Azure for ExpressRoute
+
+Connect the ExpressRoute Circuit to the Virtual Network Gateway.
+
+![Express Route Topo](media/ExpressRouteTopo.png)
 
 Create an Express Route definition in Skytap using the following steps.
 
