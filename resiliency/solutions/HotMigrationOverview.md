@@ -1,5 +1,16 @@
 <img src="../media/preciselyhotmigrationtopo.png" width="6000" alt="preciselytopo">
 
+Quick Recap: What is Precisely?
+
+MIMIX is the most prevalent tool used in RPO scenarios of near-zero
+
+Easy to Package – Support for both AIX and IBM I
+
+Automated Role Swaps Allow for Testing, Operations Upgrades in Prod
+
+AIX Solution Provides Live Snapshot Capability for Any Subsidiary Environment Seeding
+
+
 **Built on IBM’s remote journaling**
 
 <li>Replicates changed data in real time
@@ -22,6 +33,19 @@
 <img src="../media/preciselyhotmigrationscenerios.png" width="6000" alt="preciselytopo">
 
 
+<img src="../media/preciselymimixibmitopo.png">
+
+<img src="../media/mimixibmirunbookoutline.png">
+
+**Whats different about AIX?**
+<li>The AIX Mimix Product focuses on Volume Group replication and sync
+<li>Any applications encapsulated in the Volume Group are included as part of the replication
+<li>The Root Volume Group is NOT Replicated (Needs to be Handled Separately) [There are some known scripts for handling initial sync of Root Volume Group]
+<li>Point in Time Snapshot of Volume Groups
+<li>Inline Encryption
+
+<img src="../media/preciselymimixaixtopo.png">
+<img src="../media/mimixaixrunbookoutline.png">
 
 **Skytap Live Clone** 
 
