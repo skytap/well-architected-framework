@@ -1,4 +1,4 @@
-Internal Networking
+## Internal Networking
 
 Several of these architectural building blocks are duplicated in the
 Edge Networking section and this is by design, each environment should
@@ -6,8 +6,7 @@ be secured independently of each other by creating a defense in depth
 approach. This means that if one layer is compromised the crown jewels
 will still be secure.
 
-![](./internalnetworkingmedia/media/image1.png){width="4.053839676290464in"
-height="2.1838888888888888in"}
+<img src="internalnetworkingmedia/media/image1.png" width="800">
 
 *Figure 15 -- Internal Networking Required Capabilities*
 
@@ -52,9 +51,7 @@ a Database running on AIX in Skytap could be connected to a frontend
 application hosted in a Hyperscale cloud provider without having to
 manually configure routing at each layer.
 
-![A close up of text on a white background Description automatically
-generated](./internalnetworkingmedia/media/image2.png){width="2.932292213473316in"
-height="2.837594050743657in"}
+<img src="internalnetworkingmedia/media/image2.png" alt="A close up of text on a white background Description automatically" width="600">
 
 In addition to network simplification a Service Mesh can also provide
 fine-grained access control, mutual TLS authentication and remove
