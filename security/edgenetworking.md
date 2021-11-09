@@ -1,6 +1,6 @@
-Edge
-Networking![](./edgenetworkingmedia/media/image1.png){width="1.5833333333333333in"
-height="5.645833333333333in"}
+## Edge Networking
+
+<img src="./edgenetworkingmedia/media/image1.png" width="800">
 
 The Edge Networking capability provides access to resources outside of
 the immediate environment in Skytap, and as such, represents a
@@ -39,16 +39,13 @@ matching traffic flows to known signatures
 When providing Internet or VPN access, this stack is typically
 implemented, as below. With the reverse being true for outbound traffic.
 
-![](./edgenetworkingmedia/media/image2.png){width="6.375in"
-height="1.125in"}
+<img src="./edgenetworkingmedia/media/image2.png" width="800">
 
 *Figure 11 - Typical Traffic Flow*[^1]
 
 #### Example High Level Design
 
-![A screenshot of a cell phone Description automatically
-generated](./edgenetworkingmedia/media/image3.png){width="3.9348009623797027in"
-height="6.621166885389326in"}
+<img src="./edgenetworkingmedia/media/image3.png" width="600">
 
 *Figure 12 - Example Internet and VPN Connection Scheme*
 
@@ -127,8 +124,7 @@ Internet, but not private connectivity. Multiple VPNs can be created for
 high availability and to connect multiple corporate data centres to the
 Skytap cloud.
 
-![](./edgenetworkingmedia/media/image4.png){width="7.5in"
-height="4.291666666666667in"}
+<img src="./edgenetworkingmedia/media/image4.png" width="800">
 
 *Figure 13 - Example VPN Connection Scheme*
 
