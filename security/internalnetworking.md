@@ -6,7 +6,7 @@ be secured independently of each other by creating a defense in depth
 approach. This means that if one layer is compromised the crown jewels
 will still be secure.
 
-<img src="internalnetworkingmedia/media/image1.png" width="800">
+<img src="internalnetworkingmedia/media/image1.png" height="800">
 
 *Figure 15 -- Internal Networking Required Capabilities*
 
