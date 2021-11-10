@@ -1,50 +1,45 @@
-## **Task: Connectivity**
+## **Connectivity**
 
 **Summary**
 
-Building a reliable application in the cloud is different from
-traditional application development. While historically you may have
+Building a reliable network in the cloud is different from
+traditional on-premise environments. While historically you may have
 purchased levels of redundant higher-end hardware to minimize the chance
-of an entire application platform failing, in the cloud, we acknowledge
+of an entire network stack failing, in the cloud, we acknowledge
 up front that failures will happen. Instead of trying to prevent
 failures altogether, the goal is to minimize the effects of a single
-failing component. Failures you can expect here are inherent to highly
-distributed systems, not a feature of Azure.
+failing component. .
+
+## Key Points
+
+**Skytap-owned versus customer-owned responsabilities**
+
+<img src="../../security/media/image3.png" width="500" alt="Shared Responsibility Model">
+
+*Figure 2 -- Shared Responsibility Model*
+
+## Choosing the right design
+
+- [Internal Networking](../../security/internalnetworking.md)
+- [Edge Networking](../../security/edgenetworking.md)
 
 
-## **Key Points**
+## Getting started with IBM Cloud
 
--   Use Availability Zones where applicable to improve reliability and
-    optimize costs.
+- VPN
 
--   Design applications to operate when impacted by failures.
+- PNC/Equinix
 
--   Use the native resiliency capabilities of PaaS to support overall
-    application reliability.
+## Getting Started with Azure
 
--   Design to scale out.
+- VPN
 
--   Validate that required capacity is within Azure service scale limits
-    and quotas.
+- [Express Route/Global Reach](/ExpressRoute/skytap2azureexpressroute.md)
 
-Choosing the right design
 
-Task2 Getting started with IBM Cloud
+## vWAN 
 
-> VPN
 
-PNC/Equinix
-
-Task 3 Getting Started with Azure
-
-VPN
-
-Express Route/Global Reach
-
-Skytap-owned versus customer-owned
-
-vWAN
-
-Considerations on Reliability
+## Considerations on Reliability
 
 Next Steps
