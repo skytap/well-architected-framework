@@ -70,7 +70,17 @@ and platform.
 
 
 ## Next steps
-
+ 
 * [Key Security Areas](./keysecurityareas.md)
 
 * [Security Management](./securitymanagement.md)  
+
+* [Edge Networking](./edgenetworking.md) 
+
+* [Virtual Machines](./virtualmachines.md) 
+
+* [Internal Networking](./internalnetworking.md) 
+
+* [Security as a Service](./securityasaservice.md) 
+
+

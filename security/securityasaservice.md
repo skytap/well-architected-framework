@@ -51,8 +51,22 @@ wider cloud strategy.
   J         Vulnerability scanning
 
   K         Web security
-  -----------------------------------------------------------------------
 
+
+
+
+## Next steps
+
+* [Security Overview](./README.md)  
+* [Key Security Areas](./keysecurityareas.md)
+
+* [Security Management](./securitymanagement.md)  
+
+* [Edge Networking](./edgenetworking.md) 
+
+* [Virtual Machines](./virtualmachines.md) 
+
+* [Internal Networking](./internalnetworking.md) 
 [^1]: *Cloud Security Alliance. [[\"Defined Categories of Security as a
     Service\"]{.ul}](https://downloads.cloudsecurityalliance.org/assets/research/security-as-a-service/csa-categories-securities-prep.pdf)
     (PDF). Cloud Security Alliance. Retrieved 5 June 2017.*

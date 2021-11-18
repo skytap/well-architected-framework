@@ -6,9 +6,11 @@
     "\\operations\\Connectivity",
     "\\operations\\Discovery",
     "\\operations\\Ecosystems",
+    "\\operations\\ExpressRoute",
+    "\\resiliency",
     "\\scalability",
     "\\security"
   ],
-  "SelectedNode": "\\operations\\Connectivity\\README.md",
+  "SelectedNode": "\\resiliency\\designconsiderationsibm.md",
   "PreviewInSolutionExplorer": false
 }
