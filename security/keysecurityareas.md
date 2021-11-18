@@ -16,10 +16,6 @@ Virtual Machines.
 For each of these areas and subsections this document will provide
 standardized designs and partner points of contact where appropriate.
 
-![](.//media/image4.png){width="5.875in" height="8.305555555555555in"}
-
-*Figure 4 - Cloud Security Capabilities*
-
 ###  
 
 ### Platform
@@ -28,9 +24,9 @@ The Skytap platform provides controls for Security Policies;
 Notifications; Authentication, Authorisation and Accounting; and
 Auditing.
 
-![](.//media/image4.png){width="5.875in" height="1.2727274715660541in"}
+<img src=".//media/image4.png" width="500">
 
-*Figure 5 - Platform Required Capabilities*
+*Figure 1 - Platform Required Capabilities*
 
 #### Security Policies
 
@@ -44,9 +40,9 @@ access the Skytap dashboard securely from the Skytap infrastructure.
 More information on access policies is available
 [[here]{.ul}](https://help.skytap.com/setting-access-policies.html)
 
-![](.//media/image5.png){width="7.267716535433071in" height="3.875in"}
+<img src=".//media/image5.png" width="800">
 
-*Figure 6 - Access Policies available within the Skytap Dashboard*
+*Figure 2 - Access Policies available within the Skytap Dashboard*
 
 #### Notifications
 
@@ -269,10 +265,9 @@ users to maintain the templates (template creators), and all other users
 in the account will have permission to create environments from those
 templates (template users).
 
-![projects](.//media/image6.png){width="5.6361100174978125in"
-height="4.986805555555556in"}
+<img src=".//media/image6.png" width="500">
 
-*Figure 7 - Example of Project Implementation*
+*Figure 3 - Example of Project Implementation*
 
 **Solution:** Create 2 projects:
 
@@ -334,15 +329,13 @@ controls such as endpoint integrity and verification, location-based
 authentication and conditional/just in time access.
 
   ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
-  Application                                                                                                      Vendor     Reference Architecture
+  #### Application Vendor  Reference Architecture
+             
+  [Workforce Okta Identity](https://www.okta.com/workforce-identity/)          
 
-                                                                                                                              
+  [PingOne](https://www.pingidentity.com/en/cloud/pingone.html)                     
 
-  [[Workforce                                                                                                      Okta       
-  Identity](https://www.okta.com/workforce-identity/)<https://azure.microsoft.com/en-gb/services/monitor/>]{.ul}              
-
-  [[PingOne]{.ul}](https://www.pingidentity.com/en/cloud/pingone.html)\                                            Ping       
-  [[PingFederate]{.ul}](https://www.pingidentity.com/en/software/pingfederate.html)                                Identity   
+  [PingFederate](https://www.pingidentity.com/en/software/pingfederate.html)                               
   ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
 
 ##### Labels
