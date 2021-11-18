@@ -144,7 +144,6 @@ additional permissions that are **optional (O)** for each type of user.
 
 *Extended User Permissions*
 
-
 +-------+------+--------+---------+----------------------------------+
 | Restr | Stan | User   | Admini  | Permission                       |
 | icted | dard | M      | strator |                                  |
