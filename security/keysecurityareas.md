@@ -166,6 +166,8 @@ prevent excessive user permissions.
 | ✔️             |         |        |             |        | Delete the project                                                                                        |
 | Administrator |         |        |             |        | Change project permissions                                                                                |
 | Administrator |         |        |             |        | Permanently delete environments, templates, and assets   that are in the project and owned by other users |
+
+
 ***‡**  The restricted user must be an editor or manager in at least
 one project to perform these actions as a participant. For example, if
 the user is a participant in project A and an editor in project B, the
