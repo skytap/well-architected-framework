@@ -60,13 +60,6 @@ clearly defined operating model:
 -   Which of your existing operating models need to change for new cloud
     workloads?
 
-Accompanying this document is a **Skytap - Security Controls Workbook**
-that should be referred to as you develop your High-Level Designs and
-Low-Level Designs, it outlines each area discussed herein with specific
-controls that should be applied. It also contains an example of a Risks
-and Mitigations register that should be considered as part of any cloud
-project.
-
 The approach to the cloud must be integrated within your organisation's
 Target Operating Model; this allows for the appropriate security
 controls to be accounted for, architected and implemented.
