@@ -1,7 +1,7 @@
 ﻿---
 title: Security
 description: Considerations to ensure security.
-author: tbd
+author: John Bradshaw, Principal Architect
 categories:
   - security 
  subject:
@@ -222,7 +222,7 @@ a **Participant**.
         don't have project access, they cannot view or use environments
         and templates in this project.
 
-###### Departments
+#### Departments
 
 Departments allow you to model company departments, business units, or
 project teams within the Skytap. With department monitoring and limits,
@@ -238,7 +238,7 @@ you can:
 Each user can belong to one department, and the platform supports up to
 100 departments.
 
-###### Single Sign-On
+#### Single Sign-On
 
 Skytap can be configured for SAML based Single Sign-On, thus making it
 compatible with Azure Directory Services, Corporate Active Directory and
@@ -276,7 +276,7 @@ example, to group environments by applications in use.
 
 Auditing can be configured to send events to a Log Management tool or
 Security Incident Event Monitoring tool. These events are sent using
-Webhooks[^1], allowing for near real-time notifications to management
+Webhooks, allowing for near real-time notifications to management
 tooling enabling security engineers to respond more rapidly than would
 otherwise be available.
 
@@ -285,21 +285,11 @@ or a separate service; this can be used to monitor capacity and spend to
 prevent cloud sprawl or an economic denial of service.
 
   --------------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                           Vendor        Reference Architecture
+#### Application Vendor        Reference Architecture
 
-                                                                                      
-
-  [[Azure                                                               Microsoft     ✔️[^2]
-  Monitor]{.ul}](https://azure.microsoft.com/en-gb/services/monitor/)                 
-
-  Splunk Enterprise                                                     Splunk        
-  --------------------------------------------------------------------- ------------- ----------------------------------------
-
+  [Azure Microsoft Monitor](https://azure.microsoft.com/en-gb/services/monitor/)   
 ###  
-
-### 
-
-### 
+--------------------------------------------------------------------- ------------- ----------------------------------------
 ## Next steps
 
 * [Security Overview](./README.md)  

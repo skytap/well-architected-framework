@@ -1,14 +1,15 @@
 ---
 title: Security
 description: Considerations to ensure security.
-author: tbd
+author: John Bradshaw, Principal Architect
 categories:
   - security
 subject:
   - security
 ---
  
-# Security Overview
+# Security on the Skytap Platform
+**Implementing comprehensive security controls in the cloud**
 
 
 Securely running workloads in a cloud environment requires a
