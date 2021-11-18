@@ -144,49 +144,13 @@ additional permissions that are **optional (O)** for each type of user.
 
 *Extended User Permissions*
 
-+-------+------+--------+---------+----------------------------------+
-| Restr | Stan | User   | Admini  | Permission                       |
-| icted | dard | M      | strator |                                  |
-|       |      | anager |         |                                  |
-+=======+======+========+=========+==================================+
-| O     | O    | O      | M       | This user is able to             |
-|       |      |        |         | access [[public                  |
-|       |      |        |         | templates]{.                     |
-|       |      |        |         | ul}](https://help.skytap.com/Pub |
-|       |      |        |         | lic_Templates.html) and [[public |
-|       |      |        |         | assets]{.ul}](https://help.skyta |
-|       |      |        |         | p.com/Using_Public_Assets.html). |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | M       | This user is able to [[import    |
-|       |      |        |         | VMs]                             |
-|       |      |        |         | {.ul}](https://help.skytap.com/i |
-|       |      |        |         | mporting-vms-overview.html) into |
-|       |      |        |         | Skytap.                          |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | M       | This user is able to [[export    |
-|       |      |        |         | VMs]{.ul}](https://he            |
-|       |      |        |         | lp.skytap.com/Exports.html) from |
-|       |      |        |         | Skytap.                          |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | M       | This user is able to [[generate  |
-|       |      |        |         | reports]{.ul}](https://he        |
-|       |      |        |         | lp.skytap.com/Reports.html) from |
-|       |      |        |         | Skytap.                          |
-|       |      |        |         |                                  |
-|       |      |        |         | Reporting can be enabled for the |
-|       |      |        |         | entire account or just the       |
-|       |      |        |         | user\'s department.              |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | O       | This user is able to             |
-|       |      |        |         | set [[promiscuous                |
-|       |      |        |         | mode]{                           |
-|       |      |        |         | .ul}](https://help.skytap.com/En |
-|       |      |        |         | abling_Promiscuous_Mode.html) on |
-|       |      |        |         | VM network adapters for Skytap.\ |
-|       |      |        |         | This permission is displayed     |
-|       |      |        |         | when your customer account is    |
-|       |      |        |         | enabled for promiscuous mode.    |
-+-------+------+--------+---------+----------------------------------+
+|      Restricted     |      Standard     |      User Manager     |      Administrator     |      Permission                                                                                                                                                                     |
+|---------------------|-------------------|-----------------------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     O               |     O             |     O                 |     M                  |     This user is able to   access public   templates and public assets.                                                                                                             |
+|                     |     O             |     O                 |     M                  |     This user is able to import VMs into   Skytap.                                                                                                                                  |
+|                     |     O             |     O                 |     M                  |     This user is able to export VMs from Skytap.                                                                                                                                    |
+|                     |     O             |     O                 |     M                  |     This user is able to generate reports from   Skytap.     Reporting can be enabled for   the entire account or just the user's department.                                       |
+|                     |     O             |     O                 |     O                  |     This user is able to set promiscuous   mode on VM network adapters for Skytap.    This permission is displayed when your customer account is enabled for promiscuous   mode.    |
 
 #### Groups
 
