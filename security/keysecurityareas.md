@@ -144,6 +144,7 @@ additional permissions that are **optional (O)** for each type of user.
 
 *Extended User Permissions*
 
+
 +-------+------+--------+---------+----------------------------------+
 | Restr | Stan | User   | Admini  | Permission                       |
 | icted | dard | M      | strator |                                  |
@@ -188,14 +189,14 @@ additional permissions that are **optional (O)** for each type of user.
 |       |      |        |         | enabled for promiscuous mode.    |
 +-------+------+--------+---------+----------------------------------+
 
-###### Groups
+#### Groups
 
 Groups help you manage large numbers of user permissions across multiple
 projects. A user can belong to multiple groups and the groups can be
 given permissions within Skytap. The platform supports up to 100 groups;
 groups are managed by administrators and user managers.
 
-###### Projects
+#### Projects
 
 Projects grant users access to other resources within Skytap. Users
 always use the most permissive access rights granted, so if a named user
