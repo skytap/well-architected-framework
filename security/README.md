@@ -1,14 +1,15 @@
 ---
 title: Security
 description: Considerations to ensure security.
-author: tbd
+author: John Bradshaw, Principal Architect
 categories:
   - security
 subject:
   - security
 ---
  
-# Security Overview
+# Security on the Skytap Platform
+**Implementing comprehensive security controls in the cloud**
 
 
 Securely running workloads in a cloud environment requires a
@@ -60,6 +61,22 @@ clearly defined operating model:
 -   Which of your existing operating models need to change for new cloud
     workloads?
 
+The approach to the cloud must be integrated within your organisation's
+Target Operating Model; this allows for the appropriate security
+controls to be accounted for, architected and implemented.
+
+[<img src="./landminemedia/media/image3.png" width="800">](https://www.lucidchart.com/documents/edit/f5794a4f-e45d-4a70-9e12-9f0abf4579bb/0?callback=close&name=docs&callback_type=back&v=1701&s=612) 
+
+ *Figure 3 - Example Target Operating Model (TOM)**
+
+Most organisations will have multiple cloud vendors, supported by
+systems integrators or outsourced management functions. Your various
+clouds need to be managed holistically but controls applied
+specifically, for example, all logging across your organisation should
+be consolidated into a single Security Incident Event Monitoring (SIEM)
+system, but the approach to management and remediation will be custom to
+each workload and each platform.
+
 Most organizations will have multiple cloud vendors, supported by
 systems integrators or outsourced management functions. Cloud platforms
 need to be managed holistically but controls applied specifically, for
@@ -70,7 +87,17 @@ and platform.
 
 
 ## Next steps
-
+ 
 * [Key Security Areas](./keysecurityareas.md)
 
 * [Security Management](./securitymanagement.md)  
+
+* [Edge Networking](./edgenetworking.md) 
+
+* [Virtual Machines](./virtualmachines.md) 
+
+* [Internal Networking](./internalnetworking.md) 
+
+* [Security as a Service](./securityasaservice.md) 
+
+

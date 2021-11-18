@@ -1,7 +1,7 @@
 ﻿---
 title: Security
 description: Considerations to ensure security.
-author: tbd
+author: John Bradshaw, Principal Architect
 categories:
   - security 
  subject:
@@ -16,10 +16,6 @@ Virtual Machines.
 For each of these areas and subsections this document will provide
 standardized designs and partner points of contact where appropriate.
 
-![](.//media/image4.png){width="5.875in" height="8.305555555555555in"}
-
-*Figure 4 - Cloud Security Capabilities*
-
 ###  
 
 ### Platform
@@ -28,9 +24,9 @@ The Skytap platform provides controls for Security Policies;
 Notifications; Authentication, Authorisation and Accounting; and
 Auditing.
 
-![](.//media/image4.png){width="5.875in" height="1.2727274715660541in"}
+<img src=".//media/image4.png" width="500">
 
-*Figure 5 - Platform Required Capabilities*
+*Figure 1 - Platform Required Capabilities*
 
 #### Security Policies
 
@@ -44,9 +40,9 @@ access the Skytap dashboard securely from the Skytap infrastructure.
 More information on access policies is available
 [[here]{.ul}](https://help.skytap.com/setting-access-policies.html)
 
-![](.//media/image5.png){width="7.267716535433071in" height="3.875in"}
+<img src=".//media/image5.png" width="800">
 
-*Figure 6 - Access Policies available within the Skytap Dashboard*
+*Figure 2 - Access Policies available within the Skytap Dashboard*
 
 #### Notifications
 
@@ -62,17 +58,12 @@ The Users, Groups, Projects and Departments are used to control Cost
 and/or Access to services; they should be configured to align with your
 organisation's best business processes and operational best practices.
 
-  -----------------------------------------------------------------------
-                          Cost Control            Access Control
-  ----------------------- ----------------------- -----------------------
-  Users                   ✔️                      ✔️
-
-  Groups                                          ✔️
-
-  Projects                                        ✔️
-
-  Departments             ✔️                      
-  -----------------------------------------------------------------------
+  |                    |     Cost Control    |     Access Control    |
+|--------------------|---------------------|-----------------------|
+|     Users          |     ✔️               |     ✔️                 |
+|     Groups         |                     |     ✔️                 |
+|     Projects       |                     |     ✔️                 |
+|     Departments    |     ✔️               |                       |
 
 A User is a named individual or service account that can authenticate to
 the platform. Once authenticated, they can then assume either a
@@ -99,36 +90,18 @@ individuals require elevated permissions within the platform.
 
 *User Permissions*
 
-  ------------------------------------------------------------------------------------
-  Restricted   Standard   User      Administrator   Can do this
-                          Manager                   
-  ------------ ---------- --------- --------------- ----------------------------------
-  ✔️           ✔️         ✔️        ✔️              Access shared project resources
-
-  \*           ✔️         ✔️        ✔️              Create and own projects
-
-  †            ✔️         ✔️        ✔️              Create environments, templates,
-                                                    and assets
-
-                          ✔️        ✔️              Create and edit users and groups
-
-                          ✔️        ✔️              Delete groups
-
-               ‡          ‡         ✔️              Create and view reports
-
-                                    ✔️              Create and edit departments
-
-                                    ✔️              Delete users
-
-                                    ✔️              Create and edit account-wide
-                                                    settings (password policies,
-                                                    access policies, usage limits,
-                                                    etc.)
-
-                                    ✔️              Edit and delete environments,
-                                                    templates, and assets owned by all
-                                                    users in the account.
-  ------------------------------------------------------------------------------------
+  |      Restricted     |      Standard     |      User Manager     |      Administrator     |      Can do this                                                                                        |
+|---------------------|-------------------|-----------------------|------------------------|---------------------------------------------------------------------------------------------------------|
+|     ✔️               |     ✔️             |     ✔️                 |     ✔️                  |     Access shared project resources                                                                     |
+|     *               |     ✔️             |     ✔️                 |     ✔️                  |     Create and own projects                                                                             |
+|     †               |     ✔️             |     ✔️                 |     ✔️                  |     Create environments, templates, and assets                                                          |
+|                     |                   |     ✔️                 |     ✔️                  |     Create and edit users and groups                                                                    |
+|                     |                   |     ✔️                 |     ✔️                  |     Delete groups                                                                                       |
+|                     |     ‡             |     ‡                 |     ✔️                  |     Create and view reports                                                                             |
+|                     |                   |                       |     ✔️                  |     Create and edit departments                                                                         |
+|                     |                   |                       |     ✔️                  |     Delete users                                                                                        |
+|                     |                   |                       |     ✔️                  |     Create and edit account-wide settings (password policies,   access policies, usage limits, etc.)    |
+|                     |                   |                       |     ✔️                  |     Edit and delete environments, templates, and assets owned   by all users in the account.            |
 
 *\* A restricted user can't create a project, but another user can make
 a restricted user a project owner.\
@@ -148,58 +121,22 @@ additional permissions that are **optional (O)** for each type of user.
 
 *Extended User Permissions*
 
-+-------+------+--------+---------+----------------------------------+
-| Restr | Stan | User   | Admini  | Permission                       |
-| icted | dard | M      | strator |                                  |
-|       |      | anager |         |                                  |
-+=======+======+========+=========+==================================+
-| O     | O    | O      | M       | This user is able to             |
-|       |      |        |         | access [[public                  |
-|       |      |        |         | templates]{.                     |
-|       |      |        |         | ul}](https://help.skytap.com/Pub |
-|       |      |        |         | lic_Templates.html) and [[public |
-|       |      |        |         | assets]{.ul}](https://help.skyta |
-|       |      |        |         | p.com/Using_Public_Assets.html). |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | M       | This user is able to [[import    |
-|       |      |        |         | VMs]                             |
-|       |      |        |         | {.ul}](https://help.skytap.com/i |
-|       |      |        |         | mporting-vms-overview.html) into |
-|       |      |        |         | Skytap.                          |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | M       | This user is able to [[export    |
-|       |      |        |         | VMs]{.ul}](https://he            |
-|       |      |        |         | lp.skytap.com/Exports.html) from |
-|       |      |        |         | Skytap.                          |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | M       | This user is able to [[generate  |
-|       |      |        |         | reports]{.ul}](https://he        |
-|       |      |        |         | lp.skytap.com/Reports.html) from |
-|       |      |        |         | Skytap.                          |
-|       |      |        |         |                                  |
-|       |      |        |         | Reporting can be enabled for the |
-|       |      |        |         | entire account or just the       |
-|       |      |        |         | user\'s department.              |
-+-------+------+--------+---------+----------------------------------+
-|       | O    | O      | O       | This user is able to             |
-|       |      |        |         | set [[promiscuous                |
-|       |      |        |         | mode]{                           |
-|       |      |        |         | .ul}](https://help.skytap.com/En |
-|       |      |        |         | abling_Promiscuous_Mode.html) on |
-|       |      |        |         | VM network adapters for Skytap.\ |
-|       |      |        |         | This permission is displayed     |
-|       |      |        |         | when your customer account is    |
-|       |      |        |         | enabled for promiscuous mode.    |
-+-------+------+--------+---------+----------------------------------+
+|      Restricted     |      Standard     |      User Manager     |      Administrator     |      Permission                                                                                                                                                                     |
+|---------------------|-------------------|-----------------------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     O               |     O             |     O                 |     M                  |     This user is able to   access public   templates and public assets.                                                                                                             |
+|                     |     O             |     O                 |     M                  |     This user is able to import VMs into   Skytap.                                                                                                                                  |
+|                     |     O             |     O                 |     M                  |     This user is able to export VMs from Skytap.                                                                                                                                    |
+|                     |     O             |     O                 |     M                  |     This user is able to generate reports from   Skytap.     Reporting can be enabled for   the entire account or just the user's department.                                       |
+|                     |     O             |     O                 |     O                  |     This user is able to set promiscuous   mode on VM network adapters for Skytap.    This permission is displayed when your customer account is enabled for promiscuous   mode.    |
 
-###### Groups
+#### Groups
 
 Groups help you manage large numbers of user permissions across multiple
 projects. A user can belong to multiple groups and the groups can be
 given permissions within Skytap. The platform supports up to 100 groups;
 groups are managed by administrators and user managers.
 
-###### Projects
+#### Projects
 
 Projects grant users access to other resources within Skytap. Users
 always use the most permissive access rights granted, so if a named user
@@ -212,46 +149,24 @@ to every new user on Skytap. This feature should be used sparingly to
 prevent excessive user permissions.
 
 *Project Permissions*
+| Owner         | Manager | Editor | Participant | Viewer | Can do this                                                                                               |
+|---------------|---------|--------|-------------|--------|-----------------------------------------------------------------------------------------------------------|
+| ✔️             | ✔️       | ✔️      | ✔️           | ✔️      | Access and use a running environment                                                                      |
+| ✔️             | ✔️       | ✔️      | ✔️           | ✔️      | Download assets                                                                                           |
+| ✔️             | ✔️       | ✔️      | ✔️           |        | Control the power state of an environment                                                                 |
+| ✔️             | ✔️       | ✔️      | ‡           |        | Create an environment from a project template                                                             |
+| ✔️             | ✔️       | ✔️      | ‡           |        | Copy environment                                                                                          |
+| ✔️             | ✔️       | ✔️      |             |        | Copy template                                                                                             |
+| ✔️             | ✔️       | ✔️      |             |        | Load an ISO                                                                                               |
+| ✔️             | ✔️       | ✔️      |             |        | Save an environment as a template                                                                         |
+| ✔️             | ✔️       | ✔️      |             |        | Add, edit, and remove resources                                                                           |
+| ✔️             | ✔️       | ✔️      |             |        | Share resources with other projects    (as Editor or Manager in both projects)                            |
+| ✔️             | ✔️       | ✔️      |             |        | Permanently delete VMs                                                                                    |
+| ✔️             | ✔️       |        |             |        | Add and remove project users                                                                              |
+| ✔️             |         |        |             |        | Delete the project                                                                                        |
+| Administrator |         |        |             |        | Change project permissions                                                                                |
+| Administrator |         |        |             |        | Permanently delete environments, templates, and assets   that are in the project and owned by other users |
 
-  -----------------------------------------------------------------------------------------------
-  Owner           Manager   Editor   Participant   Viewer   Can do this
-  --------------- --------- -------- ------------- -------- -------------------------------------
-  ✔️              ✔️        ✔️       ✔️            ✔️       Access and use a running environment
-
-  ✔️              ✔️        ✔️       ✔️            ✔️       Download assets
-
-  ✔️              ✔️        ✔️       ✔️                     Control the power state of an
-                                                            environment
-
-  ✔️              ✔️        ✔️       **‡**                  Create an environment from a project
-                                                            template
-
-  ✔️              ✔️        ✔️       **‡**                  Copy environment
-
-  ✔️              ✔️        ✔️                              Copy template
-
-  ✔️              ✔️        ✔️                              Load an ISO
-
-  ✔️              ✔️        ✔️                              Save an environment as a template
-
-  ✔️              ✔️        ✔️                              Add, edit, and remove resources
-
-  ✔️              ✔️        ✔️                              Share resources with other projects\
-                                                            (as Editor or Manager in both
-                                                            projects)
-
-  ✔️              ✔️        ✔️                              Permanently delete VMs
-
-  ✔️              ✔️                                        Add and remove project users
-
-  ✔️                                                        Delete the project
-
-  Administrator                                             Change project permissions
-
-                                                            Permanently delete environments,
-                                                            templates, and assets that are in the
-                                                            project and owned by other users
-  -----------------------------------------------------------------------------------------------
 
 ***‡**  The restricted user must be an editor or manager in at least
 one project to perform these actions as a participant. For example, if
@@ -269,10 +184,9 @@ users to maintain the templates (template creators), and all other users
 in the account will have permission to create environments from those
 templates (template users).
 
-![projects](.//media/image6.png){width="5.6361100174978125in"
-height="4.986805555555556in"}
+<img src=".//media/image6.png" width="500">
 
-*Figure 7 - Example of Project Implementation*
+*Figure 3 - Example of Project Implementation*
 
 **Solution:** Create 2 projects:
 
@@ -308,7 +222,7 @@ a **Participant**.
         don't have project access, they cannot view or use environments
         and templates in this project.
 
-###### Departments
+#### Departments
 
 Departments allow you to model company departments, business units, or
 project teams within the Skytap. With department monitoring and limits,
@@ -324,7 +238,7 @@ you can:
 Each user can belong to one department, and the platform supports up to
 100 departments.
 
-###### Single Sign-On
+#### Single Sign-On
 
 Skytap can be configured for SAML based Single Sign-On, thus making it
 compatible with Azure Directory Services, Corporate Active Directory and
@@ -334,15 +248,13 @@ controls such as endpoint integrity and verification, location-based
 authentication and conditional/just in time access.
 
   ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
-  Application                                                                                                      Vendor     Reference Architecture
+  #### Application Vendor  Reference Architecture
+             
+  [Workforce Okta Identity](https://www.okta.com/workforce-identity/)          
 
-                                                                                                                              
+  [PingOne](https://www.pingidentity.com/en/cloud/pingone.html)                     
 
-  [[Workforce                                                                                                      Okta       
-  Identity](https://www.okta.com/workforce-identity/)<https://azure.microsoft.com/en-gb/services/monitor/>]{.ul}              
-
-  [[PingOne]{.ul}](https://www.pingidentity.com/en/cloud/pingone.html)\                                            Ping       
-  [[PingFederate]{.ul}](https://www.pingidentity.com/en/software/pingfederate.html)                                Identity   
+  [PingFederate](https://www.pingidentity.com/en/software/pingfederate.html)                               
   ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
 
 ##### Labels
@@ -364,7 +276,7 @@ example, to group environments by applications in use.
 
 Auditing can be configured to send events to a Log Management tool or
 Security Incident Event Monitoring tool. These events are sent using
-Webhooks[^1], allowing for near real-time notifications to management
+Webhooks, allowing for near real-time notifications to management
 tooling enabling security engineers to respond more rapidly than would
 otherwise be available.
 
@@ -373,18 +285,21 @@ or a separate service; this can be used to monitor capacity and spend to
 prevent cloud sprawl or an economic denial of service.
 
   --------------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                           Vendor        Reference Architecture
+#### Application Vendor        Reference Architecture
 
-                                                                                      
-
-  [[Azure                                                               Microsoft     ✔️[^2]
-  Monitor]{.ul}](https://azure.microsoft.com/en-gb/services/monitor/)                 
-
-  Splunk Enterprise                                                     Splunk        
-  --------------------------------------------------------------------- ------------- ----------------------------------------
-
+  [Azure Microsoft Monitor](https://azure.microsoft.com/en-gb/services/monitor/)   
 ###  
+--------------------------------------------------------------------- ------------- ----------------------------------------
+## Next steps
 
-### 
+* [Security Overview](./README.md)  
 
-### 
+* [Security Management](./securitymanagement.md)  
+
+* [Edge Networking](./edgenetworking.md) 
+
+* [Virtual Machines](./virtualmachines.md) 
+
+* [Internal Networking](./internalnetworking.md) 
+
+* [Security as a Service](./securityasaservice.md) 
