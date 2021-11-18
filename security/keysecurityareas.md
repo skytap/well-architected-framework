@@ -58,17 +58,12 @@ The Users, Groups, Projects and Departments are used to control Cost
 and/or Access to services; they should be configured to align with your
 organisation's best business processes and operational best practices.
 
-  -----------------------------------------------------------------------
-                          Cost Control            Access Control
-  ----------------------- ----------------------- -----------------------
-  Users                   ✔️                      ✔️
-
-  Groups                                          ✔️
-
-  Projects                                        ✔️
-
-  Departments             ✔️                      
-  -----------------------------------------------------------------------
+  |                    |     Cost Control    |     Access Control    |
+|--------------------|---------------------|-----------------------|
+|     Users          |     ✔️               |     ✔️                 |
+|     Groups         |                     |     ✔️                 |
+|     Projects       |                     |     ✔️                 |
+|     Departments    |     ✔️               |                       |
 
 A User is a named individual or service account that can authenticate to
 the platform. Once authenticated, they can then assume either a
@@ -95,36 +90,18 @@ individuals require elevated permissions within the platform.
 
 *User Permissions*
 
-  ------------------------------------------------------------------------------------
-  Restricted   Standard   User      Administrator   Can do this
-                          Manager                   
-  ------------ ---------- --------- --------------- ----------------------------------
-  ✔️           ✔️         ✔️        ✔️              Access shared project resources
-
-  \*           ✔️         ✔️        ✔️              Create and own projects
-
-  †            ✔️         ✔️        ✔️              Create environments, templates,
-                                                    and assets
-
-                          ✔️        ✔️              Create and edit users and groups
-
-                          ✔️        ✔️              Delete groups
-
-               ‡          ‡         ✔️              Create and view reports
-
-                                    ✔️              Create and edit departments
-
-                                    ✔️              Delete users
-
-                                    ✔️              Create and edit account-wide
-                                                    settings (password policies,
-                                                    access policies, usage limits,
-                                                    etc.)
-
-                                    ✔️              Edit and delete environments,
-                                                    templates, and assets owned by all
-                                                    users in the account.
-  ------------------------------------------------------------------------------------
+  |      Restricted     |      Standard     |      User Manager     |      Administrator     |      Can do this                                                                                        |
+|---------------------|-------------------|-----------------------|------------------------|---------------------------------------------------------------------------------------------------------|
+|     ✔️               |     ✔️             |     ✔️                 |     ✔️                  |     Access shared project resources                                                                     |
+|     *               |     ✔️             |     ✔️                 |     ✔️                  |     Create and own projects                                                                             |
+|     †               |     ✔️             |     ✔️                 |     ✔️                  |     Create environments, templates, and assets                                                          |
+|                     |                   |     ✔️                 |     ✔️                  |     Create and edit users and groups                                                                    |
+|                     |                   |     ✔️                 |     ✔️                  |     Delete groups                                                                                       |
+|                     |     ‡             |     ‡                 |     ✔️                  |     Create and view reports                                                                             |
+|                     |                   |                       |     ✔️                  |     Create and edit departments                                                                         |
+|                     |                   |                       |     ✔️                  |     Delete users                                                                                        |
+|                     |                   |                       |     ✔️                  |     Create and edit account-wide settings (password policies,   access policies, usage limits, etc.)    |
+|                     |                   |                       |     ✔️                  |     Edit and delete environments, templates, and assets owned   by all users in the account.            |
 
 *\* A restricted user can't create a project, but another user can make
 a restricted user a project owner.\
@@ -172,47 +149,23 @@ to every new user on Skytap. This feature should be used sparingly to
 prevent excessive user permissions.
 
 *Project Permissions*
-
-  -----------------------------------------------------------------------------------------------
-  Owner           Manager   Editor   Participant   Viewer   Can do this
-  --------------- --------- -------- ------------- -------- -------------------------------------
-  ✔️              ✔️        ✔️       ✔️            ✔️       Access and use a running environment
-
-  ✔️              ✔️        ✔️       ✔️            ✔️       Download assets
-
-  ✔️              ✔️        ✔️       ✔️                     Control the power state of an
-                                                            environment
-
-  ✔️              ✔️        ✔️       **‡**                  Create an environment from a project
-                                                            template
-
-  ✔️              ✔️        ✔️       **‡**                  Copy environment
-
-  ✔️              ✔️        ✔️                              Copy template
-
-  ✔️              ✔️        ✔️                              Load an ISO
-
-  ✔️              ✔️        ✔️                              Save an environment as a template
-
-  ✔️              ✔️        ✔️                              Add, edit, and remove resources
-
-  ✔️              ✔️        ✔️                              Share resources with other projects\
-                                                            (as Editor or Manager in both
-                                                            projects)
-
-  ✔️              ✔️        ✔️                              Permanently delete VMs
-
-  ✔️              ✔️                                        Add and remove project users
-
-  ✔️                                                        Delete the project
-
-  Administrator                                             Change project permissions
-
-                                                            Permanently delete environments,
-                                                            templates, and assets that are in the
-                                                            project and owned by other users
-  -----------------------------------------------------------------------------------------------
-
+| Owner         | Manager | Editor | Participant | Viewer | Can do this                                                                                               |
+|---------------|---------|--------|-------------|--------|-----------------------------------------------------------------------------------------------------------|
+| ✔️             | ✔️       | ✔️      | ✔️           | ✔️      | Access and use a running environment                                                                      |
+| ✔️             | ✔️       | ✔️      | ✔️           | ✔️      | Download assets                                                                                           |
+| ✔️             | ✔️       | ✔️      | ✔️           |        | Control the power state of an environment                                                                 |
+| ✔️             | ✔️       | ✔️      | ‡           |        | Create an environment from a project template                                                             |
+| ✔️             | ✔️       | ✔️      | ‡           |        | Copy environment                                                                                          |
+| ✔️             | ✔️       | ✔️      |             |        | Copy template                                                                                             |
+| ✔️             | ✔️       | ✔️      |             |        | Load an ISO                                                                                               |
+| ✔️             | ✔️       | ✔️      |             |        | Save an environment as a template                                                                         |
+| ✔️             | ✔️       | ✔️      |             |        | Add, edit, and remove resources                                                                           |
+| ✔️             | ✔️       | ✔️      |             |        | Share resources with other projects    (as Editor or Manager in both projects)                            |
+| ✔️             | ✔️       | ✔️      |             |        | Permanently delete VMs                                                                                    |
+| ✔️             | ✔️       |        |             |        | Add and remove project users                                                                              |
+| ✔️             |         |        |             |        | Delete the project                                                                                        |
+| Administrator |         |        |             |        | Change project permissions                                                                                |
+| Administrator |         |        |             |        | Permanently delete environments, templates, and assets   that are in the project and owned by other users |
 ***‡**  The restricted user must be an editor or manager in at least
 one project to perform these actions as a participant. For example, if
 the user is a participant in project A and an editor in project B, the
