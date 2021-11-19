@@ -14,8 +14,7 @@ The Management layer sometimes referred to as *Shared Services*,
 contains the components necessary to secure and enforce compliance on
 the workloads running on Skytap.
 
-![](.//media/image4.png){width="4.053839676290464in"
-height="2.189348206474191in"}
+<img src=".//media/image4.png" width="800">
 
 *Figure 8 - Management Required Capabilities*
 
@@ -41,7 +40,7 @@ directories on a per Environment basis but also improves security by
 consolidating the logging and administration of users and service
 accounts.
 
-A **Backup** strategy should encompass the native capabilities of the
+A [**Backup**](/resiliency/README.md) strategy should encompass the native capabilities of the
 Skytap platform, such as Templates which create a point in time clone of
 an entire workload from network configuration to data. However,
 Templates are not designed to replace regular backups and are not
