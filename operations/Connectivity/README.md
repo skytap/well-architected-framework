@@ -34,7 +34,7 @@ failing component. .
 
 - VPN
 
-- [Express Route/Global Reach](/ExpressRoute/skytap2azureexpressroute.md)
+- [Express Route/Global Reach](../ExpressRoute/skytap2azureexpressroute.md)
 
 
 ## vWAN 
