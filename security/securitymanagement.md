@@ -146,8 +146,9 @@ deployed
 
 A.  Deployment Patch Check: When the Skytap instance is deployed and
     active, the application platforms in the Template check-in with the
-    Big-Fix Server.![](.//media/image9.png){width="3.8673611111111112in"
-    height="3.7444444444444445in"}
+    Big-Fix Server.
+
+<img src="./media/image9.png" width="500">
 
 > Server instances are verified and patching updates are identified.
 
