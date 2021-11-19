@@ -73,9 +73,7 @@ threats as well as their mitigation
 These components translate into an architecture that approximates the
 following:
 
-![A close up of a map Description automatically
-generated](.//media/image7.png){width="4.625in"
-height="5.864583333333333in"}
+<img src="./media/image7.png" width="500">
 
 *Figure 9 - Example Management Architecture implemented in Skytap*
 
@@ -83,15 +81,13 @@ These services are controlled and managed by corporate administrators
 accessing via the VPN/Private Connection. The services are then made
 available to workloads within Skytap through the use of an Inter
 Configuration Network Routing
-([[ICNR]{.ul}](https://help.skytap.com/Networking_Between_Environments.html#ICNRoverview)),
+([ICNR](https://help.skytap.com/Networking_Between_Environments.html#ICNRoverview)),
 this is a low touch automated mechanism to connect logically distinct
 environments. Transit through an ICNRs is not possible; therefore,
 multiple environments of a different security profile can be connected
 via a Shared environment, but traffic cannot flow.
 
-![A close up of a person Description automatically
-generated](.//media/image8.png){width="3.756038932633421in"
-height="1.8385422134733158in"}
+<img src ="./media/image8.png" width="500">
 
 *Figure 10 - Transit ICNR Traffic is Automatically Denied*
 
@@ -108,18 +104,12 @@ should require the use of Antivirus on all Virtual Machines or LPARs.
 
 ##### Supported Implementations
 
-  ------------- ------------- --------- ------ ------- ----- ------- ----------------
-  Application   Vendor        x86              Power                 Reference
-                                                                     Architecture
-
-                              Windows          Linux   AIX   IBM i   Linux
-
-                Trend                                                
-
-                HelpSystems                                          
-
-                Sophos        ✔️        ✔️     ✔️            ✔️      
-  ------------- ------------- --------- ------ ------- ----- ------- ----------------
+|      Application     |      Vendor     |      x86         |                |      Power     |                |                |
+|----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| Trend                |                 |                  |                |                |                |                |
+| HelpSystems          |                 |                  |                |                |                |                |
+| Sophos               |                 | ✔️                | ✔️              | ✔️              |                | ✔️              |
 
 #### Patching
 
@@ -139,18 +129,12 @@ suitable to the organisation.
 
 ##### Supported Implementations
 
-  ------------- ----------- --------- ------ ------- ------ ------ -----------------
-  Application   Vendor      x86              Power                 Reference
-                                                                   Architecture
-
-                            Windows          Linux   AIX    IBM i  Linux
-
-  BigFix        HCL                                                ✔️
-
-  WSUS          Microsoft                                          
-
-  Ansible       Red Hat                                            
-  ------------- ----------- --------- ------ ------- ------ ------ -----------------
+|      Application     |      Vendor       |      x86         |                |      Power     |                |                |
+|----------------------|-------------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                   |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| BigFix               | HCL               |                  |                |                | ✔️              |                |
+| WSUS                 | Microsoft         |                  |                |                |                |                |
+| Ansible              | RedHat Enterprise |                  |                |                |                |                |
 
 ##### Architecture
 
@@ -186,7 +170,7 @@ C.  Save New Template: Once the patching effort is completed, the
 
 A Gold Template is established for each environment, which is used to
 create copies for development and test environments.
-![](.//media/image10.png){width="4.340277777777778in" height="3.0625in"}
+<img src="./media/image10.png" width="800">
 
 A.  Gold Template Patch Check: A Skytap Administrator brings up a Gold
     Template of an Application Environment and has Big Fix automatically
@@ -211,22 +195,16 @@ layer.
 
 ##### Supported Implementations
 
-  ------------- ----------- --------- ----- ------- ----- ------ -----------------
-  Application   Vendor      x86             Power                Reference
-                                                                 Architecture
+|      Application     |      Vendor     |      x86         |                |      Power     |                |                |
+|----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| Active Directory     | Microsoft       |                  |                |                |                |                |
 
-                            Windows         Linux   AIX   IBM i  Linux
-
-  Active        Microsoft                                        
-  Directory                                                      
-
-                                                                 
-  ------------- ----------- --------- ----- ------- ----- ------ -----------------
-Backup
+#### Backup
 
 While the Skytap platform has a point in time cloning system, using the
-[[Template an Environment
-feature]{.ul}](https://help.skytap.com/saving-an-environment-as-a-template.html),
+[Template an Environment
+feature](https://help.skytap.com/saving-an-environment-as-a-template.html),
 this is not designed to replace a comprehensive backup strategy. It is
 not a replacement for live systems such as online Databases or
 Application servers.
@@ -238,20 +216,14 @@ platform.
 
 ##### Supported Implementations
 
-  ------------- ----------- --------- ------ ------- ------ ------ --------------------
-  Application   Vendor      x86              Power                 Reference
-                                                                   Architecture
-
-                            Windows          Linux   AIX    IBM i  Linux
-
-                Veeam       ✔️               ✔️                    
-
-                Storix                       ✔️                    ✔️
-
-  BRMS          IBM                                  ✔️            ✔️
-
-  Commvault     Commvault   ✔️        ✔️     ✔️      ✔️     ✔      ✔️
-  ------------- ----------- --------- ------ ------- ------ ------ --------------------
+|      Application            |      Vendor     |      x86         |                |      Power     |                |                |
+|-----------------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                             |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| Veeam Agent for IBM PowerPC | Veeam           | ✔️                | ✔️              |                |                |                |
+| AIX System Backup           | Storix          |                  |                | ✔️              |                |                |
+| SBAdmin                     | Storix          |                  | ✔️              |                |                | ✔️              |
+| BRMS                        | IBM             |                  | ✔️              |                | ✔️              |                |
+| Commvault                   | Commvault       | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
 
 #### Secrets Management
 
@@ -265,16 +237,10 @@ controlled access and encryption services for these functions.
 
 ##### Supported Implementations
 
-  ---------------------------------------------- ----------- --------- ------ ------- ------ ------ -----------------
-  Application                                    Vendor      x86              Power                 Reference
-                                                                                                    Architecture
-
-                                                             Windows          Linux   AIX    IBM i  Linux
-
-  [[Vault]{.ul}](https://www.vaultproject.io/)   HashiCorp   ✔️        ✔️     ✔️      ✔️     ✔️     
-
-                                                                                                    
-  ---------------------------------------------- ----------- --------- ------ ------- ------ ------ -----------------
+|      Application     |      Vendor     |      x86         |                |      Power     |                |                |
+|----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| [Vault](https://www.vaultproject.io/)                | HashiCorp       | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
 
 #### Log Management
 
@@ -291,18 +257,12 @@ for onwards propagation to the log management solution.
 
 ##### Supported Implementations
 
-  --------------------------------------------------------------------------------- -------- --------- ----- ------- ----- ----- -------------------
-  Application                                                                       Vendor   x86             Power               Reference
-                                                                                                                                 Architecture
-
-                                                                                             Windows         Linux   AIX   IBM i Linux
-
-  [[Splunk Cloud]{.ul}](https://www.splunk.com/en_us/software/splunk-cloud.html)\   Splunk   ✔️        ✔️                        
-  [[Splunk                                                                                                                       
-  Enterprise]{.ul}](https://www.splunk.com/en_us/software/splunk-enterprise.html)                                                
-
-  syslog                                                                                     ✔️        ✔️    ✔️      ✔️    ✔️    
-  --------------------------------------------------------------------------------- -------- --------- ----- ------- ----- ----- -------------------
+|      Application         |      Vendor     |      x86         |                |      Power     |                |                |
+|--------------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                          |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| [Splunk Cloud](https://www.splunk.com/en_us/software/splunk-cloud.html)             | Splunk          | ✔️                | ✔️              |                |                |                |
+| [Splunk Enterprise](https://www.splunk.com/en_us/software/splunk-enterprise.html) | Splunk          | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
+  
 ## Next steps
 
 * [Security Overview](./README.md)  
