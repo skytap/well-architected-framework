@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\hybrid",
-    "\\operations",
     "\\operations\\Connectivity",
     "\\operations\\Discovery",
     "\\operations\\Ecosystems",
     "\\operations\\ExpressRoute",
     "\\resiliency",
     "\\scalability",
-    "\\security"
+    "\\security",
+    "\\security\\media"
   ],
-  "SelectedNode": "\\resiliency\\designconsiderationsibm.md",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
