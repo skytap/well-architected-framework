@@ -17,7 +17,7 @@ The Skytap Well-Architected Framework helps you get started with several differe
 
 The following links take you to questions that are typically asked when an organization is trying to accomplish one or many goals during their cloud adoption journey.
 - [Adopt the cloud to deliver business and technical outcomes sooner](./accelerateadoption.md)
-- [Improve design and deployments to ensure proper operations of the cloud](./operations/operational-excellence.md)  
+- [Improve design and deployments to ensure proper operations of the cloud](./operations/README.md)  
 
 
 
