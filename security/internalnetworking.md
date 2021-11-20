@@ -20,9 +20,8 @@ example Domain Services.
 
 #### Example High Level Design
 
-Drawing
+<img src="./media/image16.png" height="800">
 
-##### 
 
 #### Firewall
 
@@ -32,15 +31,10 @@ These firewalls are deployed as virtual machines within your Skytap
 environments.
 
 ##### Supported Implementations
-
-  -------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                    Vendor        Reference Architecture
-
-                                                                               
-
-  [[pfSense]{.ul}](https://www.netgate.com/solutions/pfsense/)   Netgate       
-
-                                                                 F5            
+|      Application     |      Vendor     |
+|----------------------|-----------------|
+| BigIP               | F5          |
+| [pfSense](https://www.netgate.com/solutions/pfsense/)              | Netgate        
   -------------------------------------------------------------- ------------- ----------------------------------------
 
 #### Service Mesh
@@ -59,17 +53,11 @@ network appliances (such as load balancers).
 
 ##### Supported Implementations
 
-  -------------------------------------------------------------------------- ----------- --------- ----- ------- ----- ----- ------------------
-  Application                                                                Vendor      x86             Power               Reference
-                                                                                                                             Architecture
-
-                                                                                         Windows         Linux   AIX   IBM i Linux
-
-  [[Consul]{.ul}](https://www.hashicorp.com/products/consul/service-mesh/)   HashiCorp   ✔️                                  
-
-                                                                                                                             
-
-                                                                                                                             
+|      Application     |      Vendor     |      x86         |                |      Power     |                |                |
+|----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| [Consul](https://www.hashicorp.com/products/consul/service-mesh/)               | HashiCorp       | ✔️                | ✔️              |                |                |               |
+                                        
   -------------------------------------------------------------------------- ----------- --------- ----- ------- ----- ----- ------------------
 
 #### DNS/Service Discovery
@@ -85,22 +73,15 @@ require, but can also validate that the endpoints are healthy before
 directing traffic. Service Discovery can also replace some load
 balancing functionality.
 
-![A picture containing room Description automatically
-generated](./internalnetworkingmedia/media/image3.png){width="2.625in"
-height="2.710275590551181in"}
+<img src="./internalnetworkingmedia/media/image3.png" width="500">
 
 ##### Supported Implementations
 
-  ---------------------------------------------------------------------------------------------------------- ----------- --------- ----- ---------------------------------
-  Application                                                                                                Vendor      x86             Reference Architecture
-
-                                                                                                                         Windows         Linux
-
-  [[Consul]{.ul}](https://www.hashicorp.com/products/consul/service-discovery/)                              HashiCorp   ✔️              
-
-  Active Directory                                                                                           Microsoft                   
-
-  [[Umbrella]{.ul}](https://umbrella.cisco.com/?_ga=2.214455253.393431820.1607963050-217404651.1607963050)   Cisco                       
+|      Application                                                                                         |      Vendor     |
+|----------------------------------------------------------------------------------------------------------|-----------------|
+| [Consul](https://www.hashicorp.com/products/consul/service-mesh/)                                        | HashiCorp       |
+| Active Directory                                                                                         | Microsoft       |
+| [Umbrella](https://umbrella.cisco.com/?_ga=2.214455253.393431820.1607963050-217404651.1607963050) | Cisco           |
   ---------------------------------------------------------------------------------------------------------- ----------- --------- ----- ---------------------------------
 
 #### Outbound Proxy
@@ -111,17 +92,6 @@ workload requires it. This kind of proxy type of proxy is commonly used
 with stand-alone workloads where an application is expected to function
 in isolation.
 
-##### Supported Implementations
-
-  -------------------- ------------- -------------------------------------
-  Application          Vendor        Reference Architecture
-
-                                     
-
-                                     
-
-                                     
-  -------------------- ------------- -------------------------------------
 
 #### Inbound Proxy
 
@@ -131,16 +101,11 @@ environments.
 
 ##### Supported Implementations
 
-  -------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                    Vendor        Reference Architecture
-
-                                                                               
-
-  [[NGINX]{.ul}](https://www.nginx.com/)                         F5            
-
-  [[Squid]{.ul}](http://www.squid-cache.org/)                    Squid         
-
-  [[pfSense]{.ul}](https://www.netgate.com/solutions/pfsense/)   Netgate       
+|      Application                                             |      Vendor     |
+|--------------------------------------------------------------|-----------------|
+| [NGINX](https://www.nginx.com/)                       | F5              |
+| [Squid](http://www.squid-cache.org/)                  | Squid           |
+| [pfSense](https://www.netgate.com/solutions/pfsense/) | Netgate         |  
   -------------------------------------------------------------- ------------- ----------------------------------------
 
 ## Next steps
