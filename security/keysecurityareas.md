@@ -248,7 +248,7 @@ controls such as endpoint integrity and verification, location-based
 authentication and conditional/just in time access.
 
   ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
-  #### Application Vendor  Reference Architecture
+  #### Application Vendor Reference Architecture
              
   [Workforce Okta Identity](https://www.okta.com/workforce-identity/)          
 
@@ -287,7 +287,7 @@ prevent cloud sprawl or an economic denial of service.
   --------------------------------------------------------------------- ------------- ----------------------------------------
 #### Application Vendor        Reference Architecture
 
-  [Azure Microsoft Monitor](https://azure.microsoft.com/en-gb/services/monitor/)   
+  [Microsoft Azure Monitor](https://azure.microsoft.com/en-gb/services/monitor/)   
 ###  
 --------------------------------------------------------------------- ------------- ----------------------------------------
 ## Next steps

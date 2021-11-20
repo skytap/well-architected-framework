@@ -41,13 +41,15 @@ implemented, as below. With the reverse being true for outbound traffic.
 
 <img src="./edgenetworkingmedia/media/image2.png" width="800">
 
-*Figure 11 - Typical Traffic Flow*[^1]
+*Figure 1 - Typical Traffic Flow*[^1]
 
 #### Example High Level Design
 
 <img src="./edgenetworkingmedia/media/image3.png" width="600">
 
-*Figure 12 - Example Internet and VPN Connection Scheme*
+*Figure 2 - Example Internet and VPN Connection Scheme*
+
+----------------------------------------------------------------------------------- ------------- ----------------------------------------
 
 #### Outbound Proxy
 
@@ -60,16 +62,12 @@ enforcement.
 
 ##### Supported Implementations
 
-  ----------------------------------------------------------------------------------- ------------- -------------------------------------
-  Application                                                                         Vendor        Reference Architecture
+|      Application     |      Vendor     |
+|----------------------|-----------------|
+| [Squid](http://www.squid-cache.org/)         | Squid           |
+| [Web Gateway](https://www.mcafee.com/enterprise/en-gb/products/web-gateway.html)          | McAfee          |
+  ----------------------------------------------------------------------------------- ------------- ----------------------------------------
 
-                                                                                                    
-
-  [[Squid]{.ul}](http://www.squid-cache.org/)                                         Squid         
-
-  [[Web                                                                               McAfee        
-  Gateway]{.ul}](https://www.mcafee.com/enterprise/en-gb/products/web-gateway.html)                 
-  ----------------------------------------------------------------------------------- ------------- -------------------------------------
 
 #### Inbound Proxy
 
@@ -87,35 +85,25 @@ distributed denial-of-service (DDoS) attack.
 
 ##### Supported Implementations
 
-  ----------------------------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                                         Vendor        Reference Architecture
-
-                                                                                                    
-
-  [[NGINX]{.ul}](https://www.nginx.com/)                                              F5            
-
-  [[BIG IP]{.ul}](https://www.f5.com/products/big-ip-services)                        F5            
-
-  [[Squid]{.ul}](http://www.squid-cache.org/)                                         Squid         
-
-  [[pfSense]{.ul}](https://www.netgate.com/solutions/pfsense/)                        Netgate       
-
-  [[MVision                                                                           McAfee        
-  Cloud]{.ul}](https://www.mcafee.com/enterprise/en-us/products/mvision-cloud.html)                 
+|      Application     |      Vendor     |
+|----------------------|-----------------|
+| [NGINX](https://www.nginx.com/)               | F5              |
+| [BIG IP](https://www.f5.com/products/big-ip-services)               | F5              |
+| [Squid](http://www.squid-cache.org/)               | Squid           |
+| [pfSense](https://www.netgate.com/solutions/pfsense/)               | Netgate         |
+| [MVision Cloud](https://www.mcafee.com/enterprise/en-us/products/mvision-cloud.html)        | McAfee          |
   ----------------------------------------------------------------------------------- ------------- ----------------------------------------
 
 #### VPN / Private Connection
 
 Skytap supports Site-to-Site VPN as well as Private Network Connections
-(PNCs) using [[Azure
-ExpressRoute]{.ul}](https://azure.microsoft.com/en-gb/services/expressroute/)
-and [[Equinix Cloud
-Exchange]{.ul}](https://www.equinix.com/solutions/cloud-infrastructure/public-cloud/connectivity/).
+(PNCs) using [Azure
+ExpressRoute](https://azure.microsoft.com/en-gb/services/expressroute/)
+and [Equinix Cloud Exchange](https://www.equinix.com/solutions/cloud-infrastructure/public-cloud/connectivity/).
 
 ##### Site-to-Site VPN
 
-The Skytap [[Site-to-Site
-VPN]{.ul}](https://help.skytap.com/vpn-configuration-parameters.html#VPNconfigurationoptions)
+The Skytap [Site-to-Site VPN](https://help.skytap.com/vpn-configuration-parameters.html#VPNconfigurationoptions)
 supports an IPSec VPN using IKEv1 or IKEv2 using Pre-Shared Keys (PSK),
 AES 256 bit and Perfect Forward Secrecy (PFS).
 
@@ -126,7 +114,7 @@ Skytap cloud.
 
 <img src="./edgenetworkingmedia/media/image4.png" width="800">
 
-*Figure 13 - Example VPN Connection Scheme*
+*Figure 3 - Example VPN Connection Scheme*
 
 ##### Private Network Connection (PNC)
 
@@ -138,10 +126,9 @@ the Skytap cloud environments. It should be noted that while this
 connection is private, using Multiprotocol Label Switching (MPLS), which
 logically isolates traffic, it is not however encrypted.
 
-![](./edgenetworkingmedia/media/image5.png){width="7.5in"
-height="2.6527777777777777in"}
+<img src="./edgenetworkingmedia/media/image5.png" width="800">
 
-*Figure 14 - Example Private Connection Scheme*
+*Figure 4 - Example Private Connection Scheme*
 
 When a PNC is used traffic between Skytap and the On-premises datacentre
 or other cloud providers should be encrypted at the edge of the
@@ -149,7 +136,7 @@ environment using a Firewall to create the site-to-site connection or by
 using point to point encryption from a service mesh network. Service
 Mesh networking is covered in the **Internal Networking** section of
 this document.
-
+----------------------------------------------------------------------------------- ------------- ----------------------------------------
 #### Firewall
 
 A Firewall should be implemented to protect the edge of the Skytap
@@ -173,14 +160,10 @@ Jump/Bastion host held in the Management environment.
 
 ##### Supported Implementations
 
-  -------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                    Vendor        Reference Architecture
-
-                                                                               
-
-  [[pfSense]{.ul}](https://www.netgate.com/solutions/pfsense/)   Netgate       
-
-  [[BIG-IP]{.ul}](https://www.f5.com/products/big-ip-services)   F5            
+|      Application     |      Vendor     |
+|----------------------|-----------------|
+| [BIG IP](https://www.f5.com/products/big-ip-services)               | F5        
+| [pfSense](https://www.netgate.com/solutions/pfsense/)               | Netgate           
   -------------------------------------------------------------- ------------- ----------------------------------------
 
 #### Intrusion Detection System / Intrusion Prevention System
@@ -198,20 +181,12 @@ of the Firewall capability.
 
 ##### Supported Implementations
 
-  -------------------------------------------------------------------------------------------------- ------------- ----------------------------------------
-  Application                                                                                        Vendor        Reference Architecture
-
-                                                                                                                   
-
-  [[pfSense]{.ul}](https://www.netgate.com/solutions/pfsense/)                                       Netgate       
-
-  [[Network Security                                                                                 McAfee        
-  Platform]{.ul}](https://www.mcafee.com/enterprise/en-gb/products/network-security-platform.html)                 
-
-  [[Next Gen                                                                                         Palo Alto     
-  Firewall]{.ul}](https://www.paloaltonetworks.com/network-security/next-generation-firewall)                      
-  -------------------------------------------------------------------------------------------------- ------------- ----------------------------------------
-
+  |      Application     |      Vendor     |
+|----------------------|-----------------|
+| [Network Security Platform](https://www.mcafee.com/enterprise/en-gb/products/network-security-platform.html)               | McAfee        
+| [pfSense](https://www.netgate.com/solutions/pfsense/)               | Netgate
+| [Next Gen Firewall](https://www.paloaltonetworks.com/network-security/next-generation-firewall)               | Palo Alto           
+  -------------------------------------------------------------- ------------- ----------------------------------------                                                                                                             
 [^1]: A Load Balancer is shown for reference but is not within the scope
     of this document.
 

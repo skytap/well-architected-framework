@@ -1,7 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\hybrid",
+    "\\operations",
     "\\operations\\Connectivity",
     "\\operations\\Discovery",
     "\\operations\\Ecosystems",
@@ -11,6 +11,6 @@
     "\\security",
     "\\security\\media"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\operations\\Discovery\\README.md",
   "PreviewInSolutionExplorer": false
 }
