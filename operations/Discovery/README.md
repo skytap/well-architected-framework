@@ -46,6 +46,8 @@ approach for x86 workloads also apply to Power:
     overlap with other applications. In this case, the application can
     simply be "turned off".
 
+--------------------------------------------------------------------- ------------- ----------------------------------------
+
 #### Updated Cloud Rationalization and IBM Power Workloads 
 
 Before Skytap on Azure, organizations would consider all of the
@@ -97,8 +99,9 @@ for Power applications.
     strategy, does it make sense to rebuild it to be cloud-native?
     Instead of rebuilding it, it can simply be rehosted into Skytap on
     Azure.
+--------------------------------------------------------------------- ------------- ----------------------------------------
 
-## What is the IBM Power Estate?
+#### What is the IBM Power Estate?
 
 All organizations have some type of digital estate which is a collection
 of assets that include virtual machines (VMs), physical servers,
@@ -129,7 +132,8 @@ different. An organizations Power estate is comprised of:
 Once you understand your IBM Power estate, then you can start the
 process of discovery to determine what and how you will be migrating to
 Skytap on Azure.
-
+--------------------------------------------------------------------- ------------- ----------------------------------------
+## Next steps
 #### IBM Power Discovery for on-premises workloads for migration to Skytap on Azure
 
 ##### Overview
