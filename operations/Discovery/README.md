@@ -16,5 +16,5 @@ Overview text here.
 
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
-| [Phase 01A-A - Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to design, build, and orchestrate workloads with DevOps principles in mind  |
-| [Phase 01A-B - Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
+| [Phase 01A-A - Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level indentification - LPAR size, CPU count, RAM, Storage  |
+| Phase 01A-B - Power Discovery & Design - Workloads | Provides guidance on how to identify and document your IBM Power estate - softwar level indentification - Application requirements |
