@@ -55,25 +55,18 @@ configured to use signed certificates validated by the Secrets Manager
 and should be used to reduce key reuse and automated repudiation of
 compromised keys or users no longer with authority to connect. With IBM
 i the TN5250 'Green-Screen' service should be secured using SSL/TLS
-certificates, some guidance is documented
-[[here]{.ul}](https://www.ibm.com/support/pages/configuring-ssl-telnet-and-host-servers-server-authentication-first-time),
+certificates, some guidance is documented [here](https://www.ibm.com/support/pages/configuring-ssl-telnet-and-host-servers-server-authentication-first-time),
 as the Green-Screen is a telnet based session which has no encryption
 and is susceptible to interception and exploitation.
 
 ##### Supported Implementations
 
-  ------------- ----------- --------- ----- ------- ----- ----- -------------------
-  Application   Vendor      x86             Power               Reference
-                                                                Architecture
-
-                            Windows         Linux   AIX   IBM i Linux
-
-  Active        Microsoft   ✔️        ✔️    ✔️            ✔️    
-  Directory                                                     
-
-  LDAP                                                          
-
-  SAML 2.0                                                      
+|      Application        |      Vendor      |      x86         |                |      Power     |                |                |
+|-------------------------|------------------|------------------|----------------|----------------|----------------|----------------|
+|                         |                  |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+|     Active Directory    |     Microsoft    | ✔️                | ✔️              | ✔️              |                | ✔️              |
+| LDAP                    |                  |                  |                |                |                |                |
+| SAML 2.0                |                  |                  |                |                |                |                |                                                    
   ------------- ----------- --------- ----- ------- ----- ----- -------------------
 
 #### Patching
@@ -86,15 +79,11 @@ master/gold templates in use on the Skytap platform.
 
 ##### Supported Implementations
 
-  -------------- ----------- --------- ----- ------- ----- ----- ------------------
-  Application    Vendor      x86             Power               Reference
-                                                                 Architecture
-
-                             Windows         Linux   AIX   IBM i Linux
-
-  Ansible        Red Hat     ✔️        ✔️    ✔️            ✔️    
-
-  Windows Update Microsoft   ✔️                                  
+|      Application     |      Vendor        |      x86         |                |      Power     |                |                |
+|----------------------|--------------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                    |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| Windows Update       |     Microsoft      | ✔️                |                |                |                |                |
+| Ansible              | Red Hat Enterprise | ✔️                | ✔️              | ✔️              |                | ✔️              |                                 
 
                                                                  
   -------------- ----------- --------- ----- ------- ----- ----- ------------------
@@ -107,17 +96,12 @@ and report any events centrally.
 
 ##### Supported Implementations
 
-  ------------- ------------- --------- ------ ------- ----- ----- ------------------
-  Application   Vendor        x86              Power               Reference
-                                                                   Architecture
-
-                              Windows          Linux   AIX   IBM i Linux
-
-                Trend         ✔️        ✔️     ✔️                  
-
-                HelpSystems                            ✔️          
-
-                Sophos        ✔️        ✔️     ✔️            ✔️    
+|      Application     |      Vendor     |      x86         |                |      Power     |                |                |
+|----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+|                      | Trend           | ✔️                | ✔️              | ✔️              |                |                |
+|                      | HelpSystems     |                  |                |                | ✔️              |                |
+|                      | Sophos          | ✔️                | ✔️              | ✔️              |                | ✔️              |  
   ------------- ------------- --------- ------ ------- ----- ----- ------------------
 
 #### HIDS/HIPS
@@ -135,18 +119,12 @@ LPAR is considered an attack and would cause the VM to self-destruct.
 
 ##### Supported Implementations
 
-  ------------- ---------- --------- ------ ------- ----- ------- ------------------
-  Application   Vendor     x86              Power                 Reference
-                                                                  Architecture
-
-                           Windows          Linux   AIX   IBM i   Linux
-
-  Fail2Ban                           ✔️                   ✔️      
-
-  TripWire      Tripwire   ✔️        ✔️     ✔️            ✔️      
-  Enterprise                                                      
-
-                TrapX      ✔️        ✔️                   ✔️      
+|      Application     |      Vendor     |      x86         |                |      Power     |                |                |
+|----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| Fail2Ban             | Trend           |                  | ✔️              | ✔️              |                |                |
+| TripWire Enterprise  | TripWire        | ✔️                | ✔️              | ✔️              |                | ✔️              |
+|                      | TrapX           | ✔️                | ✔️              |                | ✔️              |                | 
   ------------- ---------- --------- ------ ------- ----- ------- ------------------
 
 #### OS Firewall
@@ -160,24 +138,17 @@ reported.
 
 Supported Implementations
 
-  -------------- ----------- --------- ----- ------- ----- ----- ------------------
-  Application    Vendor      x86             Power               Reference
-                                                                 Architecture
-
-                             Windows         Linux   AIX   IBM i Linux
-
-  Windows        Microsoft   ✔️                                  
-  Firewall                                                       
-
-  iptables       N/A                   ✔️                  ✔️    
-
-  ipfilters      IBM                         ✔️                  
+|      Application                           |      Vendor     |      x86         |                |      Power     |                |                |
+|--------------------------------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
+|                                            |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
+| Microsoft Defender for Endpoint - Firewall | Microsoft       | ✔️                | *              |                |                |                |
+| iptables                                   |                 |                  | ✔️              |                |                | ✔️              |
+| ipfilters                                  | IBM             |                  |                | ✔️              |                |                | 
   -------------- ----------- --------- ----- ------- ----- ----- ------------------
 
 #### Example High Level Design
 
-![](./virtualmachinesmedia/media/image2.png){width="5.60416447944007in"
-height="8.240279965004374in"}
+<img src="./virtualmachinesmedia/media/image2.png" width="600">
 
 ## Next steps
 
