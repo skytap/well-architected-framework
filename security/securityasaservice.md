@@ -11,46 +11,29 @@ cloud workloads. These partners can supplement an organisation's
 internal security support team and should be considered as part of a
 wider cloud strategy.
 
-  ----------------------------------------------------------------------------------------
-  Vendor        Capabilities                                                         
-  ------------- -------------- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-                A              B     C     D     E     F     G     H     I     J     K
+  |     Vendor         |     Capabilities    |          |          |          |          |          |          |          |          |          |          |
+|--------------------|---------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+|                    |     A               |     B    |     C    |     D    |     E    |     F    |     G    |     H    |     I    |     J    |     K    |
+|     Meridian IT    |     ✔️               |          |          |          |          |          |          |          |          |          |          |
+|     IBM            |                     |          |          |          |          |          |          |          |          |          |     ✔️    |
+| HelpSystems        |                     |          |          |          |          |          |          |          |          |          |          |  
 
-  Meridian IT   ✔️                                                                   
 
-  IBM                                                                                ✔️
+###### *Legend*
 
-  HelpSystems                                                                        
-
-                                                                                     
-  ----------------------------------------------------------------------------------------
-
-### Legend
-
-  -----------------------------------------------------------------------
-  Key       Capability[^1]
-  --------- -------------------------------------------------------------
-  A         Business continuity and disaster recovery (BCDR or BC/DR)
-
-  B         Continuous monitoring
-
-  C         Data loss prevention (DLP)
-
-  D         Email security
-
-  E         Encryption
-
-  F         Identity and access management (IAM)
-
-  G         Network security
-
-  H         Security assessment
-
-  I         Security information and event management (SIEM)
-
-  J         Vulnerability scanning
-
-  K         Web security
+| Key      | Capability[^1]                                                     |
+|----------|--------------------------------------------------------------------|
+|     A    |     Business   continuity and disaster recovery (BCDR or BC/DR)    |
+|     B    |     Continuous monitoring                                          |
+|     C    |     Data loss prevention (DLP)                                     |
+|     D    |     Email security                                                 |
+|     E    |     Encryption                                                     |
+|     F    |     Identity and access management (IAM)                           |
+|     G    |     Network security                                               |
+|     H    |     Security assessment                                            |
+|     I    |     Security information and event management (SIEM)               |
+|     J    |     Vulnerability scanning                                         |
+|     K    |     Web security                                                   |
 
 
 
