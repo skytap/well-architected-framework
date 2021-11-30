@@ -6,11 +6,8 @@
     "\\operations\\Discovery",
     "\\operations\\Ecosystems",
     "\\operations\\ExpressRoute",
-    "\\resiliency",
-    "\\scalability",
-    "\\security",
-    "\\security\\media"
+    "\\security"
   ],
-  "SelectedNode": "\\operations\\Discovery\\README.md",
+  "SelectedNode": "\\security\\keysecurityareas.md",
   "PreviewInSolutionExplorer": false
 }
