@@ -142,4 +142,4 @@ Skytap on Azure.
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
 | [Phase 01A-A - Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level indentification - LPAR size, CPU count, RAM, Storage  |
-| Phase 01A-B - Power Discovery & Design - Workloads | Provides guidance on how to identify and document your IBM Power estate - softwar level indentification - Application requirements |
+| [Phase 01A-B - Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - softwar level indentification - Application requirements |
