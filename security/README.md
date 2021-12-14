@@ -69,21 +69,14 @@ controls to be accounted for, architected and implemented.
 
  *Figure 3 - Example Target Operating Model (TOM)**
 
-Most organisations will have multiple cloud vendors, supported by
+Most organizations will have multiple cloud vendors, supported by
 systems integrators or outsourced management functions. Your various
 clouds need to be managed holistically but controls applied
-specifically, for example, all logging across your organisation should
+specifically, for example, all logging across your organization should
 be consolidated into a single Security Incident Event Monitoring (SIEM)
 system, but the approach to management and remediation will be custom to
 each workload and each platform.
 
-Most organizations will have multiple cloud vendors, supported by
-systems integrators or outsourced management functions. Cloud platforms
-need to be managed holistically but controls applied specifically, for
-example, all logging across your organisation should be consolidated
-into a single Security Incident Event Monitoring (SIEM) system and the
-approach to management and remediation will be defined by the workload
-and platform.
 
 
 ## Next steps
