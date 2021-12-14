@@ -27,7 +27,7 @@ Assets you deploy into your account should be defined by implementation
 standards based on your use cases and requirements while taking into
 account best practices of how to leverage Skytap. Each layer in this
 model is built on the capabilities delivered in the layer below; you
-cannot know how to secure a virtual machine without understanding how
+cannot know how to secure virtual machines without understanding how
 they can be secured and why they need to be.
 
 Accompanying this document is a **Skytap - Security Controls Workbook**
@@ -45,7 +45,7 @@ and customers are accountable for the way they use that platform.
 
 *Figure 2 -- Shared Responsibility Model*
 
-Additionally, resources deployed into Skytap should have clearly a
+Additionally, resources deployed into Skytap should have a
 clearly defined operating model:
 
 -   Who is responsible for creation/deletion of virtual machines?
