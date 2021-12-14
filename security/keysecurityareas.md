@@ -21,7 +21,7 @@ standardized designs and partner points of contact where appropriate.
 ### Platform
 
 The Skytap platform provides controls for Security Policies;
-Notifications; Authentication, Authorisation and Accounting; and
+Notifications; Authentication, Authorization and Accounting; and
 Auditing.
 
 <img src=".//media/image4.png" width="500">
@@ -56,7 +56,7 @@ long-running virtual machines.
 
 The Users, Groups, Projects and Departments are used to control Cost
 and/or Access to services; they should be configured to align with your
-organisation's best business processes and operational best practices.
+organization's best business processes and operational best practices.
 
   |                    |     Cost Control    |     Access Control    |
 |--------------------|---------------------|-----------------------|
@@ -178,7 +178,7 @@ templates, or assets outside of a project.*
 
 *Project Example*
 
-**Scenario:** The organisation wants to control and manage a set of
+**Scenario:** The organization wants to control and manage a set of
 company-wide golden templates in your customer account. A small set of
 users to maintain the templates (template creators), and all other users
 in the account will have permission to create environments from those
@@ -193,7 +193,7 @@ templates (template users).
 -   **Golden Templates** -- Use this project to share golden templates
     with all users.
 
-    -   Add all finalised, approved templates to this project.
+    -   Add all finalized, approved templates to this project.
 
     -   Add template creators to the project in
         the **Manager** role. **Managers** can:
@@ -243,7 +243,7 @@ Each user can belong to one department, and the platform supports up to
 Skytap can be configured for SAML based Single Sign-On, thus making it
 compatible with Azure Directory Services, Corporate Active Directory and
 authentication services such as Ping Identity or Okta. By integrating
-with Single Sign-On organisations can enforce additional authentication
+with Single Sign-On organizations can enforce additional authentication
 controls such as endpoint integrity and verification, location-based
 authentication and conditional/just in time access.
 
@@ -267,7 +267,7 @@ allocation, and usage trending analysis.
 
 Single Value label categories can be attached only once per environment,
 template, asset, or schedule. For example, a Single Value label of *Cost
-Centre* could be used for chargebacks or cost allocation purposes.
+Center* could be used for chargebacks or cost allocation purposes.
 
 Multi-value label categories are suited for general reporting, for
 example, to group environments by applications in use.
