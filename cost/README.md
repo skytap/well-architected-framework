@@ -16,7 +16,7 @@ keywords:
 
 A cost-effective workload is driven by business goals and the return on investment (ROI) while staying within a given budget. The principles of cost optimization are a series of important considerations that can help achieve both business objectives and cost justification.
 
-When you are designing a cloud solution, focus on generating incremental value early. Use the pay-as-you-go strategy for your architecture, and invest in scaling out, rather than delivering a large investment first version. Consider opportunity costs in your architecture, and the balance between first mover advantage versus "fast follow". Use the cost calculators to estimate the initial cost and ongoing operational costs. Finally, establish policies, budgets, and controls that set cost limits for your solution.
+When you are designing a cloud solution, focus on generating incremental value early. Use the pay-as-you-go strategy for your architecture, and invest in scaling out, rather than delivering a large investment first version. Consider opportunity costs in your architecture, and the balance between "first mover" advantage versus "fast follower". Use the cost calculators to estimate the initial cost and ongoing operational costs. Finally, establish policies, budgets, and controls that set cost limits for your solution.
 
 **Cost guidance**
 
