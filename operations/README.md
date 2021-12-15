@@ -1,12 +1,7 @@
 ---
 title: Overview of the operational excellence pillar
 description: Describes the operational excellence pillar.
-keywords:
-  - "Well-architected framework"
-  - "Skytap Well Architected Framework"
-  - "Skytap architecture"
-  - "architecture framework"
-  - "markdown"
+author: Matthew Romero, Technical Product Marketing Manager
 ---
 
 # Overview of the operational excellence pillar

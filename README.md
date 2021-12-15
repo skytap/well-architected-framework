@@ -2,15 +2,6 @@
 title: Well-Architected Framework
 description: Well-Architected Framework describes five pillars of cost optimization, operational excellence, performance efficiency, reliability, and security, that result in a high quality and scalable cloud architecture.
 author: Matthew Romero, Technical Product Marketing Manager 
-categories:
-  - Skytap Well Architected Framework
-subject:
-  - Skytap Well Architected Framework
-keywords:
-  - "Well-architected framework"
-  - "Skytap Well Architected Framework"
-  - "Skytap architecture"
-  - "architecture framework"
 ---
 
 # Get started with the Skytap Well-Architected Framework 

@@ -1,13 +1,6 @@
 ---
 title: Principles of cost optimization
-description: Describes the principles of cost optimization.
-author: matthew-romero 
-keywords:
-  - "Well-architected framework"
-  - "Skytap Well Architected Framework"
-  - "Skytap architecture"
-  - "architecture framework"
-  - "markdown"
+author: Matthew Romero, Technical Product Marketing Manager
 ---
 
 # Principles of cost optimization

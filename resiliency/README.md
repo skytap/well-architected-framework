@@ -1,7 +1,7 @@
 ---
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
-author: George Stamos, Director, Solutions Architect- Business Development
+author: George Stamos, Director, Solutions Architect - Business Development
 categories:
   - Resiliency
 subject:

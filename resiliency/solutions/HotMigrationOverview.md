@@ -1,11 +1,7 @@
 ---
 title: Hot Migration Overview
 description: Skytap Hot Migration Partner Solutions
-author: George Stamos, Director, Solutions Architect- Business Development
-categories:
-  - Resiliency
-subject:
-  - Hot Migrations
+author: George Stamos, Director, Solutions Architect - Business Development
 ---
 
 **Skytap on Azure + Precisely for High Availability Scenarios**

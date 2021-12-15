@@ -1,3 +1,7 @@
+---
+title: Skytap Power Discovery - Workloads
+author: George Stamos, Director, Solutions Architect- Business Development
+---
 **Skytap on Azure -- Power Workload Discovery**
 
 The following section outlines IBM Power Workload discovery:

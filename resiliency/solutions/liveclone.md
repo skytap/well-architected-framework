@@ -1,3 +1,8 @@
+---
+title: Skytap Live Clone
+author: Dan Jones, Vice President of Product
+---
+
 **Skytap Live Clone** 
 
 <span style="font-weight: 400;">Within Skytap, Environments and Templates are very important concepts. An Environment is an object that comprises one or more VMs, one or more networks, plus configuration settings and metadata. A Template is a read-only copy of an environment that can be used to back up critical environments and acts like a blueprint for new environments. Environments can be copied, and they can be saved as a template. </span>

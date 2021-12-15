@@ -1,11 +1,7 @@
 ---
 title: Cold Migration Overview
 description: Skytap Cold Migration Partner Solutions
-author: George Stamos, Director, Solutions Architect- Business Development
-categories:
-  - Resiliency
-subject:
-  - Cold Migrations
+author: George Stamos, Director, Solutions Architect - Business Development
 ---
 
 **Skytap on Azure Architecture: Skytap + Commvault**
