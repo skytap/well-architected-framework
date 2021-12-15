@@ -5,7 +5,7 @@ author: George Stamos, Director, Solutions Architect- Business Development
 categories:
   - Resiliency
 subject:
-  - Cold Migrations
+  - Considerations for Migration
 ---
 
 # Principles of the reliability pillar
