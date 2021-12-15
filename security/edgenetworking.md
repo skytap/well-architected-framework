@@ -7,7 +7,7 @@ the immediate environment in Skytap, and as such, represents a
 significant area of exposure. Workloads running in the cloud have
 legitimate needs to access services or resources either on the Internet
 or behind the corporate network. To do this safely and efficiently
-consolidating this ingress and egress into a centralised service can
+consolidating this ingress and egress into a centralized service can
 help to enforce good practice and reduce risk.
 
 The Outbound Proxy and Inbound Proxy filter is what Virtual Machines can
@@ -33,8 +33,8 @@ do provide distinctly different functionality. A Firewall can restrict
 connectivity between devices based on source or destination information
 sent with the traffic. In contrast, an IDS/IPS attempts to understand
 the context of the traffic passing through and responds accordingly. The
-IDS/IPS is designed to detect unauthorised intrusions on your network by
-matching traffic flows to known signatures
+IDS/IPS is designed to detect unauthorized intrusions on your network by
+matching traffic flows to known signatures.
 
 When providing Internet or VPN access, this stack is typically
 implemented, as below. With the reverse being true for outbound traffic.
@@ -109,7 +109,7 @@ AES 256 bit and Perfect Forward Secrecy (PFS).
 
 The Skytap Site-to-Site VPN secures traffic that traverses the public
 Internet, but not private connectivity. Multiple VPNs can be created for
-high availability and to connect multiple corporate data centres to the
+high availability and to connect multiple corporate data centers to the
 Skytap cloud.
 
 <img src="./edgenetworkingmedia/media/image4.png" width="800">
@@ -121,7 +121,7 @@ Skytap cloud.
 An Azure ExpressRoute or Equinix Cloud Hub connection are referred to as
 Private Network Connections (PNCs) in Skytap.
 
-In the example below, the PNC connects the on-premises data centre with
+In the example below, the PNC connects the on-premises data center with
 the Skytap cloud environments. It should be noted that while this
 connection is private, using Multiprotocol Label Switching (MPLS), which
 logically isolates traffic, it is not however encrypted.
@@ -130,7 +130,7 @@ logically isolates traffic, it is not however encrypted.
 
 *Figure 4 - Example Private Connection Scheme*
 
-When a PNC is used traffic between Skytap and the On-premises datacentre
+When a PNC is used traffic between Skytap and the On-premises data center
 or other cloud providers should be encrypted at the edge of the
 environment using a Firewall to create the site-to-site connection or by
 using point to point encryption from a service mesh network. Service
@@ -140,8 +140,8 @@ this document.
 #### Firewall
 
 A Firewall should be implemented to protect the edge of the Skytap
-platform, both to defend the workloads running in Skytap but also any
-onward connection to the corporate datacentre or other clouds.
+platform, both to defend the workloads running in Skytap, but also any
+onward connection to the corporate data center or other clouds.
 
 Internet to Environments filtering should take place to only permit
 acceptable connections, for example, HTTPS connection to the Inbound
@@ -171,7 +171,7 @@ Jump/Bastion host held in the Management environment.
 Typically Intrusion Detection Systems or Intrusion Prevention Systems
 are consolidated on the firewall but shown here as a discrete capability
 for completeness. The IDS/IPS performs a vital monitoring function to
-alert administrators and security personnel of unauthorised attempts to
+alert administrators and security personnel of unauthorized attempts to
 access the network. Intrusion is of particular concern with
 internet-facing applications.
 
