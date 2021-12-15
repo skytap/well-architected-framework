@@ -27,4 +27,4 @@ These are the disciplines we group in the operational excellence pillar:
 | [Phase 01B - Connectivity](./Connectivity/README.md) | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
 | [Phase 01C - Sizing and Design](./Sizing_Design/README.md) | The monitoring and management of performance and availability of software applications through DevOps |
 | [Phase 01D - EcoSystem](./Ecosystems/README.md) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
-| [Phase 01E - Testing](./Testing/README.md) | Testing is fundamental to be prepared for the unexpected and to catch mistakes before they impact users |
+| [Phase 01E - Testing](./Testing/README.md) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users |
