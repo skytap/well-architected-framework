@@ -1,3 +1,7 @@
+---
+title: Accelerate Cloud Adoption
+author: Matthew Romero, Technical Product Marketing Manager
+---
 ## Accelerate adoption
 
 To modernize your workloads to the cloud, it requires more than just IT. Use these guides to start aligning various teams to accelerate migration and innovation efforts.

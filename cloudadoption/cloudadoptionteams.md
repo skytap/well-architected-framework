@@ -1,3 +1,7 @@
+---
+title: Cloud Adoption for teams
+author: Matthew Romero, Technical Product Marketing Manager
+---
 ## Establish teams
 
 Depending on your adoption strategy and operating model, you might need to establish a few teams. This section helps you get those new teams started.

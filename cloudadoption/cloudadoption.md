@@ -1,3 +1,8 @@
+---
+title: Cloud Adoption Scenarios
+author: Matthew Romero, Technical Product Marketing Manager
+---
+
 ## Cloud adoption scenarios
 
 Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. Depending on whether you're considering a comprehensive hybrid and multicloud effort, preparing for Kubernetes and container integration into your cloud strategy, or designing a cloud adoption journey for a retail business, we have updated guidance for these scenarios and more.
