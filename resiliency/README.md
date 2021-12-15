@@ -66,7 +66,7 @@ Skytap is comprised of three service layer tiers as depicted below:
 **Skytap on Azure: Azure Region, Skytap Region and connection to Azure
 Native Services**
 
-Within a given Azure region, Skytap Standard Power WMs and x86 VMs and
+Within a given Azure region, Skytap Standard Power VMs and x86 VMs and
 Azure Dedicated S922 and x86 Bare Metal and Storage are connected via
 ExpressRoute to Azure Native Services as depicted below.
 
@@ -94,9 +94,9 @@ migration as depicted here.
 
 ## Definitions
 
-**RTO**: Downtime of services, apps and infrastructure for business continuity – i.e., the amount of time it takes to get back up and running in the event of a disaster or outage.
+**RTO**: Downtime of services, apps and infrastructure for business continuity â€“ i.e., the amount of time it takes to get back up and running in the event of a disaster or outage.
 
-**RPO**: Frequency of data backup – i.e., the amount of time in which data may be lost.
+**RPO**: Frequency of data backup â€“ i.e., the amount of time in which data may be lost.
 
 The two numbers above, combined with contingencies like distance, amount of data rate change and available bandwidth will determine whether to employ a High Availability Tool or a Disaster Recovery Tool.
 
