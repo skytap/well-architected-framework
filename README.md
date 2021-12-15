@@ -1,14 +1,16 @@
 ---
 title: Well-Architected Framework
-titleSuffix:Architecture Center
 description: Well-Architected Framework describes five pillars of cost optimization, operational excellence, performance efficiency, reliability, and security, that result in a high quality and scalable cloud architecture.
-author: matthew-romero 
+author: Matthew Romero, Technical Product Marketing Manager 
+categories:
+  - Skytap Well Architected Framework
+subject:
+  - Skytap Well Architected Framework
 keywords:
   - "Well-architected framework"
   - "Skytap Well Architected Framework"
   - "Skytap architecture"
   - "architecture framework"
-  - "markdown"
 ---
 
 # Get started with the Skytap Well-Architected Framework 
@@ -16,7 +18,7 @@ keywords:
 The Skytap Well-Architected Framework helps you get started with several different guides. This article groups the guides to help you find the one that best aligns with the current state of your workloads and goals in moving to Skytap on Azure. 
 
 The following links take you to questions that are typically asked when an organization is trying to accomplish one or many goals during its cloud adoption journey.
-- [Adopt the cloud to deliver business and technical outcomes sooner](./accelerateadoption.md)
+- [Adopt the cloud to deliver business and technical outcomes sooner](./cloudadoption/accelerateadoption.md)
 - [Improve design and deployments to ensure proper operations of the cloud](./operations/README.md)  
 
 
