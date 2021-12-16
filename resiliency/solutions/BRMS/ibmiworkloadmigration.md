@@ -1,7 +1,12 @@
-**[IBM i workload migration from on-prem to Skytap using BRMS
-ICC.]{.underline}**
+---
+title: IBM i workload migration from on-prem to Skytap using BRMS ICC
+description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
+author: Tony Perez, Sales Engineer 
+---
 
-1.  **[Objective]{.underline}**:
+**[IBM i workload migration from on-prem to Skytap using BRMS ICC.**
+
+**Objective**:
 
 -   Demonstrate how an IBM i workload can be migrated to Skytap cloud
     > using BRMS ICC. In this document we will see how to take backup on
@@ -19,13 +24,10 @@ ICC.]{.underline}**
     > Azure-in-the-middle where we might backup from real on-prem to a
     > VM in Azure as an intermediate step.
 
-2.  **[Prerequisites]{.underline}**:
+**Prerequisites**:
 
--   Below LPPs need to be installed on IBM i LPAR
+Below LPPs need to be installed on IBM i LPAR
 
-```{=html}
-<!-- -->
-```
 -   5770-SS1 Option 18: Media and Storage Extensions
 
 -   5770-SS1 Option 44: Encrypted Backup Enablement (Optional)
@@ -45,22 +47,18 @@ ICC.]{.underline}**
 -   5733ICC Option 3: Reserved -- Option 3,4,5,6,7\
     > \<NOTE: INSERT COMMAND TO SEE YOUR LPPs INSTALLED\>
 
-```{=html}
-<!-- -->
-```
 -   Install latest PTFs on IBM i with below individual PTFs installed
 
-> [[Minimum]{.underline}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels)
+> [Minimum](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels)
 > PTF level for IBM i\
 > \<NOTE: NEED LINK TO POINT TO HOW TO INSTALL PTFs IN SKYTAP\>
 
 -   Utilized ASP should be less than 48% in IBM i LPAR\
     > \<NOTE: NEED 4.7 X 10GB Explanation\>
 
-> \<NOTE: NEED COMMAND SHOW WHAT YOUR % IS AND MAYBE SCREEN
-> SHOT\...WRKSYSSTS\>
+> \<NOTE: NEED COMMAND SHOW WHAT YOUR % IS AND MAYBE SCREENSHOT\...WRKSYSSTS\>
 
-3.  **[Full system backup of IBM i source using BRMS ICC]{.underline}**
+**Full system backup of IBM i source using BRMS ICC**
 
 -   Create ICC FTP resource where IBM i backup will be transferred. FTP
     > resource can be IBM i or Linux system.\
@@ -81,23 +79,20 @@ FTP server IP: port no./root directory\
 \
 ===\> CRTFPRICC
 
-> ![](./media/image2.png){width="6.268055555555556in"
-> height="2.9902777777777776in"}
->
-> ![](./media/image12.png){width="6.268055555555556in"
-> height="1.3090277777777777in"}\
-> \
-> Once completed you will see: \"Resource TEST1 was created for resource
-> type FTP.
+<img src="media/image2.png">
+<img src="media/image12.png">
+
+Once completed you will see: \"Resource TEST1 was created for resource type FTP.
 
 -   Once the resource is created, run the following command:\
     > \
     > ===\> INZBRM \*DATA\
     > \
-    > Once you press \<ENTER\> wait for the command to complete, there
-    > is no confirmation message that is displayed. This command will
-    > will automatically create the below control groups for the Test1
-    > resource created in previous step.
+    
+Once you press \<ENTER\> wait for the command to complete, there
+    is no confirmation message that is displayed. This command will
+will automatically create the below control groups for the Test1
+    resource created in previous step.
 
 > QCLDBGRP01
 >
@@ -126,14 +121,13 @@ FTP server IP: port no./root directory\
     > \"\*NO\" for restart.Press \<ENTER\> once you have all the values
     > filled in. Then F3 to exit.
 
--   
 
-> ~~Change Restart to \*NO for Seq 10 Subsystem \*ALL~~
 
-![](./media/image1.png){width="6.268055555555556in"
-height="1.6388888888888888in"}
+Change Restart to \*NO for Seq 10 Subsystem \*ALL
 
--   Start backup using below command:
+<img src="media/image1.png">
+
+Start backup using below command:
 
 > **===\> STRBKUBRM CTLGRP(QCLDBSYS01) SBMJOB(\*NO)**
 
@@ -158,7 +152,7 @@ height="1.6388888888888888in"}
     > \<NOTE: We need to explain the \"WHY\" we are changing these
     > values\>
 
-![](./media/image6.png){width="5.989583333333333in" height="4.5625in"}
+<img src="./media/image6.png">
 
 -   Select Option 9=Subsystems to process \<NOTE: Do we stay on
     > QCLDBIPL01?\>
@@ -196,152 +190,122 @@ backups.
 
 -   Move the media to FTP resource using command:\
     > ===\> WRKMEDBRM\
-    > \
-    > Find all the media objects that have the \"+\" (plus sign) next to
-    > them. They should end with \"OPT\" and \"TAP. Put an \"8\" (move)
-    > next to all of them with the plus sign. You might have to page
-    > down to find all of them. Press \<ENTER\> after putting 8 next to
-    > each entry.\
-    > \
-    > You should see a screen similar to this:\
-    > ![](./media/image14.png){width="6.267716535433071in"
-    > height="2.2083333333333335in"}\
-    > \
-    > Change \"Storage location\" to \"TEST1\" that was created
-    > earlier:\
-    > ![](./media/image13.png){width="6.267716535433071in"
-    > height="1.0694444444444444in"}\
-    > And press \<ENTER\>
 
--   
+    Find all the media objects that have the \"+\" (plus sign) next to them. They should end with \"OPT\" and \"TAP. Put an \"8\" (move)
+    next to all of them with the plus sign. You might have to page
+    down to find all of them. Press \<ENTER\> after putting 8 next to
+     each entry.
+
+    You should see a screen similar to this:
+
+<img src="./media/image14.png">
+
+Change \"Storage location\" to \"TEST1\" that was created earlier:
+
+<img src="./media/image13.png">
+
+And press \<ENTER\>
+
 
 Note: QCLDBIPL01 will use virtual optical media and QCLDBSYS01 will use
 virtual tape media
 
--   After moving the media check the status of transfer using below
-    > command:
+-   After moving the media check the status of transfer using below command:
 
-    -   WRKSTSICC Status(\*All)
+>WRKSTSICC Status(\*All)
 
-> You will see the Volume Name, Status, and Complete% for each file
-> transfer. Wait until all Volumes have Successfully been completed to
-> proceed to the next step.
+You will see the Volume Name, Status, and Complete% for each file
+transfer. Wait until all Volumes have Successfully been completed to
+proceed to the next step.
 
 -   Generate BRMS recovery report using below command:
 
 > **STRRCYBRM OPTION(\*CTLGRP) ACTION(\*REPORT) CTLGRP((QCLDBSYS01 1)
 > (QCLDBIPL01 2))**
 
-5.  **[Copy backup media from ICC FTP resource to IBM i LPAR on
-    > cloud.]{.underline}** (This step can be skipped if backup is being
-    > transferred to IBM i server in 4^th^ step)
+**Copy backup media from ICC FTP resource to IBM i LPAR on cloud.** 
+(This step can be skipped if backup is being transferred to IBM i server in 4^th^ step)
 
 This IBM i LPAR will be used as NFS server to build the target IBM i
 LPAR
 
 -   Create a directory in IFS where you want to copy the media from FTP
-    > server using below command:
+server using below command:
 
-```{=html}
-<!-- -->
-```
--   MKDIR '/XX', where xx is the directory name
-
-```{=html}
-<!-- -->
-```
+ >MKDIR '/XX', where xx is the directory name
+      
 -   Start FTP server and QICC subsystem if not already started using
-    > below commands:
+below commands:
 
-```{=html}
-<!-- -->
-```
--   STRTCPSVR \*FTP
 
--   STRSBS QICC/QICCSBS
+>STRTCPSVR \*FTP
 
-```{=html}
-<!-- -->
-```
+>STRSBS QICC/QICCSBS
+
 -   Copy the media from FTP server to IBM i LPAR using below command,
-    > where LOCALFILE will be the directory created in previous
-    > step/media volume name and CLOUDFILE will be the file name FTP
-    > server with syntax QBRMS\_xx.
+   where LOCALFILE will be the directory created in previous
+    step/media volume name and CLOUDFILE will be the file name FTP
+    server with syntax QBRMS\_xx.
 
-```{=html}
-<!-- -->
-```
--   CPYFRMCLD RESOURCE(Test) Async(\*No)
-    > CLOUDFILE(\'QBRMS\_IBMI74/QO3911\') LOCALFILE(\"/xx/QO3911\')
 
-6.  **[IBM i recovery from IBM i NFS server]{.underline}**
+>CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\') LOCALFILE(\"/xx/QO3911\')
+
+**IBM i recovery from IBM i NFS server**
 
 -   Create image catalog and add media entry to image catalog using
-    > below commands in IBM i NFS server:
+     below commands in IBM i NFS server:
 
-```{=html}
-<!-- -->
-```
--   CRTDEVOPT DEVD(INSTALL) RSRCNAME(\*VRT)
+> CRTDEVOPT DEVD(INSTALL) RSRCNAME(\*VRT)
 
--   VARY ON the Optical drive
+VARY ON the Optical drive
 
--   CRTIMGCLG IMGCLG(XXX) DIR(\'/XX\') TYPE(\*OPT) CRTDIR(\*YES)
+>   CRTIMGCLG IMGCLG(XXX) DIR(\'/XX\') TYPE(\*OPT) CRTDIR(\*YES)
 
--   ADDIMGCLGE IMGCLG(XXX) FROMFILE('media name') TOFILE('media name')
+>   ADDIMGCLGE IMGCLG(XXX) FROMFILE('media name') TOFILE('media name')
 
--   Load image catalog to Optical drive
+Load image catalog to Optical drive
 
--   Verify image catalog with verify type as \*LIC and NFSSHR as \*YES
+Verify image catalog with verify type as \*LIC and NFSSHR as \*YES
 
-```{=html}
-<!-- -->
-```
--   Start the NFS server and change NFS export options using below
-    > commands:
+- Start the NFS server and change NFS export options using below
+    commands:
 
-    -   STRNFSSVR SERVER(\*All)
+>   STRNFSSVR SERVER(\*All)
 
-    -   CHGNFSEXP OPTIONS('-i -o ro') DIR('/xx)
+>   CHGNFSEXP OPTIONS('-i -o ro') DIR('/xx)
 
-![](./media/image8.png){width="6.268055555555556in"
-height="2.577777777777778in"}
+<img src="media/image8.png">
 
 -   Change object authorities and TFTP attributes:
 
-```{=html}
-<!-- -->
-```
--   CHGAUT OBJ(\'/xx\') USER(\*PUBLIC) DTAAUT(\*RWX) SUBTREE(\*ALL)
 
--   CHGTFTPA AUTOSTART(\*YES) ALTSRCDIR(\'/xx\')
+> CHGAUT OBJ(\'/xx\') USER(\*PUBLIC) DTAAUT(\*RWX) SUBTREE(\*ALL)
 
--   CHGAUT OBJ(\'/xx\') USER(QTFTP) DTAAUT(\*RX) SUBTREE(\*ALL)
+> CHGTFTPA AUTOSTART(\*YES) ALTSRCDIR(\'/xx\')
 
-```{=html}
-<!-- -->
-```
+> CHGAUT OBJ(\'/xx\') USER(QTFTP) DTAAUT(\*RX) SUBTREE(\*ALL)
+
 -   Restart the TFTP server:
 
-    -   ENDTCPSVR SERVER(\*TFTP)
+> ENDTCPSVR SERVER(\*TFTP)
 
-    -   STRTCPSVR SERVER(\*TFTP)
+> STRTCPSVR SERVER(\*TFTP)
 
-7.  **[Configure IBM i client server (target LPAR)]{.underline}**
+**Configure IBM i client server (target LPAR)**
 
 -   Login to SST and select option 8 -- Work with service tools User IDs
-    > and Devices
+     and Devices
 
 -   Press F13 and select the LAN adapter
 
-> The LAN adapter needs to be on the same VLAN as IBM i NFS server,
+The LAN adapter needs to be on the same VLAN as IBM i NFS server,
 
 -   Configure service tools LAN adapter:
 
     -   IP version allowed = IPV4
 
     -   Internet address = you can use the same IP of the client
-        > (TARGET)
+        (TARGET)
 
     -   Gateway router address = use the same gateway on the client
 
@@ -354,7 +318,7 @@ height="2.577777777777778in"}
     -   Press F14=Activate
 
 -   Verify port 3000 status as active using NETSTAT \*CNN and use F14 to
-    > display port numbers
+    display port numbers
 
 -   Create client server optical device
 
@@ -363,23 +327,21 @@ height="2.577777777777778in"}
     -   Local internet address = \*SRVLAN
 
     -   Remote internet address = the IP address of the IBM i VSI NFS
-        > Server
+         Server
 
     -   Network image directory = '/xx'
 
-![](./media/image10.png){width="6.268055555555556in"
-height="2.511111111111111in"}
+<img src="media/image10.png">
 
 -   Vary on the optical device created in previous step and verify you
-    > can access the remote image catalog using WRKIMGCLGE IMGCLG(\*DEV)
-    > DEV(Opt dev)
+    can access the remote image catalog using WRKIMGCLGE IMGCLG(\*DEV)
+   DEV(Opt dev)
 
-![](./media/image4.png){width="6.268055555555556in"
-height="2.0548611111111112in"}
+<img src="media/image4.png">
 
 -   Start network install to start scratch installation staring from LIC
-    > installation, prior to installation make sure to document all
-    > current network information, same may be needed after restoration.
+     installation, prior to installation make sure to document all
+     current network information, same may be needed after restoration.
 
 -   Start network install:
 
@@ -391,14 +353,12 @@ height="2.0548611111111112in"}
 
     -   Keylock mode = MANUAL
 
-![](./media/image9.png){width="6.268055555555556in"
-height="1.6666666666666667in"}
+<img src="media/image9.png">
 
 -   On Install LIC screen, take Option 2 to Install LIC and Initialize
-    > system
+     system
 
-![](./media/image11.png){width="6.268055555555556in"
-height="1.4965277777777777in"}
+<img src="media/image11.png">
 
 -   Post LIC installation, do disk configuration
 
@@ -406,7 +366,7 @@ height="1.4965277777777777in"}
 
 -   Install OS using below option:
 
-![](./media/image5.png){width="6.268055555555556in" height="2.875in"}
+<img src="media/image5.png">
 
 -   On Install device type, Select option-2 -- Network device
 
@@ -415,34 +375,26 @@ height="1.4965277777777777in"}
     -   Server IP = the IP address of the SOURCE NFS IBM i VSI
 
     -   Path Name = the name of the Directory where the image volumes
-        > are located
+         are located
 
     -   Press F10 = Continue
 
-```{=html}
-<!-- -->
-```
--   Press Enter twice to confirm and on Install the OS screen, take
-    > Install Option as 2
+-   Press Enter twice to confirm and on Install the OS screen, take Install Option as 2
 
-![](./media/image3.png){width="6.268055555555556in"
-height="1.5277777777777777in"}
+<img src="./media/image3.png">
 
 -   Select Option 1=Restore programs and language objects from the
-    > current media set
+     current media set
 
 -   Select Option 2=Keep for Job and output queues
 
 -   Select Option 1=Yes for distribute operating system and on available
-    > disk units
+     disk units
 
 -   Change system information -- 1 to restore
 
 -   Change following on next screen:
 
-```{=html}
-<!-- -->
-```
 -   Start print writers = N
 
 -   Start system to restricted state = Y
@@ -451,57 +403,47 @@ height="1.5277777777777777in"}
 
 -   Define or change system at IPL = Y
 
--   **Set System date, time, and time zone same as current [Source
-    > System]{.underline}**
+ **Set System date, time, and time zone same as current [Source
+     System]**
 
-```{=html}
-<!-- -->
-```
 -   Enable automatic configuration -- Y
 
-![](./media/image7.png){width="6.0in" height="1.4256944444444444in"}
+<img src="media/image7.png">
 
 -   Select Option 3 twice to change the following system values:
 
-```{=html}
-<!-- -->
-```
--   QALWOBJRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*ALL
 
--   QFRCCVNRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
+>  QALWOBJRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*ALL
 
--   QINACTITV \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NONE
+>   QFRCCVNRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
 
--   QJOBMSGQFL \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*PRTWRAP
+>   QINACTITV \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NONE
 
--   QJOBMSGQMX \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 30 (minimum, 64
-    > recommended)
+>   QJOBMSGQFL \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*PRTWRAP
 
--   QLMTDEVSSN \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
+>   QJOBMSGQMX \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 30 (minimum, 64
+     recommended)
 
--   QLMTSECOFR \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
+> QLMTDEVSSN \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
 
--   QMAXSIGN \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOMAX
+>   QLMTSECOFR \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
 
--   QPFRADJ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 2
+>   QMAXSIGN \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOMAX
 
--   QPWDEXPITV \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOMAX
+>   QPFRADJ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 2
 
--   QSCANFSCTL \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOPOSTRST
+>   QPWDEXPITV \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOMAX
 
--   QVFYOBJRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 1
+>   QSCANFSCTL \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOPOSTRST
 
-```{=html}
-<!-- -->
-```
+>   QVFYOBJRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 1
+
+
 -   Press F3 twice and change the QSECOFR password. Note: the current
-    > QSECOFR password will be QSECOFR (capital letters)
+     QSECOFR password will be QSECOFR (capital letters)
 
 -   Recover the BRMS libraries on target system:
 
-```{=html}
-<!-- -->
-```
 -   CRTDEVOPT, Press F4
 
 -   Local internet address = \*SRVLAN
@@ -510,50 +452,36 @@ height="1.5277777777777777in"}
 
 -   Network image directory = '/xx'
 
-```{=html}
-<!-- -->
-```
 -   Vary ON the device
 
 -   Verify you can access the image catalog:
 
-    -   WRKIMGCLGE IMGCLG(\*DEV) DEV(INSTALL)
+   >   WRKIMGCLGE IMGCLG(\*DEV) DEV(INSTALL)
 
-```{=html}
-<!-- -->
-```
--   CHGMSGQ MSGQ(QSYSOPR) DLVRY(\*NOTIFY) SEV(99)
+> CHGMSGQ MSGQ(QSYSOPR) DLVRY(\*NOTIFY) SEV(99)
 
 -   Recover BRMS libraries, follow the BRMS recovery report (Step 004
-    > need to be followed at this stage)
+     need to be followed at this stage)
 
 -   RSTLIB SAVLIB(saved-item) DEV(optical device) VOL(media name)
-    > OPTFILE(\'\')
+     OPTFILE(\'\')
 
-```{=html}
-<!-- -->
-```
 -   Recover the BRMS related media information using the recovery steps
-    > in BRMS recovery report:
+     in BRMS recovery report:
 
-```{=html}
-<!-- -->
-```
--   RSTOBJ OBJ(\*ALL) SAVLIB(saved-item) DEV(device-name) VOL(media
-    > name) OPTFILE(\'\') MBROPT(\*ALL) ALWOBJDIF(\*COMPATIBLE)
 
-```{=html}
-<!-- -->
-```
--   INZBRM OPTION(\*SETAUT)
+>   RSTOBJ OBJ(\*ALL) SAVLIB(saved-item) DEV(device-name) VOL(media name) OPTFILE(\'\') MBROPT(\*ALL) ALWOBJDIF(\*COMPATIBLE)
 
--   SETUSRBRM USER(QSECOFR) USAGE(\*ADMIN)
 
--   INZBRM OPTION(\*DEVICE)
+>   INZBRM OPTION(\*SETAUT)
 
--   Verify installation device using WRKDEVBRM
+>   SETUSRBRM USER(QSECOFR) USAGE(\*ADMIN)
 
--   Follow step010 in recovery report to recover user profiles
+>   INZBRM OPTION(\*DEVICE)
+
+>   Verify installation device using WRKDEVBRM
+
+>   Follow step010 in recovery report to recover user profiles
 
 Note: TCP/IP must be started so BRMS can transfer media required by a
 recovery from the cloud.
@@ -561,7 +489,7 @@ recovery from the cloud.
 If you wish to continue the recovery in restricted state, run the
 following commands:
 
-STRTCP STRSVR(\*NO) STRIFC(\*NO) STRPTPPRF(\*NO) STRIP6(\*YES) STRTCPIFC
+> STRTCP STRSVR(\*NO) STRIFC(\*NO) STRPTPPRF(\*NO) STRIP6(\*YES) STRTCPIFC
 INTNETADR(\'nnn.nnn.nnn.nnn\'), Where 'nnn' is IP of recovery system
 
 Else,
@@ -570,19 +498,19 @@ Start all subsystems using STRSBS QCTL, STRTCP
 
 -   Run following to setup Cloud volumes:
 
-    -   CALL QBRM/Q1AOLD PARM(\'CLOUD \' \'FIXDRVOL ' \'xxxxx1\'
+  >   CALL QBRM/Q1AOLD PARM(\'CLOUD \' \'FIXDRVOL ' \'xxxxx1\'
         > \'xxxxx2\' \'xxxxx3\' \'xxxxxn\')
 
-> Volume names can be found from BRMS report file name QP1A2RCY
+ Volume names can be found from BRMS report file name QP1A2RCY
 
--   STRRCYBRM OPTION(\*SYSTEM) ACTION(\*RESTORE)
+>  STRRCYBRM OPTION(\*SYSTEM) ACTION(\*RESTORE)
 
 Note: Press F9 on the Select Recovery Items display to go to the Restore
 
 Command Defaults display.
 
 -   Ensure the tape device name or media library device name is correct
-    > for the Device prompt.
+     for the Device prompt.
 
 -   Ensure \*SAVLIB is specified for the Restore to library prompt.
 
@@ -602,33 +530,30 @@ partition, you must specify the following:
 Press \"Enter\" to return to the Select Recovery Items display.
 
 -   Restore \*SAVSECDTA which will restore user profiles. Change QSECOFR
-    > password using below command:
+     password using below command:
 
-    -   CHGUSRPRF USRPRF(QSECOFR) PASSWORD(new-password)
+   >   CHGUSRPRF USRPRF(QSECOFR) PASSWORD(new-password)
 
 -   Recover configuration data(\*Savcfg) and required system libraries
 
 -   Do network configuration and add IP in target system
 
 -   Ping the cloud resource URI to verify a working network to cloud
-    > storage
+     storage
 
 -   Create Virtual tape device and Vary ON the same:
 
-    -   CRTDEVTAP DEVD(TOR1CLDTAP) RSRCNAME(\*VRT)
+    >  CRTDEVTAP DEVD(TOR1CLDTAP) RSRCNAME(\*VRT)
 
-```{=html}
-<!-- -->
-```
 -   Move the media to \*Home location
 
 -   Recover User libraries, DLO, IFS as per the BRMS recovery report
 
--   UPDPTFINF
+> UPDPTFINF
 
--   RSTAUT \*All
+>   RSTAUT \*All
 
--   DSPJOBLOG Output(\*Print)
+>   DSPJOBLOG Output(\*Print)
 
 -   Change the system values as required and do a Normal IPL of the
-    > system.
+    system.

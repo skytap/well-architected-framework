@@ -2,10 +2,6 @@
 title: Security
 description: Considerations to ensure security.
 author: John Bradshaw, Principal Architect
-categories:
-  - security
-subject:
-  - security
 ---
  
 # Security on the Skytap Platform
@@ -27,7 +23,7 @@ Assets you deploy into your account should be defined by implementation
 standards based on your use cases and requirements while taking into
 account best practices of how to leverage Skytap. Each layer in this
 model is built on the capabilities delivered in the layer below; you
-cannot know how to secure a virtual machine without understanding how
+cannot know how to secure virtual machines without understanding how
 they can be secured and why they need to be.
 
 Accompanying this document is a **Skytap - Security Controls Workbook**
@@ -45,7 +41,7 @@ and customers are accountable for the way they use that platform.
 
 *Figure 2 -- Shared Responsibility Model*
 
-Additionally, resources deployed into Skytap should have clearly a
+Additionally, resources deployed into Skytap should have a
 clearly defined operating model:
 
 -   Who is responsible for creation/deletion of virtual machines?
@@ -69,21 +65,14 @@ controls to be accounted for, architected and implemented.
 
  *Figure 3 - Example Target Operating Model (TOM)**
 
-Most organisations will have multiple cloud vendors, supported by
+Most organizations will have multiple cloud vendors, supported by
 systems integrators or outsourced management functions. Your various
 clouds need to be managed holistically but controls applied
-specifically, for example, all logging across your organisation should
+specifically, for example, all logging across your organization should
 be consolidated into a single Security Incident Event Monitoring (SIEM)
 system, but the approach to management and remediation will be custom to
 each workload and each platform.
 
-Most organizations will have multiple cloud vendors, supported by
-systems integrators or outsourced management functions. Cloud platforms
-need to be managed holistically but controls applied specifically, for
-example, all logging across your organisation should be consolidated
-into a single Security Incident Event Monitoring (SIEM) system and the
-approach to management and remediation will be defined by the workload
-and platform.
 
 
 ## Next steps

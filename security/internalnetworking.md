@@ -88,7 +88,7 @@ balancing functionality.
 
 Outbound proxies can also be configured directly within your workload
 networks if needed to provide a layered security stance or if the
-workload requires it. This kind of proxy type of proxy is commonly used
+workload requires it. This type of proxy is commonly used
 with stand-alone workloads where an application is expected to function
 in isolation.
 
