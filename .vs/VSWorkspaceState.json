@@ -6,8 +6,11 @@
     "\\operations\\Discovery",
     "\\operations\\Ecosystems",
     "\\operations\\ExpressRoute",
-    "\\security"
+    "\\resiliency",
+    "\\resiliency\\solutions",
+    "\\resiliency\\solutions\\NFSNoLocalDisk\\IBMiNFSBackup",
+    "\\resiliency\\solutions\\NFSNoLocalDisk\\IBMiNFSRestore"
   ],
-  "SelectedNode": "\\operations\\Discovery\\WAFIntroPlanMigrate.md",
+  "SelectedNode": "\\resiliency\\introtosoa.md",
   "PreviewInSolutionExplorer": false
 }

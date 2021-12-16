@@ -2,10 +2,6 @@
 title: Security
 description: Considerations to ensure security.
 author: John Bradshaw, Principal Architect
-categories:
-  - security
-subject:
-  - security
 ---
  
 # Security on the Skytap Platform
