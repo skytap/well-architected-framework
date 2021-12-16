@@ -8,8 +8,8 @@ author: Tony Perez, Sales Engineer
 
 **Objective**:
 
--   Demonstrate how an IBM i workload can be migrated to Skytap cloud
-    > using BRMS ICC. In this document we will see how to take backup on
+-   Demonstrate how an IBM i workload can be migrated to Skytap on Azure
+    > using BRMS ICC. In this document you will learn how to take backup on
     > IBM i using BRMS ICC and transfer it to cloud using FTP.
 
 -   Full-system recovery in Cloud using IBM i as NFS server to an IBM i
@@ -26,7 +26,7 @@ author: Tony Perez, Sales Engineer
 
 **Prerequisites**:
 
-Below LPPs need to be installed on IBM i LPAR
+Below LPPs need to be installed on IBM i LPAR:
 
 -   5770-SS1 Option 18: Media and Storage Extensions
 
@@ -118,7 +118,7 @@ will automatically create the below control groups for the Test1
     > and take option 9 in front of QCLDBSYS01\
     > \
     > Enter the values matching the screen below, make sure to put
-    > \"\*NO\" for restart.Press \<ENTER\> once you have all the values
+    > \"\*NO\" for restart. Press \<ENTER\> once you have all the values
     > filled in. Then F3 to exit.
 
 
@@ -210,11 +210,11 @@ And press \<ENTER\>
 Note: QCLDBIPL01 will use virtual optical media and QCLDBSYS01 will use
 virtual tape media
 
--   After moving the media check the status of transfer using below command:
+-   After moving the media, check the status of transfer using the below command:
 
 >WRKSTSICC Status(\*All)
 
-You will see the Volume Name, Status, and Complete% for each file
+You will see the Volume Name, Status, and Complete % for each file
 transfer. Wait until all Volumes have Successfully been completed to
 proceed to the next step.
 
@@ -230,7 +230,7 @@ This IBM i LPAR will be used as NFS server to build the target IBM i
 LPAR
 
 -   Create a directory in IFS where you want to copy the media from FTP
-server using below command:
+server using the below command:
 
  >MKDIR '/XX', where xx is the directory name
       
@@ -242,7 +242,7 @@ below commands:
 
 >STRSBS QICC/QICCSBS
 
--   Copy the media from FTP server to IBM i LPAR using below command,
+-   Copy the media from FTP server to IBM i LPAR using the below command,
    where LOCALFILE will be the directory created in previous
     step/media volume name and CLOUDFILE will be the file name FTP
     server with syntax QBRMS\_xx.
@@ -339,7 +339,7 @@ The LAN adapter needs to be on the same VLAN as IBM i NFS server,
 
 <img src="media/image4.png">
 
--   Start network install to start scratch installation staring from LIC
+-   Start network install to start scratch installation starting from LIC
      installation, prior to installation make sure to document all
      current network information, same may be needed after restoration.
 
@@ -461,7 +461,7 @@ The LAN adapter needs to be on the same VLAN as IBM i NFS server,
 > CHGMSGQ MSGQ(QSYSOPR) DLVRY(\*NOTIFY) SEV(99)
 
 -   Recover BRMS libraries, follow the BRMS recovery report (Step 004
-     need to be followed at this stage)
+     needs to be followed at this stage)
 
 -   RSTLIB SAVLIB(saved-item) DEV(optical device) VOL(media name)
      OPTFILE(\'\')
@@ -492,11 +492,11 @@ following commands:
 > STRTCP STRSVR(\*NO) STRIFC(\*NO) STRPTPPRF(\*NO) STRIP6(\*YES) STRTCPIFC
 INTNETADR(\'nnn.nnn.nnn.nnn\'), Where 'nnn' is IP of recovery system
 
-Else,
+Otherwise,
 
 Start all subsystems using STRSBS QCTL, STRTCP
 
--   Run following to setup Cloud volumes:
+-   Run the following to setup Cloud volumes:
 
   >   CALL QBRM/Q1AOLD PARM(\'CLOUD \' \'FIXDRVOL ' \'xxxxx1\'
         > \'xxxxx2\' \'xxxxx3\' \'xxxxxn\')
@@ -510,24 +510,24 @@ Note: Press F9 on the Select Recovery Items display to go to the Restore
 Command Defaults display.
 
 -   Ensure the tape device name or media library device name is correct
-     for the Device prompt.
+     for the Device prompt
 
--   Ensure \*SAVLIB is specified for the Restore to library prompt.
+-   Ensure \*SAVLIB is specified for the Restore to library prompt
 
--   Ensure \*SAVASP is specified for the Auxiliary storage pool prompt.
+-   Ensure \*SAVASP is specified for the Auxiliary storage pool prompt
 
 -   ENSURE \*YES is specified for create parent directories
 
 If you are recovering to a different system or a different logical
 partition, you must specify the following:
 
--   \*ALL for the Data base member option prompt.
+-   \*ALL for the Data base member option prompt
 
--   \*COMPATIBLE for the Allow object differences prompt.
+-   \*COMPATIBLE for the Allow object differences prompt
 
--   \*NONE for the System resource management prompt.
+-   \*NONE for the System resource management prompt
 
-Press \"Enter\" to return to the Select Recovery Items display.
+Press \"Enter\" to return to the Select Recovery Items display
 
 -   Restore \*SAVSECDTA which will restore user profiles. Change QSECOFR
      password using below command:
