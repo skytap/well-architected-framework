@@ -13,7 +13,9 @@ author: Dan Jones, Vice President of Product
 
 <span style="font-weight: 400;">The new Skytap live clone feature is designed for customers running applications that need to be backed-up or archived, but cannot afford the time it takes to shut down the VMs, create the copy or save as a template, run them, and bring the application back online. With the new Skytap live clone feature, the copy/save happens nearly instantaneously and you eliminate the time it takes to shutdown and start-up the VMs. </span>
 
-[embed]https://vimeo.com/641622590/64242ce57a[/embed]
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/641622590?h=64242ce57a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Introducing Skytap Live Clone: Copy and save environments while VMs are running"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
 <h2><b>How it works</b></h2>
 <span style="font-weight: 400;">There are some considerations to be aware of when using Skytap live clone. The storage for each VM is being cloned by the Skytap storage platform and has no knowledge or concern for what is running within the VM. To ensure the copy of the VMs is consistent and not corrupted, we strongly recommend you quiesce VM activity. The safest level of quiesce is to shutdown the VM, but if you need to leave VMs running we recommend putting the VM into a consistent state. This includes actions like placing databases into read-only or back-up mode and freezing data volumes to ensure all transactions are written to disk before the copy is performed. You can read more about quiescing VM activity in this </span><a href="https://help.skytap.com/quiescing-vm-activity.html"><span style="font-weight: 400;">help topic</span></a><span style="font-weight: 400;">.</span>
 
