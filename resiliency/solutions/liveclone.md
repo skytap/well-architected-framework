@@ -13,7 +13,7 @@ author: Dan Jones, Vice President of Product
 
 <span style="font-weight: 400;">The new Skytap live clone feature is designed for customers running applications that need to be backed-up or archived, but cannot afford the time it takes to shut down the VMs, create the copy or save as a template, run them, and bring the application back online. With the new Skytap live clone feature, the copy/save happens nearly instantaneously and you eliminate the time it takes to shutdown and start-up the VMs. </span>
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/641622590?h=64242ce57a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Introducing Skytap Live Clone: Copy and save environments while VMs are running"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+[![Skytap Live Clone](https://res.cloudinary.com/marcomontalbano/image/upload/v1639616907/video_to_markdown/images/vimeo--641622590-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/641622590 "Skytap Live Clone")
 
 
 <h2><b>How it works</b></h2>
