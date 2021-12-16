@@ -10,7 +10,7 @@ Building a reliable application in the cloud is different from traditional appli
 
 ## Considerations for Migration
 
-The following section provides an overview of Skytap on Azure Architecture and are used as lenses to assess the reliability of an environment deployed in Skytap. 
+The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap. 
 
 Migration Considerations include
 
@@ -103,7 +103,7 @@ Start by creating a recovery plan. The plan is considered complete after it has 
 
 Consider the following suggestions when creating and testing your disaster recovery plan:
 
-- Include the process for contacting support and for escalating issues. This information will help to avoid prolonged downtime as you work out the recovery process for the first time.
+- Include the process for contacting support and escalating issues. This information will help to avoid prolonged downtime as you work out the recovery process for the first time.
 - Evaluate the business impact of application failures.
 - Choose a cross-region recovery architecture for mission-critical applications.
 - Identify a specific owner of the disaster recovery plan, including automation and testing.
