@@ -4,7 +4,7 @@ description: Skytap Cold Migration Partner Solutions
 author: George Stamos, Director, Solutions Architect - Business Development
 ---
 
-**Skytap on Azure Architecture: Skytap + Commvault**
+## Skytap on Azure Architecture: Skytap + Commvault
 
 Skytap leverages best-in-class tools to accommodate both migrations
 associated with these operating systems. Skytap has an engineering
@@ -23,8 +23,21 @@ for AIX and IBM i (as400).
 <BR>
 <BR>
 
-**Addtional Solutions**
+## Addtional Solutions
 
 - **[IBM i workload migration using Go Save/Restore, Option-22,23](GoSave/ibmimigrationwithgosave.md)**
 
 - **[IBM i workload migration from on-prem to Skytap using BRMS ICC](BRMS/ibmiworkloadmigration.md)**
+
+## Next step
+
+**Overview**
+>[Skytap Reliability Pillar](../README.md)
+
+**Design**
+>[Design Considerations for Azure](../designconsiderationsazure.md)
+
+>[Design Considerations for IBM](../designconsiderationsibm.md)
+
+**Solutions**
+ >[Hot Migations (Replication Sync)](HotMigrationOverview.md)

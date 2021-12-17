@@ -4,12 +4,11 @@ description: Skytap Cold Migration Solution - IBM i workload migration using Go 
 author: Tony Perez, Sales Engineer 
 ---
 
-**IBM i workload migration using Go Save/Restore,
-Option-22,23**
+## IBM i workload migration using Go Save/Restore, Option 22-23
 
 **Objective**:
 
--   Demonstrate how an IBM i workload can be migrated to Skytap cloud using Go Save, Option 22,23.
+-   Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save, Option 22,23.
 
 -   Full-system recovery including LIC, OS installation
 
@@ -17,7 +16,7 @@ Option-22,23**
 
 -   Install latest PTFs on IBM i
 
--   Utilized ASP should be less than 48% in IBM i LPAR. Amount of disk space can be reduced by doing clean up as mentioned in below link:
+-   Utilized ASP should be less than 48% in IBM i LPAR. Amount of disk space can be reduced by doing clean up as mentioned in the link below:
 
 [https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used](https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used)
 
@@ -27,9 +26,9 @@ Option-22,23**
 
     -   Create Azure storage account as required, and generate SAS token 
 
-    -   AZCopy the virtual tapes from the NFS mounted directory into Azure object storage container.
+    -   AZCopy the virtual tapes from the NFS mounted directory into Azure object storage container
 
--   Linux / Windows server in on-premise network, preferably close to IBMi server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of
+-   Linux / Windows server in on-premise network, preferably close to IBM i server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of
     > AZcopy utility
 
 <img src="./media/image7.png">
@@ -54,7 +53,7 @@ Option-22,23**
 
 -   RTVDSKINF job will be submitted in WRKACTJOB, depending on the system size, command completion may vary system to system
 
--   Once the job completes, print information using PRTDSKINF or Go Disktasks, Option 2.
+-   Once the job completes, print information using PRTDSKINF or Go Disktasks, Option 2
 
 -   In report type, select library
 
@@ -114,13 +113,13 @@ Option-22,23**
 
 -   Begin uploading the ISO to Assets --
 
-    -   Mount NFS exported directory from IBMi server to Linux/Windows machine. (INSERT EXAMPLE NFS MOUNT COMMAND HERE)
+    -   Mount NFS exported directory from IBM i server to Linux/Windows machine (INSERT EXAMPLE NFS MOUNT COMMAND HERE)
 
-    -   Load skytap portal in browser of desktop session on Linux/Windows machine
+    -   Load Skytap portal in browser of desktop session on Linux/Windows machine
 
     -   Log into Skytap, Click on 'Assets'
 
-    -   Upload ISO to Skytap account, select region where your LPAR(s) to be restored in Skytap will be hosted.
+    -   Upload ISO to Skytap account, select region where your LPAR(s) to be restored in Skytap will be hosted
 
 **Create virtual tape media**
 
@@ -128,7 +127,7 @@ Option-22,23**
 
 [https://www.ibm.com/docs/en/i/7.3?topic=tape-setting-up-virtual-storage](https://www.ibm.com/docs/en/i/7.3?topic=tape-setting-up-virtual-storage)
 
--   Determine tape size based on over-all data size, you must pre-create each tape required for the total Option 23 save.
+-   Determine tape size based on overall data size, you must pre-create each tape required for the total Option 23 save
 
 -   Bring system to restricted state and start Go SAVE, Option23
 
@@ -319,7 +318,7 @@ Example commands:
         > [[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download]{.underline}](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)
         >  
 
--   Go Restore, option 23
+-   Go Restore, Option 23
 
 -   Choose virtual tape device, and other parameters as below:
 <img src="./media/image3.png">
@@ -333,3 +332,18 @@ Example commands:
 -   Data Restoration is complete at this point
 
 -   Check PTF status and change the system values as required
+
+## Next step
+
+**Overview**
+>[Skytap Reliability Pillar](../../README.md)
+
+**Design**
+>[Design Considerations for Azure](../../designconsiderationsazure.md)
+
+>[Design Considerations for IBM](../../designconsiderationsibm.md)
+
+**Solutions**
+ >[Hot Migations (Replication Sync)](../../solutions/HotMigrationOverview.md)
+  
+ >[Cold (Warm) Migrations (Backup and Restore)](../../solutions/ColdMigrationsOverview.md)
