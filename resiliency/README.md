@@ -26,7 +26,7 @@ Migration Considerations include
 
 Here is a high-level look at the Skytap on Azure general architecture.
 
-<img src="./migrationmedia/media/image1.png" width="600">
+<img src="./migrationmedia/media/image1.png" width="800">
 
 
 - **Define and test availability and recovery targets -** Availability targets, such as Service Level Agreements (SLA) and Service Level Objectives (SLO), and Recovery targets, such as Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO), should be defined and tested to ensure reliability aligns with business requirements.
@@ -75,11 +75,11 @@ IBM i and AIX.
 
 **Skytap on Azure Support and Limits for IBM i**
 
-<img src="./migrationmedia/media/image4.png" width="600">
+<img src="./migrationmedia/media/image4.png" width="800">
 
 **Skytap on Azure Support and Limits for AIX**
 
-<img src="./migrationmedia/media/image5.png" width="600">
+<img src="./migrationmedia/media/image5.png" width="800">
 
 High-Level Considerations for Migration to Skytap on Azure
 
