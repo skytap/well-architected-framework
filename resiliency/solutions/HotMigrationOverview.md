@@ -23,7 +23,7 @@ depicted below.
 
 </li>
 
-<img src="../media/preciselyhotmigrationtopo.png">
+<img src="../media/preciselyhotmigrationtopo.png" width="800">
 
 This is built on IBM's remote journaling which replicates changed data
 in real-time and minimizes bandwidth usage. The MIMX change data capture
@@ -45,7 +45,7 @@ version. It is also optimized for performance because it:
 The following outlines popular Precisely migration scenarios available
 for you to consider:
 
-<img src="../migrationmedia/media/image10.png">
+<img src="../migrationmedia/media/image10.png" width="800">
 
 **Built on IBM’s remote journaling**
 
@@ -66,12 +66,12 @@ for you to consider:
 </li>
 
 
-<img src="../media/preciselyhotmigrationscenerios.png" width="6000" alt="preciselytopo">
+<img src="../media/preciselyhotmigrationscenerios.png" width="800" alt="preciselytopo">
 
 
 <img src="../migrationmedia/media/image9.png">
 
-<img src="../media/mimixibmirunbookoutline.png">
+<img src="../media/mimixibmirunbookoutline.png" width="800">
 
 **Whats different about AIX?**
 <li>The AIX Mimix Product focuses on Volume Group replication and sync
@@ -81,7 +81,7 @@ for you to consider:
 <li>Inline Encryption
 
 <img src="../migrationmedia/media/image11.png">
-<img src="../media/mimixaixrunbookoutline.png">
+<img src="../media/mimixaixrunbookoutline.png" width="800">
 
 
 ## Addtional Solutions

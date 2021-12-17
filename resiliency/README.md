@@ -133,7 +133,7 @@ Many alternative strategies are available for implementing distributed compute a
 The two numbers above, combined with contingencies like distance, amount of data rate change and available bandwidth will determine whether to employ a High Availability Tool or a Disaster Recovery Tool.
 
 This is VERY similar to a WARM versus HOT migration, and the same tools may be utilized.
-<img src="./media/backuptypes.png">
+<img src="./media/backuptypes.png" width="800">
 ## Next step
 
 **Design**
