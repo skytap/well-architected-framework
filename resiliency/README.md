@@ -26,7 +26,7 @@ Migration Considerations include
 
 Here is a high-level look at the Skytap on Azure general architecture.
 
-<img src="./migrationmedia/media/image1.png">
+<img src="./migrationmedia/media/image1.png" width="600">
 
 
 - **Define and test availability and recovery targets -** Availability targets, such as Service Level Agreements (SLA) and Service Level Objectives (SLO), and Recovery targets, such as Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO), should be defined and tested to ensure reliability aligns with business requirements.
@@ -57,7 +57,7 @@ Skytap is comprised of three service layer tiers as depicted below:
 -   Web Tier -- includes HTML UI, RESTful API, Import Export and
     SmartClient Service
 
-<img src="migrationmedia/media/image2.png">
+<img src="migrationmedia/media/image2.png" width="600">
 
 **Skytap on Azure: Azure Region, Skytap Region and connection to Azure
 Native Services**
@@ -66,7 +66,7 @@ Within a given Azure region, Skytap Standard Power VMs and x86 VMs and
 Azure Dedicated S922 and x86 Bare Metal and Storage are connected via
 ExpressRoute to Azure Native Services as depicted below.
 
-<img src="migrationmedia/media/image3.png">
+<img src="migrationmedia/media/image3.png" width="600">
 
 **Skytap Discovery and Migration -- Support and Limits**
 
@@ -75,18 +75,18 @@ IBM i and AIX.
 
 **Skytap on Azure Support and Limits for IBM i**
 
-<img src="./migrationmedia/media/image4.png">
+<img src="./migrationmedia/media/image4.png" width="600">
 
 **Skytap on Azure Support and Limits for AIX**
 
-<img src="./migrationmedia/media/image5.png">
+<img src="./migrationmedia/media/image5.png" width="600">
 
 High-Level Considerations for Migration to Skytap on Azure
 
 Migration to Skytap on Azure can be migrated via a hot or cold/warm
 migration as depicted here. 
 
-<img src="migrationmedia/media/image6.png">
+<img src="migrationmedia/media/image6.png" width="600">
 
 
 # Backup and disaster recovery for Skytap applications
