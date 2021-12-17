@@ -1,3 +1,8 @@
+---
+title: Reliability Design Considerations for Azure
+author: George Stamos, Director, Solutions Architect - Business Development
+---
+
 ***Skytap for Azure Support and Limits (IBM i)***
 
 
@@ -66,3 +71,17 @@ AIX: 7.2 TL 1, SP 2
 <li>Each Disk Limited to 2TB 
 <li>Storage performance scalability with VM/LPAR RAM capacity
 <li>IOPS up to 30K per LPAR
+
+## Next step
+
+**Overview**
+>[Skytap Reliability Pillar](README.md)
+
+**Design**
+
+>[Design Considerations for IBM Cloud](designconsiderationsibm.md)
+
+**Solutions**
+ >[Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
+  
+ >[Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)

@@ -4,7 +4,7 @@ description: Skytap Cold Migration Solution - IBM i workload migration from on-p
 author: Tony Perez, Sales Engineer 
 ---
 
-**[IBM i workload migration from on-prem to Skytap using BRMS ICC.**
+## IBM i workload migration from on-prem to Skytap using BRMS ICC
 
 **Objective**:
 
@@ -557,3 +557,18 @@ Press \"Enter\" to return to the Select Recovery Items display
 
 -   Change the system values as required and do a Normal IPL of the
     system.
+
+## Next step
+
+**Overview**
+>[Skytap Reliability Pillar](../../README.md)
+
+**Design**
+>[Design Considerations for Azure](../../designconsiderationsazure.md)
+
+>[Design Considerations for IBM](../../designconsiderationsibm.md)
+
+**Solutions**
+ >[Hot Migations (Replication Sync)](../../solutions/HotMigrationOverview.md)
+  
+ >[Cold (Warm) Migrations (Backup and Restore)](../../solutions/ColdMigrationsOverview.md)

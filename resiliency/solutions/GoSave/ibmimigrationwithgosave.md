@@ -4,8 +4,7 @@ description: Skytap Cold Migration Solution - IBM i workload migration using Go 
 author: Tony Perez, Sales Engineer 
 ---
 
-**IBM i workload migration using Go Save/Restore,
-Option-22,23**
+## IBM i workload migration using Go Save/Restore, Option 22-23
 
 **Objective**:
 
@@ -333,3 +332,18 @@ Example commands:
 -   Data Restoration is complete at this point
 
 -   Check PTF status and change the system values as required
+
+## Next step
+
+**Overview**
+>[Skytap Reliability Pillar](../../README.md)
+
+**Design**
+>[Design Considerations for Azure](../../designconsiderationsazure.md)
+
+>[Design Considerations for IBM](../../designconsiderationsibm.md)
+
+**Solutions**
+ >[Hot Migations (Replication Sync)](../../solutions/HotMigrationOverview.md)
+  
+ >[Cold (Warm) Migrations (Backup and Restore)](../../solutions/ColdMigrationsOverview.md)

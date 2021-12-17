@@ -4,7 +4,7 @@ description: Skytap Hot Migration Partner Solutions
 author: George Stamos, Director, Solutions Architect - Business Development
 ---
 
-**Skytap on Azure + Precisely for High Availability Scenarios**
+## Skytap on Azure + Precisely for High Availability Scenarios
 
 For hot migrations, Skytap partners with Precisely, the market leader
 for high availability scenarios. Precisely support IBM i and AIX. How
@@ -84,6 +84,20 @@ for you to consider:
 <img src="../media/mimixaixrunbookoutline.png">
 
 
-**Addtional Solutions**
+## Addtional Solutions
 
 - **[Skytap Live Clone Feature](liveclone.md)**
+
+## Next step
+
+**Overview**
+>[Skytap Reliability Pillar](../README.md)
+
+**Design**
+>[Design Considerations for Azure](../designconsiderationsazure.md)
+
+>[Design Considerations for IBM](../designconsiderationsibm.md)
+
+**Solutions**
+
+ >[Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
