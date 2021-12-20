@@ -1,16 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\operations",
-    "\\operations\\Connectivity",
-    "\\operations\\Discovery",
-    "\\operations\\Ecosystems",
-    "\\operations\\ExpressRoute",
     "\\resiliency",
     "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\NFSNoLocalDisk\\IBMiNFSBackup",
-    "\\resiliency\\solutions\\NFSNoLocalDisk\\IBMiNFSRestore"
+    "\\resiliency\\solutions\\BRMS",
+    "\\resiliency\\solutions\\GoSave"
   ],
-  "SelectedNode": "\\resiliency\\introtosoa.md",
   "PreviewInSolutionExplorer": false
 }
