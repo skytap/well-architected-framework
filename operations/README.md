@@ -18,8 +18,10 @@ These are the disciplines we group in the operational excellence pillar:
 
 | Operational excellence disciplines | Description |
 |-------------------|-------------|
-| [Phase 01A - Discovery](./Discovery/README.md) | Provides guidance on how to design, build, and orchestrate workloads with DevOps principles in mind  |
-| [Phase 01B - Connectivity](./Connectivity/README.md) | Something that enterprises have been doing for years, enriched with some specifics for applications running in the cloud |
+| [Phase 01A - Discovery](./Discovery/README.md) | IBM Power Workloads have been in use for over thirty years and have unique considerations when migrating them to a Cloud Platform  |
+| [Phase 01B - Connectivity](./Connectivity/README.md) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
+
+<!--
 | [Phase 01C - Sizing and Design](./Sizing_Design/README.md) | The monitoring and management of performance and availability of software applications through DevOps |
 | [Phase 01D - EcoSystem](./Ecosystems/README.md) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
-| [Phase 01E - Testing](./Testing/README.md) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users |
+| [Phase 01E - Testing](./Testing/README.md) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users | -->

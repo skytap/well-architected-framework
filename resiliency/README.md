@@ -139,7 +139,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 **Design**
 >[Design Considerations for Azure](designconsiderationsazure.md)
 
->[Design Considerations for IBM Cloud](designconsiderationsibm.md)
+<!-- This is commented out.>[Design Considerations for IBM Cloud](designconsiderationsibm.md) -->
 
 **Solutions**
  >[Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)

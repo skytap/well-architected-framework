@@ -77,9 +77,10 @@ AIX: 7.2 TL 1, SP 2
 **Overview**
 >[Skytap Reliability Pillar](README.md)
 
-**Design**
+<!-- **Design**
 
 >[Design Considerations for IBM Cloud](designconsiderationsibm.md)
+-->
 
 **Solutions**
  >[Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
