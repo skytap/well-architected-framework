@@ -1,6 +1,9 @@
-## Connectivity
+---
+title: Skytap Operational Excellence - Connectivity
+author: Colleen E Hamilton - Senior Product Manager, Jason Scott - Cloud Solutions Architect
+---
 
-**Summary**
+# Connectivity
 
 Building a reliable network in the cloud is different from traditional
 on-premises environments. While historically people may have purchased
@@ -13,9 +16,7 @@ the goal is to minimize the effects of a single failing component.
 
 **Skytap-owned versus customer-owned responsibilities**
 
-![Shared Responsibility
-Model](I:\Repos\Skytap\WAF\operations\Connectivity/media/image1.png){width="5.208333333333333in"
-height="5.008333333333334in"}
+<img src="media/image1.png" width="400">
 
 *Figure 2 \-- Shared Responsibility Model*
 
@@ -49,10 +50,10 @@ limitations and move to a more flexible and resilient cloud-based model.
 ##### Design Solutions:
 
 -   [Internal
-    Networking](https://github.com/skytap/well-architected-framework/blob/Nov2021Updates/security/internalnetworking.md)
+    Networking](../../security/internalnetworking.md)
 
 -   [Edge
-    Networking](https://github.com/skytap/well-architected-framework/blob/Nov2021Updates/security/edgenetworking.md)
+    Networking](../../security/edgenetworking.md)
 
 ## Considerations on Reliability
 
@@ -99,4 +100,16 @@ over the WAN connection. Skytap does not provide automated
 fault-tolerance for these virtual WAN devices, so manual failover from a
 primary to secondary WAN connection must be architected separately.
 
-**Next Steps**
+## Next steps
+
+**Getting Started with IBM Cloud**
+
+>[Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+
+ >[Skytap on IBM Cloud Connectivity](skytaponibmconnectivity.md)
+
+**Getting Started with Azure**
+ >[Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+
+>[Skytap on Azure Connectivity](skytaponazureconnectivity.md)
+  

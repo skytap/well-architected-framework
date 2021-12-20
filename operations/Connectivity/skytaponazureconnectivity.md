@@ -1,3 +1,8 @@
+---
+title: Skytap Operational Excellence - Connectivity - Getting Started with Azure Networking
+author: Colleen E Hamilton - Senior Product Manager
+---
+
 # **Getting Started with Azure**
 
 Even though Skytap on Azure is running within an Azure datacenter, Azure
