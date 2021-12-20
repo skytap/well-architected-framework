@@ -20,8 +20,7 @@ encapsulated, routed over the public internet.
 
 ### Setting up a Site-to-Site VPN in ICSS
 
-![](I:\Repos\Skytap\WAF\operations\Connectivity/media/image2.png){width="5.0in"
-height="3.3333333333333335in"}
+<img src="./media/image2.png" width="600">
 
 A VPN is like a bridge: both sides must be "facing each other" for
 traffic to flow. This means that each VPN endpoint must be configured
@@ -58,3 +57,18 @@ each other (one from Skytap and one from your on-premises network), and
 [test the final end-to-end
 connectivity](https://help.skytap.com/wan-testing.html#Further) between
 each server.
+
+## Next steps
+
+**Getting Started with IBM Cloud**
+
+>[Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+
+**Getting Started with Azure**
+ >[Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+
+>[Skytap on Azure Connectivity](skytaponazureconnectivity.md)
+
+### Back
+
+**[Skytap - Operational Excellence - Connectivity Overview](README.md)**

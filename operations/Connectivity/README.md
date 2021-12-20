@@ -102,11 +102,11 @@ primary to secondary WAN connection must be architected separately.
 
 ## Next steps
 
-**Getting Started with IBM Cloud**
+<!-- This is commented out.**Getting Started with IBM Cloud**
 
 >[Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
- >[Skytap on IBM Cloud Connectivity](skytaponibmconnectivity.md)
+ >[Skytap on IBM Cloud Connectivity](skytaponibmconnectivity.md)> -->
 
 **Getting Started with Azure**
  >[Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
