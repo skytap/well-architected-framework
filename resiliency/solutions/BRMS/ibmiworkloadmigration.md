@@ -1,19 +1,32 @@
 ---
-title: IBM i workload migration from on-prem to Skytap using BRMS ICC
-description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
-author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
+Title: IBM i workload migration from on-prem to Skytap using BRMS ICC
+Description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
+Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
 ---
+# IBM i workload migration from on-prem to Skytap using BRMS ICC
 
-## IBM i workload migration from on-prem to Skytap using BRMS ICC
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
 
-**Objective**:
+This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
+
+# Table of Contents <a name="toc"></a>
+
+* [Before you begin](#begin)
+* [Key Takeaways](#takeaways)
+* [Full system backup of IBM i source using BRMS ICC](#start)
+* [Create ICC FTP resource](#ftpresourcecreate)
+
+
+## Key Takeaways <a name="takeaways"></a>
+
+There are 2 features for the developers and operations team to consider as key takeaways from this guide
 
 -   Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
 
 -   Full-system recovery in Cloud using IBM i as NFS server to an IBM i
      VM as target system will also be covered in this document.
 
-**Prerequisites**:
+## Before you begin <a name="begin"></a>
 
 Below LPPs need to be installed on IBM i LPAR:
 
@@ -42,25 +55,25 @@ Below LPPs need to be installed on IBM i LPAR:
 
 -   Utilized ASP should be less than 48% in IBM i LPAR
 
-**Full system backup of IBM i source using BRMS ICC**
+###### *[Back to the Top](#toc)*
 
--   Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.\
-    > \<NOTE: For this document, we need to \"pick one\" either Linux or
-    > IBMi and make the example be specific.Recommend = Linux.\>
+# Full system backup of IBM i source using BRMS ICC <a name="start"></a>
 
--   In case of large data, it is recommended to use Linux system On-Prem
-    > and transfer the data to Linux system on cloud using AZ copy.\
-    > \<NOTE: We need some form of description/recommendation like: \"If
-    > you have 5 disk arms on-prem with xyz storage, then re-create that
-    > setup in your Skytap LPAR....\>
+## Create ICC FTP resource <a name="ftpresourcecreate"></a>
 
--   Create FTP resource using below command where root directory is the
-    > directory in the FTP server where we want to transfer the data and
-    > resource URI will be IP of FTP server with syntax:
+-   Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.For this document, we will be using Linux in our examples.
 
-FTP server IP: port no./root directory\
-\
+-   In case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZ copy.
+
+***NOTE***: *If you have 5 disk arms on-prem with xyz storage, then re-create that setup in your Skytap LPAR.*
+
+-   Create FTP resource using below command: 
+```
 ===\> CRTFPRICC
+```
+where root directory is the directory in the FTP server where we want to transfer the data and resource URI will be IP of FTP server with syntax: *< FTP server IP >: < port number >./ < root directory >*
+
+
 
 <img src="media/image2.png">
 <img src="media/image12.png">
@@ -68,14 +81,17 @@ FTP server IP: port no./root directory\
 Once completed you will see: \"Resource TEST1 was created for resource type FTP.
 
 -   Once the resource is created, run the following command:\
-    > \
+```
     > ===\> INZBRM \*DATA\
-    > \
+```
     
 Once you press \<ENTER\> wait for the command to complete, there
     is no confirmation message that is displayed. This command will
 will automatically create the below control groups for the Test1
     resource created in previous step.
+
+
+
 
 > QCLDBGRP01
 >
