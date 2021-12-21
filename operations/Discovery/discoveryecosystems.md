@@ -161,8 +161,6 @@ select the time period to show.
 
 [[https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats]{.ul}](https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats)
 
-**\
-**
 
 ### **Running HMC Scanner on Windows PC:**
 

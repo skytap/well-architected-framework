@@ -24,7 +24,7 @@ The Skytap platform provides controls for Security Policies;
 Notifications; Authentication, Authorization and Accounting; and
 Auditing.
 
-<img src=".//media/image4.png" width="500">
+<img src="./media/image4.png" width="500">
 
 *Figure 1 - Platform Required Capabilities*
 
