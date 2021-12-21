@@ -1,6 +1,6 @@
 ---
 title: Reliability Design Considerations for Azure
-author: George Stamos, Director, Solutions Architect - Business Development
+author: George Stamos - Director, Solutions Architect - Business Development
 ---
 
 ***Skytap for Azure Support and Limits (IBM i)***

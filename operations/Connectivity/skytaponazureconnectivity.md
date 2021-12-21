@@ -1,6 +1,6 @@
 ---
 title: Skytap Operational Excellence - Connectivity - Getting Started with Azure Networking
-author: Colleen E Hamilton - Senior Product Manager
+author: Colleen E Hamilton - Senior Product Manager, Jeffry Lane - Sr. Cloud Solutions Architect
 ---
 
 # **Getting Started with Azure**

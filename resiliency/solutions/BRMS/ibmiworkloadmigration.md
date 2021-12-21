@@ -1,28 +1,17 @@
 ---
 title: IBM i workload migration from on-prem to Skytap using BRMS ICC
 description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
-author: Tony Perez, Sales Engineer 
+author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ---
 
 ## IBM i workload migration from on-prem to Skytap using BRMS ICC
 
 **Objective**:
 
--   Demonstrate how an IBM i workload can be migrated to Skytap on Azure
-    > using BRMS ICC. In this document you will learn how to take backup on
-    > IBM i using BRMS ICC and transfer it to cloud using FTP.
+-   Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
 
 -   Full-system recovery in Cloud using IBM i as NFS server to an IBM i
-    > VM as target system will also be covered in this document.\
-    > \<NOTE: INSERT DIAGRAM OF SETUP\>\
-    > \<NOTE: DOES THIS EXAMPLE REQUIRE 2 IBMi LPARs, or should one be
-    > Linux??\> If so, diagram should label one as \"on-prem\" and the
-    > other \"recovery target\" along with their IP addresses. Assuming
-    > they are both in an example Skytap environment....A better example
-    > would be to have one \"on-prem\" LPAR, and one Linux based VM as
-    > the backup target. That way we can expand the scenario to cover
-    > Azure-in-the-middle where we might backup from real on-prem to a
-    > VM in Azure as an intermediate step.
+     VM as target system will also be covered in this document.
 
 **Prerequisites**:
 
@@ -45,23 +34,17 @@ Below LPPs need to be installed on IBM i LPAR:
 -   5733ICC Option 2: Advanced
 
 -   5733ICC Option 3: Reserved -- Option 3,4,5,6,7\
-    > \<NOTE: INSERT COMMAND TO SEE YOUR LPPs INSTALLED\>
 
 -   Install latest PTFs on IBM i with below individual PTFs installed
 
 > [Minimum](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels)
-> PTF level for IBM i\
-> \<NOTE: NEED LINK TO POINT TO HOW TO INSTALL PTFs IN SKYTAP\>
+ PTF level for IBM i
 
--   Utilized ASP should be less than 48% in IBM i LPAR\
-    > \<NOTE: NEED 4.7 X 10GB Explanation\>
-
-> \<NOTE: NEED COMMAND SHOW WHAT YOUR % IS AND MAYBE SCREENSHOT\...WRKSYSSTS\>
+-   Utilized ASP should be less than 48% in IBM i LPAR
 
 **Full system backup of IBM i source using BRMS ICC**
 
--   Create ICC FTP resource where IBM i backup will be transferred. FTP
-    > resource can be IBM i or Linux system.\
+-   Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.\
     > \<NOTE: For this document, we need to \"pick one\" either Linux or
     > IBMi and make the example be specific.Recommend = Linux.\>
 
