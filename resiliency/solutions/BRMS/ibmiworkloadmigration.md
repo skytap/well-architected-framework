@@ -18,6 +18,10 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Run the primary backup from console](#primarybackupcreate)
 * [Run the second backup from console](#secondbackupcreate)
 * [Change BRMS Control Group QCLDBIPL01](#changecontrolgroup)
+* [Transfer backup media to ICC FTP resource](#transferbackuptoiccftp)
+* [Generate BRMS recovery report](#generatebrmsreport)
+* [Copy backup media from ICC FTP resource to IBM i LPAR on cloud](#movebackuptocloud)
+* [IBM i recovery from IBM i NFS server](#recoveryfromibminfs)
 
 
 ## Key Takeaways <a name="takeaways"></a>
@@ -169,97 +173,107 @@ And refresh until you see it has completed.
 ###### *[Back to the Top](#toc)*
 ## Run the second backup from console <a name="secondbackupcreate"></a>
 
--   Run the second backup from console:
+1. Run the second backup from console:
 
-> **===\> STRBKUBRM CTLGRP(QCLDBIPL01) SBMJOB(\*NO)\
-> **\<NOTE: The second backup command saves SYSTEM DATA to optical
-> media\>\
-> \<NOTE: Got message \"STRTCP Started for QSECOFR....\"
+```
+===> STRBKUBRM CTLGRP(QCLDBIPL01) SBMJOB(\*NO)\
+```
+***NOTE***: *The second backup command saves SYSTEM DATA to optical media.*
 
-Note: QCLDBIPL01 and QCLDBSYS01 control groups are used for entire
-system backup, and QCLDBUSR01 and QCLDBGRP01 are used for incremental
-backups.
+You should see a message similar to:  \"STRTCP Started for QSECOFR....\"
 
--   Once the backups are complete check for the media using command:\
-    > ===\> WRKMEDBRM.\
-    > \<NOTE: What are we looking for?\>\
-    > take 6 option in front of any one of them
+***NOTE***: *QCLDBIPL01 and QCLDBSYS01 control groups are used for entire system backup, and QCLDBUSR01 and QCLDBGRP01 are used for incremental backups.*
 
-> It will show you the medias used for backup and the order as well in
-> which we need to add them in catalog in NFS server
+2. Once the backups are complete check for the media using command:
+```
+===> WRKMEDBRM.
+```
+3. Take option 6 in front of any one of them. 
+This will show the medias used for backup and the order as well in which they are needed to add them in catalog in NFS server
 
-4.  **[Transfer backup media to ICC FTP resource]{.underline}**
+###### *[Back to the Top](#toc)*
+## Transfer backup media to ICC FTP resource <a name="transferbackuptoiccftp"></a>
 
--   Start FTP server using command:\
-    > ===\> STRTCPSVR \*FTP\
-    > It may be already started, output will be: \"FTP Server Starting\"
+1. Start FTP server using command:
+```
+===> STRTCPSVR \*FTP\
+```
 
--   Start QICC subsystem using command:\
-    > ===\> STRSBS QICC/QICCSBS
+It may be already started, output will be: \"FTP Server Starting\"
 
--   Move the media to FTP resource using command:\
-    > ===\> WRKMEDBRM\
+2. Start QICC subsystem using command:
+```
+===> STRSBS QICC/QICCSBS
+```
+3. Move the media to FTP resource using command:
+```
+===> WRKMEDBRM
+```
 
-    Find all the media objects that have the \"+\" (plus sign) next to them. They should end with \"OPT\" and \"TAP. Put an \"8\" (move)
-    next to all of them with the plus sign. You might have to page
-    down to find all of them. Press \<ENTER\> after putting 8 next to
+4. Find all the media objects that have the \"+\" (plus sign) next to them.They should end with \"OPT\" and \"TAP. 
+5. Put an \"8\" (move) next to all of them with the plus sign. 
+
+You might have to page down to find all of them.
+ 
+6. Press \<ENTER\> after putting 8 next to
      each entry.
 
-    You should see a screen similar to this:
+You should see a screen similar to this:
 
-<img src="./media/image14.png">
+![](media/image14.png)
 
-Change \"Storage location\" to \"TEST1\" that was created earlier:
+7. Change \"Storage location\" to \"TEST1\" that was created earlier:
 
-<img src="./media/image13.png">
+![](media/image13.png)
 
-And press \<ENTER\>
+8. And press \<ENTER\>
 
 
-Note: QCLDBIPL01 will use virtual optical media and QCLDBSYS01 will use
-virtual tape media
+***NOTE***: *QCLDBIPL01 will use virtual optical media and QCLDBSYS01 will use virtual tape media.*
 
--   After moving the media, check the status of transfer using the below command:
+9. After moving the media, check the status of transfer using the below command:
 
->WRKSTSICC Status(\*All)
+```
+===> WRKSTSICC Status(\*All)
+```
 
 You will see the Volume Name, Status, and Complete % for each file
 transfer. Wait until all Volumes have Successfully been completed to
 proceed to the next step.
 
--   Generate BRMS recovery report using below command:
+###### *[Back to the Top](#toc)*
+## Generate BRMS recovery report <a name="generatebrmsreport"></a>
 
-> **STRRCYBRM OPTION(\*CTLGRP) ACTION(\*REPORT) CTLGRP((QCLDBSYS01 1)
-> (QCLDBIPL01 2))**
+1. Generate BRMS recovery report using below command:
 
-**Copy backup media from ICC FTP resource to IBM i LPAR on cloud.** 
+```
+===>  **STRRCYBRM OPTION(\*CTLGRP) ACTION(\*REPORT) CTLGRP((QCLDBSYS01 1)(QCLDBIPL01 2))**
+```
+###### *[Back to the Top](#toc)*
+## Copy backup media from ICC FTP resource to IBM i LPAR on cloud <a name="movebackuptocloud"></a>
 (This step can be skipped if backup is being transferred to IBM i server in 4^th^ step)
 
 This IBM i LPAR will be used as NFS server to build the target IBM i
 LPAR
 
--   Create a directory in IFS where you want to copy the media from FTP
-server using the below command:
+1. Create a directory in IFS where you want to copy the media from FTP server using the below command:
 
- >MKDIR '/XX', where xx is the directory name
-      
--   Start FTP server and QICC subsystem if not already started using
-below commands:
-
-
->STRTCPSVR \*FTP
-
->STRSBS QICC/QICCSBS
-
--   Copy the media from FTP server to IBM i LPAR using the below command,
-   where LOCALFILE will be the directory created in previous
-    step/media volume name and CLOUDFILE will be the file name FTP
-    server with syntax QBRMS\_xx.
-
-
->CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\') LOCALFILE(\"/xx/QO3911\')
-
-**IBM i recovery from IBM i NFS server**
+```
+MKDIR '/XX', where xx is the directory name
+```     
+2. Start FTP server and QICC subsystem if not already started using below commands:
+```
+STRTCPSVR \*FTP
+```
+```
+STRSBS QICC/QICCSBS
+```
+3.  Copy the media from FTP server to IBM i LPAR using the below command, where LOCALFILE will be the directory created in previous step/media volume name and CLOUDFILE will be the file name FTP server with syntax QBRMS\_xx.
+```
+CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFILE(\"/xx/QO3911\')
+```
+###### *[Back to the Top](#toc)*
+## IBM i recovery from IBM i NFS server <a name="recoveryfromibminfs"></a>
 
 -   Create image catalog and add media entry to image catalog using
      below commands in IBM i NFS server:
