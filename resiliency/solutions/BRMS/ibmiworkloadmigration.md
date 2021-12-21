@@ -15,45 +15,48 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Key Takeaways](#takeaways)
 * [Full system backup of IBM i source using BRMS ICC](#start)
 * [Create ICC FTP resource](#ftpresourcecreate)
+* [Run the primary backup from console](#primarybackupcreate)
+* [Run the second backup from console](#secondbackupcreate)
+* [Change BRMS Control Group QCLDBIPL01](#changecontrolgroup)
 
 
 ## Key Takeaways <a name="takeaways"></a>
 
-There are 2 features for the developers and operations team to consider as key takeaways from this guide
+These are some key takeaway for developers and operators to consider from this guide:
 
--   Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
+* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
 
--   Full-system recovery in Cloud using IBM i as NFS server to an IBM i
+ * Full-system recovery in Cloud using IBM i as NFS server to an IBM i
      VM as target system will also be covered in this document.
 
 ## Before you begin <a name="begin"></a>
 
 Below LPPs need to be installed on IBM i LPAR:
 
--   5770-SS1 Option 18: Media and Storage Extensions
+* 5770-SS1 Option 18: Media and Storage Extensions
 
--   5770-SS1 Option 44: Encrypted Backup Enablement (Optional)
+* 5770-SS1 Option 44: Encrypted Backup Enablement (Optional)
 
--   5770-BR1 \*BASE
+* 5770-BR1 \*BASE
 
--   5770-BR1 Option 1: Network feature (Optional)
+* 5770-BR1 Option 1: Network feature (Optional)
 
--   5770-BR1 Option 2: Advanced Functions feature (Optional)
+* 5770-BR1 Option 2: Advanced Functions feature (Optional)
 
--   5733ICC \*BASE IBM Cloud Storage Solutions for i
+* 5733ICC \*BASE IBM Cloud Storage Solutions for i
 
--   5733ICC Option 1: Cloud Storage
+* 5733ICC Option 1: Cloud Storage
 
--   5733ICC Option 2: Advanced
+* 5733ICC Option 2: Advanced
 
--   5733ICC Option 3: Reserved -- Option 3,4,5,6,7\
+* 5733ICC Option 3: Reserved -- Option 3,4,5,6,7\
 
--   Install latest PTFs on IBM i with below individual PTFs installed
+* Install latest PTFs on IBM i with below individual PTFs installed
 
-> [Minimum](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels)
+  * [Minimum](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels)
  PTF level for IBM i
 
--   Utilized ASP should be less than 48% in IBM i LPAR
+* Utilized ASP should be less than 48% in IBM i LPAR
 
 ###### *[Back to the Top](#toc)*
 
@@ -61,103 +64,110 @@ Below LPPs need to be installed on IBM i LPAR:
 
 ## Create ICC FTP resource <a name="ftpresourcecreate"></a>
 
--   Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.For this document, we will be using Linux in our examples.
+Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.For this document, we will be using Linux in our examples.
 
--   In case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZ copy.
+In case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZ copy.
 
 ***NOTE***: *If you have 5 disk arms on-prem with xyz storage, then re-create that setup in your Skytap LPAR.*
 
--   Create FTP resource using below command: 
+1. Create FTP resource using below command: 
+
 ```
-===\> CRTFPRICC
+===> CRTFPRICC
 ```
-where root directory is the directory in the FTP server where we want to transfer the data and resource URI will be IP of FTP server with syntax: *< FTP server IP >: < port number >./ < root directory >*
+The root directory is the directory in the FTP server where we want to transfer the data and resource URI will be IP of FTP server.
 
+Example: *\<FTP server IP>:\<port number>./\<root directory>*
 
+![](media/image2.png)
+![](media/image12.png)
 
-<img src="media/image2.png">
-<img src="media/image12.png">
+Once completed you should see: "Resource "TEST1" was created for resource type FTP".
 
-Once completed you will see: \"Resource TEST1 was created for resource type FTP.
+###### *[Back to the Top](#toc)*
+## Create the backup control groups <a name="controlgroupscreate"></a>
 
--   Once the resource is created, run the following command:\
+1. Once the resource is created, run the following command:
+
 ```
-    > ===\> INZBRM \*DATA\
+===> INZBRM \*DATA\
 ```
     
-Once you press \<ENTER\> wait for the command to complete, there
-    is no confirmation message that is displayed. This command will
-will automatically create the below control groups for the Test1
-    resource created in previous step.
+Once you press \<ENTER\> wait for the command to complete, there is no confirmation message that is displayed. 
+This command will automatically create the below control groups for the Test1 resource created in previous step.
+
+* QCLDBGRP01
+
+* QCLDBIPL01
+
+* QCLDBSYS01
+
+* QCLDBUSR01
 
 
+2. Put the system in restricted state using below command:
 
+```
+===> ENDSBS \*ALL \*IMMED\
+```
 
-> QCLDBGRP01
->
-> QCLDBIPL01
->
-> QCLDBSYS01
->
-> QCLDBUSR01\
-> \
-> \<NOTE: What commands will show these objects actually got created?
-> Where do you look?\>
+Wait for the message: "System ended to restricted condition."
 
--   Put the system in restricted state using below command:
+or use command:
+```
+===> WRKSBS
+```
 
-> ===\> ENDSBS \*ALL \*IMMED\
-> Wait for the message: \"System ended to restricted condition.\"\
-> or use command:\
-> ===\> WRKSBS\
-> And refresh until you see it has completed.
+And refresh until you see it has completed.
 
--   Change subsystems to process for Control Group QCLDBSYS01 using:\
-    > ===\> WRKCTLGBRM\
-    > and take option 9 in front of QCLDBSYS01\
-    > \
-    > Enter the values matching the screen below, make sure to put
-    > \"\*NO\" for restart. Press \<ENTER\> once you have all the values
-    > filled in. Then F3 to exit.
+3. Change subsystems to process for Control Group QCLDBSYS01 using the following commands:
+```
+===> WRKCTLGBRM
+```
+4. Take option 9 in front of QCLDBSYS01
+5. Enter the values matching the screen below, make sure to put "\*NO\" for restart. 
+6. Press \<ENTER\> once you have all the values filled in. 
+7. Press F3 to exit.
+8. Change Restart to \*NO for Seq 10 Subsystem \*ALL
 
+![](media/image1.png)
 
+###### *[Back to the Top](#toc)*
+## Run the primary backup from console <a name="primarybackupcreate"></a>
+1. Start backup using below command:
+```
+===> STRBKUBRM CTLGRP(QCLDBSYS01) SBMJOB(\*NO)**
+```
 
-Change Restart to \*NO for Seq 10 Subsystem \*ALL
+2. Check for error messages once the backup is complete.
 
-<img src="media/image1.png">
+***NOTE***: *You will see messages similar to: "1 of 120 libraries processed....84 objects saved"*
 
-Start backup using below command:
+***NOTE***: *The backup will take a while to complete.*
 
-> **===\> STRBKUBRM CTLGRP(QCLDBSYS01) SBMJOB(\*NO)**
+***NOTE***: *This first backup command will save USER data to virtual tape.*
 
--   Check for error messages once the backup is complete.\
-    > \<NOTE: How do you check for errors?)\
-    > \<NOTE: You will see messages like: \"1 of 120 libraries
-    > processed....84 objects saved\>\
-    > \<NOTE: The backup will take a while to complete....\>\
-    > \<NOTE: This first backup command save USER data to virtual
-    > tape.\>\
-    > \<NOTE: When the processing is finished you will see a message
-    > like:\
-    > \"Control group QCLDBSYS01 type \*BKU processing is complete\" \>
+***NOTE***: *When the processing is finished you will see a message similar to: "Control group QCLDBSYS01 type \*BKU processing is complete."*
 
--   Change BRMS Control Group QCLDBIPL01 using command:\
-    > \
-    > ===\> **WRKCTLGBRM\
-    > **Select QCLDBIPL01, Select Option 8=Change attributes, Page down
-    > once, change Automatically backup media information to \*LIB, also
-    > Append to media to \*NO.\
-    > \
-    > \<NOTE: We need to explain the \"WHY\" we are changing these
-    > values\>
+###### *[Back to the Top](#toc)*
+## Change BRMS Control Group QCLDBIPL01 <a name="changecontrolgroup"></a>
 
-<img src="./media/image6.png">
+1. Change BRMS Control Group QCLDBIPL01 using command:
+```
+===\> **WRKCTLGBRM\
+```
+2. Select *QCLDBIPL01* 
+3. Select *Option 8=Change attributes* 
+4. Page down once, change *Automatically backup media information* to \*LIB
+5. Append to media to \*NO.\
 
--   Select Option 9=Subsystems to process \<NOTE: Do we stay on
-    > QCLDBIPL01?\>
+![](media/image6.png)
 
-> Change Restart to \*YES for Seq 10 Subsystem \*ALL \<NOTE: The value
-> on the screen is already \"YES\"??? Error???\>
+6. Select Option 9=Subsystems to process
+7. Change Restart to \*YES for Seq 10 Subsystem \*ALL \
+
+###### *[Back to the Top](#toc)*
+## Run the second backup from console <a name="secondbackupcreate"></a>
 
 -   Run the second backup from console:
 
