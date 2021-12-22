@@ -1,10 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\resiliency",
+    "\\cloudadoption",
+    "\\operations",
+    "\\operations\\connectivity",
+    "\\operations\\Connectivity Old",
+    "\\operations\\Discovery",
     "\\resiliency\\solutions",
     "\\resiliency\\solutions\\BRMS",
     "\\resiliency\\solutions\\GoSave"
   ],
+  "SelectedNode": "\\operations\\README.md",
   "PreviewInSolutionExplorer": false
 }

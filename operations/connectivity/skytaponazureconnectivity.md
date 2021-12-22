@@ -488,7 +488,7 @@ as in Example 1.
 -->
 
 **Resiliency**
-> [Skytap Resiliency Pillar](README.md)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)

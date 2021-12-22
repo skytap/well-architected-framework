@@ -2,43 +2,36 @@
 title: Skytap Power Discovery - Workloads
 author: George Stamos, Director, Solutions Architect- Business Development
 ---
-**Skytap on Azure -- Power Workload Discovery**
+# Skytap Power Discovery - Workloads
+#### The following section outlines IBM Power Workload discovery: <a name="toc"></a>
 
-The following section outlines IBM Power Workload discovery:
+* [Goals](#goals)
+* [Considerations and Questions](#qanda)
+  * [Organizational](#qandaorg)
+  * [Application](#qandaapp)
+  * [Scenario](#qandascene)
+* [Skytap on Azure Support and Limits](#designforazure)
+<!--* [Skytap on IBM Cloud Support and Limits](#designforibm)-->
+* [Sample Outputs](#samples)
 
--   Goals
-
--   Considerations and Questions
-
--   Skytap on Azure Support and Limits
-
--   Sample Outputs
-
-**IBM Power Workload Discovery Goals**
+### Skytap Power Discovery for Workloads - Goals <a name="goals"></a>
 
 The goal of discovery is to develop the proper framework for your
-workloads running in Skytap on Azure. It can be further defined by these
+workloads running in Skytap in the cloud. It can be further defined by these
 supporting goals:
 
--   Uncover exact on-premises workloads to be migrated at the LPAR/VM
-    level
+* Uncover exact on-premises workloads to be migrated at the LPAR/VM level
+* Match existing data center workloads as closely as possible in Skytap
+* Match or exceed existing data center performance
+* Deeply understand usage patterns
+*  Deliver a well-reasoned cost proposal and practical migration approach
 
--   Match existing data center workloads as closely as possible in
-    Skytap
-
--   Match or exceed existing data center performance
-
--   Deeply understand usage patterns
-
--   Deliver a well-reasoned cost proposal and practical migration
-    approach
-
-**IBM Power Workload Discovery Considerations and Questions**
+### Skytap Power Discovery for Workloads - Considerations and Questions <a name="qanda"></a>
 
 There are relevant considerations to be made and questions to ask your
 organization during the discovery phase aligned to three key areas:
 
-**Organizational**
+**Organizational<a name="qandaorg"></a>**
 
 1.  Are your workloads internally managed or outsourced?
 
@@ -49,7 +42,7 @@ organization during the discovery phase aligned to three key areas:
 4.  What approval is needed for networking changes, remote access,
     software agent install and maintenance windows?
 
-**Application**
+**Application<a name="qandaapp"></a>**
 
 1.  Which third party applications are in use?
 
@@ -61,7 +54,7 @@ organization during the discovery phase aligned to three key areas:
 
 4.  Are there specific licensing requirements to be aware of?
 
-**Scenario**
+**Scenario<a name="qandascene"></a>**
 
 1.  What is your Recovery Point Objective (RPO)/Recovery Time Objective
     (RPO) for the migration?
@@ -72,54 +65,16 @@ organization during the discovery phase aligned to three key areas:
 3.  What are the approximate number of active users in your IBM Power
     environment? Which time zones do your users operate in?
 
-**IBM Power Workload Discovery Skytap for Azure Support and Limits (AIX
-and IBM i)**
+### Skytap Power Discovery for Workloads - Skytap for Azure Support and Limits (AIX and IBM i)<a name="designforazure"></a>
 
-Compute: LPAR Sizing and OS Support
+>* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+<!-- 
+### Skytap Power Discovery for Workloads - Skytap for IBM Cloud Support and Limits (AIX and IBM i)<a name="designforibm"></a>
 
-IBM Power (IBM i)
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+-->
 
--   S922 System p Frames
-
--   IBM I P10 License Class
-
--   Up to 4 vCPU/512 GB RAM per LPAR
-
--   CPW up to 42472 per LPAR
-
--   Supports IBM i: 7.2 TR 9, 7.3 TR 5, 7.4
-
-IBM Power (AIX)
-
--   S922 System p Frames
-
--   Up to 16 vCPU/512 GB RAM per LPAR
-
--   Supports AIX: 6.1 TL 9 SP10, 7.1 TL 4 SP 4, 7.2 TL 1, SP 2
-
-Network
-
--   IPSec (SDN)/PNC Connectivity between Skytap and On-Premises (Range:
-    1 GB/s Limit)
-
--   Layer 2 networking in environment (Range: Burst to 2.7 GB/s Limit)
-
--   10 NICs per host
-
--   10 VPN Connections per account
-
-Storage
-
--   32 Disks for Power limit
-
--   Each disk limited to 2TB
-
--   Storage performance scalability with VM/LPAR RAM capacity
-
--   Power -- up to 32 drives at 2TB each -- 64 TB max, IOPS up to 30K
-    per LPAR
-
-**IBM Power Workload Discovery Sample Outputs**
+### Skytap Power Discovery for Workloads - Sample Outputs<a name="samples"></a>
 
 **AIX**
 
@@ -140,6 +95,7 @@ following commands and catalog into the BOM for the migration.
 
 <img src=".\discoveryworkloadsmedia\image3.png">
 
+###### *[Back to the Top](#toc)*
 ## Next steps
 
 **Main Overview**
@@ -151,8 +107,19 @@ following commands and catalog into the BOM for the migration.
        > [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Connectivity](../connectivity/README.md)
 
+
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
+
+>**Migration Solutions**
+>* [Hot Migations (Replication Sync)](../../resiliency/solutions/HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](../../resiliency/solutions/ColdMigrationsOverview.md)
+
+>**Design**
+>* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+<!-- 
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+-->
 
 **Security**
 > [Skytap Security Pillar](../../security/README.md)
