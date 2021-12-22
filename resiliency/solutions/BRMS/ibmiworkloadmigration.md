@@ -26,8 +26,6 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Set System date, time, and time zone same as current [Source System]](#settimesource)
 * [Recover the BRMS libraries on target system](#recovertotarget)
 
-
-
 ## Key Takeaways <a name="takeaways"></a>
 
 These are some key takeaway for developers and operators to consider from this guide:
