@@ -144,7 +144,7 @@ Skytap on Azure.
 >[Skytap Operational Excellence Pillar](README.md)
 >* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Power Discovery & Design - Workloads](discoveryworkloads.md)
->* [Connectivity](../Connectivity/README.md)
+>* [Connectivity](../connectivity/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)

@@ -149,7 +149,7 @@ following commands and catalog into the BOM for the migration.
 >[Skytap Operational Excellence Pillar](README.md)
 >* [Power Discovery](../Discovery/README.md)
        > [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
->* [Connectivity](../Connectivity/README.md)
+>* [Connectivity](../connectivity/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)

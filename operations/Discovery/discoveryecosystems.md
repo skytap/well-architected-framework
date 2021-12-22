@@ -646,7 +646,7 @@ To connect your data to the Performance Navigator client see above.
 >[Skytap Operational Excellence Pillar](README.md)
 >* [Power Discovery](../Discovery/README.md)
        > [Power Discovery & Design - Workloads](discoveryworkloads.md)
->* [Connectivity](../Connectivity/README.md)
+>* [Connectivity](../connectivity/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
