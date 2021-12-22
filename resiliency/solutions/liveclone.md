@@ -25,17 +25,26 @@ There are some considerations to be aware of when using Skytap live clone. The s
 
 Watch the demo video above to see live clone in action.
 
-## Next step
+### Next steps
 
-**Overview**
->[Skytap Reliability Pillar](../README.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
 
-**Design**
->[Design Considerations for Azure](../designconsiderationsazure.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../operations/README.md)
 
->[Design Considerations for IBM](../designconsiderationsibm.md)
+**Resiliency**
+> [Skytap Resiliency Pillar](../README.md)
 
-**Solutions**
- >[Hot Migations (Replication Sync)](HotMigrationOverview.md)
-  
- >[Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>**Migration Solutions**
+>* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+
+>**Design**
+>* [Design Considerations for Azure](../designconsiderationsazure.md)
+<!-- 
+>* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+-->
+
+**Security**
+> * [Skytap Security Pillar](../../security/README.md)

@@ -134,14 +134,25 @@ The two numbers above, combined with contingencies like distance, amount of data
 
 This is VERY similar to a WARM versus HOT migration, and the same tools may be utilized.
 <img src="./media/backuptypes.png" width="800">
-## Next step
+### Next steps
 
-**Design**
->[Design Considerations for Azure](designconsiderationsazure.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-<!-- This is commented out.>[Design Considerations for IBM Cloud](designconsiderationsibm.md) -->
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
-**Solutions**
- >[Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
-  
- >[Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
+**Resiliency**
+>**Migration Solutions**
+>* [Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
+
+>**Design**
+>* [Design Considerations for Azure](designconsiderationsazure.md)
+<!-- 
+>* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
+-->
+
+**Security**
+> * [Skytap Security Pillar](../security/README.md)
+

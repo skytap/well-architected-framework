@@ -636,3 +636,20 @@ Includes graphic view of the last 7 days with Google graphs for free.
     to Skytap
 
 To connect your data to the Performance Navigator client see above.
+
+## Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](README.md)
+>* [Power Discovery](../Discovery/README.md)
+       > [Power Discovery & Design - Workloads](discoveryworkloads.md)
+>* [Connectivity](../Connectivity/README.md)
+
+**Resiliency**
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
+
+**Security**
+> [Skytap Security Pillar](../../security/README.md)

@@ -3,7 +3,7 @@ title: Skytap Operational Excellence - Connectivity - Getting Started with Azure
 author: Colleen E Hamilton - Senior Product Manager, Jeffry Lane - Sr. Cloud Solutions Architect
 ---
 
-# **Getting Started with Azure**
+# **Getting Started with Azure Networking**
 
 Even though Skytap on Azure is running within an Azure datacenter, Azure
 treats Skytap as if it were a separate On-premises location, for network
@@ -474,4 +474,27 @@ ExpressRoutes that are both connected to your vWAN mesh, you'll need to
 Reach](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#how-does-the-virtual-hub-in-a-virtual-wan-select-the-best-path-for-a-route-from-multiple-hubs),
 as in Example 1.
 
-## 
+## Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](README.md)
+<!--  
+> [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
+-->
+
+**Resiliency**
+> [Skytap Resiliency Pillar](README.md)
+
+>**Design**
+>* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+<!--
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+-->
+
+**Security**
+> [Skytap Security Pillar](../../security/README.md)

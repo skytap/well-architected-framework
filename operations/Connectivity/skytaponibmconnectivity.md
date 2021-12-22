@@ -3,7 +3,7 @@ title: Skytap Operational Excellence - Connectivity - Getting Started with IBM C
 author: Colleen E Hamilton - Senior Product Manager
 ---
 
-# **Getting started with IBM Cloud**
+# **Getting started with IBM Cloud Networking**
 
 When migrating your application to IBM Cloud for Skytap Solutions
 (ICSS), your primary Edge Networking solutions will be internet-based:
@@ -60,15 +60,20 @@ each server.
 
 ## Next steps
 
-**Getting Started with IBM Cloud**
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
 
->[Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
 
-**Getting Started with Azure**
- >[Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+**Resiliency**
+> [Skytap Resiliency Pillar](README.md)
 
->[Skytap on Azure Connectivity](skytaponazureconnectivity.md)
+>**Design**
+>* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
-### Back
-
-**[Skytap - Operational Excellence - Connectivity Overview](README.md)**
+**Security**
+> [Skytap Security Pillar](../../security/README.md)

@@ -100,16 +100,28 @@ over the WAN connection. Skytap does not provide automated
 fault-tolerance for these virtual WAN devices, so manual failover from a
 primary to secondary WAN connection must be architected separately.
 
-## Next steps
 
-<!-- This is commented out.**Getting Started with IBM Cloud**
+  ## Next steps
 
->[Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
 
- >[Skytap on IBM Cloud Connectivity](skytaponibmconnectivity.md)> -->
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+<!-- 
+>* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
+-->
 
-**Getting Started with Azure**
- >[Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+**Resiliency**
+> [Skytap Resiliency Pillar](README.md)
 
->[Skytap on Azure Connectivity](skytaponazureconnectivity.md)
-  
+>**Design**
+>* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
+<!--
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+-->
+
+**Security**
+> [Skytap Security Pillar](../../security/README.md)

@@ -74,19 +74,23 @@ system, but the approach to management and remediation will be custom to
 each workload and each platform.
 
 
+## Next step
 
-## Next steps
- 
-* [Key Security Areas](./keysecurityareas.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-* [Security Management](./securitymanagement.md)  
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
-* [Edge Networking](./edgenetworking.md) 
+**Resiliency**
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
-* [Virtual Machines](./virtualmachines.md) 
-
-* [Internal Networking](./internalnetworking.md) 
-
-* [Security as a Service](./securityasaservice.md) 
+**Security**
+> * [Key Security Areas](./keysecurityareas.md)
+> * [Security Management](./securitymanagement.md)  
+> * [Edge Networking](./edgenetworking.md) 
+> * [Virtual Machines](./virtualmachines.md) 
+> * [Internal Networking](./internalnetworking.md) 
+> * [Security as a Service](./securityasaservice.md) 
 
 

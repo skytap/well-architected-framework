@@ -29,15 +29,25 @@ for AIX and IBM i (as400).
 
 - **[IBM i workload migration from on-prem to Skytap using BRMS ICC](BRMS/ibmiworkloadmigration.md)**
 
-## Next step
+### Next steps
 
-**Overview**
->[Skytap Reliability Pillar](../README.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
 
-**Design**
->[Design Considerations for Azure](../designconsiderationsazure.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../operations/README.md)
 
->[Design Considerations for IBM](../designconsiderationsibm.md)
+**Resiliency**
+> [Skytap Resiliency Pillar](../README.md)
 
-**Solutions**
- >[Hot Migations (Replication Sync)](HotMigrationOverview.md)
+>**Migration Solutions**
+>* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
+
+>**Design**
+>* [Design Considerations for Azure](../designconsiderationsazure.md)
+<!-- 
+>* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+-->
+
+**Security**
+> * [Skytap Security Pillar](../../security/README.md)

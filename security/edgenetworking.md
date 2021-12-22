@@ -191,14 +191,24 @@ of the Firewall capability.
     of this document.
 
 ## Next steps
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-* [Security Overview](./README.md)  
-* [Key Security Areas](./keysecurityareas.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
+>* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
+<!-- 
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
+-->
 
-* [Security Management](./securitymanagement.md)  
+**Resiliency**
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
-* [Virtual Machines](./virtualmachines.md) 
-
-* [Internal Networking](./internalnetworking.md) 
-
-* [Security as a Service](./securityasaservice.md) 
+**Security**
+>[Skytap Security Pillar](./README.md)
+>* [Key Security Areas](./keysecurityareas.md)
+>* [Security Management](./securitymanagement.md)  
+>* [Virtual Machines](./virtualmachines.md) 
+>* [Internal Networking](./internalnetworking.md) 
+>* [Security as a Service](./securityasaservice.md) 
