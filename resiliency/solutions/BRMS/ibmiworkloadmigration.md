@@ -22,7 +22,9 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Generate BRMS recovery report](#generatebrmsreport)
 * [Copy backup media from ICC FTP resource to IBM i LPAR on cloud](#movebackuptocloud)
 * [IBM i recovery from IBM i NFS server](#recoveryfromibminfs)
-
+* [Configure IBM i client server (target LPAR)](#configuretargetlpar)
+* [Set System date, time, and time zone same as current [Source System]](#settimesource)
+* [Recover the BRMS libraries on target system](#recovertotarget)
 
 ## Key Takeaways <a name="takeaways"></a>
 
@@ -275,167 +277,142 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
 ###### *[Back to the Top](#toc)*
 ## IBM i recovery from IBM i NFS server <a name="recoveryfromibminfs"></a>
 
--   Create image catalog and add media entry to image catalog using
+1. Create image catalog and add media entry to image catalog using
      below commands in IBM i NFS server:
-
+```
 > CRTDEVOPT DEVD(INSTALL) RSRCNAME(\*VRT)
-
-VARY ON the Optical drive
-
+```
+2. VARY ON the Optical drive
+```
 >   CRTIMGCLG IMGCLG(XXX) DIR(\'/XX\') TYPE(\*OPT) CRTDIR(\*YES)
-
+```
+```
 >   ADDIMGCLGE IMGCLG(XXX) FROMFILE('media name') TOFILE('media name')
+```
+3. Load image catalog to Optical drive
 
-Load image catalog to Optical drive
+4. Verify image catalog with verify type as \*LIC and NFSSHR as \*YES
 
-Verify image catalog with verify type as \*LIC and NFSSHR as \*YES
-
-- Start the NFS server and change NFS export options using below
+5. Start the NFS server and change NFS export options using below
     commands:
-
+```
 >   STRNFSSVR SERVER(\*All)
-
+```
+```
 >   CHGNFSEXP OPTIONS('-i -o ro') DIR('/xx)
+```
+![](media/image8.png)
 
-<img src="media/image8.png">
+6. Change object authorities and TFTP attributes:
 
--   Change object authorities and TFTP attributes:
-
-
+```
 > CHGAUT OBJ(\'/xx\') USER(\*PUBLIC) DTAAUT(\*RWX) SUBTREE(\*ALL)
-
+```
+```
 > CHGTFTPA AUTOSTART(\*YES) ALTSRCDIR(\'/xx\')
-
+```
+```
 > CHGAUT OBJ(\'/xx\') USER(QTFTP) DTAAUT(\*RX) SUBTREE(\*ALL)
-
--   Restart the TFTP server:
-
+```
+7. Restart the TFTP server:
+```
 > ENDTCPSVR SERVER(\*TFTP)
-
+```
+```
 > STRTCPSVR SERVER(\*TFTP)
+```
+###### *[Back to the Top](#toc)*
+## Configure IBM i client server (target LPAR)<a name="configuretargetlpar"></a>
 
-**Configure IBM i client server (target LPAR)**
-
--   Login to SST and select option 8 -- Work with service tools User IDs
+1. Login to SST and select option 8 -- Work with service tools User IDs
      and Devices
 
--   Press F13 and select the LAN adapter
+2. Press F13 and select the LAN adapter
 
-The LAN adapter needs to be on the same VLAN as IBM i NFS server,
+***NOTE***: *The LAN adapter needs to be on the same VLAN as IBM i NFS server*
 
--   Configure service tools LAN adapter:
-
-    -   IP version allowed = IPV4
-
-    -   Internet address = you can use the same IP of the client
-        (TARGET)
-
-    -   Gateway router address = use the same gateway on the client
-
-    -   Subnet mask = use the same
-
-    -   Press F7=Store
-
-    -   Press F13= Deactivate
-
-    -   Press F14=Activate
-
--   Verify port 3000 status as active using NETSTAT \*CNN and use F14 to
+3. Configure service tools LAN adapter:
+  *  IP version allowed = IPV4
+  *  Internet address = you can use the same IP of the client (TARGET)
+  *   Gateway router address = use the same gateway on the client
+  *  Subnet mask = use the same
+  *  Press F7=Store
+  *  Press F13= Deactivate
+  *  Press F14=Activate
+  
+4.  Verify port 3000 status as active using NETSTAT \*CNN and use F14 to
     display port numbers
 
--   Create client server optical device
+5. Create client server optical device
+  *  CRTDEVOPT, Press F4 to prompt
+  *  Local internet address = \*SRVLAN
+  *  Remote internet address = the IP address of the IBM i VSI NFS Server
+  *  Network image directory = '/xx'
 
-    -   CRTDEVOPT, Press F4 to prompt
+![](media/image10.png)
 
-    -   Local internet address = \*SRVLAN
+6. Vary on the optical device created in previous step and verify you can access the remote image catalog using WRKIMGCLGE IMGCLG(\*DEV) DEV(Opt dev)
 
-    -   Remote internet address = the IP address of the IBM i VSI NFS
-         Server
+![](media/image4.png)
 
-    -   Network image directory = '/xx'
-
-<img src="media/image10.png">
-
--   Vary on the optical device created in previous step and verify you
-    can access the remote image catalog using WRKIMGCLGE IMGCLG(\*DEV)
-   DEV(Opt dev)
-
-<img src="media/image4.png">
-
--   Start network install to start scratch installation starting from LIC
+7. Start network install to start scratch installation starting from LIC
      installation, prior to installation make sure to document all
      current network information, same may be needed after restoration.
 
--   Start network install:
+8. Start network install:
+  *  STRNETINS press F4 to prompt
+  *  Network optical device = Optical Device
+  *  Installation option = \*LIC
+  *  Keylock mode = MANUAL
 
-    -   STRNETINS press F4 to prompt
+![](media/image9.png)
 
-    -   Network optical device = Optical Device
+9. On Install LIC screen, take Option 2 to Install LIC and Initialize system
 
-    -   Installation option = \*LIC
+![](media/image11.png)
 
-    -   Keylock mode = MANUAL
+10. Post LIC installation, do disk configuration
 
-<img src="media/image9.png">
+11. Initialize non configured disks and add to ASP
 
--   On Install LIC screen, take Option 2 to Install LIC and Initialize
-     system
+12. Install OS using below option:
 
-<img src="media/image11.png">
+![](media/image5.png)
 
--   Post LIC installation, do disk configuration
+13. On Install device type, Select option-2 -- Network device
 
--   Initialize non configured disks and add to ASP
+14. Configure the network device:
+  *  Server IP = the IP address of the SOURCE NFS IBM i VSI
+  *  Path Name = the name of the Directory where the image volumes are located
+  *  Press F10 = Continue
 
--   Install OS using below option:
+15. Press Enter twice to confirm and on Install the OS screen, take Install Option as 2
 
-<img src="media/image5.png">
+![](media/image3.png)
 
--   On Install device type, Select option-2 -- Network device
+17. Select Option 1=Restore programs and language objects from the current media set
 
--   Configure the network device:
+18. Select Option 2=Keep for Job and output queues
 
-    -   Server IP = the IP address of the SOURCE NFS IBM i VSI
+19. Select Option 1=Yes for distribute operating system and on available disk units
 
-    -   Path Name = the name of the Directory where the image volumes
-         are located
+20. Change system information -- 1 to restore
 
-    -   Press F10 = Continue
+21. Change following on next screen:
+  *  Start print writers = N
+  *  Start system to restricted state = Y
+  *  Set major system options = Y
+  *  Define or change system at IPL = Y
+###### *[Back to the Top](#toc)*
+## Set System date, time, and time zone same as current [Source System]<a name="settimesource"></a>
 
--   Press Enter twice to confirm and on Install the OS screen, take Install Option as 2
+1. Enable automatic configuration -- Y
 
-<img src="./media/image3.png">
+![](media/image7.png)
 
--   Select Option 1=Restore programs and language objects from the
-     current media set
+2. Select Option 3 twice to change the following system values:
 
--   Select Option 2=Keep for Job and output queues
-
--   Select Option 1=Yes for distribute operating system and on available
-     disk units
-
--   Change system information -- 1 to restore
-
--   Change following on next screen:
-
--   Start print writers = N
-
--   Start system to restricted state = Y
-
--   Set major system options = Y
-
--   Define or change system at IPL = Y
-
- **Set System date, time, and time zone same as current [Source
-     System]**
-
--   Enable automatic configuration -- Y
-
-<img src="media/image7.png">
-
--   Select Option 3 twice to change the following system values:
-
-
+```
 >  QALWOBJRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*ALL
 
 >   QFRCCVNRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
@@ -444,9 +421,10 @@ The LAN adapter needs to be on the same VLAN as IBM i NFS server,
 
 >   QJOBMSGQFL \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*PRTWRAP
 
->   QJOBMSGQMX \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 30 (minimum, 64
-     recommended)
-
+>   QJOBMSGQMX \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 30 
+```
+(30 minimum, 64 recommended)
+```
 > QLMTDEVSSN \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
 
 >   QLMTSECOFR \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 0
@@ -460,125 +438,112 @@ The LAN adapter needs to be on the same VLAN as IBM i NFS server,
 >   QSCANFSCTL \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \*NOPOSTRST
 
 >   QVFYOBJRST \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 1
+```
 
+3. Press F3 twice and change the QSECOFR password.
 
--   Press F3 twice and change the QSECOFR password. Note: the current
-     QSECOFR password will be QSECOFR (capital letters)
+***NOTE***: *The current QSECOFR password will be QSECOFR (capital letters)*
 
--   Recover the BRMS libraries on target system:
-
--   CRTDEVOPT, Press F4
-
--   Local internet address = \*SRVLAN
-
--   Remote internet address = the ip address of the IBM i NFS Server
-
--   Network image directory = '/xx'
-
--   Vary ON the device
-
--   Verify you can access the image catalog:
-
-   >   WRKIMGCLGE IMGCLG(\*DEV) DEV(INSTALL)
+###### *[Back to the Top](#toc)*
+## Recover the BRMS libraries on target system<a name="recovertotarget"></a>
+1. CRTDEVOPT, Press F4
+2. Local internet address = \*SRVLAN
+3. Remote internet address = the ip address of the IBM i NFS Server
+4. Network image directory = '/xx'
+5. Vary ON the device
+6. Verify you can access the image catalog:
+```
+> WRKIMGCLGE IMGCLG(\*DEV) DEV(INSTALL)
 
 > CHGMSGQ MSGQ(QSYSOPR) DLVRY(\*NOTIFY) SEV(99)
+```
 
--   Recover BRMS libraries, follow the BRMS recovery report (Step 004
-     needs to be followed at this stage)
-
--   RSTLIB SAVLIB(saved-item) DEV(optical device) VOL(media name)
+7. Recover BRMS libraries, follow the [BRMS recovery report](#generatebrmsreport)
+8. RSTLIB SAVLIB(saved-item) DEV(optical device) VOL(media name)
      OPTFILE(\'\')
-
--   Recover the BRMS related media information using the recovery steps
-     in BRMS recovery report:
-
-
+9. Recover the BRMS related media information using the recovery steps in BRMS recovery report:
+```
 >   RSTOBJ OBJ(\*ALL) SAVLIB(saved-item) DEV(device-name) VOL(media name) OPTFILE(\'\') MBROPT(\*ALL) ALWOBJDIF(\*COMPATIBLE)
-
-
 >   INZBRM OPTION(\*SETAUT)
-
 >   SETUSRBRM USER(QSECOFR) USAGE(\*ADMIN)
-
 >   INZBRM OPTION(\*DEVICE)
+```
 
->   Verify installation device using WRKDEVBRM
+10. Verify installation device using WRKDEVBRM
 
->   Follow step010 in recovery report to recover user profiles
+11. Follow step010 in recovery report to recover user profiles
 
-Note: TCP/IP must be started so BRMS can transfer media required by a
-recovery from the cloud.
+***NOTE***: *TCP/IP must be started so BRMS can transfer media required by a
+recovery from the cloud.*
 
-If you wish to continue the recovery in restricted state, run the
+12a To continue the recovery in restricted state, run the
 following commands:
-
+```
 > STRTCP STRSVR(\*NO) STRIFC(\*NO) STRPTPPRF(\*NO) STRIP6(\*YES) STRTCPIFC
-INTNETADR(\'nnn.nnn.nnn.nnn\'), Where 'nnn' is IP of recovery system
+INTNETADR(\'nnn.nnn.nnn.nnn\')
+```
+Where 'nnn' is IP of recovery system
 
-Otherwise,
+12b. Otherwise, Start all subsystems using 
+```
+> STRSBS QCTL, STRTCP
+```
 
-Start all subsystems using STRSBS QCTL, STRTCP
-
--   Run the following to setup Cloud volumes:
-
-  >   CALL QBRM/Q1AOLD PARM(\'CLOUD \' \'FIXDRVOL ' \'xxxxx1\'
-        > \'xxxxx2\' \'xxxxx3\' \'xxxxxn\')
-
- Volume names can be found from BRMS report file name QP1A2RCY
-
+13. Run the following to setup Cloud volumes:
+```
+  >   CALL QBRM/Q1AOLD PARM(\'CLOUD \' \'FIXDRVOL ' \'xxxxx1\' \'xxxxx2\' \'xxxxx3\' \'xxxxxn\')
+```
+14. Volume names can be found from BRMS report file name QP1A2RCY
+```
 >  STRRCYBRM OPTION(\*SYSTEM) ACTION(\*RESTORE)
+```
 
-Note: Press F9 on the Select Recovery Items display to go to the Restore
+***NOTE***: *Press F9 on the Select Recovery Items display to go to the Restore Command Defaults display.*
 
-Command Defaults display.
-
--   Ensure the tape device name or media library device name is correct
+15. Ensure the tape device name or media library device name is correct
      for the Device prompt
 
--   Ensure \*SAVLIB is specified for the Restore to library prompt
+16. Ensure \*SAVLIB is specified for the Restore to library prompt
 
--   Ensure \*SAVASP is specified for the Auxiliary storage pool prompt
+17. Ensure \*SAVASP is specified for the Auxiliary storage pool prompt
 
--   ENSURE \*YES is specified for create parent directories
+18. ENSURE \*YES is specified for create parent directories
 
-If you are recovering to a different system or a different logical
+19. If you are recovering to a different system or a different logical
 partition, you must specify the following:
+*  \*ALL for the Data base member option prompt
+*  \*COMPATIBLE for the Allow object differences prompt
+*  \*NONE for the System resource management prompt
 
--   \*ALL for the Data base member option prompt
+20. Press \"Enter\" to return to the Select Recovery Items display
 
--   \*COMPATIBLE for the Allow object differences prompt
-
--   \*NONE for the System resource management prompt
-
-Press \"Enter\" to return to the Select Recovery Items display
-
--   Restore \*SAVSECDTA which will restore user profiles. Change QSECOFR
+21. Restore \*SAVSECDTA which will restore user profiles. Change QSECOFR
      password using below command:
-
+```
    >   CHGUSRPRF USRPRF(QSECOFR) PASSWORD(new-password)
+```
+22. Recover configuration data(\*Savcfg) and required system libraries
 
--   Recover configuration data(\*Savcfg) and required system libraries
+23. Do network configuration and add IP in target system
 
--   Do network configuration and add IP in target system
-
--   Ping the cloud resource URI to verify a working network to cloud
+24. Ping the cloud resource URI to verify a working network to cloud
      storage
 
--   Create Virtual tape device and Vary ON the same:
-
+25. Create Virtual tape device and Vary ON the same:
+```
     >  CRTDEVTAP DEVD(TOR1CLDTAP) RSRCNAME(\*VRT)
+```
+26. Move the media to \*Home location
 
--   Move the media to \*Home location
-
--   Recover User libraries, DLO, IFS as per the BRMS recovery report
-
+27. Recover User libraries, DLO, IFS as per the BRMS recovery report
+```
 > UPDPTFINF
 
 >   RSTAUT \*All
 
 >   DSPJOBLOG Output(\*Print)
-
--   Change the system values as required and do a Normal IPL of the
+```
+28. Change the system values as required and do a Normal IPL of the
     system.
 
 ## Next Steps

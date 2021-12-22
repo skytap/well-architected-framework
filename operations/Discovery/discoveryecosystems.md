@@ -3,9 +3,7 @@ title: Skytap Power Discovery - Ecosystems
 author: Randy Watson, Cloud Solutions Architect - Contractor
 ---
 
-# Gathering Infrastructure and/or Performance Data
-
-# For IBM Power (IBM i, AIX/VIOS, Linux)
+# Gathering Infrastructure and/or Performance Data for IBM Power (IBM i, AIX/VIOS, Linux)
 
 Gathering infrastructure and/or performance data is an important step to
 shortening the time required to optimize the performance of IBM Power in
