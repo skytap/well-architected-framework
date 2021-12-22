@@ -127,13 +127,27 @@ Once you understand your IBM Power estate, then you can start the
 process of discovery to determine what and how you will be migrating to
 Skytap on Azure.
 --------------------------------------------------------------------- ------------- ----------------------------------------
-## Next steps
+
 #### IBM Power Discovery for on-premises workloads for migration to Skytap on Azure
-
-##### Overview
-
 
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
-| [Phase 01A-A - Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level indentification - LPAR size, CPU count, RAM, Storage  |
-| [Phase 01A-B - Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - softwar level indentification - Application requirements |
+| [Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level indentification - LPAR size, CPU count, RAM, Storage  |
+| [Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - softwar level indentification - Application requirements |
+
+## Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](README.md)
+>* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
+>* [Power Discovery & Design - Workloads](discoveryworkloads.md)
+>* [Connectivity](../Connectivity/README.md)
+
+**Resiliency**
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
+
+**Security**
+> [Skytap Security Pillar](../../security/README.md)

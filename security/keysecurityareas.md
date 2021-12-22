@@ -291,15 +291,19 @@ prevent cloud sprawl or an economic denial of service.
 ###  
 --------------------------------------------------------------------- ------------- ----------------------------------------
 ## Next steps
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-* [Security Overview](./README.md)  
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
-* [Security Management](./securitymanagement.md)  
+**Resiliency**
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
-* [Edge Networking](./edgenetworking.md) 
-
-* [Virtual Machines](./virtualmachines.md) 
-
-* [Internal Networking](./internalnetworking.md) 
-
-* [Security as a Service](./securityasaservice.md) 
+**Security**
+>[Skytap Security Pillar](./README.md)
+> * [Security Management](./securitymanagement.md)
+> * [Edge Networking](./edgenetworking.md)
+> * [Virtual Machines](./virtualmachines.md)
+> * [Internal Networking](./internalnetworking.md)
+> * [Security as a Service](./securityasaservice.md)

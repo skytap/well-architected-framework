@@ -139,3 +139,20 @@ following commands and catalog into the BOM for the migration.
 **Example BOM for Migration -- AIX, IBM I, Spot Windows/Linux**
 
 <img src=".\discoveryworkloadsmedia\image3.png">
+
+## Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](README.md)
+>* [Power Discovery](../Discovery/README.md)
+       > [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
+>* [Connectivity](../Connectivity/README.md)
+
+**Resiliency**
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
+
+**Security**
+> [Skytap Security Pillar](../../security/README.md)

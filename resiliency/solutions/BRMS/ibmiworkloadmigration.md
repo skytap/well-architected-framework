@@ -11,8 +11,8 @@ This document does not provide you with any legal rights to any intellectual pro
 
 # Table of Contents <a name="toc"></a>
 
-* [Before you begin](#begin)
 * [Key Takeaways](#takeaways)
+* [Before you begin](#begin)
 * [Full system backup of IBM i source using BRMS ICC](#start)
 * [Create ICC FTP resource](#ftpresourcecreate)
 * [Run the primary backup from console](#primarybackupcreate)
@@ -581,17 +581,24 @@ Press \"Enter\" to return to the Select Recovery Items display
 -   Change the system values as required and do a Normal IPL of the
     system.
 
-## Next step
+## Next Steps
 
-**Overview**
->[Skytap Reliability Pillar](../../README.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../../../README.md)
 
-**Design**
->[Design Considerations for Azure](../../designconsiderationsazure.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../../operations/README.md)
 
->[Design Considerations for IBM](../../designconsiderationsibm.md)
+**Resiliency**
+>**Migration Solutions**
+>* [Hot Migations (Replication Sync)](../HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
 
-**Solutions**
- >[Hot Migations (Replication Sync)](../../solutions/HotMigrationOverview.md)
-  
- >[Cold (Warm) Migrations (Backup and Restore)](../../solutions/ColdMigrationsOverview.md)
+>**Design**
+>* [Design Considerations for Azure](../../designconsiderationsazure.md)
+<!-- 
+>* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
+-->
+
+**Security**
+> * [Skytap Security Pillar](../../../security/README.md)

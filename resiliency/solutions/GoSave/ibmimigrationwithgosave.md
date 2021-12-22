@@ -4,48 +4,51 @@ description: Skytap Cold Migration Solution - IBM i workload migration using Go 
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ---
 
-## IBM i workload migration using Go Save/Restore, Option 22-23
+# IBM i workload migration using Go Save/Restore, Option 22-23
 
-**Objective**:
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
 
--   Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save, Option 22,23.
+This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
--   Full-system recovery including LIC, OS installation
+## Table of Contents <a name="toc"></a>
 
-**Pre-requisites:**
+* [Key Takeaways](#takeaways)
+* [Before you begin](#begin)
+* Determining size to be backed up on ISO optical image
+* Create virtual optical media
+* Save Option 22 on optical media to create an ISO image
+* Save QGPL and QUSRSYS and append to existing ISO
+* Save Remaining data to virtual tape(s) via option 23 save
+* Restore Option 22 with ISO
+* Restore QUSRSYS and QGPL to get network
+* Restore remaining data via virtual tape
 
--   Install latest PTFs on IBM i
 
--   Utilized ASP should be less than 48% in IBM i LPAR. Amount of disk space can be reduced by doing clean up as mentioned in the link below:
+## Key Takeaways <a name="takeaways"></a>
 
-[https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used](https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used)
+These are some key takeaway for developers and operators to consider from this guide:
 
--   Azure storage account with blob storage container and valid SAS key
+* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save, Option 22,23.
 
-    -   Insert detailed instructions here:
+* Full-system recovery including LIC, OS installation
 
-    -   Create Azure storage account as required, and generate SAS token 
+## Before you begin <a name="begin"></a>
 
-    -   AZCopy the virtual tapes from the NFS mounted directory into Azure object storage container
+* Install latest PTFs on IBM i
 
--   Linux / Windows server in on-premise network, preferably close to IBM i server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of
-    > AZcopy utility
+* Utilized ASP should be less than 48% in IBM i LPAR. Amount of disk space can be reduced by doing clean up as mentioned in the link below:
 
-<img src="./media/image7.png">
+  * [https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used](https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used)
 
-**[High level Steps:**
+* Azure storage account with blob storage container and valid SAS key
 
--   Save Option 22 on optical media to create an ISO image
+  * Create Azure storage account as required, and generate SAS token 
 
--   Save QGPL and QUSRSYS and append to existing ISO
+* AZCopy the virtual tapes from the NFS mounted directory into Azure object storage container
 
--   Save Remaining data to virtual tape(s) via option 23 save
+* Linux / Windows server in on-premise network, preferably close to IBM i server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of AZcopy utility
 
--   Restore Option 22 with ISO
-
--   Restore QUSRSYS and QGPL to get network
-
--   Restore remaining data via virtual tape
+![](media/image7.png)
 
 **Determining size to be backed up on ISO optical image**
 
@@ -333,17 +336,25 @@ Example commands:
 
 -   Check PTF status and change the system values as required
 
-## Next step
+## Next Steps
 
-**Overview**
->[Skytap Reliability Pillar](../../README.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../../../README.md)
 
-**Design**
->[Design Considerations for Azure](../../designconsiderationsazure.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../../operations/README.md)
 
->[Design Considerations for IBM](../../designconsiderationsibm.md)
+**Resiliency**
+>**Migration Solutions**
+>* [Hot Migations (Replication Sync)](../HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
 
-**Solutions**
- >[Hot Migations (Replication Sync)](../../solutions/HotMigrationOverview.md)
-  
- >[Cold (Warm) Migrations (Backup and Restore)](../../solutions/ColdMigrationsOverview.md)
+>**Design**
+>* [Design Considerations for Azure](../../designconsiderationsazure.md)
+<!-- 
+>* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
+-->
+
+**Security**
+> * [Skytap Security Pillar](../../../security/README.md)
+

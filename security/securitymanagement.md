@@ -265,14 +265,19 @@ for onwards propagation to the log management solution.
 | [Splunk Enterprise](https://www.splunk.com/en_us/software/splunk-enterprise.html) | Splunk          | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
   
 ## Next steps
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-* [Security Overview](./README.md)  
-* [Key Security Areas](./keysecurityareas.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
-* [Edge Networking](./edgenetworking.md) 
+**Resiliency**
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
-* [Virtual Machines](./virtualmachines.md) 
-
-* [Internal Networking](./internalnetworking.md) 
-
-* [Security as a Service](./securityasaservice.md) 
+**Security**
+>[Skytap Security Pillar](./README.md)
+> * [Key Security Areas](./keysecurityareas.md)
+> * [Edge Networking](./edgenetworking.md) 
+> * [Virtual Machines](./virtualmachines.md) 
+> * [Internal Networking](./internalnetworking.md) 
+> * [Security as a Service](./securityasaservice.md) 

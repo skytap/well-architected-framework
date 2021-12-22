@@ -109,15 +109,24 @@ environments.
   -------------------------------------------------------------- ------------- ----------------------------------------
 
 ## Next steps
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-* [Security Overview](./README.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
+>* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
+<!-- 
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
+-->
 
-* [Key Security Areas](./keysecurityareas.md)
+**Resiliency**
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
-* [Security Management](./securitymanagement.md)  
-
-* [Edge Networking](./edgenetworking.md) 
-
-* [Virtual Machines](./virtualmachines.md) 
-
-* [Security as a Service](./securityasaservice.md) 
+**Security**
+>[Skytap Security Pillar](./README.md)
+>* [Key Security Areas](./keysecurityareas.md)
+>* [Security Management](./securitymanagement.md)  
+>* [Edge Networking](./edgenetworking.md) 
+>* [Virtual Machines](./virtualmachines.md) 
+>* [Security as a Service](./securityasaservice.md) 

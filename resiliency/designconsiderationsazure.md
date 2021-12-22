@@ -72,17 +72,31 @@ AIX: 7.2 TL 1, SP 2
 <li>Storage performance scalability with VM/LPAR RAM capacity
 <li>IOPS up to 30K per LPAR
 
-## Next step
+### Next steps
 
-**Overview**
->[Skytap Reliability Pillar](README.md)
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
 
-<!-- **Design**
-
->[Design Considerations for IBM Cloud](designconsiderationsibm.md)
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
+>* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
+<!-- 
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
 -->
 
-**Solutions**
- >[Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
-  
- >[Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
+**Resiliency**
+> [Skytap Resiliency Pillar](README.md)
+
+>**Migration Solutions**
+>* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
+
+<!-- 
+>**Design**
+>* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
+-->
+
+**Security**
+> * [Skytap Security Pillar](../security/README.md)
+
