@@ -1,6 +1,6 @@
 ---
 title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
-description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native - Draft Version: 11.28.21
+description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ---
 
