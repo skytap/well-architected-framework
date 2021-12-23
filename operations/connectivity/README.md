@@ -97,11 +97,19 @@ similar. In both cases, Skytap exposes networks in an account via a WAN
 interface. Local Skytap subnets must fall within an address space
 assigned to the WAN, and remote subnets are specified to direct traffic
 over the WAN connection. Skytap does not provide automated
-fault-tolerance for these virtual WAN devices, so manual failover from a
+fault-tolerance for these virtual WAN devices, so manual fail-over from a
 primary to secondary WAN connection must be architected separately.
 
+## Getting Started with Networking
 
-  ## Next steps
+* [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+<!-- 
+* [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
+-->
+
+<hr>
+
+  #### Next steps
 
 **Main Overview**
 > [Skytap Well-Architected Framework](../../README.md)
