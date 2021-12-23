@@ -9,10 +9,10 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ## Table of Contents <a name="toc"></a>
 
 * [Create Skytap Environment](#createskytapenvironment)
-* [Create an Express Route Definition in Skytap]()
-* [Create a Resource Group in the Azure Portal]()
-* [Create a Virtual Network to attach the ExpressRoute]()
-* [Create an address space and subnet]()
+* [Create an Express Route Definition in Skytap](#createroutedefinition)
+* [Create a Resource Group in the Azure Portal](#createazureresourcegroup)
+* [Create a Virtual Network to attach the ExpressRoute](#createazurevnet)
+* [Create an address space and subnet](#createazureaddressspace)
 * [Create a Virtual Network Gateway]()
 * [Create Local Network Gateway]()
 * [Add all components to the Virtual Network Gateway]()
@@ -25,117 +25,113 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 
 Create the initial Skytap environment that contains your VMs or LPARs.
 
-Login to the Azure portal and access your Skytap subscription. You
-should land on the Dashboard page of Skytap.
+1. Login to the [Azure portal](https://portal.azure.com) and access your Skytap subscription.
+   
+You should land on the Dashboard page of Skytap.
 
 <img src="./media/image6.png" width="700">
+<br>
+
+2. Select **AIX 7.1** in the search field. Select **US-Texas-M-1** as the
+Region. Finally, select the AIX Template that matches your criteria.
 
 <img src="./media/image30.png" width="700">
 
-Select \"AIX 7.1\" in the search field. Select US-Texas-M-1 as the
-Region. Finally, select the AIX Template that matches your criteria.
-
-You should see this page, make note of the default subnet that is
-created, you will use that value 10.0.0.0/24 when defining your Express
+You should see the following page, make note of the default subnet that is
+created, you will use that value (as an example: 10.0.0.0/24) when defining your Express
 Route Connection.
 
 <img src="./media/image45.png" width="700">
 
 ###### *[Back to the Top](#toc)*
-## Create an Express Route Definition in Skytap
+## Create an Express Route Definition in Skytap<a name="createroutedefinition"></a>
 
-In Skytap – Establish Private Network Connection with Express Route
-
-Configure a Virtual Network Gateway in Azure for ExpressRoute
-
-Connect the ExpressRoute Circuit to the Virtual Network Gateway.
+In Skytap – Establish Private Network Connection with Express Route and Configure a Virtual Network Gateway in Azure for ExpressRoute, then Connect the ExpressRoute Circuit to the Virtual Network Gateway. To do this, you will create an Express Route definition in Skytap using the following steps.
 
 ![Express Route Topo](media/ExpressRouteTopo.png)
 
-Create an Express Route definition in Skytap using the following steps.
+1. From the Manage Tab, Select **Public IP**
 
-From the Manage Tab, Select \"Public IP\"
+<img src="./media/image33.png" width="700">
 
-![](./media/image33.png)
+2. Allocate a public IP address.
 
-Allocate a public IP address.
-
-Note: Even though the end-point for the Express Route connection is
+***NOTE***: *Even though the end-point for the Express Route connection is
 label \"public IP\" in the user interface, the connection described in
-this document does not send traffic onto the public internet, all the
-traffic stays within the Azure datacenter.
+this document does not send traffic onto the public Internet, all the
+traffic stays within the Azure data-center.*
 
-Click:
+3. Click **+ Static public IP address**:
 
-![](./media/image4.png)
+<img src="./media/image4.png" width="300">
 
-Select the region where the connection will be created, in this case,
+4. Select the region where the connection will be created, in this case,
 Texas-M1 which is \"South Central\" in Azure.
 
-![](./media/image24.png)
+<img src="./media/image24.png" width="500">
 
-The new unattached IP address will be used in defining the Azure side of
-the Express Route connection.
+***NOTE***: *The new unattached IP address will be used in defining the Azure side of
+the Express Route connection.*
 
-![](./media/image18.png)
+<img src="./media/image18.png" width="500">
 
-Now define a new WAN connection in the Skytap user interface.
+5. Now define a new WAN connection in the Skytap user interface.
 
-![](./media/image39.png)
+<img src="./media/image39.png" width="500">
+<br>
+<img src="./media/image35.png" width="300">
 
-![](./media/image35.png)
+6. Fill in the page and press **Save**.
 
-Fill in the page and press \"Save\".
+<img src="./media/image49.png" width="700">
 
-![](./media/image49.png)
+***NOTE***: You'll see the following message while the connection is being built:
 
-You\'ll see this message while the connection is being built:
-
-![](./media/image20.png)
+<img src="./media/image20.png" width="700">*
 
 Once finished, you\'ll see the service keys required to define the
 Express Route endpoint on the Azure Native side of the connection.
 
-![](./media/image11.png)
+<img src="./media/image11.png" width="700">
 
 If you know what subnet(s) that will be accessed in native Azure, you
 can add them now or later. The subnet 10.1.77.0/24 is what will be
 defined as the VNET in Azure that the Skytap environment will talk to.
 
-Add the remote subnet on the right side of the page.
+7. Add the remote subnet on the right side of the page.
 
-![](./media/image40.png)
+<img src="./media/image40.png" width="700">
 
 ###### *[Back to the Top](#toc)*
-## Create a Resource Group in the Azure Portal
+## Create a Resource Group in the Azure Portal<a name="createazureresourcegroup"></a>
 
-From the Azure Portal, create a Resource Group:
+1. From the Azure Portal, create a Resource Group:
 
 ![](./media/image25.png)
 
-Give the Resource Group a name: \"Skytap DR ExpressRoute-RG\"
+2. Give the Resource Group a name: (Example **Skytap DR ExpressRoute-RG**)
 
 ![](./media/image14.png)
 
-Click \"Review & create\" and then \"Create\" to finish creating the
+3. Click **Review & create** and then **Create** to finish creating the
 Resource Group.
 
 ###### *[Back to the Top](#toc)*
-## Create a Virtual Network to attach the ExpressRoute
+## Create a Virtual Network to attach the ExpressRoute<a name="createazurevnet"></a>
 
-![](./media/image13.png)
-
-
-![](./media/image22.png)
+1. ![](./media/image13.png)
 
 
-Click: Go to Resource
+2. ![](./media/image22.png)
 
-![](./media/image1.png)
+
+3. Click: Go to Resource
+
+<img src="./media/image1.png" width="200">
 
 
 ###### *[Back to the Top](#toc)*
-## Create an address space and subnet
+## Create an address space and subnet<a name="createazureaddressspace"></a>
 
 ![](./media/image9.png)
 
