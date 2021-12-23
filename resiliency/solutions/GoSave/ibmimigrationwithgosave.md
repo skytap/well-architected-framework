@@ -68,18 +68,19 @@ These are some key takeaway for developers and operators to consider from this g
 
 [https://www.ibm.com/docs/en/i/7.2?topic=storage-setting-up-virtual-optical](https://www.ibm.com/docs/en/i/7.2?topic=storage-setting-up-virtual-optical) 
 
--   CRTIMGCLG IMGCLG(skytap30GB) DIR(\'/skytap30GB\') 
+```bash
+> CRTIMGCLG IMGCLG(skytap30GB) DIR(\'/skytap30GB\') 
 
--   ADDIMGCLGE IMGCLG(skytap30GB) FROMFILE(\*NEW) TOFILE(skytap30GB.iso) IMGSIZ(30000)
+> ADDIMGCLGE IMGCLG(skytap30GB) FROMFILE(\*NEW) TOFILE(skytap30GB.iso) IMGSIZ(30000)
 
--   CRTDEVOPT DEVD(skyopt30gb) RSRCNAME(\*VRT)
+> CRTDEVOPT DEVD(skyopt30gb) RSRCNAME(\*VRT)
 
--   VRYCFG CFGOBJ(skyopt30gb) CFGTYPE(\*DEV) STATUS(\*ON)
+> VRYCFG CFGOBJ(skyopt30gb) CFGTYPE(\*DEV) STATUS(\*ON)
 
--   LODIMGCLG IMGCLG(skytap30GB) DEV(skyopt30gb)
+> LODIMGCLG IMGCLG(skytap30GB) DEV(skyopt30gb)
 
--   INZOPT NEWVOL(MYVOLUMEID) DEV(skyopt30gb) CHECK(\*NO) TEXT(DESCRIPTION)
-
+> INZOPT NEWVOL(MYVOLUMEID) DEV(skyopt30gb) CHECK(\*NO) TEXT(DESCRIPTION)
+```
  **Save, Option 22 to virtual optical media**
 
 -   Bring system to restricted state using ENDSBS \*ALL \*IMMED
@@ -144,27 +145,35 @@ These are some key takeaway for developers and operators to consider from this g
 
 -   Mount NFS directory above to Linux server in same network as source IBM i LPAR
 
-    -   e.g. mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
+Example:
+```bash
+mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
+```
 
--   Install AZCopy utility as required download here:
-
-   [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
+-   Install AZCopy utility as required download here:[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
 
   -  extract AZCopy archive to directory
 
-        -   e.g. tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
+Example:
+```bash
+tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
+```
 
-    -   Copy save files from NFS mounted location to Azure blob storage container
+ -   Copy save files from NFS mounted location to Azure blob storage container
 
    [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory)
 
-   -   azcopy copy \'\<local-directory-path-of-NFS-mount\>\' \'https://\<storage-account-name\>.\<blob or dfs\>.core.windows.net/\<container-name\>\' \--recursive
+Example:
+```bash
+azcopy copy \'\<local-directory-path-of-NFS-mount\>\' \'https://\<storage-account-name\>.\<blob or dfs\>.core.windows.net/\<container-name\>\' \--recursive
+```
 
-        -   ./azcopy copy '/home/LinuxUser/localNFSDirectory'
-   [https://<myStorageAccount>.blob.core.windows.net/containerName?]()\<SAS-Key>\ \--recursive
- 
+Example:
+```bash
+./azcopy copy '/home/LinuxUser/localNFSDirectory'https://<myStorageAccount>.blob.core.windows.net/containerName?\<SAS-Key>\ \--recursive
+ ```
 
- **[Deploy IBM i in Skytap cloud**
+ **Deploy IBM i in Skytap cloud**
 
 -   Deploy IBM i from template
 
@@ -271,17 +280,20 @@ These are some key takeaway for developers and operators to consider from this g
 -   Boot and configure root and secondary users in CentOS
 
 -   Mount NFS directory from IBMi server in Skytap on Linux machine:
-
--   mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
-
+```bash
+mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
+```
 -   Install AZCopy utility, download here:
 
 [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
 
    -   extract AZCopy archive to directory
 
-     1.  e.g. tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
-        2.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBMi server in Skytap
+Example:
+```bash
+tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
+```
+2.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBMi server in Skytap
 
 [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory)
 
@@ -303,17 +315,30 @@ APPENDIX:
 
 Example commands:
 
--   mkdir /mydir
+```bash
+mkdir /mydir
+```
 
--   sudo or su to root
+```bash
+sudo 
+``` 
+or 
+```bash 
+su
+```
+to elevate the user to root.
 
--   mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
+```bash 
+mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
+```
 
--   You can check to see the directory is exported with this command if the mount is not successful:
+You can check to see the directory is exported with this command if the mount is not successful:
 
--   showmount -e 10.0.0.1 (IP address for IBMi LPAR)
+```bash 
+showmount -e 10.0.0.1 (IP address for IBMi LPAR)
+```
 
--   Create virtual tape image catalog
+Create virtual tape image catalog
 
 -   Run AZCopy to copy virtualtape(s) from Azure storage to the NFS mount
 

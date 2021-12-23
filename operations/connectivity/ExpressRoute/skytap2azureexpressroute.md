@@ -368,7 +368,10 @@ The default user and password:
 
 Finally ping the VM in Azure:
 
-\# ping 10.1.77.4
+```bash
+ping 10.1.77.4
+```
+
 
 ![](./media/image12.png)
 {width="6.5in" height="3.0416666666666665in"}
