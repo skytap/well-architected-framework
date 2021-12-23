@@ -1,25 +1,24 @@
 ---
 title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
-description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
-author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
+author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
 ---
 
 # EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 
-## Table of Contents <a name="toc"></a>
+## Table of Contents<a name="toc"></a>
 
 * [Create Skytap Environment](#createskytapenvironment)
 * [Create an Express Route Definition in Skytap](#createroutedefinition)
 * [Create a Resource Group in the Azure Portal](#createazureresourcegroup)
 * [Create a Virtual Network to attach the ExpressRoute](#createazurevnet)
 * [Create an address space and subnet](#createazureaddressspace)
-* [Create a Virtual Network Gateway]()
-* [Create Local Network Gateway]()
-* [Add all components to the Virtual Network Gateway]()
-* [Create test VM inside of Azure Native]()
-* [Test end-to-end connection from Skytap to Azure Native]()
-* [APPENDIX]()
-  * [Connect AIX LPAR to Express Route]()
+* [Create a Virtual Network Gateway](#createazureVNG)
+* [Create Local Network Gateway](#createazureLNG)
+* [Add all components to the Virtual Network Gateway](#hookupazureVNG)
+* [Create test VM inside of Azure Native](#createazuretestvm)
+* [Test end-to-end connection from Skytap to Azure Native](#testconnection)
+* [APPENDIX](#appendix)
+  * [Connect AIX LPAR to Express Route](#connectaixviaexpressroute)
 
 ## Create Skytap Environment<a name="createskytapenvironment"></a>
 
@@ -57,7 +56,7 @@ In Skytap – Establish Private Network Connection with Express Route and Config
 2. Allocate a public IP address.
 
 ***NOTE***: *Even though the end-point for the Express Route connection is
-label \"public IP\" in the user interface, the connection described in
+label **public IP** in the user interface, the connection described in
 this document does not send traffic onto the public Internet, all the
 traffic stays within the Azure data-center.*
 
@@ -66,7 +65,7 @@ traffic stays within the Azure data-center.*
 <img src="./media/image4.png" width="300">
 
 4. Select the region where the connection will be created, in this case,
-Texas-M1 which is \"South Central\" in Azure.
+Texas-M1 which is **South Central** in Azure.
 
 <img src="./media/image24.png" width="500">
 
@@ -85,9 +84,9 @@ the Express Route connection.*
 
 <img src="./media/image49.png" width="700">
 
-***NOTE***: You'll see the following message while the connection is being built:
+***NOTE***: *You'll see the following message while the connection is being built:*
 
-<img src="./media/image20.png" width="700">*
+<img src="./media/image20.png" width="700">
 
 Once finished, you\'ll see the service keys required to define the
 Express Route endpoint on the Azure Native side of the connection.
@@ -107,11 +106,11 @@ defined as the VNET in Azure that the Skytap environment will talk to.
 
 1. From the Azure Portal, create a Resource Group:
 
-![](./media/image25.png)
+<img src="./media/image25.png" width="600">
 
 2. Give the Resource Group a name: (Example **Skytap DR ExpressRoute-RG**)
 
-![](./media/image14.png)
+<img src="./media/image14.png" width="600">
 
 3. Click **Review & create** and then **Create** to finish creating the
 Resource Group.
@@ -119,258 +118,215 @@ Resource Group.
 ###### *[Back to the Top](#toc)*
 ## Create a Virtual Network to attach the ExpressRoute<a name="createazurevnet"></a>
 
-1. ![](./media/image13.png)
+1. <img src="./media/image13.png" width="600">
 
-
-2. ![](./media/image22.png)
-
+2. <img src="./media/image22.png" width="600">
 
 3. Click: Go to Resource
 
 <img src="./media/image1.png" width="200">
 
-
 ###### *[Back to the Top](#toc)*
 ## Create an address space and subnet<a name="createazureaddressspace"></a>
 
-![](./media/image9.png)
+1. Create an address space: (Example:10.1.0.0/16)
 
-Create an address space: \"10.1.0.0/16\"
+***NOTE***: *If there are any other address spaces already defined, delete them. See example, remove 10.8.0.0/16 if it exists.*
+<img src="./media/image9.png" width="800">
 
-*If there are any other address spaces already defined, delete them. See
-example, remove 10.8.0.0/16 if it exists.*
+2. Now create a /24 subnet that fits within that address space. (Example: 10.1.77.0/24 in the 10.1.0.0/16)
 
-Now create a subnet 10.1.77.0/24 in the 10.1.0.0/16 address space:
+<img src="./media/image38.png" width="500">
 
-![](./media/image38.png)
+3. Name this subnet something like the following example: **Skytap-DR-ExpressRoute-SN**
 
-Create a subnet called: \"Skytap-DR-ExpressRoute-SN\"
+<img src="./media/image21.png" width="500">
 
-![](./media/image21.png)
+You should now have 1 subnet defined:
 
-You should have 1 subnet defined:
-
-![](./media/image8.png)
+<img src="./media/image8.png" width="500">
 
 ###### *[Back to the Top](#toc)*
-## Create a Virtual Network Gateway
+## Create a Virtual Network Gateway<a name="createazureVNG"></a>
 
-![](./media/image7.png)
+<img src="./media/image7.png" width="500">
 
-Create a virtual network gateway called: Skytap-DR-ExpressRoute-VNG
+1. Create a virtual network gateway, and name it similar to the following example: **Skytap-DR-ExpressRoute-VNG**
 
-**\*\*\* NOTE:** The virtual network gateway creates an IP endpoint that
-the Azure user interface calls \"Public IP Address\". The Express Route
-connection created in this example **[\"does not\"]{.underline}** send
-traffic to the public internet. All the traffic stays within the Azure
-Datacenter.
+***NOTE***: *The virtual network gateway creates an IP endpoint that the Azure user interface calls **Public IP Address**. The Express Route connection created in this example **does not** send traffic to the public Internet. All the traffic will stay within the Azure Data center.*
 
-![](./media/image29.png)
+<img src="./media/image29.png" width="700">
 
-![](./media/image28.png)
+<img src="./media/image28.png" width="700">
 
-Click \"Review + create\"
+2. Click **Review + create**.
 
-This Azure process can take 30+ minutes to complete....
+***NOTE***: *This Azure process can take 30+ minutes to complete.*
 
-Once done, click \"Go to Resource\"
+3. Once done, click **Go to Resource**.
 
-![](./media/image2.png)
+<img src="./media/image2.png" width="200">
 
-Review the values of your definition.
+4. Review the values of your definition.
 
 ###### *[Back to the Top](#toc)*
-## Create Local Network Gateway
+## Create Local Network Gateway<a name="createazureLNG"></a>
 
 Define and create a Local Network Gateway.
 
-![](./media/image31.png)
+<img src="./media/image31.png" width="500">
 
-Fill out the values based on what has been defined so far:
+1. Fill out the values based on what has been defined so far:
 
-![](./media/image32.png)
+<img src="./media/image32.png" width="700">
 
-20.94.177.25 is the IP endpoint defined for the Skytap side of the
-Express Route Connection.
+***NOTE***: *In our example 20.94.177.25 is the IP endpoint defined for the Skytap side of the Express Route Connection, and 10.0.0.0/24 is the address space used by the Skytap environment that we defined.*
 
-10.0.0.0/24 is the address space used by the Skytap environment that we
-defined.
+2. Click **Review and create** to create the Local Network Gateway.
 
-Click \"Review and create\" and create the Local Network Gateway.
+***NOTE***: *This Azure process can take few minutes to complete.*
 
-The deployment in Azure takes a few minutes.
+3. Click on **Go to Resource** to review your connection configuration.
 
-Click on \"Go to Resource\" to review your connection configuration.
-
-![](./media/image2.png)
-{width="1.4479166666666667in" height="0.5911614173228347in"}
+<img src="./media/image2.png" width="200">
 
 ###### *[Back to the Top](#toc)*
-## Add all components to the Virtual Network Gateway
+## Add all components to the Virtual Network Gateway<a name="hookupazureVNG"></a>
 
-Search for your previously defined VNG called:\
-\"Skytap-DR-ExpressRoute-VNG\"
+1. Search for your previously defined Virtual Network Gateway (VNG) 
 
-Click \"Connections\"
+(Example: **Skytap-DR-ExpressRoute-VNG**)
 
-Click \"+Add\"
+2. Click **Connections**.
 
-![](./media/image23.png)
-{width="6.5in" height="3.5833333333333335in"}
+3. Click **+ Add**.
 
-Define the new connection inside the VNG:
+<img src="./media/image23.png" width="700">
 
-![](./media/image47.png)
-{width="3.716165791776028in" height="7.70625in"}
+4. Define the new connection inside the VNG:
 
-Authorization Key = The \"Authorization Key\" shown in the WAN
-definition within Skytap, see \"Task \#2\"
+<img src="./media/image47.png" width="400">
 
-Peer circuit URI = The \"Resource ID\" shown in the WAN definition
-within Skytap, see \"Task \#2\"
+* Authorization Key = The **Authorization Key** shown in the WAN
+definition within Skytap.
+
+* Peer circuit URI = The **Resource ID** shown in the WAN definition
+within Skytap.
 
 ###### *[Back to the Top](#toc)*
-## Create test VM inside of Azure Native
+## Create test VM inside of Azure Native<a name="createazuretestvm"></a>
 
 In order to test the connection from Skytap to Azure, add a VM to the
-defined subnet in the Azure VNet and attempt to \"ping\" it from the
+defined subnet in the Azure VNet and attempt to **ping** it from the
 Skytap WAN page.
 
-Add a VM to the subnet defined in Azure.
+1. Add a VM to the subnet defined in Azure.
 
-![](./media/image44.png)
-{width="4.65625in" height="4.007061461067367in"}
+<img src="./media/image44.png" width="600">
 
-Create the test VM with these values:\
-![](./media/image37.png)
-{width="4.389583333333333in" height="4.635793963254593in"}
+2. Create the test VM with these values:\
+<img src="./media/image37.png" width="600">
 
-![](./media/image46.png)
-{width="5.064583333333333in" height="5.202561242344707in"}
+<img src="./media/image46.png" width="600">
 
-![](./media/image36.png)
-{width="4.947916666666667in" height="5.169938757655293in"}
+<img src="./media/image36.png" width="600">
 
-NOTE: Set \"Public IP\" to \"None\" if you don\'t want access to the VM
-from the internet. The VM will only have a private IP visible only from
-within Azure.
+***NOTE***: *Set **Public IP** to **None** if you don't want access to the VM from the Internet. The VM will only have a private IP visible only from within Azure.*
 
-![](./media/image48.png)
-{width="4.900762248468942in" height="5.152083333333334in"}
+<img src="./media/image48.png" width="600">
 
-![](./media/image26.png)
-{width="4.70625in" height="4.826922572178478in"}
+<img src="./media/image26.png" width="600">
 
-Click \"Review + create\" to get to the final page.
+3. Click **Review + create** to get to the final page.
 
-Click \"Create\" to create the VM in the Azure subnet.
+4. Click **Create** to create the VM in the Azure subnet.
 
-It takes several minutes for the VM to be created in Azure.
+***NOTE***: *It takes several minutes for the VM to be created in Azure.*
 
-Once created, click \"Go to resource\" and make sure the status says
-\"Running\".
+5. Once created, click **Go to resource** and make sure the status says **Running**.
 
-On the VM details page, look for the \"Private IP Address\":
+6. On the VM details page, look for the **Private IP Address**:
 
-![](./media/image5.png)
-{width="4.639583333333333in" height="1.5985739282589677in"}
+<img src="./media/image5.png" width="400">
 
 ###### *[Back to the Top](#toc)*
-## Test end-to-end connection from Skytap to Azure Native
+## Test end-to-end connection from Skytap to Azure Native<a name="testsconnection"></a>
 
-In the Skytap portal, go to the WAN definition that was created:\
-![](./media/image19.png)
-{width="6.5in" height="1.8888888888888888in"}
+1. In the Skytap portal, go to the WAN definition that was created:\
+<img src="./media/image19.png" width="700">
 
-Click \"Test\" and enter the Private IP address from the Azure portal
-page:
+2. Click **Test** and enter the Private IP address from the Azure portal
+page. In our example: 10.1.77.4
 
-10.1.77.4
+<img src="./media/image17.png" width="400">
 
-![](./media/image17.png)
-{width="4.83125in" height="4.761568241469816in"}
-
-If everything is working, you should get \"Pass\" when pinging the Azure
+3. If everything is working, you should get **Pass** when pinging the Azure
 VM from Skytap.
 
-Enable the Express Route Connection in Skytap:
+4. Enable the Express Route Connection in Skytap:
 
-![](./media/image3.png)
-{width="2.50625in" height="0.7133891076115486in"}
+<img src="./media/image3.png" width="300">
 
 Once enabled, you can now attach Skytap environments that includes VM
 and LPARs to this Express Route Connection.
 
-\*\*\*\*\*\*\*\*\*\*END\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-
 ###### *[Back to the Top](#toc)*
-## APPENDIX:
+## APPENDIX:<a name="appendix"></a>
 
-## Connect AIX LPAR to Express Route
+## Connect AIX LPAR to Express Route<a name="connectaixviaexpressroute"></a>
 
 Now that the Express Route Connection is working, start the AIX LPAR in
 your Skytap Environment and attach the Express Route to it.
 
-Find the original environment that you created in Skytap:
+1. Find the original environment that you created in Skytap:
 
-![](./media/image27.png)
-{width="6.5in" height="1.5833333333333333in"}
+Once you click on it, you'll see this page.
 
-Once you click on it, you\'ll see this page.
+<img src="./media/image27.png" width="700">
 
-Click on the \"Power On\" button to start the LPAR.
+2. Click on the **Power On** button to start the LPAR.
 
-![](./media/image41.png)
-{width="2.7270297462817146in" height="6.352083333333334in"}
+<img src="./media/image41.png" width="300">
 
-Once powered on, the background of the LPAR will turn \"green\", and
-you\'ll see some text on the little console icon.
+***NOTE***: *Once powered on, the background of the LPAR will turn **green**, and you'll see some text on the little console icon.*
 
-Click on \"Network Settings\"
+3. Click on **Network Settings**
 
-![](./media/image34.png)
-{width="6.5in" height="2.361111111111111in"}
+<img src="./media/image34.png" width="700">
 
-Then \"Attach to WANs\"
+4. Then **Attach to WANs**
 
-![](./media/image42.png)
-{width="4.919132764654418in" height="3.366375765529309in"}
+<img src="./media/image42.png" width="700">
 
-Select the WAN definition that was previously created:
+5. Select the WAN definition that was previously created:
 
-![](./media/image16.png)
-{width="6.5in" height="2.6666666666666665in"}
+<img src="./media/image16.png" width="700">
 
-Click \"Attach\", and then \"Connect\".
+6. Click **Attach**, and then **Connect**.
 
-Then click \"Close\".
+7. Then click **Close**.
 
-Click \"Back\" button in the upper left corner.
+8. Click **Back** button in the upper left corner.
 
-![](./media/image10.png)
-{width="4.722916666666666in" height="2.217652012248469in"}
+<img src="./media/image10.png" width="700">
 
-Open the AIX console.
+9. Open the AIX console.
 
-Click on the console icon, the terminal will open.
+10. Click on the console icon, the terminal will open.
 
-![](./media/image15.png)
-{width="3.0729166666666665in" height="3.400924103237095in"}
+<img src="./media/image15.png" width="400">
 
-The default user and password:
+***NOTE***: *The default user and password below*
 
-![](./media/image43.png)
-{width="5.18125in" height="3.694961723534558in"}
+<img src="./media/image43.png" width="500">
 
-Finally ping the VM in Azure:
+11. Finally ping the VM in Azure:
 
 ```bash
 ping 10.1.77.4
 ```
 
-
-![](./media/image12.png)
-{width="6.5in" height="3.0416666666666665in"}
+<img src="./media/image12.png" width="500">
 
 Your Skytap AIX LPAR is now communicating with a VM in Azure Native.
 
