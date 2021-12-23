@@ -17,9 +17,20 @@ both, there is a network topology to address your needs.
 ## Table of Contents <a name="toc"></a>
 
 * [Skytap on Azure Network Connectivity Considerations](#begin)
-* [Direct VPN into Skytap](#option1)
-* [VPN into Azure Hub](#option2)
-* [Global Reach Enabled ExpressRoute](#option3)
+* [Option 01: Direct VPN into Skytap](#option1)
+  * [Setting up a Site-to-Site VPN between On-Premises and Skytap on Azure](#site2site)
+* [Option 02: VPN into Azure Hub](#option2)
+  * [Setting up a Site-to-Site VPN between Skytap and your Azure VNet Gateway](#site2sitevnetgateway)
+* [Option 03: Global Reach Enabled ExpressRoute](#option3)
+  * [Setting up Global Reach Enabled ExpressRoute to Skytap](#expressroutewithglobalreach)
+* [Appendix](#appendix)
+  * [Skytap UI ports](#UIPorts)
+  * [Global Reach Enabled ExpressRoute Guide](#expressroutewithglobalreachguide)
+  * [Connect your Skytap application just to On-Premises, using an existing ExpressRoute to On-Premises](#expressrouteonprem)
+  * [Connect your Skytap application just to an Azure Virtual Network (VNet) through an ExpressRoute](#expressroute2vnet)
+  * [Connect your Skytap application to *both* On-Premises and an Azure VNet](#expressroute2vnetandonprem)
+  * [Connect your Skytap application over an existing On-Premises ExpressRoute circuit, when the connection between Skytap and Azure is a VPN](#expressroute2vnetandonprem+vpn)
+  * [Connect your Skytap application to *both* On-Premises and an Azure VNet, when you need transitive routing](#expressroute2vnetandonpremtransroute)
 
 
 ###### *[Back to the Top](#toc)*
@@ -45,7 +56,7 @@ There are two methods to connect satellite centers into Skytap
 **Best practice:** To determine latency between your connectivity into Skytap on Azure (i.e., your DC, Distribution Warehouse), we recommend conducting a [Skytap Speed Test](http://speedtest.skytap.com/).
 
 ###### *[Back to the Top](#toc)*
-## Option 1: Direct VPN Connection into Skytap <a name="option1"></a>
+## Option 1: Direct VPN Connection into Skytap<a name="option1"></a>
 
 For context, this methodology will leverage a direct VPN into Skytap on
 Azure (bypassing the Azure hub network). While the Global Reach enabled
@@ -60,7 +71,7 @@ as mentioned above.
 
 **Links to helpful resources:**
 
--   [Skytap VPN
+*[Skytap VPN
     documentation](https://help.skytap.com/wan-create-vpn.html#creating-a-vpn-connection-to-your-skytap-account)
     on how to make VPN connections into Skytap on Azure:
 
@@ -68,14 +79,14 @@ as mentioned above.
 
 <img src="./Azure/media/image1.png">
 
-## Setting up a Site-to-Site VPN between On-Premises and Skytap on Azure
+### Setting up a Site-to-Site VPN between On-Premises and Skytap on Azure<a name="site2site"></a>
 
 Skytap's built-in VPN service gives you a streamlined option to
 establish a VPN tunnel between your environment in Skytap, and your
 on-premises deployment. The tunnel is encrypted and encapsulated, routed
 over the public internet.
 
-<img src="./media/image2.png">
+<img src="./media/image2.png" width="500">
 
 A VPN is like a bridge: both sides must be "facing each other" for
 traffic to flow. This means that each VPN endpoint must be configured
@@ -113,9 +124,8 @@ each other (one from Skytap and one from your on-premises network), and
 connectivity](https://help.skytap.com/wan-testing.html#Further) between
 each server.
 
-
-
-## Option 2: VPN into Azure WAN Hub
+###### *[Back to the Top](#toc)*
+## Option 2: VPN into Azure WAN Hub<a name="option2"></a>
 
 For context, the VPN into Azure Hub option may provide a lower latency
 connection over Option 1 (direct VPN into Skytap) and perhaps even
@@ -131,18 +141,18 @@ Server](https://docs.microsoft.com/en-us/azure/route-server/overview)
 
 Links to helpful resources:
 
--   Specific Azure doc relevant to this option: [About Azure Route
+* Specific Azure doc relevant to this option: [About Azure Route
     Server supports for ExpressRoute and Azure VPN \| Microsoft
     Docs](https://docs.microsoft.com/en-us/azure/route-server/expressroute-vpn-support#:~:text=Azure%20Route%20Server%20supports%20not%20only%20third-party%20network,peering%20between%20the%20gateway%20and%20Azure%20Route%20Server.)
 
--   VWAN Hub info
+* VWAN Hub info
     <https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about>
 
 **Reference Architecture**
 
 <img src="./Azure/media/image2.png">
 
-**Setting up a Site-to-Site VPN between Skytap and your Azure VNet Gateway**
+### Setting up a Site-to-Site VPN between Skytap and your Azure VNet Gateway<a name="site2sitevnetgateway"></a>
 
 Site-to-Site VPNs that connect into Azure virtual network (VNet)
 Gateways are just like site-to-site VPNs that connect to on-premises
@@ -163,7 +173,7 @@ set](https://help.skytap.com/wan-vpn-configuration-parameters.html), and
 [Azure's supported parameter
 set](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec).
 
-<img src="./media/image3.png">
+<img src="./media/image3.png" width="500" align="center">
 
 It's worth noting that Skytap no longer supports Azure's default IKE
 Phase 1 DH (Diffie-Hellman) Group---Group 2 (1024 bit)---due to its weak
@@ -183,7 +193,7 @@ rather than being dropped or bounced, which can cause your VPN traffic
 to be slow, or even come to a standstill. In the Skytap portal, the
 setting to clamp your VPN's MSS is at the bottom of the Edit WAN page:
 
-<img src="./media/image4.png">
+<img src="./media/image4.png" width="300">
 
 Since VPNs are most reliable when distance being spanned is short, the
 two endpoints should be as close together as possible. You'll want to
@@ -214,7 +224,8 @@ each other (one from Skytap and one from your on-premises network), and
 connectivity](https://help.skytap.com/wan-testing.html#Further) between
 each server.
 
-## Option 3: Global Reach Enabled ExpressRoute
+###### *[Back to the Top](#toc)*
+## Option 3: Global Reach Enabled ExpressRoute<a name="option3"></a>
 
 This is the recommended robust connection path for performance-sensitive
 workloads connecting directly between Skytap to On-Prem. Keep in mind,
@@ -233,25 +244,28 @@ propagate). Once the Backbone ExpressRoute is established between Skytap
 and your Azure hub, you will enable Global Reach to allow transitive
 routing between both ExpressRoutes.
 
+
+### Setting up Global Reach Enabled ExpressRoute to Skytap<a name="expressroutewithglobalreach"></a>
+
 **Pre-requisites -- Global Reach Enabled ExpressRoute**
 
--   Azure administrative rights to create the Azure resources:
+* Azure administrative rights to create the Azure resources:
 
-    -   "Back Bone" ExpressRoute. This is not a Telco ExpressRoute
+    * "Back Bone" ExpressRoute. This is not a Telco ExpressRoute
         (Step 1)
 
-    -   Global Reach (Step 3)
+    * Global Reach (Step 3)
 
--   /29 IP address space -- for Global Reach (Step 3 below)
+* /29 IP address space -- for Global Reach (Step 3 below)
 
--   Any specific application ports that need to traverse your
+* Any specific application ports that need to traverse your
     on-premises firewall.
 
-    -   The ExpressRoute connection into the Skytap service is not
+    * The ExpressRoute connection into the Skytap service is not
         firewalled, so all ports are open; however, it is a private
         connection in your network.
 
-    -   The Skytap UI does have standard ports it uses for access as
+    * The Skytap UI does have standard ports it uses for access as
         detailed in the Appendix. Note: Some public IP addresses are
         dependent on the region deployed. The IP's listed in the
         Appendix are based on the intended region for deployment.
@@ -262,72 +276,72 @@ The recommended path to connect Skytap on Azure to on-premises and Azure
 resources is a customer-managed ExpressRoute from Skytap that has Global
 Reach enabled to allow network transit from Skytap to on-prem.
 
--   Step 1: Create the Azure circuit that your Sktyap Customer-Managed
+* Step 1: Create the Azure circuit that your Sktyap Customer-Managed
     ExpressRoute will go through
 
-    -   [Creating a customer-managed ExpressRoute circuit for a Private
+    * [Creating a customer-managed ExpressRoute circuit for a Private
         Network
         Connection](https://help.skytap.com/wan-create-self-managed-expressroute.html#creating-a-customer-managed-expressroute-circuit-for-a-private-network-connection)
 
--   Step 2: Create the WAN connection in Skytap-on-Azure
+* Step 2: Create the WAN connection in Skytap-on-Azure
 
-    -   [Creating and editing a Private Network Connection with
+    * [Creating and editing a Private Network Connection with
         ExpressRoute for your Skytap
         account](https://help.skytap.com/wan-create-expressroute.html)
 
-    -   Be sure to select "Customer-managed circuit" when creating your
+    * Be sure to select "Customer-managed circuit" when creating your
         Skytap WAN per the instructions above
 
 <img src="Azure/media/image3.png" width="450">
 
 
-   -   Enter the service key from Step 1, where you created the
+   * Enter the service key from Step 1, where you created the
         ExpressRoute circuit in Azure
 
-    -   On the WAN Details page for your new circuit, enter the remote
+    * On the WAN Details page for your new circuit, enter the remote
         subnet of the on-premises network which your existing
         on-premises ER circuit connects to
 
-    -   Wait to enable the WAN in Skytap until the "pending"
+    * Wait to enable the WAN in Skytap until the "pending"
         notification is no longer there and you have completed the
         Global Reach steps below
 
--   Step 3: Peer your new ExpressRoute circuit with your existing
+* Step 3: Peer your new ExpressRoute circuit with your existing
     on-premises circuit using Global Reach
 
-    -   [Azure ExpressRoute: Configure Global Reach using the Azure
+    * [Azure ExpressRoute: Configure Global Reach using the Azure
         portal \| Microsoft
         Docs](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fexpressroute%2Fexpressroute-howto-set-global-reach-portal&data=04%7C01%7Cb-jeffrylane%40microsoft.com%7Cec5729a0938749d66ab108d9a2d2f409%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637719849195262977%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=GsFcP53iCEDjTyZNTbZoOnn0u2D7lsOMBsq6GtLQ2wI%3D&reserved=0)
 
-    -   Please note that Step 3 in the Global Reach setup requires a /29
+    * Please note that Step 3 in the Global Reach setup requires a /29
         IP address space from your network team that does not overlap
         with any other on-prem or Azure networks you have deployed.
 
-    -   Be sure to notify your security / firewall team of the
+    * Be sure to notify your security / firewall team of the
         application ports that need to traverse the connection from
         Skytap on Azure to on-prem and back
 
--   Step 5: Enable the WAN in Skytap
+* Step 5: Enable the WAN in Skytap
 
-    -   Step 16 of - [Creating and editing a Private Network Connection
+    * Step 16 of - [Creating and editing a Private Network Connection
         with ExpressRoute for your Skytap
         account](https://help.skytap.com/wan-create-expressroute.html)
 
--   Step 6: Attach the WAN to your [Skytap
+* Step 6: Attach the WAN to your [Skytap
     Environment](https://help.skytap.com/creating-an-environment.html#creating-an-environment)
 
-    -   [Connecting an environment network to a VPN or Private Network
+    * [Connecting an environment network to a VPN or Private Network
         Connection](https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#additional-information)
 
-    -   Please note, there must be at least one running VM and/or LPAR
+    * Please note, there must be at least one running VM and/or LPAR
         in the environment and on the network for the connection to
         start
 
--   Step 7: Test your connection from the VM or LPAR in Skytap to an
+* Step 7: Test your connection from the VM or LPAR in Skytap to an
     on-prem system within the remote networks set on the WAN during Step
     2
 
-    -   A simple ping test to be sure the connection flows all the way
+    * A simple ping test to be sure the connection flows all the way
         through
 
 **Reference Architecture Global Reach Enabled ExpressRoute**
@@ -336,15 +350,15 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 <img src="./Azure/media/image5.png">
 
-**Appendix** 
+## Appendix<a name="appendix"></a> 
 
-**Skytap UI ports:**
+**Skytap UI ports:**<a name="UIPorts"></a> 
 
-[**IP addresses and port ranges for
+* [**IP addresses and port ranges for
 Skytap**](https://help.skytap.com/faq-ip-addresses-and-port-ranges.html#what-ip-addresses-and-port-ranges-does-skytap-use)
 
 
-## [ExpressRoute and Global Reach](https://github.com/skytap/well-architected-framework/blob/Nov2021Updates/operations/ExpressRoute/skytap2azureexpressroute.md)
+## [ExpressRoute and Global Reach](ExpressRoute/skytap2azureexpressroute.md)<a name="expressroutewithglobalreachguide"></a>
 
 While VPNs are a solid and commonplace solution to traffic isolation and
 encapsulation, they do suffer from the "vagaries" of the public
@@ -373,12 +387,12 @@ needs to go. In each of the following topologies, whether you need a
 target locations are in the [same geopolitical
 region](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations#locations).
 
-## To connect your Skytap application just to On-Premises, using an existing ExpressRoute to On-Premises
+## To connect your Skytap application just to On-Premises, using an existing ExpressRoute to On-Premises<a name="expressrouteonprem"></a>
 
 To connect your application in Skytap to On-Premises, when you already
 have an ExpressRoute between Skytap and Azure, follow: **Option #3: Global Reach Enabled ExpressRoute**
 
-### To connect your Skytap application just to an Azure Virtual Network (VNet) through an ExpressRoute 
+### To connect your Skytap application just to an Azure Virtual Network (VNet) through an ExpressRoute<a name="expressroute2vnet"></a> 
 
 [Walk through Skytap's help
 documentation](https://help.skytap.com/wan-expressroute-overview.html)
@@ -387,7 +401,7 @@ your VNet: Create the ER, Configure a VNet Gateway, and Connect the
 circuit. An even more detailed walkthrough can be found here.
 * [Skytap on Azure - ExpressRoute Configuration](ExpressRoute/skytap2azureexpressroute.md)
 
-### To connect your Skytap application to *both* On-Premises and an Azure VNet
+### To connect your Skytap application to *both* On-Premises and an Azure VNet<a name="expressroute2vnetandonprem"></a> 
 
 The two network topologies described above can also happily co-exist:
 you can connect the same ExpressRoute circuit from Skytap in the first
@@ -399,10 +413,9 @@ ExpressRoute circuit is also connected to that same VNet. So if, for
 example, you need your application to traffic to flow to services on
 Azure, such as a firewall, an Azure VM, or other SaaS offering, before
 it moves out to On-Premises, you'll need transitive routing. To set up
-transitive routing, follow the steps in Example 5 **\[link to Example
-5\]**.
+transitive routing, follow the steps in Example 5.
 
-### To connect your Skytap application over an existing On-Premises ExpressRoute circuit, when the connection between Skytap and Azure is a VPN 
+### To connect your Skytap application over an existing On-Premises ExpressRoute circuit, when the connection between Skytap and Azure is a VPN<a name="expressroute2vnetandonprem+vpn"></a>  
 
 VPNs between Skytap and Azure are a cost-efficient, low-friction way to
 allow traffic to transmit encrypted, encapsulated, and generally all
@@ -417,14 +430,13 @@ appliances (NVAs) such as firewalls, ExpressRoute circuits, and VPNs, to
 connect to one another, as a [high-availability managed
 service](https://docs.microsoft.com/en-us/azure/route-server/overview).
 
-Once you've created a VPN from Skytap to Azure **\[link to above section
-on setting up VPNs to a VNet Gateway\]**, follow Azure's instructions to
+Once you've created a VPN from Skytap to Azure, follow Azure's instructions to
 [create a Route
 Server](https://docs.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal)
 on the VNet, and configure route exchange to your Skytap VPN and your
 OnPrem ExpressRoute.
 
-## To connect your Skytap application to *both* On-Premises and an Azure VNet, when you need transitive routing 
+## To connect your Skytap application to *both* On-Premises and an Azure VNet, when you need transitive routing<a name="expressroute2vnetandonpremtransroute"></a>  
 
 A common need among your applications is to send traffic out from
 OnPrem, into an Azure VNet with one or more preexisting Azure SaaS
