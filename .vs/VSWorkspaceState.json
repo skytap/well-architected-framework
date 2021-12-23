@@ -1,15 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cloudadoption",
-    "\\operations",
     "\\operations\\connectivity",
-    "\\operations\\Connectivity Old",
+    "\\operations\\connectivity\\ExpressRoute",
     "\\operations\\Discovery",
+    "\\resiliency",
     "\\resiliency\\solutions",
     "\\resiliency\\solutions\\BRMS",
     "\\resiliency\\solutions\\GoSave"
   ],
-  "SelectedNode": "\\operations\\README.md",
+  "SelectedNode": "\\resiliency\\solutions\\HotMigrationOverview.md",
   "PreviewInSolutionExplorer": false
 }

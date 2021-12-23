@@ -22,7 +22,6 @@ depicted below.
 <li> AIX Solution Provides Live Snapshot Capability for Any Subsidiary Environment Seeding
 
 </li>
-
 <img src="../media/preciselyhotmigrationtopo.png" width="800">
 
 This is built on IBM's remote journaling which replicates changed data
