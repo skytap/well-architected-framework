@@ -44,7 +44,7 @@ Route Connection.
 ###### *[Back to the Top](#toc)*
 ## Create an Express Route Definition in Skytap
 
-In Skytap – Establish Private Network Connection with Express Route
+In Skytap â€“ Establish Private Network Connection with Express Route
 
 Configure a Virtual Network Gateway in Azure for ExpressRoute
 

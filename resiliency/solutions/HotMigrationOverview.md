@@ -15,7 +15,7 @@ depicted below.
 
 <li> MIMIX is the most prevalent tool used in RPO scenarios of near-zero
 
-<li> Easy to Package – Support for both AIX and IBM I
+<li> Easy to Package â€“ Support for both AIX and IBM I
 
 <li> Automated Role Swaps Allow for Testing, Operations Upgrades in Prod
 
@@ -46,7 +46,7 @@ for you to consider:
 
 <img src="../migrationmedia/media/image10.png" width="800">
 
-**Built on IBM’s remote journaling**
+**Built on IBMâ€™s remote journaling**
 
 <li>Replicates changed data in real time
 <li>Minimizes bandwidth usage
