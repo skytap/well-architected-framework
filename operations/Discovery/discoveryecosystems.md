@@ -21,6 +21,12 @@ infrastructure and/or performance data, including the pros and cons of
 each option. At a minimum, infrastructure data is required to help
 configure each VM close to the current configuration.
 
+## Table of Contents <a name="toc"></a>
+
+* [Key Takeaways](#takeaways)
+* [Before you begin](#begin)
+
+
 # Tooling for Power Discovery (Infrastructure)
 
 ## HMC Scanner for POWER Servers 

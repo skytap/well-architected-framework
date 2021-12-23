@@ -3,7 +3,7 @@ title: Skytap Operational Excellence - Connectivity - Getting Started with Azure
 author: Colleen E Hamilton - Senior Product Manager, Jeffry Lane - Sr. Cloud Solutions Architect
 ---
 
-# **Getting Started with Azure Networking**
+# Getting Started with Azure Networking
 
 Even though Skytap on Azure is running within an Azure datacenter, Azure
 treats Skytap as if it were a separate On-premises location, for network
@@ -14,47 +14,38 @@ applications. Whether you need to connect your Skytap Environment to
 your on-premises applications, or your Azure Virtual Network (VNet), or
 both, there is a network topology to address your needs.
 
-**Skytap on Azure Network Connectivity**
+## Table of Contents <a name="toc"></a>
 
-**Decision Framework**
+* [Skytap on Azure Network Connectivity Considerations](#begin)
+* [Direct VPN into Skytap](#option1)
+* [VPN into Azure Hub](#option2)
+* [Global Reach Enabled ExpressRoute](#option3)
 
-Three options:
 
-1)  Direct VPN into Skytap
+###### *[Back to the Top](#toc)*
+## Skytap on Azure Network Connectivity Considerations <a name="begin"></a>
 
-2)  VPN into Azure hub
-
-3)  Global Reach Enabled ExpressRoute
-
-**Considerations**
-
--   **Regions**: [Skytap Global
+* **Regions**: [Skytap Global
     Regions](https://help.skytap.com/understanding-regions.html#understanding-regions)
 
--   **Important**: **create a LOCK on the Azure resource group** that
+**NOTE**: ***Create a LOCK on the Azure resource group** that
     contains the Skytap on Azure service. This lock is may help prevent
     someone from accidentally deleting your Skytap on Azure subscription
-    that resides in an Azure resource group.
+    that resides in an Azure resource group.*
 
--   Satellite Centers Connectivity:
+* **Satellite Centers Connectivity**:
 
-    -   There are two methods to connect satellite centers into Skytap
+There are two methods to connect satellite centers into Skytap
         on Azure via VPN connection:
 
-        -   **Option 1:** VPN between satellite facilities
-            **terminating** **directly** into Skytap on Azure --
-            **Satellite facilities à Skytap on Azure**
+   * **Method 1:** VPN between satellite facilities **terminating** **directly** into Skytap on Azure
 
-        -   **Option 2**: VPN connection between satellite facilities
-            and Azure VPN Gateways in your Azure hub leveraging an Azure
-            Virtual WAN hub or an Azure Route Server
+   * **Method 2**: VPN connection between satellite facilities and Azure VPN Gateways in your Azure hub leveraging an Azure Virtual WAN hub or an Azure Route Server
 
-    -   **Best practice:** To determine latency between your
-        connectivity into Skytap on Azure (i.e., your DC, Distribution
-        Warehouse), we recommend conducting a [Skytap Speed
-        Test](http://speedtest.skytap.com/).
+**Best practice:** To determine latency between your connectivity into Skytap on Azure (i.e., your DC, Distribution Warehouse), we recommend conducting a [Skytap Speed Test](http://speedtest.skytap.com/).
 
-## Option 1: Direct VPN Connection into Skytap
+###### *[Back to the Top](#toc)*
+## Option 1: Direct VPN Connection into Skytap <a name="option1"></a>
 
 For context, this methodology will leverage a direct VPN into Skytap on
 Azure (bypassing the Azure hub network). While the Global Reach enabled
@@ -394,7 +385,7 @@ documentation](https://help.skytap.com/wan-expressroute-overview.html)
 to follow the 3 major steps of connecting your Skytap application to
 your VNet: Create the ER, Configure a VNet Gateway, and Connect the
 circuit. An even more detailed walkthrough can be found here.
-<https://skytap.sharepoint.com/:w:/r/sites/SkytapCSATeam/_layouts/15/Doc.aspx?sourcedoc=%7B0ADA6845-8DFD-485A-95DE-5A931703C64C%7D&file=Skytap%20to%20Azure%20ExpressRoute(3).docx&action=default&mobileredirect=true&cid=9593ce80-9301-4c64-bccf-56f1d5681488>
+* [Skytap on Azure - ExpressRoute Configuration](ExpressRoute/skytap2azureexpressroute.md)
 
 ### To connect your Skytap application to *both* On-Premises and an Azure VNet
 
