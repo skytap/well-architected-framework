@@ -5,7 +5,7 @@ author: Colleen E Hamilton - Senior Product Manager, Jeffry Lane - Sr. Cloud Sol
 
 # Getting Started with Azure Networking
 
-Even though Skytap on Azure is running within an Azure datacenter, Azure
+Even though Skytap on Azure is running within an Azure data center, Azure
 treats Skytap as if it were a separate On-premises location, for network
 isolation purposes. To make networking more straightforward for our
 customers, Skytap and Microsoft Azure have partnered in the design of
