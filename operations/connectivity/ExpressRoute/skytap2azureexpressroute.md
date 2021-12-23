@@ -1,6 +1,6 @@
 ---
 title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
-description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native - Draft Version: 11.28.21
+description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ---
 
@@ -8,20 +8,20 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 
 ## Table of Contents <a name="toc"></a>
 
-* [Create Skytap Environment
-* [Create an Express Route Definition in Skytap
-* [Create a Resource Group in the Azure Portal
-* Create a Virtual Network to attach the ExpressRoute
-* Create an address space and subnet
-* Create a Virtual Network Gateway
-* Create Local Network Gateway
-* Add all components to the Virtual Network Gateway
-* Create test VM inside of Azure Native
-* Test end-to-end connection from Skytap to Azure Native
-* APPENDIX
-  * Connect AIX LPAR to Express Route
+* [Create Skytap Environment](#createskytapenvironment)
+* [Create an Express Route Definition in Skytap]()
+* [Create a Resource Group in the Azure Portal]()
+* [Create a Virtual Network to attach the ExpressRoute]()
+* [Create an address space and subnet]()
+* [Create a Virtual Network Gateway]()
+* [Create Local Network Gateway]()
+* [Add all components to the Virtual Network Gateway]()
+* [Create test VM inside of Azure Native]()
+* [Test end-to-end connection from Skytap to Azure Native]()
+* [APPENDIX]()
+  * [Connect AIX LPAR to Express Route]()
 
-## Create Skytap Environment
+## Create Skytap Environment<a name="createskytapenvironment"></a>
 
 Create the initial Skytap environment that contains your VMs or LPARs.
 
@@ -30,7 +30,7 @@ should land on the Dashboard page of Skytap.
 
 <img src="./media/image6.png" width="700">
 
-![](./media/image30.png)
+<img src="./media/image30.png" width="700">
 
 Select \"AIX 7.1\" in the search field. Select US-Texas-M-1 as the
 Region. Finally, select the AIX Template that matches your criteria.
@@ -39,7 +39,7 @@ You should see this page, make note of the default subnet that is
 created, you will use that value 10.0.0.0/24 when defining your Express
 Route Connection.
 
-![](./media/image45.png)
+<img src="./media/image45.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 ## Create an Express Route Definition in Skytap
