@@ -1,12 +1,12 @@
 ---
 title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 description: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
-author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
+author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
 ---
 
 # EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 
-## Table of Contents <a name="toc"></a>
+## Table of Contents<a name="toc"></a>
 
 * [Create Skytap Environment](#createskytapenvironment)
 * [Create an Express Route Definition in Skytap](#createroutedefinition)
@@ -14,12 +14,12 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 * [Create a Virtual Network to attach the ExpressRoute](#createazurevnet)
 * [Create an address space and subnet](#createazureaddressspace)
 * [Create a Virtual Network Gateway](#createazureVNG)
-* [Create Local Network Gateway]()
-* [Add all components to the Virtual Network Gateway]()
-* [Create test VM inside of Azure Native]()
-* [Test end-to-end connection from Skytap to Azure Native]()
-* [APPENDIX]()
-  * [Connect AIX LPAR to Express Route]()
+* [Create Local Network Gateway](#createazureLNG)
+* [Add all components to the Virtual Network Gateway](#hookupazureVNG)
+* [Create test VM inside of Azure Native](#createazuretestvm)
+* [Test end-to-end connection from Skytap to Azure Native](#testconnection)
+* [APPENDIX](#appendix)
+  * [Connect AIX LPAR to Express Route](#connectaixviaexpressroute)
 
 ## Create Skytap Environment<a name="createskytapenvironment"></a>
 
@@ -121,14 +121,11 @@ Resource Group.
 
 1. <img src="./media/image13.png" width="600">
 
-
 2. <img src="./media/image22.png" width="600">
-
 
 3. Click: Go to Resource
 
 <img src="./media/image1.png" width="200">
-
 
 ###### *[Back to the Top](#toc)*
 ## Create an address space and subnet<a name="createazureaddressspace"></a>
@@ -178,7 +175,7 @@ Once done, click \"Go to Resource\"
 Review the values of your definition.
 
 ###### *[Back to the Top](#toc)*
-## Create Local Network Gateway
+## Create Local Network Gateway<a name="createazureLNG"></a>
 
 Define and create a Local Network Gateway.
 
@@ -204,7 +201,7 @@ Click on \"Go to Resource\" to review your connection configuration.
 {width="1.4479166666666667in" height="0.5911614173228347in"}
 
 ###### *[Back to the Top](#toc)*
-## Add all components to the Virtual Network Gateway
+## Add all components to the Virtual Network Gateway<a name="hookupazureVNG"></a>
 
 Search for your previously defined VNG called:\
 \"Skytap-DR-ExpressRoute-VNG\"
@@ -228,7 +225,7 @@ Peer circuit URI = The \"Resource ID\" shown in the WAN definition
 within Skytap, see \"Task \#2\"
 
 ###### *[Back to the Top](#toc)*
-## Create test VM inside of Azure Native
+## Create test VM inside of Azure Native<a name="createazuretestvm"></a>
 
 In order to test the connection from Skytap to Azure, add a VM to the
 defined subnet in the Azure VNet and attempt to \"ping\" it from the
@@ -274,7 +271,7 @@ On the VM details page, look for the \"Private IP Address\":
 {width="4.639583333333333in" height="1.5985739282589677in"}
 
 ###### *[Back to the Top](#toc)*
-## Test end-to-end connection from Skytap to Azure Native
+## Test end-to-end connection from Skytap to Azure Native<a name="testsconnection"></a>
 
 In the Skytap portal, go to the WAN definition that was created:\
 ![](./media/image19.png)
@@ -302,9 +299,9 @@ and LPARs to this Express Route Connection.
 \*\*\*\*\*\*\*\*\*\*END\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
 ###### *[Back to the Top](#toc)*
-## APPENDIX:
+## APPENDIX:<a name="appendix"></a>
 
-## Connect AIX LPAR to Express Route
+## Connect AIX LPAR to Express Route<a name="connectaixviaexpressroute"></a>
 
 Now that the Express Route Connection is working, start the AIX LPAR in
 your Skytap Environment and attach the Express Route to it.
