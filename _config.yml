@@ -220,7 +220,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
-encoding: US-ASCII
+encoding: ASCII-8BIT
 kramdown:
   input: GFM
 
