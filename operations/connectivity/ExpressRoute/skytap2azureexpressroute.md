@@ -13,7 +13,7 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 * [Create a Resource Group in the Azure Portal](#createazureresourcegroup)
 * [Create a Virtual Network to attach the ExpressRoute](#createazurevnet)
 * [Create an address space and subnet](#createazureaddressspace)
-* [Create a Virtual Network Gateway]()
+* [Create a Virtual Network Gateway](#createazureVNG)
 * [Create Local Network Gateway]()
 * [Add all components to the Virtual Network Gateway]()
 * [Create test VM inside of Azure Native]()
@@ -85,9 +85,9 @@ the Express Route connection.*
 
 <img src="./media/image49.png" width="700">
 
-***NOTE***: You'll see the following message while the connection is being built:
+***NOTE***: *You'll see the following message while the connection is being built:*
 
-<img src="./media/image20.png" width="700">*
+<img src="./media/image20.png" width="700">
 
 Once finished, you\'ll see the service keys required to define the
 Express Route endpoint on the Azure Native side of the connection.
@@ -119,10 +119,10 @@ Resource Group.
 ###### *[Back to the Top](#toc)*
 ## Create a Virtual Network to attach the ExpressRoute<a name="createazurevnet"></a>
 
-1. ![](./media/image13.png)
+1. <img src="./media/image13.png" width="600">
 
 
-2. ![](./media/image22.png)
+2. <img src="./media/image22.png" width="600">
 
 
 3. Click: Go to Resource
@@ -133,27 +133,26 @@ Resource Group.
 ###### *[Back to the Top](#toc)*
 ## Create an address space and subnet<a name="createazureaddressspace"></a>
 
-![](./media/image9.png)
+<img src="./media/image9.png" width="800">
 
-Create an address space: \"10.1.0.0/16\"
+1. Create an address space: (Example:10.1.0.0/16)
 
-*If there are any other address spaces already defined, delete them. See
-example, remove 10.8.0.0/16 if it exists.*
+***NOTE***: *If there are any other address spaces already defined, delete them. See example, remove 10.8.0.0/16 if it exists.*
 
-Now create a subnet 10.1.77.0/24 in the 10.1.0.0/16 address space:
+<img src="./media/image38.png" width="500">
 
-![](./media/image38.png)
+2. Now create a /24 subnet that fits within that address space. (Example: 10.1.77.0/24 in the 10.1.0.0/16)
 
-Create a subnet called: \"Skytap-DR-ExpressRoute-SN\"
+3. Name this subnet something like the following example: **Skytap-DR-ExpressRoute-SN**
 
-![](./media/image21.png)
+<img src="./media/image21.png" width="500">
 
-You should have 1 subnet defined:
+You should now have 1 subnet defined:
 
-![](./media/image8.png)
+<img src="./media/image8.png" width="500">
 
 ###### *[Back to the Top](#toc)*
-## Create a Virtual Network Gateway
+## Create a Virtual Network Gateway<a name="createazureVNG"></a>
 
 ![](./media/image7.png)
 
