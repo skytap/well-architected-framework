@@ -133,15 +133,14 @@ Resource Group.
 ###### *[Back to the Top](#toc)*
 ## Create an address space and subnet<a name="createazureaddressspace"></a>
 
-<img src="./media/image9.png" width="800">
-
 1. Create an address space: (Example:10.1.0.0/16)
 
 ***NOTE***: *If there are any other address spaces already defined, delete them. See example, remove 10.8.0.0/16 if it exists.*
-
-<img src="./media/image38.png" width="500">
+<img src="./media/image9.png" width="800">
 
 2. Now create a /24 subnet that fits within that address space. (Example: 10.1.77.0/24 in the 10.1.0.0/16)
+
+<img src="./media/image38.png" width="500">
 
 3. Name this subnet something like the following example: **Skytap-DR-ExpressRoute-SN**
 
