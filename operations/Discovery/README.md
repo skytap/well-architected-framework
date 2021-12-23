@@ -4,31 +4,35 @@ description: Describes the operational excellence pillar.
 author: Mike Neil - Vice President, Technical Field Operations 
 ---
 
-#### What is the IBM Power Estate?
+### What is the IBM Power Estate?
 
 All organizations have some type of digital estate which is a collection
 of assets that include virtual machines (VMs), physical servers,
 applications, and their data. All of these assets power the organization
-and its operations. For those organizations with an investment in IBM
+and its operations. 
+
+For those organizations with an investment in IBM
 Power, we look at segmenting the overall digital estate to the Power
 estate. While functionally similar, the terminology can be slightly
-different. An organizations Power estate is comprised of:
+different. 
 
--   **IBM Power systems** (sometimes called frames): IBM Power Systems
+An organizations Power estate is comprised of:
+
+* **IBM Power systems** (sometimes called frames): IBM Power Systems
     are the physical servers that Power workloads and their applications
     run on.
 
--   **Power VM**: Power VM is the virtualization engine that runs on IBM
+* **Power VM**: Power VM is the virtualization engine that runs on IBM
     Power Hardware
 
--   **LPARs (Logical Partitions)**: The LPAR is the analogous to the
+* **LPARs (Logical Partitions)**: The LPAR is the analogous to the
     Virtual Machine, or VM on x86.
 
--   **Storage**: While smaller shops will use storage local to the Power
+* **Storage**: While smaller shops will use storage local to the Power
     system, most larger deployments use fiber attached storage to a
     Storage Area Network (SAN)
 
--   **Virtual IO Systems**: This is something most commonly called VIOS
+* **Virtual IO Systems**: This is something most commonly called VIOS
     (Virtual Input Output System). VIOS provides network and storage
     connectivity for the LPARs running on a given Power System.
 
@@ -70,7 +74,7 @@ approach for x86 workloads also apply to Power:
 
 --------------------------------------------------------------------- ------------- ----------------------------------------
 
-#### Updated Cloud Rationalization and IBM Power Workloads 
+### Updated Cloud Rationalization and IBM Power Workloads 
 
 Before Skytap on Azure, organizations would consider all of the
 approaches above with their Power applications, but after years of
