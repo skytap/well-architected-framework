@@ -107,11 +107,11 @@ defined as the VNET in Azure that the Skytap environment will talk to.
 
 1. From the Azure Portal, create a Resource Group:
 
-![](./media/image25.png)
+<img src="./media/image25.png" width="600">
 
 2. Give the Resource Group a name: (Example **Skytap DR ExpressRoute-RG**)
 
-![](./media/image14.png)
+<img src="./media/image14.png" width="600">
 
 3. Click **Review & create** and then **Create** to finish creating the
 Resource Group.
