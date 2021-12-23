@@ -5,13 +5,13 @@ author: Dan Jones, Vice President of Product
 
 ## Skytap Live Clone
 
-<span style="font-weight: 400;">Within Skytap, Environments and Templates are very important concepts. An Environment is an object that comprises one or more VMs, one or more networks, plus configuration settings and metadata. A Template is a read-only copy of an environment that can be used to back up critical environments and acts like a blueprint for new environments. Environments can be copied, and they can be saved as a template. </span>
+<span style="font-weight: 400;">Within Skytap, Environments and Templates are very important concepts. An Environment is an object that comprises one or more VMs, one or more networks, plus configuration settings and metadata. A Template is a read-only copy of an environment that can be used to back up critical environments and acts like a blueprint for new environments. Environments can be copied, and they can be saved as a template.Â </span>
 
-<span style="font-weight: 400;">Until recently, if an environment contained running VMs it couldn’t be copied or saved as a template until those VMs were shutdown or suspended (x86 only). </span>
+<span style="font-weight: 400;">Until recently, if an environment contained running VMs it couldnâ€™t be copied or saved as a template until those VMs were shutdown or suspended (x86 only).Â </span>
 
-<span style="font-weight: 400;">With Skytap's new live clone capability, environments can be copied or saved while VMs remain running. The VMs in the copy or template will be powered off, but the original VMs will continue to run without interruption. </span>
+<span style="font-weight: 400;">With Skytap's new live clone capability, environments can be copied or saved while VMs remain running. The VMs in the copy or template will be powered off, but the original VMs will continue to run without interruption.Â </span>
 
-<span style="font-weight: 400;">The new Skytap live clone feature is designed for customers running applications that need to be backed-up or archived, but cannot afford the time it takes to shut down the VMs, create the copy or save as a template, run them, and bring the application back online. With the new Skytap live clone feature, the copy/save happens nearly instantaneously and you eliminate the time it takes to shutdown and start-up the VMs. </span>
+<span style="font-weight: 400;">The new Skytap live clone feature is designed for customers running applications that need to be backed-up or archived, but cannot afford the time it takes to shut down the VMs, create the copy or save as a template, run them, and bring the application back online. With the new Skytap live clone feature, the copy/save happens nearly instantaneously and you eliminate the time it takes to shutdown and start-up the VMs.Â </span>
 
 [![Skytap Live Clone](https://res.cloudinary.com/marcomontalbano/image/upload/v1639616907/video_to_markdown/images/vimeo--641622590-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/641622590 "Skytap Live Clone")
 
