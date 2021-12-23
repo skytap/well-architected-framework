@@ -375,4 +375,27 @@ Finally ping the VM in Azure:
 
 Your Skytap AIX LPAR is now communicating with a VM in Azure Native.
 
-\-\-\-\-\-\-\-\-\-\-\--END\-\-\-\-\-\-\-\-\--
+## Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../README.md)
+>* [Power Discovery](../../Discovery/README.md)
+>* [Connectivity](../README.md) > [Getting Started with Azure Networking](../skytaponazureconnectivity.md)
+<!--  
+> [Getting Started with IBM Cloud Networking](../skytaponibmconnectivity.md)
+-->
+
+**Resiliency**
+> [Skytap Resiliency Pillar](../../../resiliency/README.md)
+
+>**Design**
+>* [Design Considerations for Azure](../../../resiliency/designconsiderationsazure.md)
+<!--
+>* [Design Considerations for IBM Cloud](../../../resiliency/designconsiderationsibm.md)
+-->
+
+**Security**
+> [Skytap Security Pillar](../../../security/README.md)
