@@ -14,14 +14,14 @@ This document does not provide you with any legal rights to any intellectual pro
 
 * [Key Takeaways](#takeaways)
 * [Before you begin](#begin)
-* Determining size to be backed up on ISO optical image
-* Create virtual optical media
-* Save Option 22 on optical media to create an ISO image
-* Save QGPL and QUSRSYS and append to existing ISO
-* Save Remaining data to virtual tape(s) via option 23 save
-* Restore Option 22 with ISO
-* Restore QUSRSYS and QGPL to get network
-* Restore remaining data via virtual tape
+* [Determining size to be backed up on ISO optical image]()
+* [Create virtual optical media]()
+* [Save Option 22 on optical media to create an ISO image]()
+* [Save QGPL and QUSRSYS and append to existing ISO]()
+* [Save Remaining data to virtual tape(s) via option 23 save]()
+* [Restore Option 22 with ISO]()
+* [Restore QUSRSYS and QGPL to get network]()
+* [Restore remaining data via virtual tape]()
 
 
 ## Key Takeaways <a name="takeaways"></a>
