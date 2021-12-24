@@ -477,6 +477,7 @@ ExpressRoutes that are both connected to your vWAN mesh, you'll need to
 Reach](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#how-does-the-virtual-hub-in-a-virtual-wan-select-the-best-path-for-a-route-from-multiple-hubs),
 as in Example 1.
 
+###### *[Back to the Top](#toc)*
 ## Next steps
 
 **Main Overview**
