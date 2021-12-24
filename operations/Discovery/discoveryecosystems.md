@@ -328,7 +328,7 @@ This will create a zip file in /tmp/diskmetrics\_\<sysnam>.zip
 ***NOTE***: *There will be 70+ .csv or txt files available.*
 
 ###### *[Back to the Top](#toc)*
-### Option 03: Performance Navigator from HS<a name="perfnavi"></a>
+### Option 03: Performance Navigator from Help Systems<a name="perfnavi"></a>
 
 **Pros**: Automates the historical collection of infrastructure and performance data -- Small file to send \~1-10MB. Exclusive What-If function to model workload to different systems. Can track every job and user resource consumption history. Helps to address performance questions. Free access to infrastructure data and high-level CPU utilization and disk space (both installed and used).
 
@@ -340,9 +340,9 @@ Collecting historical data with no overhead and little disk space:
 
 1. Download a Windows Client and IBM i host code using the following links:
 
-[[https://hsdownloads.helpsystems.com/software/robot/performance-nav/pn400.sav]{.ul}](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fpn400.sav&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505384352%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=2euT7CjBenbQim7wJnBIUr14TpNVXLw%2FyMZdWd5B6lc%3D&reserved=0)
+[[https://hsdownloads.helpsystems.com/software/robot/performance-nav/pn400.sav](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fpn400.sav&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505384352%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=2euT7CjBenbQim7wJnBIUr14TpNVXLw%2FyMZdWd5B6lc%3D&reserved=0)
 
-[[https://hsdownloads.helpsystems.com/software/robot/performance-nav/perfnav.exe]{.ul}](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fperfnav.exe&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505394306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=IufUy4zr%2F%2BCKDVyGdUcjGkzDkZnl87ViGSBScY1aNtM%3D&reserved=0)
+[[https://hsdownloads.helpsystems.com/software/robot/performance-nav/perfnav.exe](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fperfnav.exe&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505394306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=IufUy4zr%2F%2BCKDVyGdUcjGkzDkZnl87ViGSBScY1aNtM%3D&reserved=0)
 
 2. Click on perfnav.exe to install the Windows component. This is a self-extracting install program that just puts an ICON on the desktop.
 
