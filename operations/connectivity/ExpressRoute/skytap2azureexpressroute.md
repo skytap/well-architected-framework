@@ -329,7 +329,7 @@ ping 10.1.77.4
 <img src="./media/image12.png" width="500">
 
 Your Skytap AIX LPAR is now communicating with a VM in Azure Native.
-
+###### *[Back to the Top](#toc)*
 ## Next steps
 
 **Main Overview**
