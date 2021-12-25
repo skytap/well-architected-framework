@@ -2,7 +2,7 @@
 title: Overview of the operational excellence pillar
 description: Describes the operational excellence pillar.
 author: Mike Neil - Vice President, Technical Field Operations
-permalink: /operations/discovery/
+permalink: /operations/Discovery/
 ---
 
 ### What is the IBM Power Estate?
