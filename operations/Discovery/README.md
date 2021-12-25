@@ -148,7 +148,7 @@ Skytap on Azure.
 > [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](.)
+>[Skytap Operational Excellence Pillar](../)
 >* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Power Discovery & Design - Workloads](discoveryworkloads.md)
 >* [Connectivity](../connectivity/)
