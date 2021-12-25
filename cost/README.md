@@ -1,6 +1,7 @@
 ---
 title: Principles of cost optimization
 author: Matthew Romero, Technical Product Marketing Manager
+permalink: /cost/
 ---
 
 # Principles of cost optimization

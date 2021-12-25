@@ -61,19 +61,19 @@ each server.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+>[Skytap Operational Excellence Pillar](.)
+>* [Power Discovery](../Discovery/)
+>* [Connectivity](.) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](README.md)
+> [Skytap Resiliency Pillar](.)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

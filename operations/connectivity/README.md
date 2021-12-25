@@ -1,6 +1,7 @@
 ---
 title: Skytap Operational Excellence - Connectivity
 author: Colleen E Hamilton - Senior Product Manager, Jason Scott - Cloud Solutions Architect
+permalink: /operations/connectivity/
 ---
 
 # Connectivity
@@ -49,11 +50,8 @@ limitations and move to a more flexible and resilient cloud-based model.
 
 ##### Design Solutions:
 
--   [Internal
-    Networking](../../security/internalnetworking.md)
-
--   [Edge
-    Networking](../../security/edgenetworking.md)
+-   [Internal Networking](../../security/internalnetworking.md)
+-   [Edge Networking](../../security/edgenetworking.md)
 
 ## Considerations on Reliability
 
@@ -91,45 +89,35 @@ IPSec VPN tunnel does not traverse a private line, it is encrypted by
 nature. Private circuits are just that by default, they are private but
 the traffic across them is not encrypted.
 
-Once a connectivity pattern into Skytap networks is chosen, either via
-VPN or private circuit connections, the WAN implementation is very
-similar. In both cases, Skytap exposes networks in an account via a WAN
-interface. Local Skytap subnets must fall within an address space
-assigned to the WAN, and remote subnets are specified to direct traffic
-over the WAN connection. Skytap does not provide automated
-fault-tolerance for these virtual WAN devices, so manual fail-over from a
-primary to secondary WAN connection must be architected separately.
+Once a connectivity pattern into Skytap networks is chosen, either via VPN or private circuit connections, the WAN implementation is very similar. In both cases, Skytap exposes networks in an account via a WAN interface. Local Skytap subnets must fall within an address space assigned to the WAN, and remote subnets are specified to direct traffic over the WAN connection. Skytap does not provide automated fault-tolerance for these virtual WAN devices, so manual fail-over from a primary to secondary WAN connection must be architected separately.
 
 ## Getting Started with Networking
 
 * [Getting Started with Azure Networking](skytaponazureconnectivity.md)
-<!-- 
-* [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
--->
+
+<!--- * [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md) --->
 
 <hr>
 
-  #### Next steps
+#### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
-<!-- 
->* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
--->
+>[Skytap Operational Excellence Pillar](../)
+>* [Power Discovery](../Discovery/)
+>* [Connectivity](.) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+
+<!--- >* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md) --->
 
 **Resiliency**
-> [Skytap Resiliency Pillar](README.md)
+> [Skytap Resiliency Pillar](../../resiliency)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
-<!--
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
--->
+
+<!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

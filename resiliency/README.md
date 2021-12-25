@@ -2,6 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
+permalink: /resiliency/
 ---
 
 # Principles of the reliability pillar
@@ -27,7 +28,6 @@ Migration Considerations include
 Here is a high-level look at the Skytap on Azure general architecture.
 
 <img src="./migrationmedia/media/image1.png" width="800">
-
 
 - **Define and test availability and recovery targets -** Availability targets, such as Service Level Agreements (SLA) and Service Level Objectives (SLO), and Recovery targets, such as Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO), should be defined and tested to ensure reliability aligns with business requirements.
 
@@ -88,7 +88,6 @@ migration as depicted here.
 
 <img src="migrationmedia/media/image6.png" width="600">
 
-
 # Backup and disaster recovery for Skytap applications
 
 *Disaster recovery* is the process of restoring application functionality in the wake of a catastrophic loss.
@@ -134,13 +133,14 @@ The two numbers above, combined with contingencies like distance, amount of data
 
 This is VERY similar to a WARM versus HOT migration, and the same tools may be utilized.
 <img src="./media/backuptypes.png" width="800">
+
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
 
 **Resiliency**
 >**Migration Solutions**
@@ -149,10 +149,10 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
-<!-- 
->* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
--->
+ 
+<!--- >* [Design Considerations for IBM Cloud](designconsiderationsibm.md) --->
+
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> * [Skytap Security Pillar](../security/)
 

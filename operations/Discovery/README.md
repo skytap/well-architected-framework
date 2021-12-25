@@ -1,7 +1,8 @@
 ---
 title: Overview of the operational excellence pillar
 description: Describes the operational excellence pillar.
-author: Mike Neil - Vice President, Technical Field Operations 
+author: Mike Neil - Vice President, Technical Field Operations
+permalink: /operations/discovery/
 ---
 
 ### What is the IBM Power Estate?
@@ -144,16 +145,16 @@ Skytap on Azure.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](README.md)
+>[Skytap Operational Excellence Pillar](.)
 >* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Power Discovery & Design - Workloads](discoveryworkloads.md)
->* [Connectivity](../connectivity/README.md)
+>* [Connectivity](../connectivity/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../resiliency/)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

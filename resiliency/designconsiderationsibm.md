@@ -74,11 +74,11 @@ AIX: 7.2 TL 1, SP 2
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
->* [Connectivity Overview](../operations/connectivity/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
+>* [Connectivity Overview](../operations/connectivity/)
 >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
 
 **Resiliency**
@@ -92,5 +92,5 @@ AIX: 7.2 TL 1, SP 2
 >* [Design Considerations for Azure](designconsiderationsazure.md)
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> * [Skytap Security Pillar](../security/)
 

@@ -2,6 +2,7 @@
 title: Security
 description: Considerations to ensure security.
 author: John Bradshaw, Principal Architect
+permalink: /security/
 ---
  
 # Security on the Skytap Platform
@@ -63,7 +64,7 @@ controls to be accounted for, architected and implemented.
 
 [<img src="./landminemedia/media/image3.png" width="800">](https://www.lucidchart.com/documents/edit/f5794a4f-e45d-4a70-9e12-9f0abf4579bb/0?callback=close&name=docs&callback_type=back&v=1701&s=612) 
 
- *Figure 3 - Example Target Operating Model (TOM)**
+*Figure 3 - Example Target Operating Model (TOM)**
 
 Most organizations will have multiple cloud vendors, supported by
 systems integrators or outsourced management functions. Your various
@@ -77,13 +78,13 @@ each workload and each platform.
 ## Next step
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
 > * [Key Security Areas](./keysecurityareas.md)

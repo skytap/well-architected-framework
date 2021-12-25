@@ -2,6 +2,7 @@
 title: Overview of the performance efficiency pillar
 description: Describes the performance efficiency pillar
 author: v-aangie
+permalink: /scalability/
 ms.date: 10/23/2020
 ms.topic: conceptual
 ms.service: architecture-center
