@@ -169,7 +169,7 @@ C:\\user\\rwatson\\downloads\\hmcscanner.bat \<HMC IP> -p xxxxxx -stats sanitize
 
 An example of the spreadsheet is below. Note the tab at the bottom which shows all of the frames (serial numbers) connected to this HMC. The LPAR and configurations can be found in the other tabs.
 
-<img src="powerdiscoveryinframedia/media/image1.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image1.png" width="700">
 
 6. Send the resulting spreadsheet to Skytap for analysis.
 
@@ -240,11 +240,11 @@ A Skytap Cloud Solutions Architect or Cloud Solutions Engineer will then do the 
 
 If you are using **Navigator for i** to look at the data, then start the ACS, click on *Navigator for i*, investigate data, Collection Services, and select a metric.
 
-<img src="powerdiscoveryinframedia/media/image2.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image2.png" width="500">
 
 1. Select a metric and then select your performance data library PFRCUSTNAM from the pull-down field, select the Collection name if multiple and display.
 
-<img src="powerdiscoveryinframedia/media/image3.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image3.png" width="500">
 
 2. If using Performance Navigator prompt (F4) the following command on the IBM i command line:
 
@@ -252,13 +252,13 @@ If you are using **Navigator for i** to look at the data, then start the ACS, cl
 mpglib/mpgdr
 ```
 
-<img src="powerdiscoveryinframedia/media/image4.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image4.png" width="500">
 
 ***NOTE***: *Change the Performance data library to your performance data library and Process management collection to \*yes and hit enter.*
 
 3. Start Performance Navigator, make sure you are connected to your IBM i VM and go to the View System Info / Performance Data tab and click the down arrow to select the new data.
 
-<img src="powerdiscoveryinframedia/media/image5.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image5.png" width="500">
 
 Your system(s) name will show up in the navigator panel on the left. You
 can see your hardware configuration via the View / System Information
@@ -266,7 +266,7 @@ options.
 
 ***NOTE***: *The Performance Navigator client track connection with system names. If you are connecting to a second system with the same name you have to create an alias. Just go to Edit / System options / and click the HA tab and select System 1. Close and restart Performance Navigator. You should now see the system name with an '\_1' at the end.*
 
-<img src="powerdiscoveryinframedia/media/image6.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image6.png" width="500">
 
 There are three free graphs available without a keycode:
 
@@ -278,7 +278,7 @@ There are three free graphs available without a keycode:
 
 To have full access to all the data you need to enter a keycode. Once you receive the temporary keycode, go to Edit / System Options / Keycode and enter the key. Close and reopen the program to have full access.
 
-<img src="powerdiscoveryinframedia/media/image7.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image7.png" width="500">
 
 ###### *[Back to the Top](#toc)*
 ### Option 02: Using Must Gather Tools<a name="mustgather"></a>
@@ -350,7 +350,7 @@ Collecting historical data with no overhead and little disk space:
 
 4. In tab 1.local, browse to the pn400.sav file you downloaded. Then follow tab 2-5 on each partition
 
-<img src="powerdiscoveryinframedia/media/image8.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image8.png" width="500">
 
 5. Following a minimum period of 24 hours, start Perfnav and reply NO to the PN400.sav install. In the System Information window, enter the system name or IP address of the first LPAR and hit NEW. 
 
@@ -364,7 +364,7 @@ first system name and Shift Click the last system name. Then click Save
 to Disk. This will create one file for each partition called
 sos_serial#xx.GpD. Note the directory in the log.
 
-<img src="powerdiscoveryinframedia/media/image9.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image9.png" width="500">
 
 8. Then email Skytap the SOS files. They are usually very small (1-3MB).
 
@@ -381,11 +381,11 @@ sos_serial#xx.GpD. Note the directory in the log.
 This will add a member to the Performance Navigator file on the IBM i
 VM.
 
-<img src="powerdiscoveryinframedia/media/image10.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image10.png" width="500">
 
 10. To connect the Performance Navigator client to the data, go to View / System Info for the IBM i VM, click the Performance Data tab, then the down arrow by the member\'s name and select the member.
 
-<img src="powerdiscoveryinframedia/media/image11.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image11.png" width="500">
 
 ###### *[Back to the Top](#toc)*
 ## Native Power Discovery for AIX via VIOS<a name="NativeAIXDiscovery"></a>
@@ -421,7 +421,7 @@ performance data.
 
 **Output**: 1 file per partition called pninfo_topas\_\<hostname>\_date_time.tar.gz
 
-<img src="powerdiscoveryinframedia/media/image12.png" width="100">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image12.png" width="100">
 
 
 File should be between 5-10MB.
@@ -435,21 +435,21 @@ following:
 
 2.  From Performance Navigator go to FIle / New AIX/ Linux menu and browse to the directory for your data. Select the mpgdata2.hostname file and open.
 
-<img src="powerdiscoveryinframedia/media/image13.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image13.png" width="500">
 
 To view the Topas data via Google Chart:
 
 1. Click on the LPARname_HSdata_topas folder for any given LPAR then click the mpg_hostname_tchart_rackdata.html
 
-<img src="powerdiscoveryinframedia/media/image14.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image14.png" width="500">
 
 2. Click on one of the hostname_date_topas_cvs to see the one day with Google Chart
 
-<img src="powerdiscoveryinframedia/media/image15.png" width="300">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image15.png" width="300">
 
 It will launch the browser to view the data for the one day with Google Chart. Just click on any of the tabs at the top. The example below is the Physical CPU graph:
 
-<img src="powerdiscoveryinframedia/media/image16.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image16.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 ### Option 02: Collecting existing nmon data<a name="existingnmon"></a>
