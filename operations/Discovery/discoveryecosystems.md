@@ -433,7 +433,7 @@ following:
 
 1.  Unzip, untar the pninfo file
 
-2.  From Performance Navigator go to FIle / New AIX/ Linux menu and browse to the directory for your data. Select the mpgdata2.hostname file and open.
+2.  From Performance Navigator go to File / New AIX/ Linux menu and browse to the directory for your data. Select the mpgdata2.hostname file and open.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image13.png" width="500">
 
