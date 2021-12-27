@@ -20,7 +20,7 @@ encapsulated, routed over the public internet.
 
 ### Setting up a Site-to-Site VPN in ICSS
 
-<img src="./media/image2.png" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image2.png" width="500">
 
 A VPN is like a bridge: both sides must be "facing each other" for
 traffic to flow. This means that each VPN endpoint must be configured
@@ -61,19 +61,19 @@ each server.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](.)
->* [Power Discovery](../Discovery/)
->* [Connectivity](.) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+>[Skytap Operational Excellence Pillar](../README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](.)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../security/README.md)

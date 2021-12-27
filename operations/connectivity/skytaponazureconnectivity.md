@@ -70,13 +70,13 @@ as mentioned above.
 
 **Reference Architecture**
 
-<img src="../Azure/media/image1.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image1.png">
 
 ### Setting up a Site-to-Site VPN between On-Premises and Skytap on Azure<a name="site2site"></a>
 
 Skytap's built-in VPN service gives you a streamlined option to establish a VPN tunnel between your environment in Skytap, and your on-premises deployment. The tunnel is encrypted and encapsulated, routed over the public internet.
 
-<img src="../media/image2.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image2.png" width="500">
 
 A VPN is like a bridge: both sides must be "facing each other" for traffic to flow. This means that each VPN endpoint must be configured the same way, with the same parameters. Before you begin, speak to your company's IT department to [find out which VPN parameters](https://help.skytap.com/wan-vpn-configuration-parameters.html) you'll need to use for Skytap\'s side of the VPN.
 
@@ -104,7 +104,7 @@ Links to helpful resources:
 
 **Reference Architecture**
 
-<img src="../Azure/media/image2.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image2.png">
 
 ### Setting up a Site-to-Site VPN between Skytap and your Azure VNet Gateway<a name="site2sitevnetgateway"></a>
 
@@ -112,13 +112,13 @@ Site-to-Site VPNs that connect into Azure virtual network (VNet) Gateways are ju
 
 Setting up a Site-to-Site VPN between Skytap and Azure begins by sorting out which VPN parameters you'll need to use. When connecting a Skytap VPN to an Azure VNet, the parameters you'll configure on Skytap's side are going to be determined by the intersection of your IT department's requirements, [Skytap's supported parameter set](https://help.skytap.com/wan-vpn-configuration-parameters.html), and [Azure's supported parameter set](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec).
 
-<img src="../media/image3.png" width="500" align="center">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image3.png" width="500" align="center">
 
 It's worth noting that Skytap no longer supports Azure's default IKE Phase 1 DH (Diffie-Hellman) Group---Group 2 (1024 bit)---due to its weak security. You'll need to [manually configure the parameters for your Azure VPN Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#s2sconnection), rather than accepting the default configuration provided by Azure.
 
 Due to Maximum Transmission Unit (MTU) limits between Azure and Skytap, you'll also need to ensure that you clamp the Skytap-side VPN MSS to 1200. (Despite its smaller packet size, Skytap has found that clamping your maximum segment size (MSS) to 1200, rather than Azure's standard-recommended 1350, ensures the best performance, and least amount of packet loss when the Skytap-side of the VPN is sending data.) It will ensure that your packets flow freely between Skytap and Azure, rather than being dropped or bounced, which can cause your VPN traffic to be slow, or even come to a standstill. In the Skytap portal, the setting to clamp your VPN's MSS is at the bottom of the Edit WAN page:
 
-<img src="../media/image4.png" width="300">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image4.png" width="300">
 
 Since VPNs are most reliable when distance being spanned is short, the two endpoints should be as close together as possible. You'll want to set up the Skytap VPN endpoint in a region which is nearest to your existing Azure services. Choose the region in your Skytap account which is nearest to your existing Azure VNet, and [create the static public IP address](https://help.skytap.com/managing-public-ip-addresses.html#AddingastaticpublicIPaddresstoyouraccount) for your new VPN.
 
@@ -164,7 +164,7 @@ The recommended path to connect Skytap on Azure to on-premises and Azure
 resources is a customer-managed ExpressRoute from Skytap that has Global
 Reach enabled to allow network transit from Skytap to on-prem.
 
-* Step 1: Create the Azure circuit that your Sktyap Customer-Managed ExpressRoute will go through
+* Step 1: Create the Azure circuit that your Skytap Customer-Managed ExpressRoute will go through
 
     * [Creating a customer-managed ExpressRoute circuit for a Private Network Connection](https://help.skytap.com/wan-create-self-managed-expressroute.html#creating-a-customer-managed-expressroute-circuit-for-a-private-network-connection)
 
@@ -174,7 +174,7 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
     * Be sure to select "Customer-managed circuit" when creating your Skytap WAN per the instructions above
 
-<img src="../Azure/media/image3.png" width="450">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image3.png" width="450">
 
    * Enter the service key from Step 1, where you created the ExpressRoute circuit in Azure
 
@@ -206,9 +206,9 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 **Reference Architecture Global Reach Enabled ExpressRoute**
 
-<img src="../Azure/media/image4.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image4.png">
 
-<img src="../Azure/media/image5.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image5.png">
 
 ## Appendix<a name="appendix"></a> 
 
@@ -260,17 +260,17 @@ However, If you need to connect several (or complex topologies of) VNets, you ca
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../)
->* [Power Discovery](../Discovery/)
->* [Connectivity](.)
+>[Skytap Operational Excellence Pillar](../README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](README.md)
 
 <!--- > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md) --->
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
@@ -278,4 +278,4 @@ However, If you need to connect several (or complex topologies of) VNets, you ca
 <!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../security/README.md)

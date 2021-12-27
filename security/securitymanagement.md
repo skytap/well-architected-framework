@@ -1,11 +1,6 @@
 ---
-title: Security
-description: Considerations to ensure security.
-author: tbd
-categories:
-  - security 
- subject:
-  - security
+title: Security Management
+author: John Bradshaw, Principal Architect
 ---
 
 ### Security Management
@@ -14,7 +9,7 @@ The Management layer sometimes referred to as *Shared Services*,
 contains the components necessary to secure and enforce compliance on
 the workloads running on Skytap.
 
-<img src=".//media/image4.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image1.png" width="800">
 
 *Figure 8 - Management Required Capabilities*
 
@@ -40,7 +35,7 @@ directories on a per Environment basis but also improves security by
 consolidating the logging and administration of users and service
 accounts.
 
-A [**Backup**](/resiliency/README.md) strategy should encompass the native capabilities of the
+A [**Backup**](../resiliency/README.md) strategy should encompass the native capabilities of the
 Skytap platform, such as Templates which create a point in time clone of
 an entire workload from network configuration to data. However,
 Templates are not designed to replace regular backups and are not
@@ -73,7 +68,7 @@ threats as well as their mitigation
 These components translate into an architecture that approximates the
 following:
 
-<img src="./media/image7.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image7.png" width="500">
 
 *Figure 9 - Example Management Architecture implemented in Skytap*
 
@@ -87,7 +82,7 @@ environments. Transit through an ICNRs is not possible; therefore,
 multiple environments of a different security profile can be connected
 via a Shared environment, but traffic cannot flow.
 
-<img src ="./media/image8.png" width="500">
+<img src ="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image8.png" width="500">
 
 *Figure 10 - Transit ICNR Traffic is Automatically Denied*
 
@@ -148,7 +143,7 @@ A.  Deployment Patch Check: When the Skytap instance is deployed and
     active, the application platforms in the Template check-in with the
     Big-Fix Server.
 
-<img src="./media/image9.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image9.png" width="500">
 
 > Server instances are verified and patching updates are identified.
 
@@ -171,7 +166,7 @@ C.  Save New Template: Once the patching effort is completed, the
 
 A Gold Template is established for each environment, which is used to
 create copies for development and test environments.
-<img src="./media/image10.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image10.png" width="800">
 
 A.  Gold Template Patch Check: A Skytap Administrator brings up a Gold
     Template of an Application Environment and has Big Fix automatically

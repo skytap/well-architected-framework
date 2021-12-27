@@ -69,17 +69,17 @@ LPAR Sizing and OS Support for Power
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
->* [Connectivity Overview](../../operations/connectivity/)
->* [Getting Started with Azure Networking](../../operations/connectivity/skytaponazureconnectivity.md)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
+>* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
 
 <!--- >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
 
 **Resiliency**
-> [Skytap Resiliency Pillar](.)
+> [Skytap Resiliency Pillar](README.md)
 
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
@@ -91,5 +91,5 @@ LPAR Sizing and OS Support for Power
 -->
 
 **Security**
-> * [Skytap Security Pillar](../security/)
+> * [Skytap Security Pillar](../security/README.md)
 

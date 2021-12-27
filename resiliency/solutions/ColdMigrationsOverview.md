@@ -13,12 +13,12 @@ is a one-touch solution to migrate your workloads into Azure.
 
 Here is an overview of Commvault.
 
-<img src="../../migrationmedia/media/image7.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image7.png">
 
 Here is an overview of how Skytap on Azure and Commvault work together
 for AIX and IBM i (as400).
 
-<img src="../../migrationmedia/media/image8.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image8.png">
 
 <BR>
 <BR>
@@ -32,13 +32,13 @@ for AIX and IBM i (as400).
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/)
+>[Skytap Operational Excellence Pillar](../../operations/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../)
+> [Skytap Resiliency Pillar](../README.md)
 
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
@@ -49,4 +49,4 @@ for AIX and IBM i (as400).
 <!--- >* [Design Considerations for IBM Cloud](../designconsiderationsibm.md) --->
 
 **Security**
-> * [Skytap Security Pillar](../../../security/)
+> * [Skytap Security Pillar](../../security/README.md)

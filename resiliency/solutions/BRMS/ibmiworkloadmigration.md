@@ -561,9 +561,11 @@ partition, you must specify the following:
 
 >**Design**
 >* [Design Considerations for Azure](../../designconsiderationsazure.md)
+
 <!-- 
 >* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
 -->
+
 
 **Security**
 > * [Skytap Security Pillar](../../../security/README.md)

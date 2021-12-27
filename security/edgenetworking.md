@@ -1,6 +1,10 @@
+---
+title: Edge Networking
+author: John Bradshaw, Principal Architect
+---
 ## Edge Networking
 
-<img src="../edgenetworkingmedia/media/image1.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image1.png" width="800">
 
 The Edge Networking capability provides access to resources outside of the immediate environment in Skytap, and as such, represents a significant area of exposure. Workloads running in the cloud have legitimate needs to access services or resources either on the Internet or behind the corporate network. To do this safely and efficiently consolidating this ingress and egress into a centralized service can help to enforce good practice and reduce risk.
 
@@ -12,13 +16,13 @@ Firewalls, Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (I
 
 When providing Internet or VPN access, this stack is typically implemented, as below. With the reverse being true for outbound traffic.
 
-<img src="../edgenetworkingmedia/media/image2.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image2.png" width="800">
 
 *Figure 1 - Typical Traffic Flow*[^1]
 
 #### Example High Level Design
 
-<img src="../edgenetworkingmedia/media/image3.png" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image3.png" width="600">
 
 *Figure 2 - Example Internet and VPN Connection Scheme*
 
@@ -66,7 +70,7 @@ The Skytap [Site-to-Site VPN](https://help.skytap.com/vpn-configuration-paramete
 
 The Skytap Site-to-Site VPN secures traffic that traverses the public Internet, but not private connectivity. Multiple VPNs can be created for high availability and to connect multiple corporate data centers to the Skytap cloud.
 
-<img src="../edgenetworkingmedia/media/image4.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image4.png" width="800">
 
 *Figure 3 - Example VPN Connection Scheme*
 
@@ -76,7 +80,7 @@ An Azure ExpressRoute or Equinix Cloud Hub connection are referred to as Private
 
 In the example below, the PNC connects the on-premises data center with the Skytap cloud environments. It should be noted that while this connection is private, using Multiprotocol Label Switching (MPLS), which logically isolates traffic, it is not however encrypted.
 
-<img src="../edgenetworkingmedia/media/image5.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image5.png" width="800">
 
 *Figure 4 - Example Private Connection Scheme*
 
@@ -125,22 +129,22 @@ In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring i
 
 **Main Overview**
 
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework](../README.md)
 
 **Operational Excellence**
 
->[Skytap Operational Excellence Pillar](../../operations/)
->* [Connectivity Overview](../../operations/connectivity/)
->* [Getting Started with Azure Networking](../../operations/connectivity/skytaponazureconnectivity)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
+>* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
 
 <!--- >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
 
 **Resiliency**
 
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
 **Security**
->[Skytap Security Pillar](./)
+>[Skytap Security Pillar](README.md)
 >* [Key Security Areas](./keysecurityareas.md)
 >* [Security Management](./securitymanagement.md)  
 >* [Virtual Machines](./virtualmachines.md) 

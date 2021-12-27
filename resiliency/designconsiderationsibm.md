@@ -74,23 +74,23 @@ AIX: 7.2 TL 1, SP 2
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
->* [Connectivity Overview](../operations/connectivity/)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
 >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](README.md)
 
 >**Migration Solutions**
->* [Hot Migations (Replication Sync)](solutions/HotMigrationOverview.md)
+>* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
 
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
 
 **Security**
-> * [Skytap Security Pillar](../security/)
+> * [Skytap Security Pillar](../security/README.md)
 

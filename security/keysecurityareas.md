@@ -1,12 +1,8 @@
 ---
-title: Security
-description: Considerations to ensure security.
+title: Key Security Areas
 author: John Bradshaw, Principal Architect
-categories:
-  - security 
- subject:
-  - security
 ---
+
 ## Key Security Areas
 
 Within Skytap, there are five areas to build a control framework around:
@@ -24,7 +20,7 @@ The Skytap platform provides controls for Security Policies;
 Notifications; Authentication, Authorization and Accounting; and
 Auditing.
 
-<img src="./media/image4.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image4.png" width="500">
 
 *Figure 1 - Platform Required Capabilities*
 
@@ -40,7 +36,7 @@ access the Skytap dashboard securely from the Skytap infrastructure.
 More information on access policies is available
 [[here]{.ul}](https://help.skytap.com/setting-access-policies.html)
 
-<img src=".//media/image5.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image5.png" width="800">
 
 *Figure 2 - Access Policies available within the Skytap Dashboard*
 
@@ -184,7 +180,7 @@ users to maintain the templates (template creators), and all other users
 in the account will have permission to create environments from those
 templates (template users).
 
-<img src=".//media/image6.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image6.png" width="500">
 
 *Figure 3 - Example of Project Implementation*
 

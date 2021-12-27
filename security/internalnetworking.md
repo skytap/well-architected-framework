@@ -1,8 +1,13 @@
+---
+title: Internal Networking
+author: John Bradshaw, Principal Architect
+---
+
 ## Internal Networking
 
 Several of these architectural building blocks are duplicated in the Edge Networking section and this is by design, each environment should be secured independently of each other by creating a defense in depth approach. This means that if one layer is compromised the crown jewels will still be secure.
 
-<img src="../internalnetworkingmedia/media/image1.png" height="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/internalnetworkingmedia/media/image1.png" height="800">
 
 *Figure 15 -- Internal Networking Required Capabilities*
 
@@ -10,7 +15,7 @@ Two additional services present in the environment internal networking, a Servic
 
 #### Example High Level Design
 
-<img src="../media/image16.png" height="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image16.png" height="800">
 
 
 #### Firewall
@@ -34,7 +39,7 @@ a Database running on AIX in Skytap could be connected to a frontend
 application hosted in a Hyperscale cloud provider without having to
 manually configure routing at each layer.
 
-<img src="../internalnetworkingmedia/media/image2.png" alt="A close up of text on a white background Description automatically" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/internalnetworkingmedia/media/image2.png" alt="A close up of text on a white background Description automatically" width="600">
 
 In addition to network simplification a Service Mesh can also provide
 fine-grained access control, mutual TLS authentication and remove
@@ -62,7 +67,7 @@ require, but can also validate that the endpoints are healthy before
 directing traffic. Service Discovery can also replace some load
 balancing functionality.
 
-<img src="../internalnetworkingmedia/media/image3.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/internalnetworkingmedia/media/image3.png" width="500">
 
 ##### Supported Implementations
 
@@ -95,20 +100,20 @@ Inbound proxies deployed within a workload environment are typically used to han
 
 ## Next steps
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
->* [Connectivity Overview](../operations/connectivity/)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+>* [Connectivity Overview](../operations/connectivity/README.md)
 >* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
 
 <!--- >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
+> [Skytap Resiliency Pillar](../resiliency/README.md)
 
 **Security**
->[Skytap Security Pillar](../)
+>[Skytap Security Pillar](README.md)
 >* [Key Security Areas](./keysecurityareas.md)
 >* [Security Management](./securitymanagement.md)  
 >* [Edge Networking](./edgenetworking.md) 

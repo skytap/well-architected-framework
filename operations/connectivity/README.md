@@ -17,7 +17,7 @@ the goal is to minimize the effects of a single failing component.
 
 **Skytap-owned versus customer-owned responsibilities**
 
-<img src="media/image1.png" width="400">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image1.png" width="400">
 
 *Figure 2 \-- Shared Responsibility Model*
 
@@ -102,17 +102,17 @@ Once a connectivity pattern into Skytap networks is chosen, either via VPN or pr
 #### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../)
->* [Power Discovery](../Discovery/)
->* [Connectivity](.) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+>[Skytap Operational Excellence Pillar](../README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
 
 <!--- >* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md) --->
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
@@ -120,4 +120,4 @@ Once a connectivity pattern into Skytap networks is chosen, either via VPN or pr
 <!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../security/README.md)
