@@ -145,16 +145,16 @@ Skytap on Azure.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../)
+>[Skytap Operational Excellence Pillar](../README.md)
 >* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Power Discovery & Design - Workloads](discoveryworkloads.md)
->* [Connectivity](../connectivity/)
+>* [Connectivity](../connectivity/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../security/README.md)
