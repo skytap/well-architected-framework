@@ -18,7 +18,7 @@
                 <h1><a href="/"><img src="{{ '/skytap-logo.png' | absolute_url }}" alt="Skytap Logo" width="120px"></a></h1>
 
                 {% if site.github.is_project_page %}
-                    <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
+                    <a id="forkme_banner" href="{{ https://github.com/skytap/well-architected-framework }}">View on GitHub</a>
                 {% endif %}
 
                 <!--- <h2 id="project_title" class="read-only">{{ site.title | default: site.github.repository_name }}</h2> --->
@@ -40,27 +40,30 @@
                 <div class="sidebar col-12 col-sm-4 col-lg-3">
                     <ul class="nav nav-pills flex-column">
                         <li class="nav-item">
-                            <a href="/operations" class="nav-link">Operational Excellence</a>
+                            <a href="/well-architected-framework/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/well-architected-framework/operations/" class="nav-link">Operational Excellence</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="/resiliency/" class="nav-link">Resiliency - HA\DR\Migration</a>
+                            <a href="/well-architected-framework/resiliency/" class="nav-link">Resiliency - HA\DR\Migration</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="/security/" class="nav-link">Security</a>
+                            <a href="/well-architected-framework/security/" class="nav-link">Security</a>
                         </li>
-    
+
                         <!--- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">About Jekyll</a>
-    
-                            <div class="dropdown-menu show">
-                                <a class="dropdown-item" href="/resiliency/" id="resiliency">Resiliency - HA\DR\Migration</a>
-                                <a class="dropdown-item" href="/security/" id="security">Security</a>
-                                <a class="dropdown-item" href="/scalability/" id="scalability">Scalability & Performance Efficiency</a>
-                                <a class="dropdown-item" href="/cost/" id="cost">Cost Optimization</a>
-                            </div>
-                        </li> --->
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">About Jekyll</a>
+
+        <div class="dropdown-menu show">
+            <a class="dropdown-item" href="/resiliency/" id="resiliency">Resiliency - HA\DR\Migration</a>
+            <a class="dropdown-item" href="/security/" id="security">Security</a>
+            <a class="dropdown-item" href="/scalability/" id="scalability">Scalability & Performance Efficiency</a>
+            <a class="dropdown-item" href="/cost/" id="cost">Cost Optimization</a>
+        </div>
+    </li> --->
 
                     </ul>
                 </div>
