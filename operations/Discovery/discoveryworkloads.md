@@ -81,18 +81,18 @@ After performing the initial inventory of LPARs, execute the following
 commands and catalog into Bill of Materials (BOM) for the migration (can
 also run a SNAP command):
 
-<img src="..\discoveryworkloadsmedia\image1.png">
+<img src="discoveryworkloadsmedia\image1.png">
 
 **IBM i (SYSSTS, PTF, SFW Output)**
 
 After performing the initial inventory of LPARs, you can execute the
 following commands and catalog into the BOM for the migration.
 
-<img src="..\discoveryworkloadsmedia\image2.png">
+<img src="discoveryworkloadsmedia\image2.png">
 
 **Example BOM for Migration -- AIX, IBM I, Spot Windows/Linux**
 
-<img src="..\discoveryworkloadsmedia\image3.png">
+<img src="discoveryworkloadsmedia\image3.png">
 
 ###### *[Back to the Top](#toc)*
 ## Next steps
