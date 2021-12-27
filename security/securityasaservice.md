@@ -1,13 +1,18 @@
+---
+title: Security as a Service
+author: John Bradshaw, Principal Architect
+---
+
 ## Security as a Service
 
 Given the breadth of security controls available across multiple cloud
 vendors, the changing threat landscape, and the need to support modern
 and legacy workloads in the enterprise space, it can be difficult for
-organisations to provide those services internally.
+organizations to provide those services internally.
 
 Skytap works with a variety of Security as a Service vendors who can
 manage your cloud workloads and who have expert knowledge in securing
-cloud workloads. These partners can supplement an organisation's
+cloud workloads. These partners can supplement an organization's
 internal security support team and should be considered as part of a
 wider cloud strategy.
 

@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\operations\\connectivity",
-    "\\operations\\connectivity\\ExpressRoute",
-    "\\operations\\Discovery",
-    "\\resiliency",
-    "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\BRMS",
-    "\\resiliency\\solutions\\GoSave"
+    ""
   ],
-  "SelectedNode": "\\resiliency\\solutions\\HotMigrationOverview.md",
+  "SelectedNode": "\\_config.yml",
   "PreviewInSolutionExplorer": false
 }

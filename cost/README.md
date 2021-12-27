@@ -1,6 +1,7 @@
 ---
 title: Principles of cost optimization
 author: Matthew Romero, Technical Product Marketing Manager
+permalink: /cost/
 ---
 
 # Principles of cost optimization
@@ -13,8 +14,8 @@ When you are designing a cloud solution, focus on generating incremental value e
 
 **Cost guidance**
 
-- [Review cost principles](./overview.md)
-- [Develop a cost model](./design-model.md)
+- [Review cost principles](overview.md)
+- [Develop a cost model](design-model.md)
 - [Create budgets and alerts]()
 - [Review the cost optimization checklist]()
 
@@ -44,3 +45,17 @@ Certain infrastructure resources are delivered as fix-sized building blocks. Ens
 Treat cost monitoring and optimization as a process, rather than a point-in-time activity. Conduct regular cost reviews and measure and forecast the capacity needs so that you can provision resources dynamically and scale with demand. Review the cost management recommendations and take action to optimize workload costs.  Use [Advisor Score](/Skytap/advisor/Skytap-advisor-score) to identify the greatest opportunities for cost optimization for your workload.
 
 If you're just starting in this process review [enable success during a cloud adoption journey ](/Skytap/cloud-adoption-framework/getting-started/enable).
+
+## Next step
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../operations/README.md)
+
+**Resiliency**
+> [Skytap Resiliency Pillar](../resiliency/README.md)
+
+**Security**
+> [Skytap Security Pillar](../security/README.md)

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,maximum-scale=2">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+        {% seo %}
+        {% include head-custom.html %}
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+                <h1><a href="https://skytap.github.io/well-architected-framework/"><img src="{{ '/skytap-logo.png' | absolute_url }}" alt="Skytap Logo" width="120px"></a></h1>
+
+                {% if site.github.is_project_page %}
+                    <a id="forkme_banner" href="{{ https://github.com/skytap/well-architected-framework }}">View on GitHub</a>
+                {% endif %}
+
+                <!--- <h2 id="project_title" class="read-only">{{ site.title | default: site.github.repository_name }}</h2> --->
+                
+                <!--- <h3 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h3> --->
+            </header>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <div class="row">
+                <div class="sidebar col-12 col-sm-4 col-lg-3">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a href="/well-architected-framework/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/well-architected-framework/operations/" class="nav-link">Operational Excellence</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/well-architected-framework/resiliency/" class="nav-link">Resiliency - HA\DR\Migration</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/well-architected-framework/security/" class="nav-link">Security</a>
+                        </li>
+
+                        <!--- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">About Jekyll</a>
+
+        <div class="dropdown-menu show">
+            <a class="dropdown-item" href="/resiliency/" id="resiliency">Resiliency - HA\DR\Migration</a>
+            <a class="dropdown-item" href="/security/" id="security">Security</a>
+            <a class="dropdown-item" href="/scalability/" id="scalability">Scalability & Performance Efficiency</a>
+            <a class="dropdown-item" href="/cost/" id="cost">Cost Optimization</a>
+        </div>
+    </li> --->
+
+                    </ul>
+                </div>
+
+                <div class="content col-12 col-sm-8 col-lg-9">
+                    <section id="main_content" class="inner">
+                        {{ content }}
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <div class="row justify-content-center justify-content-lg-end">
+                    <span>Copyright &copy; {{ 'now' | date: "%Y" }} Skytap. All Rights Reserved</span>
+                </div>
+
+                {% if site.github.is_project_page %}
+                    <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+                {% endif %}
+            </footer>
+        </div>
+    </body>
+</html>

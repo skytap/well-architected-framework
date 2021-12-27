@@ -52,7 +52,7 @@ These are some key takeaway for developers and operators to consider from this g
 
 * Linux / Windows server in on-premise network, preferably close to IBM i server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of AZcopy utility
 
-<img src="media/image7.png" width="400">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image7.png" width="400">
 
 ###### *[Back to the Top](#toc)*
 #### Determining size to be backed up on ISO optical image<a name="determineisosize"></a>
@@ -101,9 +101,9 @@ ENDSBS \*ALL \*IMMED
 ```
 2. Go Save, Option22 and take below parameters on the command
 
-<img src="./media/image6.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image6.png">
 
-<img src="media/image4.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image4.png">
 
 3. Save QGPL and QUSRSYS and append to existing ISO in Optical device
 
@@ -214,7 +214,7 @@ Linux Example:
 
 7. On Install LIC screen, take Option 2 to Install LIC and Initialize system
 
-<img src="./media/image5.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image5.png">
 
 8. Post LIC installation, do disk configuration
 
@@ -222,11 +222,11 @@ Linux Example:
 
 10. Install OS using below option:
 
-<img src="./media/image2.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image2.png">
 
 11. Enable automatic configuration -- Y on set major system option screen.
 
-<img src="./media/image1.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image1.png">
 
 12. Change following on next screen:
 
@@ -306,7 +306,7 @@ STRNFSSVR \*ALL
 
 3.  Deploy Centos Desktop Machine from Template into Environment
 
-<img src="./media/image8.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image8.png">
 
 4. Boot and configure root and secondary users in CentOS
 
@@ -346,7 +346,7 @@ Linux Example:
 
 11. GO Restore Option 23 from virtual tape image catalog above
 
- <img src="./media/image9.png">
+ <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image9.png">
 
 ###### *[Back to the Top](#toc)*
 #### APPENDIX:<a name="appendix"></a>
@@ -388,7 +388,7 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 
 3. Choose virtual tape device, and other parameters as below:
 
-<img src="./media/image3.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image3.png">
 
 4. Check for joblog once the restore is completed using DSPJOBLOG
 

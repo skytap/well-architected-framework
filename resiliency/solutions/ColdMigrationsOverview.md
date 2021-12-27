@@ -13,12 +13,12 @@ is a one-touch solution to migrate your workloads into Azure.
 
 Here is an overview of Commvault.
 
-<img src="../migrationmedia/media/image7.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image7.png">
 
 Here is an overview of how Skytap on Azure and Commvault work together
 for AIX and IBM i (as400).
 
-<img src="../migrationmedia/media/image8.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image8.png">
 
 <BR>
 <BR>
@@ -45,9 +45,8 @@ for AIX and IBM i (as400).
 
 >**Design**
 >* [Design Considerations for Azure](../designconsiderationsazure.md)
-<!-- 
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
--->
+
+<!--- >* [Design Considerations for IBM Cloud](../designconsiderationsibm.md) --->
 
 **Security**
 > * [Skytap Security Pillar](../../security/README.md)

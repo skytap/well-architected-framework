@@ -1,12 +1,8 @@
 ---
-title: Security
-description: Considerations to ensure security.
+title: Key Security Areas
 author: John Bradshaw, Principal Architect
-categories:
-  - security 
- subject:
-  - security
 ---
+
 ## Key Security Areas
 
 Within Skytap, there are five areas to build a control framework around:
@@ -16,15 +12,13 @@ Virtual Machines.
 For each of these areas and subsections this document will provide
 standardized designs and partner points of contact where appropriate.
 
-###  
-
 ### Platform
 
 The Skytap platform provides controls for Security Policies;
 Notifications; Authentication, Authorization and Accounting; and
 Auditing.
 
-<img src="./media/image4.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image4.png" width="500">
 
 *Figure 1 - Platform Required Capabilities*
 
@@ -33,14 +27,14 @@ Auditing.
 The security policies control access to the platform for authenticated
 users. This can restrict connectivity to approved IP addresses (such as
 those on the corporate network), password complexity rules (for those
-not using SSO) and session timeouts (prompting for reauthentication).
+not using SSO) and session timeouts (prompting for re-authentication).
 Skytap recommends that access is limited to the corporate network
 subnets, or alternatively use a virtual machine as a Bastion host to
 access the Skytap dashboard securely from the Skytap infrastructure.
 More information on access policies is available
-[[here]{.ul}](https://help.skytap.com/setting-access-policies.html)
+[here]](https://help.skytap.com/setting-access-policies.html)
 
-<img src=".//media/image5.png" width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image5.png" width="800">
 
 *Figure 2 - Access Policies available within the Skytap Dashboard*
 
@@ -149,6 +143,7 @@ to every new user on Skytap. This feature should be used sparingly to
 prevent excessive user permissions.
 
 *Project Permissions*
+
 | Owner         | Manager | Editor | Participant | Viewer | Can do this                                                                                               |
 |---------------|---------|--------|-------------|--------|-----------------------------------------------------------------------------------------------------------|
 | ✔️             | ✔️       | ✔️      | ✔️           | ✔️      | Access and use a running environment                                                                      |
@@ -168,6 +163,7 @@ prevent excessive user permissions.
 | Administrator |         |        |             |        | Permanently delete environments, templates, and assets   that are in the project and owned by other users |
 
 
+
 ***‡**  The restricted user must be an editor or manager in at least
 one project to perform these actions as a participant. For example, if
 the user is a participant in project A and an editor in project B, the
@@ -184,7 +180,7 @@ users to maintain the templates (template creators), and all other users
 in the account will have permission to create environments from those
 templates (template users).
 
-<img src=".//media/image6.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image6.png" width="500">
 
 *Figure 3 - Example of Project Implementation*
 

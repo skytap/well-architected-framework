@@ -68,11 +68,10 @@ organization during the discovery phase aligned to three key areas:
 ### Skytap Power Discovery for Workloads - Skytap for Azure Support and Limits (AIX and IBM i)<a name="designforazure"></a>
 
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
-<!-- 
-### Skytap Power Discovery for Workloads - Skytap for IBM Cloud Support and Limits (AIX and IBM i)<a name="designforibm"></a>
 
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
--->
+<!--- ### Skytap Power Discovery for Workloads - Skytap for IBM Cloud Support and Limits (AIX and IBM i)<a name="designforibm"></a>
+
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
 
 ### Skytap Power Discovery for Workloads - Sample Outputs<a name="samples"></a>
 
@@ -82,18 +81,18 @@ After performing the initial inventory of LPARs, execute the following
 commands and catalog into Bill of Materials (BOM) for the migration (can
 also run a SNAP command):
 
-<img src=".\discoveryworkloadsmedia\image1.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/image1.png">
 
 **IBM i (SYSSTS, PTF, SFW Output)**
 
 After performing the initial inventory of LPARs, you can execute the
 following commands and catalog into the BOM for the migration.
 
-<img src=".\discoveryworkloadsmedia\image2.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/image2.png">
 
 **Example BOM for Migration -- AIX, IBM I, Spot Windows/Linux**
 
-<img src=".\discoveryworkloadsmedia\image3.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/image3.png">
 
 ###### *[Back to the Top](#toc)*
 ## Next steps
@@ -102,24 +101,22 @@ following commands and catalog into the BOM for the migration.
 > [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](README.md)
+>[Skytap Operational Excellence Pillar](../README.md)
 >* [Power Discovery](../Discovery/README.md)
        > [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Connectivity](../connectivity/README.md)
-
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Migration Solutions**
->* [Hot Migations (Replication Sync)](../../resiliency/solutions/HotMigrationOverview.md)
+>* [Hot Migrations (Replication Sync)](../../resiliency/solutions/HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../../resiliency/solutions/ColdMigrationsOverview.md)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
-<!-- 
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
--->
+
+<!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
 
 **Security**
 > [Skytap Security Pillar](../../security/README.md)
