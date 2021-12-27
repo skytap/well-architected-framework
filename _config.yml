@@ -1,4 +1,6 @@
-theme: jekyll-theme-slate
+#theme: jekyll-theme-slate
+
+remote_theme: pages-themes/minimal@v0.2.0
 
 # This config file is meant for settings that affect your entire website. When you first set up your website you should go through all these settings and edit them, but after the initial set up you won't need to come back to this file often.
 
@@ -250,3 +252,4 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-readme-index
+  - jekyll-remote-theme
