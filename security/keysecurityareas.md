@@ -29,12 +29,12 @@ Auditing.
 The security policies control access to the platform for authenticated
 users. This can restrict connectivity to approved IP addresses (such as
 those on the corporate network), password complexity rules (for those
-not using SSO) and session timeouts (prompting for reauthentication).
+not using SSO) and session timeouts (prompting for re-authentication).
 Skytap recommends that access is limited to the corporate network
 subnets, or alternatively use a virtual machine as a Bastion host to
 access the Skytap dashboard securely from the Skytap infrastructure.
 More information on access policies is available
-[[here]{.ul}](https://help.skytap.com/setting-access-policies.html)
+[here]](https://help.skytap.com/setting-access-policies.html)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image5.png" width="800">
 
@@ -145,6 +145,7 @@ to every new user on Skytap. This feature should be used sparingly to
 prevent excessive user permissions.
 
 *Project Permissions*
+
 | Owner         | Manager | Editor | Participant | Viewer | Can do this                                                                                               |
 |---------------|---------|--------|-------------|--------|-----------------------------------------------------------------------------------------------------------|
 | ✔️             | ✔️       | ✔️      | ✔️           | ✔️      | Access and use a running environment                                                                      |
@@ -162,6 +163,7 @@ prevent excessive user permissions.
 | ✔️             |         |        |             |        | Delete the project                                                                                        |
 | Administrator |         |        |             |        | Change project permissions                                                                                |
 | Administrator |         |        |             |        | Permanently delete environments, templates, and assets   that are in the project and owned by other users |
+
 
 
 ***‡**  The restricted user must be an editor or manager in at least
