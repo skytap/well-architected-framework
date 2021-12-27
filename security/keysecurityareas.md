@@ -12,8 +12,6 @@ Virtual Machines.
 For each of these areas and subsections this document will provide
 standardized designs and partner points of contact where appropriate.
 
-###  
-
 ### Platform
 
 The Skytap platform provides controls for Security Policies;
