@@ -98,13 +98,13 @@ following commands and catalog into the BOM for the migration.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../)
->* [Power Discovery](../)
+>[Skytap Operational Excellence Pillar](../README.md)
+>* [Power Discovery](../Discovery/README.md)
        > [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
->* [Connectivity](../connectivity/)
+>* [Connectivity](../connectivity/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
@@ -119,4 +119,4 @@ following commands and catalog into the BOM for the migration.
 <!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
 
 **Security**
-> [Skytap Security Pillar](../../../security/)
+> [Skytap Security Pillar](../../security/README.md)
