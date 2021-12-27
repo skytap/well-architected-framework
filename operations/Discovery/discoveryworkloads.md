@@ -107,10 +107,10 @@ following commands and catalog into the BOM for the migration.
 >* [Connectivity](../connectivity/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../resiliency/)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Migration Solutions**
->* [Hot Migations (Replication Sync)](../../resiliency/solutions/HotMigrationOverview.md)
+>* [Hot Migrations (Replication Sync)](../../resiliency/solutions/HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../../resiliency/solutions/ColdMigrationsOverview.md)
 
 >**Design**
