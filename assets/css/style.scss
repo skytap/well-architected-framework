@@ -7,6 +7,7 @@
 $font-family-base:      'Nunito', sans-serif;
 // $font-family-display:   'Quattrocento', serif;
 $font-family-display:   'Source Serif Pro', serif;
+$font-family-fa:        "Font Awesome 5 Free";
 
 $navbar-col:        {{ site.navbar-col }};          // #EAEAEA
 $navbar-text-col:   {{ site.navbar-text-col }};     // #404040;
@@ -117,6 +118,31 @@ h1 {
         #main_content {
             max-width: none;
             padding: 0;
+
+            #next-step {
+                margin-top: 60px;
+            }
+
+            h6[id^="back-to-the-top"] {
+                a {
+                    &:after {
+                        transition: top 0.3s ease;
+                        position: relative;
+                        top: 1px;
+                        margin-left: 5px;
+                        font-family: $font-family-fa;
+                        font-weight: 400;
+                        font-style: normal;
+                        content: "\f35b";
+                    }
+
+                    &:hover {
+                        &:after {
+                            top: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
