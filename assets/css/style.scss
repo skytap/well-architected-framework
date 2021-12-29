@@ -1,7 +1,25 @@
 ---
 ---
 
-@import "jekyll-theme-slate";
+@import "jekyll-theme-minimal";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Source+Serif+Pro:wght@300;400&display=swap');
+
+$font-family-base:      'Nunito', sans-serif;
+// $font-family-display:   'Quattrocento', serif;
+$font-family-display:   'Source Serif Pro', serif;
+
+$navbar-col:        {{ site.navbar-col }};          // #EAEAEA
+$navbar-text-col:   {{ site.navbar-text-col }};     // #404040;
+$navbar-border-col: {{ site.navbar-border-col }};   // #DDDDDD
+$page-col:          {{ site.page-col }};            // #FFFFFF
+$title-col:         {{ site.title-col }};           // #2090ce
+$text-col:          {{ site.text-col }};            // #404040
+$link-col:          {{ site.link-col }};            // #008AFF
+$hover-col:         {{ site.hover-col }};           // #0085A1
+$footer-col:        {{ site.footer-col }};          // #EAEAEA
+$footer-text-col:   {{ site.footer-text-col }};     // #777777
+$footer-link-col:   {{ site.footer-link-col }};     // #404040
+$footer-hover-col:  {{ site.footer-hover-col }};    // #0085A1
 
 * {
     box-sizing: border-box;
@@ -9,29 +27,48 @@
 
 body {
     padding: 0;
+    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: $font-family-base;
 
     a {
         text-decoration: none;
-        font-weight: 400;
+        font-weight: 300;
 
         &:hover {
-            font-weight: 400;
+            font-weight: 300;
             text-decoration: none;
         }
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-display;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+    // color: $title-col;
+}
 
 #header_wrap {
-    border-bottom: solid 1px {{ site.navbar-border-col }};
+    border-bottom: solid 1px $navbar-border-col;
     
-    .inner {
+    .header-content {
+        position: static;
         max-width: none;
         padding: 10px 20px;
+        background-color: $link-col;
 
-        h1 {
+        .main-logo {
             margin: 0;
             line-height: 1;
+
+            svg {
+                fill: $page-col;
+            }
 
             img {
                 border: none;
@@ -46,6 +83,7 @@ body {
 }
 
 #main_content_wrap {
+    width: 100%;
     padding-right: 12px;
     padding-left: 12px;
 
@@ -84,15 +122,22 @@ body {
 }
 
 #footer_wrap {
-    .inner {
+    .footer-content {
+        position: static;
         max-width: none;
+        border-top: solid 1px $navbar-border-col;
         padding: 20px 20px;
-        color: {{ site.page-col }};
+        font-size: 16px;
+        color: $text-col;
 
         .row {
             > * {
                 width: auto;
             }
+        }
+
+        svg {
+            fill: $link-col;
         }
 
         p.copyright { display: none; }
