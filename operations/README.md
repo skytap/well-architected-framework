@@ -17,7 +17,7 @@ The steps in this guide can help the strategy team lead the organizational chang
 
 These are the disciplines we group in the operational excellence pillar:
 
-| Operational excellence disciplines | Description |
+| Operational Excellence Disciplines | Description |
 |-------------------|-------------|
 | [Power Discovery](Discovery/README.md) | IBM Power Workloads have been in use for over thirty years and have unique considerations when migrating them to a Cloud Platform  |
 | [Connectivity](connectivity/README.md) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
