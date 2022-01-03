@@ -5,7 +5,7 @@ Author: Matthew Romero, Technical Product Marketing Manager
 
 # Utilizing Commvault in Skytap with IBM Power Workloads in Azure
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
@@ -17,22 +17,14 @@ This document does not provide you with any legal rights to any intellectual pro
 
 ## Key Takeaways<a name="takeaways"></a>
 
-Commvault may be used to migrate, protect, and recover IBM i LPARs on
-Skytap for Azure. This guide will walk you through all the steps
-required to get up and running with Commvault in Skytap.
+Commvault may be used to migrate, protect, and recover IBM i LPARs on Skytap for Azure. This guide will walk you through all the steps required to get up and running with Commvault in Skytap.
 
-For the overall architecture, please refer to the sample reference
-architecture shown below. In the example shown in *Figure 1*, a 1--*n*
-set of IBM i LPARs resides on-premises in a datacenter facility. In the
-example architecture, Commvault is used to back up the IBM i selected
-LPAR data to Commvault proxy MediaAgents to be transferred to Azure Blob
-Storage. The Commvault CommServer controls the orchestration and
-automation of the backup within Azure. The data, once transferred, may
-then be restored to Skytap for Azure, unchanged.
-
+For the overall architecture, please refer to the sample reference architecture shown below. In the example shown in *Figure 1*, a 1--*n* set of IBM i LPARs resides on-premises in a datacenter facility. In the example architecture, Commvault is used to back up the IBM i selected LPAR data to Commvault proxy MediaAgents to be transferred to Azure Blob Storage. The Commvault CommServer controls the orchestration and automation of the backup within Azure. The data, once transferred, may then be restored to Skytap for Azure, unchanged.
+<hr>
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image1.png">
 
 *Figure 1: Sample Azure Reference Architecture*
+<hr>
 
 # Setting Up Commvault Within a Skytap Environment
 
@@ -40,49 +32,28 @@ then be restored to Skytap for Azure, unchanged.
 
 ### Staging Your Skytap Environment for Commvault
 
-1.  Navigate to **cloud.skytap.com**. The Skytap Dashboard page will
-    then display.
+1.  Navigate to **cloud.skytap.com**. The Skytap Dashboard page will then display.
 
-2.  Once you have signed into the portal with your **Skytap account**,
-    click the **Environments** tab at the top of the window. The
-    **Manage Environments and VMs** page will then display.
+2.  Once you have signed into the portal with your **Skytap account**, click the **Environments** tab at the top of the window. The **Manage Environments and VMs** page will then display.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image3.png">6.0in"
-height="4.74in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image3.png">
 
-3.  Provision an **Environment** by clicking the **(+) New Environment**
-    button
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image4.png">0.94in"
-    height="0.19in"} on the upper right-hand side of the window. The
-    **Create a new environment** dialogue will display.
+3.  Provision an **Environment** by clicking the **(+) New Environment** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image4.png"> on the upper right-hand side of the window. The **Create a new environment** dialogue will display.
 
-4.  Search for and select "**Windows Server 2019 Standard Sysprepped**"
-    from the search field.
+4.  Search for and select "**Windows Server 2019 Standard Sysprepped**" from the search field.
 
-> This virtual machine will host the Commvault CommServer and is the
-> first step in our infrastructure.
->
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image5.png">6.0in"
-> height="3.28in"}
+***NOTE***: *This virtual machine will host the Commvault CommServer and is the first step in our infrastructure.*
 
-5.  In the upper right of the **Create a new Environment** window, click
-    the **Create** Environment button
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image6.png">0.92in"
-    height="0.19in"}.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image5.png">
+
+5.  In the upper right of the **Create a new Environment** window, click the **Create** Environment button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image6.png">.
 
 Once your new environment is created, update the environment details to
 make it more clear.
 
-1.  Click the **pencil icon**
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png">0.17in"
-    height="0.17in"} **(Edit environment information)** that is next to
-    the environment title **Windows Server 2019 Standard Sysprepped** at
-    the top of the environment details window.
+1.  Click the **pencil icon** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png"> **(Edit environment information)** that is next to the environment title **Windows Server 2019 Standard Sysprepped** at the top of the environment details window.
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image8.png">6.0in"
-> height="4.47in"}
->
-> The **Edit environment** dialogue displays.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image8.png"> The **Edit environment** dialogue displays.
 >
 > <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png">3.48in"
 > height="1.66in"}
@@ -175,8 +146,7 @@ height="2.35in"}
     <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image20.png">0.28in"
     height="0.27in"} to start the Windows Server.
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image21.png">2.0in"
-> height="2.33in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image21.png">
 
 2.  After the VM has turned to a **Green** and **Running** status, click
     the VM tile to open a Secure Remote Access (SRA) client view.\
@@ -1085,12 +1055,33 @@ target guest:
     subclients (not including the DR subclient, which is for authoring
     DVDs)
 
-> Migration/DR use case: Now that the user data has been restored onto
-> the server, the customer can decide to keep the existing IP address
-> and hostname, or to reset the server to the identity of the original
-> machine.
+##### Migration/DR use case: 
+Now that the user data has been restored onto the server, the customer can decide to keep the existing IP address
+ and hostname, or to reset the server to the identity of the original machine.
 
-a.  Manual steps are required to change the IP address and hostname to
-    match the original server. These steps are detailed in the IBM Power
-    series guides. Users should also check the status of any private
-    authorities that existed in the environment.
+***NOTE***: *Manual steps are required to change the IP address and hostname to match the original server. These steps are detailed in the IBM Power series guides. Users should also check the status of any private authorities that existed in the environment.*
+
+
+## Next Steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../../operations/README.md)
+
+**Resiliency**
+>**Migration Solutions**
+>* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
+
+>**Design**
+>* [Design Considerations for Azure](../../designconsiderationsazure.md)
+
+<!-- 
+>* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
+-->
+
+
+**Security**
+> * [Skytap Security Pillar](../../../security/README.md)
