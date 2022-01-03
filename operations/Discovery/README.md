@@ -8,8 +8,8 @@ permalink: /operations/Discovery/
 ### What is the IBM Power Estate?
 
 All organizations have some type of digital estate which is a collection
-of assets that include virtual machines (VMs), physical servers,
-applications, and their data. All of these assets power the organization
+of assets that include their virtual machines (VMs), physical servers,
+applications, and data. All of these assets power the organization
 and its operations. 
 
 For those organizations with an investment in IBM
@@ -17,7 +17,7 @@ Power, we look at segmenting the overall digital estate to the Power
 estate. While functionally similar, the terminology can be slightly
 different. 
 
-An organizations Power estate is comprised of:
+An organization's Power estate is comprised of:
 
 * **IBM Power systems** (sometimes called frames): IBM Power Systems
     are the physical servers that Power workloads and their applications
