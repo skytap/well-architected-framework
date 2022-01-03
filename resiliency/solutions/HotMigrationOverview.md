@@ -10,14 +10,14 @@ For hot migrations, Skytap partners with Precisely, the market leader for high a
 
 <b>Quick Recap: What is Precisely?</b>
 
-- MIMIX is the most prevalent tool used in RPO scenarios of near-zero
-- Easy to Package – Support for both AIX and IBM I
+- Precisely's MIMIX is the most prevalent tool used in RPO scenarios of near-zero
+- Easy to Package – Support for both AIX and IBM i
 - Automated Role Swaps Allow for Testing, Operations Upgrades in Prod
 - AIX Solution Provides Live Snapshot Capability for Any Subsidiary Environment Seeding
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/preciselyhotmigrationtopo.png" width="800">
 
-This is built on IBM's remote journaling which replicates changed data in real-time and minimizes bandwidth usage. The MIMX change data capture replicates non-journaled data. This solution is flexible and platform independent because it supports mixed hardware, storage and IBM I OS version. It is also optimized for performance because it:
+This is built on IBM's remote journaling which replicates changed data in real-time and minimizes bandwidth usage. The MIMIX change data capture replicates non-journaled data. This solution is flexible and platform independent because it supports mixed hardware, storage and IBM i OS version. It is also optimized for performance because it:
 
 -   delivers near-zero RPO (zero with synchronous Remote Journaling)
 
