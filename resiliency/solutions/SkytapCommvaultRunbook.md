@@ -32,13 +32,13 @@ For the overall architecture, please refer to the sample reference architecture 
 
 ### Staging Your Skytap Environment for Commvault
 
-1.  Navigate to **cloud.skytap.com**. The Skytap Dashboard page will then display.
+1.  Navigate to **[cloud.skytap.com](https://cloud.skytap.com)**. The Skytap Dashboard page will then display.
 
 2.  Once you have signed into the portal with your **Skytap account**, click the **Environments** tab at the top of the window. The **Manage Environments and VMs** page will then display.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image3.png">
 
-3.  Provision an **Environment** by clicking the **(+) New Environment** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image4.png"> on the upper right-hand side of the window. The **Create a new environment** dialogue will display.
+3.  Provision an **Environment** by clicking the **(+) New Environment** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image4.png" width="150"> on the upper right-hand side of the window. The **Create a new environment** dialogue will display.
 
 4.  Search for and select "**Windows Server 2019 Standard Sysprepped**" from the search field.
 
