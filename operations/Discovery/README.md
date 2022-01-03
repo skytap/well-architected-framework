@@ -56,7 +56,7 @@ approach for x86 workloads also apply to Power:
     or more application components to take advantage of native Cloud
     services.
 
-* **Rebuild**: In some cases it isn't cost effective ro refactor or
+* **Rebuild**: In some cases it isn't cost effective to refactor or
     rehost an application due to an aging code base, or a lack of
     knowledge as to how the legacy system works. In this case, the
     organization may decide to just start from scratch and create a new
@@ -140,7 +140,7 @@ Skytap on Azure.
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
 | [Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage  |
-| [Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - softwar level identification - Application requirements |
+| [Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements |
 
 ## Next steps
 
