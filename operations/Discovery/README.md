@@ -19,19 +19,19 @@ different.
 
 An organization's Power estate is comprised of:
 
-* **IBM Power systems** (sometimes called frames): IBM Power Systems
+* **IBM Power Systems** (sometimes called frames): IBM Power Systems
     are the physical servers that Power workloads and their applications
     run on.
 
 * **Power VM**: Power VM is the virtualization engine that runs on IBM
-    Power Hardware
+    Power Hardware.
 
-* **LPARs (Logical Partitions)**: The LPAR is the analogous to the
+* **LPARs (Logical Partitions)**: The LPAR is analogous to the
     Virtual Machine, or VM on x86.
 
-* **Storage**: While smaller shops will use storage local to the Power
-    system, most larger deployments use fiber attached storage to a
-    Storage Area Network (SAN)
+* **Storage**: While smaller organizations may use storage local to the Power
+    System, most larger deployments use fiber attached storage to a
+    Storage Area Network (SAN).
 
 * **Virtual IO Systems**: This is something most commonly called VIOS
     (Virtual Input Output System). VIOS provides network and storage
@@ -48,7 +48,7 @@ The common [Cloud
 rationalization](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization)
 approach for x86 workloads also apply to Power:
 
-* **Rehost**: This is commonly referred as a lift of shift of existing
+* **Rehost**: This is commonly referred to as a lift of shift of existing
     workloads into a Cloud provider with minimal change to the original
     architecture.
 
@@ -59,7 +59,7 @@ approach for x86 workloads also apply to Power:
 * **Rebuild**: In some cases it isn't cost effective to refactor or
     rehost an application due to an aging code base, or a lack of
     knowledge as to how the legacy system works. In this case, the
-    organization may decide to just start from scratch and create a new
+    organization may decide to start from scratch and create a new
     version of the application completely rearchitected from the ground
     up into a native Cloud-based application that leverages native
     services.
@@ -77,21 +77,21 @@ approach for x86 workloads also apply to Power:
 
 ### Updated Cloud Rationalization and IBM Power Workloads 
 
-Before Skytap on Azure, organizations would consider all of the
-approaches above with their Power applications, but after years of
-moving their applications to the Cloud, there are thousands of customer
-applications that are still running in the datacenter that are
+Prior to existence of Skytap on Azure, organizations would consider all of the
+approaches above for their Power applications, but after years of
+organization moving their applications to the Cloud, there are still thousands of 
+applications running in the data center that are
 increasingly becoming stuck where they are. In this case, organizations
 do not want to make the investment to rearchitect, rebuild, replace, or
 retire them. The ability to now run IBM Power applications in
-hyper-scale Cloud providers such as Microsoft Azure has now changed the
+hyper-scale Cloud providers such as Microsoft Azure has changed the
 landscape of Cloud rationalization. Let's revisit each of them in more
 detail to describe how organizations may want to reconsider this process
 for Power applications.
 
-* **Rehost**: Before Skytap on Azure, there was no easy way to rehost
-    an application in Azure, or another hyperscale provider. The "next
-    best" option is to run Power applications in a colocation provider
+* **Rehost**: Prior to Skytap on Azure, there was not an easy way to rehost
+    an application in Azure or another hyperscale provider. The "next
+    best" option was to run Power applications in a colocation provider
     with a direct connection to the Cloud provider of choice. This has
     the disadvantage of having to still maintain physical
     infrastructure. Skytap on Azure allows you move those workloads into
@@ -99,7 +99,7 @@ for Power applications.
     in close proximity to their Skytap x86, Azure x86 and Azure native
     Cloud Services which allows for continued high-performance and
     easier manageability. Rehost is essentially a new option for Power
-    workloads that didn't exist before in hyper-scale Cloud providers
+    workloads that didn't exist before in hyperscale Cloud providers
     that is now a new reality with Skytap on Azure.
 
 * **Refactor**: With the ability to run Power based applications in
@@ -110,24 +110,23 @@ for Power applications.
     or application server can be refactored to running on Cloud-based
     x86 or Cloud-native solutions.
 
-* **Rearchitect**: Applications that are large where the Power
-    component is the "system of record" are great examples moving the
-    application to run natively in Skytap on Azure is beneficial.
-    Examples are IBM I applications that are used for logistics or
+* **Rearchitect**: It is beneficial to run large applications where the Power
+    component is the "system of record" natively in Skytap on Azure.
+    Examples include IBM i applications that are used for logistics or
     warehouse management where 90% of the application can be
     Rearchitected to create a next-gen mobile application, or one that
-    leverages AI. Instead of taking the time and expense to Rearchitect
-    the Power based component it can simply live side-by-side with its
+    leverages AI. Instead of taking the time and incurring expenses to Rearchitect
+    the Power based component, it can simply live side-by-side with its
     Cloud-native components.
 
 * **Rebuild**: There are plenty of IBM Power applications that are
     meeting user needs today and tomorrow. If there is a Cloud-first
     strategy, does it make sense to rebuild it to be cloud-native?
-    Instead of rebuilding it, it can simply be rehosted into Skytap on
+    Instead of rebuilding it, it can simply be rehosted in Skytap on
     Azure.
 
 
-Once you understand your IBM Power estate, then you can start the
+Once you understand your IBM Power estate, you can start the
 process of discovery to determine what and how you will be migrating to
 Skytap on Azure.
 
@@ -139,8 +138,8 @@ Skytap on Azure.
 
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
-| [Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage  |
-| [Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements |
+| [Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage.  |
+| [Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements. |
 
 ## Next steps
 
