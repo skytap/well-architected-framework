@@ -5,7 +5,7 @@ Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, 
 ---
 # IBM i workload migration from on-premises to Skytap using BRMS ICC
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
@@ -28,7 +28,7 @@ This document does not provide you with any legal rights to any intellectual pro
 
 ## Key Takeaways <a name="takeaways"></a>
 
-These are some key takeaway for developers and operators to consider from this guide:
+These are some key takeaways for developers and operators to consider from this guide:
 
 * Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
 
