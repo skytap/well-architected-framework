@@ -157,6 +157,7 @@ STRNFSSVR \*ALL
 3. Bring system to restricted state and start Go SAVE, Option 23
 
 4. Set up NFS exports for AZCopy Linux server to Azure using the following commands:
+
 ```bash
 ENDNFSSVR \*ALL
 
@@ -168,6 +169,7 @@ STRNFSSVR \*ALL
 5. Mount NFS directory above to Linux server in same network as source IBM i LPAR
 
 Example:
+
 ```bash
 mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
 ```
@@ -179,6 +181,7 @@ mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
 7. extract AZCopy archive to directory
 
 Example:
+
 ```bash
 tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
 ```
@@ -188,11 +191,13 @@ tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
    [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory)
 
 Windows Example:
+
 ```powershell
 azcopy copy \'\<local-directory-path-of-NFS-mount\>\' \'https://\<storage-account-name\>.\<blob or dfs\>.core.windows.net/\<container-name\>\' \--recursive
 ```
 
 Linux Example:
+
 ```bash
 ./azcopy copy '/home/LinuxUser/localNFSDirectory'https://<myStorageAccount>.blob.core.windows.net/containerName?\<SAS-Key>\ \--recursive
  ```

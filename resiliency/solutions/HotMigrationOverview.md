@@ -8,7 +8,7 @@ author: George Stamos, Director, Solutions Architect - Business Development
 
 For hot migrations, Skytap partners with Precisely, the market leader for high availability scenarios. Precisely supports IBM i and AIX. How Precisely supports the Skytap on Azure hot migration for IBM i is depicted below.
 
-<b>Quick Recap: What is Precisely?</b>
+### What is Precisely for IBM iSeries?
 
 - Precisely's MIMIX is the most prevalent tool used in RPO scenarios of near-zero
 - Easy to Package – Support for both AIX and IBM i
@@ -57,7 +57,11 @@ The following outlines popular Precisely migration scenarios available for you t
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/mimixibmirunbookoutline.png" width="800">
 
-**What's different about AIX?**
+#### Additional Resources
+
+- **[Skytap + Precisely MIMIX Runbook for IBM iSeries](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/SKYTAP-Systemi-MIMIX-Runbook.pdf)**
+
+### What's different about AIX?
 
 - The AIX Mimix Product focuses on Volume Group replication and sync
 - Any applications encapsulated in the Volume Group are included as part of the replication
@@ -69,7 +73,11 @@ The following outlines popular Precisely migration scenarios available for you t
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/mimixaixrunbookoutline.png" width="800">
 
-## Additional Solutions
+#### Additional Resources
+
+- **[Skytap + Precisely MIMIX Runbook for AIX](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/Mimix-AIX-Runbook-V522.pdf)**
+
+#### Additional Solutions
 
 - **[Skytap Live Clone Feature](liveclone.md)**
 
