@@ -1,9 +1,9 @@
 ---
 Title: IBM i workload migration from on-prem to Skytap using BRMS ICC
-Description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
+Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using BRMS ICC
 Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
 ---
-# IBM i workload migration from on-prem to Skytap using BRMS ICC
+# IBM i workload migration from on-premises to Skytap using BRMS ICC
 
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
 
