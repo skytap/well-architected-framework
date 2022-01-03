@@ -1,11 +1,11 @@
 ---
 Title: IBM i workload migration from on-prem to Skytap using BRMS ICC
-Description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
+Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using BRMS ICC
 Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
 ---
-# IBM i workload migration from on-prem to Skytap using BRMS ICC
+# IBM i workload migration from on-premises to Skytap using BRMS ICC
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
@@ -28,7 +28,7 @@ This document does not provide you with any legal rights to any intellectual pro
 
 ## Key Takeaways <a name="takeaways"></a>
 
-These are some key takeaway for developers and operators to consider from this guide:
+These are some key takeaways for developers and operators to consider from this guide:
 
 * Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
 
@@ -70,7 +70,7 @@ Below LPPs need to be installed on IBM i LPAR:
 
 ## Create ICC FTP resource <a name="ftpresourcecreate"></a>
 
-Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.For this document, we will be using Linux in our examples.
+Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system. For this document, we will be using Linux in our examples.
 
 In case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZ copy.
 
@@ -212,7 +212,7 @@ It may be already started, output will be: \"FTP Server Starting\"
 ===> WRKMEDBRM
 ```
 
-4. Find all the media objects that have the \"+\" (plus sign) next to them.They should end with \"OPT\" and \"TAP. 
+4. Find all the media objects that have the \"+\" (plus sign) next to them. They should end with \"OPT\" and \"TAP. 
 5. Put an \"8\" (move) next to all of them with the plus sign. 
 
 You might have to page down to find all of them.
@@ -556,7 +556,7 @@ partition, you must specify the following:
 
 **Resiliency**
 >**Migration Solutions**
->* [Hot Migations (Replication Sync)](../HotMigrationOverview.md)
+>* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
 
 >**Design**

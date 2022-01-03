@@ -1,12 +1,12 @@
 ---
-title: IBM i workload migration using Go Save/Restore, Option-22,23
-description: Skytap Cold Migration Solution - IBM i workload migration using Go Save/Restore, Option-22,23
+title: IBM i workload migration using Go Save/Restore, Option 22-23
+description: Skytap Cold Migration Solution - IBM i workload migration using Go Save/Restore, Option 22-23
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ---
 
 # IBM i workload migration using Go Save/Restore, Option 22-23
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
@@ -30,7 +30,7 @@ This document does not provide you with any legal rights to any intellectual pro
 
 These are some key takeaway for developers and operators to consider from this guide:
 
-* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save, Option 22, 23.
+* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save/Restore, Option 22-23.
 
 * Full-system recovery including LIC, OS installation
 
@@ -50,7 +50,7 @@ These are some key takeaway for developers and operators to consider from this g
 
 * AZCopy the virtual tapes from the NFS mounted directory into Azure object storage container
 
-* Linux / Windows server in on-premise network, preferably close to IBM i server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of AZcopy utility
+* Linux / Windows server in on-premise network, preferably close to IBM i server, preferably Linux with desktop environment over Windows, no specific storage/compute requirements, installation of AZCopy utility
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image7.png" width="400">
 
@@ -99,7 +99,7 @@ WRKSPLF
 ```bash
 ENDSBS \*ALL \*IMMED
 ```
-2. Go Save, Option22 and take below parameters on the command
+2. Go Save, Option22 and take below parameters on the command:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image6.png">
 
@@ -125,7 +125,7 @@ ENDSBS \*ALL \*IMMED
 STRSBS QCTL 
 ```
 
-6. Create NFS export on directory where image catalog is loaded, so you can copy the ISO to a machine where it can be uploaded to Assets useing the following commands:
+6. Create NFS export on directory where image catalog is loaded, so you can copy the ISO to a machine where it can be uploaded to Assets using the following commands:
 
 ```bash
 ENDNFSSVR \*ALL
@@ -137,7 +137,7 @@ STRNFSSVR \*ALL
 
 7.  Begin uploading the ISO to Assets --
 
-    -   Mount NFS exported directory from IBM i server to Linux/Windows machine (INSERT EXAMPLE NFS MOUNT COMMAND HERE)
+    -   Mount NFS exported directory from IBM i server to Linux/Windows machine 
 
     -   Load Skytap portal in browser of desktop session on Linux/Windows machine
 
@@ -154,7 +154,7 @@ STRNFSSVR \*ALL
 
 2.  Determine tape size based on overall data size, you must pre-create each tape required for the total Option 23 save
 
-3. Bring system to restricted state and start Go SAVE, Option23
+3. Bring system to restricted state and start Go SAVE, Option 23
 
 4. Set up NFS exports for AZCopy Linux server to Azure using the following commands:
 ```bash
@@ -198,7 +198,7 @@ Linux Example:
  ```
 
 ###### *[Back to the Top](#toc)*
-#### Deploy IBM i in Skytap cloud<a name="deployinskytap"></a>
+#### Deploy IBM i in Skytap<a name="deployinskytap"></a>
 
 1. Deploy IBM i from template
 
@@ -310,7 +310,7 @@ STRNFSSVR \*ALL
 
 4. Boot and configure root and secondary users in CentOS
 
-5. Mount NFS directory from IBMi server in Skytap on Linux machine:
+5. Mount NFS directory from IBM i server in Skytap on Linux machine:
 
 Example:
 ```bash
@@ -327,7 +327,7 @@ Example:
 ```bash
 tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
 ```
-8.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBMi server in Skytap
+8.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBM i server in Skytap
 
 [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory)
 
@@ -380,7 +380,7 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 ###### *[Back to the Top](#toc)*
 #### Create virtual tape image catalog<a name="createvtic"></a>
 
-1. Run AZCopy to copy virtualtape(s) from Azure storage to the NFS mount
+1. Run AZCopy to copy virtual tape(s) from Azure storage to the NFS mount
     -   Examples here:
    > [[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download]{.underline}](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)
 
