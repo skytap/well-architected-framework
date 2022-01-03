@@ -13,13 +13,13 @@ Building a reliable application in the cloud is different from traditional appli
 
 The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap. 
 
-Migration Considerations include
+Migration Considerations include:
 
 -   Skytap on Azure General Architecture
 
 -   Supported LPARs
 
--   Warm Migration
+-   Warm (Cold) Migration
 
 -   Hot Migration
 
@@ -29,7 +29,7 @@ Here is a high-level look at the Skytap on Azure general architecture.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image1.png" width="800">
 
-- **Define and test availability and recovery targets -** Availability targets, such as Service Level Agreements (SLA) and Service Level Objectives (SLO), and Recovery targets, such as Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO), should be defined and tested to ensure reliability aligns with business requirements.
+- **Define and test availability and recovery targets -** Availability targets, such as Service Level Agreements (SLAs) and Service Level Objectives (SLOs), and Recovery targets, such as Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs), should be defined and tested to ensure reliability aligns with business requirements.
 
 - **Design environments to be resistant to failures -** Resilient environment architectures should be designed to recover gracefully from failures in alignment with defined reliability targets.
 
@@ -37,7 +37,7 @@ Here is a high-level look at the Skytap on Azure general architecture.
 
 - **Plan for disaster recovery -** Disaster recovery is the process of restoring application functionality in the wake of a catastrophic failure. It might be acceptable for some applications to be unavailable or partially available with reduced functionality for a period of time, while other applications may not be able to tolerate reduced functionality.
 
-- **Ensure networking and connectivity meets reliability requirements -** Identifying and mitigating potential network bottle-necks or points-of-failure supports a reliable and scalable foundation over which resilient application components can communicate.
+- **Ensure networking and connectivity meets reliability requirements -** Identifying and mitigating potential network bottlenecks or points-of-failure supports a reliable and scalable foundation over which resilient application components can communicate.
 
 - **Allow for reliability in scalability and performance -** Resilient applications should be able to automatically scale in response to changing load to maintain application availability and meet performance requirements.
 
@@ -98,7 +98,7 @@ Your tolerance for reduced functionality during a disaster is a business decisio
 
 ## Disaster recovery plan
 
-Start by creating a recovery plan. The plan is considered complete after it has been fully tested. Include the people, processes, and applications needed to restore functionality within the service-level agreement (SLA) you've defined for your customers.
+Start by creating a recovery plan. The plan is considered complete after it has been fully tested. Include the people, processes, and applications needed to restore functionality within the service-level agreement (SLA) you've defined.
 
 Consider the following suggestions when creating and testing your disaster recovery plan:
 

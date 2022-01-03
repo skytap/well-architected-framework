@@ -21,7 +21,7 @@ infrastructure and/or performance data, including the pros and cons of
 each option. At a minimum, infrastructure data is required to help
 configure each VM close to the current configuration.
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
@@ -51,7 +51,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * Contains the hardware infrastructure configuration for all systems
     connected to the HMC.
 
-* Supports multiple OS's -- Windows, Linux, AIX, IBM i
+* Supports multiple OS's -- Windows, Linux, AIX, IBM i.
 
 **Cons:**
 
@@ -61,15 +61,15 @@ This document does not provide you with any legal rights to any intellectual pro
 
 ***Notes:***
 
-*Data collection need to be explicitly enabled on the HMC since it is
-not active by default. Easiest way to enable it is to log into the HMC
+*Data collection needs to be explicitly enabled on the HMC since it is
+not active by default. The easiest way to enable it is to log into the HMC
 with administrative rights on the command line and issue the following
 command: **chlparutil -r config -s 300**. This will enable data
-collection for all current managed system on the HMC but not on future
+collection for all current managed systems on the HMC, but not on future
 ones. Just wait for a couple of days and the scanner will provide
 performance data.*
 
-*You can check if data collection is active by looking at scanner\'s
+*You can check if data collection is active by looking at the scanner\'s
 report. Select the System Summary tab and look at the Perf Sample
 Rate column: if the cell is empty or has a zero value, data collection
 is not active.*
@@ -82,45 +82,45 @@ is not active.*
 
 <https://www.java.com/en/download/manual.jsp>
 
-* Requires network access from the Windows PC to the HMC
+* Requires network access from the Windows PC to the HMC.
 
 * This requires access to the HMC, hscroot ID and PW.
 
-Use the HMC Scanner to quickly extract all the details of the POWER Servers the HMC is connected too and saved in a Microsoft Excel spreadsheet.
+Use the HMC Scanner to quickly extract all the details of the POWER Servers the HMC is connected to and saved in a Microsoft Excel spreadsheet.
 
 The tool is available at the end of this document as a zip file that needs to be extracted on an empty directory. Latest version is \"
 [hmcScanner-0.11.42.zip](https://www.ibm.com/support/pages/system/files/inline-files/$FILE/hmcScanner-0.11.42.zip)\".
 
-HMC Scanner is a Java program that uses SSH to connect to an HMC or SDMC or FSM or IVM (IVM is experimental), downloads the system configuration and produces a single Excel spreadsheet that contains the configuration of servers and LPARs. In PureFlex environments, only Power Systems compute nodes are detected. Optional HTML and CSV outputs are available
+HMC Scanner is a Java program that uses SSH to connect to an HMC,SDMC,FSM or IVM (IVM is experimental), downloads the system configuration and produces a single Excel spreadsheet that contains the configuration of servers and LPARs. In PureFlex environments, only Power Systems compute nodes are detected. Optional HTML and CSV outputs are available.
 
-The result is a straightforward way to document configuration and to easily look at most important configuration parameters.
+The result is a straightforward way to document configuration and to easily look at the most important configuration parameters.
 
 Excel information is organized in tabs:
 
-* System summary: name, serial number, cores, memory, service processor IP for each server
+* System Summary: name, serial number, cores, memory, service processor IP for each server.
 
-* LPAR Summary: list of all LPAR by serve with status, environment, version, processor mode
+* LPAR Summary: list of all LPARs by server with status, environment, version, processor mode.
 
-* LPAR CPU: processor configuration of each LPAR
+* LPAR CPU: processor configuration of each LPAR.
 
-* LPAR MEM: memory configuration of each LPAR
+* LPAR MEM: memory configuration of each LPAR.
 
-* Physical Slots: list of all slots of each system with LPAR assignment, description, physical location and drc_index
+* Physical Slots: list of all slots of each system with LPAR assignment, description, physical location and drc_index.
 
-* Virtual Ethernet: network configuration of each virtual switch and each LPAR
+* Virtual Ethernet: network configuration of each virtual switch and LPAR.
 
-* Virtual SCSI: configuration of all virtual SCSI adapters, both client and server
+* Virtual SCSI: configuration of all virtual SCSI adapters, both client and server.
 
-* VSCSI Map: devices mapped by each VIOS to partitions
+* VSCSI Map: devices mapped by each VIOS to partitions.
 
 * Virtual Fibre: virtual fibre channel configuration of client and
-    server with identification of physical adapter assigned
+    server with identification of physical adapter assigned.
 
-* SEA: SEA configuration and statistics for all VIOS
+* SEA: SEA configuration and statistics for all VIOS.
 
 * SW Cores: LPAR and virtual processor pool configuration matrix to compute the number of software licenses. Simulation of alternative scenarios is possible.
 
-With optional flags it is possible to download historical CPU usage data from HMC and to add it in the report. HMC performance data collection needs to be enabled on the HMC before running the scanner or the report will only have empty fields. Data collection is *off *by default on the HMC. The following tabs are related to managed system performance:
+With optional flags it is possible to download historical CPU usage data from HMC and add it in the report. HMC performance data collection needs to be enabled on the HMC before running the scanner or the report will only have empty fields. Data collection is *off *by default on the HMC. The following tabs are related to managed system performance:
 
 * CPU Pool Usage: monthly average history of CPU usage of each system.
 
@@ -136,30 +136,30 @@ With optional flags it is possible to download historical CPU usage data from HM
 
 * LPAR Hourly Usage: 2 months of CPU usage of every LPAR of each system. Based on hourly averages.
 
-The tool is constantly updated to match changes in tool syntax, to manage new data types and to add new features. If you have any problem or any suggestion to improve HMC Scanner, please send Federico Vagnini in IBM, Italy an email (<vagnini@it.ibm.com>). Since new features are mostly suggested by users, propose yours! Please always include the downloaded files to allow be proper debugging.
+The tool is constantly updated to match changes in tool syntax, to manage new data types and add new features. If you have any problems or suggestions to improve HMC Scanner, please send Federico Vagnini at IBM Italy an email (<vagnini@it.ibm.com>). Since new features are mostly suggested by users, propose yours. Please always include the downloaded files to allow for proper debugging.
 
 This tool is not officially supported by IBM. No guarantee is given or implied, and you cannot obtain help from IBM. It is a personal project of the author, Federico Vagnini (IBM Italy).
 
-See also [pGraph](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/pGraph) page form the same author. It allows multiple nmon, vmstat, iostat, sar,lslparutil files to be loaded regardless of their size. Graphs are provided together with a very useful \"time zoom\" that allows you to select the time period to show.
+See also [pGraph](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/pGraph) page form the same author. It allows multiple nmon, vmstat, iostat, sar, lslparutil files to be loaded regardless of their size. Graphs are provided together with a very useful \"time zoom\" that allows you to select the time period to show.
 
 [[https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats]{.ul}](https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats)
 
 ###### *[Back to the Top](#toc)*
-### Running HMC Scanner on Windows PC:<a name="HMCWindows"></a>
+### Running HMC Scanner on Windows PC<a name="HMCWindows"></a>
 
 HMC scanner must be used on a system with Java 1.6 or later available that is capable of contacting HMC with a direct SSH connection or using an SSH connection through a HTTP, SOCKS4 or SOCKS5 proxy server. The HMC must allow remote SSH command execution.
 
-Please follow the following steps:
+Please follow these steps:
 
-1. Download the latest available code since it contains latest fixes and capabilities. You can find it at the end of this document as a zip file
+1. Download the latest available code since it contains the latest fixes and capabilities. You can find it at the end of this document as a zip file.
 
-2. Unzip the code into a new empty directory
+2. Unzip the code into a new empty directory.
 
-3. Inspect the *hmcScanner.ksh* and *hmscScanner.bat* files to check if they are able to locate Java executable on your system
+3. Inspect the *hmcScanner.ksh* and *hmscScanner.bat* files to check if they are able to locate Java executable on your system.
 
-4. If you want to collect performance data, make sure data collection was enabled (activation instructions are above)
+4. If you want to collect performance data, make sure data collection was enabled (activation instructions are above).
 
-5. Run the scanner by providing HMC address, user and password
+5. Run the scanner by providing HMC address, user and password.
 
 Example of Windows command:
 
@@ -178,7 +178,7 @@ An example of the spreadsheet is below. Note the tab at the bottom which shows a
 ###### *[Back to the Top](#toc)*
 ## Native Power Discovery for IBM i<a name="NativeIBMiDiscovery"></a>
 
-IBM i operating systems automatically collect hardware and performance data via Collection Services. This data has more detailed data regarding hardware resource consumption and more details regarding the memory and disk configuration / performance. There are 3 options to package this data and send it to Skytap for analysis.
+IBM i operating systems automatically collect hardware and performance data via Collection Services. This data has more detailed data regarding hardware resource consumption and memory and disk configuration / performance. There are 3 options to package this data and send it to Skytap for analysis.
 
 [Option 1: Manually create a save file of \*MGTCOL](#savefile)
 
@@ -211,7 +211,7 @@ IBM i operating systems automatically collect hardware and performance data via 
 
 > savf(qgpl/pfrcustnam) dtacpr(\*yes)
 ```
-Then send the save file pfrcustnam to Skytap (via sftp) - TBD
+Then send the save file pfrcustnam to Skytap.
 
 A Skytap Cloud Solutions Architect or Cloud Solutions Engineer will then do the following on an IBM i VM for your data:
 
@@ -283,7 +283,7 @@ To have full access to all the data you need to enter a keycode. Once you receiv
 ###### *[Back to the Top](#toc)*
 ### Option 02: Using Must Gather Tools<a name="mustgather"></a>
 
-**Pros**: Follow instructions below on each partition. Option 'b' disk data is a small output \~2-10MB
+**Pros**: Follow instructions below on each partition. Option 'b' disk data is a small output \~2-10MB.
 
 **Cons**: 70+ text file. Must be V7R2 and above. Snapshot of current configuration \~xxGB.
 
@@ -309,7 +309,7 @@ This option will create a save file of one or more Collection Services data. Th
 
       d. Select the first QxxxHHMMSS member not in use and hit enter
 
-3. Send Skytap the save file that is created in the IFS in directory /tmp/IBMCSDATA/IBMDATA002 -TBD
+3. Send Skytap the save file that is created in the IFS in directory /tmp/IBMCSDATA/IBMDATA002 
 
 4. If all Skytap needs access to is the disk metrics then do the following:
 
@@ -348,7 +348,7 @@ Collecting historical data with no overhead and little disk space:
 
 3. The first time you launch perfnav, it will prompt you to install the IBM i host code pn400.sav. Reply YES.  A PN400 install window will appear.
 
-4. In tab 1.local, browse to the pn400.sav file you downloaded. Then follow tab 2-5 on each partition
+4. In tab 1.local, browse to the pn400.sav file you downloaded. Then follow tab 2-5 on each partition.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image8.png" width="500">
 
@@ -428,10 +428,10 @@ File should be between 5-10MB.
 
 <hr>
 
-To connect the customers data to the Performance Navigator client do the
+To connect your data to the Performance Navigator client do the
 following:
 
-1.  Unzip, untar the pninfo file
+1.  Unzip, untar the pninfo file.
 
 2.  From Performance Navigator go to File / New AIX/ Linux menu and browse to the directory for your data. Select the mpgdata2.hostname file and open.
 
@@ -472,10 +472,10 @@ If you normally consolidate nmon data to a single shared directory, one
 script will gather data from all partitions for free.
 
 **Cons:** File could be large depending on the amount of history
-(\~10-25GB). No graphical view
+(\~10-25GB). No graphical view.
 
 **Output**: 1 file containing all partition in shared directory called
-pninfo_multiple_AIX.tar.gz
+pninfo_multiple_AIX.tar.gz.
 
 ###### *[Back to the Top](#toc)*
 ### Option 03: Start collecting historical nmon data<a name="historicnmon1"></a>
@@ -504,16 +504,16 @@ To connect the data to the Performance Navigator client see above.
 ###### *[Back to the Top](#toc)*
 ## Power Discovery for Linux<a name="NativeLinuxDiscovery"></a>
 
-***NOTE***: ***Linux operating systems to NOT collect hardware and performance data by default. Skytap uses the HelpSystems Performance Navigator to automate the collection of hardware and performance for Linux across all platforms using open source nmon for Linux. This data will show how your current hardware is configured and how it is being used. This data will be used to then optimize the configuration in the Skytap environment.***
+***NOTE***: ***Linux operating systems do NOT collect hardware and performance data by default. Skytap uses the HelpSystems Performance Navigator to automate the collection of hardware and performance for Linux across all platforms using open source nmon for Linux. This data will show how your current hardware is configured and how it is being used. This data will be used to then optimize the configuration in the Skytap environment.***
 
 ### Option 01: collect historical nmon data<a name="historicnmon2"></a>
 
 **Pros**: Starts the management of the historical collection of nmon.
 Includes graphic view of the last 7 days with Google graphs for free.
 
-**Cons**: Will have to wait a week or two to receive data
+**Cons**: Will have to wait a week or two to receive data.
 
-**Output**: 1 file per partition called pninfo\_\<hostname>.Linux.tar.gz
+**Output**: 1 file per partition called pninfo\_\<hostname>.Linux.tar.gz.
 
 1.  Download powernav.tar.gz from the link below:
     [[https://hsdownloads.helpsystems.com/software/robot/performance-nav/powernav.tar.gz]{.ul}](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fpowernav.tar.gz&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505394306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=QQ1zT9mPnYboSJmX%2FabM3fiEGaqTUSLTthewBU2tRrY%3D&reserved=0)

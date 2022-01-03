@@ -17,7 +17,7 @@ The following section details questions that are typically asked when an organiz
 #  Skytap Well-Architected Framework 
 
 As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. 
-The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architecture excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce high quality, stable, and efficient cloud architectures.
+The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architectural excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce high quality, stable, and efficient cloud architectures.
 
 | Phase | Question | Pillar | Description |
 | ----- | -------- | ------ | ----------- |

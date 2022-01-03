@@ -36,7 +36,7 @@ Internal network firewalls can be deployed where it is necessary to restrict or 
 A Service Mesh can connect multiple application components or
 microservices together in a way that simplifies their use. For example,
 a Database running on AIX in Skytap could be connected to a frontend
-application hosted in a Hyperscale cloud provider without having to
+application hosted in a hyperscale cloud provider without having to
 manually configure routing at each layer.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/internalnetworkingmedia/media/image2.png" alt="A close up of text on a white background Description automatically" width="600">
