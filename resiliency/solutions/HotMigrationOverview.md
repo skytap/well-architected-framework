@@ -57,7 +57,7 @@ The following outlines popular Precisely migration scenarios available for you t
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/mimixibmirunbookoutline.png" width="800">
 
-**Whats different about AIX?**
+**What's different about AIX?**
 
 - The AIX Mimix Product focuses on Volume Group replication and sync
 - Any applications encapsulated in the Volume Group are included as part of the replication
