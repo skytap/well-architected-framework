@@ -48,7 +48,7 @@ The following outlines popular Precisely migration scenarios available for you t
 
 - Delivers near-zero RPO (zero with synchronous Remote Journaling)
 - Provides near-zero RTO by maintaining a hot, switch-ready backup
-- Performance tuning features optimize performance for your environment (e.g. parallel applies and database caching)
+- Performance tuning features optimize performance for your environment (i.e. parallel applies and database caching)
 - Active-active replication with built-in conflict resolution delivers RTO in seconds (as quickly as moving users to another active server)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/preciselyhotmigrationscenerios.png" width="800" alt="preciselytopo">
