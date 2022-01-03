@@ -6,7 +6,7 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 
 # IBM i workload migration using Go Save/Restore, Option 22-23
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
