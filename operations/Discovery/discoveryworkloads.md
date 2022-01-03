@@ -17,7 +17,7 @@ author: George Stamos, Director, Solutions Architect- Business Development
 ### Skytap Power Discovery for Workloads - Goals <a name="goals"></a>
 
 The goal of discovery is to develop the proper framework for your
-workloads running in Skytap in the cloud. It can be further defined by these
+workloads running in Skytap. It can be further defined by these
 supporting goals:
 
 * Uncover exact on-premises workloads to be migrated at the LPAR/VM level
@@ -90,7 +90,7 @@ following commands and catalog into the BOM for the migration.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/image2.png">
 
-**Example BOM for Migration -- AIX, IBM I, Spot Windows/Linux**
+**Example BOM for Migration -- AIX, IBM i, Spot Windows/Linux**
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/image3.png">
 
