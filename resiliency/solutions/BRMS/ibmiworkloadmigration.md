@@ -1,17 +1,17 @@
 ---
 Title: IBM i workload migration from on-prem to Skytap using BRMS ICC
-Description: Skytap Cold Migration Solution - IBM i workload migration from on-prem to Skytap using BRMS ICC
+Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using BRMS ICC
 Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
 ---
-# IBM i workload migration from on-prem to Skytap using BRMS ICC
+# IBM i workload migration from on-premises to Skytap using BRMS ICC
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
 # Table of Contents <a name="toc"></a>
 
-* [Key Takeaways](#takeaways)
+* [Key takeaways](#takeaways)
 * [Before you begin](#begin)
 * [Full system backup of IBM i source using BRMS ICC](#start)
 * [Create ICC FTP resource](#ftpresourcecreate)
@@ -28,16 +28,16 @@ This document does not provide you with any legal rights to any intellectual pro
 
 ## Key Takeaways <a name="takeaways"></a>
 
-These are some key takeaway for developers and operators to consider from this guide:
+Here are key takeaways for developers and operators to consider from this guide:
 
-* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on  IBM i using BRMS ICC and transfer it to cloud using FTP.
+* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on IBM i using BRMS ICC and transfer it to cloud using FTP.
 
- * Full-system recovery in Cloud using IBM i as NFS server to an IBM i
-     VM as target system will also be covered in this document.
+ * Full-system recovery in the cloud using IBM i as NFS server to an IBM i
+     VM as target system.
 
 ## Before you begin <a name="begin"></a>
 
-Below LPPs need to be installed on IBM i LPAR:
+The below LPPs need to be installed on IBM i LPAR:
 
 * 5770-SS1 Option 18: Media and Storage Extensions
 
@@ -70,25 +70,25 @@ Below LPPs need to be installed on IBM i LPAR:
 
 ## Create ICC FTP resource <a name="ftpresourcecreate"></a>
 
-Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.For this document, we will be using Linux in our examples.
+Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system. For this document, we will be using Linux in our examples.
 
-In case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZ copy.
+In the case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZCopy.
 
 ***NOTE***: *If you have 5 disk arms on-prem with xyz storage, then re-create that setup in your Skytap LPAR.*
 
-1. Create FTP resource using below command: 
+1. Create FTP resource using the below command: 
 
 ```
 ===> CRTFPRICC
 ```
-The root directory is the directory in the FTP server where we want to transfer the data and resource URI will be IP of FTP server.
+The root directory is the directory in the FTP server where we want to transfer the data and the resource URI will be IP of FTP server.
 
 Example: *\<FTP server IP>:\<port number>./\<root directory>*
 
 ![](media/image2.png)
 ![](media/image12.png)
 
-Once completed you should see: "Resource "TEST1" was created for resource type FTP".
+Once completed, you should see: "Resource "TEST1" was created for resource type FTP".
 
 ###### *[Back to the Top](#toc)*
 ## Create the backup control groups <a name="controlgroupscreate"></a>
@@ -100,7 +100,7 @@ Once completed you should see: "Resource "TEST1" was created for resource type F
 ```
     
 Once you press \<ENTER\> wait for the command to complete, there is no confirmation message that is displayed. 
-This command will automatically create the below control groups for the Test1 resource created in previous step.
+This command will automatically create the below control groups for the Test1 resource created in the previous step.
 
 * QCLDBGRP01
 
@@ -111,7 +111,7 @@ This command will automatically create the below control groups for the Test1 re
 * QCLDBUSR01
 
 
-2. Put the system in restricted state using below command:
+2. Put the system in restricted state using the below command:
 
 ```
 ===> ENDSBS \*ALL \*IMMED\
@@ -130,11 +130,11 @@ And refresh until you see it has completed.
 ```
 ===> WRKCTLGBRM
 ```
-4. Take option 9 in front of QCLDBSYS01
+4. Take Option 9 in front of QCLDBSYS01.
 5. Enter the values matching the screen below, make sure to put "\*NO\" for restart. 
 6. Press \<ENTER\> once you have all the values filled in. 
 7. Press F3 to exit.
-8. Change Restart to \*NO for Seq 10 Subsystem \*ALL
+8. Change Restart to "\*NO for Seq 10 Subsystem \*ALL".
 
 ![](media/image1.png)
 
@@ -147,7 +147,7 @@ And refresh until you see it has completed.
 
 2. Check for error messages once the backup is complete.
 
-***NOTE***: *You will see messages similar to: "1 of 120 libraries processed....84 objects saved"*
+***NOTE***: *You will see messages similar to: "1 of 120 libraries processed....84 objects saved."*
 
 ***NOTE***: *The backup will take a while to complete.*
 
@@ -190,8 +190,8 @@ You should see a message similar to:  \"STRTCP Started for QSECOFR....\"
 ```
 ===> WRKMEDBRM.
 ```
-3. Take option 6 in front of any one of them. 
-This will show the medias used for backup and the order as well in which they are needed to add them in catalog in NFS server
+3. Take Option 6 in front of any one of them. 
+This will show the medias used for backup and the order as well in which they are needed to add them in the catalog in the NFS server.
 
 ###### *[Back to the Top](#toc)*
 ## Transfer backup media to ICC FTP resource <a name="transferbackuptoiccftp"></a>
@@ -212,7 +212,7 @@ It may be already started, output will be: \"FTP Server Starting\"
 ===> WRKMEDBRM
 ```
 
-4. Find all the media objects that have the \"+\" (plus sign) next to them.They should end with \"OPT\" and \"TAP. 
+4. Find all the media objects that have the \"+\" (plus sign) next to them. They should end with \"OPT\" and \"TAP. 
 5. Put an \"8\" (move) next to all of them with the plus sign. 
 
 You might have to page down to find all of them.
@@ -233,7 +233,7 @@ You should see a screen similar to this:
 
 ***NOTE***: *QCLDBIPL01 will use virtual optical media and QCLDBSYS01 will use virtual tape media.*
 
-9. After moving the media, check the status of transfer using the below command:
+9. After moving the media, check the status of the transfer using the below command:
 
 ```
 ===> WRKSTSICC Status(\*All)
@@ -263,7 +263,7 @@ LPAR
 ```
 MKDIR '/XX', where xx is the directory name
 ```     
-2. Start FTP server and QICC subsystem if not already started using below commands:
+2. Start FTP server and QICC subsystem if not already started using the below commands:
 ```
 STRTCPSVR \*FTP
 ```
@@ -324,7 +324,7 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
 ###### *[Back to the Top](#toc)*
 ## Configure IBM i client server (target LPAR)<a name="configuretargetlpar"></a>
 
-1. Login to SST and select option 8 -- Work with service tools User IDs
+1. Login to SST and select Option 8 -- Work with service tools User IDs
      and Devices
 
 2. Press F13 and select the LAN adapter
@@ -337,7 +337,7 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
   *   Gateway router address = use the same gateway on the client
   *  Subnet mask = use the same
   *  Press F7=Store
-  *  Press F13= Deactivate
+  *  Press F13=Deactivate
   *  Press F14=Activate
   
 4.  Verify port 3000 status as active using NETSTAT \*CNN and use F14 to
@@ -355,8 +355,8 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
 
 ![](media/image4.png)
 
-7. Start network install to start scratch installation starting from LIC
-     installation, prior to installation make sure to document all
+7. Start network install to begin scratch installation starting from LIC
+     installation. Prior to installation, make sure to document all
      current network information, same may be needed after restoration.
 
 8. Start network install:
@@ -379,7 +379,7 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
 
 ![](media/image5.png)
 
-13. On Install device type, Select option-2 -- Network device
+13. On Install device type, Select Option-2 -- Network device
 
 14. Configure the network device:
   *  Server IP = the IP address of the SOURCE NFS IBM i VSI
@@ -461,7 +461,7 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
 7. Recover BRMS libraries, follow the [BRMS recovery report](#generatebrmsreport)
 8. RSTLIB SAVLIB(saved-item) DEV(optical device) VOL(media name)
      OPTFILE(\'\')
-9. Recover the BRMS related media information using the recovery steps in BRMS recovery report:
+9. Recover the BRMS related media information using the recovery steps in the BRMS recovery report:
 ```
 >   RSTOBJ OBJ(\*ALL) SAVLIB(saved-item) DEV(device-name) VOL(media name) OPTFILE(\'\') MBROPT(\*ALL) ALWOBJDIF(\*COMPATIBLE)
 >   INZBRM OPTION(\*SETAUT)
@@ -471,7 +471,7 @@ CPYFRMCLD RESOURCE(Test) Async(\*No) CLOUDFILE(\'QBRMS\_IBMI74/QO3911\')LOCALFIL
 
 10. Verify installation device using WRKDEVBRM
 
-11. Follow step010 in recovery report to recover user profiles
+11. Follow step010 in the recovery report to recover user profiles
 
 ***NOTE***: *TCP/IP must be started so BRMS can transfer media required by a
 recovery from the cloud.*
@@ -511,20 +511,20 @@ Where 'nnn' is IP of recovery system
 
 19. If you are recovering to a different system or a different logical
 partition, you must specify the following:
-*  \*ALL for the Data base member option prompt
+*  \*ALL for the Database member option prompt
 *  \*COMPATIBLE for the Allow object differences prompt
 *  \*NONE for the System resource management prompt
 
 20. Press \"Enter\" to return to the Select Recovery Items display
 
 21. Restore \*SAVSECDTA which will restore user profiles. Change QSECOFR
-     password using below command:
+     password using the below command:
 ```
    >   CHGUSRPRF USRPRF(QSECOFR) PASSWORD(new-password)
 ```
 22. Recover configuration data(\*Savcfg) and required system libraries
 
-23. Do network configuration and add IP in target system
+23. Do network configuration and add IP in the target system
 
 24. Ping the cloud resource URI to verify a working network to cloud
      storage
@@ -556,7 +556,7 @@ partition, you must specify the following:
 
 **Resiliency**
 >**Migration Solutions**
->* [Hot Migations (Replication Sync)](../HotMigrationOverview.md)
+>* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
 
 >**Design**

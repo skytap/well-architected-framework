@@ -6,25 +6,25 @@ author: George Stamos, Director, Solutions Architect - Business Development
 
 ## Skytap on Azure + Precisely for High Availability Scenarios
 
-For hot migrations, Skytap partners with Precisely, the market leader for high availability scenarios. Precisely support IBM i and AIX. How Precisely supports the Skytap on Azure hot migration for IBM i is depicted below.
+For hot migrations, Skytap partners with Precisely, the market leader for high availability scenarios. Precisely supports IBM i and AIX. How Precisely supports the Skytap on Azure hot migration for IBM i is depicted below.
 
-<b>Quick Recap: What is Precisely?</b>
+### What is Precisely for IBM iSeries?
 
-- MIMIX is the most prevalent tool used in RPO scenarios of near-zero
-- Easy to Package – Support for both AIX and IBM I
+- Precisely's MIMIX is the most prevalent tool used in RPO scenarios of near-zero
+- Easy to Package – Support for both AIX and IBM i
 - Automated Role Swaps Allow for Testing, Operations Upgrades in Prod
 - AIX Solution Provides Live Snapshot Capability for Any Subsidiary Environment Seeding
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/preciselyhotmigrationtopo.png" width="800">
 
-This is built on IBM's remote journaling which replicates changed data in real-time and minimizes bandwidth usage. The MIMX change data capture replicates non-journaled data. This solution is flexible and platform independent because it supports mixed hardware, storage and IBM I OS version. It is also optimized for performance because it:
+This is built on IBM's remote journaling which replicates changed data in real-time and minimizes bandwidth usage. The MIMIX change data capture replicates non-journaled data. This solution is flexible and platform independent because it supports mixed hardware, storage and IBM i OS version. It is also optimized for performance because it:
 
 -   delivers near-zero RPO (zero with synchronous Remote Journaling)
 
 -   provides near-zero RTO by maintaining a hot, switch-ready back up
 
 -   includes performance tuning features to optimize performance for
-    your environment (i.e parallel applies and database caching)
+    your environment (i.e. parallel applies and database caching)
 
 -   has active-active replication with built-in conflict resolution that
     delivers RTO in seconds (as quickly as moving users to another
@@ -48,7 +48,7 @@ The following outlines popular Precisely migration scenarios available for you t
 
 - Delivers near-zero RPO (zero with synchronous Remote Journaling)
 - Provides near-zero RTO by maintaining a hot, switch-ready backup
-- Performance tuning features optimize performance for your environment (e.g. parallel applies and database caching)
+- Performance tuning features optimize performance for your environment (i.e. parallel applies and database caching)
 - Active-active replication with built-in conflict resolution delivers RTO in seconds (as quickly as moving users to another active server)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/preciselyhotmigrationscenerios.png" width="800" alt="preciselytopo">
@@ -57,7 +57,11 @@ The following outlines popular Precisely migration scenarios available for you t
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/mimixibmirunbookoutline.png" width="800">
 
-**Whats different about AIX?**
+#### Additional Resources
+
+- **[Skytap + Precisely MIMIX Runbook for IBM iSeries](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/SKYTAP-Systemi-MIMIX-Runbook.pdf)**
+
+### What's different about AIX?
 
 - The AIX Mimix Product focuses on Volume Group replication and sync
 - Any applications encapsulated in the Volume Group are included as part of the replication
@@ -69,7 +73,11 @@ The following outlines popular Precisely migration scenarios available for you t
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/mimixaixrunbookoutline.png" width="800">
 
-## Addtional Solutions
+#### Additional Resources
+
+- **[Skytap + Precisely MIMIX Runbook for AIX](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/Mimix-AIX-Runbook-V522.pdf)**
+
+#### Additional Solutions
 
 - **[Skytap Live Clone Feature](liveclone.md)**
 

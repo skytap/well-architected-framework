@@ -250,7 +250,7 @@ Skytap WAN page.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image5.png" width="400">
 
 ###### *[Back to the Top](#toc)*
-## Test end-to-end connection from Skytap to Azure Native<a name="testsconnection"></a>
+## Test end-to-end connection from Skytap to Azure Native<a name="testconnection"></a>
 
 1. In the Skytap portal, go to the WAN definition that was created:\
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image19.png" width="700">

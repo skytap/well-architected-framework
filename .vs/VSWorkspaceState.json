@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\hybrid",
+    "\\operations",
+    "\\operations\\Discovery",
+    "\\operations\\Sizing_Design",
+    "\\resiliency",
+    "\\resiliency\\solutions\\BRMS",
+    "\\resiliency\\solutions\\GoSave",
+    "\\security",
+    "\\security\\images"
   ],
-  "SelectedNode": "\\_config.yml",
+  "SelectedNode": "\\operations\\connectivity\\ExpressRoute\\skytap2azureexpressroute.md",
   "PreviewInSolutionExplorer": false
 }

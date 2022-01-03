@@ -8,7 +8,7 @@ author: John Bradshaw, Principal Architect
 
 The Edge Networking capability provides access to resources outside of the immediate environment in Skytap, and as such, represents a significant area of exposure. Workloads running in the cloud have legitimate needs to access services or resources either on the Internet or behind the corporate network. To do this safely and efficiently consolidating this ingress and egress into a centralized service can help to enforce good practice and reduce risk.
 
-The Outbound Proxy and Inbound Proxy filter is what Virtual Machines can connect to and what in turn can connect to them. For example, an Outbound Proxy may be configured to allow an Application Server to request data from a public API; whereas, an Inbound Proxy (sometimes called a protocol break) terminates external client connections to protect the internal servers from direct internet exposure. The Inbound Proxy can then perform validation on the request from the client, such as determining if the client is a known bad actor or if the request is appropriately formed.
+The Outbound Proxy and Inbound Proxy filter is what Virtual Machines can connect to and what in turn can connect to them. For example, an Outbound Proxy may be configured to allow an Application Server to request data from a public API; whereas, an Inbound Proxy (sometimes called a protocol break) terminates external client connections to protect the internal servers from direct Internet exposure. The Inbound Proxy can then perform validation on the request from the client, such as determining if the client is a known bad actor or if the request is appropriately formed.
 
 The VPN or Private Connection provides secure and restricted connectivity to on-premises or third-party cloud access in a controlled manner. For example, only the Production environment may be allowed to communicate over the Private Connection to the database running on-premises; however, the Development/Test environments can be connected to by the Engineering team via VPN.
 
@@ -68,7 +68,7 @@ Skytap supports Site-to-Site VPN as well as Private Network Connections (PNCs) u
 
 The Skytap [Site-to-Site VPN](https://help.skytap.com/vpn-configuration-parameters.html#VPNconfigurationoptions) supports an IPSec VPN using IKEv1 or IKEv2 using Pre-Shared Keys (PSK), AES 256 bit and Perfect Forward Secrecy (PFS).
 
-The Skytap Site-to-Site VPN secures traffic that traverses the public Internet, but not private connectivity. Multiple VPNs can be created for high availability and to connect multiple corporate data centers to the Skytap cloud.
+The Skytap Site-to-Site VPN secures traffic that traverses the public Internet, but not private connectivity. Multiple VPNs can be created for high availability and to connect multiple corporate data centers to Skytap.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image4.png" width="800">
 

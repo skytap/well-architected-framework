@@ -20,7 +20,7 @@ encapsulated, routed over the public internet.
 
 ### Setting up a Site-to-Site VPN in ICSS
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image2.png" width="500">
+<!-- <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image2.png" width="500"> -->
 
 A VPN is like a bridge: both sides must be "facing each other" for
 traffic to flow. This means that each VPN endpoint must be configured
