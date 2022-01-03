@@ -1,6 +1,6 @@
 ---
 title: IBM i workload migration using Go Save/Restore, Option 22-23
-description: Skytap Cold Migration Solution - IBM i workload migration using Go Save/Restore, Option-22,23
+description: Skytap Cold Migration Solution - IBM i workload migration using Go Save/Restore, Option 22-23
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
 ---
 
