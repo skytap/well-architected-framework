@@ -11,7 +11,7 @@ permalink: /operations/
 
 This pillar covers the operational best practices and processes that keep workloads running in production. 
 
-Deployments and maintenance must be reliable and predictable. They should be automated to reduce the chance of human error. They should be a fast and routine process, so they don't slow down the release of new features or bug fixes. Equally important, you must be able to quickly roll back or roll forward if an update has problems.
+Deployments and maintenance must be reliable and predictable. Both should be automated to reduce the chance of human error and include fast and routine processes, so they don't slow down the release of new features or bug fixes. Equally important, you must be able to quickly roll back or roll forward if an update has problems.
 
 The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence.
 
