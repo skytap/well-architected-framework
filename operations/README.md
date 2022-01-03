@@ -27,7 +27,7 @@ These are the disciplines we group in the operational excellence pillar:
 | [Phase 01D - EcoSystem](./Ecosystems/) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
 | [Phase 01E - Testing](./Testing/) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users | -->
 
-## Next step
+## Next steps
 
 **Main Overview**
 > [Skytap Well-Architected Framework](../README.md)
