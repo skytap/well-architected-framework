@@ -194,6 +194,7 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
     * Review and follow Step 16 in the [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html) Guide.
 
+
 * Step 5: Attach the WAN to your [Skytap Environment](https://help.skytap.com/creating-an-environment.html#creating-an-environment)
 
     * [Connecting an environment network to a VPN or Private Network Connection](https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#additional-information)
