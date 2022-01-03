@@ -6,7 +6,7 @@ author: George Stamos, Director, Solutions Architect - Business Development
 
 ## Skytap on Azure + Precisely for High Availability Scenarios
 
-For hot migrations, Skytap partners with Precisely, the market leader for high availability scenarios. Precisely support IBM i and AIX. How Precisely supports the Skytap on Azure hot migration for IBM i is depicted below.
+For hot migrations, Skytap partners with Precisely, the market leader for high availability scenarios. Precisely supports IBM i and AIX. How Precisely supports the Skytap on Azure hot migration for IBM i is depicted below.
 
 <b>Quick Recap: What is Precisely?</b>
 
