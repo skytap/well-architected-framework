@@ -30,11 +30,11 @@ for AIX and IBM i (as400).
 
 - **[IBM i workload migration from on-prem to Skytap using BRMS ICC](BRMS/ibmiworkloadmigration.md)**
 
+<!--- - **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](SkytapCommvaultRunbook.md)** --->
+
 ### Additional Resources
 
 - **[Commvault Data Protection/Recovery for IBM iSeries Technical White Paper](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/commvault-iseries-protection-technical-whitepaper.pdf)**
-
-<!--- - **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](SkytapCommvaultRunbook.md)** --->
 
 #### Next steps
 
