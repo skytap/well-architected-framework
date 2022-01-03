@@ -190,17 +190,17 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
     * Be sure to notify your security / firewall team of the application ports that need to traverse the connection from Skytap on Azure to on-prem and back
 
-* Step 5: Enable the WAN in Skytap
+* Step 4: Enable the WAN in Skytap
 
     * Review and follow Step 16 in the [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html) Guide.
 
-* Step 6: Attach the WAN to your [Skytap Environment](https://help.skytap.com/creating-an-environment.html#creating-an-environment)
+* Step 5: Attach the WAN to your [Skytap Environment](https://help.skytap.com/creating-an-environment.html#creating-an-environment)
 
     * [Connecting an environment network to a VPN or Private Network Connection](https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#additional-information)
 
     * Please note, there must be at least one running VM and/or LPAR in the environment and on the network for the connection to start
 
-* Step 7: Test your connection from the VM or LPAR in Skytap to an on-prem system within the remote networks set on the WAN during Step 2
+* Step 6: Test your connection from the VM or LPAR in Skytap to an on-prem system within the remote networks set on the WAN during Step 2
 
     * A simple ping test to be sure the connection flows all the way through
 
