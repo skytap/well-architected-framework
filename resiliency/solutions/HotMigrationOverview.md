@@ -24,7 +24,7 @@ This is built on IBM's remote journaling which replicates changed data in real-t
 -   provides near-zero RTO by maintaining a hot, switch-ready back up
 
 -   includes performance tuning features to optimize performance for
-    your environment (i.e parallel applies and database caching)
+    your environment (i.e. parallel applies and database caching)
 
 -   has active-active replication with built-in conflict resolution that
     delivers RTO in seconds (as quickly as moving users to another
@@ -69,7 +69,7 @@ The following outlines popular Precisely migration scenarios available for you t
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/mimixaixrunbookoutline.png" width="800">
 
-## Addtional Solutions
+## Additional Solutions
 
 - **[Skytap Live Clone Feature](liveclone.md)**
 
