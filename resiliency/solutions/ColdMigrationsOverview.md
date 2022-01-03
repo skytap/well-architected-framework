@@ -23,7 +23,7 @@ for AIX and IBM i (as400).
 <BR>
 <BR>
 
-## Addtional Solutions
+## Additional Solutions
 
 - **[IBM i workload migration using Go Save/Restore, Option-22,23](GoSave/ibmimigrationwithgosave.md)**
 
