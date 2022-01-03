@@ -70,7 +70,7 @@ Below LPPs need to be installed on IBM i LPAR:
 
 ## Create ICC FTP resource <a name="ftpresourcecreate"></a>
 
-Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system.For this document, we will be using Linux in our examples.
+Create ICC FTP resource where IBM i backup will be transferred. FTP resource can be IBM i or Linux system. For this document, we will be using Linux in our examples.
 
 In case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZ copy.
 
@@ -212,7 +212,7 @@ It may be already started, output will be: \"FTP Server Starting\"
 ===> WRKMEDBRM
 ```
 
-4. Find all the media objects that have the \"+\" (plus sign) next to them.They should end with \"OPT\" and \"TAP. 
+4. Find all the media objects that have the \"+\" (plus sign) next to them. They should end with \"OPT\" and \"TAP. 
 5. Put an \"8\" (move) next to all of them with the plus sign. 
 
 You might have to page down to find all of them.
@@ -556,7 +556,7 @@ partition, you must specify the following:
 
 **Resiliency**
 >**Migration Solutions**
->* [Hot Migations (Replication Sync)](../HotMigrationOverview.md)
+>* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
 
 >**Design**
