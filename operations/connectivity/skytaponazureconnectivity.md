@@ -70,7 +70,7 @@ as mentioned above.
 
 **Reference Architecture - Direct VPN**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image1.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image1.png" width="800">
 
 ### Setting up a Site-to-Site VPN between On-Premises and Skytap on Azure<a name="site2site"></a>
 
@@ -104,7 +104,7 @@ Links to helpful resources:
 
 **Reference Architecture**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image2.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image2.png" width="800">
 
 ### Setting up a Site-to-Site VPN between Skytap and your Azure vNet Gateway<a name="site2sitevnetgateway"></a>
 
@@ -206,9 +206,9 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 **Reference Architecture - Global Reach Enabled ExpressRoute**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image4.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image4.png" width="800">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image5.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image5.png" width="800">
 
 ## Appendix<a name="appendix"></a> 
 
@@ -235,7 +235,7 @@ To connect your application in Skytap to On-Premises, when you already have an E
 
 **Reference Architecture - Azure Virtual Network (vNet) through an ExpressRoute**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image6.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image6.png" width="800">
 
 
 ### To connect your Skytap application to *both* On-Premises and an Azure vNet<a name="expressroute2vnetandonprem"></a> 
@@ -262,7 +262,7 @@ However, if you need to connect several (or complex topologies of) vNets, you ca
 
 **Reference Architecture - Azure Virtual Network (vNet) to *both* On-Premises and an Azure vNet through an ExpressRoute with Global Reach**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image7.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image7.png" width=>
 
 ###### *[Back to the Top](#toc)*
 
