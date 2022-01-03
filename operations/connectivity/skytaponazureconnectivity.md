@@ -168,6 +168,7 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
     * [Creating a customer-managed ExpressRoute circuit for a Private Network Connection](https://help.skytap.com/wan-create-self-managed-expressroute.html#creating-a-customer-managed-expressroute-circuit-for-a-private-network-connection)
 
+
 * Step 2: Create the WAN connection in Skytap on Azure
 
     * [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html)
@@ -193,6 +194,7 @@ Reach enabled to allow network transit from Skytap to on-prem.
 * Step 4: Enable the WAN in Skytap
 
     * Review and follow Step 16 in the [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html) Guide.
+
 
 
 * Step 5: Attach the WAN to your [Skytap Environment](https://help.skytap.com/creating-an-environment.html#creating-an-environment)
