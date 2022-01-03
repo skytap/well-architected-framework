@@ -5,7 +5,7 @@ author: Colleen E Hamilton - Senior Product Manager, Jeffry Lane - Sr. Cloud Sol
 
 # Getting Started with Azure Networking
 
-Even though Skytap on Azure is running within an Azure data center, Azure treats Skytap as if it were a separate On-premises location, for network isolation purposes. To make networking more straightforward for our customers, Skytap and Microsoft Azure have partnered in the design of several common network patterns, which you can put to work in your own applications. Whether you need to connect your Skytap Environment to your on-premises applications, or your Azure Virtual Network (VNet), or both, there is a network topology to address your needs.
+Even though Skytap on Azure is running within an Azure data center, Azure treats Skytap as if it were a separate on-premises location, for network isolation purposes. To make networking more straightforward for our customers, Skytap and Microsoft Azure have partnered in the design of several common network patterns, which you can put to work in your own applications. Whether you need to connect your Skytap Environment to your on-premises applications, or your Azure Virtual Network (VNet), or both, there is a network topology to address your needs.
 
 ## Table of Contents <a name="toc"></a>
 
@@ -34,7 +34,7 @@ Even though Skytap on Azure is running within an Azure data center, Azure treats
     Regions](https://help.skytap.com/understanding-regions.html#understanding-regions)
 
 **NOTE**: ***Create a LOCK on the Azure resource group** that
-    contains the Skytap on Azure service. This lock is may help prevent
+    contains the Skytap on Azure service. This lock may help prevent
     someone from accidentally deleting your Skytap on Azure subscription
     that resides in an Azure resource group.*
 
@@ -92,7 +92,7 @@ Once you've confirmed that your VPN can successfully establish Phase1 and Phase2
 
 For context, the VPN into Azure Hub option may provide a lower latency connection over Option 1 (direct VPN into Skytap) and perhaps even Option 3 due to the specific routing of your current ExpressRoute.
 
-In this case, you will establish VPN connections between satellite facilities and the closest Azure VPN point-of-presence (POP) which leverages the Azure backbone to hit your Azure hub region. Once there, you will either leverage an [Azure VWAN HUB](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-global-transit-network-architecture) or [Azure Route Server](https://docs.microsoft.com/en-us/azure/route-server/overview)
+In this case, you will establish VPN connections between satellite facilities and the closest Azure VPN point-of-presence (POP) which leverages the Azure backbone to hit your Azure hub region. Once there, you will either leverage an [Azure VWAN HUB](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-global-transit-network-architecture) or [Azure Route Server](https://docs.microsoft.com/en-us/azure/route-server/overview).
 
 Links to helpful resources:
 
@@ -130,9 +130,9 @@ Once you've confirmed that your VPN can successfully establish Phase1 and Phase2
 
 ## Option 3: Global Reach Enabled ExpressRoute<a name="option3"></a>
 
-This is the recommended robust connection path for performance-sensitive workloads connecting directly between Skytap to On-Prem. Keep in mind, you will need to consider your existing ExpressRoute configuration and latency between the endpoints.
+This is the recommended robust connection path for performance-sensitive workloads connecting directly between Skytap to on-premises. Keep in mind, you will need to consider your existing ExpressRoute configuration and latency between the endpoints.
 
-This approach will give you transitive routing between on-premises and Skytap-on-Azure. To set this up, create a new Azure Backbone ExpressRoute connection (see architecture below) between the Skytap on Azure service in Azure US East and your Azure hub. Note that the backbone ExpressRoute is not a new MPLS ExR circuit; rather, it's a native Azure ExR configured in the Portal that does not require you to engage a Telco provider. Once configured in the Azure Portal, Microsoft will create this connection on the backend (may take 20-30 mins. to propagate). Once the Backbone ExpressRoute is established between Skytap and your Azure hub, you will enable Global Reach to allow transitive routing between both ExpressRoutes.
+This approach will give you transitive routing between on-premises and Skytap on Azure. To set this up, create a new Azure Backbone ExpressRoute connection (see architecture below) between the Skytap on Azure service in Azure US East and your Azure hub. Note that the backbone ExpressRoute is not a new MPLS ExR circuit; rather, it's a native Azure ExR configured in the Portal that does not require you to engage a Telco provider. Once configured in the Azure Portal, Microsoft will create this connection on the backend (may take 20-30 mins. to propagate). Once the Backbone ExpressRoute is established between Skytap and your Azure hub, you will enable Global Reach to allow transitive routing between both ExpressRoutes.
 
 ### Setting up Global Reach Enabled ExpressRoute to Skytap<a name="expressroutewithglobalreach"></a>
 
@@ -168,7 +168,7 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
     * [Creating a customer-managed ExpressRoute circuit for a Private Network Connection](https://help.skytap.com/wan-create-self-managed-expressroute.html#creating-a-customer-managed-expressroute-circuit-for-a-private-network-connection)
 
-* Step 2: Create the WAN connection in Skytap-on-Azure
+* Step 2: Create the WAN connection in Skytap on Azure
 
     * [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html)
 
@@ -230,14 +230,14 @@ To connect your application in Skytap to On-Premises, when you already have an E
 
 ### To connect your Skytap application just to an Azure Virtual Network (VNet) through an ExpressRoute<a name="expressroute2vnet"></a> 
 
-[Walk through Skytap's help documentation](https://help.skytap.com/wan-expressroute-overview.html) to follow the 3 major steps of connecting your Skytap application to your VNet: Create the ER, Configure a VNet Gateway, and Connect the circuit. An even more detailed walkthrough can be found here.
+[Walk through Skytap's help documentation](https://help.skytap.com/wan-expressroute-overview.html) to follow the 3 major steps of connecting your Skytap application to your VNet: Create the ER, Configure a VNet Gateway, and Connect the circuit. An even more detailed walkthrough can be found here:
 * [Skytap on Azure - ExpressRoute Configuration](ExpressRoute/skytap2azureexpressroute.md)
 
 ### To connect your Skytap application to *both* On-Premises and an Azure VNet<a name="expressroute2vnetandonprem"></a> 
 
 The two network topologies described above can also happily co-exist: you can connect the same ExpressRoute circuit from Skytap in the first case to the VNet Gateway in the second case.
 
-There's one important caveat for this topology: any traffic sent through the VNet Gateway *won't transit to On-Prem*, even if the On-Prem ExpressRoute circuit is also connected to that same VNet. So if, for example, you need your application to traffic to flow to services on Azure, such as a firewall, an Azure VM, or other SaaS offering, before it moves out to On-Premises, you'll need transitive routing. To set up transitive routing, follow the steps in Example 5.
+There's one important caveat for this topology: any traffic sent through the VNet Gateway *won't transit to On-Prem*, even if the On-Prem ExpressRoute circuit is also connected to that same VNet. So if, for example, you need your application traffic to flow to services on Azure, such as a firewall, an Azure VM, or other SaaS offering, before it moves out to on-premises, you'll need transitive routing. To set up transitive routing, follow the steps in Example 5.
 
 ### To connect your Skytap application over an existing On-Premises ExpressRoute circuit, when the connection between Skytap and Azure is a VPN<a name="expressroute2vnetandonprem+vpn"></a>  
 
@@ -247,13 +247,13 @@ Once you've created a VPN from Skytap to Azure, follow Azure's instructions to [
 
 ## To connect your Skytap application to *both* On-Premises and an Azure VNet, when you need transitive routing<a name="expressroute2vnetandonpremtransroute"></a>  
 
-A common need among your applications is to send traffic out from OnPrem, into an Azure VNet with one or more preexisting Azure SaaS (software as a service) solutions, and then onward to a Skytap Environment. Traffic also frequently needs to flow the other way as well.
+A common need among your applications is to send traffic out from OnPrem, into an Azure VNet with one or more preexisting Azure SaaS solutions, and then onward to a Skytap Environment. Traffic also frequently needs to flow the other way as well.
 
 If the SaaS objects in Azure are VMs and NVAs (such as firewalls) on a particular VNet, Azure Route Server is a low-friction solution, as shown in Example 4.
 
 If the topology you're trying to mesh is relatively simple, you can set up the configuration yourself by [establishing the proper peering relationships and route tables](https://docs.microsoft.com/en-us/azure/expressroute/cross-network-connectivity#cross-connecting-vnets) in Azure, bearing in mind that you must be careful to avoid [the pitfalls around asymmetric routing](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-asymmetric-routing).
 
-However, If you need to connect several (or complex topologies of) VNets, you can\'t get the necessary ASNs, your NVAs don't support BGP, or [Route Server won't work for you for any other reason](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#how-does-virtual-wan-hub-routing-differ-from-azure-route-server-in-a-vnet), an [Azure Virtual WAN (vWAN)](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) is a full-service solution for configuring transitive connectivity between Skytap, Azure, and OnPrem. The vWAN is a global transit network, with regional hubs. You can use it to establish transitive routing [between multiple ExpressRoutes](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-expressroute-portal) (such as an On-Prem ER, through Azure, to a Skytap ER), or [between an ExpressRoute and a VPN](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal) (such as an OnPrem ER, through Azure, to a Skytap VPN), and through any meshed topology of regional VNets. To allow traffic to transit two ExpressRoutes that are both connected to your vWAN mesh, you'll need to [peer the ER circuits with Global Reach](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#how-does-the-virtual-hub-in-a-virtual-wan-select-the-best-path-for-a-route-from-multiple-hubs), as in Example 1.
+However, if you need to connect several (or complex topologies of) VNets, you can\'t get the necessary ASNs, your NVAs don't support BGP, or [Route Server won't work for you for any other reason](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#how-does-virtual-wan-hub-routing-differ-from-azure-route-server-in-a-vnet), an [Azure Virtual WAN (vWAN)](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) is a full-service solution for configuring transitive connectivity between Skytap, Azure, and OnPrem. The vWAN is a global transit network, with regional hubs. You can use it to establish transitive routing [between multiple ExpressRoutes](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-expressroute-portal) (such as an On-Prem ER, through Azure, to a Skytap ER), or [between an ExpressRoute and a VPN](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal) (such as an OnPrem ER, through Azure, to a Skytap VPN), and through any meshed topology of regional VNets. To allow traffic to transit two ExpressRoutes that are both connected to your vWAN mesh, you'll need to [peer the ER circuits with Global Reach](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#how-does-the-virtual-hub-in-a-virtual-wan-select-the-best-path-for-a-route-from-multiple-hubs), as in Example 1.
 
 ###### *[Back to the Top](#toc)*
 
