@@ -262,7 +262,7 @@ However, if you need to connect several (or complex topologies of) vNets, you ca
 
 **Reference Architecture - Azure Virtual Network (vNet) to *both* On-Premises and an Azure vNet through an ExpressRoute with Global Reach**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image7.png" width=>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/Azure/media/image7.png" width="800">
 
 ###### *[Back to the Top](#toc)*
 
