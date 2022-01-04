@@ -9,6 +9,8 @@ $font-family-base:      'Nunito', sans-serif;
 $font-family-display:   'Source Serif Pro', serif;
 $font-family-fa:        "Font Awesome 5 Free";
 
+// Colors
+
 $navbar-col:        {{ site.navbar-col }};          // #EAEAEA
 $navbar-text-col:   {{ site.navbar-text-col }};     // #404040;
 $navbar-border-col: {{ site.navbar-border-col }};   // #DDDDDD
@@ -22,8 +24,16 @@ $footer-text-col:   {{ site.footer-text-col }};     // #777777
 $footer-link-col:   {{ site.footer-link-col }};     // #404040
 $footer-hover-col:  {{ site.footer-hover-col }};    // #0085A1
 
+$black:             #000000;
+
 * {
     box-sizing: border-box;
+
+    & + h1,
+    & + h2 { margin-top: 50px; }
+
+    & + h3,
+    & + h4 { margin-top: 40px; }
 }
 
 body {
@@ -51,31 +61,82 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 32px;
     font-weight: 400;
-    // color: $title-col;
 }
 
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
 #header_wrap {
-    border-bottom: solid 1px $navbar-border-col;
-    
-    .header-content {
-        position: static;
-        max-width: none;
-        padding: 10px 20px;
+    > .navbar {
+        border-bottom: solid 1px $navbar-border-col;
+        padding: 10px 8px;
         background-color: $link-col;
 
-        .main-logo {
-            margin: 0;
-            line-height: 1;
+        .navbar-brand {
+            svg { fill: $page-col; }
+        }
 
-            svg {
-                fill: $page-col;
+        #skytapNavBar { flex: initial; }
+
+        .navbar-nav {
+            .nav-link {
+                color: $page-col;
+            }
+        }
+    }
+
+    #subheader_wrap {
+        border-bottom: solid 1px $navbar-border-col;
+        font-size: 16px;
+
+        .navbar {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .navbar-collapse {
+            flex: initial;
+
+            .nav-link {
+                font-weight: 400;
+
+                &:hover,
+                &:focus {
+                    font-weight: 400;
+                    color: rgba($black, 0.7);
+                }
             }
 
-            img {
-                border: none;
-                box-shadow: none;
-                margin: 0;
-                padding: 0;
+            #shareDropdown {
+                &:after { display: none; }
+
+                & + .dropdown-menu {
+                    right: 0; left: auto;
+                    margin: 0;
+                    padding: 15px;
+
+                    li a {
+                        transition: color 0.3s ease;
+                        display: block;
+                        line-height: 2;
+                        font-weight: 400;
+                        color: $text-col;
+
+                        .icon {
+                            transition: color 0.3s ease;
+                            margin-right: 5px;
+                            color: $link-col;
+                        }
+
+                        &:hover {
+                            color: $black;
+                            .icon { color: darken($link-col, 10%); }
+                        }
+                    }
+                }
             }
         }
     }
@@ -89,9 +150,22 @@ h1 {
     padding-left: 12px;
 
     .sidebar {
+        position: relative;
         padding: 40px 20px;
+        border-bottom: solid 1px $navbar-border-col;
+
+        @media(min-width: 576px) {
+            border-bottom: none;
+        }
 
         .nav {
+            // @media(min-width: 576px) {
+            //     position: fixed;
+            //     left: 0;
+            //     width: 100%;
+            //     padding: 0 20px;
+            // }
+
             .nav-item {
                 .nav-link {
                     color: #333333;
