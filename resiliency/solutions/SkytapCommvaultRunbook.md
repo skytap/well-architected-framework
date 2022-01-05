@@ -12,8 +12,10 @@ This document does not provide you with any legal rights to any intellectual pro
 # Table of Contents <a name="toc"></a>
 
 * [Key Takeaways](#takeaways)
-* [Setting Up Commvault Within a Skytap Environment](#setup)
-  * [Staging Your Skytap Environment for Commvault](#step1)
+* [Setting Up Commvault Within Skytap](#setup)
+  * [Create a new Skytap Environment](#createnewenv)
+  * [Update the environment details](#updateenvdetails)
+  * 
 
 ## Key Takeaways<a name="takeaways"></a>
 
@@ -26,11 +28,11 @@ For the overall architecture, please refer to the sample reference architecture 
 *Figure 1: Sample Azure Reference Architecture*
 <hr>
 
-# Setting Up Commvault Within a Skytap Environment
+# Setting Up Commvault Within Skytap to protect an IBM Power system in the Skytap environments.<a name="setup"></a>
 
-## How to protect an IBM Power system in the Skytap environment.
+### Staging Your Skytap Environment for Commvault<a name="step1"></a>
 
-### Staging Your Skytap Environment for Commvault
+#### Create a new Skytap Environment<a name="createnewenv"></a>
 
 1.  Navigate to **[cloud.skytap.com](https://cloud.skytap.com)**. The Skytap Dashboard page will then display.
 
@@ -46,46 +48,29 @@ For the overall architecture, please refer to the sample reference architecture 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image5.png">
 
-5.  In the upper right of the **Create a new Environment** window, click the **Create** Environment button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image6.png">.
+5.  In the upper right of the **Create a new Environment** window, click the **Create** Environment button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image6.png" width="130">.
 
-Once your new environment is created, update the environment details to
-make it more clear.
+#### Update the environment details<a name="updateenvdetails"></a>
 
 1.  Click the **pencil icon** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png"> **(Edit environment information)** that is next to the environment title **Windows Server 2019 Standard Sysprepped** at the top of the environment details window.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image8.png"> The **Edit environment** dialogue displays.
->
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png">3.48in"
-> height="1.66in"}
 
-2.  From within the **Edit environment** dialogue, type a new
-    **Environment Name**, such as **Skytap & Commvault Solution
-    Infrastructure**, and then click the **Save** button
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png">0.42in"
-    height="0.21in"}.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png">
 
-> After the environment is created, make the following hardware
-> modifications to the VM to ensure stability and performance.
+2.  From within the **Edit environment** dialogue, type a new **Environment Name**, such as **Skytap & Commvault Solution Infrastructure**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="75">
 
-3.  From the Machine pool window, inside the **Windows Server 2019
-    Standard** VM tile, click the **Edit VM Settings icon**
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image11.png">0.13in"
-    height="0.13in"}.
+***NOTE***: *After the environment is created, make the following hardware modifications to the VM to ensure stability and performance.*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image12.png">2.11in"
-height="2.35in"}
+3.  From the Machine pool window, inside the **Windows Server 2019 Standard** VM tile, click the **Edit VM Settings icon** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image11.png">.
 
-> The **VM Settings** screen displays.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image12.png"> The **VM Settings** screen displays.
 
-4.  From the **VM Settings**, click the **Hardware** tab. The
-    **Hardware** settings page displays.
+4.  From the **VM Settings**, click the **Hardware** tab. The **Hardware** settings page displays.
 
 5.  In the **Compute** section, apply the following settings:
 
-    a.  Under **RAM**, click
-        <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png">0.13in"
-        height="0.13in"}(**Edit**), and choose **16 GB** from the
-        drop-down menu.
+    a.  Under **RAM**, click <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png">(**Edit**), and choose **16 GB** from the drop-down menu.
 
     b.  Click the **vCPUs** drop-down menu and choose **4**
 
