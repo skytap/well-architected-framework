@@ -15,7 +15,10 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Setting Up Commvault Within Skytap](#setup)
   * [Create a new Skytap Environment](#createnewenv)
   * [Update the environment details](#updateenvdetails)
+* [Deploying the Commvault software into the CommServer VM](#deploycommvault)
+  * [Configuring the VM to run Commvault](#configurecommvaultvm)
   * 
+* .
 
 ## Key Takeaways<a name="takeaways"></a>
 
@@ -58,7 +61,7 @@ For the overall architecture, please refer to the sample reference architecture 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png">
 
-2.  From within the **Edit environment** dialogue, type a new **Environment Name**, such as **Skytap & Commvault Solution Infrastructure**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="75">
+2.  From within the **Edit environment** dialogue, type a new **Environment Name**, such as **Skytap & Commvault Solution Infrastructure**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="65">
 
 ***NOTE***: *After the environment is created, make the following hardware modifications to the VM to ensure stability and performance.*
 
@@ -74,57 +77,41 @@ For the overall architecture, please refer to the sample reference architecture 
 
     b.  Click the **vCPUs** drop-down menu and choose **4**
 
-    c.  Click the adjacent core configuration drop-down menu and choose
-        **2 sockets x 2 cores per socket**.
+    c.  Click the adjacent core configuration drop-down menu and choose **2 sockets x 2 cores per socket**.
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image13.png">5.5in"
-> height="1.9in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image13.png">
 
 6.  In the **Storage** section, perform the following steps:
 
-    a.  Next to the existing disk, click the **Edit** (**Pencil icon**)
-        <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image14.png">0.36in"
-        height="0.16in"}. The storage section expands.
+    a.  Next to the existing disk, click the **Edit** (**Pencil icon**) <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image14.png">. 
 
-    b.  In the **Disk size** field, type **200 GB**, and then click the
+The storage section expands.
+
+   b.  In the **Disk size** field, type **200 GB**, and then click the
         **Save** button
-        <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png">0.42in"
-        height="0.21in"}.
+        <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="65">
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image15.png">6.0in"
-> height="2.75in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image15.png">
 
-7.  At the top of the **VM Settings** window, click the **\< Back** link
-    to return to the environment details page.
+7.  At the top of the **VM Settings** window, click the **\< Back** link to return to the environment details page.
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image16.png">3.88in"
-> height="1.27in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image16.png">
 
 8.  From the environment details, from the VM pool, click the **pencil
-    icon**
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png">0.17in"
-    height="0.17in"}next to the **Windows Server 2019 Standard** VM
-    tile.
+    icon** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png"> next to the **Windows Server 2019 Standard** VM tile.
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image17.png">6.0in"
-> height="4.47in"}
->
-> The **Rename VM** dialogue displays.
->
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image18.png">3.34in"
-> height="1.63in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image17.png"> 
 
-9.  Type a new **VM name**, such as **Windows Server 2019 Standard -
-    Commvault Server**, and then click the **Save** button
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png">0.48in"
-    height="0.24in"}.
+The **Rename VM** dialogue displays.
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image19.png">6.0in"
-> height="4.47in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image18.png">
 
-## Deploying the Commvault software into the CommServer VM.
+9.  Type a new **VM name**, such as **Windows Server 2019 Standard  - Commvault Server**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="65">.
 
-### Configuring the VM to run Commvault
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image19.png">
+
+## Deploying the Commvault software into the CommServer VM.<a name="deploycommvault"></a>
+### Configuring the VM to run Commvault<a name="configurecommvaultvm"></a>
 
 1.  On the **Windows Server 2019 Standard - Commvault Server** VM tile
     in the Environment details page, click **Run**
