@@ -891,23 +891,23 @@ Now that the user data has been restored onto the server, the customer can decid
 ## Next Steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../README.md)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/README.md)
 
 **Resiliency**
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
 
 >**Design**
->* [Design Considerations for Azure](../../designconsiderationsazure.md)
+>* [Design Considerations for Azure](../designconsiderationsazure.md)
 
 <!-- 
->* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
+>* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
 -->
 
 
 **Security**
-> * [Skytap Security Pillar](../../../security/README.md)
+> * [Skytap Security Pillar](../../security/README.md)
