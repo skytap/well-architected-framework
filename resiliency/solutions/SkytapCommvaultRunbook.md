@@ -17,7 +17,7 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Update the environment details](#updateenvdetails)
 * [Deploying the Commvault software into the CommServer VM](#deploycommvault)
   * [Configuring the VM to run Commvault](#configurecommvaultvm)
-  * 
+  * [Installing Commvault Complete Data Recovery -- Context Library Download]()
 * .
 
 ## Key Takeaways<a name="takeaways"></a>
@@ -29,6 +29,9 @@ For the overall architecture, please refer to the sample reference architecture 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image1.png">
 
 *Figure 1: Sample Azure Reference Architecture*
+
+###### *[Back to the Top](#toc)*
+
 <hr>
 
 # Setting Up Commvault Within Skytap to protect an IBM Power system in the Skytap environments.<a name="setup"></a>
@@ -52,6 +55,8 @@ For the overall architecture, please refer to the sample reference architecture 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image5.png">
 
 5.  In the upper right of the **Create a new Environment** window, click the **Create** Environment button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image6.png" width="130">.
+
+###### *[Back to the Top](#toc)*
 
 #### Update the environment details<a name="updateenvdetails"></a>
 
@@ -110,54 +115,48 @@ The **Rename VM** dialogue displays.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image19.png">
 
+###### *[Back to the Top](#toc)*
+
 ## Deploying the Commvault software into the CommServer VM.<a name="deploycommvault"></a>
 ### Configuring the VM to run Commvault<a name="configurecommvaultvm"></a>
 
-1.  On the **Windows Server 2019 Standard - Commvault Server** VM tile
-    in the Environment details page, click **Run**
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image20.png">0.28in"
-    height="0.27in"} to start the Windows Server.
+1.  On the **Windows Server 2019 Standard - Commvault Server** VM tile in the Environment details page, click **Run** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image20.png"> to start the Windows Server.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image21.png">
 
-2.  After the VM has turned to a **Green** and **Running** status, click
-    the VM tile to open a Secure Remote Access (SRA) client view.\
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image22.png">2.0in"
-    height="2.33in"}
+2.  After the VM has turned to a **Green** and **Running** status, click the VM tile to open a Secure Remote Access (SRA) client view. 
 
-3.  Complete the Windows Sysprep setup steps. After the VM reboots, sign
-    in.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image22.png">
+
+3.  Complete the Windows Sysprep setup steps. After the VM reboots, sign in.
 
 4.  Rename the VM.
 
-    a.  Click **Start** > **Settings** > **System** > **About**. The
-        **About** window displays.
+    a.  Click **Start** > **Settings** > **System** > **About**. The **About** window displays.
 
-    b.  Click **Rename this PC**. The **Rename your PC** dialogue
-        displays.
+    b.  Click **Rename this PC**. The **Rename your PC** dialogue displays.
 
     c.  Type a new name for the PC, such as **CommvaultServer.**
 
     d.  Click **Next**, and then click **Restart now**.
 
-5.  Resize the Windows boot volume to use the extra space you allocated
-    earlier.
+5.  Resize the Windows boot volume to use the extra space you allocated earlier.
 
-> For detailed instructions, see [**Extend a basic
-> volume**](https://docs.microsoft.com/en-us/windows-server/storage/disk-management/extend-a-basic-volume).
+***NOTE***: *For detailed instructions, see [**Extend a basic volume**](https://docs.microsoft.com/en-us/windows-server/storage/disk-management/extend-a-basic-volume).*
+
+###### *[Back to the Top](#toc)*
 
 ### Installing Commvault Complete Data Recovery -- Context Library Download
 
 1.  From the SRA client view of the Windows Server VM, open a web
     browser to: <https://www.commvault.com/trials>.
 
-2.  Click
+2.  Click **Commvault Complete™ Data Protection
+30-Day Trial Offer**.
 
-3.  Complete Fill out and download the trial for **Commvault Complete™
-    Data Protection** from Commvault's Website:
+3.  Complete Fill out and download the trial for **Commvault Complete™ Data Protection** from Commvault's Website:
 
-> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image23.png">6.5in"
-> height="5.053470034995626in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image23.png">
 
 4.  Start the Windows Commvault Server installation.
 
