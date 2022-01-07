@@ -636,7 +636,7 @@ Once the packages are installed, the configuration utility will start.
     **MediaAgent** to the Ubuntu MediaAgent (ex: **UbuntuMediaAgent**),
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png width="500"">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png" width="500">
 
 6.  In the **Create Storage Policy Wizard** pop-up, use the **default
     settings** on the **Enter the streams and retention criteria**
