@@ -9,6 +9,7 @@ This guide is provided “as-is”. Information and views expressed in this docu
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
+<!-- 
 # Table of Contents <a name="toc"></a>
 
 * [Key Takeaways](#takeaways)
@@ -19,12 +20,18 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Configuring the VM to run Commvault](#configurecommvaultvm)
   * [Installing Commvault Complete Data Recovery -- Context Library Download]()
 * .
+--> 
 
 ## Key Takeaways<a name="takeaways"></a>
 
 Commvault may be used to migrate, protect, and recover IBM i LPARs on Skytap for Azure. This guide will walk you through all the steps required to get up and running with Commvault in Skytap.
 
-For the overall architecture, please refer to the sample reference architecture shown below. In the example shown in *Figure 1*, a 1--*n* set of IBM i LPARs resides on-premises in a datacenter facility. In the example architecture, Commvault is used to back up the IBM i selected LPAR data to Commvault proxy MediaAgents to be transferred to Azure Blob Storage. The Commvault CommServer controls the orchestration and automation of the backup within Azure. The data, once transferred, may then be restored to Skytap for Azure, unchanged.
+Here is an overview of how Skytap on Azure and Commvault work together
+for AIX and IBM i (as400).
+
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image8.png">
+
+For the overall architecture, please refer to the sample reference architecture shown below. In the example shown in *Figure 1*, a 1--*n* set of IBM i LPARs resides on-premises in a data center facility. In the example architecture, Commvault is used to back up the IBM i selected LPAR data to Commvault proxy MediaAgents to be transferred to Azure Blob Storage. The Commvault CommServer controls the orchestration and automation of the backup within Azure. The data, once transferred, may then be restored to Skytap for Azure, unchanged.
 <hr>
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image1.png">
 
@@ -44,7 +51,7 @@ For the overall architecture, please refer to the sample reference architecture 
 
 2.  Once you have signed into the portal with your **Skytap account**, click the **Environments** tab at the top of the window. The **Manage Environments and VMs** page will then display.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image3.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image3.png" width="800">
 
 3.  Provision an **Environment** by clicking the **(+) New Environment** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image4.png" width="150"> on the upper right-hand side of the window. The **Create a new environment** dialogue will display.
 
@@ -52,7 +59,7 @@ For the overall architecture, please refer to the sample reference architecture 
 
 ***NOTE***: *This virtual machine will host the Commvault CommServer and is the first step in our infrastructure.*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image5.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image5.png" width="700">
 
 5.  In the upper right of the **Create a new Environment** window, click the **Create** Environment button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image6.png" width="130">.
 
@@ -62,9 +69,9 @@ For the overall architecture, please refer to the sample reference architecture 
 
 1.  Click the **pencil icon** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image7.png"> **(Edit environment information)** that is next to the environment title **Windows Server 2019 Standard Sysprepped** at the top of the environment details window.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image8.png"> The **Edit environment** dialogue displays.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image8.png" width="800"> The **Edit environment** dialogue displays.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png" width ="500">
 
 2.  From within the **Edit environment** dialogue, type a new **Environment Name**, such as **Skytap & Commvault Solution Infrastructure**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="65">
 
@@ -72,7 +79,9 @@ For the overall architecture, please refer to the sample reference architecture 
 
 3.  From the Machine pool window, inside the **Windows Server 2019 Standard** VM tile, click the **Edit VM Settings icon** <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image11.png">.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image12.png"> The **VM Settings** screen displays.
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image12.png"> 
+
+The **VM Settings** screen displays.
 
 4.  From the **VM Settings**, click the **Hardware** tab. The **Hardware** settings page displays.
 
@@ -156,7 +165,7 @@ The **Rename VM** dialogue displays.
 
 3.  Complete Fill out and download the trial for **Commvault Complete™ Data Protection** from Commvault's Website:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image23.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image23.png" width="800">
 
 4.  Start the Windows Commvault Server installation.
 
@@ -165,13 +174,13 @@ The **Rename VM** dialogue displays.
     install on a different computer** option to download **Context
     Library** and click the **\>** arrow to proceed to the next step.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image24.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image24.png" width="500">
 
 
 6.  On the **Select Operating System Type** screen, check **ALL** the
     checkboxes and click the **\>** arrow to proceed to the next step.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image25.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image25.png" width="500">
 
 7.  On the **Custom Package Install Type** screen, select the **New
     Installations** option and click the **\>** arrow to proceed to the
@@ -184,7 +193,7 @@ The **Rename VM** dialogue displays.
 9.  Use the **Default settings** and click the **\>** arrow to proceed
     to the next step.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image26.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image26.png" width="500">
 
 10. **On the TAR file destination** screen, use the **default settings**
     to **not** include a TAR file for Unix Packages, and click the
@@ -213,7 +222,7 @@ The **Rename VM** dialogue displays.
     settings**, then click the **\>** arrow to proceed to the
     installation.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image27.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image27.png" width="500">
 
 4.  Once the installation completes, open the CommServe Admin Console
     (should open automatically).
@@ -221,11 +230,11 @@ The **Rename VM** dialogue displays.
 5.  Create a new account using the same credentials that were used for
     signing up for the trial.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image28.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image28.png" width="700">
 
 6.  Log in to the Admin Console with the credentials that you created.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image29.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image29.png" width="700">
 
 7.  **Skip** the initial guided setup, as we will proceed with those
     steps after you have added the MediaAgent Server.
@@ -242,11 +251,11 @@ not match where the tool actually downloads it).
 
 3.  Click the **Tools** tab at the top of the console.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image30.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image30.png" width="700">
 
 4.  Click the **Add/Remove Software** icon to open the software menu.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image31.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image31.png" width="500">
 
 5.  Select the **Software Cache Configuration** option.
 
@@ -254,7 +263,7 @@ not match where the tool actually downloads it).
     Directory** to the directory where all the software was downloaded
     earlier. (The default is **c:\\DownloadPackageLocation**).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image32.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image32.png" width="500">
 
 7.  Click the **Commit Cache** button, then **OK** on the pop-up when
     the operation completes, then **OK** again to close the **Software
@@ -287,7 +296,7 @@ deduplication, which is not supported under POWER.
 2.  From the **Add VMs** pop-up, at the top left click the **Templates**
     tab to open the available public templates.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image33.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image33.png" width="800">
 
 3.  Search for and select **Ubuntu 18.04 LTS Server 64-bit --
     Firstboot** from the **search field**.
@@ -381,7 +390,7 @@ deduplication, which is not supported under POWER.
 22. Use the **ls** command to list the contents of the installer
     location.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image38.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image38.png" width="500">
 
 23. Use the following command to enter the Unix/Linux installer file
     location:
@@ -395,29 +404,29 @@ deduplication, which is not supported under POWER.
 25. From the Commvault installer, on the **OEM Selection** screen select
     **Commvault**, and then select **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image39.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image39.png" width="700">
 
 26. On the **Install Task** screen, select the **Install packages on
     this machine** option, and then select **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image40.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image40.png" width="700">
 
 27. On the Package Selection screen, select **File System Core**, **File
     System**, **MediaAgent**, and **File System for IBM I**, then select
     **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image41.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image41.png" width="700">
 
 28. On the **Install Directory** screen, update the **Installation
     Directory** to match your new disk, and select **Next** to continue.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image42.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image42.png" width="700">
 
 29. On the **Log Directory** screen, update the **Log Directory** to the
     same location you used for your **Installation Directory**, and
     select **Next** to continue.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image43.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image43.png" width="700">
 
 30. On the **Laptop & Desktop Backup** screen, use the **default
     settings** to **not** configure for laptop and desktop backups. (you
@@ -434,20 +443,20 @@ deduplication, which is not supported under POWER.
     **Client/Physical machine host name** to match the machine\'s IP.
     (ie **10.0.0.2**) and select **Next** to continue.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image44.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image44.png" width="700">
 
 34. On the **Client Information** screen, update the **Client name** to
     match the machine\'s name. (ie **UbuntuMediaAgent**) and select
     **Next** to continue.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image45.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image45.png" width="700">
 
 35. On the **Install Agents for Restore Only** screen, use the **default
     settings** and select **Next** to continue.
 
 36. On the Summary screen, select **Next** to continue.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image46.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image46.png" width="700">
 
 Once the packages are installed, the configuration utility will start.
 
@@ -455,17 +464,17 @@ Once the packages are installed, the configuration utility will start.
     screen, leave the field **blank** and then select **Next** to start
     the configuration of the agent as a **Decoupled** install.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image47.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image47.png" width="700">
 
 38. On the **Decoupled Install** screen, select **Yes** and then select
     **Next** to proceed with the decoupled install.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image48.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image48.png" width="700">
 
 39. On the Installation Status screen, select Finish to exit the
     installation and configuration utility.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image49.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image49.png" width="700">
 
 40. Returning to the Windows Server VM, open the CommCell Console.
 
@@ -473,11 +482,11 @@ Once the packages are installed, the configuration utility will start.
 
 41. Right-Click on **Client Computers**, and select **New Client**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image51.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image51.png" width="500">
 
 42. From the **Add New Client** pop-up, select **Unix**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image52.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image52.png" width="700">
 
 43. In the **New Unix Client** pop-up, under the **Configure Client**
     screen, Update the **Client Name** with the name of the MediaAgent
@@ -566,13 +575,13 @@ Once the packages are installed, the configuration utility will start.
     Policy Type** to **CommServe Disaster Recovery Backup**, then click
     **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image63.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image63.png" width="500">
 
 5.  In the **Create Storage Policy Wizard** pop-up, set the **Storage
     Policy Name** to something clear such as **CommServe DR Backup**,
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image64.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image64.png" width="500">
 
 6.  In the **Create Storage Policy Wizard** pop-up, select the **Library
     for Primary Copy** to the Library you created when the MediaAgents
@@ -586,7 +595,7 @@ Once the packages are installed, the configuration utility will start.
     **MediaAgent** to the Ubuntu MediaAgent (ex: **UbuntuMediaAgent**),
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png" width="500">
 
 9.  In the **Create Storage Policy Wizard** pop-up, use the **default
     settings** on the **Enter the streams and retention criteria**
@@ -596,7 +605,7 @@ Once the packages are installed, the configuration utility will start.
     encrypt your data on the **Advanced settings for the primary copy**
     screen, then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image67.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image67.png" width="500">
 
 11. In the **Create Storage Policy Wizard** pop-up, on the **Review your
     selections** screen, click **Finish**.
@@ -613,13 +622,13 @@ Once the packages are installed, the configuration utility will start.
     Policy Type** to **Data Protection and Archiving**, then click
     **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image68.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image68.png" width="500">
 
 3.  In the **Create Storage Policy Wizard** pop-up, set the **Storage
     Policy Name** to something clear such as **DataProtection**, then
     click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image69.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image69.png" width="500">
 
 4.  In the **Create Storage Policy Wizard** pop-up, select the **Library
     for Primary Copy** to the Library you created when the MediaAgents
@@ -629,7 +638,7 @@ Once the packages are installed, the configuration utility will start.
     **MediaAgent** to the Ubuntu MediaAgent (ex: **UbuntuMediaAgent**),
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png" width="500">
 
 6.  In the **Create Storage Policy Wizard** pop-up, use the **default
     settings** on the **Enter the streams and retention criteria**
@@ -642,13 +651,13 @@ Once the packages are installed, the configuration utility will start.
     point of the 200GB disk you added to the Ubuntu MediaAgent machine
     -- (ex: **UbuntuMediaServer /media/backups**), then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image70.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image70.png" width="500">
 
 8.  In the **Create Storage Policy Wizard** pop-up, you can choose to
     encrypt your data on the **Advanced settings for the primary copy**
     screen, then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image71.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image71.png" width="500">
 
 9.  In the **Create Storage Policy Wizard** pop-up, on the **Review your
     selections** screen, click **Finish**.
@@ -664,7 +673,7 @@ an IBM i LPAR that will serve as the Workload within the environment.
 2.  From the **Add VMs** pop-up, at the top left click the **Templates**
     tab to open the available public templates.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image72.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image72.png" width="800">
 
 3.  Search for **IBM i** with the **search field**.
 
@@ -723,7 +732,7 @@ an IBM i LPAR that will serve as the Workload within the environment.
     d.  Ensure that WRKDIRE has the correct Address for created user
         \[*WRKDIRE*\]
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image74.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image74.png" width="500">
 
 e.  Follow the exact steps found here to install the savf file on the
     IBM I LPAR. \[[Link to SAVF File in
@@ -735,9 +744,6 @@ f.  Follow the exact steps found here:
 
 g.  Once SAVF is installed, COMMVAULT START to kick it off.
 
-```{=html}
-<!-- -->
-```
 17. Returning to the Windows Server VM, open the CommCell Console.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image75.png">
@@ -766,7 +772,7 @@ g.  Once SAVF is installed, COMMVAULT START to kick it off.
 22. Update the **IBMi User Credential** to your IBM i non-QSECOFR
     environment user and click **OK**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image77.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image77.png" width="500">
 
 23. In the **New iSeries Client Configuration Dialog** pop-up, under the
     **Optional Data** screen, use the default settings and click
@@ -778,7 +784,7 @@ g.  Once SAVF is installed, COMMVAULT START to kick it off.
 25. Close the **Registration Status** once the IBM i machine has been
     connected.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image54.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image54.png" width="500">
 
 26. Close the **Add New Client** pop-up.
 
@@ -829,9 +835,6 @@ b.  Click on any of the sub-clients you wish to protect under the
 c.  You can monitor the status of the backups from the Jobs tab off of
     the primary Ribbon.
 
-```{=html}
-<!-- -->
-```
 28. Once the backups have finished successfully, you can be confident
     that the automatic schedule as part of the Plan will run as expected
     and you will have regular good data protection operations.
@@ -857,12 +860,12 @@ target guest:
 1.  Open the Commvault Command center and browse to the IBM i machine
     that you have protected.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image80.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image80.png" width="800">
 
 2.  Select the first of the sub-clients whose data you wish to recover.
     Drill inside and select Restore.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image81.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image81.png" width="800">
 
 3.  Select all of the data, and then target an IBM i machine to recover
     the data to. This machine must have a Commvault agent installed on
@@ -871,11 +874,11 @@ target guest:
     CommVault agent so that the machine is visible within the Commvault
     GUI
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image82.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image82.png" width="500">
 
 4.  Run the restore job. Target the destination machine.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image83.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image83.png" width="500">
 
 5.  Repeat steps 2-4 until you have recovered each of the Commvault
     subclients (not including the DR subclient, which is for authoring
