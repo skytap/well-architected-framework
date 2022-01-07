@@ -9,6 +9,7 @@ This guide is provided “as-is”. Information and views expressed in this docu
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
+<!-- 
 # Table of Contents <a name="toc"></a>
 
 * [Key Takeaways](#takeaways)
@@ -19,6 +20,7 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Configuring the VM to run Commvault](#configurecommvaultvm)
   * [Installing Commvault Complete Data Recovery -- Context Library Download]()
 * .
+--> 
 
 ## Key Takeaways<a name="takeaways"></a>
 
