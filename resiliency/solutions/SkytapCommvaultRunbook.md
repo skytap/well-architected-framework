@@ -462,17 +462,17 @@ Once the packages are installed, the configuration utility will start.
     screen, leave the field **blank** and then select **Next** to start
     the configuration of the agent as a **Decoupled** install.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image47.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image47.png" width="700">
 
 38. On the **Decoupled Install** screen, select **Yes** and then select
     **Next** to proceed with the decoupled install.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image48.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image48.png" width="700">
 
 39. On the Installation Status screen, select Finish to exit the
     installation and configuration utility.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image49.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image49.png" width="700">
 
 40. Returning to the Windows Server VM, open the CommCell Console.
 
@@ -480,11 +480,11 @@ Once the packages are installed, the configuration utility will start.
 
 41. Right-Click on **Client Computers**, and select **New Client**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image51.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image51.png" width="500">
 
 42. From the **Add New Client** pop-up, select **Unix**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image52.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image52.png" width="700">
 
 43. In the **New Unix Client** pop-up, under the **Configure Client**
     screen, Update the **Client Name** with the name of the MediaAgent
@@ -573,13 +573,13 @@ Once the packages are installed, the configuration utility will start.
     Policy Type** to **CommServe Disaster Recovery Backup**, then click
     **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image63.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image63.png" width="500">
 
 5.  In the **Create Storage Policy Wizard** pop-up, set the **Storage
     Policy Name** to something clear such as **CommServe DR Backup**,
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image64.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image64.png" width="500">
 
 6.  In the **Create Storage Policy Wizard** pop-up, select the **Library
     for Primary Copy** to the Library you created when the MediaAgents
@@ -593,7 +593,7 @@ Once the packages are installed, the configuration utility will start.
     **MediaAgent** to the Ubuntu MediaAgent (ex: **UbuntuMediaAgent**),
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png" width="500">
 
 9.  In the **Create Storage Policy Wizard** pop-up, use the **default
     settings** on the **Enter the streams and retention criteria**
@@ -603,7 +603,7 @@ Once the packages are installed, the configuration utility will start.
     encrypt your data on the **Advanced settings for the primary copy**
     screen, then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image67.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image67.png" width="500">
 
 11. In the **Create Storage Policy Wizard** pop-up, on the **Review your
     selections** screen, click **Finish**.
@@ -620,13 +620,13 @@ Once the packages are installed, the configuration utility will start.
     Policy Type** to **Data Protection and Archiving**, then click
     **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image68.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image68.png" width="500">
 
 3.  In the **Create Storage Policy Wizard** pop-up, set the **Storage
     Policy Name** to something clear such as **DataProtection**, then
     click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image69.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image69.png" width="500">
 
 4.  In the **Create Storage Policy Wizard** pop-up, select the **Library
     for Primary Copy** to the Library you created when the MediaAgents
@@ -636,7 +636,7 @@ Once the packages are installed, the configuration utility will start.
     **MediaAgent** to the Ubuntu MediaAgent (ex: **UbuntuMediaAgent**),
     then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image66.png width="500"">
 
 6.  In the **Create Storage Policy Wizard** pop-up, use the **default
     settings** on the **Enter the streams and retention criteria**
@@ -649,13 +649,13 @@ Once the packages are installed, the configuration utility will start.
     point of the 200GB disk you added to the Ubuntu MediaAgent machine
     -- (ex: **UbuntuMediaServer /media/backups**), then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image70.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image70.png" width="500">
 
 8.  In the **Create Storage Policy Wizard** pop-up, you can choose to
     encrypt your data on the **Advanced settings for the primary copy**
     screen, then click **Next**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image71.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image71.png" width="500">
 
 9.  In the **Create Storage Policy Wizard** pop-up, on the **Review your
     selections** screen, click **Finish**.
@@ -671,7 +671,7 @@ an IBM i LPAR that will serve as the Workload within the environment.
 2.  From the **Add VMs** pop-up, at the top left click the **Templates**
     tab to open the available public templates.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image72.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image72.png" width="800">
 
 3.  Search for **IBM i** with the **search field**.
 
@@ -730,7 +730,7 @@ an IBM i LPAR that will serve as the Workload within the environment.
     d.  Ensure that WRKDIRE has the correct Address for created user
         \[*WRKDIRE*\]
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image74.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image74.png" width="500">
 
 e.  Follow the exact steps found here to install the savf file on the
     IBM I LPAR. \[[Link to SAVF File in
@@ -742,9 +742,6 @@ f.  Follow the exact steps found here:
 
 g.  Once SAVF is installed, COMMVAULT START to kick it off.
 
-```{=html}
-<!-- -->
-```
 17. Returning to the Windows Server VM, open the CommCell Console.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image75.png">
@@ -773,7 +770,7 @@ g.  Once SAVF is installed, COMMVAULT START to kick it off.
 22. Update the **IBMi User Credential** to your IBM i non-QSECOFR
     environment user and click **OK**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image77.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image77.png" width="500">
 
 23. In the **New iSeries Client Configuration Dialog** pop-up, under the
     **Optional Data** screen, use the default settings and click
@@ -785,7 +782,7 @@ g.  Once SAVF is installed, COMMVAULT START to kick it off.
 25. Close the **Registration Status** once the IBM i machine has been
     connected.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image54.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image54.png" width="500">
 
 26. Close the **Add New Client** pop-up.
 
@@ -836,9 +833,6 @@ b.  Click on any of the sub-clients you wish to protect under the
 c.  You can monitor the status of the backups from the Jobs tab off of
     the primary Ribbon.
 
-```{=html}
-<!-- -->
-```
 28. Once the backups have finished successfully, you can be confident
     that the automatic schedule as part of the Plan will run as expected
     and you will have regular good data protection operations.
@@ -864,12 +858,12 @@ target guest:
 1.  Open the Commvault Command center and browse to the IBM i machine
     that you have protected.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image80.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image80.png" width="800">
 
 2.  Select the first of the sub-clients whose data you wish to recover.
     Drill inside and select Restore.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image81.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image81.png" width="800">
 
 3.  Select all of the data, and then target an IBM i machine to recover
     the data to. This machine must have a Commvault agent installed on
@@ -878,11 +872,11 @@ target guest:
     CommVault agent so that the machine is visible within the Commvault
     GUI
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image82.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image82.png" width="500">
 
 4.  Run the restore job. Target the destination machine.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image83.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image83.png" width="500">
 
 5.  Repeat steps 2-4 until you have recovered each of the Commvault
     subclients (not including the DR subclient, which is for authoring
