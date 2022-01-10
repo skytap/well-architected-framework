@@ -56,7 +56,7 @@ approach for x86 workloads also apply to Power:
     or more application components to take advantage of native Cloud
     services.
 
-* **Rebuild**: In some cases it isn't cost effective to refactor or
+* **Rebuild**: In some cases, it isn't cost effective to refactor or
     rehost an application due to an aging code base, or a lack of
     knowledge as to how the legacy system works. In this case, the
     organization may decide to start from scratch and create a new
