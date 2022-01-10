@@ -80,8 +80,8 @@ focuses primarily on cost. With VPNs in Skytap, there are no specific
 charges for the virtual VPN endpoint created, or with ingress and egress
 traffic. This is not typically the case with private circuits, as they
 do not rely on the internet, they provide dedicated network paths and
-more consistent bandwidth. VPNs should not necessarily be equated with
-less reliability in many cases however. In use cases where you are
+more consistent bandwidth. However, VPNs should not necessarily be equated with
+less reliability in many cases. In use cases where you are
 looking to create connections from networks in your Skytap account to
 VNets in your Azure subscription(s), traffic does not actually leave the
 Azure edge and traverse the internet. Also, while the connection in an
