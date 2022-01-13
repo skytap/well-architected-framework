@@ -19,7 +19,7 @@ The following section details questions that are typically asked when an organiz
 As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. 
 The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architectural excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce high quality, stable, and efficient cloud architectures.
 
-| Phase | Question | Pillar | Description |
+| Section | Question | Pillar | Description |
 | ----- | -------- | ------ | ----------- |
 | 01 | [How do we deliver operational excellence during cloud transformation?](./operations/README.md) | Operational Excellence | Operational best practices and processes that keep a system running in production. The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence. |
 | 02 | [How do we apply the right controls to improve reliability?](./resiliency/README.md) | Resiliency - HA\DR\Migration | This guide can help minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. The ability of a system to recover from failures and continue to function. |

@@ -16,7 +16,7 @@ Here is an overview of Commvault.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image7.png">
 
 Here is an overview of how Skytap on Azure and Commvault work together
-for AIX and IBM i (as400).
+for AIX and IBM i (AS400).
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image8.png">
 
