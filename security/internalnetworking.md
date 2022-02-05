@@ -106,8 +106,7 @@ Inbound proxies deployed within a workload environment are typically used to han
 >[Skytap Operational Excellence Pillar](../operations/README.md)
 >* [Connectivity Overview](../operations/connectivity/README.md)
 >* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
-
-<!--- >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../resiliency/README.md)

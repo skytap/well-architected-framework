@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\hybrid",
-    "\\operations",
-    "\\operations\\Discovery",
-    "\\operations\\Sizing_Design",
-    "\\resiliency",
-    "\\security",
-    "\\security\\images"
+    ""
   ],
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

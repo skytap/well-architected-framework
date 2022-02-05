@@ -136,8 +136,7 @@ In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring i
 >[Skytap Operational Excellence Pillar](../operations/README.md)
 >* [Connectivity Overview](../operations/connectivity/README.md)
 >* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
-
-<!--- >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
 
 **Resiliency**
 
