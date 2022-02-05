@@ -11,7 +11,7 @@ author: George Stamos, Director, Solutions Architect- Business Development
   * [Application](#qandaapp)
   * [Scenario](#qandascene)
 * [Skytap on Azure Support and Limits](#designforazure)
-<!--* [Skytap on IBM Cloud Support and Limits](#designforibm)-->
+* [Skytap on IBM Cloud Support and Limits](#designforibm)
 * [Sample Outputs](#samples)
 
 ### Skytap Power Discovery for Workloads - Goals <a name="goals"></a>

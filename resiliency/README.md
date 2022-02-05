@@ -149,8 +149,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
- 
-<!--- >* [Design Considerations for IBM Cloud](designconsiderationsibm.md) --->
+>* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
 
 
 **Security**

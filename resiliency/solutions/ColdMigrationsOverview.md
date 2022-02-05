@@ -54,8 +54,7 @@ for AIX and IBM i (AS400).
 
 >**Design**
 >* [Design Considerations for Azure](../designconsiderationsazure.md)
-
-<!--- >* [Design Considerations for IBM Cloud](../designconsiderationsibm.md) --->
+>* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
 
 **Security**
 > * [Skytap Security Pillar](../../security/README.md)
