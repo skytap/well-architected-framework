@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\operations",
+    "\\operations\\connectivity",
+    "\\operations\\connectivity\\Azure",
+    "\\operations\\connectivity\\ExpressRoute",
+    "\\operations\\Discovery",
+    "\\resiliency",
+    "\\security"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\security\\README.md",
   "PreviewInSolutionExplorer": false
 }
