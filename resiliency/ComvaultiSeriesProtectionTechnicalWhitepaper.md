@@ -56,7 +56,7 @@ Most reports can also be scheduled to run so that they are available at a specif
 
 Commvault software delivers the unparalleled advantages and benefits of a truly holistic approach to data management. It is one product built on a single unifying code base and platform---which enables users to Protect, Recover, Replicate, Archive, Analyze and Search their data. For additional insight on any of the capabilities described in this document please refer to our Books Online documentation at: [https://documentation.commvault.com/commvault/](https://documentation.commvault.com/commvault/).
 
-### THE COMMVAULT® DATA PLATFORM<a name="overview"></a>
+### THE COMMVAULT® DATA PLATFORM<a name="commvaultsolution"></a>
 
 The Commvault® Data Platform is the heart and foundation of Commvault's data management software solution. The Data Platform is used by all Commvault data protection and recovery agents. It provides a single unified architecture platform for all of the Commvault modules. It is through the Data Platform that all data management operations integrate and share a single instance view of all information and data under Commvault software's protection for a given Commcell. The Data Platform enables the following critical capabilities which are also some of the key differentiators between Commvault and other vendor products.
 
@@ -74,129 +74,63 @@ The Commvault® Data Platform is the heart and foundation of Commvault's data ma
 
 It is this tried and true single code base which enables and supports the IBM iDataAgent and fundamentally distinguishes Commvault from all other competing products.
 
-### IBM iSERIES iDATAAGENT KEY USE CASES<a name="overview"></a>
+### IBM iSERIES iDATAAGENT KEY USE CASES<a name="dataagentusecases"></a>
 
 Commvault's IBM i backup and recovery agent was designed from the outset to address four main Use Cases:
 
-#### 1.  Backup and recovery of the IBM i Integrated File System (IFS)
+#### 1.  Backup and recovery of the IBM i Integrated File System (IFS)<a name="ifsbackuprecovery"></a>
 
 At the data, library and object levels, including physical and logical files, and library spool files. The agent supports Full, Incremental and Differential backups of each of the aforementioned elements, and for the non-library file system, it supports the use of Synthetic Full backups.
 
-#### 2.  Consolidation and Cost reduction
+#### 2.  Consolidation and Cost reduction<a name="consolidateforcost"></a>
 
-> By minimizing or in some cases eliminating islands of infrastructure,
-> technologies and specialist expertise. Minimal additional
-> infrastructure or operational expertise is required beyond that
-> employed in an existing or minimal Commcell®. 
-> In fact in some
-> deployments where Linux
+By minimizing or in some cases eliminating islands of infrastructure, technologies and specialist expertise. Minimal additional infrastructure or operational expertise is required beyond that employed in an existing or minimal Commcell®. 
 
-> ![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image1.png>
+In fact in some deployments where Linux systems are already being backed up, no additional infrastructure is required since the existing components can often be leveraged to support the IBM i backup and recovery efforts. 
 
-systems are already being backed up, no additional
-> infrastructure is required since the existing components can often be
-> leveraged to support the IBM i backup and recovery efforts. With
-> respect to the operational aspects of Backup and Recovery, the same
-> team(s) which manage the daily operations for all other agent
-> implementations can easily manage the IBM i backups
->
-> also. Role based security is a native feature to all Commvault agents.
-> Because of the specialized internal structure of the IBM i application
-> libraries, it is a best practice to have a knowledgeable IBM i Systems
-> Administrator assist with Library File System (LFS) restores.
+With respect to the operational aspects of Backup and Recovery, the same team(s) which manage the daily operations for all other agent implementations can easily manage the IBM i backups also.
 
-3.  Support for compliance reporting and risk management
+Role based security is a native feature to all Commvault agents. Because of the specialized internal structure of the IBM i application libraries, it is a best practice to have a knowledgeable IBM i Systems Administrator assist with Library File System (LFS) restores.
 
-> This functionality is built-in to the implementation of the IBM i data
-> agent. The IBM i agent relies on the well proven Commvault Data
-> Platform and its rules based and auditable data management and
-> schedule policies. These policies make addressing compliance and risk
->
-> management requests a simple task and in many cases can be scheduled
-> and automated. Basic reporting such as job Success and Failures,
-> Failed Objects, detailed logging and audit trails are part of the base
-> product. Altogether, with the base product reporting and the extended
-> Metrics reporting there are close to 100 reports available within
-> Commvault software to address Compliance, Risk Management and
-> Operations and Management information requests.
+#### 3.  Support for compliance reporting and risk management<a name="complianceandriskmanagement"></a>
 
-4.  Enabling Disaster Recovery and IBM i systems Life Cycle Management
+This functionality is built-in to the implementation of the IBM i data agent. The IBM i agent relies on the well proven Commvault Data Platform and its rules based and auditable data management and schedule policies. 
 
-> This is another of the key use cases which the Commvault agent was
-> designed to address. Commvault's IBM i agent supports the creation of
-> either a "Go Save -Option 21" tape (same as BRMS) or a Minimal OS tape
-> (equivalent to an Option 22) which is designed to enable a bare metal
-> recovery after the ibase layer has been applied. Either of these
-> approaches can be utilized to support the Program Temporary Fix (PTF)
-> patching process or to recover a failed system.
+These policies make addressing compliance and risk management requests a simple task and in many cases can be scheduled and automated. Basic reporting such as job Success and Failures, Failed Objects, detailed logging and audit trails are part of the base product. 
 
-One of the most advantageous aspects of the highly adaptable Commvault
-software architecture is that it is "Data Centric" and not host-centric
-as are many legacy systems. Legacy backup and recovery systems, (such as
-TSM1 and BRMS) often use the host system as the focal point for all
-backup and recovery operations. All data on the host are considered to
-be of equal value and are managed the same. It is a one size fits all
-philosophy. Commvault recognizes that not all data on a host are
-necessarily of equal value to an organization. Therefore the Commvault
-backup agents
+Altogether, with the base product reporting and the extended Metrics reporting there are close to 100 reports available within Commvault software to address Compliance, Risk Management and Operations and Management information requests.
 
-allow the management of datasets according to user defined standard
-policies which may be used within and across different platforms. The
-data is the focal point. Separating the data into logical subsets
-enables the ability to manage the data according to its importance,
-value, restrictions, content and retention needs. Even migrating data
-from one host to another (out of place restore) is quite simple. When
-data is managed separate from the OS, it allows the OS Bare Metal
-Recovery backups to be used to initiate new systems without pre-existing
-data clutter.
+#### 4.  Enabling Disaster Recovery and IBM i systems Life Cycle Management<a name="DRandLCM"></a>
 
-### SUPPORTED IBM i SYSTEMS<a name="overview"></a>
+This is another of the key use cases which the Commvault agent was designed to address. Commvault's IBM i agent supports the creation of either a "Go Save -Option 21" tape (same as BRMS) or a Minimal OS tape (equivalent to an Option 22) which is designed to enable a bare metal recovery after the ibase layer has been applied. Either of these approaches can be utilized to support the Program Temporary Fix (PTF) patching process or to recover a failed system.
 
-The Commvault IBM iDataAgent supports the IBM i/OS versions 6.1, 7.1,
-7.2 and 7.3 (Mod 0) on the IBM PowerPC (PPC) platform. PowerPC systems 5
-through 8 are supported. The IBM iDataAgent utilizes the published IBM
-API libraries to manage the data collection from, and the restoration of
-data to, the IBM i IFS. The complete IFS Library and the hierarchical
-file system structures are supported in accordance with the rules and
-limitations of the OS version in use.
+One of the most advantageous aspects of the highly adaptable Commvault software architecture is that it is "Data Centric" and not host-centric as are many legacy systems. Legacy backup and recovery systems, (such as TSM1 and BRMS) often use the host system as the focal point for all backup and recovery operations. All data on the host are considered to be of equal value and are managed the same. It is a one size fits all philosophy. Commvault recognizes that not all data on a host are necessarily of equal value to an organization.
 
-The Commvault iDataAgent has a minimal footprint on each Logical
-Partition (LPAR) on which it is installed. The agent also requires a
-location for the job results and logging directory. Other
+Therefore the Commvault backup agents allow the management of datasets according to user defined standard policies which may be used within and across different platforms. The data is the focal point. Separating the data into logical subsets enables the ability to manage the data according to its importance, value, restrictions, content and retention needs.
+ 
+Even migrating data from one host to another (out of place restore) is quite simple. When data is managed separate from the OS, it allows the OS Bare Metal Recovery backups to be used to initiate new systems without pre-existing data clutter.
 
-> 1 With the End of Support (EOS) of TSM 6.2, access to TSM Servers
-> through the TSM API on IBM i will also reached EOS. TSM 6.2 was the
-> *last* version of TSM to support IBM i. *No further versions of TSM
-> will have API support for IBM i.* IBM Tivoli
->
-> Storage Manager (TSM) Version 6.2 reached End of Support (EOS) on
-> April 30, 2015. 5
->
-> requirements include the use of a TCP/IP port with sufficient
-> bandwidth to manage the data backup load within the planned backup
-> window. The agent uses a Linux Proxy for data streaming and
-> communications between the IBM i and the data repository target,
+### SUPPORTED IBM i SYSTEMS<a name="supportedsystems"></a>
+
+The Commvault IBM iDataAgent supports the IBM i/OS versions 6.1, 7.1, 7.2 and 7.3 (Mod 0) on the IBM PowerPC (PPC) platform. PowerPC systems 5 through 8 are supported. The IBM iDataAgent utilizes the published IBM API libraries to manage the data collection from, and the restoration of data to, the IBM i IFS. The complete IFS Library and the hierarchical file system structures are supported in accordance with the rules and limitations of the OS version in use.
+
+The Commvault iDataAgent has a minimal footprint on each Logical Partition (LPAR) on which it is installed. The agent also requires a location for the job results and logging directory. Other requirements include the use of a TCP/IP port with sufficient bandwidth to manage the data backup load within the planned backup window. The agent uses a Linux Proxy for data streaming and communications between the IBM i and the data repository target.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image4.png">
 
 <i>FIGURE 1: Linux Proxy Architecture Options</i>
 
->
-> The Linux Proxy can be either a physical or virtual system and can be
-> hosted on the IBM i host system (as a Linux LPAR) or be a separate
-> entity on its own. If deduplication is to be used the Media Agent
-> managing the deduplication database must be on an X86 architecture
-> system.
+The Linux Proxy can be either a physical or virtual system and can be hosted on the IBM i host system (as a Linux LPAR) or be a separate entity on its own. If deduplication is to be used the Media Agent managing the deduplication database must be on an X86 architecture system.
 
-### COMMVAULT® COMMCELL® LOGICAL HIERARCHY
 
-> Similar to IBM's BRMS Control Groups and Policies, Commvault software
-> uses Backup Sets, SubClients and Policies to allow the complete and
-> unattended data protection for the IBM i application libraries,
-> objects and files. Figure 2 below illustrates the relationship between
-> the logical hierarchy of Client systems, Data Sets, and subclients as
-> depicted within the system's graphical interface.
->
+*With the End of Support (EOS) of TSM 6.2, access to TSM Servers through the TSM API on IBM i will also reached EOS. TSM 6.2 was the* ***last*** *version of TSM to support IBM i.* *No further versions of TSM will have API support for IBM i.* 
+
+*IBM TivoliStorage Manager (TSM) Version 6.2 reached End of Support (EOS) on April 30, 2015.*
+
+### COMMVAULT® COMMCELL® LOGICAL HIERARCHY<a name="commcellhierarchy"></a>
+
+Similar to IBM's BRMS Control Groups and Policies, Commvault software uses Backup Sets, SubClients and Policies to allow the complete and unattended data protection for the IBM i application libraries, objects and files. Figure 2 below illustrates the relationship between the logical hierarchy of Client systems, Data Sets, and subclients as depicted within the system's graphical interface.
+
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image5a.png">
 
 <i>FIGURE 2: Client, Backup Set and SubClient Logical Hierarchy</i>
