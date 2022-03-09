@@ -293,8 +293,9 @@ FIGURE 3: BRMS Equivalency SubClient Content Options
 > be run in parallel and since the data is backed up separately, a
 > Minimal OS Tape can be generated in a much shorter time than a full GO
 > SAVE Option 21.
+> 
 
-**IBM i Defined "Parts of the System"**|**Commvault Pre-Defined Content**|**Commvault BMR Minimal OS Tape**|**Commvault User Defined Content**|**Commvault & BRMS GO Save \ Option 21**|**BRMS Option 22**|**BRMS Option 23**
+|**IBM i Defined "Parts of the System"**|**Commvault Pre-Defined Content**|**Commvault BMR Minimal OS Tape**|**Commvault User Defined Content**|**Commvault & BRMS GO Save \ Option 21**|**BRMS Option 22**|**BRMS Option 23**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 Licensed Internal Code| |YES|X|X|X| 
 OS/400 Objects in QS YS| |YES|X|X|X| 
@@ -427,23 +428,15 @@ Every backup job uses a pre-start job "QANEAGNT" to execute the backup
 commands. Any errors generated during the backup will also be logged
 under this job.
 
-+-----------------------+-----------------------+-----------------------+
-| > PROCESS             | > JOB ON IBM i        | > LOG FILE NAME       |
-+=======================+=======================+=======================+
-| > Services            | > CVD                 | > cvd.log             |
-+-----------------------+-----------------------+-----------------------+
-| > Scan                | > CVSCN               | > cvscan.log          |
-+-----------------------+-----------------------+-----------------------+
-| > Backup              | > CVBKP               | > cvbkp.log           |
-+-----------------------+-----------------------+-----------------------+
-| > SYNCLIB Backup      | > CVBKP, CVBKPCTL,    | > cvbkp.log,          |
-|                       | > CVBKPDRV, CVBKPEXT  | > cvbkpdrv.log,       |
-|                       |                       | > cvbkppcti.log       |
-+-----------------------+-----------------------+-----------------------+
-| > Restore             | > CVRST               | > cvrest.log          |
-+-----------------------+-----------------------+-----------------------+
-| > Browse              | > BROWSEDRV           | > browse.log          |
-+-----------------------+-----------------------+-----------------------+
+
+|**Process**|**Job on BIM i**|**Log File Name**
+:-----:|:-----:|:-----:
+Services|CVD|cvd.log
+Scan|CVSCN|cvscan.log
+Backup|CVBKP|cvbkp.log
+SYNCLIB Backup|CVBKP, CVBKPCTL, CVBKPDRV, CVBKPEXT|cvbkp.log, cvbkpdrv.log, svbkppcti.log
+Restore|CVRST|cvrest.log
+Browse|BROWSEDRV|browse.log
 
 FIGURE 6: Log File Names on the IBM i
 
