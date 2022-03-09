@@ -3,7 +3,6 @@ title: Data Protection/Recovery for IBM iSeries
 description: Commvault Cold Backup and Migration Partner Solutions
 author: Commvault
 ---
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image1.png">
 
 # Data Protection/Recovery for IBM iSeries
 
@@ -28,8 +27,6 @@ Commvault's IBMi iDataAgent provides the data protection, recovery and managemen
 * [Restores](#restores)
   * [Data Restore](#datarestore)
   * [System Restore](#systemrestore)
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image1.png">
 
 ### INTRODUCTION<a name="introduction"></a>
 
@@ -519,10 +516,8 @@ the CommServe.
 > bring back a bare system without legacy data, and to lay down a new
 > data footprint based on previous data backups.
 >
-> 12
 
-![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image1.png){width="4.241666666666666in"
-height="2.375in"}A Minimal OS, or Bare Metal Recovery Tape includes the
+A Minimal OS, or Bare Metal Recovery Tape includes the
 following system components:
 
 -   [SAVSYS]{.ul}
@@ -532,16 +527,11 @@ following system components:
     -   OS/400 Objects in QSYS
 
     -   SAVSECDTA
-
-> » User profiles
->
-> » Private authorities
+        -  » User profiles
+        -  » Private authorities
 
 -   SAVCFG (configuration objects)
 
-```{=html}
-<!-- -->
-```
 -   \*IBM Libraries (system libraries)
 
 -   System libraries with user data: QSYS2, QGPL, QUSRSYS
@@ -580,20 +570,19 @@ become available and will continue to do so.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
-
 >**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
 
 >**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+>* [Design Considerations for Azure](designconsiderationsazure.md)
+>* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> * [Skytap Security Pillar](../security/README.md)
