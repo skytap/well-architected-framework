@@ -181,8 +181,9 @@ location for the job results and logging directory. Other
 > communications between the IBM i and the data repository target,
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image4.png">
->
-> FIGURE 1: Linux Proxy Architecture Options
+
+<i>FIGURE 1: Linux Proxy Architecture Options</i>
+
 >
 > The Linux Proxy can be either a physical or virtual system and can be
 > hosted on the IBM i host system (as a Linux LPAR) or be a separate
@@ -245,8 +246,7 @@ the standard BRMS control groups used in their Save Group Options (21,
 22 and 23). Figure 3, illustrates the Pre-defined BRMS Equivalency
 SubClient Option.
 
-> ![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image7.jpeg){width="6.504166666666666in"
-> height="3.209722222222222in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image7a.png">
 
 FIGURE 3: BRMS Equivalency SubClient Content Options
 
