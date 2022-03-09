@@ -5,184 +5,98 @@ author: Commvault
 ---
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image1.png">
 
-## Data Protection/Recovery for IBM iSeries
+# Data Protection/Recovery for IBM iSeries
 
 Commvault's IBMi iDataAgent provides the data protection, recovery and management of supported data types and levels of granularity needed to for IBM i OS and IFS architectures.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image2.jpeg">
+## Table of Contents <a name="toc"></a>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image3.png">
+* [INTRODUCTION](#introduction)
+* [OVERVIEW](#overview)
+* [THE COMMVAULT® DATA PLATFORM](#commvaultsolution)
+* [IBMi iDATAAGENT KEY USE CASES](#dataagentusecases)
+  * [Backup and recovery of the IBMi Integrated File System (IFS)](#ifsbackuprecovery)
+  * [Consolidation and Cost reduction](#consolidateforcost)
+  * [Support for compliance reporting and risk management](#complianceandriskmanagement)
+  * [Enabling Disaster Recovery and IBMi systems Life Cycle Management](#DRandLCM)
+* [SUPPORTED IBMi SYSTEMS](#supportedsystems)
+* [COMMVAULT® COMMCELL® LOGICAL HIERARCHY](#commcellhiearchy)
+* [Backup Sets and Subclients](#backupsets)
+* [Storage and Schedule Policies](#schedules)
+* [BRMS Equivalence](#BRMS)
+* [Logging, Alerting and Reporting](#monitoring)
+* [Restores](#restores)
+  * [Data Restore](#datarestore)
+  * [System Restore](#systemrestore)
 
-> Table of Contents
->
-> INTRODUCTION / 3
->
-> OVERVIEW / 3
->
-> THE COMMVAULT® DATA PLATFORM / 4 IBMi iDATAAGENT KEY USE CASES / 4
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image1.png">
 
-1.  Backup and recovery of the IBMi Integrated File System (IFS) / 4
+### INTRODUCTION<a name="introduction"></a>
 
-2.  Consolidation and Cost reduction / 4
+Included as part of Commvault's overall data management platform the scalability, operational efficiency, and functionality of the IBM iSeries backup and recovery agent far exceeds the abilities of other IBM i data protection options, including the BRMS utility. With the release of the Version 11, Service Pack 4 of the software, the iDataAgent is more streamlined and has a number of options designed to improve backup performance and recovery ease.
 
-3.  Support for compliance reporting and risk management / 5
+The IBM iAgent, like all of the other Commvault agents, uses the Commvault Data Platform. The Data Platform is a tried and true foundation for data streaming, encryption, deduplication, compression, security and sharing of infrastructure. Leveraging the strengths of this "common" platform, each module, deployed individually or in combination with others, delivers unmatched feature capability performance against alternative system specific solutions. The many Commvault modules can be individually licensable, thus users have the flexibility to choose those that meet their current needs and activate additional modules as new requirements emerge.
 
-4.  Enabling Disaster Recovery and IBMi systems Life Cycle Management /
-    5 SUPPORTED IBMi SYSTEMS / 5
+### OVERVIEW<a name="overview"></a>
 
-> COMMVAULT® COMMCELL® LOGICAL HIERARCHY / 6
->
-> Backup Sets and Subclients / 7 Storage and Schedule Policies / 7 BRMS
-> Equivalency / 7
->
-> Logging, Alerting and Reporting / 10 Restores / 12
->
-> Data Restore / 12 System Restore / 12
+Like the IBM BRMS utility that many iSeries administrators are familiar with, Commvault software enables the backup and recovery of an entire IBM i LPAR, data and system. Commvault software however, uses a single systems console to manage all client data backups. Access to the Graphical User Interface (GUI) console can be via direct login, or via a web interface. The same master console can be accessed by multiple individuals from different locations at the same time. 
 
-# ![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image1.png){width="4.241666666666666in" height="2.375in"}INTRODUCTION
+All access is controlled through roles based security which can be tied in with the sites' active directory implementation. Client system backups, IBM i or not, can share standard data management and scheduling policies. 
 
-Included as part of Commvault's overall data management platform the
-scalability, operational efficiency, and functionality of the IBM
-iSeries backup and recovery agent far exceeds the abilities of other IBM
-i data protection options, including the BRMS utility. With the release
-of the Version 11, Service Pack 4 of the software, the iDataAgent is
-more streamlined and has a number of options designed to improve backup
-performance and recovery ease.
+This ability to share policies across client systems supports the use of standards, enhances compliance and reduces the opportunities for errors of omission, commission or configuration. 
 
-The IBM iAgent, like all of the other Commvault agents, uses the
-Commvault Data Platform. The Data Platform is a tried and true
-foundation for data streaming, encryption, deduplication,
+Backed up data can be copied to either tape, Virtual Tape Libraries or to standard disk arrays. Multiple copies of the data can be made concurrently or sequentially and sent to additional storage media at other locations.
 
-compression, security and sharing of infrastructure. Leveraging the
-strengths of this "common" platform, each module, deployed individually
-or in combination with others, delivers unmatched feature capability
-performance against alternative system specific solutions. The many
-Commvault modules can be individually licensable, thus users have the
-flexibility to choose those that meet their current needs and activate
-additional modules as new requirements emerge.
+Through its extensive Media Management system Commvault software can completely automate the management, tracking, recall and life- cycling of data tapes and disk media.
 
-# OVERVIEW
+Unlike many other data protection systems, Commvault software provides the option to do data reduction (compression, deduplication and encryption) in-line as the data is sent to the storage target. This capability can reduce the load put on the existing network infrastructures since only changed data blocks are sent down-stream.
 
-Like the IBM BRMS utility that many iSeries administrators are familiar
-with, Commvault software enables the backup and recovery of an entire
-IBM i LPAR, data and system. Commvault software however, uses a single
-systems console to manage all client data backups. Access to the
-Graphical User Interface (GUI) console can be via direct login, or via a
-web interface. The same master console can be accessed by multiple
-individuals from different locations at the same
+These data stream optimization features are part of the base product and require no specialized appliance nor hardware to support or enable them.
 
-time. All access is controlled through roles based security which can be
-tied in with the sites' active directory implementation. Client system
-backups, IBM i or not, can share standard data management and scheduling
-policies. This ability to share policies across client systems supports
-the use of standards, enhances compliance and reduces the opportunities
-for errors of omission, commission or configuration. Backed up data can
-be copied to either tape, Virtual Tape Libraries or to standard disk
-arrays. Multiple copies of the data can be made concurrently or
-sequentially and sent to additional storage media at other locations.
-Through its extensive Media Management system Commvault software can
-completely automate the management, tracking, recall and life- cycling
-of data tapes and disk media.
+Another base product feature aimed at supporting operational excellence is the level and breadth of the system's ability to provide actionable and immediate status updates. Job and event alerts, reports and job logs can all be provided, (email, SNMP, printed or published (HTML or PDF)) in near-real time as they occur. 
 
-Unlike many other data protection systems, Commvault software provides
-the option to do data reduction (compression, deduplication and
-encryption) in-line as the data is sent to the storage target. This
-capability can reduce the load put on the existing network
-infrastructures since only changed data blocks are sent down-stream.
-These data stream optimization features are part of the base product and
-require no specialized appliance nor hardware to support or enable them.
-Another base product feature aimed at supporting operational excellence
-is the level and breadth of the system's ability to provide actionable
-and immediate status updates. Job and event alerts, reports and job logs
-can all be provided, (email, SNMP, printed or published (HTML or PDF))
-in near-real time as they occur. Most reports can also be scheduled to
-run so that they are available
+Most reports can also be scheduled to run so that they are available at a specified point in time. There is also extensive logging associated with many events, processes and jobs which can be tuned and used for troubleshooting or for audit purposes. For extensive log analysis or auditing efforts, Commvault software has a Log Analytics module.
 
-at a specified point in time. There is also extensive logging associated
-with many events, processes and jobs which can be tuned and used for
-troubleshooting or for audit purposes. For extensive log analysis or
-auditing efforts, Commvault software has a Log Analytics module.
+Commvault software delivers the unparalleled advantages and benefits of a truly holistic approach to data management. It is one product built on a single unifying code base and platform---which enables users to Protect, Recover, Replicate, Archive, Analyze and Search their data. For additional insight on any of the capabilities described in this document please refer to our Books Online documentation at: [https://documentation.commvault.com/commvault/](https://documentation.commvault.com/commvault/).
 
-Commvault software delivers the unparalleled advantages and benefits of
-a truly holistic approach to data management. It is one product built on
-a single unifying code base and platform---which enables users to
-Protect, Recover, Replicate, Archive, Analyze and Search their data. For
-additional
+### THE COMMVAULT® DATA PLATFORM<a name="overview"></a>
 
-3
+The Commvault® Data Platform is the heart and foundation of Commvault's data management software solution. The Data Platform is used by all Commvault data protection and recovery agents. It provides a single unified architecture platform for all of the Commvault modules. It is through the Data Platform that all data management operations integrate and share a single instance view of all information and data under Commvault software's protection for a given Commcell. The Data Platform enables the following critical capabilities which are also some of the key differentiators between Commvault and other vendor products.
 
-> insight on any of the capabilities described in this document please
-> refer to our Books Online documentation at:
-> [documentation.commvault.com/commvault/]{.ul}.
+-   Unified platform -- reduces the cost of operations across acquisition, hardware, operations, storage and control.
 
-# THE COMMVAULT® DATA PLATFORM
+-   Distributed Data Indexing Layer / Data Movement -- virtualizes data movement across the infrastructure, accelerates access and recovery.
 
-> The Commvault® Data Platform is the heart and foundation of
-> Commvault's data management software solution. The Data Platform is
-> used by all Commvault data protection and recovery agents. It provides
-> a single unified architecture platform for all of the Commvault
-> modules. It is through the Data Platform that all data management
-> operations integrate and share a single instance view of all
-> information and data under Commvault software's protection for a given
->
-> Commcell. The Data Platform enables the following critical
-> capabilities which are also some of the key differentiators between
-> Commvault and other vendor products.
+-   Single, common, graphical management console -- allows full system management from multiple local and remote access points using role based security to control access, modify and execute privileges.
 
--   Unified platform -- reduces the cost of operations across
-    acquisition, hardware, operations, storage and control.
+-   Tiered storage policies -- provide multiple copy redundancy to ensure recovery, security and storage efficiency. Initial storage target media can be to tape, or disk and secondary copies can go to tape, disk or cloud, each with their own retention definitions.
 
--   Distributed Data Indexing Layer / Data Movement -- virtualizes data
-    movement across the infrastructure, accelerates access and recovery.
+-   Embedded data reduction -- in-line data deduplication, data compression and data encryption with no additional infrastructure or licensing, and reduces the data transfer load on existing infrastructure, thereby helping to reduce total cost of ownership.
 
--   Single, common, graphical management console -- allows full system
-    management from multiple local and remote access points using role
-    based security to control access, modify and execute privileges.
+-   Actionable and immediate system status updates -- provide a 360 degree view of the managed data environment. Supports email and ITSM (SNMP) alerting, detailed event, job and process logging and ad-hoc or schedulable reports for email, web or print distribution.
 
--   Tiered storage policies -- provide multiple copy redundancy to
-    ensure recovery, security and storage efficiency. Initial storage
-    target media can be to tape, or disk and secondary copies can go to
-    tape, disk or cloud, each with their own retention definitions.
+It is this tried and true single code base which enables and supports the IBM iDataAgent and fundamentally distinguishes Commvault from all other competing products.
 
--   Embedded data reduction -- in-line data deduplication, data
-    compression and data encryption with no additional infrastructure or
-    licensing, and reduces the data transfer load on existing
-    infrastructure, thereby helping to reduce total cost of ownership.
+### IBM iSERIES iDATAAGENT KEY USE CASES<a name="overview"></a>
 
--   Actionable and immediate system status updates -- provide a 360
-    degree view of the managed data environment. Supports email and ITSM
-    (SNMP) alerting, detailed event, job and process logging and ad-hoc
-    or schedulable reports for email, web or print distribution.
+Commvault's IBM i backup and recovery agent was designed from the outset to address four main Use Cases:
 
-> It is this tried and true single code base which enables and supports
-> the IBM iDataAgent and fundamentally distinguishes Commvault from all
-> other competing products.
+#### 1.  Backup and recovery of the IBM i Integrated File System (IFS)
 
-# IBM iSERIES iDATAAGENT KEY USE CASES
+At the data, library and object levels, including physical and logical files, and library spool files. The agent supports Full, Incremental and Differential backups of each of the aforementioned elements, and for the non-library file system, it supports the use of Synthetic Full backups.
 
-> Commvault's IBM i backup and recovery agent was designed from the
-> outset to address four main Use Cases:
-
-1.  Backup and recovery of the IBM i Integrated File System (IFS)
-
-> At the data, library and object levels, including physical and logical
-> files, and library spool files. The agent supports Full, Incremental
-> and Differential backups of each of the aforementioned elements, and
-> for the non-library file system, it supports the use of Synthetic Full
-> backups.
-
-2.  Consolidation and Cost reduction
+#### 2.  Consolidation and Cost reduction
 
 > By minimizing or in some cases eliminating islands of infrastructure,
 > technologies and specialist expertise. Minimal additional
 > infrastructure or operational expertise is required beyond that
-> employed in an existing or minimal Commcell®. In fact in some
+> employed in an existing or minimal Commcell®. 
+> In fact in some
 > deployments where Linux
->
-> 4
->
-> ![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image1.png){width="4.241666666666666in"
-> height="2.375in"}systems are already being backed up, no additional
+
+> ![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image1.png>
+
+systems are already being backed up, no additional
 > infrastructure is required since the existing components can often be
 > leveraged to support the IBM i backup and recovery efforts. With
 > respect to the operational aspects of Backup and Recovery, the same
@@ -239,7 +153,7 @@ data is managed separate from the OS, it allows the OS Bare Metal
 Recovery backups to be used to initiate new systems without pre-existing
 data clutter.
 
-# SUPPORTED IBM i SYSTEMS
+### SUPPORTED IBM i SYSTEMS<a name="overview"></a>
 
 The Commvault IBM iDataAgent supports the IBM i/OS versions 6.1, 7.1,
 7.2 and 7.3 (Mod 0) on the IBM PowerPC (PPC) platform. PowerPC systems 5
@@ -265,7 +179,8 @@ location for the job results and logging directory. Other
 > bandwidth to manage the data backup load within the planned backup
 > window. The agent uses a Linux Proxy for data streaming and
 > communications between the IBM i and the data repository target,
-> (Figure 1).
+
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image4.png">
 >
 > FIGURE 1: Linux Proxy Architecture Options
 >
@@ -275,7 +190,7 @@ location for the job results and logging directory. Other
 > managing the deduplication database must be on an X86 architecture
 > system.
 
-# COMMVAULT® COMMCELL® LOGICAL HIERARCHY
+### COMMVAULT® COMMCELL® LOGICAL HIERARCHY
 
 > Similar to IBM's BRMS Control Groups and Policies, Commvault software
 > uses Backup Sets, SubClients and Policies to allow the complete and
@@ -284,15 +199,12 @@ location for the job results and logging directory. Other
 > the logical hierarchy of Client systems, Data Sets, and subclients as
 > depicted within the system's graphical interface.
 >
-> ![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image5.jpeg){width="5.1097222222222225in"
-> height="1.2847222222222223in"}
->
-> FIGURE 2: Client, Backup Set and SubClient Logical Hierarchy
->
-> 6
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image5.jpeg">
 
-![](I:\Repos\Skytap\WAF\resiliency\commvaultmedia/media/image1.png){width="4.241666666666666in"
-height="2.375in"}BACKUP SETS AND SUBCLIENTS
+<i>FIGURE 2: Client, Backup Set and SubClient Logical Hierarchy</i>
+
+
+### BACKUP SETS AND SUBCLIENTS
 
 A Commvault CommCell environment employs logical management of
 production data, represented as a hierarchical tree structure. Agents
