@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\operations",
+    "\\operations\\connectivity",
+    "\\operations\\connectivity\\Azure",
+    "\\operations\\connectivity\\ExpressRoute",
+    "\\operations\\Discovery",
+    "\\resiliency",
+    "\\resiliency\\solutions",
+    "\\resiliency\\solutions\\GoSave",
+    "\\security"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\resiliency\\solutions\\GoSave\\ibmimigrationwithgosave.md",
   "PreviewInSolutionExplorer": false
 }
