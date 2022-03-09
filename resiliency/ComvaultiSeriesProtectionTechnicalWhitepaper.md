@@ -200,7 +200,7 @@ location for the job results and logging directory. Other
 > the logical hierarchy of Client systems, Data Sets, and subclients as
 > depicted within the system's graphical interface.
 >
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image5.jpeg">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image5a.png">
 
 <i>FIGURE 2: Client, Backup Set and SubClient Logical Hierarchy</i>
 
