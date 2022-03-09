@@ -235,18 +235,13 @@ FIGURE 5: Save-While-Active SYNCLIB Options
 The Synchronization Queue is used to specify the message queue that the IBM i save operation uses to notify the user that the checkpoint process for a library is complete. If there is a command that needs to be run to synchronize an application, it can be set in the synchronization command line field. Commvault software also supports pre- and post-scripts for all backup and restore jobs. The order in which these commands would be executed (if they were all used within a single job) is:
 
 1) *Pre-scan script executes*
-<BR>
 -- Scan process runs --
-<BR>
 2) *Post-scan script executes* 
 3) *Pre-backup script executes* 
 4) *(SYNCLIB) Synchronize the libraries to reach check-point)*
 5) *(Command to run after Synchronization)* 
-<BR>
 -- Backup process runs --
-<BR>
 6) *Post-backup script runs.*
-<BR>
 
 *Note: Any failure in this chain of events can cause the backup to restart or fail as determined by the user and if desired, an email or SNMP alert can be generated.*
 
