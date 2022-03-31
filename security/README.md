@@ -62,7 +62,9 @@ The approach to the cloud must be integrated within your organisation's
 Target Operating Model; this allows for the appropriate security
 controls to be accounted for, architected and implemented.
 
-[<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/landminemedia/media/image3.png" width="800">](https://www.lucidchart.com/documents/edit/f5794a4f-e45d-4a70-9e12-9f0abf4579bb/0?callback=close&name=docs&callback_type=back&v=1701&s=612) 
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/landminemedia/media/image3.png" width="800">
+
+<!--(https://www.lucidchart.com/documents/edit/f5794a4f-e45d-4a70-9e12-9f0abf4579bb/0?callback=close&name=docs&callback_type=back&v=1701&s=612)-->
 
 *Figure 3 - Example Target Operating Model (TOM)**
 

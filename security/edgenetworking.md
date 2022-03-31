@@ -32,7 +32,7 @@ When providing Internet or VPN access, this stack is typically implemented, as b
 
 An Outbound Proxy on the network edge should be configured to restrict access to websites, Internet-connected services and external services to only what is required for typical operation. For example, connection to an application or operating systems update service is appropriate. An outbound proxy can also be used for Data Loss Prevention (DLP) policy enforcement.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor |
 | ----------- | ------ |
@@ -48,7 +48,7 @@ The Inbound Proxy sometimes referred to as Reverse Proxy, sits between the clien
 
 The proxy enhances security by shielding the backend servers from the outside network, and this prevents malicious clients from accessing them directly to exploit any known vulnerabilities. It can also protect these backend servers by rejecting traffic from blacklisted IPs or rating limiting the number of connections from clients, reducing the risk of a distributed denial-of-service (DDoS) attack.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor |
 | ----------- | ------ |
@@ -98,7 +98,7 @@ Environments to Internet filtering should restrict egress of traffic except via 
 
 VPN/PNC to Environments, blanket access to Environments even from private connections such as VPNs is inadvisable. Outside of machine to machine connectivity to support application operations, such as Database calls or Directory Lookups, user access should be brokered via a Jump/Bastion host held in the Management environment.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor |
 | ----------- | ------ |
@@ -111,9 +111,9 @@ VPN/PNC to Environments, blanket access to Environments even from private connec
 
 Typically Intrusion Detection Systems or Intrusion Prevention Systems are consolidated on the firewall but shown here as a discrete capability for completeness. The IDS/IPS performs a vital monitoring function to alert administrators and security personnel of unauthorized attempts to access the network. Intrusion is of particular concern with internet-facing applications.
 
-In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring is not supported, hence the preference to include it as part of the Firewall capability.
+In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring is not Recommended, hence the preference to include it as part of the Firewall capability.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor |
 | ----------- | ------ |

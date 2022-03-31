@@ -97,7 +97,7 @@ workload, for example, is it transient or long-running, is it a database
 server or application middleware. An organisational security policy
 should require the use of Antivirus on all Virtual Machines or LPARs.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application     |      Vendor     |      x86         |                |      Power     |                |                |
 |----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
@@ -122,7 +122,7 @@ both operating systems and vendor application patches at least monthly,
 and application performance and functionality patching at intervals
 suitable to the organisation.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application     |      Vendor       |      x86         |                |      Power     |                |                |
 |----------------------|-------------------|------------------|----------------|----------------|----------------|----------------|
@@ -189,7 +189,7 @@ centralising the Authentication, Authorization, Accounting for
 Environments on the Skytap platform should be delivered at a management
 layer.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application     |      Vendor     |      x86         |                |      Power     |                |                |
 |----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
@@ -210,7 +210,7 @@ preferred vendors, assuming these vendors do not require a physical
 appliance to be installed into Skytap they should be compatible with the
 platform.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application            |      Vendor     |      x86         |                |      Power     |                |                |
 |-----------------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
@@ -231,7 +231,7 @@ vulnerabilities; or bad actors. To secure application secrets, license
 keys, and sensitive customer information a secrets manager can provide
 controlled access and encryption services for these functions.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application     |      Vendor     |      x86         |                |      Power     |                |                |
 |----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
@@ -251,7 +251,7 @@ single sender per environment or per customer account is preferred. All
 Virtual Machines and LPARs should send logging traffic to this sender
 for onwards propagation to the log management solution.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application         |      Vendor     |      x86         |                |      Power     |                |                |
 |--------------------------|-----------------|------------------|----------------|----------------|----------------|----------------|

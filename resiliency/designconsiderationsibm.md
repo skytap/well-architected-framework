@@ -23,7 +23,7 @@ IBM i:  7.2 TR 9, 7.3 TR 5, 7.4
 * IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises		
   *  Range: 1 GB/s Limit
 * Layer 2 networking in environment
-  * Range: Burst to 2.7 GB/s Limit
+  * Range: Burst to 2.7 Gb/s Limit
 * 10 NICs Per Host
 * 10 VPN Connections Per Account
 
@@ -60,7 +60,7 @@ for Power
 * IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises		
   *  Range: 1 GB/s Limit
 * Layer 2 networking in environment
-  * Range: Burst to 2.7 GB/s Limit
+  * Range: Burst to 2.7 Gb/s Limit
 * 10 NICs Per Host
 * 10 VPN Connections Per Account
 

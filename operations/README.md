@@ -19,8 +19,9 @@ These are the disciplines we group in the operational excellence pillar:
 
 | Operational Excellence Disciplines | Description |
 |-------------------|-------------|
-| [Power Discovery](Discovery/README.md) | IBM Power Workloads have been in use for over thirty years and have unique considerations when migrating them to a Cloud Platform.  |
+| [Power Discovery](Discovery/README.md) | IBM Power Workloads have been in use for over thirty years and have unique considerations and require a deep understanding of what is in your environments when migrating them to a Cloud Platform.  |
 | [Connectivity](connectivity/README.md) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
+| [Ecosystems](ecosystems/README.md) | IBM Power Workload best practices Design patterns. |
 
 <!--
 | [Phase 01C - Sizing and Design](/Sizing_Design/README.md) | The monitoring and management of performance and availability of software applications through DevOps |
@@ -37,6 +38,7 @@ These are the disciplines we group in the operational excellence pillar:
 
 >* [Power Discovery](Discovery/README.md)
 >* [Connectivity](connectivity/README.md)
+>* [Ecosystems](ecosystems/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../resiliency/README.md)
