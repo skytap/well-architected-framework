@@ -1,6 +1,6 @@
 ---
 title: Skytap Operational Excellence - Ecosystems
-author: Ahmed Abdulla a consultant in McKinsey’s Dubai office, Ewa Janiszewska-Kiewra is manager of data engineering in the Wroclaw office, and Jannik Podlesny is a specialist in the Berlin office.
+author:  Matthew Romero, Technical Product Marketing Manager
 permalink: /operations/ecosystems/
 ---
 
