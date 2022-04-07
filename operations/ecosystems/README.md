@@ -10,7 +10,7 @@ permalink: /operations/ecosystems/
 
 A cloud ecosystem is a complex system of interdependent components that all work together to enable cloud services. In nature, an ecosystem is composed of living and nonliving things that are connected and work together. In cloud computing, the ecosystem consists of hardware and software as well as cloud customers, cloud engineers, consultants, integrators and partners.
 
-A robust ecosystem provides a cloud provider's customers with an easy way to find and purchase business applications and respond to changing business needs. When the apps are sold through a provider’s app store such as Microsoft Azure Marketplace (for cloud software), the customer essentially has access to a catalog of different vendors' software and services that have already been vetted and reviewed for security, risk and cost.
+A robust ecosystem provides a cloud provider's customers with an easy way to find and purchase business applications and respond to changing business needs. When the apps are sold through a providerâ€™s app store such as Microsoft Azure Marketplace (for cloud software), the customer essentially has access to a catalog of different vendors' software and services that have already been vetted and reviewed for security, risk and cost.
 
 **The benefits of a cloud ecosystem**
 
@@ -18,7 +18,7 @@ Companies can use a cloud ecosystem to build new business models. It becomes rel
 
 In a cloud ecosystem, it is also easier to aggregate data and analyze how each part of the system affects the other parts. For example, if an ecosystem consists of patient records, smart device logs and healthcare provider records, it becomes possible to analyze patterns across an entire patient population.
 
-## Key Points
+## Key points
 
 **Skytap-owned versus customer-owned responsibilities**
 
@@ -28,7 +28,7 @@ In a cloud ecosystem, it is also easier to aggregate data and analyze how each p
 
 ## Choosing the right design
 
-Once a company selects its data-ecosystem archetype, executives should then focus on setting up the right infrastructure to supports its operation. An ecosystem can’t deliver on its promise to participants without ensuring access to data, and that critical element relies on the design of the data architecture. 
+Once a company selects its data-ecosystem archetype, executives should then focus on setting up the right infrastructure to supports its operation. An ecosystem canâ€™t deliver on its promise to participants without ensuring access to data, and that critical element relies on the design of the data architecture. 
 
 We have identified five questions that incumbents must resolve when setting up their data ecosystem.
 
@@ -38,7 +38,7 @@ Industry experience shows that standard data-exchange mechanisms among partners,
 
 **How do we manage identity and access?**
 
-Companies can pursue two strategies to select and implement an identity-management system. The more common approach is to centralize identity management through solutions such as Okta, OpenID, or Ping. An emerging approach is to decentralize and federate identity management—for example, by using blockchain ledger mechanisms.
+Companies can pursue two strategies to select and implement an identity-management system. The more common approach is to centralize identity management through solutions such as Okta, OpenID, or Ping. An emerging approach is to decentralize and federate identity managementâ€”for example, by using blockchain ledger mechanisms.
 
 **How can we define data domains and storage?**
 
@@ -55,7 +55,7 @@ Enabling rapid and decentralized access to data or data outputs is the key to sc
 Make their data assets discoverable, addressable, versioned, and trustworthy in terms of accuracy
 Use self-describing semantics and open standards for data exchange
 Support secure exchanges while allowing access at a granular level
-The success of a data-ecosystem strategy depends on data availability and digitization, API readiness to enable integration, data privacy and compliance—for example, General Data Protection Regulation (GDPR)—and user access in a distributed setup. This range of attributes requires companies to design their data architecture to check all these boxes.
+The success of a data-ecosystem strategy depends on data availability and digitization, API readiness to enable integration, data privacy and complianceâ€”for example, General Data Protection Regulation (GDPR)â€”and user access in a distributed setup. This range of attributes requires companies to design their data architecture to check all these boxes.
 
 As incumbents consider establishing data ecosystems, we recommend they develop a road map that specifically addresses the common challenges. They should then look to define their architecture to ensure that the benefits to participants and themselves come to fruition. The good news is that the data-architecture requirements for ecosystems are not complex. The priority components are identity and access management, a minimum set of tools to manage data and analytics, and central data storage.
 
