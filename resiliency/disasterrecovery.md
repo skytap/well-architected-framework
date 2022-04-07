@@ -2,47 +2,43 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
-permalink: /resiliency/
+permalink: /resiliency/disasterrecovery.md
 ---
 
-# Principles of the reliability pillar
+# Backup and disaster recovery for Skytap workloads
 
-Building a reliable application in the cloud is different from traditional application development. While historically you may have purchased levels of redundant higher-end hardware to minimize the chance of an entire application platform failing, in the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component.
+*Disaster recovery* is the process of restoring workload functionality in the wake of a catastrophic loss.
 
-# Backup and disaster recovery for Skytap applications
+In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component. Testing is one way to minimize these effects. You should automate testing your workloads where possible, but you need to be prepared for when they fail. When this happens, having backup and recovery strategies becomes important.
 
-*Disaster recovery* is the process of restoring application functionality in the wake of a catastrophic loss.
-
-In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component. Testing is one way to minimize these effects. You should automate testing your applications where possible, but you need to be prepared for when they fail. When this happens, having backup and recovery strategies becomes important.
-
-Your tolerance for reduced functionality during a disaster is a business decision that varies from one application to the next. It might be acceptable for some applications to be unavailable or to be partially available with reduced functionality or delayed processing for a period of time. For other applications, any reduced functionality is unacceptable. 
+Your tolerance for reduced functionality during a disaster is a business decision that varies from one workload to the next. It might be acceptable for some workloads to be unavailable or to be partially available with reduced functionality or delayed processing for a period of time. For other workloads, any reduced functionality is unacceptable. 
 
 ## Disaster recovery plan
 
-Start by creating a recovery plan. The plan is considered complete after it has been fully tested. Include the people, processes, and applications needed to restore functionality within the service-level agreement (SLA) you've defined.
+Start by creating a recovery plan. The plan is considered complete after it has been fully tested. Include the people, processes, and workloads needed to restore functionality within the service-level agreement (SLA) you've defined.
 
 Consider the following suggestions when creating and testing your disaster recovery plan:
 
 - Include the process for contacting support and escalating issues. This information will help to avoid prolonged downtime as you work out the recovery process for the first time.
-- Evaluate the business impact of application failures.
-- Choose a cross-region recovery architecture for mission-critical applications.
+- Evaluate the business impact of workload failures.
+- Choose a cross-region recovery architecture for mission-critical workloads.
 - Identify a specific owner of the disaster recovery plan, including automation and testing.
 - Document the process, especially any manual steps.
 - Automate the process as much as possible.
 - Establish a backup strategy for all reference and transactional data, and test backup restoration regularly.
-- Set up alerts for the stack of the Skytap services consumed by your application.
+- Set up alerts for the stack of the Skytap services consumed by your workload.
 - Train operations staff to execute the plan.
 - Perform regular disaster simulations to validate and improve the plan.
 
-## Backup strategy
+## Disaster recovery strategy
 
-Many alternative strategies are available for implementing distributed compute across regions. These must be tailored to the specific business requirements and circumstances of the application. At a high level, the approaches can be divided into the following categories:
+Many alternative strategies are available for implementing distributed compute across regions. These must be tailored to the specific business requirements and circumstances of the workload. At a high level, the approaches can be divided into the following categories:
 
-- **Redeploy on disaster**: In this approach, the application is redeployed from scratch at the time of disaster. This is appropriate for non-critical applications that don’t require a guaranteed recovery time.
+- **Redeploy on disaster**: In this approach, the workload is redeployed from scratch at the time of disaster. This is appropriate for non-critical workloads that don’t require a guaranteed recovery time.
 
-- **Warm Spare (Active/Passive)**: A secondary hosted service is created in an alternate region, and roles are deployed to guarantee minimal capacity; however, the roles don’t receive production traffic. This approach is useful for applications that have not been designed to distribute traffic across regions.
+- **Warm Spare (Active/Passive)**: A secondary hosted service is created in an alternate region, and roles are deployed to guarantee minimal capacity; however, the roles don’t receive production traffic. This approach is useful for workloads that have not been designed to distribute traffic across regions.
 
-- **Hot Spare (Active/Active)**: The application is designed to receive production load in multiple regions. The cloud services in each region might be configured for higher capacity than required for disaster recovery purposes. Alternatively, the cloud services might scale-out as necessary at the time of a disaster and fail-over. This approach requires substantial investment in application design, but it has significant benefits. These include low and guaranteed recovery time, continuous testing of all recovery locations, and efficient usage of capacity.
+- **Hot Spare (Active/Active)**: The workload is designed to receive production load in multiple regions. The cloud services in each region might be configured for higher capacity than required for disaster recovery purposes. Alternatively, the cloud services might scale-out as necessary at the time of a disaster and fail-over. This approach requires substantial investment in workload design, but it has significant benefits. These include low and guaranteed recovery time, continuous testing of all recovery locations, and efficient usage of capacity.
 
 ## Definitions
 

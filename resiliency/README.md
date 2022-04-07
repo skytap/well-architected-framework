@@ -94,9 +94,9 @@ These are the disciplines we group in the Reliability Pillar:
 | Operational Excellence Disciplines | Description |
 |-------------------|-------------|
 | [Migration](migrations.md) | The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap.   |
-| [Protection](backups.md) | words.  |
-| [Disaster Recovery](disasterrecovery.md) | words.  |
-| [High Availability](highavailability.md) | words.  |
+| [Protection](backups.md) | In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component.  |
+| [Disaster Recovery](disasterrecovery.md) | Disaster recovery is the process of restoring application functionality in the wake of a catastrophic loss.  |
+<!--| [High Availability](highavailability.md) | words.  |-->
 
 **Main Overview**
 > [Skytap Well-Architected Framework](../README.md)

@@ -5,11 +5,8 @@ author: George Stamos - Director, Solutions Architect - Business Development
 permalink: /resiliency/
 ---
 
-# Principles of the reliability pillar
 
-Building a reliable application in the cloud is different from traditional application development. While historically you may have purchased levels of redundant higher-end hardware to minimize the chance of an entire application platform failing, in the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component.
-
-# Backup for Skytap applications
+# Backup for Skytap workloads
 
 In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component. As such we recommend that you be prepared for when they fail. When this happens, having backup and recovery strategies becomes important.
 

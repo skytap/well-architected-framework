@@ -1,15 +1,17 @@
 {
   "ExpandedNodes": [
     "",
+    "\\operations",
     "\\operations\\connectivity",
-    "\\operations\\connectivity\\Azure",
     "\\operations\\connectivity\\ExpressRoute",
     "\\operations\\Discovery",
+    "\\operations\\ecosystems",
+    "\\operations\\ecosystems\\azurenative",
+    "\\operations\\ecosystems\\SAP",
     "\\resiliency",
-    "\\resiliency\\solutions\\GoSave",
     "\\scaleandperformance",
     "\\security"
   ],
-  "SelectedNode": "\\resiliency\\ibmihadr.md",
+  "SelectedNode": "\\operations\\ecosystems\\README.md",
   "PreviewInSolutionExplorer": false
 }
