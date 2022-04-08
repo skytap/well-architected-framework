@@ -61,8 +61,8 @@ As incumbents consider establishing data ecosystems, Skytap recommends they deve
 
 ##### Design Patterns:
 
--   [Azure Native Solutions](azurenative/README.md)
--   [SAP Workloads](SAP/README.md)
+<!-- -   [Azure Native Solutions](azurenative/README.md)
+-   [SAP Workloads](SAP/README.md)-->
 
 
 <hr>
