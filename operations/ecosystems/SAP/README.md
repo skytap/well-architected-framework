@@ -7,8 +7,8 @@ author: George Stamos - Director, Solutions Architect - Business Development
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image12.jpeg"><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
 <br>
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png" Width="800" align="center">
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg" Width="800" align="center">
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png" Width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg" Width="800"></center>
 
 ## Business Drivers- the case for change
 **SAP NetWeaver based workloads onIBM Power on Skytap on Azure**
@@ -24,14 +24,14 @@ author: George Stamos - Director, Solutions Architect - Business Development
 
 ## Sample SAP Architecture for Skytap on Azure
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image26.jpeg" Width="800" align="center">
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image26.jpeg" Width="800"></center>
 
 ## Customer Example -- (Large European Oil and Gas)
 
 SAP On-Premises Solution (AIX) that Migrated Nearly Unchanged to
 Azure
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image44.jpeg" align="center">
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image44.jpeg"></center>
 
 ***Drivers and Requirements:***
 
