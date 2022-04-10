@@ -253,7 +253,7 @@ Commvault software provides a detailed Job Log report and options to define the 
 
 As part of the normal software installation Commvault includes a wide variety of reports for Operations, Management, and Users which provide insight and detail on virtually every aspect of the CommCell and its backup jobs, and data recovery information (Job Catalogue). These reports can be either generated ad-hoc, or scheduled. In addition to these standard base system reports, Commvault also offers an advanced Metrics reporting capability with an additional several dozen specialized reports and the ability to build custom reports.
 
-The Job Catalogue is always available in Commvault either as part of the Commcell management GUI and job history, or as one of the base reports. Using the interactive GUI allows the user to simply select a job and derive further information and details about the job, or to even begin a data restore operation. The same information is available in report form which can then be printed or forwarded to interested parties via email.
+The Job Catalog is always available in Commvault either as part of the Commcell management GUI and job history, or as one of the base reports. Using the interactive GUI allows the user to simply select a job and derive further information and details about the job, or to even begin a data restore operation. The same information is available in report form which can then be printed or forwarded to interested parties via email.
 
 As part of the overall system management, operations effectiveness, security and compliance capabilities of the system, alerts for many different types and levels of events can be generated. These alerts can be send via email, SNMP to an ITSM environment or as notifications to the open console.
 
@@ -365,10 +365,12 @@ Commvault's IBM iDataAgent relies on the same proven Commvault Data Platform tha
 >[Skytap Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
-
+> [Skytap Resiliency Pillar](README.md)
+>* [Migration](migrations.md)
+>* [Protection](backups.md)
+>* [Disaster Recovery](disasterrecovery.md)
+>* [High Availability](ibmihadr.md)
+>
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](designconsiderationsibm.md)

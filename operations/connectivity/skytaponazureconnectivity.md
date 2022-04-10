@@ -277,17 +277,15 @@ However, if you need to connect several (or complex topologies of) vNets, you ca
 **Operational Excellence**
 >[Skytap Operational Excellence Pillar](../README.md)
 >* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md)
-
-<!--- > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md) --->
+>* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
+>* [Ecosystems](../ecosystems/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
-
-<!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
 **Security**
 > [Skytap Security Pillar](../../security/README.md)

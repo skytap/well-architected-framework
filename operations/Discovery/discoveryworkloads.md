@@ -105,18 +105,22 @@ following commands and catalog into the BOM for the migration.
 >* [Power Discovery](../Discovery/README.md)
        > [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Connectivity](../connectivity/README.md)
+>* [Ecosystems](../ecosystems/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
-
+>[Skytap Resiliency Pillar](../../resiliency/README.md)
+>* [Migration](../../resiliency/migrations.md)
+>* [Protection](../../resiliency/backups.md)
+>* [Disaster Recovery](../../resiliency/disasterrecovery.md)
+>* [High Availability](../../resiliency/ibmihadr.md)
+>
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](../../resiliency/solutions/HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../../resiliency/solutions/ColdMigrationsOverview.md)
-
+>
 >**Design**
 >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
-
-<!--- >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md) --->
+>* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
 **Security**
 > [Skytap Security Pillar](../../security/README.md)

@@ -151,6 +151,7 @@ Skytap on Azure.
 >* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
 >* [Power Discovery & Design - Workloads](discoveryworkloads.md)
 >* [Connectivity](../connectivity/README.md)
+>* [Ecosystems](../ecosystems/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)

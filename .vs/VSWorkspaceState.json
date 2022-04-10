@@ -3,14 +3,15 @@
     "",
     "\\operations",
     "\\operations\\connectivity",
-    "\\operations\\connectivity\\Azure",
     "\\operations\\connectivity\\ExpressRoute",
     "\\operations\\Discovery",
+    "\\operations\\ecosystems",
+    "\\operations\\ecosystems\\azurenative",
+    "\\operations\\ecosystems\\SAP",
     "\\resiliency",
-    "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\GoSave",
+    "\\scaleandperformance",
     "\\security"
   ],
-  "SelectedNode": "\\resiliency\\solutions\\HotMigrationOverview.md",
+  "SelectedNode": "\\operations\\ecosystems\\README.md",
   "PreviewInSolutionExplorer": false
 }

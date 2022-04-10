@@ -22,7 +22,7 @@ Two additional services present in the environment internal networking, a Servic
 
 Internal network firewalls can be deployed where it is necessary to restrict or control traffic between networks running inside Skytap. These firewalls are deployed as virtual machines within your Skytap environments.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor |
 | ----------- | ------ |
@@ -45,7 +45,7 @@ In addition to network simplification a Service Mesh can also provide
 fine-grained access control, mutual TLS authentication and remove
 network appliances (such as load balancers).
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor | x86 |     | Power |     |     |
 | ----------- | ------ | --- | --- | ----- | --- | --- |
@@ -59,7 +59,7 @@ network appliances (such as load balancers).
 Within an environment a DNS service can be used to provide information
 to applications on where to send traffic without using the IP address.
 This is beneficial on the Skytap platform even though IP address
-portability is supported, in case multiple concurrent environments are
+portability is Recommended, in case multiple concurrent environments are
 running.
 
 Service Discovery helps applications discover other services they
@@ -69,7 +69,7 @@ balancing functionality.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/internalnetworkingmedia/media/image3.png" width="500">
 
-##### Supported Implementations
+##### Recommended Implementations
 
 | Application | Vendor |
 | ----------- | ------ |
@@ -88,7 +88,7 @@ Outbound proxies can also be configured directly within your workload networks i
 
 Inbound proxies deployed within a workload environment are typically used to handle proxying required within a workload or between workload environments.
 
-##### Supported Implementations
+##### Recommended Implementations
 
 |      Application                                      | Vendor  |
 | ----------------------------------------------------- | ------- |

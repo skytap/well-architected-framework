@@ -90,11 +90,15 @@ The following outlines popular Precisely migration scenarios available for you t
 >[Skytap Operational Excellence Pillar](../../operations/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
-
+>[Skytap Resiliency Pillar](../README.md)
+>* [Migration](../migrations.md)
+>* [Protection](../backups.md)
+>* [Disaster Recovery](../disasterrecovery.md)
+>* [High Availability](../ibmihadr.md)
+>
 >**Migration Solutions**
 >* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
-
+>
 >**Design**
 >* [Design Considerations for Azure](../designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)

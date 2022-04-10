@@ -66,13 +66,14 @@ each server.
 **Operational Excellence**
 >[Skytap Operational Excellence Pillar](../README.md)
 >* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md)
+>* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+>* [Ecosystems](../ecosystems/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 >**Design**
-<!-- >* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md) -->
+>* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
 
 **Security**
