@@ -2,7 +2,6 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
-permalink: /resiliency/disasterrecovery.md
 ---
 
 # Backup and disaster recovery for Skytap workloads
