@@ -9,9 +9,9 @@ author: George Stamos - Director, Solutions Architect - Business Development
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png" Width="800">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg" Width="800">
 
 ## Business Drivers- the case for change
 **SAP NetWeaver based workloads onIBM Power on Skytap on Azure**
