@@ -5,13 +5,10 @@ author: George Stamos - Director, Solutions Architect - Business Development
 
 # SAP on Azure Deployments 
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image12.jpeg">
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png">
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image12.jpeg"><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
+<br>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png" Width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg" Width="800"></center>
 
 ## Business Drivers- the case for change
 **SAP NetWeaver based workloads onIBM Power on Skytap on Azure**
@@ -21,20 +18,20 @@ author: George Stamos - Director, Solutions Architect - Business Development
 3.  IBM Power Data Centre exit : NetWeaver workloads to Azure
 4.  Modernization of Business Processes
 
-    a.  Move NetWeaver workloads to SOA to enable them to interoperate
-        with SAP HANA based workloads or other Business Applications running on Azure
+    a.  Move NetWeaver workloads to SOA to enable them to inter-operate
+ with SAP HANA based workloads or other Business Applications running on Azure
     b.  Move NetWeaver workloads to SOA to enable them to be more easily transition to SAP HANA
 
 ## Sample SAP Architecture for Skytap on Azure
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image26.jpeg">
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image26.jpeg" Width="800"></center>
 
 ## Customer Example -- (Large European Oil and Gas)
 
 SAP On-Premises Solution (AIX) that Migrated Nearly Unchanged to
 Azure
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image44.jpeg">
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image44.jpeg"></center>
 
 ***Drivers and Requirements:***
 
