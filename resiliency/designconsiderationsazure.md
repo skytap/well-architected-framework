@@ -75,18 +75,17 @@ LPAR Sizing and OS Support for Power
 >[Skytap Operational Excellence Pillar](../operations/README.md)
 >* [Connectivity Overview](../operations/connectivity/README.md)
 >* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
-
-<!--* >* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](README.md)
-
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
-
-<!-- >**Design**
->* [Design Considerations for IBM Cloud](designconsiderationsibm.md) -->
+>* [Migration](migrations.md)
+>* [Protection](backups.md)
+>* [Disaster Recovery](disasterrecovery.md)
+>* [High Availability](ibmihadr.md)
+>
+>**Design**
+>* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
 
 **Security**
 > * [Skytap Security Pillar](../security/README.md)

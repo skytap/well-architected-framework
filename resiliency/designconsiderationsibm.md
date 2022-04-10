@@ -84,11 +84,11 @@ for Power
 
 **Resiliency**
 > [Skytap Resiliency Pillar](README.md)
-
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
- 
+>* [Migration](migrations.md)
+>* [Protection](backups.md)
+>* [Disaster Recovery](disasterrecovery.md)
+>* [High Availability](ibmihadr.md)
+>
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
 

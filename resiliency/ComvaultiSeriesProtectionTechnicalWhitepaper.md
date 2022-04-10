@@ -365,10 +365,12 @@ Commvault's IBM iDataAgent relies on the same proven Commvault Data Platform tha
 >[Skytap Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
-
+> [Skytap Resiliency Pillar](README.md)
+>* [Migration](migrations.md)
+>* [Protection](backups.md)
+>* [Disaster Recovery](disasterrecovery.md)
+>* [High Availability](ibmihadr.md)
+>
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](designconsiderationsibm.md)

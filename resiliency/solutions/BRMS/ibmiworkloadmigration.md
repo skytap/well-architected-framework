@@ -555,16 +555,19 @@ partition, you must specify the following:
 >[Skytap Operational Excellence Pillar](../../../operations/README.md)
 
 **Resiliency**
+>[Skytap Resiliency Pillar](../../README.md)
+>* [Migration](../../migrations.md)
+>* [Protection](../../backups.md)
+>* [Disaster Recovery](../../disasterrecovery.md)
+>* [High Availability](../../ibmihadr.md)
+>
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
-
+>
 >**Design**
 >* [Design Considerations for Azure](../../designconsiderationsazure.md)
-
-<!-- 
 >* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
--->
 
 
 **Security**

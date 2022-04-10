@@ -63,10 +63,15 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 >[Skytap Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
+>[Skytap Resiliency Pillar](README.md)
+>* [Protection](backups.md)
+>* [Disaster Recovery](disasterrecovery.md)
+>* [High Availability](ibmihadr.md)
+>
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
-
+>
 >**Design**
 >* [Design Considerations for Azure](designconsiderationsazure.md)
 >* [Design Considerations for IBM Cloud](designconsiderationsibm.md)

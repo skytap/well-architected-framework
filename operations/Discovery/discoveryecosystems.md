@@ -539,6 +539,7 @@ Includes graphic view of the last 7 days with Google graphs for free.
 >* [Power Discovery](../Discovery/README.md)
        > [Power Discovery & Design - Workloads](discoveryworkloads.md)
 >* [Connectivity](../connectivity/README.md)
+>* [Ecosystems](../ecosystems/README.md)
 
 **Resiliency**
 > [Skytap Resiliency Pillar](../../resiliency/README.md)
