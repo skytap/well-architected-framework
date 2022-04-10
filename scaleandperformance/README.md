@@ -11,23 +11,23 @@ These principles are intended to guide you in your overall strategy for improvin
 
 Understand the challenges of distributed architectures
 
-Most cloud deployments are based on distributed architectures where components are distributed across various services. Troubleshooting monolithic applications often requires only one or two lenses—the application and the database. With distributed architectures, troubleshooting is complex and challenging because of various factors. For example, capturing telemetry throughout the application—across all services—as possible. Also, the team should be skilled with the necessary expertise to troubleshoot all services in your architecture.
+Most cloud deployments are based on distributed architectures where components are distributed across various services. Troubleshooting monolithic applications often requires only one or two lensesâ€”the application and the database. With distributed architectures, troubleshooting is complex and challenging because of various factors. For example, capturing telemetry throughout the applicationâ€”across all servicesâ€”as possible. Also, the team should be skilled with the necessary expertise to troubleshoot all services in your architecture.
 
 Run performance testing in the scope of development
 
 Any development effort must go through continuous performance testing. The tests make sure that any change to the codebase doesn't negatively affect the application's performance. Establish a regular cadence for running the tests. Run the test as part of a scheduled event or part of a continuous integration (CI) build pipeline.
 
-Establish performance baselines—Determine the current efficiency of the application and its supporting infrastructure. Measuring performance against baselines can provide strategies for improvements and determine if the application is meeting the business goals.
+Establish performance baselinesâ€”Determine the current efficiency of the application and its supporting infrastructure. Measuring performance against baselines can provide strategies for improvements and determine if the application is meeting the business goals.
 
-Run load and stress tests—Load testing measures your application's performance under predetermined amounts of load. Stress testing measures the maximum load your application and its infrastructure can support before it buckles.
+Run load and stress testsâ€”Load testing measures your application's performance under predetermined amounts of load. Stress testing measures the maximum load your application and its infrastructure can support before it buckles.
 
-Identify bottlenecks—Bottlenecks is an area within your application that can hinder performance. These spots can be the result of shortages in code or misconfiguration of a service. Typically, a bottleneck worsens as load increases.
+Identify bottlenecksâ€”Bottlenecks is an area within your application that can hinder performance. These spots can be the result of shortages in code or misconfiguration of a service. Typically, a bottleneck worsens as load increases.
 
 Continuously monitor the application and the supporting infrastructure
 
-Have a data-driven approach—Base your decisions on the data captured from repeatable processes. Archive data to monitor performance changes over time, not just compared to the last measurement taken.
-Monitor the health of current workloads—In monitoring strategy, consider scalability and resiliency of the infrastructure, application, and dependent services. For scalability, look at the metrics that would allow you to provision resources dynamically and scale with demand. For reliability, look for early warning signs that might require proactive intervention.
-Troubleshoot performance issues—Issues in performance can arise from database queries, connectivity between services, under-provisioned resources, or memory leaks in code. Application telemetry and profiling can be useful tools for troubleshooting your application.
+Have a data-driven approachâ€”Base your decisions on the data captured from repeatable processes. Archive data to monitor performance changes over time, not just compared to the last measurement taken.
+Monitor the health of current workloadsâ€”In monitoring strategy, consider scalability and resiliency of the infrastructure, application, and dependent services. For scalability, look at the metrics that would allow you to provision resources dynamically and scale with demand. For reliability, look for early warning signs that might require proactive intervention.
+Troubleshoot performance issuesâ€”Issues in performance can arise from database queries, connectivity between services, under-provisioned resources, or memory leaks in code. Application telemetry and profiling can be useful tools for troubleshooting your application.
 Identify improvement opportunities with resolution planning
 
 Understand the scope of your planned resolution and communicate the changes to all necessary stakeholders. Make code enhancements through a new build. Enhancements to infrastructure may involve many teams. This involved effort may require updated configurations and deprecations in favor of more-appropriate solutions.
