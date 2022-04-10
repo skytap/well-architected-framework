@@ -59,10 +59,10 @@ The success of a data-ecosystem strategy depends on data availability and digiti
 
 As customers consider establishing new and more diverse data ecosystems, Skytap recommends they develop a roadmap that specifically addresses the common challenges. They should then look to define their architecture to ensure that the benefits to participants and themselves come to fruition. The good news is that the data-architecture requirements for ecosystems are not complex. The priority components are identity and access management, a minimum set of tools to manage data and analytics, and central data storage.
 
-<!--##### Design Patterns:
+##### Design Patterns:
 
--   [Azure Native Solutions](azurenative/README.md)
--   [SAP Workloads](SAP/README.md)-->
+<!-- -   [Azure Native Solutions](azurenative/README.md)-->
+-   [SAP Workloads](SAP/README.md)
 
 <hr>
 
