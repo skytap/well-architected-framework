@@ -60,7 +60,7 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 
 ### Sample HA design on Skytap on Azure
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/hadrmedia/media/image1.png" width="400">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/hadrmedia/media/image1.png" width="700">
 
 ### Next steps
 
