@@ -19,9 +19,9 @@ Migration Considerations include:
 
 -   Supported LPARs
 
--   Warm (Cold) Migration
+-   [Cold Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
 
--   Hot Migration
+-   [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
 
 **Skytap Discovery and Migration -- Support and Limits**
 

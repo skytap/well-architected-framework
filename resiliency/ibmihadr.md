@@ -58,12 +58,9 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 
 -   **High availability** means avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
 
-### Sample HA design on SKYTAP on Azure
+### Sample HA design on Skytap on Azure
 
-![Diagram Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\hadrmedia/media/image1.png)
-
-Next steps
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/hadrmedia/media/image1.png">
 
 ### Next steps
 

@@ -1,14 +1,14 @@
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image1.png)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image1.png">
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image3.png)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image11.png)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png">
 
 # SAP on Azure Deployments 
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image12.jpeg)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image12.jpeg">
 
-> ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image3.png)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
 >
 > Business Drivers- the case for change - **SAP NetWeaver based
 > workloads onIBM Power on Skytap on Azure**
@@ -19,10 +19,11 @@
 2.  **Regulation and Compliance: NetWeaver workloads in Read-Only State
     > in Azure**
 
-3.  ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image25.png)**IBM
-    > Power Data Centre exit : NetWeaver workloads to Azure**
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image25.png">
 
-4.  **Modernization of Business Processes**
+**IBM Power Data Centre exit : NetWeaver workloads to Azure**
+
+3.  **Modernization of Business Processes**
 
     a.  Move NetWeaver workloads to SOA to enable them to interoperate
         with SAP
@@ -32,22 +33,22 @@ HANA based workloads or other Business Applications running on Azure
 b.  Move NetWeaver workloads to SOA to enable them to be more easily
     transition to SAP HANA
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image3.png) 5
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png"> 5
 
 ## Sample SAP Architecture for Skytap on Azure
 
-> ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image26.jpeg)
+> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image26.jpeg">
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image27.png)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image27.png">
 
 ## Customer Example -- (Large European Oil and Gas)
 
-> ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image41.jpeg)
+> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image41.jpeg">
 
 .... SAP On-Premises Solution (AIX) that Migrated Nearly Unchanged to
 Azure....
 
--   ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image44.jpeg)***Drivers
+-   <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image44.jpeg">***Drivers
     and Requirements:***
 
 -   *Data Center Exit*
@@ -153,11 +154,11 @@ Azure....
 
 9
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image1.png)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image1.png">
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image45.jpeg)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg">
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image46.jpeg)
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image46.jpeg">
 
 > SAP Cloud and Infrastructure Operations Certification - SOA
 >
@@ -172,7 +173,7 @@ Azure....
 
 -   Platform Audited: Skytap on Azure
 
--   ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image25.png)Date
+-   <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image25.png">Date
     Granted: September 22, 2021 ● Microsoft DC Audited: AMS23/West
     Europe ● Eligible Products :
 
@@ -180,14 +181,14 @@ Azure....
 >
 > ○ **[See Product Support Slide]{.ul}**
 
-![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image3.png) 13
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png"> 13
 
-> ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image49.png)SAP
+> <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image49.png">SAP
 > on Azure
 >
 > What are options for customers?
 
-# ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image50.png)SAP on Azure supported systems 
+# <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image50.png">SAP on Azure supported systems 
 
 > SAP Business Suite on IBM POWER on SOA - detailed product specifics
 
@@ -213,7 +214,7 @@ Azure....
 -   *Informix*: All standalone versions supported by Operating System in
     use.\* \[NetWeaver Only\]
 
--   ![](I:\Repos\Skytap\WAF\operations\ecosystems\SAP\/media/image25.png)*SAP
+-   <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image25.png">*SAP
     MaxDB*: All standalone versions supported by Operating System in
     use.\* \[Hot standby mode not tested in Skytap.\]
 
