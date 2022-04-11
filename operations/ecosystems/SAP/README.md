@@ -16,7 +16,7 @@ author: George Stamos - Director, Solutions Architect - Business Development
 1.  Business Continuity: NetWeaver workloads requiring Cloud Backup/DR
 2.  Regulation and Compliance: NetWeaver workloads in read-only state in Azure
 3.  IBM Power Data Center exit : NetWeaver workloads to Azure
-4.  Modernization of Business Processes
+4.  Modernization of Business Processes:
 
     a.  Move NetWeaver workloads to Skytap on Azure to enable them to inter-operate
  with SAP HANA based workloads or other Business Applications running on Azure
@@ -72,19 +72,19 @@ SAP granted Skytap Cloud and Infrastructure Operations Certification based on su
 
 -   ***R/3 and ECC Database Layer Support*** - \[Assumes Skytap Supported Underlying Operating Systems\*\]
 
--   *Oracle*: All standalone versions supported by Operating System in use.*
+-   *Oracle*: All standalone versions supported by Operating System in use*
 
--   Does not include Oracle RAC at this time.
+-   Does not include Oracle RAC at this time
 
 -   Does include ASM
 
--   *DB2*: All standalone versions supported by Operating System in use.*
+-   *DB2*: All standalone versions supported by Operating System in use*
 
--   *Informix*: All standalone versions supported by Operating System in use.
+-   *Informix*: All standalone versions supported by Operating System in use
 
--  *SAP MaxDB*: All standalone versions supported by Operating System in use.\* \[Hot standby mode not tested in Skytap.\]
+-  *SAP MaxDB*: All standalone versions supported by Operating System in use\* \[Hot standby mode not tested in Skytap.\]
 
--   *SQLServer: Legacy versions of Windows are supported in Skytap and not Azure Native.*
+-   *SQLServer: Legacy versions of Windows are supported in Skytap and not Azure Native*
 
 **\* = NetWeaver Only**
 
