@@ -1,5 +1,5 @@
 ---
-title: SAP Netweaver Ecosystems in Skytap on Azure
+title: SAP NetWeaver Ecosystems in Skytap on Azure
 author: George Stamos - Director, Solutions Architect - Business Development
 ---
 
@@ -10,17 +10,17 @@ author: George Stamos - Director, Solutions Architect - Business Development
 <center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png" Width="800">
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg" Width="800"></center>
 
-## Business Drivers- the case for change
-**SAP NetWeaver based workloads onIBM Power on Skytap on Azure**
+## Business Drivers - the case for change
+**SAP NetWeaver based workloads on IBM Power on Skytap on Azure**
 
 1.  Business Continuity: NetWeaver workloads requiring Cloud Backup/DR
-2.  Regulation and Compliance: NetWeaver workloads in Read-Only State in Azure
-3.  IBM Power Data Centre exit : NetWeaver workloads to Azure
-4.  Modernization of Business Processes
+2.  Regulation and Compliance: NetWeaver workloads in read-only state in Azure
+3.  IBM Power Data Center exit : NetWeaver workloads to Azure
+4.  Modernization of Business Processes:
 
-    a.  Move NetWeaver workloads to SOA to enable them to inter-operate
+    a.  Move NetWeaver workloads to Skytap on Azure to enable them to inter-operate
  with SAP HANA based workloads or other Business Applications running on Azure
-    b.  Move NetWeaver workloads to SOA to enable them to be more easily transition to SAP HANA
+    b.  Move NetWeaver workloads to Skytap on Azure to enable them to be more easily transition to SAP HANA
 
 ## Sample SAP Architecture for Skytap on Azure
 
@@ -48,9 +48,9 @@ Azure
 -   *Archive and Restore Capability for Compliance*
 
 
-### SAP Cloud and Infrastructure Operations Certification - SOA
+### SAP Cloud and Infrastructure Operations Certification - Skytap on Azure
 
-SAP granted Skytap Cloud and Infrastructure Operations Certification Capabilities based on successful audit. This certification is for SAP NetWeaver workloads. In addition, the certification process starts locally, at which point global consideration can be based on regional audits moving forward.
+SAP granted Skytap Cloud and Infrastructure Operations Certification based on successful audit. This certification is for SAP NetWeaver workloads. In addition, the certification process starts locally, at which point global consideration can be based on regional audits moving forward.
 
 - **Type of Certification:** Cloud and Infrastructure Operations Local (UK)
 - **Platform Audited:** Skytap on Azure
@@ -62,7 +62,7 @@ SAP granted Skytap Cloud and Infrastructure Operations Certification Capabilitie
 
 #### SAP on Azure supported systems :
 
-##### SAP Business Suite on IBM POWER on SOA - detailed product specifics
+##### SAP Business Suite on IBM POWER on Skytap on Azure - detailed product specifics
 
 -   ***Which versions of R/3 and ECC*** are possible - \[Assumes Skytap
     Supported Underlying Operating Systems\*\]
@@ -72,19 +72,19 @@ SAP granted Skytap Cloud and Infrastructure Operations Certification Capabilitie
 
 -   ***R/3 and ECC Database Layer Support*** - \[Assumes Skytap Supported Underlying Operating Systems\*\]
 
--   *Oracle*: All standalone versions supported by Operating System in use.*
+-   *Oracle*: All standalone versions supported by Operating System in use*
 
--   Does not include Oracle RAC at this time.
+-   Does not include Oracle RAC at this time
 
 -   Does include ASM
 
--   *DB2*: All standalone versions supported by Operating System in use.*
+-   *DB2*: All standalone versions supported by Operating System in use*
 
--   *Informix*: All standalone versions supported by Operating System in use.
+-   *Informix*: All standalone versions supported by Operating System in use
 
--  *SAP MaxDB*: All standalone versions supported by Operating System in use.\* \[Hot standby mode not tested in Skytap.\]
+-  *SAP MaxDB*: All standalone versions supported by Operating System in use\* \[Hot standby mode not tested in Skytap.\]
 
--   *SQLServer: Legacy versions of Windows are supported in Skytap and not Azure Native.*
+-   *SQLServer: Legacy versions of Windows are supported in Skytap and not Azure Native*
 
 **\* = NetWeaver Only**
 
