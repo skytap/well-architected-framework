@@ -3,15 +3,12 @@
     "",
     "\\operations",
     "\\operations\\connectivity",
+    "\\operations\\connectivity\\Azure",
     "\\operations\\connectivity\\ExpressRoute",
     "\\operations\\Discovery",
-    "\\operations\\ecosystems",
-    "\\operations\\ecosystems\\azurenative",
-    "\\operations\\ecosystems\\SAP",
-    "\\resiliency",
-    "\\scaleandperformance",
-    "\\security"
+    "\\operations\\Discovery\\discoveryworkloadsmedia",
+    "\\operations\\Discovery\\powerdiscoveryinframedia",
+    "\\resiliency"
   ],
-  "SelectedNode": "\\operations\\ecosystems\\README.md",
   "PreviewInSolutionExplorer": false
 }

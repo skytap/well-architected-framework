@@ -20,6 +20,7 @@ author: George Stamos - Director, Solutions Architect - Business Development
 
     a.  Move NetWeaver workloads to SOA to enable them to inter-operate
  with SAP HANA based workloads or other Business Applications running on Azure
+
     b.  Move NetWeaver workloads to SOA to enable them to be more easily transition to SAP HANA
 
 ## Sample SAP Architecture for Skytap on Azure
