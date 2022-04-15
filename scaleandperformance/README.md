@@ -1,3 +1,8 @@
+---
+title: Skytap Scalability and Performance
+author:  Matthew Romero, Technical Product Marketing Manager
+permalink: /scaleandperformance/
+---
 
 Scalability is the ability of a system to handle increased load and Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. 
 

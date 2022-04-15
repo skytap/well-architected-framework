@@ -1,7 +1,6 @@
 ---
 title: Skytap Scalability and Performance - Networking
 author: Vivian Su, Senior Engineering Manager - Networking
-permalink: /scaleandperformance/netperf/
 ---
 
 # Network Scalability
