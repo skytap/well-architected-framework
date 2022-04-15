@@ -1,7 +1,6 @@
 ---
 title: Skytap Operational Excellence - Ecosystems
 author:  Matthew Romero, Technical Product Marketing Manager, Ahmed Abdulla PhD, Senior Engagement Manager - McKinsey & Company, Steven Martin, Chief Data Scientist - Microsoft
-permalink: /operations/ecosystems/
 ---
 
 # Ecosystems
