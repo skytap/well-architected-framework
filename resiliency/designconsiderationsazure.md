@@ -21,9 +21,9 @@ for Power
 **Network**
 
 * IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
-  * Range: 1 GB/s Limit
+  * Range: 750 Mbps Limit
 * Layer 2 networking in environment
-  * Range: Burst to 2.7 Gb/s Limit
+  * Range: Burst to 2.7 Gbps Limit
 * 10 NICs Per Host
 * 10 VPN Connections Per Account
 
@@ -53,9 +53,9 @@ LPAR Sizing and OS Support for Power
 **Network**
 
 * IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
-  * Range: 1 GB/s Limit
+  * Range: 750 Mbps Limit
 * Layer 2 networking in environment
-  * Range: Burst to 2.7 Gb/s Limit
+  * Range: Burst to 2.7 Gbps Limit
 * 10 NICs Per Host
 * 10 VPN Connections Per Account
 
