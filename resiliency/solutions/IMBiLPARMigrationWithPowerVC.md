@@ -1,12 +1,10 @@
 ---
-title: "**Importing Power LPARs into Skytap with PowerVC**"
+title: Importing Power LPARs into Skytap with PowerVC
+author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
 ---
+# Importing Power LPARs into Skytap with PowerVC - A field enablement guide
 
-## A field enablement guide
-
-This guide describes how to use PowerVC to export a Power LPAR for
-import into Skytap. To learn more about PowerVC, see the **Additional
-resources** section.
+This guide describes how to use PowerVC to export a Power LPAR for import into Skytap. To learn more about PowerVC, see the **Additional resources** section.
 
 -   [*Overview of using PowerVC for
     export*](#overview-of-using-powervc-for-export)
@@ -29,24 +27,14 @@ resources** section.
 
 -   [*Additional Resources & FAQ*](#_Additional_Resources_&)
 
-# Overview of using PowerVC for export
+## Overview of using PowerVC for export
+**High-level process description**
 
-## High-level process description
+IBM Power^®^ Virtualization Center is built on OpenStack technology. It's an advanced enterprise virtualization management offering for IBM Power Systems. PowerVC is available in Standard Edition, or Cloud PowerVC Manager edition.
 
-IBM Power^®^ Virtualization Center is built on OpenStack technology.
-It's an advanced enterprise virtualization management offering for IBM
-Power Systems. PowerVC is available in Standard Edition, or Cloud
-PowerVC Manager edition.
+IBM Cloud PowerVC Manager, an Infrastructure-as-a-service (IaaS) offering, provides a self-service cloud portal for IBM Power Systems via OpenStack. OpenStack is a collection of open-source software projects that enterprises or service providers can use to set up and run their cloud compute and storage infrastructure.
 
-IBM Cloud PowerVC Manager, an Infrastructure-as-a-service (IaaS)
-offering, provides a self-service cloud portal for IBM Power Systems via
-OpenStack. OpenStack is a collection of open-source software projects
-that enterprises or service providers can use to set up and run their
-cloud compute and storage infrastructure.
-
-![Diagram Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image1.png){width="6.5in"
-height="3.7006944444444443in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image1.png">
 
 Traditional Setup vs PowerVC coexistence
 
@@ -477,21 +465,15 @@ HOST_INTERFACE=eth1**.
 -   Log
     file:**/opt/ibm/powervc/log/powervc_install\_*\<timestamp>*.log**
 
-![Text Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image2.png){width="6.5in"
-height="3.8340277777777776in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image2.png">
 
 PowerVCinstall: The file location of Install script
 
-![Text Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image3.png){width="6.5in"
-height="2.5770833333333334in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image3.png">
 
 PowerVC installation completed successfully
 
-![Graphical user interface, application Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image4.png){width="6.5in"
-height="3.7958333333333334in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image4.png">
 
 PowerVC login URL
 
@@ -507,9 +489,7 @@ the hosts being managed by that HMC. You can select the ones to add.
 The image below shows the form to fill out to connect to a new HMC. The
 display name is the name that appears in the PowerVC application.
 
-![Graphical user interface Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image5.png){width="6.5in"
-height="5.788888888888889in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image5.png">
 
 Adding HMC host to PowerVC
 
@@ -518,9 +498,7 @@ hosts that the HMC manages. Select one or more of the hosts and click
 **Add Host**. When you add a host, PowerVC can manage VMs already
 created on that host.
 
-![Graphical user interface Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image6.png){width="6.5in"
-height="5.814583333333333in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image6.png">
 
 Before you can start performing tasks in PowerVC, you must register the
 resources that you want to manage. You must register storage providers
@@ -598,16 +576,11 @@ requirements.
 When the virtual machine is captured, all volumes that belong to its
 boot set are included in the image.
 
-![A screenshot of a computer Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image7.png){width="6.5in"
-height="2.936111111111111in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image7.png">
 
 Capturing a Virtual Machine
 
-![Graphical user interface, text, application, email Description
-automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image8.png){width="6.083333333333333in"
-height="4.916666666666667in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image8.png">
 
 Capture volumes options
 
@@ -615,10 +588,7 @@ Capture volumes options
 volumes** option. Make sure you have enough storage space to capture the
 combined size of all volumes.
 
-![Graphical user interface, text, application, email Description
-automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image9.png){width="5.864583333333333in"
-height="3.6770833333333335in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image9.png">
 
 Capture confirmation
 
@@ -627,10 +597,7 @@ Capture confirmation
 Click the **Images** icon to show the virtual images that are available.
 You can also view their properties, delete them, and do other tasks.
 
-![Graphical user interface, text, application, email Description
-automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image10.png){width="6.5in"
-height="3.4659722222222222in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image10.png">
 
 Each image has a status associated with it. If the status is **Active**,
 then the image is ready to be deployed. You can also click the
@@ -639,9 +606,7 @@ then the image is ready to be deployed. You can also click the
 Run the **powervc-image list** command as the root user to view the
 available images.
 
-![Text Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\solutions\PowerVCMedia/media/image11.png){width="6.5in"
-height="2.6277777777777778in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image11.png">
 
 PowerVC export process
 
@@ -752,3 +717,29 @@ combined size of the volumes you plan to export.
     PowerVC]{.ul}](https://developer.ibm.com/powervc/2018/04/04/exporting-importing-images-via-cli-deep-dive/)
 
 -   [[https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html]{.ul}](https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html)
+
+### Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../README.md)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../operations/README.md)
+
+**Resiliency**
+>[Skytap Resiliency Pillar](../README.md)
+>* [Migration](../migrations.md)
+>* [Protection](../backups.md)
+>* [Disaster Recovery](../disasterrecovery.md)
+>* [High Availability](../ibmihadr.md)
+>
+>**Migration Solutions**
+>* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>
+>**Design**
+>* [Design Considerations for Azure](../designconsiderationsazure.md)
+>* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+
+**Security**
+> * [Skytap Security Pillar](../../security/README.md)
