@@ -6,3 +6,4 @@
 _site
 Gemfile.lock
 .DS_Store
+/.vs/WAF/v17/.suo
