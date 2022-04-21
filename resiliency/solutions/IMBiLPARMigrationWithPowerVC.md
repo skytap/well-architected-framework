@@ -300,6 +300,7 @@ mount -o loop /path/to/rhel.iso /media/iso
 -   Create a repo file that points to the Red Hat Enterprise Linux repo file on the ISO image.
 
 > **Example repo file:**
+
 ```bash
 /etc/yum.repos.d/rhel73-media.repo\[rhel73media]\
 name=RHEL 7.3 
@@ -338,15 +339,15 @@ yum repolist
 -   Log
     file:**/opt/ibm/powervc/log/powervc_install\_*\<timestamp>*.log**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image2.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image2.png" width="700">
 
 *PowerVCinstall: The file location of Install script*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image3.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image3.png" width="700">
 
 *PowerVC installation completed successfully*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image4.png" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image4.png" width="700">
 
 *PowerVC login URL*
 
@@ -444,7 +445,7 @@ Each image has a status associated with it. If the status is **Active**, then th
 
 Run the **powervc-image list** command as the root user to view the available images.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image11.png" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image11.png" width="700">
 
 *PowerVC export process*
 
@@ -459,9 +460,11 @@ on the PowerVC version used:
 ## Uninstalling PowerVC
 
 -   To remove PowerVC from the management host, run the **powervc-uninstall** command.
+
 ```bash
 /opt/ibm/powervc/bin/powervc-uninstall -h
 ```
+
 **Notes:**
 
 -   Uninstallation doesn't remove anything in the environment that is managed by PowerVC.
@@ -471,13 +474,17 @@ on the PowerVC version used:
     -   Any Red Hat Enterprise Linux prerequisite packages that are installed during the PowerVC installation remain installed.
 
 -   The uninstallation process writes its log here:
+  
 ```bash
 /var/log/powervc-uninstall.logfile
 ```
+
 If you encounter issues when you run the **powervc-uninstall** command, you can clean up the environment by using the following command:
+
 ```bash
 <powervc_install_file_folder>/powervc-uninstall --f
 ```
+
 This command forces the uninstallation of all components of PowerVC.
 
 You can find more information here:
@@ -501,9 +508,11 @@ You can find more information here:
 
 **A:** This command forces the uninstallation of all components of
 PowerVC:
+
 ```bash
 <powervc_install_file_folder>/powervc-uninstall --f
 ```
+
 **Q:** Does this work have any impact on my daily operations?
 
 **A:** No, this won't have any impact on the LPAR, apart from shutting down the LPAR.
