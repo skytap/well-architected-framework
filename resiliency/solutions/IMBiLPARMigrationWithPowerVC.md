@@ -8,14 +8,8 @@ author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
 
 -   [Overview of using PowerVC for
     export](#overview-of-using-powervc-for-export)
-    - [High-level process description](#High-level_process_description)
-    - [What is VIOS?](#whatisVIOS)
-    - [What is PowerVM NovaLink?](#whatisNovaLink)
-    - [What is HMC?](#whatisHMC)
 
 -   [Preparing for PowerVC](#preparing-for-powervc)
-    -   [Storage requirements](#minimum-resource-requirements)
-    -   
 
 -   [Installing & configuring PowerVC](#_IBM_PowerVC_installation,)
 
