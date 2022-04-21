@@ -107,7 +107,7 @@ These guest operating systems are supported for deployment:
 
 ## Hardware requirements
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image12.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image12.png" width="600">
 
 ## Minimum resource requirements
 
@@ -145,7 +145,7 @@ The installer has the following storage requirements:
 
 -   The remaining space is used for **/var** and swap space.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image13.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image13.png" width="600">
 
 **Note:** We recommend that you install all updates for HMC.
 
