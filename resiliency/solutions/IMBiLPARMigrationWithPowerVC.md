@@ -11,7 +11,7 @@ author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
 
 -   [Preparing for PowerVC](#preparing-for-powervc)
 
--   [Installing & configuring PowerVC](#_IBM_PowerVC_installation,)
+-   [Installing & configuring PowerVC](#IBM_PowerVC_installation)
 
 -   [Capturing an LPAR Image and Exporting](#capturing-an-lpar-image-and-exporting)
 
@@ -19,7 +19,9 @@ author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
 
 -   [Importing to Skytap](#importing-to-skytap)
 
--   [Additional Resources & FAQ](#Additional_Resources_&_FAQ)
+-   [FAQ](#FAQ)
+ 
+-   [Additional Resources](#additionalresources)
 
 ### Key Takeaways<a name="takeaways"></a>
 
@@ -56,7 +58,7 @@ The HMC also provides terminal emulation for the logical partitions on your mana
 
 ###### *[Back to the Top](#toc)*
 
-# Preparing for PowerVC
+# Preparing for PowerVC<a name="preparing-for-powervc"></a>
 
 This section describes the following:
 
@@ -192,7 +194,9 @@ Database -- IBM Cloud PowerVC Manager uses MariaDB as the default database
 
 -   IBM Cloud PowerVC Manager enables administrators and users to capture, restore snapshots, and deploy virtual appliances (provisioning).
 
-# IBM PowerVC installation, upgrade, and configuration
+###### *[Back to the Top](#toc)*
+
+# IBM PowerVC installation, upgrade, and configuration<a name="IBM_PowerVC_installation"></a>
 
 This section provides a quick overview of IBM Cloud PowerVC Manager and shows the procedure to implement it. IBM Cloud PowerVC Manager can be installed on Red Hat Enterprise Linux (RHEL) version 7.1 or later, either on the ppc64, ppc64le, or x86_64 platforms.
 
@@ -383,7 +387,9 @@ After a VM is added to PowerVC, you can perform operations from PowerVC. Althoug
 
 The virtual machine managed through PowerVC can be stopped, started, restarted, deleted, captured, resized, and migrated.
 
-## Capturing an LPAR Image and Exporting
+###### *[Back to the Top](#toc)*
+
+## Capturing an LPAR Image and Exporting<a name="capturing-an-lpar-image-and-exporting"></a>
 
 One of the biggest advantages of having PowerVC is its ability to capture existing VMs as images within the image repository. You can capture a virtual machine that you created or deployed.
 
@@ -451,7 +457,9 @@ The link below explains in detail on how to export an image, depending
 on the PowerVC version used:
 [https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html](https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html)
 
-## Uninstalling PowerVC
+###### *[Back to the Top](#toc)*
+
+## Uninstalling PowerVC<a name="uninstalling-powervc"></a>
 
 -   To remove PowerVC from the management host, run the **powervc-uninstall** command.
 
@@ -484,11 +492,15 @@ This command forces the uninstallation of all components of PowerVC.
 You can find more information here:
 [https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_uninstalling_hmc.html](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_uninstalling_hmc.html)
 
-## Importing to Skytap
+###### *[Back to the Top](#toc)*
+
+## Importing to Skytap<a name="importing-to-skytap"></a>
 
 [Importing VMs using the VM Imports page](https://help.skytap.com/Imports.html) -- This help article describes how to import power VMs with the Skytap import tool: [https://cloud.skytap.com/imports](https://cloud.skytap.com/imports).
 
-## Additional Resources & FAQ
+###### *[Back to the Top](#toc)*
+
+## Additional Resources & FAQ<a name="FAQ"></a>
 
 **Q:** Do IBM PowerVC Standard Edition and IBM Cloud PowerVC Manager both can export images?
 
@@ -523,7 +535,9 @@ PowerVC:
 
 **A:** Exports are sequential.
 
-## Additional resources
+###### *[Back to the Top](#toc)*
+
+## Additional resources<a  name="additionalresources"></a>
 
 - [Move images between cloud providers -- IBM PowerVC](https://developer.ibm.com/powervc/2018/01/05/move-images-cloud-providers-using-powervc/)
 
@@ -534,6 +548,8 @@ PowerVC:
 - [Exporting and importing images via the CLI: a deep dive -- IBM PowerVC](https://developer.ibm.com/powervc/2018/04/04/exporting-importing-images-via-cli-deep-dive/)
 
 - [https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html](https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html)
+
+###### *[Back to the Top](#toc)*
 
 ### Next steps
 
