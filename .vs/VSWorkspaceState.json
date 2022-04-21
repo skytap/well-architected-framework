@@ -3,12 +3,14 @@
     "",
     "\\operations",
     "\\operations\\connectivity",
-    "\\operations\\connectivity\\Azure",
     "\\operations\\connectivity\\ExpressRoute",
     "\\operations\\Discovery",
     "\\operations\\Discovery\\discoveryworkloadsmedia",
     "\\operations\\Discovery\\powerdiscoveryinframedia",
-    "\\resiliency"
+    "\\operations\\ecosystems",
+    "\\resiliency",
+    "\\resiliency\\solutions",
+    "\\scaleandperformance"
   ],
   "PreviewInSolutionExplorer": false
 }
