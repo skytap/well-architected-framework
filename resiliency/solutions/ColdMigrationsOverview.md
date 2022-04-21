@@ -30,9 +30,11 @@ for AIX and IBM i (AS400).
 
 - **[IBM i workload migration from on-prem to Skytap using BRMS ICC](BRMS/ibmiworkloadmigration.md)**
 
+- **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide](IMBiLPARMigrationWithPowerVC.md)**
+
 - **[IBM i – Migration to Skytap using Commvault](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf)**
 
-<!-- - **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](SkytapCommvaultRunbook.md)** -->
+- **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](SkytapCommvaultRunbook.md)**
 
 ### Additional Resources
 
