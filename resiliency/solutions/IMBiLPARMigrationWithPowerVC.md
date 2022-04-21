@@ -339,15 +339,15 @@ yum repolist
 -   Log
     file:**/opt/ibm/powervc/log/powervc_install\_*\<timestamp>*.log**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image2.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image2.png" width="700">
 
 *PowerVCinstall: The file location of Install script*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image3.png" width="500">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image3.png" width="700">
 
 *PowerVC installation completed successfully*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image4.png" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image4.png" width="700">
 
 *PowerVC login URL*
 
@@ -445,7 +445,7 @@ Each image has a status associated with it. If the status is **Active**, then th
 
 Run the **powervc-image list** command as the root user to view the available images.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image11.png" width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/PowerVCMedia/image11.png" width="700">
 
 *PowerVC export process*
 
