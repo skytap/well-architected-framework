@@ -1,6 +1,7 @@
 ---
 title: Skytap Live Clone
 author: Dan Jones, Vice President of Product
+permalink: /resiliency/solutions/live-clone
 ---
 
 ## Skytap Live Clone
@@ -17,7 +18,7 @@ author: Dan Jones, Vice President of Product
 
 
 ### How it works
-There are some considerations to be aware of when using Skytap live clone. The storage for each VM is being cloned by the Skytap storage platform and has no knowledge or concern for what is running within the VM. To ensure the copy of the VMs is consistent and not corrupted, we strongly recommend you quiesce VM activity. The safest level of quiesce is to shutdown the VM, but if you need to leave VMs running we recommend putting the VM into a consistent state. This includes actions like placing databases into read-only or back-up mode and freezing data volumes to ensure all transactions are written to disk before the copy is performed. You can read more about quiescing VM activity in this </span><a href="https://help.skytap.com/quiescing-vm-activity.html"><span style="font-weight: 400;">help topic</span></a><span style="font-weight: 400;">.</span>
+There are some considerations to be aware of when using Skytap live clone. The storage for each VM is being cloned by the Skytap storage platform and has no knowledge or concern for what is running within the VM. To ensure the copy of the VMs is consistent and not corrupted, we strongly recommend you quiesce VM activity. The safest level of quiesce is to shutdown the VM, but if you need to leave VMs running we recommend putting the VM into a consistent state. This includes actions like placing databases into read-only or back-up mode and freezing data volumes to ensure all transactions are written to disk before the copy is performed. You can read more about quiescing VM activity in this <a href="https://help.skytap.com/quiescing-vm-activity.html" target="_blank">help topic</a>.
 
 <span style="font-weight: 400;">With a bit of scripting and ingenuity, these operations can be automated. The way to approach this is to designate a VM within the environment as the controller. A script running on this VM remotely connects to each of the other VMs in the environment and quiesces the VM as appropriate. The script then calls the Skytap API to copy or save the environment. Once the copy or save operation is complete, the script again remotely connects to each VM and returns it to normal operations. This entire operation should take just a few minutes. The application will be unavailable during this brief period, but you end up with an exact copy of your entire application and networking configuration, so the brief downtime is well worth it.</span>
 
@@ -28,25 +29,25 @@ Watch the demo video above to see live clone in action.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](./hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> * [Skytap Security Pillar](../../security/)

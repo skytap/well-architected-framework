@@ -1,6 +1,7 @@
 ---
 title: Edge Networking
 author: John Bradshaw, Principal Architect
+permalink: /security/edge-networking
 ---
 ## Edge Networking
 
@@ -36,8 +37,8 @@ An Outbound Proxy on the network edge should be configured to restrict access to
 
 | Application | Vendor |
 | ----------- | ------ |
-| [Squid](http://www.squid-cache.org/) | Squid |
-| [Web Gateway](https://www.mcafee.com/enterprise/en-gb/products/web-gateway.html) | McAfee |
+| <a href="http://www.squid-cache.org/" target="_blank">Squid</a> | Squid |
+| <a href="https://www.mcafee.com/enterprise/en-gb/products/web-gateway.html" target="_blank">Web Gateway</a> | McAfee |
 
 ----------------------------------------------------------------------------------
 
@@ -52,21 +53,21 @@ The proxy enhances security by shielding the backend servers from the outside ne
 
 | Application | Vendor |
 | ----------- | ------ |
-| [NGINX](https://www.nginx.com/) | F5 |
-| [BIG IP](https://www.f5.com/products/big-ip-services) | F5 |
-| [Squid](http://www.squid-cache.org/) | Squid |
-| [pfSense](https://www.netgate.com/solutions/pfsense/) | Netgate |
-| [MVision Cloud](https://www.mcafee.com/enterprise/en-us/products/mvision-cloud.html) | McAfee |
+| <a href="https://www.nginx.com/" target="_blank">NGINX<a> | F5 |
+| <a href="https://www.f5.com/products/big-ip-services" target="_blank">BIG IP<a> | F5 |
+| <a href="http://www.squid-cache.org/" target="_blank">Squid<a> | Squid |
+| <a href="https://www.netgate.com/solutions/pfsense/" target="_blank">pfSense<a> | Netgate |
+| <a href="https://www.mcafee.com/enterprise/en-us/products/mvision-cloud.html" target="_blank">MVision Cloud<a> | McAfee |
 
 ----------------------------------------------------------------------------------
 
 #### VPN / Private Connection
 
-Skytap supports Site-to-Site VPN as well as Private Network Connections (PNCs) using [Azure ExpressRoute](https://azure.microsoft.com/en-gb/services/expressroute/) and [Equinix Cloud Exchange](https://www.equinix.com/solutions/cloud-infrastructure/public-cloud/connectivity/).
+Skytap supports Site-to-Site VPN as well as Private Network Connections (PNCs) using <a href="https://azure.microsoft.com/en-gb/services/expressroute/" target="_blank">Azure ExpressRoute</a> and <a href="https://www.equinix.com/solutions/cloud-infrastructure/public-cloud/connectivity/">Equinix Cloud Exchange</a>.
 
 ##### Site-to-Site VPN
 
-The Skytap [Site-to-Site VPN](https://help.skytap.com/vpn-configuration-parameters.html#VPNconfigurationoptions) supports an IPSec VPN using IKEv1 or IKEv2 using Pre-Shared Keys (PSK), AES 256 bit and Perfect Forward Secrecy (PFS).
+The Skytap <a href="https://help.skytap.com/vpn-configuration-parameters.html#VPNconfigurationoptions" target="_blank">Site-to-Site VPN</a> supports an IPSec VPN using IKEv1 or IKEv2 using Pre-Shared Keys (PSK), AES 256 bit and Perfect Forward Secrecy (PFS).
 
 The Skytap Site-to-Site VPN secures traffic that traverses the public Internet, but not private connectivity. Multiple VPNs can be created for high availability and to connect multiple corporate data centers to Skytap.
 
@@ -102,8 +103,8 @@ VPN/PNC to Environments, blanket access to Environments even from private connec
 
 | Application | Vendor |
 | ----------- | ------ |
-| [BIG IP](https://www.f5.com/products/big-ip-services) | F5 |
-| [pfSense](https://www.netgate.com/solutions/pfsense/) | Netgate |
+| <a href="https://www.f5.com/products/big-ip-services" target="_blank">BIG IP</a> | F5 |
+| <a href="https://www.netgate.com/solutions/pfsense/" target="_blank">pfSense</a> | Netgate |
 
 -------------------------------------------------------------
 
@@ -117,9 +118,9 @@ In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring i
 
 | Application | Vendor |
 | ----------- | ------ |
-| [Network Security Platform](https://www.mcafee.com/enterprise/en-gb/products/network-security-platform.html) | McAfee |
-| [pfSense](https://www.netgate.com/solutions/pfsense/) | Netgate |
-| [Next Gen Firewall](https://www.paloaltonetworks.com/network-security/next-generation-firewall) | Palo Alto |
+| <a href="https://www.mcafee.com/enterprise/en-gb/products/network-security-platform.html" target="_blank">Network Security Platform</a> | McAfee |
+| <a href="https://www.netgate.com/solutions/pfsense/" target="_blank">pfSense</a> | Netgate |
+| <a href="https://www.paloaltonetworks.com/network-security/next-generation-firewall" target="_blank">Next Gen Firewall</a> | Palo Alto |
 
 -------------------------------------------------------------
 
@@ -129,23 +130,23 @@ In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring i
 
 **Main Overview**
 
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
 
->[Skytap Operational Excellence Pillar](../operations/README.md)
->* [Connectivity Overview](../operations/connectivity/README.md)
->* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
->* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md) --->
+>[Skytap Operational Excellence Pillar](../operations/)
+>* [Connectivity Overview](../operations/connectivity/)
+>* [Getting Started with Azure Networking](../operations/connectivity/azure)
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/ibm)
 
 **Resiliency**
 
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
->[Skytap Security Pillar](README.md)
->* [Key Security Areas](./keysecurityareas.md)
->* [Security Management](./securitymanagement.md)  
->* [Virtual Machines](./virtualmachines.md) 
->* [Internal Networking](./internalnetworking.md) 
->* [Security as a Service](./securityasaservice.md) 
+>[Skytap Security Pillar](./)
+> * [Key Security Areas](./key-security-areas)
+> * [Security Management](./security-management)
+> * [Virtual Machines](./virtual-machines)
+> * [Internal Networking](./internal-networking)
+> * [Security as a Service](./security-as-a-service)

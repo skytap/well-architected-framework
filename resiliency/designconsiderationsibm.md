@@ -1,6 +1,7 @@
 ---
 title: Reliability Design Considerations for IBM Cloud
 author: George Stamos, Director, Solutions Architect - Business Development
+permalink: /resiliency/design-considerations-ibm
 ---
 ***Skytap for IBM Cloud Support and Limits (IBM i)***
 
@@ -74,24 +75,24 @@ for Power
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
->* [Connectivity Overview](../operations/connectivity/README.md)
->* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
->* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
+>[Skytap Operational Excellence Pillar](../operations/)
+>* [Connectivity Overview](../operations/connectivity/)
+>* [Getting Started with Azure Networking](../operations/connectivity/azure)
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](README.md)
->* [Migration](migrations.md)
->* [Protection](backups.md)
->* [Disaster Recovery](disasterrecovery.md)
->* [High Availability](ibmihadr.md)
+> [Skytap Resiliency Pillar](./)
+>* [Migration](./migrations)
+>* [Protection](./backups)
+>* [Disaster Recovery](./disaster-recovery)
+>* [High Availability](./ibmi-disaster-recovery)
 >
 >**Design**
->* [Design Considerations for Azure](designconsiderationsazure.md)
+>* [Design Considerations for Azure](./design-considerations-azure)
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> * [Skytap Security Pillar](../security/)
 

@@ -1,6 +1,7 @@
 ---
 title: Internal Networking
 author: John Bradshaw, Principal Architect
+permalink: /security/internal-networking
 ---
 
 ## Internal Networking
@@ -27,7 +28,7 @@ Internal network firewalls can be deployed where it is necessary to restrict or 
 | Application | Vendor |
 | ----------- | ------ |
 | BigIP | F5 |
-| [pfSense](https://www.netgate.com/solutions/pfsense/) | Netgate |
+| <a href="https://www.netgate.com/solutions/pfsense/" target="_blank">pfSense</a> | Netgate |
 
 -------------------------------------------------------------
 
@@ -50,7 +51,7 @@ network appliances (such as load balancers).
 | Application | Vendor | x86 |     | Power |     |     |
 | ----------- | ------ | --- | --- | ----- | --- | --- |
 |             |        | Windows | Linux | AIX | IBM i | Linux |
-| [Consul](https://www.hashicorp.com/products/consul/service-mesh/) | HashiCorp | ✔️ | ✔️ |   |   |   |
+| <a href="https://www.hashicorp.com/products/consul/service-mesh/" target="_blank">Consul</a> | HashiCorp | ✔️ | ✔️ |   |   |   |
 
 -------------------------------------------------------------------------
 
@@ -73,9 +74,9 @@ balancing functionality.
 
 | Application | Vendor |
 | ----------- | ------ |
-| [Consul](https://www.hashicorp.com/products/consul/service-mesh/) | HashiCorp |
+| <a href="https://www.hashicorp.com/products/consul/service-mesh/" target="_blank">Consul</a> | HashiCorp |
 | Active Directory | Microsoft |
-| [Umbrella](https://umbrella.cisco.com/?_ga=2.214455253.393431820.1607963050-217404651.1607963050) | Cisco |
+| <a href="https://umbrella.cisco.com/?_ga=2.214455253.393431820.1607963050-217404651.1607963050" target="_blank">Umbrella</a> | Cisco |
 
 ----------------------------------------------------------------------
 
@@ -92,29 +93,29 @@ Inbound proxies deployed within a workload environment are typically used to han
 
 |      Application                                      | Vendor  |
 | ----------------------------------------------------- | ------- |
-| [NGINX](https://www.nginx.com/)                       | F5      |
-| [Squid](http://www.squid-cache.org/)                  | Squid   |
-| [pfSense](https://www.netgate.com/solutions/pfsense/) | Netgate |  
+| <a href="https://www.nginx.com/" target="_blank">NGINX</a>                       | F5      |
+| <a href="http://www.squid-cache.org/" target="_blank">Squid</a>                  | Squid   |
+| <a href="https://www.netgate.com/solutions/pfsense/" target="_blank">pfSense</a> | Netgate |  
 
 -------------------------------------------------------------
 
 ## Next steps
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
->* [Connectivity Overview](../operations/connectivity/README.md)
->* [Getting Started with Azure Networking](../operations/connectivity/skytaponazureconnectivity.md)
->* [Getting Started with IBM Cloud Networking](../operations/connectivity/skytaponibmconnectivity.md)
+>[Skytap Operational Excellence Pillar](../operations/)
+>* [Connectivity Overview](../operations/connectivity/)
+>* [Getting Started with Azure Networking](../operations/connectivity/azure)
+>* [Getting Started with IBM Cloud Networking](../operations/connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
->[Skytap Security Pillar](README.md)
->* [Key Security Areas](./keysecurityareas.md)
->* [Security Management](./securitymanagement.md)  
->* [Edge Networking](./edgenetworking.md) 
->* [Virtual Machines](./virtualmachines.md) 
->* [Security as a Service](./securityasaservice.md) 
+>[Skytap Security Pillar](./)
+> * [Key Security Areas](./key-security-areas)
+> * [Security Management](./security-management)
+> * [Edge Networking](./edge-networking)
+> * [Virtual Machines](./virtual-machines)
+> * [Security as a Service](./security-as-a-service)

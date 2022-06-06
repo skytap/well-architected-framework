@@ -1,6 +1,7 @@
 ---
 title: Virtual Machines
 author: John Bradshaw, Principal Architect
+permalink: /security/virtual-machines
 ---
 
 ### Virtual Machines
@@ -107,19 +108,19 @@ Skytap enables local network communication by default and OS level firewall prot
 
 ## Next steps
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
->* [Power Discovery](../operations/Discovery/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
+>* [Power Discovery](../operations/Discovery/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
->[Skytap Security Pillar](README.md)
->* [Key Security Areas](./keysecurityareas.md)
->* [Security Management](./securitymanagement.md)  
->* [Edge Networking](./edgenetworking.md) 
->* [Internal Networking](./internalnetworking.md)
->* [Security as a Service](./securityasaservice.md) 
+>[Skytap Security Pillar](./)
+> * [Key Security Areas](./key-security-areas)
+> * [Security Management](./security-management)
+> * [Edge Networking](./edge-networking)
+> * [Internal Networking](./internal-networking)
+> * [Security as a Service](./security-as-a-service)

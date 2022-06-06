@@ -2,6 +2,7 @@
 title: Hot Migration Overview
 description: Skytap Hot Migration Partner Solutions
 author: George Stamos, Director, Solutions Architect - Business Development
+permalink: /resiliency/solutions/hot-migrations
 ---
 
 ## Skytap on Azure + Precisely for High Availability Scenarios
@@ -59,7 +60,7 @@ The following outlines popular Precisely migration scenarios available for you t
 
 #### Additional Resources
 
-- **[Skytap + Precisely MIMIX Runbook for IBM iSeries](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/SKYTAP-Systemi-MIMIX-Runbook.pdf)**
+- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/SKYTAP-Systemi-MIMIX-Runbook.pdf" target="_blank">Skytap + Precisely MIMIX Runbook for IBM iSeries</a>**
 
 ### What's different about AIX?
 
@@ -75,33 +76,33 @@ The following outlines popular Precisely migration scenarios available for you t
 
 #### Additional Resources
 
-- **[Skytap + Precisely MIMIX Runbook for AIX](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/Mimix-AIX-Runbook-V522.pdf)**
+- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/Mimix-AIX-Runbook-V522.pdf">Skytap + Precisely MIMIX Runbook for AIX</a>**
 
 #### Additional Solutions
 
-- **[Skytap Live Clone Feature](liveclone.md)**
+- **[Skytap Live Clone Feature](./live-clone)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> * [Skytap Security Pillar](../../security/)

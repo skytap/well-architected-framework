@@ -1,6 +1,7 @@
 ---
 Title: Utilizing Commvault in Skytap with IBM Power Workloads in Azure
 Author: Matthew Romero, Technical Product Marketing Manager 
+permalink: /resiliency/solutions/commvault
 ---
 
 # Utilizing Commvault in Skytap with IBM Power Workloads in Azure
@@ -47,7 +48,7 @@ For the overall architecture, please refer to the sample reference architecture 
 
 #### Create a new Skytap Environment<a name="createnewenv"></a>
 
-1.  Navigate to **[cloud.skytap.com](https://cloud.skytap.com)**. The Skytap Dashboard page will then display.
+1.  Navigate to <a href="https://cloud.skytap.com" target="_blank">**cloud.skytap.com**</a>. The Skytap Dashboard page will then display.
 
 2.  Once you have signed into the portal with your **Skytap account**, click the **Environments** tab at the top of the window. The **Manage Environments and VMs** page will then display.
 
@@ -158,7 +159,7 @@ The **Rename VM** dialogue displays.
 ### Installing Commvault Complete Data Recovery -- Context Library Download
 
 1.  From the SRA client view of the Windows Server VM, open a web
-    browser to: <https://www.commvault.com/trials>.
+    browser to: <a href="https://www.commvault.com/trials" target="_blank">https://www.commvault.com/trials</a>.
 
 2.  Click **Commvault Complete™ Data Protection
 30-Day Trial Offer**.
@@ -204,8 +205,7 @@ The **Rename VM** dialogue displays.
     the Context Library.
 
 > For detailed steps for performing these actions, you can refer to the
-> following guide: [How to Create Shared Folders In Windows Server
-> 2019.](https://www.c-sharpcorner.com/article/create-shared-folders-in-windows-server-2016-computer-management/#:~:text=Introduction%201%20First%20step%20in%20this%20process%20would,Wizard%20%E2%80%94%3E%20Click%20Next.%20...%20More%20items...%20)
+> following guide: <a href="https://www.c-sharpcorner.com/article/create-shared-folders-in-windows-server-2016-computer-management/#:~:text=Introduction%201%20First%20step%20in%20this%20process%20would,Wizard%20%E2%80%94%3E%20Click%20Next.%20...%20More%20items...%20" target="_blank">How to Create Shared Folders In Windows Server 2019</a>.
 
 #### Installing the CommServe Tools
 
@@ -285,8 +285,7 @@ deduplication, which is not supported under POWER.
 
 > *To support the backup of IBM i, a Linux OS for the Commvault
 > MediaAgent is required. \[For a list of supported operating systems,
-> please refer to [Commvault MediaAgent Requirements
-> Guide](https://documentation.commvault.com/commvault/v11/article?p=2822_1.htm).\]*
+> please refer to <a href="https://documentation.commvault.com/commvault/v11/article?p=2822_1.htm" target="_blank">Commvault MediaAgent Requirements Guide</a>.\]*
 
 #### *Creating a VM to host the* Commvault MediaAgent Proxy
 
@@ -321,8 +320,7 @@ deduplication, which is not supported under POWER.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image34.png">
 
 > *Modifying the disk(s) must be done while the LPAR is powered down.
-> [More information may be found
-> [here]{.ul}.](https://help.skytap.com/adding-and-extending-vm-disks.html)*
+> <a href="https://help.skytap.com/adding-and-extending-vm-disks.html" target="_blank">[More information may be found [here]{.ul}]</a>.*
 
 10. Set the Disk Size to **200 GB** and click the **Save** button.
 
@@ -359,8 +357,7 @@ deduplication, which is not supported under POWER.
 > based on Operating System. For detailed steps for performing these
 > actions on the Ubuntu image, you can refer to the following guide:
 
--   [Adding a new disk in
-    Ubuntu](https://help.ubuntu.com/community/InstallingANewHardDrive).
+-   <a href="https://help.ubuntu.com/community/InstallingANewHardDrive" target="_blank">Adding a new disk in Ubuntu</a>.
 
 18. Update the **Hostname** for the MediaAgent Server Hostname, Such as
     **UbuntuMediaServer**.
@@ -369,8 +366,7 @@ deduplication, which is not supported under POWER.
 > System. For detailed steps for performing these actions on the Ubuntu
 > image, you can refer to the following guide:
 
--   [Setting your Ubuntu
-    Hostname](https://www.server-world.info/en/note?os=Ubuntu_21.04&p=hostname).
+-   <a href="https://www.server-world.info/en/note?os=Ubuntu_21.04&p=hostname" target="_blank">Setting your Ubuntu Hostname</a>.
 
 19. Reboot the Ubuntu Server and reconnect.
 
@@ -381,8 +377,7 @@ deduplication, which is not supported under POWER.
 > System. For detailed steps for performing these actions on the Ubuntu
 > image, you can refer to the following guide:
 
--   [Mounting a Windows share in
-    Ubuntu](https://www.wikihow.com/Mount-a-Windows-Share-on-an-Ubuntu-Server#:~:text=Mount%20Windows%20Share%20on%20Ubuntu%201%20Install%20samba,and%20exit.%206%20...%20%28more%20items%29%20See%20More.).
+-   <a href="https://www.wikihow.com/Mount-a-Windows-Share-on-an-Ubuntu-Server#:~:text=Mount%20Windows%20Share%20on%20Ubuntu%201%20Install%20samba,and%20exit.%206%20...%20%28more%20items%29%20See%20More." target="_blank">Mounting a Windows share in Ubuntu</a>.
 
 21. Install the Commvault MediaAgent Proxy software by navigating to the
     mounted Windows share location.
@@ -545,7 +540,7 @@ Once the packages are installed, the configuration utility will start.
 
 1.  Inside Commvault, configure a plan for your data protection
 
-> <https://documentation.commvault.com/11.21/essential/92993_creating_base_plan.html>
+> <a href="https://documentation.commvault.com/11.21/essential/92993_creating_base_plan.html" target="_blank">https://documentation.commvault.com/11.21/essential/92993_creating_base_plan.html</a>
 >
 > **Make sure your work with your IBM Administrator when designing your
 > Plan so that you are only protecting the IBM I server during
@@ -723,8 +718,7 @@ an IBM i LPAR that will serve as the Workload within the environment.
 
     a.  Ensure all networking is running, if not: *STRTCPSVR* -- 'G'
 
-    b.  Ensure accessible for
-        [Telnet](https://help.skytap.com/faq-ibmi.html).
+    b.  Ensure accessible for <a href="https://help.skytap.com/faq-ibmi.html" target="_blank">Telnet</a>.
 
     c.  Create a non-QSECOFR user that has \*SECOFR level. \[*CRTUSRPRF*
         -- 'CMV'\]
@@ -735,12 +729,11 @@ an IBM i LPAR that will serve as the Workload within the environment.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image74.png" width="500">
 
 e.  Follow the exact steps found here to install the savf file on the
-    IBM I LPAR. \[[Link to SAVF File in
-    Assets](https://cloud.skytap.com/assets/462106)\]. Or, SAVF found in
-    Software Cache on the Commserv install machine.
+    IBM I LPAR. \[<a href="https://cloud.skytap.com/assets/462106" target="_blank">Link to SAVF File in
+    Assets</a>\]. Or, SAVF found in Software Cache on the Commserv install machine.
 
 f.  Follow the exact steps found here:
-    <https://documentation.commvault.com/commvault/v11_sp20/article?p=16169.htm>
+    <a href="https://documentation.commvault.com/commvault/v11_sp20/article?p=16169.htm" target="_blank">https://documentation.commvault.com/commvault/v11_sp20/article?p=16169.htm</a>
 
 g.  Once SAVF is installed, COMMVAULT START to kick it off.
 
@@ -826,7 +819,7 @@ system into Restricted mode.
 
 ### Run a backup (Right click through Java GUI on FileSystem for LPAR)
 
-a.  <https://documentation.commvault.com/11.21/essential/108610_performing_ibm_i_file_system_backups.html>
+a.  <a href="https://documentation.commvault.com/11.21/essential/108610_performing_ibm_i_file_system_backups.html" target="_blank">https://documentation.commvault.com/11.21/essential/108610_performing_ibm_i_file_system_backups.html</a>
 
 b.  Click on any of the sub-clients you wish to protect under the
     Actions tab and select Back up. If this is your first backup select
@@ -850,8 +843,7 @@ system in a completely different cloud, or even back on-premises.
 
 Full step-by-step instructions on how to recover data using Commvault
 can be found by searching Commvault's documentation website located at:
-<https://documentation.commvault.com/commvault/> and do a keyword search
-for "IBMi Restore"
+<a href="https://documentation.commvault.com/commvault/" target="_blank">https://documentation.commvault.com/commvault/</a> and do a keyword search for "IBMi Restore"
 
 Within the Commvault GUI, Now that the data has been protected in the
 cloud, you can begin the process of recovering the folders back into the
@@ -894,25 +886,25 @@ Now that the user data has been restored onto the server, the customer can decid
 ## Next Steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](./hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> * [Skytap Security Pillar](../../security/)

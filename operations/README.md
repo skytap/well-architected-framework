@@ -19,29 +19,29 @@ These are the disciplines we group in the operational excellence pillar:
 
 | Operational Excellence Disciplines | Description |
 |-------------------|-------------|
-| [Power Discovery](Discovery/README.md) | IBM Power Workloads have been in use for over thirty years and have unique considerations and require a deep understanding of what is in your environments when migrating them to a Cloud Platform.  |
-| [Connectivity](connectivity/README.md) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
-| [Ecosystems](ecosystems/README.md) | IBM Power Workload best practices Design patterns. |
+| [Power Discovery](./Discovery) | IBM Power Workloads have been in use for over thirty years and have unique considerations and require a deep understanding of what is in your environments when migrating them to a Cloud Platform.  |
+| [Connectivity](./connectivity) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
+| [Ecosystems](./ecosystems/) | IBM Power Workload best practices Design patterns. |
 
 <!--
-| [Phase 01C - Sizing and Design](/Sizing_Design/README.md) | The monitoring and management of performance and availability of software applications through DevOps |
-| [Phase 01D - EcoSystem](/Ecosystems/README.md) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
-| [Phase 01E - Testing](/Testing/README.md) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users | -->
+| [Phase 01C - Sizing and Design](./Sizing_Design/) | The monitoring and management of performance and availability of software applications through DevOps |
+| [Phase 01D - EcoSystem](./Ecosystems/) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
+| [Phase 01E - Testing](./Testing/) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users | -->
 
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](README.md)
+>[Skytap Operational Excellence Pillar](./)
 
->* [Power Discovery](Discovery/README.md)
->* [Connectivity](connectivity/README.md)
->* [Ecosystems](ecosystems/README.md)
+>* [Power Discovery](./Discovery/)
+>* [Connectivity](./connectivity/)
+>* [Ecosystems](./ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
-> [Skytap Security Pillar](../security/README.md)
+> [Skytap Security Pillar](../security/)

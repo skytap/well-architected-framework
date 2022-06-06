@@ -1,6 +1,7 @@
 ---
 title: Skytap Power Discovery - Ecosystems
 author: Randy Watson, Cloud Solutions Architect - Contractor
+permalink: /operations/Discovery/ecosystems
 ---
 
 # Gathering Infrastructure and/or Performance Data for IBM Power (IBM i, AIX/VIOS, Linux)
@@ -80,7 +81,7 @@ is not active.*
 
 * HMC Scanner runs on the Java Runtime Environment (Version 8) can be downloaded from the link below.
 
-<https://www.java.com/en/download/manual.jsp>
+<a href="https://www.java.com/en/download/manual.jsp" target="_blank">https://www.java.com/en/download/manual.jsp</a>
 
 * Requires network access from the Windows PC to the HMC.
 
@@ -88,8 +89,7 @@ is not active.*
 
 Use the HMC Scanner to quickly extract all the details of the POWER Servers the HMC is connected to and saved in a Microsoft Excel spreadsheet.
 
-The tool is available at the end of this document as a zip file that needs to be extracted on an empty directory. Latest version is \"
-[hmcScanner-0.11.42.zip](https://www.ibm.com/support/pages/system/files/inline-files/$FILE/hmcScanner-0.11.42.zip)\".
+The tool is available at the end of this document as a zip file that needs to be extracted on an empty directory. Latest version is \"[hmcScanner-0.11.42.zip](https://www.ibm.com/support/pages/system/files/inline-files/$FILE/hmcScanner-0.11.42.zip)\".
 
 HMC Scanner is a Java program that uses SSH to connect to an HMC,SDMC,FSM or IVM (IVM is experimental), downloads the system configuration and produces a single Excel spreadsheet that contains the configuration of servers and LPARs. In PureFlex environments, only Power Systems compute nodes are detected. Optional HTML and CSV outputs are available.
 
@@ -140,9 +140,9 @@ The tool is constantly updated to match changes in tool syntax, to manage new da
 
 This tool is not officially supported by IBM. No guarantee is given or implied, and you cannot obtain help from IBM. It is a personal project of the author, Federico Vagnini (IBM Italy).
 
-See also [pGraph](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/pGraph) page form the same author. It allows multiple nmon, vmstat, iostat, sar, lslparutil files to be loaded regardless of their size. Graphs are provided together with a very useful \"time zoom\" that allows you to select the time period to show.
+See also <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/pGraph" target="_blank">pGraph</a> page form the same author. It allows multiple nmon, vmstat, iostat, sar, lslparutil files to be loaded regardless of their size. Graphs are provided together with a very useful \"time zoom\" that allows you to select the time period to show.
 
-[[https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats]{.ul}](https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats)
+<a href="https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats" target="_blank">https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats</a>
 
 ###### *[Back to the Top](#toc)*
 ### Running HMC Scanner on Windows PC<a name="HMCWindows"></a>
@@ -340,9 +340,9 @@ Collecting historical data with no overhead and little disk space:
 
 1. Download a Windows Client and IBM i host code using the following links:
 
-[[https://hsdownloads.helpsystems.com/software/robot/performance-nav/pn400.sav](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fpn400.sav&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505384352%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=2euT7CjBenbQim7wJnBIUr14TpNVXLw%2FyMZdWd5B6lc%3D&reserved=0)
+    - [https://hsdownloads.helpsystems.com/software/robot/performance-nav/pn400.sav](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fpn400.sav&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505384352%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=2euT7CjBenbQim7wJnBIUr14TpNVXLw%2FyMZdWd5B6lc%3D&reserved=0)
 
-[[https://hsdownloads.helpsystems.com/software/robot/performance-nav/perfnav.exe](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fperfnav.exe&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505394306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=IufUy4zr%2F%2BCKDVyGdUcjGkzDkZnl87ViGSBScY1aNtM%3D&reserved=0)
+    - [https://hsdownloads.helpsystems.com/software/robot/performance-nav/perfnav.exe](https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhsdownloads.helpsystems.com%2Fsoftware%2Frobot%2Fperformance-nav%2Fperfnav.exe&data=04%7C01%7CRandy.Watson%40helpsystems.com%7Cf3a8180e57a34df3b3d908d97c91eb4f%7Cca81e23b350945eea9983e346acf274d%7C0%7C0%7C637677791505394306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=IufUy4zr%2F%2BCKDVyGdUcjGkzDkZnl87ViGSBScY1aNtM%3D&reserved=0)
 
 2. Click on perfnav.exe to install the Windows component. This is a self-extracting install program that just puts an ICON on the desktop.
 
@@ -407,7 +407,7 @@ performance data.
 1.  Obtain the rackdata.tar.gz file from Skytap or:
 
     a.  Using WinScp or FileZilla, download rackdata.tar.gz from
-        [[ftp.mpginc.com]{.ul}](ftp://ftp.mpginc.com)
+        <a href="ftp://ftp.mpginc.com" target="_blank">[ftp.mpginc.com]{.ul}</a>
 
 2.  SFTP or FTP to **/tmp** on each LPAR
 
@@ -457,7 +457,7 @@ It will launch the browser to view the data for the one day with Google Chart. J
 1.  Obtain your pnbuild.tar.gz file from Skytap or:
 
     a.  Using WinScp or FileZilla, download pnbuild.tar.gz from
-        [[ftp.mpginc.com]{.ul}](ftp://ftp.mpginc.com)
+        <a href="ftp://ftp.mpginc.com" target="_blank">[ftp.mpginc.com]{.ul}</a>
 
 2.  SFTP or FTP to the same directory where existing nmon exists.
 
@@ -532,17 +532,16 @@ Includes graphic view of the last 7 days with Google graphs for free.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery](../Discovery/README.md)
-       > [Power Discovery & Design - Workloads](discoveryworkloads.md)
->* [Connectivity](../connectivity/README.md)
->* [Ecosystems](../ecosystems/README.md)
+> [Skytap Operational Excellence Pillar](../)
+> * [Power Discovery](../Discovery/) > [Power Discovery & Design - Workloads](./workloads)
+> * [Connectivity](../connectivity/)
+> * [Ecosystems](../ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../resiliency/)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

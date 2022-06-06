@@ -44,9 +44,7 @@ An organization's Power estate is comprised of:
 IBM Power Workloads have been in use for over thirty years and have
 unique considerations when migrating them to a Cloud Platform. 
 
-The common [Cloud
-rationalization](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization)
-approach for x86 workloads also apply to Power:
+The common <a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization" target="_blank">Cloud rationalization</a> approach for x86 workloads also apply to Power:
 
 * **Rehost**: This is commonly referred to as a lift of shift of existing
     workloads into a Cloud provider with minimal change to the original
@@ -138,23 +136,23 @@ Skytap on Azure.
 
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
-| [Power Discovery & Design - Ecosystems](./discoveryecosystems.md) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage.  |
-| [Power Discovery & Design - Workloads](./discoveryworkloads.md) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements. |
+| [Power Discovery & Design - Ecosystems](./ecosystems) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage.  |
+| [Power Discovery & Design - Workloads](./workloads) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements. |
 
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery & Design - Ecosystems](discoveryecosystems.md)
->* [Power Discovery & Design - Workloads](discoveryworkloads.md)
->* [Connectivity](../connectivity/README.md)
->* [Ecosystems](../ecosystems/README.md)
+>[Skytap Operational Excellence Pillar](../)
+>* [Power Discovery & Design - Ecosystems](./ecosystems)
+>* [Power Discovery & Design - Workloads](./workloads)
+>* [Connectivity](../connectivity/)
+>* [Ecosystems](../ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../resiliency/)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

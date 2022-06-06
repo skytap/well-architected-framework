@@ -1,6 +1,7 @@
 ---
 title: Skytap Operational Excellence - Connectivity - Getting Started with IBM Cloud Networking
 author: Colleen E Hamilton - Senior Product Manager
+permalink: /operations/connectivity/ibm/
 ---
 
 # **Getting started with IBM Cloud Networking**
@@ -8,8 +9,7 @@ author: Colleen E Hamilton - Senior Product Manager
 When migrating your application to IBM Cloud for Skytap Solutions
 (ICSS), your primary Edge Networking solutions will be internet-based:
 For applications with a public endpoint, you can set up a static public
-IP address, or a dynamic [public IP address with its own
-FQDN](https://help.skytap.com/comparing-static-and-dynamic-public-ip-addresses.html).
+IP address, or a dynamic <a href="https://help.skytap.com/comparing-static-and-dynamic-public-ip-addresses.html" target="_blank">public IP address with its own FQDN</a>.
 For applications that need private, encrypted connections back to your
 on-premises location, ICSS recommends setting up a VPN.
 
@@ -61,20 +61,20 @@ each server.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
->* [Ecosystems](../ecosystems/README.md)
+>[Skytap Operational Excellence Pillar](../../)
+>* [Power Discovery](../../Discovery/)
+>* [Connectivity](../) > [Getting Started with IBM Cloud Networking](../ibm)
+>* [Ecosystems](../../ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../../resiliency/)
 
 >**Design**
->* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+>* [Design Considerations for Azure](../../../resiliency/design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../../../resiliency/design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../../security/)

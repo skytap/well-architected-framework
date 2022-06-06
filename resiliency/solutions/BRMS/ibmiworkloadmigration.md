@@ -1,7 +1,8 @@
 ---
 Title: IBM i workload migration from on-prem to Skytap using BRMS ICC
 Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using BRMS ICC
-Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
+Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager
+permalink: /resiliency/solutions/brms
 ---
 # IBM i workload migration from on-premises to Skytap using BRMS ICC
 
@@ -59,7 +60,7 @@ The below LPPs need to be installed on IBM i LPAR:
 
 * Install latest PTFs on IBM i with below individual PTFs installed
 
-  * [Minimum](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels)
+  * <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels" target="_blank">Minimum</a>
  PTF level for IBM i
 
 * Utilized ASP should be less than 48% in IBM i LPAR
@@ -549,26 +550,26 @@ partition, you must specify the following:
 ## Next Steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../README.md)
+> [Skytap Well-Architected Framework](../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../../README.md)
->* [Migration](../../migrations.md)
->* [Protection](../../backups.md)
->* [Disaster Recovery](../../disasterrecovery.md)
->* [High Availability](../../ibmihadr.md)
+>[Skytap Resiliency Pillar](../../)
+>* [Migration](../../migrations)
+>* [Protection](../../backups)
+>* [Disaster Recovery](../../disaster-recovery)
+>* [High Availability](../../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](../hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](../cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](../../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
+>* [Design Considerations for Azure](../../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../../design-considerations-ibm)
 
 
 **Security**
-> * [Skytap Security Pillar](../../../security/README.md)
+> * [Skytap Security Pillar](../../../security/)

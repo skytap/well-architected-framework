@@ -1,6 +1,7 @@
 ---
 title: Security Management
 author: John Bradshaw, Principal Architect
+permalink: /security/security-management
 ---
 
 ### Security Management
@@ -35,7 +36,7 @@ directories on a per Environment basis but also improves security by
 consolidating the logging and administration of users and service
 accounts.
 
-A [**Backup**](../resiliency/README.md) strategy should encompass the native capabilities of the
+A [**Backup**](../resiliency/) strategy should encompass the native capabilities of the
 Skytap platform, such as Templates which create a point in time clone of
 an entire workload from network configuration to data. However,
 Templates are not designed to replace regular backups and are not
@@ -199,8 +200,7 @@ layer.
 #### Backup
 
 While the Skytap platform has a point in time cloning system, using the
-[Template an Environment
-feature](https://help.skytap.com/saving-an-environment-as-a-template.html),
+<a href="https://help.skytap.com/saving-an-environment-as-a-template.html" target="_blank">Template an Environment feature</a>,
 this is not designed to replace a comprehensive backup strategy. It is
 not a replacement for live systems such as online Databases or
 Application servers.
@@ -236,7 +236,7 @@ controlled access and encryption services for these functions.
 |      Application     |      Vendor     |      x86         |                |      Power     |                |                |
 |----------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
 |                      |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
-| [Vault](https://www.vaultproject.io/)                | HashiCorp       | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
+| <a href="https://www.vaultproject.io/" target="_blank">Vault</a>                | HashiCorp       | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
 
 #### Log Management
 
@@ -256,23 +256,23 @@ for onwards propagation to the log management solution.
 |      Application         |      Vendor     |      x86         |                |      Power     |                |                |
 |--------------------------|-----------------|------------------|----------------|----------------|----------------|----------------|
 |                          |                 |      Windows     |      Linux     |      AIX       |      IBM i     |      Linux     |
-| [Splunk Cloud](https://www.splunk.com/en_us/software/splunk-cloud.html)             | Splunk          | ✔️                | ✔️              |                |                |                |
-| [Splunk Enterprise](https://www.splunk.com/en_us/software/splunk-enterprise.html) | Splunk          | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
+| <a href="https://www.splunk.com/en_us/software/splunk-cloud.html" target="_blank">Splunk Cloud</a>             | Splunk          | ✔️                | ✔️              |                |                |                |
+| <a href="https://www.splunk.com/en_us/software/splunk-enterprise.html" target="_blank">Splunk Enterprise</a> | Splunk          | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
   
 ## Next steps
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
->[Skytap Security Pillar](./README.md)
-> * [Key Security Areas](./keysecurityareas.md)
-> * [Edge Networking](./edgenetworking.md) 
-> * [Virtual Machines](./virtualmachines.md) 
-> * [Internal Networking](./internalnetworking.md) 
-> * [Security as a Service](./securityasaservice.md) 
+>[Skytap Security Pillar](./)
+> * [Key Security Areas](./key-security-areas)
+> * [Edge Networking](./edge-networking)
+> * [Virtual Machines](./virtual-machines)
+> * [Internal Networking](./internal-networking)
+> * [Security as a Service](./security-as-a-service)
