@@ -1,6 +1,7 @@
 ---
 title: Skytap Operational Excellence - Ecosystems
 author:  Matthew Romero, Technical Product Marketing Manager, Ahmed Abdulla PhD, Senior Engagement Manager - McKinsey & Company, Steven Martin, Chief Data Scientist - Microsoft
+permalink: /operations/ecosystems/
 ---
 
 # Ecosystems
@@ -60,28 +61,28 @@ As customers consider establishing new and more diverse data ecosystems, Skytap 
 
 ##### Design Patterns:
 
-<!-- -   [Azure Native Solutions](azurenative/README.md)-->
--   [SAP Workloads](SAP/README.md)
+<!-- -   [Azure Native Solutions](./azure-native/)-->
+-   [SAP Workloads](./sap)
 
 <hr>
 
 #### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](../connectivity/README.md)
->* [Ecosystems](README.md)
+>[Skytap Operational Excellence Pillar](../)
+>* [Power Discovery](../Discovery/)
+>* [Connectivity](../connectivity/)
+>* [Ecosystems](./)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../resiliency/)
 
 >**Design**
->* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+>* [Design Considerations for Azure](../../resiliency/design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../../resiliency/design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

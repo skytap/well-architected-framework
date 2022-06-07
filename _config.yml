@@ -214,7 +214,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Pacific"
+# timezone: "America/Pacific"
 markdown: markdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -238,6 +238,13 @@ defaults:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
+
+# Serving
+detach              : false
+port                : 4000
+host                : 127.0.0.1
+baseurl             : "/well-architected-framework" # does not include hostname
+show_dir_listing    : false
 
 # Exclude these files from production site
 exclude:

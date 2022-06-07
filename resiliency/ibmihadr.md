@@ -2,6 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: Lagath Gunasinghe - Cloud Solutions Architect
+permalink: /resiliency/ibmi-disaster-recovery
 ---
 
 # IBM I -- High Availability and Disaster Recovery
@@ -64,21 +65,21 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](README.md)
->* [Migration](migrations.md)
->* [Protection](backups.md)
->* [Disaster Recovery](disasterrecovery.md)
+>[Skytap Resiliency Pillar](./)
+>* [Migration](./migrations)
+>* [Protection](./backups)
+>* [Disaster Recovery](./disaster-recovery)
 >
 >**Design**
->* [Design Considerations for Azure](designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
+>* [Design Considerations for Azure](./design-considerations-azure)
+>* [Design Considerations for IBM Cloud](./design-considerations-ibm)
 
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> * [Skytap Security Pillar](../security/)

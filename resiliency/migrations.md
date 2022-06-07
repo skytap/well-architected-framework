@@ -2,6 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
+permalink: /resiliency/migrations
 ---
 
 # Principles of the reliability pillar
@@ -18,9 +19,9 @@ Migration Considerations include:
 
 -   Supported LPARs
 
--   [Cold Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
+-   [Cold Migrations (Backup and Restore)](../solutions/cold-migrations)
 
--   [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
+-   [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
 
 **Skytap Discovery and Migration -- Support and Limits**
 
@@ -56,26 +57,26 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](README.md)
->* [Protection](backups.md)
->* [Disaster Recovery](disasterrecovery.md)
->* [High Availability](ibmihadr.md)
+>[Skytap Resiliency Pillar](../)
+>* [Protection](./backups)
+>* [Disaster Recovery](./disaster-recovery)
+>* [High Availability](./ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](solutions/HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](solutions/ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](./solutions/hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](./solutions/cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> * [Skytap Security Pillar](../../security/)
 

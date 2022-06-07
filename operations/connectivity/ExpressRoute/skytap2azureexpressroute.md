@@ -1,6 +1,7 @@
 ---
 title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
+permalink: /operations/connectivity/express-route
 ---
 
 # EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
@@ -333,21 +334,21 @@ Your Skytap AIX LPAR is now communicating with a VM in Azure Native.
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../README.md)
+> [Skytap Well-Architected Framework](../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../README.md)
->* [Power Discovery](../../Discovery/README.md)
->* [Connectivity](../README.md) > [Getting Started with Azure Networking](../skytaponazureconnectivity.md)
->* [Connectivity](../README.md) > [Getting Started with IBM Cloud Networking](../skytaponibmconnectivity.md)
->* [Ecosystems](../../ecosystems/README.md)
+>[Skytap Operational Excellence Pillar](../../operations)
+>* [Power Discovery](../../operations/Discovery/)
+>* [Connectivity](./) > [Getting Started with Azure Networking](./azure)
+>* [Connectivity](./) > [Getting Started with IBM Cloud Networking](./ibm)
+>* [Ecosystems](../../ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../../resiliency/)
 
 >**Design**
->* [Design Considerations for Azure](../../../resiliency/designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../../resiliency/designconsiderationsibm.md)
+>* [Design Considerations for Azure](../../../resiliency/design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../../../resiliency/design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../../security/README.md)
+> [Skytap Security Pillar](../../../security/)

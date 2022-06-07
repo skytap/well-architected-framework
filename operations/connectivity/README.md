@@ -50,8 +50,8 @@ limitations and move to a more flexible and resilient cloud-based model.
 
 ##### Design Solutions:
 
--   [Internal Networking](../../security/internalnetworking.md)
--   [Edge Networking](../../security/edgenetworking.md)
+-   [Internal Networking](../../security/internal-networking)
+-   [Edge Networking](../../security/edge-networking)
 
 ## Considerations on Reliability
 
@@ -93,29 +93,29 @@ Once a connectivity pattern into Skytap networks is chosen, either via VPN or pr
 
 ## Getting Started with Networking
 
-* [Getting Started with Azure Networking](skytaponazureconnectivity.md)
+* [Getting Started with Azure Networking](./azure)
 
-* [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
+* [Getting Started with IBM Cloud Networking](./ibm)
 
 <hr>
 
 #### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md) > [Getting Started with Azure Networking](skytaponazureconnectivity.md)
->* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
+>[Skytap Operational Excellence Pillar](../)
+>* [Power Discovery](../Discovery/)
+>* [Connectivity](./) > [Getting Started with Azure Networking](./azure)
+>* [Connectivity](./) > [Getting Started with IBM Cloud Networking](./ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../resiliency/)
 
 >**Design**
->* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+>* [Design Considerations for Azure](../../resiliency/design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../../resiliency/design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../security/)

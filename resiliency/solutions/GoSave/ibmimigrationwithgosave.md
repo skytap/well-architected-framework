@@ -2,6 +2,7 @@
 title: IBM i workload migration using Go Save/Restore, Option 22-23
 description: Skytap Cold Migration Solution - IBM i workload migration using Go Save/Restore, Option 22-23
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
+permalink: /resiliency/solutions/go-save
 ---
 
 # IBM i workload migration using Go Save/Restore, Option 22-23
@@ -38,11 +39,11 @@ These are some key takeaway for developers and operators to consider from this g
 
 * Install latest PTFs on IBM i with below individual PTFs installed
 
-  * [Minimum](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels) PTF level for IBM i
+  * <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels" target="_blank">Minimum</a> PTF level for IBM i
 
 * Utilized ASP should be less than 48% in IBM i LPAR. Amount of disk space can be reduced by doing clean up as mentioned in the link below:
 
-  * [https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used](https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used)
+  * <a href="https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used" target="_blank">https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used</a>
 
 * Azure storage account with blob storage container and valid SAS key
 
@@ -77,7 +78,7 @@ WRKSPLF
 ###### *[Back to the Top](#toc)*
 #### Create virtual optical media<a name="createvom"></a>
 
-[https://www.ibm.com/docs/en/i/7.2?topic=storage-setting-up-virtual-optical](https://www.ibm.com/docs/en/i/7.2?topic=storage-setting-up-virtual-optical) 
+<a href="https://www.ibm.com/docs/en/i/7.2?topic=storage-setting-up-virtual-optical" target="_blank">https://www.ibm.com/docs/en/i/7.2?topic=storage-setting-up-virtual-optical</a>
 
 ```bash
 > CRTIMGCLG IMGCLG(skytap30GB) DIR(\'/skytap30GB\') 
@@ -150,7 +151,7 @@ STRNFSSVR \*ALL
 
 1. Create virtual tape image Catalog for Option 23 data
 
-[https://www.ibm.com/docs/en/i/7.3?topic=tape-setting-up-virtual-storage](https://www.ibm.com/docs/en/i/7.3?topic=tape-setting-up-virtual-storage)
+<a href="https://www.ibm.com/docs/en/i/7.3?topic=tape-setting-up-virtual-storage" target="_blank">https://www.ibm.com/docs/en/i/7.3?topic=tape-setting-up-virtual-storage</a>
 
 2.  Determine tape size based on overall data size, you must pre-create each tape required for the total Option 23 save
 
@@ -176,7 +177,7 @@ mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
 
 6. Install AZCopy utility as required download here:
 
-[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10" target="_blank">https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10</a>
 
 7. extract AZCopy archive to directory
 
@@ -188,7 +189,7 @@ tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
 
 8. Copy save files from NFS mounted location to Azure blob storage container
 
-   [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory)
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory" target="_blank">https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory</a>
 
 Windows Example:
 
@@ -324,7 +325,7 @@ mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
 
 6. Install AZCopy utility, download here:
 
-[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10" target="_blank">https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10</a>
 
 7. extract AZCopy archive to directory
 
@@ -334,7 +335,7 @@ tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
 ```
 8.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBM i server in Skytap
 
-[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory)
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory" target="_blank">https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory</a>
 
 Windows Example:
 ```powershell
@@ -387,7 +388,7 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 
 1. Run AZCopy to copy virtual tape(s) from Azure storage to the NFS mount
     -   Examples here:
-   > [[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download]{.underline}](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)
+  > <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download" target="_blank">[https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download]{.underline}</a>
 
 2. Go Restore, Option 23
 
@@ -408,26 +409,26 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 ## Next Steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../README.md)
+> [Skytap Well-Architected Framework](../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../../README.md)
->* [Migration](../../migrations.md)
->* [Protection](../../backups.md)
->* [Disaster Recovery](../../disasterrecovery.md)
->* [High Availability](../../ibmihadr.md)
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](../ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](../solutions/cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](../../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../designconsiderationsibm.md)
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../../security/README.md)
+> * [Skytap Security Pillar](../../../security/)
 

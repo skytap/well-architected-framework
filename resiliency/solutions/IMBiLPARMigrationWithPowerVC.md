@@ -1,6 +1,7 @@
 ---
 title: Importing Power LPARs into Skytap with PowerVC
 author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
+permalink: /resiliency/solutions/power-vc
 ---
 # Importing Power LPARs into Skytap with PowerVC - A field enablement guide
 
@@ -75,7 +76,7 @@ The VMs that host the PowerVC management host must be dedicated solely to this f
 The supported operating systems for running PowerVC are as follows:
 
 Link to IBM documentation:
-[https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_hwandsw_reqs_cloud.html#powervc_hwandsw_reqs_cloud\_\_d718e641](https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_hwandsw_reqs_cloud.html#powervc_hwandsw_reqs_cloud__d718e641)
+<a href="https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_hwandsw_reqs_cloud.html#powervc_hwandsw_reqs_cloud__d718e641" target="_blank">https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_hwandsw_reqs_cloud.html#powervc_hwandsw_reqs_cloud\_\_d718e641</a>
 
 -   Red Hat Enterprise Linux (RHEL) version 7.1 or later for IBM Power for ppc64 and ppc64le
 
@@ -158,7 +159,7 @@ If you plan to manage NovaLink:
 PowerVC implements several services. Each service has an assigned port number. The link below shows the ports used by PowerVC for inbound and outbound traffic, depending on the installed version.
 
 **Ports used by IBM PowerVC:**
-[https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_planning_security_firewall_cloud.html](https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_planning_security_firewall_cloud.html)
+<a href="https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_planning_security_firewall_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.4/com.ibm.powervc.cloud.help.doc/powervc_planning_security_firewall_cloud.html</a>
 
 ## Planning for security
 
@@ -242,7 +243,7 @@ On Power hardware, both RHEL 7.1 little-endian and RHEL 7.1 big-endian are suppo
 7.  Choose to download either the **PPC64**, **PPC64LE** or the **x86_64** tar file.
 
 Link to Sign in:
-[https://www.ibm.com/servers/eserver/ess/OpenServlet.wss](https://www.ibm.com/servers/eserver/ess/OpenServlet.wss)
+<a href="https://www.ibm.com/servers/eserver/ess/OpenServlet.wss" target="_blank">https://www.ibm.com/servers/eserver/ess/OpenServlet.wss</a>
 
 ## Installing the software
 
@@ -455,7 +456,7 @@ powervc-image export \--image aix71
 ```
 The link below explains in detail on how to export an image, depending
 on the PowerVC version used:
-[https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html](https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html)
+<a href="https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html</a>
 
 ###### *[Back to the Top](#toc)*
 
@@ -490,13 +491,13 @@ If you encounter issues when you run the **powervc-uninstall** command, you can 
 This command forces the uninstallation of all components of PowerVC.
 
 You can find more information here:
-[https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_uninstalling_hmc.html](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_uninstalling_hmc.html)
+<a href="https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_uninstalling_hmc.html" target="_blank">https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_uninstalling_hmc.html</a>
 
 ###### *[Back to the Top](#toc)*
 
 ## Importing to Skytap<a name="importing-to-skytap"></a>
 
-[Importing VMs using the VM Imports page](https://help.skytap.com/Imports.html) -- This help article describes how to import power VMs with the Skytap import tool: [https://cloud.skytap.com/imports](https://cloud.skytap.com/imports).
+<a href="https://help.skytap.com/Imports.html" target="_blank">Importing VMs using the VM Imports page</a> -- This help article describes how to import power VMs with the Skytap import tool: <a href="https://cloud.skytap.com/imports" target="_blank">https://cloud.skytap.com/imports</a>.
 
 ###### *[Back to the Top](#toc)*
 
@@ -504,7 +505,7 @@ You can find more information here:
 
 **Q:** Do IBM PowerVC Standard Edition and IBM Cloud PowerVC Manager both can export images?
 
-**A:** Both can export images. For more information, see: [https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_features_cloud.html](https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_features_cloud.html)
+**A:** Both can export images. For more information, see: <a href="https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_features_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_features_cloud.html</a>
 
 **Q:** What is the limitation to the size of LPAR export?
 
@@ -539,40 +540,40 @@ PowerVC:
 
 ## Additional resources<a  name="additionalresources"></a>
 
-- [Move images between cloud providers -- IBM PowerVC](https://developer.ibm.com/powervc/2018/01/05/move-images-cloud-providers-using-powervc/)
+- <a href="https://developer.ibm.com/powervc/2018/01/05/move-images-cloud-providers-using-powervc/" target="_blank">Move images between cloud providers -- IBM PowerVC</a>
 
-- [IBM PowerVC Version 1.3.2 Introduction and Configuration](http://www.redbooks.ibm.com/abstracts/sg248199.html?Open) (Redbook)
+- <a href="http://www.redbooks.ibm.com/abstracts/sg248199.html?Open" target="_blank">IBM PowerVC Version 1.3.2 Introduction and Configuration</a> (Redbook)
 
-- [What's Inside a PowerVC Image OVA Package -- IBM PowerVC](https://developer.ibm.com/powervc/2018/01/19/whats-inside-powervc-image-ova/)
+- <a href="https://developer.ibm.com/powervc/2018/01/19/whats-inside-powervc-image-ova/" target="_blank">What's Inside a PowerVC Image OVA Package -- IBM PowerVC</a>
 
-- [Exporting and importing images via the CLI: a deep dive -- IBM PowerVC](https://developer.ibm.com/powervc/2018/04/04/exporting-importing-images-via-cli-deep-dive/)
+- <a href="https://developer.ibm.com/powervc/2018/04/04/exporting-importing-images-via-cli-deep-dive/" target="_blank">Exporting and importing images via the CLI: a deep dive -- IBM PowerVC</a>
 
-- [https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html](https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html)
+- <a href="https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html</a>
 
 ###### *[Back to the Top](#toc)*
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](../hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](../cold-migrations)
 >
 >**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> * [Skytap Security Pillar](../../security/)

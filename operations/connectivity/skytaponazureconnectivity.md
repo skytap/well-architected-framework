@@ -1,6 +1,7 @@
 ---
 title: Skytap Operational Excellence - Connectivity - Getting Started with Azure Networking
 author: Colleen E Hamilton - Senior Product Manager, Jeffry Lane - Sr. Cloud Solutions Architect
+permalink: /operations/connectivity/azure/
 ---
 
 # Getting Started with Azure Networking
@@ -30,8 +31,7 @@ Even though Skytap on Azure is running within an Azure data center, Azure treats
 
 ## Skytap on Azure Network Connectivity Considerations <a name="begin"></a>
 
-* **Regions**: [Skytap Global
-    Regions](https://help.skytap.com/understanding-regions.html#understanding-regions)
+* **Regions**: <a href="https://help.skytap.com/understanding-regions.html#understanding-regions" target="_blank">Skytap Global Regions</a>
 
 **NOTE**: ***Create a LOCK on the Azure resource group** that
     contains the Skytap on Azure service. This lock may help prevent
@@ -47,7 +47,7 @@ There are two methods to connect satellite centers into Skytap
 
    * **Method 2**: VPN connection between satellite facilities and Azure VPN Gateways in your Azure hub leveraging an Azure Virtual WAN hub or an Azure Route Server
 
-**Best practice:** To determine latency between your connectivity into Skytap on Azure (i.e., your DC, Distribution Warehouse), we recommend conducting a [Skytap Speed Test](http://speedtest.skytap.com/).
+**Best practice:** To determine latency between your connectivity into Skytap on Azure (i.e., your DC, Distribution Warehouse), we recommend conducting a <a href="http://speedtest.skytap.com/" target="_blank">Skytap Speed Test</a>.
 
 ###### *[Back to the Top](#toc)*
 
@@ -66,7 +66,7 @@ as mentioned above.
 
 **Links to helpful resources:**
 
-*[Skytap VPN documentation](https://help.skytap.com/wan-create-vpn.html#creating-a-vpn-connection-to-your-skytap-account) on how to make VPN connections into Skytap on Azure:
+*<a href="https://help.skytap.com/wan-create-vpn.html#creating-a-vpn-connection-to-your-skytap-account" target="_blank">Skytap VPN documentation</a> on how to make VPN connections into Skytap on Azure:
 
 **Reference Architecture - Direct VPN**
 
@@ -78,13 +78,13 @@ Skytap's built-in VPN service gives you a streamlined option to establish a VPN 
 
 <!-- <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image2.png" width="500"> -->
 
-A VPN is like a bridge: both sides must be "facing each other" for traffic to flow. This means that each VPN endpoint must be configured the same way, with the same parameters. Before you begin, speak to your company's IT department to [find out which VPN parameters](https://help.skytap.com/wan-vpn-configuration-parameters.html) you'll need to use for Skytap\'s side of the VPN.
+A VPN is like a bridge: both sides must be "facing each other" for traffic to flow. This means that each VPN endpoint must be configured the same way, with the same parameters. Before you begin, speak to your company's IT department to <a href="https://help.skytap.com/wan-vpn-configuration-parameters.html" target="_blank">find out which VPN parameters</a> you'll need to use for Skytap\'s side of the VPN.
 
-Also like a bridge, VPNs are most reliable when distance being spanned is short. This means the two endpoints should be as close together as possible. You'll want to set up the Skytap VPN endpoint in a region which is nearest to your corporate VPN endpoint. Choose the region in your Skytap account which is nearest to your corporate endpoint, and [create the static public IP address](https://help.skytap.com/managing-public-ip-addresses.html#AddingastaticpublicIPaddresstoyouraccount) for your new VPN.
+Also like a bridge, VPNs are most reliable when distance being spanned is short. This means the two endpoints should be as close together as possible. You'll want to set up the Skytap VPN endpoint in a region which is nearest to your corporate VPN endpoint. Choose the region in your Skytap account which is nearest to your corporate endpoint, and <a href="https://help.skytap.com/managing-public-ip-addresses.html#AddingastaticpublicIPaddresstoyouraccount">create the static public IP address</a> for your new VPN.
 
-Now you're ready to create your VPN. Using the parameters you've agreed upon with your IT department, [create the VPN endpoint in Skytap,](https://help.skytap.com/wan-create-vpn.html) and work with your company\'s IT department to set up a matching-configuration endpoint on your On-Premises VPN device. Once both endpoints are set up, make sure that you specify at least one remote subnet on the Skytap side (this is the on-prem network subnet that Skytap will be sending to and receiving from), and then **be sure to [test your VPN](https://help.skytap.com/wan-testing.html#Test_the_VPN)** to confirm that it will properly establish a tunnel.
+Now you're ready to create your VPN. Using the parameters you've agreed upon with your IT department, <a href="https://help.skytap.com/wan-create-vpn.html" target="_blank">create the VPN endpoint in Skytap</a>, and work with your company\'s IT department to set up a matching-configuration endpoint on your On-Premises VPN device. Once both endpoints are set up, make sure that you specify at least one remote subnet on the Skytap side (this is the on-prem network subnet that Skytap will be sending to and receiving from), and then **be sure to <a href="https://help.skytap.com/wan-testing.html#Test_the_VPN" target="_blank">test your VPN</a>** to confirm that it will properly establish a tunnel.
 
-Once you've confirmed that your VPN can successfully establish Phase1 and Phase2 connectivity, [connect your VPN to its intended the Skytap Environment(s)](https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#Connect), choose a server from each side of the WAN topology that need to talk to each other (one from Skytap and one from your on-premises network), and [test the final end-to-end connectivity](https://help.skytap.com/wan-testing.html#Further) between each server.
+Once you've confirmed that your VPN can successfully establish Phase1 and Phase2 connectivity, <a href="https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#Connect" target="_blank">connect your VPN to its intended the Skytap Environment(s)</a>, choose a server from each side of the WAN topology that need to talk to each other (one from Skytap and one from your on-premises network), and <a href="https://help.skytap.com/wan-testing.html#Further" target="_blank">test the final end-to-end connectivity</a> between each server.
 
 ###### *[Back to the Top](#toc)*
 
@@ -92,15 +92,13 @@ Once you've confirmed that your VPN can successfully establish Phase1 and Phase2
 
 For context, the VPN into Azure Hub option may provide a lower latency connection over Option 1 (direct VPN into Skytap) and perhaps even Option 3 due to the specific routing of your current ExpressRoute.
 
-In this case, you will establish VPN connections between satellite facilities and the closest Azure VPN point-of-presence (POP) which leverages the Azure backbone to hit your Azure hub region. Once there, you will either leverage an [Azure VWAN HUB](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-global-transit-network-architecture) or [Azure Route Server](https://docs.microsoft.com/en-us/azure/route-server/overview).
+In this case, you will establish VPN connections between satellite facilities and the closest Azure VPN point-of-presence (POP) which leverages the Azure backbone to hit your Azure hub region. Once there, you will either leverage an <a href="https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-global-transit-network-architecture" target="_blank">Azure VWAN HUB</a> or <a href="https://docs.microsoft.com/en-us/azure/route-server/overview" target="_blank">Azure Route Server</a>.
 
 Links to helpful resources:
 
-* Specific Azure doc relevant to this option: [About Azure Route
-    Server supports for ExpressRoute and Azure VPN \| Microsoft Docs](https://docs.microsoft.com/en-us/azure/route-server/expressroute-vpn-support#:~:text=Azure%20Route%20Server%20supports%20not%20only%20third-party%20network,peering%20between%20the%20gateway%20and%20Azure%20Route%20Server.)
+* Specific Azure doc relevant to this option: <a href="https://docs.microsoft.com/en-us/azure/route-server/expressroute-vpn-support#:~:text=Azure%20Route%20Server%20supports%20not%20only%20third-party%20network,peering%20between%20the%20gateway%20and%20Azure%20Route%20Server." target="_blank">About Azure Route Server supports for ExpressRoute and Azure VPN \| Microsoft Docs</a>
 
-* VWAN Hub info
-    <https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about>
+* VWAN Hub info <a href="https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about" target="_blank">https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about</a>
 
 **Reference Architecture**
 
@@ -110,21 +108,21 @@ Links to helpful resources:
 
 Site-to-Site VPNs that connect into Azure virtual network (vNet) Gateways are just like site-to-site VPNs that connect to on-premises deployment: they send traffic that is both encrypted and encapsulated. But there's also something a little different: When Skytap VPNs use Azure's own internet routing, this means that traffic sent from Skytap to an Azure vNet via VPN will generally remain on the Azure backbone. This makes VPNs a relatively simple, lower cost, and behaviorally consistent option, especially for proofs-of-concept and Dev/Test applications.
 
-Setting up a Site-to-Site VPN between Skytap and Azure begins by sorting out which VPN parameters you'll need to use. When connecting a Skytap VPN to an Azure vNet, the parameters you'll configure on Skytap's side are going to be determined by the intersection of your IT department's requirements, [Skytap's supported parameter set](https://help.skytap.com/wan-vpn-configuration-parameters.html), and [Azure's supported parameter set](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec).
+Setting up a Site-to-Site VPN between Skytap and Azure begins by sorting out which VPN parameters you'll need to use. When connecting a Skytap VPN to an Azure vNet, the parameters you'll configure on Skytap's side are going to be determined by the intersection of your IT department's requirements, <a href="https://help.skytap.com/wan-vpn-configuration-parameters.html" target="_blank">Skytap's supported parameter set</a>, and <a href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec" target="_blank">Azure's supported parameter set</a>.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image3.png" width="500" align="center">
 
-It's worth noting that Skytap no longer supports Azure's default IKE Phase 1 DH (Diffie-Hellman) Group---Group 2 (1024 bit)---due to its weak security. You'll need to [manually configure the parameters for your Azure VPN Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#s2sconnection), rather than accepting the default configuration provided by Azure.
+It's worth noting that Skytap no longer supports Azure's default IKE Phase 1 DH (Diffie-Hellman) Group---Group 2 (1024 bit)---due to its weak security. You'll need to <a href="https://docs.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#s2sconnection" target="_blank">manually configure the parameters for your Azure VPN Gateway</a>, rather than accepting the default configuration provided by Azure.
 
 Due to Maximum Transmission Unit (MTU) limits between Azure and Skytap, you'll also need to ensure that you clamp the Skytap-side VPN MSS to 1200. (Despite its smaller packet size, Skytap has found that clamping your maximum segment size (MSS) to 1200, rather than Azure's standard-recommended 1350, ensures the best performance, and least amount of packet loss when the Skytap-side of the VPN is sending data.) It will ensure that your packets flow freely between Skytap and Azure, rather than being dropped or bounced, which can cause your VPN traffic to be slow, or even come to a standstill. In the Skytap portal, the setting to clamp your VPN's MSS is at the bottom of the Edit WAN page:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image4.png" width="300">
 
-Since VPNs are most reliable when distance being spanned is short, the two endpoints should be as close together as possible. You'll want to set up the Skytap VPN endpoint in a region which is nearest to your existing Azure services. Choose the region in your Skytap account which is nearest to your existing Azure vNet, and [create the static public IP address](https://help.skytap.com/managing-public-ip-addresses.html#AddingastaticpublicIPaddresstoyouraccount) for your new VPN.
+Since VPNs are most reliable when distance being spanned is short, the two endpoints should be as close together as possible. You'll want to set up the Skytap VPN endpoint in a region which is nearest to your existing Azure services. Choose the region in your Skytap account which is nearest to your existing Azure vNet, and <a href="https://help.skytap.com/managing-public-ip-addresses.html#AddingastaticpublicIPaddresstoyouraccount" target="_blank">create the static public IP address</a> for your new VPN.
 
-Now you're ready to create your VPN. Using the parameters you've agreed upon with your IT department, [create the VPN endpoint in Skytap](https://help.skytap.com/wan-create-vpn.html). Then [configure the VPN Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#s2s-vpn-with-ipsecike-policy) to your Azure virtual network. Once both endpoints are set up, make sure that you specify at least one remote subnet on the Skytap side (this is the on-prem network subnet that Skytap will be sending to and receiving from), and then **be sure to [test your VPN](https://help.skytap.com/wan-testing.html#Test_the_VPN)** to confirm that it will properly establish a tunnel.
+Now you're ready to create your VPN. Using the parameters you've agreed upon with your IT department, <a href="https://help.skytap.com/wan-create-vpn.html" target="_blank">create the VPN endpoint in Skytap</a>. Then <a href="https://docs.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#s2s-vpn-with-ipsecike-policy" target="_blank">configure the VPN Gateway</a> to your Azure virtual network. Once both endpoints are set up, make sure that you specify at least one remote subnet on the Skytap side (this is the on-prem network subnet that Skytap will be sending to and receiving from), and then **be sure to <a href="https://help.skytap.com/wan-testing.html#Test_the_VPN" target="_blank">test your VPN</a>** to confirm that it will properly establish a tunnel.
 
-Once you've confirmed that your VPN can successfully establish Phase1 and Phase2 connectivity, [connect your VPN to its intended the Skytap Environment(s)](https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#Connect), choose a server from each side of the WAN topology that needs to talk to each other (one from Skytap and one from your on-premises network), and [test the final end-to-end connectivity](https://help.skytap.com/wan-testing.html#Further) between each server.
+Once you've confirmed that your VPN can successfully establish Phase1 and Phase2 connectivity, <a href="https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#Connect" target="_blank">connect your VPN to its intended the Skytap Environment(s)</a>, choose a server from each side of the WAN topology that needs to talk to each other (one from Skytap and one from your on-premises network), and <a href="https://help.skytap.com/wan-testing.html#Further" target="_blank">test the final end-to-end connectivity</a> between each server.
 
 ###### *[Back to the Top](#toc)*
 
@@ -166,12 +164,12 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 * Step 1: Create the Azure circuit that your Skytap Customer-Managed ExpressRoute will go through
 
-    * [Creating a customer-managed ExpressRoute circuit for a Private Network Connection](https://help.skytap.com/wan-create-self-managed-expressroute.html#creating-a-customer-managed-expressroute-circuit-for-a-private-network-connection)
+    * <a href="https://help.skytap.com/wan-create-self-managed-expressroute.html#creating-a-customer-managed-expressroute-circuit-for-a-private-network-connection" target="_blank">Creating a customer-managed ExpressRoute circuit for a Private Network Connection</a>
 
 
 * Step 2: Create the WAN connection in Skytap on Azure
 
-    * [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html)
+    * <a href="https://help.skytap.com/wan-create-expressroute.html" target="_blank">Creating and editing a Private Network Connection with ExpressRoute for your Skytap account</a>
 
     * Be sure to select "Customer-managed circuit" when creating your Skytap WAN per the instructions above
 
@@ -185,7 +183,7 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 * Step 3: Peer your new ExpressRoute circuit with your existing on-premises circuit using Global Reach
 
-    * [Azure ExpressRoute: Configure Global Reach using the Azure portal \| Microsoft Docs](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fexpressroute%2Fexpressroute-howto-set-global-reach-portal&data=04%7C01%7Cb-jeffrylane%40microsoft.com%7Cec5729a0938749d66ab108d9a2d2f409%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637719849195262977%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=GsFcP53iCEDjTyZNTbZoOnn0u2D7lsOMBsq6GtLQ2wI%3D&reserved=0)
+    * <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fexpressroute%2Fexpressroute-howto-set-global-reach-portal&data=04%7C01%7Cb-jeffrylane%40microsoft.com%7Cec5729a0938749d66ab108d9a2d2f409%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637719849195262977%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=GsFcP53iCEDjTyZNTbZoOnn0u2D7lsOMBsq6GtLQ2wI%3D&reserved=0" target="_blank">Azure ExpressRoute: Configure Global Reach using the Azure portal \| Microsoft Docs</a>
 
     * Please note that Step 3 in the Global Reach setup requires a /29 IP address space from your network team that does not overlap with any other on-prem or Azure networks you have deployed.
 
@@ -193,13 +191,13 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 * Step 4: Enable the WAN in Skytap
 
-    * Review and follow Step 16 in the [Creating and editing a Private Network Connection with ExpressRoute for your Skytap account](https://help.skytap.com/wan-create-expressroute.html) Guide.
+    * Review and follow Step 16 in the <a href="https://help.skytap.com/wan-create-expressroute.html" target="_blank">Creating and editing a Private Network Connection with ExpressRoute for your Skytap account</a> Guide.
 
 
 
-* Step 5: Attach the WAN to your [Skytap Environment](https://help.skytap.com/creating-an-environment.html#creating-an-environment)
+* Step 5: Attach the WAN to your <a href="https://help.skytap.com/creating-an-environment.html#creating-an-environment">Skytap Environment</a>
 
-    * [Connecting an environment network to a VPN or Private Network Connection](https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#additional-information)
+    * <a href="https://help.skytap.com/wan-connecting-environments-to-vpn-or-pnc.html#additional-information" target="_blank">Connecting an environment network to a VPN or Private Network Connection</a>
 
     * Please note, there must be at least one running VM and/or LPAR in the environment and on the network for the connection to start
 
@@ -217,11 +215,11 @@ Reach enabled to allow network transit from Skytap to on-prem.
 
 **Skytap UI ports:**<a name="UIPorts"></a> 
 
-* [IP addresses and port ranges for Skytap](https://help.skytap.com/faq-ip-addresses-and-port-ranges.html#what-ip-addresses-and-port-ranges-does-skytap-use)
+* <a href="https://help.skytap.com/faq-ip-addresses-and-port-ranges.html#what-ip-addresses-and-port-ranges-does-skytap-use" target="_blank">IP addresses and port ranges for Skytap</a>
 
-## [ExpressRoute and Global Reach](ExpressRoute/skytap2azureexpressroute.md)<a name="expressroutewithglobalreachguide"></a>
+## [ExpressRoute and Global Reach](../express-route/)<a name="expressroutewithglobalreachguide"></a>
 
-While VPNs are a solid and commonplace solution to traffic isolation and encapsulation, they do suffer from the "vagaries" of the public internet: At any time, new routing hubs can come online, BGP paths can change, and variable internet traffic congestion can impact or even degrade your application's throughput. For performance-sensitive workloads, Azure and Skytap recommend [Azure ExpressRoute](https://docs.microsoft.com/en-in/azure/expressroute/expressroute-introduction), a private network connection service which can be configured between your on-premises site and Azure, Skytap and Azure, or both.
+While VPNs are a solid and commonplace solution to traffic isolation and encapsulation, they do suffer from the "vagaries" of the public internet: At any time, new routing hubs can come online, BGP paths can change, and variable internet traffic congestion can impact or even degrade your application's throughput. For performance-sensitive workloads, Azure and Skytap recommend <a href="https://docs.microsoft.com/en-in/azure/expressroute/expressroute-introduction" target="_blank">Azure ExpressRoute</a>, a private network connection service which can be configured between your on-premises site and Azure, Skytap and Azure, or both.
 
 [Creating ExpressRoutes with Skytap](https://help.skytap.com/wan-expressroute-overview.html) is a fairly simple process. ExpressRoutes created by Skytap are all configured as 1Gbps, using the Standard SKU. Alternatively, you can [create an ExpressRoute in Azure using the set of parameters Skytap supports](https://help.skytap.com/wan-create-self-managed-expressroute.html), and connect it to Skytap. This is ideal when you want to create an ExpressRoute with a Premium SKU, or with Global Reach, which aren't supported through ERs created by Skytap.
 
@@ -234,7 +232,7 @@ To connect your application in Skytap to On-Premises, when you already have an E
 ### To connect your Skytap application just to an Azure Virtual Network (vNet) through an ExpressRoute<a name="expressroute2vnet"></a> 
 
 [Walk through Skytap's help documentation](https://help.skytap.com/wan-expressroute-overview.html) to follow the 3 major steps of connecting your Skytap application to your vNet: Create the ER, Configure a vNet Gateway, and Connect the circuit. An even more detailed walkthrough can be found here:
-* [Skytap on Azure - ExpressRoute Configuration](ExpressRoute/skytap2azureexpressroute.md)
+* [Skytap on Azure - ExpressRoute Configuration](../express-route)
 
 **Reference Architecture - Azure Virtual Network (vNet) through an ExpressRoute**
 
@@ -272,20 +270,20 @@ However, if you need to connect several (or complex topologies of) vNets, you ca
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework](../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](README.md) > [Getting Started with IBM Cloud Networking](skytaponibmconnectivity.md)
->* [Ecosystems](../ecosystems/README.md)
+>[Skytap Operational Excellence Pillar](../../)
+>* [Power Discovery](../../Discovery/)
+>* [Connectivity](../) > [Getting Started with IBM Cloud Networking](../ibm)
+>* [Ecosystems](../../ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar](../../../resiliency/)
 
 >**Design**
->* [Design Considerations for Azure](../../resiliency/designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../../resiliency/designconsiderationsibm.md)
+>* [Design Considerations for Azure](../../../resiliency/design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../../../resiliency/design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar](../../../security/)

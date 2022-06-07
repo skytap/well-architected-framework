@@ -1,6 +1,7 @@
 ---
 title: Key Security Areas
 author: John Bradshaw, Principal Architect
+permalink: /security/key-security-areas
 ---
 
 ## Key Security Areas
@@ -243,15 +244,17 @@ with Single Sign-On organizations can enforce additional authentication
 controls such as endpoint integrity and verification, location-based
 authentication and conditional/just in time access.
 
-  ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
-  #### Application Vendor Reference Architecture
-             
-  [Workforce Okta Identity](https://www.okta.com/workforce-identity/)          
+----------------------------------------------------------------------------------------------------------------
 
-  [PingOne](https://www.pingidentity.com/en/cloud/pingone.html)                     
+#### Application <!-- Vendor Reference Architecture -->
+            
+<a href="https://www.okta.com/workforce-identity/" target="_blank">Workforce Okta Identity</a>
 
-  [PingFederate](https://www.pingidentity.com/en/software/pingfederate.html)                               
-  ---------------------------------------------------------------------------------------------------------------- ---------- -----------------------------------
+<a href="https://www.pingidentity.com/en/cloud/pingone.html" target="_blank">PingOne</a>
+
+<a href="https://www.pingidentity.com/en/software/pingfederate.html" target="_blank">PingFederate</a>
+
+----------------------------------------------------------------------------------------------------------------
 
 ##### Labels
 
@@ -280,26 +283,27 @@ Additionally, usage events can also be sent via Webhook to this tooling
 or a separate service; this can be used to monitor capacity and spend to
 prevent cloud sprawl or an economic denial of service.
 
-  --------------------------------------------------------------------- ------------- ----------------------------------------
-#### Application Vendor        Reference Architecture
-
-  [Microsoft Azure Monitor](https://azure.microsoft.com/en-gb/services/monitor/)   
-###  
 --------------------------------------------------------------------- ------------- ----------------------------------------
+#### Application <!-- Vendor        Reference Architecture -->
+
+<a href="https://azure.microsoft.com/en-gb/services/monitor/" target="_blank">Microsoft Azure Monitor</a>
+
+--------------------------------------------------------------------- ------------- ----------------------------------------
+
 ## Next steps
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework](../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[Skytap Operational Excellence Pillar](../operations/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [Skytap Resiliency Pillar](../resiliency/)
 
 **Security**
->[Skytap Security Pillar](./README.md)
-> * [Security Management](./securitymanagement.md)
-> * [Edge Networking](./edgenetworking.md)
-> * [Virtual Machines](./virtualmachines.md)
-> * [Internal Networking](./internalnetworking.md)
-> * [Security as a Service](./securityasaservice.md)
+>[Skytap Security Pillar](./)
+> * [Security Management](./security-management)
+> * [Edge Networking](./edge-networking)
+> * [Virtual Machines](./virtual-machines)
+> * [Internal Networking](./internal-networking)
+> * [Security as a Service](./security-as-a-service)

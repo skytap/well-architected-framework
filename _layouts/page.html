@@ -119,29 +119,62 @@
                         <li class="nav-item">
                             <a href="/well-architected-framework/" class="nav-link">Home</a>
                         </li>
-                        <li class="nav-item">
+
+                        <li class="nav-item dropdown">
                             <a href="/well-architected-framework/operations/" class="nav-link">Operational Excellence</a>
+                            <div class="dropdown-menu show">
+                                <a href="/well-architected-framework/operations/Discovery/" class="dropdown-item">Power Discovery</a>
+                                <!-- <div class="inner-menu">
+                                    <a href="/well-architected-framework/operations/Discovery/ecosystems" class="dropdown-item inner-item">Ecosystems</a>
+                                    <a href="/well-architected-framework/operations/Discovery/workloads" class="dropdown-item inner-item">Workloads</a>
+                                </div> -->
+
+                                <a href="/well-architected-framework/operations/connectivity/" class="dropdown-item">Connectivity</a>
+                                <!-- <div class="inner-menu">
+                                    <a href="/well-architected-framework/operations/connectivity/azure/" class="dropdown-item inner-item">Azure Networking</a>
+                                    <a href="/well-architected-framework/operations/connectivity/ibm/" class="dropdown-item inner-item">IBM Cloud Networking</a>
+                                </div> -->
+
+                                <a href="/well-architected-framework/operations/ecosystems/" class="dropdown-item">Ecosystems</a>
+                            </div>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a href="/well-architected-framework/resiliency/" class="nav-link">Resiliency - HA\DR\Migration</a>
+                            <div class="dropdown-menu show">
+                                <label for="excellenceDisciplinesMenu" class="dropdown-item">Skytap Resiliency Pillar</label>
+                                <div id="excellenceDisciplinesMenu" class="inner-menu">
+                                    <a href="/well-architected-framework/resiliency/migrations" class="dropdown-item inner-item">Migration</a>
+                                    <a href="/well-architected-framework/resiliency/backups" class="dropdown-item inner-item">Protection</a>
+                                    <a href="/well-architected-framework/resiliency/backups" class="dropdown-item inner-item">Disaster Recovery</a>
+                                    <a href="/well-architected-framework/resiliency/backups" class="dropdown-item inner-item">High Availability</a>
+                                </div>
+
+                                <label for="designConsiderationsMenu" class="dropdown-item">Migration Solutions</label>
+                                <div id="designConsiderationsMenu" class="inner-menu">
+                                    <a href="/well-architected-framework/resiliency/solutions/hot-migrations" class="dropdown-item inner-item">Hot Migrations</a>
+                                    <a href="/well-architected-framework/resiliency/solutions/cold-migrations" class="dropdown-item inner-item">Cold Migrations</a>
+                                </div>
+
+                                <label for="designConsiderationsMenu" class="dropdown-item">Design Considerations</label>
+                                <div id="designConsiderationsMenu" class="inner-menu">
+                                    <a href="/well-architected-framework/resiliency/design-considerations-azure" class="dropdown-item inner-item">Azure</a>
+                                    <a href="/well-architected-framework/resiliency/design-considerations-ibm" class="dropdown-item inner-item">IBM</a>
+                                </div>
+                            </div>
                         </li>
 
                         <li class="nav-item">
                             <a href="/well-architected-framework/security/" class="nav-link">Security</a>
-                        </li>
-
-                        <!--- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">About Jekyll</a>
-
                             <div class="dropdown-menu show">
-                                <a class="dropdown-item" href="/resiliency/" id="resiliency">Resiliency - HA\DR\Migration</a>
-                                <a class="dropdown-item" href="/security/" id="security">Security</a>
-                                <a class="dropdown-item" href="/scalability/" id="scalability">Scalability & Performance Efficiency</a>
-                                <a class="dropdown-item" href="/cost/" id="cost">Cost Optimization</a>
+                                <a href="/well-architected-framework/security/key-security-areas" class="dropdown-item">Key Security Areas</a>
+                                <a href="/well-architected-framework/security/security-management/" class="dropdown-item">Security Management</a>
+                                <a href="/well-architected-framework/security/edge-networking/" class="dropdown-item">Edge Networking</a>
+                                <a href="/well-architected-framework/security/virtual-machines" class="dropdown-item">Virtual Machines</a>
+                                <a href="/well-architected-framework/security/internal-networking/" class="dropdown-item">Internal Networking</a>
+                                <a href="/well-architected-framework/security/security-as-a-service/" class="dropdown-item">Security as a Service</a>
                             </div>
-                        </li> --->
-
+                        </li>
                     </ul>
                 </div>
 
