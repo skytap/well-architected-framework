@@ -1,7 +1,7 @@
 ---
 Title: IBM i workload migration from on-prem to Skytap using Microsoft Azure Data Box
 Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using Microsoft Azure Data Box
-Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer,Richard Field – Skytap Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager
+Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer, Richard Field – Skytap Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
 ---
 # IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
@@ -12,71 +12,45 @@ This document does not provide you with any legal rights to any intellectual pro
 
 * [Introduction](#intro)
 * [Key takeaways](#takeaways)
-* [Before you begin](#begin)
-
-[***1.***](#_heading=h.gjdgxs) ***Introduction 1***
-
-[***2.***](#_heading=h.30j0zll) ***Objective 2***
-
-[***3.***](#_heading=h.1fob9te) ***Prerequisites: 2***
-
-[***4.***](#_heading=h.3znysh7) ***Order and configure the data box:
-2***
-
-[***5.***](#_heading=h.2et92p0) ***Setting up data box in customer DC
-3***
-
-[***6.***](#_heading=h.tyjcwt) ***Performing backups of LPARs on databox
-6***
-
-[***7.***](#_heading=h.3dy6vkm) ***Copying backup .iso files from
-windows to databox 6***
-
-[***8.***](#_heading=h.1t3h5sf) ***Shipping databox to Azure cloud DC
-6***
-
-[***9.***](#_heading=h.4d34og8) ***Restoring data to Skytap LPAR 7***
-
-[***10.***](#_heading=h.2s8eyo1) ***Timing estimates 7***
+* [Prerequisites](#begin)
+* [Order and configure the data box](#orderandconfig)
+* [Setting up data box in customer Data Center](#setuponprem)
+* [Performing backups of LPARs on data box](#backup2databox)
+* [Copying backup .iso files from windows to data box](#isocopy)
+* [Shipping data box to Azure](#ship2azure)
+* [Restoring data to Skytap LPAR](#restoreLPAR)
+* [Timing estimates](#estimates)
+* [Next Steps](#nextsteps)
 
 ## Introduction <a name="intro"></a>
-There are multiple strategies to migrate IBM i LPARs to Skytap on Azure. Migration using Data box is suitable when the customer has Multiple TBs (>10) of data on LPAR The data box is delivered to customer DC and attached to windows server using SMB. The windows server folder is mounted to IBM i LPAR using NFS. Data is written from IBM i to windows folder and copied
-> manually to the mounted Databox path. This document provides overview
-> of steps of this process and to performing restore on Skytap LPAR.
->
-> Data cannot be copied directly from IBM i to MDM as they used
-> different transfer protocols.
->
-> Any host-based replication tool can be used to perform the delta sync
-> between the on prem LPAR and cloud LPAR after the initial restore is
-> done using data box
+There are multiple strategies to migrate IBM i LPARs to [Skytap on Azure](https://www.skytap.com/skytap-on-azure/). Migration using [Microsoft Azure Data Box](https://www.youtube.com/watch?v=DKREXDCuGqk) is suitable when the customer has multiple Tera Bytes (>10) of data on LPAR The data box is delivered to customer data center and attached to windows server using SMB. The windows server folder is mounted to IBM i LPAR using NFS. Data is written from IBM i to windows folder and copied manually to the mounted Data Box path. 
+
+This document provides overview of steps of this process and to perform a restore on a Skytap hosted LPAR.
+
+Data cannot be copied directly from IBM i to MDM as they used different transfer protocols. Any host-based replication tool can be used to perform the delta sync between the on-prem LPAR and cloud LPAR after the initial restore is done using Micorosoft Azure Data Box.
 
 ## Key Takeaways <a name="takeaways"></a>
 
-> The objective of this document is to capture steps to perform below
-> activities
+The objective of this document is to capture steps to perform below activities
 
-1.  Order and configure data box
+1.  Order and configure data box.
 
-2.  Attach data box to on-prem windows box using SMB
+2.  Attach data box to on-prem windows box using SMB.
 
 3.  Mount windows box folder to IBM i using NFS.
 
 4.  Take IBM i backups using windows NFS mount.
 
-5.  Copy backup from windows folder to databox drive.
+5.  Copy backup from windows folder to Data Box drive.
 
-6.  Send Data box to azure cloud dc and restore data to cloud LPAR.
+6.  Send Data box to azure cloud data center and restore data to cloud LPAR.
 
-```{=html}
-<!-- -->
-```
-3.  []{#_heading=h.1fob9te .anchor}Prerequisites:
 
-    1.  On prem-server should be at the latest PTF levels
+## Prerequisites <a name="Begin"></a>
 
-    2.  Customer should have an existing azure storage account and
-        > Skytap subscription
+* On prem-server should be at the latest PTF levels.
+
+* Customer should have an existing [Azure Storage Account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) and [Skytap SaaS subscription](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overview).
 
     3.  The on-prem LAPR should be on V7R2 or later OS version of IBM i
 
