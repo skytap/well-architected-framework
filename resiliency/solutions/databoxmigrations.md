@@ -1,8 +1,7 @@
 ---
-Title: IBM i workload migration from on-prem to Skytap using BRMS ICC
-Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using BRMS ICC
-Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager
-permalink: /resiliency/solutions/brms
+Title: IBM i workload migration from on-prem to Skytap using Microsoft Azure Data Box
+Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap using Microsoft Azure Data Box
+Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer,Richard Field – Skytap Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager
 ---
 # IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
