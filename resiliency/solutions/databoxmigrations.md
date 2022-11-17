@@ -23,7 +23,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Next Steps](#nextsteps)
 
 ## Introduction <a name="intro"></a>
-There are multiple strategies to migrate IBM i LPARs to [Skytap on Azure](https://www.skytap.com/skytap-on-azure/). Migration using [Microsoft Azure Data Box](https://www.youtube.com/watch?v=DKREXDCuGqk) is suitable when the customer has multiple Tera Bytes (>10) of data on LPAR The data box is delivered to customer data center and attached to windows server using SMB. The windows server folder is mounted to IBM i LPAR using NFS. Data is written from IBM i to windows folder and copied manually to the mounted Data Box path. 
+There are multiple strategies to migrate IBM i LPARs to [Skytap on Azure](https://www.skytap.com/skytap-on-azure/){:target="_blank"}. Migration using [Microsoft Azure Data Box](https://www.youtube.com/watch?v=DKREXDCuGqk){:target="_blank"} is suitable when the customer has multiple Tera Bytes (>10) of data on LPAR The data box is delivered to customer data center and attached to windows server using SMB. The windows server folder is mounted to IBM i LPAR using NFS. Data is written from IBM i to windows folder and copied manually to the mounted Data Box path. 
 
 This document provides overview of steps of this process and to perform a restore on a Skytap hosted LPAR.
 
@@ -50,7 +50,7 @@ The objective of this document is to capture steps to perform below activities
 
 * On prem-server should be at the latest PTF levels.
 
-* Customer should have an existing [Azure Storage Account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) and [Skytap SaaS subscription](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overview).
+* Customer should have an existing [Azure Storage Account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview){:target="_blank"} and [Skytap SaaS subscription](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overview){:target="_blank"}.
 
     3.  The on-prem LAPR should be on V7R2 or later OS version of IBM i
 
