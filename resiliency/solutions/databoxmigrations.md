@@ -15,6 +15,8 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Prerequisites](#begin)
 * [Order and configure the data box](#orderandconfig)
 * [Setting up data box in customer Data Center](#setuponprem)
+  * [Connect Data Box to windows server (SMB)](#connectdatabox2smb)
+  * [Connecting IBM i LPAR to Windows server (NFS)](#LPAR2NFS)
 * [Performing backups of LPARs on data box](#backup2databox)
 * [Copying backup .iso files from windows to data box](#isocopy)
 * [Shipping data box to Azure](#ship2azure)
@@ -54,108 +56,71 @@ The objective of this document is to capture steps to perform below activities
 
 * Customer should have an existing <A href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap SaaS subscription</a>.
 
-    3.  The on-prem LAPR should be on V7R2 or later OS version of IBM i
+* The on-prem LAPR should be on V7R2 or later OS version of IBM i.
 
-    4.  There should be a 10 Gig FC port available on server/switch that
-        > can be used for communication with databox
+* There should be a 10 Gig FC port available on server/switch that can be used for communication with data box.
 
-    5.  Sufficient downtime should be provided for backups
+* Sufficient downtime should be provided for backups.
 
-    6.  Required LPPs should be installed on the LPAR
+* Required LPPs should be installed on the LPAR.
 
-    7.  Transceivers for fiber ports on the databox to make connection
+* Transceivers for fiber ports on the data box to make connection.
 
-    8.  On prem windows server with sufficient resources. Disk space
-        > should be more than the amount of backup to be taken on each
-        > LPAR
+* On-prem windows server with sufficient resources. Disk space should be more than the amount of backup to be taken on each LPAR.
 
-4.  []{#_heading=h.3znysh7 .anchor}Order and configure the data box:
+## Order and configure the data box <a name="orderandconfig"></a>
 
-> Please reference to "Azure Databox order instructions" document
+> Please reference to the <a href="https://learn.microsoft.com/en-us/azure/databox/data-box-deploy-ordered" target="_blank">Azure Data Box order instructions</a> document.
 
-5.  []{#_heading=h.2et92p0 .anchor}Setting up data box in customer DC
+## Setting up data box in customer data center  <a name="setuponprem"></a>
 
-    1.  **Setting up Data box in customer DC**
+Use the steps in the link below to physically install the data box in customer Data Center.
 
-```{=html}
-<!-- -->
-```
-a)  Use the steps in below link to physically install the data box in
-    > customer DC
+> <a href="https://docs.microsoft.com/en-us/azure/databox/data-box-deploy-set-up" target="_blank">https://docs.microsoft.com/en-us/azure/databox/data-box-deploy-set-up</a>
 
-> [[https://docs.microsoft.com/en-us/azure/databox/data-box-deploy-set-up]{.ul}](https://docs.microsoft.com/en-us/azure/databox/data-box-deploy-set-up)
+* Add a windows server in the environment with more disk space than the amount of backup to be taken.
 
-b)  Add a windows server in the environment with more disk space than
-    > the amount of backup to be taken.
+* Assign an additional IP to the IBM i LPAR, the ip will be used for DST LAN console
 
-c)  Assign an additional IP to the IBM i LPAR, the ip will be used for
-    > DST LAN console
+* Assign ips to windows VM and MDM device, The solution architecture should look like below with all 10 Gb connections.
 
-d)  Assign ips to windows VM and MDM device, The solution architecture
-    > should look like below with all 10 Gb connections
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/image2.png" width="700">
 
-> ![Diagram Description automatically
-> generated](I:\Repos\Skytap\WAF\resiliency\solutions\databoxmigrationsmedia/media/image2.png){width="6.263888888888889in"
-> height="2.9756944444444446in"}
+## Connect Data Box to windows server (SMB) <a name="connectdatabox2smb"></a>
 
-1.  **Connect Databox to windows server (SMB)**
+1. Login to the Databox interface using the login credentials provided by azure. 
 
-```{=html}
-<!-- -->
-```
-a)  Login to the Databox interface using the login credentials provided
-    > by azure
+1. Go to connect and copy-\> NFS-\> add the ips of windows and IBM i LPAR and save to allow communication.
 
-b)  Go to connect and copy-\> NFS-\> add the ips of windows and IBM i
-    > LPAR and save to allow communication.
+1. Go to connect and copy-\>settings-\> enable SMB signing and restart the databox. (This allows data to be copied from windows to databox drive)
 
-c)  Go to connect and copy-\>settings-\> enable SMB signing and restart
-    > the databox. (This allows data to be copied from windows to
-    > databox drive)
+1. On windows command line run below command to mount Data box path on y drive:
 
-d)  On windows command line run below command to mount Databox path on y
-    > drive:
+```powershell
+Net use y: \\192.168.2.10\\uksouthstg_BlockBlob /user:\<user ID>
+``` 
 
-> Net use y:
-> [[\\\\192.168.2.10\\uksouthstg_BlockBlob]{.ul}](about:blank)
-> /user:\<user ID> enter and provide password
->
-> Both user id and password you can get from DBx SMB settings page
->
-> For example:
->
-> Net use y:
-> [[\\\\**10.121.21.151**\\nascskytapdatabox_BlockBlob]{.ul}](about:blank)
-> /user:nascskytapdatabox
+Both user id and password you can get from DBx SMB settings page
 
-1.  **Connecting IBM i LPAR to Windows server (NFS)**
+For example:
+```powershell
+Net use y: \\10.121.21.15\\nascskytapdatabox_BlockBlob /user:nascskytapdatabox
+``` 
+## Connecting IBM i LPAR to Windows server (NFS) <a name="LPAR2NFS"></a>
 
-```{=html}
-<!-- -->
-```
-a)  **WINDOWS** - Install and configure NFS client on windows server
+**WINDOWS** - Install and configure NFS client on windows server
 
 -   Install NFS Server through Server Manager icon on taskbar
 
-    -   Server manager-\> manage -\> Add roles and features-\> next-\>
-        > role based-\>next-\>expand file and storage services-\> File
-        > and iSCSI services-\> Server for NFS-\>add features-\> next-\>
-        > install- wait for install to complete
+    -   Server manager-\> manage -\> Add roles and features-\> next-\> role based-\> next-\> Expand file and storage services-\> File and iSCSI services-\> Server for NFS-\> Add Features-\> next-\> Install- wait for install to complete
 
-    -   Server manager -\> tools-\> NFS-\>right click -\> property it
-        > should be TCP+UDP-\>activity logging -\> select all-\> apply
-        > ok-\> stop and start the service
+    -   Server manager -\> Tools-\> NFS-\> Right Click -\> Property (it should be TCP+UDP)-\> Activity Logging -\> Select All-\> apply -\> ok-\> Stop and Start the Service
 
 -   Setup Folder to share via NFS
 
-    -   Create a folder called 'backup' on drive where the backup will
-        > be done
+    -   Create a folder called 'backup' on drive where the backup will be done.
 
-    -   Right click on backup folder on windows -\> property-\>
-        > advanced-\> change-\> type everyone-\> add-\>select
-        > principle-\> everyone-\> full control-\> apply OK\
-        > (this can be done on individual files too (this allows data
-        > copy from NFS folder to DBx drive)
+    -   Right click on backup folder on windows -\> property-\> Advanced-\> change-\> Type: Everyone-\> Add-\> Select Principle-\> Everyone-\> Full control-\> Apply -\> OK (this can be done on individual files too) (this allows data copy from NFS folder to DBx drive)
 
     -   Do the same in property -\> security advanced.
 
@@ -164,7 +129,7 @@ a)  **WINDOWS** - Install and configure NFS client on windows server
     > -\> select read-write and allow root access for ALL MACHINES-\>
     > apply and OK
 
-b)  **IBM i** - Mount NFS folder on IBM i directory
+**IBM i** - Mount NFS folder on IBM i directory
 
 -   Create mount path on iSeries server
 
@@ -211,12 +176,10 @@ b)  Created volume list by running below commands
 c)  Assign the LAN console IP using SST using steps in below link
 
 > [[https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst]{.ul}](https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst)
->
-> Below is an example
->
-> ![Graphical user interface, text Description automatically
-> generated](I:\Repos\Skytap\WAF\resiliency\solutions\databoxmigrationsmedia/media/image1.png){width="6.263888888888889in"
-> height="2.5944444444444446in"}
+
+Below is an example
+
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/image1.png" width="700">
 
 d)  Create device by running below commands
 
