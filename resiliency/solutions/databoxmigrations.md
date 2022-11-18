@@ -313,7 +313,7 @@ using SAVLIB command, just specify the device as NFSDEV01
 > Parallel FTP did not increase the overall speed, ensure that the IBM i
 > FTP parameters are tuned to give best transfer speed
 
-### Next steps
+#### Next steps
 
 **Main Overview**
 > [Skytap Well-Architected Framework](../../)
@@ -330,7 +330,6 @@ using SAVLIB command, just specify the device as NFSDEV01
 >
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](./hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
 >
 >**Design**
 >* [Design Considerations for Azure](../design-considerations-azure)

@@ -33,6 +33,8 @@ for AIX and IBM i (AS400).
 
 - **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide](./power-vc)**
 
+- **[IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box](./databoxmigrations.md)**
+
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf" target="_blank">IBM i – Migration to Skytap using Commvault</a>**
 
 - **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](./commvault)**
