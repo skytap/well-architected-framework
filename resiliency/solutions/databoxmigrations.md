@@ -18,7 +18,7 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Connect Azure Data Box to Windows Server (SMB)](#connectdatabox2smb)
   * [Connecting IBM i LPAR to Windows Server (NFS)](#LPAR2NFS)
 * [Performing Backups of LPARs on Azure Data Box](#backup2databox)
-* [Copying Backup .iso Files from Windows to Azure Data Box](#isocopy)
+* [Copying Backup .ISO Files from Windows to Azure Data Box](#isocopy)
 * [Shipping Azure Data Box to Microsoft](#ship2azure)
 * [Restoring data to Skytap LPAR](#restoreLPAR)
 * [Timing Estimates](#estimates)
@@ -231,7 +231,7 @@ e)  Initialize the volumes
 2.  Restore the data on the on-prem server in library identifying the
     > backups details (date and content). Do this for all tapes.
 
-3.  Save the libraries in .iso file named according to the content
+3.  Save the libraries in .ISO file named according to the content
     > (021120Daily)
 
 4.  Move the data from Data Box to Cloud blob and keep it there for
@@ -240,7 +240,7 @@ e)  Initialize the volumes
 Perform backup go save option 21/22/23 or save individual libraries
 using SAVLIB command, just specify the device as NFSDEV01
 
-7.  []{#_heading=h.3dy6vkm .anchor}Copying backup .iso files from
+7.  []{#_heading=h.3dy6vkm .anchor}Copying backup .ISO files from
     windows to Data Box
 
 > The backup files need to be copied from backups folder to the required
@@ -259,7 +259,7 @@ using SAVLIB command, just specify the device as NFSDEV01
 > The iso files need to be downloaded from Azure blob to Skytap LPAR
 > using Azure Storage Explorer.
 
-2.  Once the backup .iso files are downloaded to Skytap Windows VM, FTP
+2.  Once the backup .ISO files are downloaded to Skytap Windows VM, FTP
     > the required files to NFS IBM i LPAR or target IBM i LPAR
     > depending on backups strategy
 
@@ -273,7 +273,7 @@ using SAVLIB command, just specify the device as NFSDEV01
 
 5.  Restore from individual libraries backups
 
-> Restore the libraries from the .iso image file by loading it on an
+> Restore the libraries from the .ISO image file by loading it on an
 > image catalog and using RSTLIB command
 
 6.  Tape migration restores
@@ -282,21 +282,21 @@ using SAVLIB command, just specify the device as NFSDEV01
 
 -   FTP from Windows to IBM i target LPAR
 
--   Create image catalog specifying the directory where .iso is.
+-   Create image catalog specifying the directory where .ISO is.
 
--   ADDIMGCLGE for all .iso file
+-   ADDIMGCLGE for all .ISO file
 
--   Restore the libraries from the .iso file to target LPAR's required
+-   Restore the libraries from the .ISO file to target LPAR's required
     > library
 
 10. []{#_heading=h.2s8eyo1 .anchor}Timing estimates
 
 > Below is the time estimate of some time-consuming activities
 
--   Creation of .iso on Windows NFS mount :3 hrs to create 1\*400 GB
-    > .iso
+-   Creation of .ISO on Windows NFS mount :3 hrs to create 1\*400 GB
+    > .ISO
 
-> Best approach is to create 4 .iso file on parallel sessions (takes
+> Best approach is to create 4 .ISO file on parallel sessions (takes
 > around 5 hrs)
 
 -   Copy of file from Windows to Data Box SMB drive: 1\*400 Gb file took
