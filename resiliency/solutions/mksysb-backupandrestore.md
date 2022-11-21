@@ -45,9 +45,7 @@ Mksysb Backup and Restore in Skytap
 
         -   Future Proof
 
-> ![Diagram Description automatically
-> generated]<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image52.jpg){width="4.039867672790901in"
-> height="2.821548556430446in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image52.jpg">
 
 b.  **Option 2 (Published Service)**
 
@@ -60,9 +58,7 @@ b.  **Option 2 (Published Service)**
     -   Encrypted Data Transfer over public Internet
 
     -   Only recommended for POC![Graphical user interface, diagram
-        > Description automatically
-        > generated]<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image40.jpg){width="4.31084864391951in"
-        > height="3.0108092738407697in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image40.jpg">
 
 c.  **Option 3 (Azure Blob)**
 
@@ -76,9 +72,7 @@ c.  **Option 3 (Azure Blob)**
 
     -   Data can be copied over even before Skytap service is Started
 
-> ![Diagram Description automatically
-> generated]<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image27.jpg){width="4.491825240594926in"
-> height="3.137205818022747in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image27.jpg">
 
 3)  Restore In Skytap
 
@@ -87,10 +81,7 @@ c.  **Option 3 (Azure Blob)**
         -   Deploy a new AIX template using public templates (Latest AIX
             > level Recommended)
 
-> ![Graphical user interface, text, application, email Description
-> automatically
-> generated]<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image15.png">"6.198360673665792in"
-> height="2.09711176727909in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image15.png">
 
 -   Rename the Lpar to NIM server
 
