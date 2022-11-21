@@ -1,9 +1,21 @@
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image2.png">
+---
+Title: Mksysb Backup and Restore in Skytap
 
-Mksysb Backup and Restore\
-Skytap on Azure
+Description: Skytap Cold Migration Solution - Backup and Restore to Skytap on Azure using Mksysb.
+Authors:  
+---
+# Backup and Restore to Skytap on Azure using Mksysb
+This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
-Mksysb Backup and Restore in Skytap
+This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
+
+# Table of Contents <a name="toc"></a>
+
+* [Introduction](#intro)
+* [Key takeaways](#takeaways)
+* [Prerequisites](#begin)
+* 
+* 
 
 1)  Backing up on-prem system using mksysb
 
