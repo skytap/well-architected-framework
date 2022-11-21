@@ -18,9 +18,9 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Connect Data Box to windows server (SMB)](#connectdatabox2smb)
   * [Connecting IBM i LPAR to Windows server (NFS)](#LPAR2NFS)
 * [Performing backups of LPARs on data box](#backup2databox)
-* [Copying backup .iso files from windows to data box](#isocopy)
-* [Shipping data box to Azure](#ship2azure)
-* [Restoring data to Skytap LPAR](#restoreLPAR)
+* [Copying backup .ISO files from windows to Data Box](#isocopy)
+* [Shipping Data Box to Azure](#ship2azure)
+* [Restoring data to Skytap hosted LPAR](#restoreLPAR)
 * [Timing estimates](#estimates)
 * [Next Steps](#nextsteps)
 
@@ -96,27 +96,27 @@ Use the steps in the link below to physically install the data box in customer D
 
 1. On windows command line run below command to mount Data box path on y drive:
 
-```powershell
+```cmd
 Net use y: \\192.168.2.10\\uksouthstg_BlockBlob /user:\<user ID>
 ``` 
 
 Both user id and password you can get from DBx SMB settings page
 
 For example:
-```powershell
+```cmd
 Net use y: \\10.121.21.15\\nascskytapdatabox_BlockBlob /user:nascskytapdatabox
 ``` 
 ## Connecting IBM i LPAR to Windows server (NFS) <a name="LPAR2NFS"></a>
 
 **WINDOWS** - Install and configure NFS client on windows server
 
--   Install NFS Server through Server Manager icon on taskbar
+-   **Install NFS Server through Server Manager icon on taskbar**
 
     -   Server manager-\> manage -\> Add roles and features-\> next-\> role based-\> next-\> Expand file and storage services-\> File and iSCSI services-\> Server for NFS-\> Add Features-\> next-\> Install- wait for install to complete
 
     -   Server manager -\> Tools-\> NFS-\> Right Click -\> Property (it should be TCP+UDP)-\> Activity Logging -\> Select All-\> apply -\> ok-\> Stop and Start the Service
 
--   Setup Folder to share via NFS
+-   **Setup Folder to share via NFS**
 
     -   Create a folder called 'backup' on drive where the backup will be done.
 
@@ -124,56 +124,49 @@ Net use y: \\10.121.21.15\\nascskytapdatabox_BlockBlob /user:nascskytapdatabox
 
     -   Do the same in property -\> security advanced.
 
--   Go to property of folder (backup) to be shared-\> NFS sharing -\>
-    > manage-\> select share-\> select allow anon access-\> permission
-    > -\> select read-write and allow root access for ALL MACHINES-\>
-    > apply and OK
+    -   Go to property of folder (backup) to be shared-\> NFS sharing -\> manage-\> select share-\> select allow anon access-\> permission-\> select read-write and allow root access for ALL MACHINES-\> apply and OK
 
 **IBM i** - Mount NFS folder on IBM i directory
 
--   Create mount path on iSeries server
-
-> MKDIR DIR('/windows')
-
+-   Create mount path on iSeries server:
+```cmd
+MKDIR DIR('/windows')
+```
 -   Add the cfgtcp option 12, host name , domain name and \*local
 
--   Cfgtcp 10: add entry for local ip with hostname and domain name, and
-    > entries for windows server
+-   Cfgtcp 10: add entry for local ip with hostname and domain name, and entries for windows server
 
--   Mount the NFS server directory on path created
+-   Mount the NFS server directory on path created:
+```cmd
+Mount Type(\*NFS) MFS('\<ip of windows>:/\<windows folder>')
+MNTOVRDIR('/\<server directory>')
+```
 
-> Mount Type(\*NFS) MFS('\<ip of windows>:/\<windows folder>')
-> MNTOVRDIR('/\<server directory>')
->
-> For example:
->
-> Mount Type(\*NFS) MFS('**10.74.74.157**:/backup')
-> MNTOVRDIR('/windows')
+For example:
+```cmd
+Mount Type(\*NFS) MFS('**10.74.74.157**:/backup')
+MNTOVRDIR('/windows')
+```
 
-a)  Create iso images for backup by running below commands
+* Create iso images for backup by running below commands:
+```cmd
+CALL PGM (QP2TERM)
+cd /windows
+dd if=/dev/zero of=IMAGE01.ISO bs=1M count=100000 (100 GB)
+dd if=/dev/zero of=IMAGE02.ISO bs=1M count=100000 (100 GB)
+```
+Note: You will create a number of images depending on size of backup data
 
--   CALL PGM (QP2TERM)
+* Create volume list by running below commands:
+```cmd
+touch VOLUME_LIST
+echo 'IMAGE01.ISO W' >\> VOLUME_LIST
+echo 'IMAGE02.ISO W' >\> VOLUME_LIST
+cat VOLUME_LIST
+F3 out
+```
 
--   cd /windows
-
--   dd if=/dev/zero of=IMAGE01.ISO bs=1M count=100000 (100 GB)
-
--   dd if=/dev/zero of=IMAGE02.ISO bs=1M count=100000 (100 GB)
-
-> Create number of images depending on size of backup data
-
-b)  Created volume list by running below commands
-
--   touch VOLUME_LIST
-
--   echo 'IMAGE01.ISO W' >\> VOLUME_LIST
-
--   echo 'IMAGE02.ISO W' >\> VOLUME_LIST
-
--   verify using "cat VOLUME_LIST" command\
-    > F3 out
-
-c)  Assign the LAN console IP using SST using steps in below link
+c)  Assign the LAN console IP using SST using steps in below link.
 
 > [[https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst]{.ul}](https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst)
 
@@ -181,36 +174,34 @@ Below is an example
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/image1.png" width="700">
 
-d)  Create device by running below commands
+d)  Create device by running below commands:
+```cmd
+CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(\*VRT) LCLINTNETA(\*SRVLAN)
+RMTINTNETA(\<window server ip> ) NETIMGDIR('/backup')
+VRYCFG CFGOBJ(NFSDEV01) CFGTYPE(DEV) STATUS(\*ON)
+```
 
--   CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(\*VRT) LCLINTNETA(\*SRVLAN)
+e) Run below command to verify that you can see backup images created:
+```cmd
+WRKIMGCLGE \*DEV NFSDEV01
+```
 
--   RMTINTNETA(\<window server ip> ) NETIMGDIR('/backup')
+f)  Initialize the volumes
 
--   VRYCFG CFGOBJ(NFSDEV01) CFGTYPE(DEV) STATUS(\*ON)
+```cmd
+LODIMGCLGE IMGCLG(\*DEV) IMGCLGIDX(2) DEV(NFSDEV01)
+INZOPT NEWVOL(IVOL02) DEV(NFSDEV01) CHECK(\*NO)
+LODIMGCLGE IMGCLG(\*DEV) IMGCLGIDX(1) DEV(NFSDEV01)
+INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(\*NO)
+```
 
-> Run below command to verify that you can see backup images created
+Note: You will run these commands for all the ISO images created
 
--   WRKIMGCLGE \*DEV NFSDEV01
+## Performing backups of LPARs on Data Box <a name="backup2databox"></a>
 
-e)  Initialize the volumes
+Create and initialize sufficient optical iso files on windows server so that the backup can completed successfully.
 
--   LODIMGCLGE IMGCLG(\*DEV) IMGCLGIDX(2) DEV(NFSDEV01)
-
--   INZOPT NEWVOL(IVOL02) DEV(NFSDEV01) CHECK(\*NO)
-
--   LODIMGCLGE IMGCLG(\*DEV) IMGCLGIDX(1) DEV(NFSDEV01)
-
--   INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(\*NO)
-
-> Run these commands for all the iso images created
-
-6.  []{#_heading=h.tyjcwt .anchor}Performing backups of LPARs on databox
-
-> Create and initialize sufficient optical iso files on windows server
-> so that the backup can completed successfully.
->
-> You can take below backups depending on your migration strategy
+You can choose from the below backup soultions depending on your migration strategy:
 
 -   GO save 21
 
@@ -220,63 +211,47 @@ e)  Initialize the volumes
 
 -   Backups of save files for tape migration activity:
 
-> For tape migration customer needs to identify libraries/directories
-> whose backups they want to migrate to cloud. This method is not
-> applicable for copying full tapes to cloud, we can only migrate
-> backups of selected libraries/directories to cloud. Below are the
-> high-level steps
+For tape migration the customer needs to identify libraries/directories whose backups they want to migrate to cloud. This method is not applicable for copying full tapes to cloud, we can only migrate backups of selected libraries/directories to cloud. 
+
+Below are the high-level steps:
 
 1.  Identify the tapes and data to be migrated to cloud
 
-2.  Restore the data on the on prem server in library identifying the
-    > backups details (date and content). Do this for all tapes
+2.  Restore the data on the on-prem server in library identifying the backups details (date and content). 
 
-3.  Save the libraries in .iso file named according to the content
-    > (021120Daily)
+3.  Save the libraries in .iso file named according to the content. 
 
-4.  Move the data from Databox to Cloud blob and keep it there for
-    > future use
+Example: ***021120Daily.iso***
 
-Perform backup go save option 21/22/23 or save individual libraries
-using SAVLIB command, just specify the device as NFSDEV01
+4.  Move the data from Databox to Cloud blob and keep it there for future use
 
-7.  []{#_heading=h.3dy6vkm .anchor}Copying backup .iso files from
-    windows to databox
+5. Perform backup go save option 21/22/23 or save individual libraries using SAVLIB command, just specify the device as NFSDEV01
 
-> The backup files need to be copied from backups folder to the required
-> folder in the DBx drive on windows server.
->
-> After this the Databox is ready to be shipped to azure DC.
+## Copying backup .ISO files from windows to Data Box<a name="isocopy"></a>
 
-8.  []{#_heading=h.1t3h5sf .anchor}Shipping databox to Azure cloud DC
+The backup files need to be copied from backups folder to the required folder in the DBx drive on windows server.
 
-> Please reference to "Tutorial to return Azure Databox" document
+After this the Databox is ready to be shipped to azure DC.
 
-9.  []{#_heading=h.4d34og8 .anchor}Restoring data to Skytap LPAR
+## Shipping Data Box to Azure<a name="ship2azure"></a>
 
-    1.  The DBx data will be copied to azure Block Blob storage account.
+> Please reference to <a href="https://learn.microsoft.com/en-us/azure/databox/data-box-deploy-picked-up?tabs=in-europe%2Cin-japan&pivots=americas" target="_blank">Tutorial to return Azure Data Box</a> document
 
-> The iso files need to be downloaded from azure blob to Skytap LPAR
-> using azure storage explorer.
+## Restoring data to Skytap Hosted LPAR<a name="restoreLPAR"></a>
 
-2.  Once the backup .iso files are downloaded to Skytap Windows VM, FTP
-    > the required files to NFS IBM i LPAR or target IBM i LPAR
-    > depending on backups strategy
+**The Data Box data will be copied to your Azure Storage Account as Block Blob.**
 
-3.  To restore from a GO save 21 backup refer to the below document
+1. The iso files need to be downloaded from azure blob to your Skytap hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
 
-> IBM i migration to Skytap -- GO save option 21
+2. Once the backup .iso files are downloaded to Skytap Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy
 
-4.  To restore from a GO save 22+23 backup refer to the below document
+3.  Restore from a GO save 22+23 backup refer to the below document:
 
-> IBM i migration to Skytap -- GO save option 22+23
+> <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank"> IBM i migration to Skytap -- GO save option 22+23</a>
 
-5.  Restore from individual libraries backups
+4.  Restore the individual libraries backups libraries from the .iso image file by loading it on an image catalog and using RSTLIB command
 
-> Restore the libraries from the .iso image file by loading it on an
-> image catalog and using RSTLIB command
-
-6.  Tape migration restores
+5.  Tape migration restores
 
 -   Restore the backup iso file from cloud blob to windows server
 
@@ -286,34 +261,27 @@ using SAVLIB command, just specify the device as NFSDEV01
 
 -   ADDIMGCLGE for all .iso file
 
--   Restore the libraries from the .iso file to target LPAR's required
-    > library
+-   Restore the libraries from the .iso file to target LPAR's required library
 
-10. []{#_heading=h.2s8eyo1 .anchor}Timing estimates
+## Timing Estimates<a name="estimates"></a>
 
-> Below is the time estimate of some time-consuming activities
+Below is the time estimate of some time-consuming activities
 
--   Creation of .iso on windows NFS mount :3 hrs to create 1\*400 GB
-    > .iso
+-   Creation of .iso on windows NFS mount :3 hrs to create 1\*400 GB .ISO
 
-> Best approach is to create 4 .iso file on parallel sessions (takes
-> around 5 hrs)
+Best approach is to create 4 .iso file on parallel sessions (takes around 5 hrs)
 
--   Copy of file from windows to Databox SMB drive: 1\*400 Gb file took
-    > 1 hr 45 mins
+-   Copy of file from windows to Databox SMB drive: 1\*400 Gb file took 1 hr 45 mins.
 
-> Running 2 parallel copy gave best speed in our tests
+Running 2 parallel copy gave best speed in our tests
 
--   Copy file from blob to windows: 2\*400 GB files copy in parallel
-    > took 2 hrs 30 mins
+-   Copy file from blob to windows: 2\*400 GB files copy in parallel took 2 hrs 30 mins.
 
--   FTP from windows VM to IBM i target LPAR (same environment): 1\*400
-    > GB files in parallel took 1 hr 10 mins
+-   FTP from windows VM to IBM i target LPAR (same environment): 1\*400 GB files in parallel took 1 hr 10 mins.
 
-> Parallel FTP did not increase the overall speed, ensure that the IBM i
-> FTP parameters are tuned to give best transfer speed
+Parallel FTP did not increase the overall speed, ensure that the IBM i FTP parameters are tuned to give best transfer speed.
 
-#### Next steps
+#### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
 > [Skytap Well-Architected Framework](../../)
@@ -329,6 +297,7 @@ using SAVLIB command, just specify the device as NFSDEV01
 >* [High Availability](../ibmi-disaster-recovery)
 >
 >**Migration Solutions**
+>* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
 >* [Hot Migrations (Replication Sync)](./hot-migrations)
 >
 >**Design**
