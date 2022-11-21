@@ -15,7 +15,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Key takeaways](#takeaways)
 * [Prerequisites](#begin)
 * 
-* 
+* [Next Steps](#nextsteps)
 
 1)  Backing up on-prem system using mksysb
 
@@ -385,3 +385,29 @@ h.  Setup New lpar to restore the mksysb
     > automatically
     > generated]<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/mksysbmedia/media/image9.png">"5.681737751531059in"
     > height="2.4978608923884513in"}
+
+#### Next steps<a name="nextsteps"></a>
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../operations/)
+
+**Resiliency**
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
+>
+>**Migration Solutions**
+>* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
+>* [Hot Migrations (Replication Sync)](./hot-migrations)
+>
+>**Design**
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+
+**Security**
+> * [Skytap Security Pillar](../../security/)
