@@ -2,7 +2,7 @@
 Title: Mksysb Backup and Restore in Skytap
 
 Description: Skytap Cold Migration Solution - Backup and Restore to Skytap on Azure using Mksysb.
-Authors:  Chris Eigbrett - Director, Skytap Service Delivery
+Authors:  
 ---
 # Backup and Restore to Skytap on Azure using Mksysb
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
