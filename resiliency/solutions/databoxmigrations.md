@@ -29,7 +29,7 @@ There are multiple strategies to migrate IBM i LPARs to <a href="https://www.sky
 
 Migration using <a href="https://www.youtube.com/watch?v=DKREXDCuGqkMicrosoft" target="_blank">Azure Data Box</a> is suitable when the customer has multiple Terabytes (TB) (>10) of data on an LPAR. The data box is delivered to customer data center and attached to windows server using SMB. The windows server folder is mounted to IBM i LPAR using NFS. Data is then written from IBM i to the windows folder and copied manually to the mounted Data Box path. 
 
-<img align="center" src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/databoxmigrationsmedia/media/databox.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/Fall2022Updates/resiliency/solutions/databoxmigrationsmedia/media/databox.png">
 
 This document provides overview of steps of this process and to perform a restore on a Skytap hosted LPAR.
 
