@@ -170,7 +170,7 @@ F3 out
 
 c)  Assign the LAN console IP using SST using steps in below link.
 
-> [[https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst]{.ul}](https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst)
+> <a href="https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst" target="_blank">https://www.ibm.com/docs/en/i/7.3?topic=dst-configuring-service-tools-server-using-sst</a>
 
 Below is an example
 
