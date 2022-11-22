@@ -18,16 +18,16 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Connecting the Azure Data Box to Windows Server (SMB)](#connectdatabox2smb)
   * [Connecting IBM i LPAR to Windows Server (NFS)](#LPAR2NFS)
 * [Performing Backups of LPARs on the Azure Data Box](#backup2databox)
-* [Copying Backup .ISO files from Windows to Azure Data Box](#isocopy)
+* [Copying Backup .ISO files from Windows to the Azure Data Box](#isocopy)
 * [Shipping the Azure Data Box to Microsoft](#ship2azure)
-* [Restoring data to Skytap hosted LPAR](#restoreLPAR)
+* [Restoring data to the Skytap hosted LPAR](#restoreLPAR)
 * [Timing Estimates](#estimates)
 * [Next Steps](#nextsteps)
 
 ## Introduction <a name="intro"></a>
 There are multiple strategies to migrate IBM i LPARs to <a href="https://www.skytap.com/skytap-on-azure/" target="_blank">Skytap on Azure</a>. 
 
-Migration using <a href="https://www.youtube.com/watch?v=DKREXDCuGqkMicrosoft" target="_blank">Azure Data Box</a> is suitable when the customer has multiple Terabytes (TB) (>10) of data on an LPAR. The Azure Data Box is delivered to a customer data center and attached to a Windows server using SMB. The Windows server folder is then mounted to IBM i LPAR using NFS. Data is then written from IBM i to the Windows folder and copied manually to the mounted Azure Data Box path. 
+Migration using <a href="https://www.youtube.com/watch?v=DKREXDCuGqkMicrosoft" target="_blank">Azure Data Box</a> is suitable when the customer has multiple Terabytes (TB) (>10) of data on an LPAR. The Azure Data Box is delivered to a customer data center and attached to a Windows server using SMB. The Windows server folder is then mounted to the IBM i LPAR using NFS. Data is then written from IBM i to the Windows folder and copied manually to the mounted Azure Data Box path. 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/databox.png">
 
@@ -35,7 +35,7 @@ This document provides an overview of the steps of this process and how to perfo
 
 Data cannot be copied directly from IBM i to MDM as they used different transfer protocols. Any host-based replication tool can be used to perform the delta sync between the on-prem LPAR and cloud LPAR after the initial restore is done using the Microsoft Azure Data Box.
 
-## Key Takeaways <a name="takeaways"></a>
+## Objective <a name="takeaways"></a>
 
 The objective of this document is to capture steps to perform the following activities:
 
@@ -56,7 +56,7 @@ The objective of this document is to capture steps to perform the following acti
 
 * On prem-server should be at the latest PTF levels
 
-* Customer should have an existing <A href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure SaaS subscription</a>
+* Customer should have an existing <A href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure subscription</a>
 
 * The on-prem LPAR should be on V7R2 or later OS version of IBM i
 
@@ -68,13 +68,13 @@ The objective of this document is to capture steps to perform the following acti
 
 * Transceivers for fiber ports on the Azure Data Box to make connection
 
-* On-prem Windows server with sufficient resources, disk space should be more than the amount of backup to be taken on each LPAR
+* On-prem Windows server with sufficient resources (disk space should be more than the amount of backup to be taken on each LPAR)
 
 ## Order and configure the Azure Data Box <a name="orderandconfig"></a>
 
 > Please reference the <a href="https://learn.microsoft.com/en-us/azure/Data Box/data-box-deploy-ordered" target="_blank">Azure Data Box order instructions</a> document
 
-## Setting up an Azure Data Box in customer data center  <a name="setuponprem"></a>
+## Setting up the Azure Data Box in customer data center  <a name="setuponprem"></a>
 
 Use the steps in the link below to physically install the Azure Data Box in the customer data center
 
@@ -84,7 +84,7 @@ Use the steps in the link below to physically install the Azure Data Box in the 
 
 * Assign an additional IP to the IBM i LPAR, the IP will be used for DST LAN console
 
-* Assign IPs to Windows VM and MDM device. The solution architecture should look like below with all 10 Gb connections
+* Assign IPs to Windows VM and MDM device - the solution architecture should look like below with all 10 Gb connections
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/image2.png" width="700">
 
@@ -96,19 +96,19 @@ Use the steps in the link below to physically install the Azure Data Box in the 
 
 1. Go to connect and copy-\>settings-\> enable SMB signing and restart the Azure Data Box (this allows data to be copied from Windows to the Azure Data Box drive)
 
-1. On Windows command line run below command to mount Azure Data Box path on y drive:
+1. On Windows command line run below command to mount the Azure Data Box path on y drive:
 
 ```cmd
 Net use y: \\192.168.2.10\\uksouthstg_BlockBlob /user:\<user ID>
 ``` 
 
-Both user ID and password you can get from the Azure Data Box SMB settings page
+You can get both the user ID and password from the Azure Data Box SMB settings page
 
 For example:
 ```cmd
 Net use y: \\10.121.21.15\\nascskytapData Box_BlockBlob /user:nascskytapData Box
 ``` 
-## Connecting IBM i LPAR to Windows server (NFS) <a name="LPAR2NFS"></a>
+## Connecting the IBM i LPAR to Windows server (NFS) <a name="LPAR2NFS"></a>
 
 **Windows** - Install and configure NFS client on Windows server
 
@@ -135,9 +135,9 @@ Net use y: \\10.121.21.15\\nascskytapData Box_BlockBlob /user:nascskytapData Box
 ```cmd
 MKDIR DIR('/Windows')
 ```
--   Add the cfgtcp option 12, host name , domain name and \*local
+-   Add the cfgtcp option 12, host name, domain name and \*local
 
--   Cfgtcp 10: add entry for local ip with hostname and domain name, and entries for Windows server
+-   Cfgtcp 10: add entry for local IP with hostname and domain name, and entries for Windows server
 
 -   Mount the NFS server directory on path created:
 
@@ -190,7 +190,7 @@ e) Run below command to verify that you can see backup images created:
 WRKIMGCLGE \*DEV NFSDEV01
 ```
 
-f)  Initialize the volumes
+f)  Initialize the volumes:
 
 ```cmd
 LODIMGCLGE IMGCLG(\*DEV) IMGCLGIDX(2) DEV(NFSDEV01)
@@ -203,7 +203,7 @@ Note: You will run these commands for all of the ISO images created
 
 ## Performing backups of LPARs on the Azure Data Box <a name="backup2databox"></a>
 
-Create and initialize sufficient optical ISO files on Windows server so that the backup can completed successfully.
+Create and initialize sufficient optical ISO files on Windows server so that the backup can be completed successfully.
 
 You can choose from the below backup solutions depending on your migration strategy:
 
@@ -227,15 +227,15 @@ Below are the high-level steps:
 
 Example: ***021120Daily.ISO***
 
-4.  Move the data from Azure Data Box to Azure Storage Blob and keep it there for future use
+4.  Move the data from the Azure Data Box to Azure Storage Blob and keep it there for future use
 
 5. Perform backup go save option 21/22/23 or save individual libraries using SAVLIB command, just specify the device as NFSDEV01
 
 ## Copying backup .ISO files from Windows to Azure Data Box<a name="isocopy"></a>
 
-The backup files need to be copied from backups folder to the required folder in the Azure Data Box drive on the Windows server.
+The backup files need to be copied from the backups folder to the required folder in the Azure Data Box drive on the Windows server.
 
-After this the Azure Data Box is ready to be shipped to Microsoft.
+After this, the Azure Data Box is ready to be shipped to Microsoft.
 
 ## Shipping the Azure Data Box to Microsoft<a name="ship2azure"></a>
 
@@ -245,9 +245,9 @@ After this the Azure Data Box is ready to be shipped to Microsoft.
 
 **The Azure Data Box data will be copied to your Azure Storage Account as Block Blob.**
 
-1. The ISO files need to be downloaded from azure blob to your Skytap hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
+1. The ISO files need to be downloaded from Azure blob to your Skytap hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
 
-2. Once the backup .ISO files are downloaded to Skytap Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy
+2. Once the backup .ISO files are downloaded to Skytap Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy.
 
 3.  Restore from a GO save 22+23 backup referring to the document below:
 
@@ -273,7 +273,7 @@ Below is the time estimate for some time-consuming activities
 
 -   Creation of .ISO on Windows NFS mount :3 hrs to create 1\*400 GB .ISO
 
-Best approach is to create 4 .ISO file on parallel sessions (takes around 5 hrs)
+The best approach is to create 4 .ISO file on parallel sessions (takes around 5 hrs)
 
 -   Copy of file from Windows to Data Box SMB drive: 1\*400 Gb file took 1 hr 45 mins
 
@@ -283,7 +283,7 @@ Running 2 parallel copy gave the best speed in our tests
 
 -   FTP from Windows VM to IBM i target LPAR (same environment): 1\*400 GB files in parallel took 1 hr 10 mins
 
-Parallel FTP did not increase the overall speed, ensure that the IBM i FTP parameters are tuned to give the best transfer speed.
+Parallel FTP did not increase the overall speed. Be sure that the IBM i FTP parameters are tuned to give the best transfer speed.
 
 #### Next steps<a name="nextsteps"></a>
 
