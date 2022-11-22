@@ -14,12 +14,12 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Key Takeaways](#takeaways)
 * [Prerequisites](#begin)
 * [Order and Configure the Azure Data Box](#orderandconfig)
-* [Setting up Azure Data Box in Customer Data Center](#setuponprem)
-  * [Connect Azure Data Box to Windows Server (SMB)](#connectdatabox2smb)
+* [Setting up the Azure Data Box in Customer Data Center](#setuponprem)
+  * [Connecting the Azure Data Box to Windows Server (SMB)](#connectdatabox2smb)
   * [Connecting IBM i LPAR to Windows Server (NFS)](#LPAR2NFS)
-* [Performing Backups of LPARs on Azure Data Box](#backup2databox)
+* [Performing Backups of LPARs on the Azure Data Box](#backup2databox)
 * [Copying Backup .ISO files from Windows to Azure Data Box](#isocopy)
-* [Shipping Azure Data Box to Microsoft](#ship2azure)
+* [Shipping the Azure Data Box to Microsoft](#ship2azure)
 * [Restoring data to Skytap hosted LPAR](#restoreLPAR)
 * [Timing Estimates](#estimates)
 * [Next Steps](#nextsteps)
@@ -27,7 +27,7 @@ This document does not provide you with any legal rights to any intellectual pro
 ## Introduction <a name="intro"></a>
 There are multiple strategies to migrate IBM i LPARs to <a href="https://www.skytap.com/skytap-on-azure/" target="_blank">Skytap on Azure</a>. 
 
-Migration using <a href="https://www.youtube.com/watch?v=DKREXDCuGqkMicrosoft" target="_blank">Azure Data Box</a> is suitable when the customer has multiple Terabytes (TB) (>10) of data on an LPAR. The Azure Data Box is delivered to a customer data center and attached to a Windows server using SMB. The Windows server folder is mounted to IBM i LPAR using NFS. Data is then written from IBM i to the Windows folder and copied manually to the mounted Azure Data Box path. 
+Migration using <a href="https://www.youtube.com/watch?v=DKREXDCuGqkMicrosoft" target="_blank">Azure Data Box</a> is suitable when the customer has multiple Terabytes (TB) (>10) of data on an LPAR. The Azure Data Box is delivered to a customer data center and attached to a Windows server using SMB. The Windows server folder is then mounted to IBM i LPAR using NFS. Data is then written from IBM i to the Windows folder and copied manually to the mounted Azure Data Box path. 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/databox.png">
 
