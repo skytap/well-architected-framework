@@ -225,7 +225,7 @@ Below are the high-level steps:
 
 3.  Save the libraries in .ISO file named according to the content 
 
-Example: ***021120Daily.ISO***
+    Example: ***021120Daily.ISO***
 
 4.  Move the data from the Azure Data Box to Azure Storage Blob and keep it there for future use
 
@@ -251,7 +251,7 @@ After this, the Azure Data Box is ready to be shipped to Microsoft.
 
 3.  Restore from a GO save 22+23 backup referring to the document below:
 
-> <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank"> IBM i migration to Skytap -- GO save option 22+23</a>
+    > <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank"> IBM i migration to Skytap -- GO save   option 22+23</a>
 
 4.  Restore the individual libraries backups libraries from the .ISO image file by loading it on an image catalog and using RSTLIB command
 
