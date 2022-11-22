@@ -1,10 +1,10 @@
 ---
 Title: IBM i workload migration from on-prem to Skytap on Azure using Microsoft Azure Data Box
 Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap on Azure using Microsoft Azure Data Box
-Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer, Richard Field – Skytap Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
+Authors: Ateesh Sharma � Skytap Cloud Solutions Engineer, Richard Field � Skytap Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
 ---
 # IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
+This guide is provided �as-is�. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal reference purposes.
 
