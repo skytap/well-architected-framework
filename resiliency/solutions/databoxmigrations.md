@@ -15,9 +15,9 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Prerequisites](#begin)
 * [Order and Configure the Azure Data Box](#orderandconfig)
 * [Setting up Azure Data Box in Customer Data Center](#setuponprem)
-  * [Connect Azure Data Box to Windows Server (SMB)](#connectData Box2smb)
+  * [Connect Azure Data Box to Windows Server (SMB)](#connectdatabox2smb)
   * [Connecting IBM i LPAR to Windows Server (NFS)](#LPAR2NFS)
-* [Performing Backups of LPARs on Azure Data Box](#backup2Data Box)
+* [Performing Backups of LPARs on Azure Data Box](#backup2databox)
 * [Copying Backup .ISO files from Windows to Azure Data Box](#isocopy)
 * [Shipping Azure Data Box to Microsoft](#ship2azure)
 * [Restoring data to Skytap hosted LPAR](#restoreLPAR)
@@ -102,7 +102,7 @@ Use the steps in the link below to physically install the Azure Data Box in the 
 Net use y: \\192.168.2.10\\uksouthstg_BlockBlob /user:\<user ID>
 ``` 
 
-Both user id and password you can get from DBx SMB settings page
+Both user ID and password you can get from the Azure Data Box SMB settings page
 
 For example:
 ```cmd
@@ -131,6 +131,7 @@ Net use y: \\10.121.21.15\\nascskytapData Box_BlockBlob /user:nascskytapData Box
 **IBM i** - Mount NFS folder on IBM i directory
 
 -   Create mount path on iSeries server:
+
 ```cmd
 MKDIR DIR('/Windows')
 ```
@@ -139,18 +140,18 @@ MKDIR DIR('/Windows')
 -   Cfgtcp 10: add entry for local ip with hostname and domain name, and entries for Windows server
 
 -   Mount the NFS server directory on path created:
+
 ```cmd
 Mount Type(\*NFS) MFS('\<ip of Windows>:/\<Windows folder>')
 MNTOVRDIR('/\<server directory>')
 ```
-
 For example:
 ```cmd
 Mount Type(\*NFS) MFS('**10.74.74.157**:/backup')
 MNTOVRDIR('/Windows')
 ```
 
-* Create iso images for backup by running below commands:
+* Create ISO images for backup by running below commands:
 ```cmd
 CALL PGM (QP2TERM)
 cd /Windows
@@ -160,6 +161,7 @@ dd if=/dev/zero of=IMAGE02.ISO bs=1M count=100000 (100 GB)
 Note: You will create a number of images depending on size of backup data
 
 * Create volume list by running below commands:
+
 ```cmd
 touch VOLUME_LIST
 echo 'IMAGE01.ISO W' >\> VOLUME_LIST
@@ -174,7 +176,7 @@ c)  Assign the LAN console IP using SST using steps in below link.
 
 Below is an example
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/Data Boxmigrationsmedia/media/image1.png" width="700">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/image1.png" width="700">
 
 d)  Create device by running below commands:
 ```cmd
@@ -199,15 +201,15 @@ INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(\*NO)
 
 Note: You will run these commands for all the ISO images created
 
-## Performing backups of LPARs on Data Box <a name="backup2Data Box"></a>
+## Performing backups of LPARs on the Azure Data Box <a name="backup2databox"></a>
 
-Create and initialize sufficient optical iso files on Windows server so that the backup can completed successfully.
+Create and initialize sufficient optical ISO files on Windows server so that the backup can completed successfully.
 
-You can choose from the below backup soultions depending on your migration strategy:
+You can choose from the below backup solutions depending on your migration strategy:
 
 -   GO save 21
 
--   Go save 22+ 23
+-  <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank">Go save 22+ 23</a>
 
 -   Individual libraries backups
 
@@ -221,57 +223,57 @@ Below are the high-level steps:
 
 2.  Restore the data on the on-prem server in library identifying the backups details (date and content). 
 
-3.  Save the libraries in .iso file named according to the content. 
+3.  Save the libraries in .ISO file named according to the content. 
 
-Example: ***021120Daily.iso***
+Example: ***021120Daily.ISO***
 
-4.  Move the data from Data Box to Cloud blob and keep it there for future use
+4.  Move the data from Azure Data Box to Azure Storage Blob and keep it there for future use
 
 5. Perform backup go save option 21/22/23 or save individual libraries using SAVLIB command, just specify the device as NFSDEV01
 
-## Copying backup .ISO files from Windows to Data Box<a name="isocopy"></a>
+## Copying backup .ISO files from Windows to Azure Data Box<a name="isocopy"></a>
 
-The backup files need to be copied from backups folder to the required folder in the DBx drive on Windows server.
+The backup files need to be copied from backups folder to the required folder in the Azure Data Box drive on the Windows server.
 
-After this the Data Box is ready to be shipped to azure DC.
+After this the Azure Data Box is ready to be shipped to Microsoft.
 
-## Shipping Data Box to Azure<a name="ship2azure"></a>
+## Shipping the Azure Data Box to Microsoft<a name="ship2azure"></a>
 
 > Please reference to <a href="https://learn.microsoft.com/en-us/azure/Data Box/data-box-deploy-picked-up?tabs=in-europe%2Cin-japan&pivots=americas" target="_blank">Tutorial to return Azure Data Box</a> document
 
-## Restoring data to Skytap Hosted LPAR<a name="restoreLPAR"></a>
+## Restoring data to a Skytap Hosted LPAR<a name="restoreLPAR"></a>
 
-**The Data Box data will be copied to your Azure Storage Account as Block Blob.**
+**The Azure Data Box data will be copied to your Azure Storage Account as Block Blob.**
 
-1. The iso files need to be downloaded from azure blob to your Skytap hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
+1. The ISO files need to be downloaded from azure blob to your Skytap hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
 
-2. Once the backup .iso files are downloaded to Skytap Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy
+2. Once the backup .ISO files are downloaded to Skytap Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy
 
 3.  Restore from a GO save 22+23 backup refer to the below document:
 
 > <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank"> IBM i migration to Skytap -- GO save option 22+23</a>
 
-4.  Restore the individual libraries backups libraries from the .iso image file by loading it on an image catalog and using RSTLIB command
+4.  Restore the individual libraries backups libraries from the .ISO image file by loading it on an image catalog and using RSTLIB command
 
 5.  Tape migration restores
 
--   Restore the backup iso file from cloud blob to Windows server
+-   Restore the backup ISO file from cloud blob to Windows server
 
 -   FTP from Windows to IBM i target LPAR
 
--   Create image catalog specifying the directory where .iso is.
+-   Create image catalog specifying the directory where .ISO is.
 
--   ADDIMGCLGE for all .iso file
+-   ADDIMGCLGE for all .ISO file
 
--   Restore the libraries from the .iso file to target LPAR's required library
+-   Restore the libraries from the .ISO file to target LPAR's required library
 
 ## Timing Estimates<a name="estimates"></a>
 
 Below is the time estimate of some time-consuming activities
 
--   Creation of .iso on Windows NFS mount :3 hrs to create 1\*400 GB .ISO
+-   Creation of .ISO on Windows NFS mount :3 hrs to create 1\*400 GB .ISO
 
-Best approach is to create 4 .iso file on parallel sessions (takes around 5 hrs)
+Best approach is to create 4 .ISO file on parallel sessions (takes around 5 hrs)
 
 -   Copy of file from Windows to Data Box SMB drive: 1\*400 Gb file took 1 hr 45 mins.
 
