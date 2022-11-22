@@ -6,7 +6,7 @@ Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer, Richard Field – Sk
 # IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
-This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
+This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for internal reference purposes.
 
 # Table of Contents <a name="toc"></a>
 
@@ -39,36 +39,36 @@ Data cannot be copied directly from IBM i to MDM as they used different transfer
 
 The objective of this document is to capture steps to perform the following activities:
 
-1.  Order and configure Azure Data Box.
+1.  Order and configure Azure Data Box
 
-2.  Attach Azure Data Box to on-prem Windows server using SMB.
+2.  Attach Azure Data Box to on-prem Windows server using SMB
 
-3.  Mount Windows server folder to IBM i using NFS.
+3.  Mount Windows server folder to IBM i using NFS
 
-4.  Take IBM i backups using Windows NFS mount.
+4.  Take IBM i backups using Windows NFS mount
 
-5.  Copy backup from Windows folder to Azure Data Box drive.
+5.  Copy backup from Windows folder to Azure Data Box drive
 
-6.  Send Azure Data box to Microsoft Azure Data Center and restore data to Skytap hosted virtual LPAR.
+6.  Send Azure Data box to Microsoft Azure Data Center and restore data to Skytap hosted virtual LPAR
 
 
 ## Prerequisites <a name="Begin"></a>
 
-* On prem-server should be at the latest PTF levels.
+* On prem-server should be at the latest PTF levels
 
-* Customer should have an existing <A href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure SaaS subscription</a>.
+* Customer should have an existing <A href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure SaaS subscription</a>
 
-* The on-prem LPAR should be on V7R2 or later OS version of IBM i.
+* The on-prem LPAR should be on V7R2 or later OS version of IBM i
 
-* There should be a 10 Gig FC port available on server/switch that can be used for communication with the Azure Data Box.
+* There should be a 10 Gig FC port available on server/switch that can be used for communication with the Azure Data Box
 
-* Sufficient downtime should be provided for backups.
+* Sufficient downtime should be provided for backups
 
-* Required LPPs should be installed on the LPAR.
+* Required LPPs should be installed on the LPAR
 
-* Transceivers for fiber ports on the Azure Data Box to make connection.
+* Transceivers for fiber ports on the Azure Data Box to make connection
 
-* On-prem Windows server with sufficient resources. Disk space should be more than the amount of backup to be taken on each LPAR.
+* On-prem Windows server with sufficient resources. Disk space should be more than the amount of backup to be taken on each LPAR
 
 ## Order and configure the Azure Data Box <a name="orderandconfig"></a>
 
