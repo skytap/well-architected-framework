@@ -110,7 +110,7 @@ Net use y: \\10.121.21.15\\nascskytapData Box_BlockBlob /user:nascskytapData Box
 ``` 
 ## Connecting the IBM i LPAR to Windows server (NFS) <a name="LPAR2NFS"></a>
 
-**Windows** - Install and configure NFS client on Windows server
+a) **Windows** - Install and configure NFS client on Windows server
 
 -   **Install NFS Server through Server Manager icon on taskbar**
 
@@ -128,7 +128,7 @@ Net use y: \\10.121.21.15\\nascskytapData Box_BlockBlob /user:nascskytapData Box
 
     -   Go to property of folder (backup) to be shared-\> NFS sharing -\> manage-\> select share-\> select allow anon access-\> permission-\> select read-write and allow root access for ALL MACHINES-\> apply and OK
 
-**IBM i** - Mount NFS folder on IBM i directory
+b) **IBM i** - Mount NFS folder on IBM i directory
 
 -   Create mount path on iSeries server:
 
