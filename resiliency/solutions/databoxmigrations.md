@@ -209,7 +209,7 @@ You can choose from the below backup solutions depending on your migration strat
 
 -   GO save 21
 
--  <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank">Go save 22+ 23</a>
+-  <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank">Go save 22+23</a>
 
 -   Individual libraries backups
 
