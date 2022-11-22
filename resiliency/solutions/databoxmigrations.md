@@ -283,7 +283,7 @@ Running 2 parallel copy gave the best speed in our tests
 
 -   FTP from Windows VM to IBM i target LPAR (same environment): 1\*400 GB files in parallel took 1 hr 10 mins
 
-Parallel FTP did not increase the overall speed, ensure that the IBM i FTP parameters are tuned to give best transfer speed.
+Parallel FTP did not increase the overall speed, ensure that the IBM i FTP parameters are tuned to give the best transfer speed.
 
 #### Next steps<a name="nextsteps"></a>
 
