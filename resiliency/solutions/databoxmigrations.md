@@ -72,13 +72,13 @@ The objective of this document is to capture steps to perform the following acti
 
 ## Order and configure the Azure Data Box <a name="orderandconfig"></a>
 
-> Please reference the <a href="https://learn.microsoft.com/en-us/azure/Data Box/data-box-deploy-ordered" target="_blank">Azure Data Box order instructions</a> document
+> Please reference the <a href="https://learn.microsoft.com/en-us/azure/DataBox/data-box-deploy-ordered" target="_blank">Azure Data Box order instructions</a> document
 
 ## Setting up the Azure Data Box in customer data center  <a name="setuponprem"></a>
 
 Use the steps in the link below to physically install the Azure Data Box in the customer data center
 
-> <a href="https://docs.microsoft.com/en-us/azure/Data Box/data-box-deploy-set-up" target="_blank">https://docs.microsoft.com/en-us/azure/Data Box/data-box-deploy-set-up</a>
+> <a href="https://docs.microsoft.com/en-us/azure/DataBox/data-box-deploy-set-up" target="_blank">https://docs.microsoft.com/en-us/azure/Data Box/data-box-deploy-set-up</a>
 
 * Add a Windows server in the environment with more disk space than the amount of backup to be taken
 
@@ -239,7 +239,7 @@ After this, the Azure Data Box is ready to be shipped to Microsoft.
 
 ## Shipping the Azure Data Box to Microsoft<a name="ship2azure"></a>
 
-> Please reference <a href="https://learn.microsoft.com/en-us/azure/Data Box/data-box-deploy-picked-up?tabs=in-europe%2Cin-japan&pivots=americas" target="_blank">Tutorial to return Azure Data Box</a> document
+> Please reference <a href="https://learn.microsoft.com/en-us/azure/DataBox/data-box-deploy-picked-up?tabs=in-europe%2Cin-japan&pivots=americas" target="_blank">Tutorial to return Azure Data Box</a> document
 
 ## Restoring data to a Skytap Hosted LPAR<a name="restoreLPAR"></a>
 
