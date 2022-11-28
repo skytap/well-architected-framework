@@ -78,7 +78,7 @@ The objective of this document is to capture steps to perform the following acti
 
 Use the steps in the link below to physically install the Azure Data Box in the customer data center
 
-> <a href="https://docs.microsoft.com/en-us/azure/DataBox/data-box-deploy-set-up" target="_blank">https://docs.microsoft.com/en-us/azure/Data Box/data-box-deploy-set-up</a>
+> <a href="https://docs.microsoft.com/en-us/azure/DataBox/data-box-deploy-set-up" target="_blank">https://docs.microsoft.com/en-us/azure/DataBox/data-box-deploy-set-up</a>
 
 * Add a Windows server in the environment with more disk space than the amount of backup to be taken
 
@@ -99,14 +99,14 @@ Use the steps in the link below to physically install the Azure Data Box in the 
 1. On Windows command line run below command to mount the Azure Data Box path on y drive:
 
 ```cmd
-Net use y: \\192.168.2.10\\uksouthstg_BlockBlob /user:\<user ID>
+Net use y: \\192.168.2.10\\uksouthstg_blockblob /user:\<user ID>
 ``` 
 
 You can get both the user ID and password from the Azure Data Box SMB settings page
 
 For example:
 ```cmd
-Net use y: \\10.121.21.15\\nascskytapData Box_BlockBlob /user:nascskytapData Box
+Net use y: \\10.121.21.15\\nascskytapdatabox_blockblob /user:nascskytapdatabox
 ``` 
 ## Connecting the IBM i LPAR to Windows server (NFS) <a name="LPAR2NFS"></a>
 
