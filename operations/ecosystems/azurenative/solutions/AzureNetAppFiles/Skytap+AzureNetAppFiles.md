@@ -189,7 +189,7 @@ cd \< mount Point>
 ls -l
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image19.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image19.png" width="400">
 
 ###### *[Back to the Top](#toc)*
 
