@@ -180,7 +180,7 @@ df -g \<mount point>
 3)  List Files in NFS share.
 
 ``` powershell
-cd \< mount Point>
+cd \<mount Point>
 ```
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image18.png" width="100">
