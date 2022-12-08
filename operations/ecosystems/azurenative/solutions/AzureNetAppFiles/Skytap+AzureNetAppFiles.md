@@ -35,10 +35,14 @@ NetApp Files (ANF) solves most of these challenges and can therefore be
 a go-to solution for customers who are looking to have a shared files
 solution on Skytap.
 
+###### *[Back to the Top](#toc)*
+
 ## Reference Architecture<a name="reference-architecture"></a>
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg">
 Figure 1 : Azure Netapp files for Skytap
+
+###### *[Back to the Top](#toc)*
 
 # Azure NetApp files (ANF)<a name="azure-netapp-files-anf"></a>
 
@@ -50,6 +54,8 @@ performance levels and set up snapshots through the service.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image3.png">
 Figure 2: Storage Hierarchy for ANF
 
+###### *[Back to the Top](#toc)*
+
 ## Performance<a name="performance"></a>
 
 Azure NetApp Files supports three storage service levels: .
@@ -60,6 +66,8 @@ Azure NetApp Files supports three storage service levels: .
 
 -   Standard: provides up to 16 MiB/s of throughput per 1 TiB of volume quota assigned.
 
+###### *[Back to the Top](#toc)*
+
 ## Protocols<a name="protocols"></a>
 
 Azure NetApp Files supports SMB 2.1 and SMB 3.1 (which includes support
@@ -69,11 +77,15 @@ Azure NetApp Files supports NFSv3 and NFSv4.1.
 
 ^\*\ Requires\ active\ directory.^
 
+###### *[Back to the Top](#toc)*
+
 ## Region Availability<a name="region-availability"></a>
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image4.png">
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image5.png">
+
+###### *[Back to the Top](#toc)*
 
 ## Pricing<a name="pricing"></a>
 
@@ -81,11 +93,17 @@ Here is sample pricing for 5TB capacity for each Service Level:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image9.png">
 
+###### *[Back to the Top](#toc)*
+
 ## Azure Documentation<a name="azure-documentation"></a>
 
 <https://docs.microsoft.com/en-us/azure/azure-netapp-files/>
 
+###### *[Back to the Top](#toc)*
+
 # Provisioning Azure NetApp Files<a name="provisioning-azure-netapp-files"></a>
+
+###### *[Back to the Top](#toc)*
 
 ## Create Azure NetApp account<a name="create-azure-netapp-account"></a>
 
@@ -93,8 +111,9 @@ Here is sample pricing for 5TB capacity for each Service Level:
 
 1)  <https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal>
 
-Once Subscription is whitelisted, you are ready to create Pools and
-Volumes
+Once Subscription is whitelisted, you are ready to create Pools and Volumes.
+
+###### *[Back to the Top](#toc)*
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image10.png">
 
@@ -108,19 +127,24 @@ Volumes
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image11.png">
 
+###### *[Back to the Top](#toc)*
+
 ## Create Volumes<a name="create-volumes"></a>
 
 1)  <https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes>
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image12.png">
 
-## Mount NFS volumes on Client <a name="mount-nfs-volumes-on-client"></a>
+###### *[Back to the Top](#toc)*
 
+## Mount NFS volumes on Client <a name="mount-nfs-volumes-on-client"></a>
 ### Linux on Azure<a name="linux-on-azure"></a>
 
 (Mount Instructions for every volume can be found within Azure portal)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image13.png">
+
+###### *[Back to the Top](#toc)*
 
 ### AIX on Skytap<a name="aix-on-skytap"></a>
 
@@ -167,28 +191,21 @@ ls -l
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image19.png">
 
-#### Next steps<a name="nextsteps"></a>
+###### *[Back to the Top](#toc)*
+
+## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework](../../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+> [Skytap Operational Excellence Pillar](../)
+> * [Power Discovery](../Discovery/) > [Power Discovery & Design - Workloads](./workloads)
+> * [Connectivity](../connectivity/)
+> * [Ecosystems](../ecosystems/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
->
->**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
->* [Hot Migrations (Replication Sync)](./hot-migrations)
->
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> [Skytap Resiliency Pillar](../../resiliency/)
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../security/)
