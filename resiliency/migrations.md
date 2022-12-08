@@ -19,9 +19,9 @@ Migration Considerations include:
 
 -   Supported LPARs
 
--   [Cold Migrations (Backup and Restore)](../solutions/cold-migrations)
+-   [Cold Migrations (Backup and Restore)](./solutions/ColdMigrationsOverview.md)
 
--   [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
+-   [Hot Migrations (Replication Sync)](./solutions/HotMigrationOverview.md)
 
 **Skytap Discovery and Migration -- Support and Limits**
 
@@ -69,8 +69,8 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 >* [High Availability](./ibmi-disaster-recovery)
 >
 >**Migration Solutions**
->* [Hot Migrations (Replication Sync)](./solutions/hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](./solutions/cold-migrations)
+>* [Hot Migrations (Replication Sync)](./solutions/HotMigrationOverview.md)
+>* [Cold (Warm) Migrations (Backup and Restore)](./solutions/ColdMigrationsOverview.md)
 >
 >**Design**
 >* [Design Considerations for Azure](../design-considerations-azure)

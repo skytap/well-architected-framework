@@ -62,27 +62,23 @@ As customers consider establishing new and more diverse data ecosystems, Skytap 
 ##### Design Patterns:
 
 <!-- -   [Azure Native Solutions](./azure-native/)-->
--   [SAP Workloads](./sap)
+-   [SAP Workloads](./azurenative/solutions/SAP/README.md)
+-   [Azure NetApp Files](./azurenative/solutions/AzureNetAppFiles/Skytap+AzureNetAppFiles.md)
 
-<hr>
 
 #### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../)
->* [Power Discovery](../Discovery/)
->* [Connectivity](../connectivity/)
->* [Ecosystems](./)
+>[Skytap Operational Excellence Pillar](../README.md)
+>* [Power Discovery](../Discovery/README.md)
+>* [Connectivity](../connectivity/README.md)
+>* [Ecosystems](./README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
-
->**Design**
->* [Design Considerations for Azure](../../resiliency/design-considerations-azure)
->* [Design Considerations for IBM Cloud](../../resiliency/design-considerations-ibm)
+> [Skytap Resiliency Pillar](../../resiliency/README.md)
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../security/README.md)
