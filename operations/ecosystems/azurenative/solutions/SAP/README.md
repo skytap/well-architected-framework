@@ -7,8 +7,8 @@ author: George Stamos - Director, Solutions Architect - Business Development
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image12.jpeg"><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image3.png">
 <br>
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image11.png" Width="800">
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image45.jpeg" Width="800"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image11.png" Width="600">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image45.jpeg" Width="600"></center>
 
 This reference architecture illustrates a set of proven practices for running SAP NetWeaver on AIX in a Skytap on Azure environment. The database in this example is Oracle 19C, but Database Tier may be AnyDB (supported by underlying AIX operating system and SAP NetWeaver).
 
@@ -72,7 +72,7 @@ The numbers in the diagram correspond to the following data flow.
 SAP On-Premises Solution (AIX) that Migrated Nearly Unchanged to
 Azure
 
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image44.jpeg"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image44.jpeg" width="600"></center>
 
 ***Drivers and Requirements:***
 
