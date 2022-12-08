@@ -71,7 +71,7 @@ Azure NetApp Files supports three storage service levels: .
 ## Protocols<a name="protocols"></a>
 
 Azure NetApp Files supports SMB 2.1 and SMB 3.1 (which includes support
-for SMB 3.0) \*.
+for SMB 3.0)\*.
 
 Azure NetApp Files supports NFSv3 and NFSv4.1.
 
