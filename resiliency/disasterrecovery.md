@@ -54,17 +54,17 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
->[Skytap Resiliency Pillar](./)
->* [Migration](./migrations)
->* [Protection](./backups)
->* [High Availability](./ibmi-disaster-recovery)
+>[Skytap Resiliency Pillar](./README.md)
+>* [Migration](./migrations.md)
+>* [Protection](./backups.md)
+>* [High Availability](./ibmihadr.md)
 
 **Security**
-> * [Skytap Security Pillar](../security/)
+> * [Skytap Security Pillar](../security/README.md)
 
