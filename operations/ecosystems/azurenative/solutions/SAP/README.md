@@ -1,15 +1,14 @@
 ---
 title: SAP NetWeaver Ecosystems in Skytap on Azure
 author: George Stamos - Director, Solutions Architect - Business Development
-permalink: /operations/ecosystems/sap
 ---
 
 # SAP on Azure Deployments 
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image12.jpeg"><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image3.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image12.jpeg"><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image3.png">
 <br>
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image11.png" Width="800">
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image45.jpeg" Width="800"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image11.png" Width="800">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image45.jpeg" Width="800"></center>
 
 This reference architecture illustrates a set of proven practices for running SAP NetWeaver on AIX in a Skytap on Azure environment. The database in this example is Oracle 19C, but Database Tier may be AnyDB (supported by underlying AIX operating system and SAP NetWeaver).
 
@@ -30,11 +29,11 @@ This reference architecture illustrates a set of proven practices for running SA
 
 The first diagram shows SAP NetWeaver migration options and running state considerations from a high level with detailed descriptions on options for migration.
 
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image26.jpeg" Width="800"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image26.jpeg" Width="800"></center>
 
 The second diagram provides specific recommendations on the overall architectural design and components used for the migration, including Azure native components working in conjunction with Skytap on Azure dedicated IBM POWER systems. 
 
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/referencearchitecture02.png" Width="800"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/referencearchitecture02.png" Width="800"></center>
 
 The numbers in the diagram correspond to the following data flow.
 1.	A user on-premises uses a web browser to connect to Azure through Azure ExpressRoute, which creates a private connection. This web-based app provides a modern interface for the services that run on the AIX LPARs in Skytap on Azure.
@@ -46,7 +45,7 @@ The numbers in the diagram correspond to the following data flow.
 The third diagram is an illustration of utilizating Commvault Backup 
 and Recovery for both the migration and for the on-going orchestration of backups in Azure blob storage. 
 
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/referencearchitecture03.png" Width="800"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/referencearchitecture03.png" Width="800"></center>
 
 The numbers in the diagram correspond to the following data flow.
 1.	A user on-premises uses a web browser to connect to Azure through Azure ExpressRoute, which creates a private connection. This web-based app provides a modern interface for the services that run on the AIX LPARs in Skytap on Azure.
@@ -60,7 +59,7 @@ Lastly, the final
 diagram brings many of these components together in a diagram of a highly available solution with replication between 
 Azure geographic regions for SAP NetWeaver and Oracle on AIX.
 
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/referencearchitecture04.png" Width="800"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/referencearchitecture04.png" Width="800"></center>
 
 The numbers in the diagram correspond to the following data flow.
 1.	The three layers represent application, database and optional protection that comprise the entirety of the SAP application stack. Each of these components within Skytap on Azure may be asynchronously replicated to other Azure regions for Highly Available failover and Disaster Recovery scenarios. In the example above, Primary is represented by West Europe (Amsterdam) and secondary is North Europe (Dublin).
@@ -73,7 +72,7 @@ The numbers in the diagram correspond to the following data flow.
 SAP On-Premises Solution (AIX) that Migrated Nearly Unchanged to
 Azure
 
-<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/SAP/media/image44.jpeg"></center>
+<center><img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/SAP/media/image44.jpeg"></center>
 
 ***Drivers and Requirements:***
 
@@ -155,23 +154,19 @@ SAP granted Skytap Cloud and Infrastructure Operations Certification based on su
 
 -   Storage per LPAR: [\<]{.ul}64TB per LPAR
 
-#### Next steps
+## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../)
+> [Skytap Well-Architected Framework](../../../../../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../)
->* [Power Discovery](../../Discovery/)
->* [Connectivity](../../connectivity/)
->* [Ecosystems](../)
+> [Skytap Operational Excellence Pillar](../../../../README.md)
+> * [Power Discovery](../../../../Discovery/README.md)
+> * [Connectivity](../../../../connectivity/README.md)
+> * [Ecosystems](../../../../ecosystems/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../resiliency/)
-
->**Design**
->* [Design Considerations for Azure](../../../resiliency/design-considerations-azure)
->* [Design Considerations for IBM Cloud](../../../resiliency/design-considerations-ibm)
+> [Skytap Resiliency Pillar](../../../../../resiliency/README.md)
 
 **Security**
-> [Skytap Security Pillar](../../../security/)
+> [Skytap Security Pillar](../../../../../security/README.md)
