@@ -57,26 +57,26 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework](./../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+>[Skytap Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
+>[Skytap Resiliency Pillar](../README.md)
 >* [Protection](./backups)
->* [Disaster Recovery](./disaster-recovery)
->* [High Availability](./ibmi-disaster-recovery)
+>* [Disaster Recovery](./disasterrecovery.md)
+>* [High Availability](./ibmihadr.md)
 >
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](./solutions/HotMigrationOverview.md)
 >* [Cold (Warm) Migrations (Backup and Restore)](./solutions/ColdMigrationsOverview.md)
 >
 >**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+>* [Design Considerations for Azure](./designconsiderationsazure.md)
+>* [Design Considerations for IBM Cloud](./designconsiderationsibm.md)
 
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
+> * [Skytap Security Pillar](./../security/README.md)
 
