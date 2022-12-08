@@ -196,16 +196,16 @@ ls -l
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../)
+> [Skytap Well-Architected Framework](../../../../../)
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar](../)
-> * [Power Discovery](../Discovery/) > [Power Discovery & Design - Workloads](./workloads)
-> * [Connectivity](../connectivity/)
-> * [Ecosystems](../ecosystems/)
+> [Skytap Operational Excellence Pillar](../../../../)
+> * [Power Discovery](../../../../Discovery/) > [Power Discovery & Design - Workloads](../../../../Discovery/workloads)
+> * [Connectivity](../../../../connectivity/)
+> * [Ecosystems](../../../../ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
+> [Skytap Resiliency Pillar](../../../../../resiliency/)
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar](../../../../../security/)
