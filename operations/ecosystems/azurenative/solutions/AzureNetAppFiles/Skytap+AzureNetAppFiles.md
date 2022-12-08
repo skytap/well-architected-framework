@@ -200,7 +200,9 @@ ls -l
 
 **Operational Excellence**
 > [Skytap Operational Excellence Pillar](../../../../)
-> * [Power Discovery](../../../../Discovery/) > [Power Discovery & Design - Workloads](../../../../Discovery/workloads)
+ 
+> * [Power Discovery](../../../../Discovery/)> [Power Discovery & Design - Workloads](../../../../Discovery/discoveryecosystems.md) 
+>[Power Discovery & Design - Ecosystems](../../../../Discovery/discoveryecosystems.md)
 > * [Connectivity](../../../../connectivity/)
 > * [Ecosystems](../../../../ecosystems/)
 
