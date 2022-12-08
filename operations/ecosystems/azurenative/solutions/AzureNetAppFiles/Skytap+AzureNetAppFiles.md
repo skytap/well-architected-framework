@@ -75,7 +75,7 @@ for SMB 3.0 ^\*^.
 
 Azure NetApp Files supports NFSv3 and NFSv4.1.
 
-^\*\ Requires\ active\ directory.^
+^\* Requires active directory.^
 
 ###### *[Back to the Top](#toc)*
 
