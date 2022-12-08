@@ -39,7 +39,7 @@ solution on Skytap.
 
 ## Reference Architecture<a name="reference-architecture"></a>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg" width="700">
 Figure 1 : Azure Netapp files for Skytap
 
 ###### *[Back to the Top](#toc)*
@@ -51,7 +51,7 @@ high-performance, metered file storage service. It supports any workload
 type and is highly available by default. You can select service and
 performance levels and set up snapshots through the service.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image3.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image3.png" width="700">
 Figure 2: Storage Hierarchy for ANF
 
 ###### *[Back to the Top](#toc)*
@@ -81,9 +81,9 @@ Azure NetApp Files supports NFSv3 and NFSv4.1.
 
 ## Region Availability<a name="region-availability"></a>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image4.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image4.png" width="700">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image5.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image5.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
@@ -91,7 +91,7 @@ Azure NetApp Files supports NFSv3 and NFSv4.1.
 
 Here is sample pricing for 5TB capacity for each Service Level:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image9.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image9.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
@@ -115,7 +115,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 ###### *[Back to the Top](#toc)*
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image10.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image10.png" width="700">
 
 ## Create Pools<a name="create-pools"></a>
 
@@ -125,7 +125,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 3)  Customer charged for complete pool size.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image11.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image11.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
@@ -133,7 +133,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 1)  <https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image12.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image12.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
@@ -142,7 +142,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 (Mount Instructions for every volume can be found within Azure portal)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image13.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image13.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
@@ -163,7 +163,7 @@ showmount -e \<IP>
 mkdir -p \<mount point>
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image15.png" width="200">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image15.png" width="150">
 
 ``` powershell
 mount \<remote IP>:/\<volumename>\<mount point>
@@ -175,7 +175,7 @@ mount \<remote IP>:/\<volumename>\<mount point>
 df -g \<mount point>
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image17.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image17.png" width="400">
 
 3)  List Files in NFS share.
 
