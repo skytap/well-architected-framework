@@ -41,16 +41,15 @@ The objective of this document is to capture steps to perform the following acti
 
 1.  Order and configure Azure Data Box
 
-2.  Attach Azure Data Box to on-prem Windows server using SMB
+1.  Attach Azure Data Box to on-prem Windows server using SMB
 
-3.  Mount Windows server folder to IBM i using NFS
+1.  Mount Windows server folder to IBM i using NFS
 
-4.  Take IBM i backups using Windows NFS mount
+1.  Take IBM i backups using Windows NFS mount
 
-5.  Copy backup from Windows folder to Azure Data Box drive
+1.  Copy backup from Windows folder to Azure Data Box drive
 
-6.  Send Azure Data box to Microsoft Azure Data Center and restore data to Skytap hosted virtual LPAR
-
+1.  Send Azure Data box to Microsoft Azure Data Center and restore data to Skytap hosted virtual LPAR
 
 ## Prerequisites <a name="Begin"></a>
 
@@ -88,7 +87,7 @@ Use the steps in the link below to physically install the Azure Data Box in the 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/image2.png" width="700">
 
-## Connect Azure Data Box to Windows server (SMB) <a name="connectData Box2smb"></a>
+## Connect Azure Data Box to Windows server (SMB)<a name="connectData Box2smb"></a>
 
 1. Login to the Azure Data Box interface using the login credentials provided by Azure 
 

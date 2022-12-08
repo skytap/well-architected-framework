@@ -155,7 +155,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 showmount -e \<IP>
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image14.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image14.png" width="300">
 
 2)  Create required directory and Mount the filesystem
 
@@ -163,13 +163,13 @@ showmount -e \<IP>
 mkdir -p \<mount point>
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image15.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image15.png" width="200">
 
 ``` powershell
 mount \<remote IP>:/\<volumename>\<mount point>
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image16.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image16.png" width="400">
 
 ``` powershell
 df -g \<mount point>
@@ -183,7 +183,7 @@ df -g \<mount point>
 cd \< mount Point>
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image18.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image18.png" width="100">
 
 ``` powershell
 ls -l
@@ -196,18 +196,16 @@ ls -l
 ## Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../../)
+> [Skytap Well-Architected Framework](../../../../../README.md)
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar](../../../../)
- 
-> * [Power Discovery](../../../../Discovery/)> [Power Discovery & Design - Workloads](../../../../Discovery/discoveryecosystems.md) 
->[Power Discovery & Design - Ecosystems](../../../../Discovery/discoveryecosystems.md)
-> * [Connectivity](../../../../connectivity/)
-> * [Ecosystems](../../../../ecosystems/)
+> [Skytap Operational Excellence Pillar](../../../../README.md)
+> * [Power Discovery](../../../../Discovery/README.md)
+> * [Connectivity](../../../../connectivity/README.md)
+> * [Ecosystems](../../../../ecosystems/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../../../resiliency/)
+> [Skytap Resiliency Pillar](../../../../../resiliency/README.md)
 
 **Security**
-> [Skytap Security Pillar](../../../../../security/)
+> [Skytap Security Pillar](../../../../../security/README.md)
