@@ -9,7 +9,7 @@ This guide is provided “as-is”. Information and views expressed in this document
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
-# Table of Contents <a name="toc"></a>
+# Table of Contents<a name="toc"></a>
 
 * [Prechecks](#prechecks)
 * [Backing up On-Prem System using Mksysb Backup Execution](#backing-up-on-prem-system-using-mksysb-backup-execution)
@@ -32,7 +32,7 @@ This document does not provide you with any legal rights to any
 intellectual property in any product. You may copy and use this document
 for your internal reference purposes.
 
-#  Prechecks 
+#  Prechecks<a name="prechecks"></a>
 
 1.  Error logs for any OS level issues.
 
@@ -43,7 +43,9 @@ for your internal reference purposes.
 
 4.  Enough free space to backup all files in a filesystem.
 
-# Backing up On-Prem System using Mksysb  Backup Execution 
+###### *[Back to the Top](#toc)*
+
+# Backing up On-Prem System using Mksysb  Backup Execution<a name="backing-up-on-prem-system-using-mksysb-backup-execution"></a>
 
 1.  Populate the /tmp/exclude.rootvg file for excluding the file systems from the backup.
 
@@ -59,9 +61,10 @@ Note: It may take some time to complete the backup
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image3.png">
 
-## Transferring Mksysb to Skytap
+###### *[Back to the Top](#toc)*
+## Transferring Mksysb to Skytap<a name="transferring-mksysb-to-skytap"></a>
 
-### Option 1 - Direct Connectivity
+### Option 1 - Direct Connectivity<a name="option-1---direct-connectivity"></a>
 
 **Pros:**
 
@@ -75,7 +78,7 @@ Note: It may take some time to complete the backup
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image4.png">
 
-### Option 2 - Published Service
+### Option 2 - Published Service<a name="option-2---published-service"></a>
 
 **Pros:**
 
@@ -91,7 +94,7 @@ Note: It may take some time to complete the backup
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image5.png">
 
-### Option 3 - Azure Blob
+### Option 3 - Azure Blob<a name="option-3---azure-blob"></a>
 
 **Pros:**
 
@@ -107,9 +110,11 @@ Note: It may take some time to complete the backup
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image6.png">
 
-# Restore In Skytap
+###### *[Back to the Top](#toc)*
 
-##  Initiate a NIM server in Skytap 
+# Restore In Skytap<a name="restore-in-skytap"></a>
+
+##  Initiate a NIM server in Skytap<a name="initiate-a-nim-server-in-skytap"></a>
 
 1.  Deploy a new NIM AIX template using public templates (latest AIX level recommended).
 
@@ -130,7 +135,10 @@ Note: It may take some time to complete the backup
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image11.png">
 
 5.  Power on the LPAR and logon with root access.
-<!--- ### Configure NIM Server
+
+###### *[Back to the Top](#toc)*
+
+<!--- ### Configure NIM Server<a name="configure-nim-server"></a>
 
 1.  Check if required file sets are Installed \# lslpp -l \| grep -i nim.
 
@@ -182,7 +190,10 @@ d.  Continue installation.
 
 11. Congratulations, your NIM Server is ready!
 --->
-### Set up Client on NIM Server to Restore Mksysb
+
+###### *[Back to the Top](#toc)*
+
+### Set up Client on NIM Server to Restore Mksysb<a name="set-up-client-on-nim-server-to-restore-mksysb"></a>
 
 1. Set Hostname and /etc/hosts to exact name as the hostname used when configuring the LAPRs Network Adapter settings.
 
@@ -280,7 +291,10 @@ height="4.0510356517935255in"}
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image40.png">
 
-## Setup New LPAR and restore the Mksysb
+
+###### *[Back to the Top](#toc)*
+
+## Setup New LPAR and restore the Mksysb<a name="setup-new-lpar-and-restore-the-mksysb"></a>
 
 1.  From the Skytap dashboard, add a new LPAR in your existing
     Environment.
@@ -343,3 +357,20 @@ Note: System will enter in SMS menu.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image51.png">
 
 10. It will take approximately 10 to 20 mins. to restore Mksysb and server will reboot with the Mksysb restored.
+
+## Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../../../../README.md)
+
+**Operational Excellence**
+> [Skytap Operational Excellence Pillar](../../../../README.md)
+> * [Power Discovery](../../../../Discovery/README.md)
+> * [Connectivity](../../../../connectivity/README.md)
+> * [Ecosystems](../../../../ecosystems/README.md)
+
+**Resiliency**
+> [Skytap Resiliency Pillar](../../../../../resiliency/README.md)
+
+**Security**
+> [Skytap Security Pillar](../../../../../security/README.md)
