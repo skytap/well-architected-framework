@@ -51,15 +51,14 @@ for your internal reference purposes.
 
 2.  Use command \# mksysb -ipX /\<FS>/\<hostname>.mksysb.
 
-![Text Description automatically
-generated]<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image2.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image2.png" width="400">
 
 Note: It may take some time to complete the backup
 
 3.  Verify content of mksysb using \# lsmksysb -lf >
     /\<FS>/\<hostname>.mksysb.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image3.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image3.png" width="400">
 
 ###### *[Back to the Top](#toc)*
 ## Transferring Mksysb to Skytap<a name="transferring-mksysb-to-skytap"></a>
@@ -76,7 +75,7 @@ Note: It may take some time to complete the backup
 
 -   Future proof
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image4.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image4.png" width="700">
 
 ### Option 2 - Published Service<a name="option-2---published-service"></a>
 
@@ -92,7 +91,7 @@ Note: It may take some time to complete the backup
 
 -   Only recommended for proof-of-concept
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image5.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image5.png" width="700">
 
 ### Option 3 - Azure Blob<a name="option-3---azure-blob"></a>
 
@@ -108,7 +107,7 @@ Note: It may take some time to complete the backup
 
 -   Data can be copied over even before Skytap service is started
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image6.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image6.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
@@ -118,21 +117,21 @@ Note: It may take some time to complete the backup
 
 1.  Deploy a new NIM AIX template using public templates (latest AIX level recommended).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image7a.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image7a.png" width="700">
 
 2.  Rename the LPAR to NIM server.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image8.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image8.png" width="700">
 
 3.  Set up the desired network and attach the network to the LPAR.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image9.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image9.png" width="400">
 
 4.  Set the desired hostname in Adapter setting.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image10.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image10.png" width="700">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image11.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image11.png" width="700">
 
 5.  Power on the LPAR and logon with root access.
 
@@ -197,37 +196,37 @@ d.  Continue installation.
 
 1. Set Hostname and /etc/hosts to exact name as the hostname used when configuring the LAPRs Network Adapter settings.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image19.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image19.png" width="600">
 
 2.  Update the /etc/hosts file with the client hostname.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image22.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image22.png" width="600">
 
 3.  Verify hostname is resolved.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image23.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image23.png" width="600">
 
 4.  Add the Client in NIM config \# smitty nim_mkmac and enter the client hostname.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image24.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image24.png" width="600">
 
 5.  Change the setting as shown below and press Enter.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image25.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image25.png" width="600">
 
 6.  NIM Client is defined and can be verified in \# lsnimn nimclient.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image26.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image26.png" width="600">
 
 7.  Copy the Source Mksysb in a new filesystem /export/mksysb.
 
 8.  Create the filesystem \# crfs -v jfs2 -m /export/mksysb -A > yes -a size=10G -r rootvg.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image27.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image27.png" width="600">
 
 9.  List the mksysb file content lsmksysb -lf.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image28.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image28.png" width="600">
 
 10.  Create the two NIM resources required for restoration.
 
@@ -235,11 +234,11 @@ d.  Continue installation.
 
 10a-1.  Mksysb - \# smitty nim_res > define a resource and select mksysb and press enter.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image29.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image29.png" width="600">
 
 10a-2.  Fill in the Name, Server of resource and location of  resource (absolute path for location of the mksysb file).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image30.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image30.png" width="600">
 
 10b.  **Spot resource**
 
@@ -247,16 +246,15 @@ d.  Continue installation.
         resource select spot and press enter (make sure > you have
         enough space in /export/spot filesystem \~2 > GB).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image31.png">{width="4.875341207349082in"
-height="2.9094050743657043in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image31.png" width="600">
 
 10b-2.  Enter Name, Server of resource, Source of Install images and Location (absolute Path for the resource "/export/spot sapaix_spot").
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image32.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image32.png" width="600">
 
 10b-3.  Creation of spot will take some time approximately 15 to 30 minutes.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image33.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image33.png" width="600">
 
 11. Assign resources to nimclient machine: \# smitty nim_mac_res.
 
@@ -264,32 +262,31 @@ height="2.9094050743657043in"}
 
 13. Use F7 or Esc+7 to select the sapmksysb and sapaix_spot and press Enter.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image34.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image34.png" width="600">
 
 14. Command output will be as below exit using F10 or esc+0.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image35.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image35.png" width="600">
 
 15. Enable Bos installation for the client \# smitty nim_mac_op nimclient.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image36.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image36.png" width="600">
 
 16. Select bos_inst and press Enter.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image37.png">{width="6.809524278215223in"
-height="4.0510356517935255in"}
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image37.png" width="600">
 
 17. Select the options shown below for mksysb restore (Use Arrow keys and F4 > or Esc+4).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image38.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image38.png" width="600">
 
 18. The setup is now complete.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image39.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image39.png" width="600">
 
 19. Verify the client Status \# lsnim -l nimclient.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image40.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image40.png" width="600">
 
 
 ###### *[Back to the Top](#toc)*
@@ -299,31 +296,31 @@ height="4.0510356517935255in"}
 1.  From the Skytap dashboard, add a new LPAR in your existing
     Environment.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image41.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image41.png" width="700">
 
 2.  Select Templates and choose any AIX template and add VM.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image42.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image42.png" width="700">
 
 3.  Edit the setting on VM and Set Hostname and IP.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image43.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image43.png" width="700">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image44.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image44.png" width="700">
 
 4.  From hardware setting assign the disks as per Source LPAR rootvg.
 
 4a.  Delete the existing disk and add new disk.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image45.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image45.png" width="700">
 
 4b.  Add new disk.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image46.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image46.png" width="700">
 
 4c.  Update the CPU/RAM if required and start the LPAR and open the console.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image47.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image47.png" width="700">
 
 Note: System will enter in SMS menu.
 
@@ -342,35 +339,44 @@ Note: System will enter in SMS menu.
 
 6.  Configure the IPS to match the IP as shown below.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image48.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image48.png" width="600">
 
 7.  Press esc to return to previous Menu and run "3 - Ping Test" -\> press 1 and enter to execute.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image49.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image49.png" width="600">
 
 8.  On successful ping press enter and return to main menu using "M".
 
 9.  Press "X" to exit and server should start boot using the LAN adapter.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image50.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image50.png" width="600">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image51.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image51.png" width="600">
 
 10. It will take approximately 10 to 20 mins. to restore Mksysb and server will reboot with the Mksysb restored.
 
-## Next steps
+#### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../../README.md)
+> [Skytap Well-Architected Framework](../../README.md)
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar](../../../../README.md)
-> * [Power Discovery](../../../../Discovery/README.md)
-> * [Connectivity](../../../../connectivity/README.md)
-> * [Ecosystems](../../../../ecosystems/README.md)
+>[Skytap Operational Excellence Pillar](../../operations/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../../../resiliency/README.md)
+>[Skytap Resiliency Pillar](../README.md)
+>* [Migration](../migrations.md)
+>* [Protection](../backups.md)
+>* [Disaster Recovery](../disasterrecovery.md)
+>* [High Availability](../ibmihadr.md)
+>
+>**Migration Solutions**
+>* [Cold (Warm) Migrations (Backup and Restore)](./ColdMigrationsOverview.md)
+>* [Hot Migrations (Replication Sync)](./HotMigrationOverview.md)
+>
+>**Design**
+>* [Design Considerations for Azure](../designconsiderationsazure.md)
+>* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
 
 **Security**
-> [Skytap Security Pillar](../../../../../security/README.md)
+> * [Skytap Security Pillar](../../security/README.md)
