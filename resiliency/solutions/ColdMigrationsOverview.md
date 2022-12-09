@@ -27,11 +27,11 @@ for AIX and IBM i (AS400).
 
 ### Additional Solutions
 
-- **[IBM i workload migration using Go Save/Restore, Option-22,23](./go-save)**
+- **[IBM i workload migration using Go Save/Restore, Option-22,23](./GoSave/ibmimigrationwithgosave.md)**
 
-- **[IBM i workload migration from on-prem to Skytap using BRMS ICC](./brms/)**
+- **[IBM i workload migration from on-prem to Skytap using BRMS ICC](./BRMS/ibmiworkloadmigration.md)**
 
-- **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide](./power-vc)**
+- **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide](./IMBiLPARMigrationWithPowerVC.md)**
 
 - **[IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box](./databoxmigrations.md)**
 
@@ -39,7 +39,7 @@ for AIX and IBM i (AS400).
 
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf" target="_blank">IBM i – Migration to Skytap using Commvault</a>**
 
-- **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](./commvault)**
+- **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](./SkytapCommvaultRunbook.md)**
 
 ### Additional Resources
 
