@@ -188,10 +188,9 @@ d.  Continue installation.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image21.png">
 
 11. Congratulations, your NIM Server is ready!
---->
 
 ###### *[Back to the Top](#toc)*
-
+--->
 ### Set up Client on NIM Server to Restore Mksysb<a name="set-up-client-on-nim-server-to-restore-mksysb"></a>
 
 1. Set Hostname and /etc/hosts to exact name as the hostname used when configuring the LAPRs Network Adapter settings.
