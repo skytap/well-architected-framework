@@ -37,6 +37,8 @@ for AIX and IBM i (AS400).
 
 - **[Backup and Restore to Skytap on Azure using Mksysb](./mksysb-backupandrestore.md)**
 
+- **[Save Skytap Environment as Template and Copy to New Region](./savetemplatecopy2region/savetemplatecopy2region.md)**
+
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf" target="_blank">IBM i – Migration to Skytap using Commvault</a>**
 
 - **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](./SkytapCommvaultRunbook.md)**
