@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\operations",
     "\\operations\\connectivity",
     "\\operations\\connectivity\\ExpressRoute",
     "\\operations\\Discovery",
@@ -12,6 +11,6 @@
     "\\resiliency\\solutions",
     "\\scaleandperformance"
   ],
-  "SelectedNode": "\\resiliency\\solutions\\mksysb-backupandrestore-old.md",
+  "SelectedNode": "\\operations",
   "PreviewInSolutionExplorer": false
 }
