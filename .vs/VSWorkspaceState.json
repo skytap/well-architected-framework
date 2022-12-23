@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\operations\\connectivity",
-    "\\operations\\connectivity\\ExpressRoute",
-    "\\operations\\Discovery",
-    "\\operations\\Discovery\\discoveryworkloadsmedia",
-    "\\operations\\Discovery\\powerdiscoveryinframedia",
+    "\\operations",
     "\\operations\\ecosystems",
+    "\\operations\\ecosystems\\azurenative",
+    "\\operations\\ecosystems\\azurenative\\solutions",
+    "\\operations\\ecosystems\\azurenative\\solutions\\AzureNetAppFiles",
+    "\\operations\\ecosystems\\azurenative\\solutions\\SAP",
     "\\resiliency",
     "\\resiliency\\solutions",
-    "\\scaleandperformance"
+    "\\resiliency\\solutions\\GoSave"
   ],
-  "SelectedNode": "\\operations",
   "PreviewInSolutionExplorer": false
 }
