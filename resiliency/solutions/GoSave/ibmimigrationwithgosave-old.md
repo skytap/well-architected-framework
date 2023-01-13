@@ -17,11 +17,13 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Determining size to be backed up on ISO optical image](#determineisosize)
 * [Create virtual optical media](#createvom)
 * [Save, Option 22 to virtual optical media](#gosave)
-* [Save QGPL and QUSRSYS and append to existing ISO in Optical device](#appendiso)
 * [Create virtual tape media](#createvtm)
 * [Deploy IBM i in Skytap cloud](#deployinskytap)
+* [Network configuration](#netconfig)
+* [Go Restore, Option 23](#gorestore)
 * [APPENDIX](#appendix)
   * [Example Commands](#examplecommands)
+  * [Create virtual tape image catalog](#createvtic)
 
 
 ### Key Takeaways<a name="takeaways"></a>
@@ -244,70 +246,72 @@ Linux Example:
  ```
 
 ###### *[Back to the Top](#toc)*
-#### Deploy IBM i in Skytap (using NFS LPAR and Target System)<a name="deployinskytap"></a>
+#### Deploy IBM i in Skytap (using NFS LPAR and Target System<a name="deployinskytap"></a>
 
 Before we initialize the target system, we must first transfer the Optical ISO image to IBM i NFS server. The file transfer method is up to user choice- examples of file transfer methods include FTP, AZCopy using Azure storage account, or BRMS + ICC. After transferring these files to the NFS LPAR, Follow the steps for IBM i recovery using IBM i NFS server to transfer files to the target system:
 
-**Do these steps on the NFS LPAR**
+# **Step 5A: Do these steps on the NFS LPAR**
 
 -   WRKHDWRSC \*CMN -- Press Enter
 
 Make note of the Communication Resources that are Operational -- it will
 be associated with the Ethernet line(s)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image4.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image4.png">{width="6.133333333333334in"
 
 
-##### Create Virtual Optical Device<a name="createvod"></a>
+> **5A.1: Create Virtual Optical Device**
 
-1.  From the NFS LPAR use the following commands:
-```bash
-CRTDEVOPT DEVD(***OPTVRT01***) RSRCNAME(\*VRT)
-```
-3. VARY ON the Optical drive by Choosing Option 8 in WRKDEVD Optvrt01 command.
+-   Sign on to your NFS LPAR
 
-##### Create Image Catalog<a name="createimagecatalog"></a>
-1.  From the NFS LPAR use the following commands:
-```bash
-CRTIMGCLG IMGCLG(***IMGCATALOG***) DIR(\'***/DIR***\') TYPE(\*OPT) CRTDIR(\*YES)
+-   CRTDEVOPT DEVD(***OPTVRT01***) RSRCNAME(\*VRT)
 
-*CRTDIR(\*YES) (Note: only necessary if directory does not exist)
-```
+-   VARY ON the Optical drive
+
+    -   Do this by Choosing Option 8 in WRKDEVD Optvrt01 command.
+
+> **5A.2: Create image catalog**
+
+-   CRTIMGCLG IMGCLG(***IMGCATALOG***) DIR(\'***/DIR***\') TYPE(\*OPT)
+    CRTDIR(\*YES)
+
+    -   *CRTDIR(\*YES) only necessary if directory does not exist*
 
 Directory specified here should be the same directory as where the .iso
 file was created.
 
-##### Add Image to Image Catalog<a name="addimagetocatalog"></a>
-1.  From the NFS LPAR use the following commands:
-```bash
-ADDIMGCLGE IMGCLG(ORTPREM) FROMFILE('***/IMGCATALOG/Skytap30GB.iso***') TOFILE('\****fromfile***')
-```
+## **5A.3: Add image to Image Catalog**
 
-2.  Use F10 to see all parameters when adding
+-   ADDIMGCLGE IMGCLG(ORTPREM)
+    FROMFILE('***/IMGCATALOG/Skytap30GB.iso***')
+    TOFILE('\****fromfile***')
+
+-   Use F10 to see all parameters when adding
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image5.png">
 
 *Example view of screen after pressing F10 to see parameters*
 
-##### Load Image Catalog<a name="loadimagecatalog"></a>
-From the NFS LPAR load image catalog to Optical drive
+## **5A.4: Load Image Catalog** 
 
-1. Type WRKIMGCLG -- Press Enter
+-   Load image catalog to Optical drive
 
-Virtual Device name will be the device you created in prior steps.
+    -   Type WRKIMGCLG -- Press Enter
 
-2. Type 8 -- Press Enter
+    -   Virtual Device name will be the device you created in prior
+        steps
+
+    -   Type 8 -- Press Enter
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image6.png">
 
-##### Verify Image Catalog<a name="verifyimagecatalog"></a>
-Note: This may take a few minutes.
+## **5A.6: Verify image Catalog (May take a few minutes)**
 
-1. From the NFS LPAR on the next screen, for the image catalog you just created
+-   On the next screen, for the image catalog you just created
 
-2. Type 10 -- Press Enter
+-   Type 10 -- Press Enter
 
-3. On Verify Image Catalog screen:
+-   On Verify Image Catalog screen:
 
     -   "Verify type" = \*LIC
 
@@ -321,47 +325,38 @@ Note: This may take a few minutes.
 <br>
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image9.png">
 
-##### Start the NFS server and change NFS export options<a name="startnfsandupdateoptions"></a>
-1.  From the NFS LPAR use the following commands:
-```bash
-STRNFSSVR SERVER(\*All)
-```
+**5A.7: Start the NFS server and change NFS export options**
+
+-   STRNFSSVR SERVER(\*All)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image10.png">
 
-```bash
-CHGNFSEXP OPTIONS('-i -o ro') DIR('/**xx**')
-```
-*Don't forget the single quotation marks!*
+-   CHGNFSEXP OPTIONS('-i -o ro') DIR('/**xx**')
+
+    -   *Don't forget the single quotation marks!*
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/gosavemedia/image11.png">
 
-##### Change object authorities and TFTP attributes<a name="changeattributes"></a>
-1.  From the NFS LPAR use the following commands:
-```bash
-CHGAUT OBJ(\'**/*Dir'***) USER(\*PUBLIC) DTAAUT(\*RWX) SUBTREE(\*ALL)
+## **5A.8: Change object authorities and TFTP attributes:**
 
-CHGTFTPA AUTOSTART(\*YES) ALTSRCDIR(\'**/*Dir'***)
+-   CHGAUT OBJ(\'**/*Dir'***) USER(\*PUBLIC) DTAAUT(\*RWX)
+    SUBTREE(\*ALL)
 
-CHGAUT OBJ(\'**/*Dir'***) USER(QTFTP) DTAAUT(\*RX) SUBTREE(\*ALL)
-```
+-   CHGTFTPA AUTOSTART(\*YES) ALTSRCDIR(\'**/*Dir'***)
 
-##### Restart the TFTP server<a name="restarttftpserv"></a>
-This is how the client and the target LPAR will be communicate.
+-   CHGAUT OBJ(\'**/*Dir'***) USER(QTFTP) DTAAUT(\*RX) SUBTREE(\*ALL)
 
-1. From the NFS LPAR use the following commands:
-```bash
-ENDTCPSVR SERVER(\*TFTP)
+## **5A.9: Restart the TFTP server (This is how the client and the target LPAR will be communicate):**
 
-STRTCPSVR SERVER(\*TFTP)
-```
+-   ENDTCPSVR SERVER(\*TFTP)
 
-##### Enable the IBM i Client (Target)
- **Follow the steps below on the IBM i Client (Target) LPAR**
+-   STRTCPSVR SERVER(\*TFTP)
 
-1. Login to SST (Service Tools) by typing **STRSST** then press enter.
+**Step 5B: Follow the steps below on the IBM i Client (Target) LPAR**
 
-2. Enter the following information:
+1.  **Login to SST (Service Tools) by typing STRSST then press enter**
+
+    -   Enter the following information:
 
 -   **Service Tools User ID:** The service tools user ID you sign on
     with. (Default is QSECOFR)
@@ -817,7 +812,81 @@ VARY OFF any other VETHLINE
 
 14. Change system name using CHGNETA
 
+## Next Steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework](../../../)
+
+**Operational Excellence**
+>[Skytap Operational Excellence Pillar](../../../operations/)
+
+**Resiliency**
+>[Skytap Resiliency Pillar](../)
+>* [Migration](../migrations)
+>* [Protection](../backups)
+>* [Disaster Recovery](../disaster-recovery)
+>* [High Availability](../ibmi-disaster-recovery)
+>
+>**Migration Solutions**
+>* [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
+>* [Cold (Warm) Migrations (Backup and Restore)](../solutions/cold-migrations)
+>
+>**Design**
+>* [Design Considerations for Azure](../design-considerations-azure)
+>* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+
+**Security**
+> * [Skytap Security Pillar](../../../security/)
+
 #### APPENDIX:<a name="appendix"></a>
+
+###### *[Back to the Top](#toc)*
+#### Example commands:<a name="examplecommands"></a>
+
+```bash
+mkdir /mydir
+```
+
+```bash
+sudo 
+``` 
+or 
+```bash 
+su
+```
+to elevate the user to root.
+
+```bash 
+mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
+```
+
+You can check to see the directory is exported with this command if the mount is not successful:
+
+```bash 
+showmount -e 10.0.0.1 (IP address for IBMi LPAR)
+```
+
+###### *[Back to the Top](#toc)*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 1. Deploy IBM i from template
 
@@ -968,32 +1037,6 @@ Linux Example:
  <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/GoSave/media/image9.png">
 
 ###### *[Back to the Top](#toc)*
-#### Example commands:<a name="examplecommands"></a>
-
-```bash
-mkdir /mydir
-```
-
-```bash
-sudo 
-``` 
-or 
-```bash 
-su
-```
-to elevate the user to root.
-
-```bash 
-mount -o nfsvers=3 10.0.0.1:/scratchASP/vtapes/home/skytap/scratchasp
-```
-
-You can check to see the directory is exported with this command if the mount is not successful:
-
-```bash 
-showmount -e 10.0.0.1 (IP address for IBMi LPAR)
-```
-
-###### *[Back to the Top](#toc)*
 
 ## Next Steps
 
@@ -1020,3 +1063,4 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 
 **Security**
 > * [Skytap Security Pillar](../../../security/)
+
