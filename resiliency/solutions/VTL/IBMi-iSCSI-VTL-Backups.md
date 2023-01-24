@@ -1,7 +1,7 @@
 ---
 Title: iSCSI VTL backups - IBM i
 Description: 
-Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager
+Authors: Ateesh Sharma - Cloud Solutions Architect
 
 ---
 # iSCSI VTL backups for IBM i running on Skytap on Azure
@@ -15,16 +15,16 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Introduction](#_Toc125454662)
 * [Scope](#takeaways)
 * [Prerequisites](#prerequisites)
-* [1. Overview of iSCSI VTL implementation on IBM i](#_Toc125454665)
-* [2. VTL - BRMS configuration and backups](#_Toc125454666)
-* [2.1 Setting up VTL in BRMS](#setting-up-vtl-in-brms)
-* [2.2 Using VTL in BRMS](#using-vtl-in-brms)
-* [2.3 Full system backups for migration](#full-system-backups-for-migration)
-* [3. Recovery to target LPAR using NFS](#_Toc125454670)
-* [3.1 NFS server steps](#nfs-server-steps)
-* [3.2 Setup LPAR for install](#setup-lpar-for-install)
-* [3.3 Perform scratch install](#perform-scratch-install)
-* [3.4 BRMS Recovery](#brms-recovery)
+* [Section 1. Overview of iSCSI VTL implementation on IBM i](#_Toc125454665)
+* [Section 2. VTL - BRMS configuration and backups](#_Toc125454666)
+* [Section 2.1 Setting up VTL in BRMS](#setting-up-vtl-in-brms)
+* [Section 2.2 Using VTL in BRMS](#using-vtl-in-brms)
+* [Section 2.3 Full system backups for migration](#full-system-backups-for-migration)
+* [Section 3. Recovery to target LPAR using NFS](#_Toc125454670)
+* [Section 3.1 NFS server steps](#nfs-server-steps)
+* [Section 3.2 Setup LPAR for install](#setup-lpar-for-install)
+* [Section 3.3 Perform scratch install](#perform-scratch-install)
+* [Section 3.4 BRMS Recovery](#brms-recovery)
 
 ### Introduction<a name="_Toc125454662"></a>
 VTLs are common in backup implementations in IBM i environments. The
@@ -79,7 +79,7 @@ Once the iSCSI VTL is configured and attached to IBM i LPARs, it shows as a norm
 ###### *[Back to the Top](#toc)*
 ### Section 2 - Virtual Tape Library - BRMS configuration and backups<a name="_Toc125454666"></a>
 
-#### Section 2.1 Setting up VTL in BRMS
+#### Section 2.1 Setting up VTL in BRMS<a name="setting-up-vtl-in-brms"></a>
 
 Below are the steps to configure iSCSI VTL on Power LPAR (UNIX):
 
@@ -146,7 +146,7 @@ Below are the steps to configure iSCSI VTL on Power LPAR (UNIX):
 
 17.   (IBM i) wrkmlbsts, you should be able to see the new media library shows up.
 
-#### Section 2.2 Using VTL in BRMS
+#### Section 2.2 Using VTL in BRMS<a name="using-vtl-in-brms"></a>
 
 Once the VTL is configured on the LPAR and as visible in the WRKMLBSTS command, it is ready to perform native backups. To use the VTL for BRMS, especially for full system backups, perform the following steps:
 
@@ -171,7 +171,7 @@ Once the VTL is configured on the LPAR and as visible in the WRKMLBSTS command, 
 
 At this stage, you are ready to use the VTL as a normal tape library for your weekly/daily backups, or as a full system backup for migration.
 
-## Section 2.3 Full system backups for migration
+## Section 2.3 Full system backups for migration<a name="full-system-backups-for-migration"></a>
 
 To perform a full system backup for migration, perform the below steps
 on the source LPAR.
@@ -194,11 +194,11 @@ on the source LPAR.
     down the source LPAR.
 
 ###### *[Back to the Top](#toc)*
-### Section 3 - Recovery to target LPAR using NFS<a href="_Toc125454670"></a>
+### Section 3 - Recovery to target LPAR using NFS<a name="_Toc125454670"></a>
 
 On Skytap, you need to create 2 LPARs (NFS and Target) and assign VTL to both. All the steps we are going to follow now will be in the system recovery report generated in the last step. Below explains the steps for better understanding.
 
-#### Section 3.1 NFS server steps
+#### Section 3.1 NFS server steps<a name="nfs-server-steps"></a>
 
 Perform the below steps on the NFS LPAR to perform LIC and OS restore on
 target LPAR using NFS.
@@ -258,7 +258,7 @@ STRTCPSVR SERVER(\*TFTP)
 
 The NFS LPAR is now ready for the install.
 
-#### 3.2 Setup LPAR for install
+#### 3.2 Setup LPAR for install<a name="setup-lpar-for-install"></a>
 
 On the target LPAR, you must create a LAN console which can scratch install the LIC and OS on the target LPAR using the NFS LPARs image catalogue as the source.
 
@@ -308,7 +308,7 @@ RMTINTNETA(10.0.0.2) NETIMGDIR('/QIBM/UserData/BRMS/cloud/Q1ACQ20571')
 
 The above command should show the .iso file on the NFS LPAR.
 
-#### 3.3 Perform scratch install 
+#### 3.3 Perform scratch install<a name="perform-scratch-install"></a>
 
 Perform the below steps to install LIC, and OS on the target LPAR:
 
@@ -395,7 +395,7 @@ Note: It will take some time and will show you the "Install LIC Screen."
 
 *Note: the current QSECOFR password will be QSECOFR (capital letters).*
 
-## 3.4 BRMS Recovery
+## 3.4 BRMS Recovery<a name="brms-recovery"></a>
 
 At this stage, the LIC and OS are installed on the target LPAR and you
 can proceed by taking these next steps in the recovery report.
