@@ -1,6 +1,7 @@
 ---
 Title: iSCSI VTL backups - IBM i
-Description: 
+Description: iSCSI VTL implementation in Skytap IBM i
+LPARs and the process to perform bare metal recovery
 Authors: Ateesh Sharma - Cloud Solutions Architect
 
 ---
