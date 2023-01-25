@@ -79,7 +79,7 @@ Below are the steps to configure iSCSI VTL on Power LPAR (UNIX):
 3.  On the VTL Java console, go to "Virtual tape libraries" and click on
     "New".
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image1.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image1.png" width="700">
 
 4.  After the library is created, you can create new tapes.
 
@@ -100,19 +100,19 @@ INITIATOR_NAME=>'iqn.1994-05.com.ibm:stvtl1003a.vs.target')
 
 8.  (Java Console) Add a new iSCSI client:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image3.png">
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image4.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image3.png" width="400">
+<br>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image4.png" width="400">
 
 9.  Select the Initiator Name you entered through the SQL.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image5.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image5.png" width="600">
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image6.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image6.png" width="600">
 
 10.  Complete the wizard to create this client.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image7.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image7.png" width="600">
 
 11.  Create a target for this client.
 
@@ -120,13 +120,13 @@ INITIATOR_NAME=>'iqn.1994-05.com.ibm:stvtl1003a.vs.target')
 
 12. Enter the target name to be exactly the same as in the SQL statement.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image9.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image9.png" width="600">
 
 13. Click on Next and Finish.
 
 14. Assign the virtual library to this iSCSI target:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image10.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image10.png" width="700">
 
 15. Choose the library in the assignment and follow the wizard to the end.
 
@@ -155,7 +155,7 @@ Once the VTL is configured on the LPAR and as visible in the WRKMLBSTS command, 
 
 3.  Assign the media policy you created for VTL to QNFSSYSFUL and QNFSSYSINC control groups. Do not change the media policy for QNFSIPLFUL and QNFSIPLINC, because, for these two control groups, the data will be written first on an image catalogue and then automatically to VTL tapes using the media policy of QNFSSYSFUL and QNFSSYSINC media policy details. Below is a screenshot of how these control groups should look:
 
-    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image11.png">
+    <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image11.png" width="600">
 
 At this stage, you are ready to use the VTL as a normal tape library for your weekly/daily backups, or as a full system backup for migration.
 
@@ -191,26 +191,26 @@ Perform the below steps on the NFS LPAR to perform LIC and OS restore on target 
 
 3. Highlight the tape you want to move.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image12.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image12.png" width="700">
 
 4. Click on "Move to Vault."
 
 5. Find the tape in Vault and Client on "Move to Virtual Library" then follow the GUI and choose the library you want the tape to move to.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image13.png">
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image14.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image13.png" width="700">
+<br>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image14.png" width="700">
 
 6.  INZBRM \*DEVICE\ To add this device to BRMS.
 
 7.  Restore the \*LINK information from the backups tape, restoring the data required for LIC and OS installation. The details will be in Step 1 of the recovery report. Below is an example:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image15.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image15.png" width="600">
 
 8.  Run commands in the recovery report to create an image catalogue,
     below are examples:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image16.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image16.png" width="700">
 
 9.  Verify the image catalogue with options TYPE(\*LIC) NFSSHR(\*YES).
 
@@ -244,7 +244,7 @@ On the target LPAR, you must create a LAN console which can scratch install the 
 
 2.  Vary off the interactive interface (\*IP4DHCP).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image17.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image17.png" width="500">
 
 3.  Note down the CMN resource for the Ethernet port available on the server, normally it\'s CMN03 WRKHDWRSC \*CMN.
 
@@ -262,7 +262,7 @@ STRSST -\> option 8-\> F13 (select LAN adapter) -\> option 1
 
 6.  Specify the IP details of the LPAR.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image18.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image18.png" width="700">
 
 7.  Press F7-\> F13-\> F14 -\> F3 out of the SST.
 
@@ -292,19 +292,19 @@ Perform the below steps to install LIC, and OS on the target LPAR:
 
 1.  STRNETINS with the below parameters:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image19.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image19.png" width="700">
 
 *Note: It will take some time and will show you the "Install LIC Screen."*
 
 2.  Proceed with LIC installation by taking Option 1.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image20.png">
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image21.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image20.png" width="700">
+<br>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image21.png" width="700">
 
 3.  Choose Option 2 to Install LIC and Initialize the system (on the target system that we will be building from the scratch).
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image22.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image22.png" width="700">
 
 4.  Press F10 to continue.
 
@@ -312,13 +312,13 @@ Perform the below steps to install LIC, and OS on the target LPAR:
 
 6.  Install OS using the below option (Select Option 2- Install the operating system):
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image23.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image23.png" width="700">
 
 7.  Log in using **QSECOFR**.
 
 8.  Enable automatic configuration -- Y on the set major system option screen.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image24.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image24.png" width="700">
 
 9.  Change the following on the next screen:
 
@@ -334,7 +334,7 @@ Perform the below steps to install LIC, and OS on the target LPAR:
 
 -   Define or change the system at IPL = Y
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image25.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image25.png" width="700">
 
 10. Press Enter to continue. 
 
