@@ -2,14 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\operations",
-    "\\operations\\ecosystems",
-    "\\operations\\ecosystems\\azurenative",
-    "\\operations\\ecosystems\\azurenative\\solutions",
-    "\\operations\\ecosystems\\azurenative\\solutions\\AzureNetAppFiles",
-    "\\operations\\ecosystems\\azurenative\\solutions\\SAP",
     "\\resiliency",
     "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\GoSave"
+    "\\resiliency\\solutions\\BRMS",
+    "\\resiliency\\solutions\\databoxmigrationsmedia",
+    "\\resiliency\\solutions\\GoSave",
+    "\\resiliency\\solutions\\VTL"
   ],
   "PreviewInSolutionExplorer": false
 }
