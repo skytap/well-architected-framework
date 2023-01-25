@@ -1,7 +1,6 @@
 ---
 Title: iSCSI VTL backups - IBM i
-Description: iSCSI VTL implementation in Skytap IBM i
-LPARs and the process to perform bare metal recovery
+Description: iSCSI VTL implementation in Skytap IBM i LPARs and the process to perform bare metal recovery
 Authors: Ateesh Sharma - Cloud Solutions Architect
 
 ---
@@ -28,22 +27,11 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Section 3.4 BRMS Recovery](#brms-recovery)
 
 ### Introduction<a name="_Toc125454662"></a>
-VTLs are common in backup implementations in IBM i environments. The
-features like flexibility, deduplication, compression, and replication
-make them perfect for most backup environments.
+VTLs are common in backup implementations in IBM i environments. The features like flexibility, de-duplication, compression, and replication make them perfect for most backup environments.
 
-Most of the VTLs work using Fiber connection, but Power FC connections
-are not allowed in all cloud providers due to architectural constraints.
-Therefore, in cloud implementations, we must use iSCSI-based VTLs. A
-limitation of iSCSI VTL is that it cannot take any backups which need a
-server to be in restricted mode (Go Save 21,22,23/\*SYSTEM etc.) because
-the server shuts down the TCP during these backups. As a workaround, you
-can use specially created control groups which help in automating the
-restricted backups on IBM i servers.
+Most of the VTLs work using Fiber connection, but Power FC connections are not allowed in all cloud providers due to architectural constraints. Therefore, in cloud implementations, we must use iSCSI-based VTLs. A limitation of iSCSI VTL is that it cannot take any backups which need a server to be in restricted mode (Go Save 21,22,23/\*SYSTEM etc.) because the server shuts down the TCP during these backups. As a workaround, you can use specially created control groups which help in automating the restricted backups on IBM i servers.
 
-This document overviews the iSCSI VTL implementation in Skytap IBM i
-LPARs and the process to perform bare metal recovery (full system
-backups and recovery to target LPAR).
+This document overviews the iSCSI VTL implementation in Skytap IBM i LPARs and the process to perform bare metal recovery (full system backups and recovery to target LPAR).
 
 ### Scope<a name="takeaways"></a>
 
@@ -63,9 +51,7 @@ This document covers the following topics:
 
 ### Prerequisites<a name="prerequisites"></a>
 
--   On prem-server should be at the latest **Program Temporary Fix
-    (PTFs)** level. The link below provides the minimum level of PTFs
-    for each OS version:\
+-   On prem-server should be at the latest **Program Temporary Fix (PTFs)** level. The link below provides the minimum level of PTFs for each OS version:
     [https://www.ibm.com/support/pages/system/files/inline-files/IBM i
     Support for iSCSI VTL
     1.4.pdf](https://www.ibm.com/support/pages/system/files/inline-files/IBM%20i%20Support%20for%20iSCSI%20VTL%201.4.pdf)
@@ -77,6 +63,7 @@ This document covers the following topics:
 ### Section 1 - Overview of iSCSI VTL implementation on IBM i<a name="_Toc125454665"></a>
 
 Once the iSCSI VTL is configured and attached to IBM i LPARs, it shows as a normal physical tape library with tapes in it for backup. From an IBM i OS perspective, once they are connected to the LPAR, there is no difference between a VTL and a physical tape library. The VTL can be used for BRMS or native IBM i backups.
+
 ###### *[Back to the Top](#toc)*
 ### Section 2 - Virtual Tape Library - BRMS configuration and backups<a name="_Toc125454666"></a>
 
@@ -103,10 +90,10 @@ Below are the steps to configure iSCSI VTL on Power LPAR (UNIX):
 6.  On the IBM i LPARs, create an iSCSI entry using SQL, for example:
 
 ```bash
-> CALL
-> QSYS2.ADD_ISCSI_TARGET(TARGET_NAME=>\'iqn.2000-03.com.falconstor:stvtl1003a.vs.target\',
-> TARGET_HOST_NAME=>\'10.0.1.6\',
-> INITIATOR_NAME=>\'iqn.1994-05.com.ibm:stvtl1003a.vs.target\')
+CALL
+QSYS2.ADD_ISCSI_TARGET(TARGET_NAME=>'iqn.2000-03.com.falconstor:stvtl1003a.vs.target',
+TARGET_HOST_NAME=>'10.0.1.6',
+INITIATOR_NAME=>'iqn.1994-05.com.ibm:stvtl1003a.vs.target')
 ```
 
 7. (On IBM i LPAR) Start Service Tool => Hardware service manager => Logical hardware services => System bus services => find "298A-001" Model => Opt (6) => IPL I/O processor
@@ -174,25 +161,19 @@ At this stage, you are ready to use the VTL as a normal tape library for your we
 
 ## Section 2.3 Full system backups for migration<a name="full-system-backups-for-migration"></a>
 
-To perform a full system backup for migration, perform the below steps
-on the source LPAR.
+To perform a full system backup for migration, perform the below steps on the source LPAR.
 
 1.  STRBKUBRM CTLGRP(QNFSSYSFUL) SBMJOB(\*NO)\
     This backup will be taken on VTL tape.
 
 2.  STRBKUBRM CTLGRP(QNFSIPLFUL) SBMJOB(\*NO) OMITS(\*IGNORE)\
-    This backup will be run in restricted mode. This will run OS+ backup
-    on an image catalogue -\> verify the image catalogue -\> copy the
-    image catalogue data to VTL tape using the media policy of the
-    QNFSSYSFUL control group.
+    This backup will be run in restricted mode. This will run OS+ backup on an image catalogue -\> verify the image catalogue -\> copy the image catalogue data to VTL tape using the media policy of the QNFSSYSFUL control group.
 
-3.  Verify that both backups control groups have been completed
-    successfully.
+3.  Verify that both backups control groups have been completed successfully.
 
 4.  Print the recovery report by running the STRMNTBRM command.
 
-5.  Mail this report out of the server and at this point, you can shut
-    down the source LPAR.
+5.  Mail this report out of the server and at this point, you can shut down the source LPAR.
 
 ###### *[Back to the Top](#toc)*
 ### Section 3 - Recovery to target LPAR using NFS<a name="_Toc125454670"></a>
@@ -201,45 +182,41 @@ On Skytap, you need to create 2 LPARs (NFS and Target) and assign VTL to both. A
 
 #### Section 3.1 NFS server steps<a name="nfs-server-steps"></a>
 
-Perform the below steps on the NFS LPAR to perform LIC and OS restore on
-target LPAR using NFS.
+Perform the below steps on the NFS LPAR to perform LIC and OS restore on target LPAR using NFS.
 
 1.  Ensure that the VTL is visible on the NFS LPAR.
 
 2.  Move the tape on which the backup of the source server was done to
     the NFS server's VTL.
 
-Highlight the tape you want to move.
+3. Highlight the tape you want to move.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image12.png">
 
-Click on "Move to Vault."
+4. Click on "Move to Vault."
 
-Find the tape in Vault and Client on "Move to Virtual Library" then follow the GUI and choose the library you want the tape to move to.
+5. Find the tape in Vault and Client on "Move to Virtual Library" then follow the GUI and choose the library you want the tape to move to.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image13.png">
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image14.png">
 
-3.  INZBRM \*DEVICE\ To add this device to BRMS.
+6.  INZBRM \*DEVICE\ To add this device to BRMS.
 
-4.  Restore the \*LINK information from the backups tape, restoring the
-    data required for LIC and OS installation. The details will be in
-    Step 1 of the recovery report. Below is an example:
+7.  Restore the \*LINK information from the backups tape, restoring the data required for LIC and OS installation. The details will be in Step 1 of the recovery report. Below is an example:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image15.png">
 
-5.  Run commands in the recovery report to create an image catalogue,
+8.  Run commands in the recovery report to create an image catalogue,
     below are examples:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image16.png">
 
-6.  Verify the image catalogue with options TYPE(\*LIC) NFSSHR(\*YES).
+9.  Verify the image catalogue with options TYPE(\*LIC) NFSSHR(\*YES).
 
-7.  Set up NFS export options.
+10. Set up NFS export options.
 
-8.  Run the below commands to allow the target server to read from
-    install files using NFS:
+11. Run the below commands to allow the target server to read from install files using NFS:
 
 ```bash
 STRNFSSVR \*ALL
@@ -269,7 +246,7 @@ On the target LPAR, you must create a LAN console which can scratch install the 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image17.png">
 
-3.  Note down the cmn resource for the Ethernet port available on the server, normally it\'s CMN03 WRKHDWRSC \*CMN.
+3.  Note down the CMN resource for the Ethernet port available on the server, normally it\'s CMN03 WRKHDWRSC \*CMN.
 
 4.  Vary off the LIND
  
@@ -294,7 +271,7 @@ STRSST -\> option 8-\> F13 (select LAN adapter) -\> option 1
 ```bash
 NETSTAT \*CNN -\> F14-\> 
 ```
-Note: search for port 3000
+*Note: search for port 3000*
 
 9.  Create an optical device on target LPAR pointing to the NFS LPAR(10.0.0.2).
 
@@ -317,7 +294,7 @@ Perform the below steps to install LIC, and OS on the target LPAR:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image19.png">
 
-Note: It will take some time and will show you the "Install LIC Screen."
+*Note: It will take some time and will show you the "Install LIC Screen."*
 
 2.  Proceed with LIC installation by taking Option 1.
 
@@ -325,25 +302,21 @@ Note: It will take some time and will show you the "Install LIC Screen."
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image21.png">
 
-3.  Choose Option 2 to Install LIC and Initialize the system (on the
-    target system that we will be building from the scratch).
+3.  Choose Option 2 to Install LIC and Initialize the system (on the target system that we will be building from the scratch).
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image22.png">
 
 4.  Press F10 to continue.
 
-5.  Post LIC Installation, do Disk Initialization if you have more than
-    1 LUN assigned on target LPAR.
+5.  Post LIC Installation, do Disk Initialization if you have more than 1 LUN assigned on target LPAR.
 
-6.  Install OS using the below option (Select Option 2- Install the
-    operating system):
+6.  Install OS using the below option (Select Option 2- Install the operating system):
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image23.png">
 
 7.  Log in using **QSECOFR**.
 
-8.  Enable automatic configuration -- Y on the set major system option
-    screen.
+8.  Enable automatic configuration -- Y on the set major system option screen.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/VTL/iscsivtlmedia/image24.png">
 
@@ -365,8 +338,7 @@ Note: It will take some time and will show you the "Install LIC Screen."
 
 10. Press Enter to continue. 
 
-11. Select Option 3 twice (Select System Value Commands > Work with
-    System Values) to change the following system values:
+11. Select Option 3 twice (Select System Value Commands > Work with System Values) to change the following system values:
 
 -   QALWOBJRST \*ALL                           
 
@@ -398,8 +370,7 @@ Note: It will take some time and will show you the "Install LIC Screen."
 
 ## 3.4 BRMS Recovery<a name="brms-recovery"></a>
 
-At this stage, the LIC and OS are installed on the target LPAR and you
-can proceed by taking these next steps in the recovery report.
+At this stage, the LIC and OS are installed on the target LPAR and you can proceed by taking these next steps in the recovery report.
 
 1.  Recreate the virtual optical device on the target LPAR:
 
@@ -407,26 +378,21 @@ can proceed by taking these next steps in the recovery report.
 CRTDEVOPT DEVD(OPTVRT01) RSRCNAME(\*VRT) LCLINTNETA(\*SRVLAN) RMTINTNETA(10.0.0.2) NETIMGDIR(\'/QIBM/UserData/BRMS/cloud/Q1ACQ20571\').
 ```
 
-2.  Perform steps specified in the recovery report Step 5 (recover the
-    BRMS product and libraries).
+2.  Perform steps specified in the recovery report Step 5 (recover the BRMS product and libraries).
 
 3.  Skip Step 6 in the recovery report.
 
 4.  Perform Steps 7 to 14 in the recovery report, skipping Step 8).
 
-5.  Save the QSQL library from NFS/ source LPAR, FTP it to target LPAR
-    and restore it to target LPAR.
+5.  Save the QSQL library from NFS/ source LPAR, FTP it to target LPAR and restore it to target LPAR.
 
-6.  Configure and assign VTL to the target LPAR and move the backup
-    tapes to it.
+6.  Configure and assign VTL to the target LPAR and move the backup tapes to it.
 
 7.  Perform Steps 16 to 32, skipping Steps 17, 23,24,25 and 28.
 
-8.  After IPL, configure the IP on LPAR as per the available CMN
-    resource.
+8.  After IPL, configure the IP on LPAR as per the available CMN resource.
 
-At this stage, the full system restore of the LPAR is completed and the
-LPAR can be released for user testing.
+At this stage, the full system restore of the LPAR is completed and the LPAR can be released for user testing.
 
 ###### *[Back to the Top](#toc)*
 
