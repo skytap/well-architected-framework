@@ -31,6 +31,10 @@ The two numbers above, combined with contingencies like distance, amount of data
 This is VERY similar to a WARM versus HOT migration, and the same tools may be utilized.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/media/backuptypes.png" width="800">
 
+### Additional Solutions
+
+- **[iSCSI VTL backups for IBM i running on Skytap on Azure](./solutions/VTL/IBMi-iSCSI-VTL-Backups.md)**
+
 ### Next steps
 
 **Main Overview**

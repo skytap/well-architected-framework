@@ -29,6 +29,8 @@ for AIX and IBM i (AS400).
 
 - **[IBM i workload migration using Go Save/Restore, Option-22,23](./GoSave/ibmimigrationwithgosave.md)**
 
+- **[iSCSI VTL backups for IBM i running on Skytap on Azure](./VTL/IBMi-iSCSI-VTL-Backups.md)**
+
 - **[IBM i workload migration from on-prem to Skytap using BRMS ICC](./BRMS/ibmiworkloadmigration.md)**
 
 - **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide](./IMBiLPARMigrationWithPowerVC.md)**
