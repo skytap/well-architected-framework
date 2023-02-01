@@ -4,10 +4,8 @@
     "\\operations",
     "\\resiliency",
     "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\BRMS",
-    "\\resiliency\\solutions\\databoxmigrationsmedia",
-    "\\resiliency\\solutions\\GoSave",
-    "\\resiliency\\solutions\\VTL"
+    "\\resiliency\\solutions\\savetemplatecopy2region"
   ],
+  "SelectedNode": "\\resiliency\\solutions\\savetemplatecopy2region\\SaveTemplate-CopyToRegion-DeleteOldTemplate.ps1",
   "PreviewInSolutionExplorer": false
 }
