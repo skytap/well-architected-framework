@@ -42,14 +42,14 @@ round-avatar: true
 #social-network-links:
 #  email: ""
 #  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: https://www.facebook.com/Skytap/
-  github: https://github.com/skytap
-  twitter: https://twitter.com/Skytap
+facebook: https://www.facebook.com/Skytap/
+github: https://github.com/skytap/
+twitter: https://twitter.com/Skytap/
 #  patreon: 
 #  youtube: 
 #  medium: 
 #  reddit: 
-  linkedin: https://www.linkedin.com/company/skytap
+linkedin: https://www.linkedin.com/company/skytap/
 #  xing: 
 #  stackoverflow: ""
 #  snapchat: 
