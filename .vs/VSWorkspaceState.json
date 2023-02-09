@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\operations",
-    "\\resiliency",
+    "\\operations\\Discovery",
     "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\savetemplatecopy2region"
+    "\\resiliency\\solutions\\savetemplatecopy2region",
+    "\\_includes"
   ],
-  "SelectedNode": "\\resiliency\\solutions\\savetemplatecopy2region\\SaveTemplate-CopyToRegion-DeleteOldTemplate.ps1",
+  "SelectedNode": "\\_includes\\head-custom-google-analytics.html",
   "PreviewInSolutionExplorer": false
 }
