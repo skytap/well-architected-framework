@@ -44,7 +44,7 @@ LPAR Sizing and OS Support for Power
 
 * S922 System p Frames
 * IBM i P10 License Class
-* Up to 4 vCPU / 512 GB RAM per LPAR
+* Up to 16 vCPU / 512 GB RAM per LPAR
 * Higher RAM capacity supported on as needed basis (~1.6TB)
 * Supports:
     * AIX: 6.1 TL 9 SP 10

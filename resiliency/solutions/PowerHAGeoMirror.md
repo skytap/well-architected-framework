@@ -26,7 +26,9 @@ This document does not provide you with any legal rights to any intellectual pro
 * [IBM i PowerHA - Geographic Mirroring Pre-Flight Requirements](#preflight)
 * [Configuring Geographic Mirroring](#configure)
   * [Create cluster and start cluster nodes](#createandstartnodes)
-
+  * [Add nodes to the device domain](#addnodes)
+  * [Create independent ASP](#createindependentasp)
+  * [Create iASP Device Description on Backup Node](#creatiASPBackup)
 * [Section](#link)
 * [Section](#link)
 * [Next Steps](#nextsteps)
@@ -120,6 +122,8 @@ All Three nodes can interact with each other over the network. Refer to the foll
     Cluster Resource Groups and associated device registration, GEO
     Mirror Configurations and testing of Geo Mirror based switch over.
 
+###### *[Back to the Top](#toc)*
+
 ## Configuring Geographic Mirroring<a name="configure"></a>
 
 To configure geographic mirroring using IBM Navigator for i, follow the
@@ -131,17 +135,14 @@ follow the steps below:
 
 ### Create cluster ([CRTCLU](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtclu.htm)) and start cluster nodes ([STRCLUNOD](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/strclunod.htm))<a name="createandstartnodes"></a>
 
-> **CRTCLU CLUSTER(\<ClusterName>)) NODE((\<PrimaryNodeName>**
->
-> **(\<PrimaryNode_IP_Interface>)) (\<BackupNodeName>**
->
-> **(\<BackupNode_IP_Interface>))**
->
-> **CRTCLU CLUSTER(GEOCLU1) NODE((PRIMARY (\'10.0.0.1\'))**
->
-> **(BACKUP(\'10.0.0.2\')))**
->
+```bash
+CRTCLU CLUSTER(\<ClusterName>)) NODE((\<PrimaryNodeName>(\<PrimaryNode_IP_Interface>))(\<BackupNodeName>(\<BackupNode_IP_Interface>))
+```
 
+Example:
+```bash
+CRTCLU CLUSTER(GEOCLU1) NODE((PRIMARY (\'10.0.0.1\'))(BACKUP(\'10.0.0.2\')))
+```
 After the cluster is created and nodes are defined for it, you can
 start the cluster. From the primary node, type the following command
 strings:
@@ -156,7 +157,7 @@ strings:
 >
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image7.png">
 
-#### Add nodes to the device domain ([ADDDEVDMNE](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/adddevdmne.htm))
+### Add nodes to the device domain ([ADDDEVDMNE](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/adddevdmne.htm))<a name="addnodes"></a>
 
 > **ADDDEVDMNE CLUSTER(CLUSTER1) DEVDMN(DEVDMN) NODE(PRIMARY)**
 >
@@ -168,7 +169,7 @@ strings:
 > nodes show they are part of the device domain, using the **DSPCLUINF**
 > command, or **WRKCLU, Opt 7**.
 
-#### Create independent ASP ([CFGDEVASP](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/cfgdevasp.htm))
+### Create independent ASP ([CFGDEVASP](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/cfgdevasp.htm))<a name="createindependentasp"></a>
 
 Create the iASP from a command line interface from the primary node:
 
@@ -179,7 +180,7 @@ Create the iASP from a command line interface from the primary node:
 >
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image10.png">
 
-#### Create iASP Device Description on Backup Node ([CRTDEVASP](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtdevasp.htm))
+### Create iASP Device Description on Backup Node ([CRTDEVASP](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtdevasp.htm))<a name="creatiASPBackup"></a>
 
 > **CRTDEVASP DEVD(PHAIASP) RSRCNAME(PHAIASP)**
 
