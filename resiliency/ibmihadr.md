@@ -62,6 +62,10 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/hadrmedia/media/image1.png" width="700">
 
+### Additional Solutions
+
+- **[IBM i PowerHA -- Geo Mirror -- Skytap Configuration](solutions/PowerHAGeoMirror.md)**
+
 ### Next steps
 
 **Main Overview**
