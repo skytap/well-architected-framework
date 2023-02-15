@@ -28,13 +28,69 @@ Migration Considerations include:
 The following section outlines Skytap on Azure support and limits for
 IBM i and AIX.
 
-**Skytap on Azure Support and Limits for IBM i**
+***Skytap for Azure Support and Limits (IBM i)***
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image4.png" width="800">
 
-**Skytap on Azure Support and Limits for AIX**
+**Compute**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image5.png" width="800">
+LPAR Sizing and OS Support
+for Power
+
+* S922 System p Frames
+* IBM i P10 License Class
+* 512 GB RAM per LPAR
+* CPW up to 60000 per LPAR
+* Supports:
+    * IBM i:  7.2 TR 9, 7.3 TR 5, 7.4
+
+**Network**
+
+* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+  * Range: 750 Mbps Limit
+* Layer 2 networking in environment
+  * Range: Burst to 2.7 Gbps Limit
+* 10 NICs Per Host
+* 10 VPN Connections Per Account
+
+
+**Storage**
+
+* Limit of 32 Disks for POWER
+* Each Disk Limited to 2TB 
+* Storage performance scalability with VM/LPAR RAM capacity
+* IOPS up to 30K per LPAR
+
+***Skytap for Azure Support and Limits (AIX)***
+
+**Compute**
+
+LPAR Sizing and OS Support for Power
+
+* S922 System p Frames
+* IBM i P10 License Class
+* Up to 16 vCPU / 512 GB RAM per LPAR
+* Higher RAM capacity supported on as needed basis (~1.6TB)
+* Supports:
+    * AIX: 6.1 TL 9 SP 10
+    * AIX: 7.1 TL 4 SP 4, 
+    * AIX: 7.2 TL 1, SP 2
+
+**Network**
+
+* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+  * Range: 750 Mbps Limit
+* Layer 2 networking in environment
+  * Range: Burst to 2.7 Gbps Limit
+* 10 NICs Per Host
+* 10 VPN Connections Per Account
+
+
+**Storage**
+* Limit of 32 Disks for POWER
+* Each Disk Limited to 2TB 
+* Storage performance scalability with VM/LPAR RAM capacity
+* All SSD technology and encrypted
+* IOPS up to 30K per LPAR
 
 High-Level Considerations for Migration to Skytap on Azure
 

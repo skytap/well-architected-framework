@@ -23,15 +23,6 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Set up Client on NIM Server to Restore Mksysb](#set-up-client-on-nim-server-to-restore-mksysb)
 * [Setup New LPAR and restore the Mksysb](#setup-new-lpar-and-restore-the-mksysb)
 
-This guide is provided "as-is". The information and views expressed in
-this document, including URL and other Internet website references, may
-change without notice and usage of the included material assumes this
-risk.
-
-This document does not provide you with any legal rights to any
-intellectual property in any product. You may copy and use this document
-for your internal reference purposes.
-
 #  Prechecks<a name="prechecks"></a>
 
 1.  Error logs for any OS level issues.
