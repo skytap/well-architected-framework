@@ -63,7 +63,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 >[Skytap Resiliency Pillar](./README.md)
 >* [Migration](./migrations.md)
 >* [Protection](./backups.md)
->* [High Availability](./ibmihadr.md)
+>* [High Availability](./hadr.md)
 
 **Security**
 > * [Skytap Security Pillar](../security/README.md)

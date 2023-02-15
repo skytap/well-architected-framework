@@ -122,7 +122,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 >[Skytap Resiliency Pillar](../README.md)
 >* [Protection](./backups)
 >* [Disaster Recovery](./disasterrecovery.md)
->* [High Availability](./ibmihadr.md)
+>* [High Availability](./hadr.md)
 >
 >**Migration Solutions**
 >* [Hot Migrations (Replication Sync)](./solutions/HotMigrationOverview.md)
