@@ -152,7 +152,7 @@ These are the disciplines we group in the Reliability Pillar:
 | [Migration](./migrations) | The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap.   |
 | [Protection](./backups) | In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component by keeping your data safe; in this situation, RPO is more critical than RTO.  |
 | [Disaster Recovery](./disasterrecovery.md) | Disaster recovery is the process of restoring application functionality in the wake of a catastrophic loss. A comprehensive disaster recovery solution that can restore data quickly and completely is required to meet low RPO and RTO thresholds. |
-| [High Availability](./ibmihadr.md) | Avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
+| [High Availability](./hadr.md) | Avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
 
 **Main Overview**
 > [Skytap Well-Architected Framework](../README.md)
@@ -165,7 +165,7 @@ These are the disciplines we group in the Reliability Pillar:
 >* [Migration](./migrations)
 >* [Protection](./backups)
 >* [Disaster Recovery](./disasterrecovery.md)
->* [High Availability](./ibmihadr.md)
+>* [High Availability](./hadr.md)
 >
 >**Design**
 >* [Design Considerations for Azure](./designconsiderationsazure.md)

@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\operations",
-    "\\operations\\Discovery",
-    "\\resiliency\\solutions",
-    "\\resiliency\\solutions\\savetemplatecopy2region",
-    "\\_includes"
+    "\\assets",
+    "\\assets\\css",
+    "\\resiliency",
+    "\\security",
+    "\\_includes",
+    "\\_layouts"
   ],
-  "SelectedNode": "\\_includes\\head-custom-google-analytics.html",
+  "SelectedNode": "\\security\\README.md",
   "PreviewInSolutionExplorer": false
 }
