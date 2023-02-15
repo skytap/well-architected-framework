@@ -14,8 +14,8 @@ for Power
 
 * S922 System p Frames
 * IBM i P10 License Class
-* Up to 4 vCPU / 512 GB RAM per LPAR
-* CPW up to 42472 per LPAR
+* 512 GB RAM per LPAR
+* CPW up to 60000 per LPAR
 * Supports:
     * IBM i:  7.2 TR 9, 7.3 TR 5, 7.4
 
@@ -65,6 +65,7 @@ LPAR Sizing and OS Support for Power
 * Limit of 32 Disks for POWER
 * Each Disk Limited to 2TB 
 * Storage performance scalability with VM/LPAR RAM capacity
+* All SSD technology and encrypted
 * IOPS up to 30K per LPAR
 
 ### Next steps
