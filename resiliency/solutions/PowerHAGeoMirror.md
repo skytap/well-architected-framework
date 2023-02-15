@@ -47,7 +47,7 @@ PowerHA offers a complete end-to-end integrated clustering solution for DR/HA. P
 
 PowerHA geographic mirroring offers a straightforward, cost-effective, HA solution for small to mid-sized organizations. Typically, PowerHA geographic mirroring is used with internal disk storage, and it provides alternative solutions that require additional configuration and management associated with an external storage device.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image1.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image1.png" width=700>
 
 ## IBM i PowerHA - Geographic Mirroring Pre-Flight Configurations<a name="preflight"></a>
 
@@ -83,7 +83,7 @@ c)  The VMs must be attached to the configured WAN/VPNs.
 
 All Three nodes can interact with each other over the network. Refer to the following screen capture as an example.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image6.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image6.png" width=600>
 
 6.  Configuration of PowerHA (Primary and Backup Nodes) including Activation of nodes, Domain Name additions, iASP configurations, Cluster Resource Groups and associated device registration, GEO Mirror Configurations and testing of Geo Mirror based switch over.
 
@@ -147,7 +147,7 @@ CFGDEVASP ASPDEV(PHAIASP) ACTION(\*CREATE) TYPE(\*PRIMARY) PROTECT(\*NO) ENCRYPT
 CRTDEVASP DEVD(PHAIASP) RSRCNAME(PHAIASP)
 ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image11.png">
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image11.png" width=600>
 
 #### Create the Device CRG (Cluster Resource Group), but do NOT start the CRG yet ([CRTCRG](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtcrg.htm))<a name="createcrg"></a>
 
