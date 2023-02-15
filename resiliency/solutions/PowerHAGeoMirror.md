@@ -213,7 +213,7 @@ In summary, Skytap on Azure combined with the power and flexibility of IBM Power
 >* [Migration](../migrations.md)
 >* [Protection](../backups.md)
 >* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+>* [High Availability](../hadr.md)
 >
 >**Migration Solutions**
 >* [Cold (Warm) Migrations (Backup and Restore)](./ColdMigrationsOverview.md)
