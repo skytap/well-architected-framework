@@ -12,12 +12,17 @@ permalink: /resiliency/design-considerations-azure
 LPAR Sizing and OS Support
 for Power
 
-* S922 System p Frames
+* S922 Power Frames
 * IBM i P10 License Class
 * 512 GB RAM per LPAR
 * CPW up to 60000 per LPAR
 * Supports:
-    * IBM i:  7.2 TR 9, 7.3 TR 5, 7.4
+    * IBM i: 7.1 *
+    * IBM i: 7.2 TR 9
+    * IBM i: 7.3 TR 5
+    * IBM i: 7.4
+    
+ *Some specialized attention is required
 
 **Network**
 
@@ -47,9 +52,11 @@ LPAR Sizing and OS Support for Power
 * Up to 16 vCPU / 512 GB RAM per LPAR
 * Higher RAM capacity supported on as needed basis (~1.6TB)
 * Supports:
-    * AIX: 6.1 TL 9 SP 10
-    * AIX: 7.1 TL 4 SP 4, 
-    * AIX: 7.2 TL 1, SP 2
+
+  * AIX: 5.x (via versioned WPAR)
+  * AIX: 6.1 TL 9 SP 10
+  * AIX: 7.1 TL 4 SP 4 
+  * AIX: 7.2 TL 1 SP 2
 
 **Network**
 
