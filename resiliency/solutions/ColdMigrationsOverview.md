@@ -2,7 +2,7 @@
 title: Cold Migration Overview
 description: Skytap Cold Migration Partner Solutions
 author: George Stamos, Director, Solutions Architect - Business Development
-permalink: /resiliency/solutions/cold-migrations
+permalink: /resiliency/solutions/cold-migrations/
 ---
 
 ## Skytap on Azure Architecture: Skytap + Commvault
@@ -27,49 +27,49 @@ for AIX and IBM i (AS400).
 
 ### Additional Solutions
 
-- **[IBM i workload migration using Go Save/Restore, Option-22,23](./GoSave/ibmimigrationwithgosave.md)**
+- **[IBM i workload migration using Go Save/Restore, Option-22,23]({{ site.navigation.Resiliency }}solutions/GoSave/)**
 
-- **[iSCSI VTL backups for IBM i running on Skytap on Azure](./VTL/IBMi-iSCSI-VTL-Backups.md)**
+- **[iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups/)**
 
-- **[IBM i workload migration from on-prem to Skytap using BRMS ICC](./BRMS/ibmiworkloadmigration.md)**
+- **[IBM i workload migration from on-prem to Skytap using BRMS ICC]({{ site.navigation.Resiliency }}solutions/brms/)**
 
-- **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide](./IMBiLPARMigrationWithPowerVC.md)**
+- **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide]({{ site.navigation.Resiliency }}solutions/power-vc/)**
 
-- **[IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box](./databoxmigrations.md)**
+- **[IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box]({{ site.navigation.Resiliency }}solutions/databoxmigrations/)**
 
-- **[Backup and Restore to Skytap on Azure using Mksysb](./mksysb-backupandrestore.md)**
+- **[Backup and Restore to Skytap on Azure using Mksysb]({{ site.navigation.Resiliency }}solutions/mksysb-backupandrestore/)**
 
-- **[Save Skytap Environment as Template and Copy to New Region](./savetemplatecopy2region/savetemplatecopy2region.md)**
+- **[Save Skytap Environment as Template and Copy to New Region]({{ site.navigation.Resiliency }}solutions/Save-Template-Copy-To-Region/)**
 
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf" target="_blank">IBM i – Migration to Skytap using Commvault</a>**
 
-- **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2](./SkytapCommvaultRunbook.md)**
+- **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2]({{ site.navigation.Resiliency }}solutions/commvault/)**
 
 ### Additional Resources
 
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/commvault-iseries-protection-technical-whitepaper.pdf" target="_blank">Commvault Data Protection/Recovery for IBM iSeries Technical White Paper</a>**
 
-#### Next steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](./hot-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

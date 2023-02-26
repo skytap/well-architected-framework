@@ -2,7 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
-permalink: /resiliency/backups
+permalink: /resiliency/backups/
 ---
 
 
@@ -33,27 +33,25 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 
 ### Additional Solutions
 
-- **[iSCSI VTL backups for IBM i running on Skytap on Azure](./solutions/VTL/IBMi-iSCSI-VTL-Backups.md)**
+- **[iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../)
->* [Migration](./migrations)
->* [Disaster Recovery](./disaster-recovery)
->* [High Availability](./ibmi-disaster-recovery)
-
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
-
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+>
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
-
+> [Skytap Security Pillar]({{ site.navigation.Security }})

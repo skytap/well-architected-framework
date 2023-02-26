@@ -1,7 +1,7 @@
 ---
 title: Virtual Machines
 author: John Bradshaw, Principal Architect
-permalink: /security/virtual-machines
+permalink: /security/virtual-machines/
 ---
 
 ### Virtual Machines
@@ -30,7 +30,7 @@ Password-based authentication should be avoided in most cases, with public/priva
 
 Lightweight Directory Access Protocol (LPAP) is a supported authentication technology on Linux, IBM i and AIX.
 
-Terminal access should be protected with certificates, SSH can be configured to use signed certificates validated by the Secrets Manager and should be used to reduce key reuse and automated repudiation of compromised keys or users no longer with authority to connect. With IBM i the TN5250 'Green-Screen' service should be secured using SSL/TLS certificates, some guidance is documented [here](https://www.ibm.com/support/pages/configuring-ssl-telnet-and-host-servers-server-authentication-first-time), as the Green-Screen is a telnet based session which has no encryption and is susceptible to interception and exploitation.
+Terminal access should be protected with certificates, SSH can be configured to use signed certificates validated by the Secrets Manager and should be used to reduce key reuse and automated repudiation of compromised keys or users no longer with authority to connect. With IBM i the TN5250 'Green-Screen' service should be secured using SSL/TLS certificates, some guidance is documented <a href="https://www.ibm.com/support/pages/configuring-ssl-telnet-and-host-servers-server-authentication-first-time" target="_blank">here</a>, as the Green-Screen is a telnet based session which has no encryption and is susceptible to interception and exploitation.
 
 ##### Supported Implementations
 
@@ -106,21 +106,22 @@ Skytap enables local network communication by default and OS level firewall prot
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/virtualmachinesmedia/media/image2.png" width="600">
 
-## Next steps
+### Next steps
+
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
->* [Power Discovery](../operations/Discovery/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
->[Skytap Security Pillar](./)
-> * [Key Security Areas](./key-security-areas)
-> * [Security Management](./security-management)
-> * [Edge Networking](./edge-networking)
-> * [Internal Networking](./internal-networking)
-> * [Security as a Service](./security-as-a-service)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
+> * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
+> * [Security Management]({{ site.navigation.Security }}security-management)
+> * [Edge Networking]({{ site.navigation.Security }}edge-networking)
+> * [Internal Networking]({{ site.navigation.Security }}internal-networking)
+> * [Security as a Service]({{ site.navigation.Security }}security-as-a-service)

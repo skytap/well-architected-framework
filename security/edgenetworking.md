@@ -1,7 +1,7 @@
 ---
 title: Edge Networking
 author: John Bradshaw, Principal Architect
-permalink: /security/edge-networking
+permalink: /security/edge-networking/
 ---
 ## Edge Networking
 
@@ -63,7 +63,7 @@ The proxy enhances security by shielding the backend servers from the outside ne
 
 #### VPN / Private Connection
 
-Skytap supports Site-to-Site VPN as well as Private Network Connections (PNCs) using <a href="https://azure.microsoft.com/en-gb/services/expressroute/" target="_blank">Azure ExpressRoute</a> and <a href="https://www.equinix.com/solutions/cloud-infrastructure/public-cloud/connectivity/">Equinix Cloud Exchange</a>.
+Skytap supports Site-to-Site VPN as well as Private Network Connections (PNCs) using <a href="https://azure.microsoft.com/en-gb/services/expressroute/" target="_blank">Azure ExpressRoute</a> and <a href="https://www.equinix.com/solutions/cloud-infrastructure/public-cloud/connectivity/" target="_blank">Equinix Cloud Exchange</a>.
 
 ##### Site-to-Site VPN
 
@@ -126,27 +126,24 @@ In Skytap an IDS/IPS must be placed in line with the traffic as port mirroring i
 
 [^1]: A Load Balancer is shown for reference but is not within the scope of this document.
 
-## Next steps
+### Next steps
 
 **Main Overview**
-
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-
->[Skytap Operational Excellence Pillar](../operations/)
->* [Connectivity Overview](../operations/connectivity/)
->* [Getting Started with Azure Networking](../operations/connectivity/azure)
->* [Getting Started with IBM Cloud Networking](../operations/connectivity/ibm)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Connectivity Overview]({{ site.navigation.Operations }}connectivity/)
+> * [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+> * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}/connectivity/ibm)
 
 **Resiliency**
-
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
->[Skytap Security Pillar](./)
-> * [Key Security Areas](./key-security-areas)
-> * [Security Management](./security-management)
-> * [Virtual Machines](./virtual-machines)
-> * [Internal Networking](./internal-networking)
-> * [Security as a Service](./security-as-a-service)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
+> * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
+> * [Security Management]({{ site.navigation.Security }}security-management)
+> * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)
+> * [Internal Networking]({{ site.navigation.Security }}internal-networking)
+> * [Security as a Service]({{ site.navigation.Security }}security-as-a-service)

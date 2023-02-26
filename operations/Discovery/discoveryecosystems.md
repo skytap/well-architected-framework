@@ -1,7 +1,7 @@
 ---
 title: Skytap Power Discovery - Ecosystems
 author: Randy Watson, Cloud Solutions Architect - Contractor
-permalink: /operations/Discovery/ecosystems
+permalink: /operations/Discovery/ecosystems/
 ---
 
 # Gathering Infrastructure and/or Performance Data for IBM Power (IBM i, AIX/VIOS, Linux)
@@ -529,19 +529,20 @@ Includes graphic view of the last 7 days with Google graphs for free.
 ***NOTE***: *To connect your data to the Performance Navigator client see above.*
 
 ###### *[Back to the Top](#toc)*
-## Next steps
+
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar](../)
-> * [Power Discovery](../Discovery/) > [Power Discovery & Design - Workloads](./workloads)
-> * [Connectivity](../connectivity/)
-> * [Ecosystems](../ecosystems/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/) > [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

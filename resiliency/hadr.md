@@ -2,7 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: Lagath Gunasinghe - Cloud Solutions Architect
-permalink: /resiliency/ibmi-disaster-recovery
+permalink: /resiliency/ibmi-disaster-recovery/
 ---
 
 # IBM I -- High Availability and Disaster Recovery
@@ -64,26 +64,25 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 
 ### Additional Solutions
 
-- **[IBM i PowerHA -- Geo Mirror -- Skytap Configuration](solutions/PowerHAGeoMirror.md)**
+- **[IBM i PowerHA -- Geo Mirror -- Skytap Configuration]({{ site.navigation.Resiliency }}solutions/PowerHAGeoMirror/)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](./../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](./../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](./README.md)
->* [Migration](./migrations.md)
->* [Protection](./backups.md)
->* [Disaster Recovery](./disasterrecovery.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
 >
->**Design**
->* [Design Considerations for Azure](./designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](./designconsiderationsibm.md)
-
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](./../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

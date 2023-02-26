@@ -2,7 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
-permalink: /resiliency/disaster-recovery
+permalink: /resiliency/disaster-recovery/
 ---
 
 # Backup and disaster recovery for Skytap workloads
@@ -54,17 +54,16 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](./README.md)
->* [Migration](./migrations.md)
->* [Protection](./backups.md)
->* [High Availability](./hadr.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
-
+> [Skytap Security Pillar]({{ site.navigation.Security }})

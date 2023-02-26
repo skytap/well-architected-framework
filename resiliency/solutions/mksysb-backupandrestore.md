@@ -1,9 +1,10 @@
 ---
 Title: Mksysb Backup and Restore in Skytap
-
 Description: Skytap Cold Migration Solution - Backup and Restore to Skytap on Azure using Mksysb.
 Authors: Chris Eigbrett - Director, Skytap Service Delivery, Abhishek Jain – Cloud Solution Architect, Matthew Romero - Technical Product Marketing Manager
+permalink: /resiliency/solutions/mksysb-backupandrestore/
 ---
+
 # Backup and Restore to Skytap on Azure using Mksysb
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
@@ -345,28 +346,28 @@ Note: System will enter in SMS menu.
 
 10. It will take approximately 10 to 20 mins. to restore Mksysb and server will reboot with the Mksysb restored.
 
-#### Next steps<a name="nextsteps"></a>
+### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](./ColdMigrationsOverview.md)
->* [Hot Migrations (Replication Sync)](./HotMigrationOverview.md)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

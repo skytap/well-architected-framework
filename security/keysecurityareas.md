@@ -1,7 +1,7 @@
 ---
 title: Key Security Areas
 author: John Bradshaw, Principal Architect
-permalink: /security/key-security-areas
+permalink: /security/key-security-areas/
 ---
 
 ## Key Security Areas
@@ -290,20 +290,21 @@ prevent cloud sprawl or an economic denial of service.
 
 --------------------------------------------------------------------- ------------- ----------------------------------------
 
-## Next steps
+### Next steps
+
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
->[Skytap Security Pillar](./)
-> * [Security Management](./security-management)
-> * [Edge Networking](./edge-networking)
-> * [Virtual Machines](./virtual-machines)
-> * [Internal Networking](./internal-networking)
-> * [Security as a Service](./security-as-a-service)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
+> * [Security Management]({{ site.navigation.Security }}security-management)
+> * [Edge Networking]({{ site.navigation.Security }}edge-networking)
+> * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)
+> * [Internal Networking]({{ site.navigation.Security }}internal-networking)
+> * [Security as a Service]({{ site.navigation.Security }}security-as-a-service)

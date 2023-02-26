@@ -1,7 +1,7 @@
 ---
 title: Security Management
 author: John Bradshaw, Principal Architect
-permalink: /security/security-management
+permalink: /security/security-management/
 ---
 
 ### Security Management
@@ -259,20 +259,21 @@ for onwards propagation to the log management solution.
 | <a href="https://www.splunk.com/en_us/software/splunk-cloud.html" target="_blank">Splunk Cloud</a>             | Splunk          | ✔️                | ✔️              |                |                |                |
 | <a href="https://www.splunk.com/en_us/software/splunk-enterprise.html" target="_blank">Splunk Enterprise</a> | Splunk          | ✔️                | ✔️              | ✔️              | ✔️              | ✔️              |
   
-## Next steps
+### Next steps
+
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
->[Skytap Security Pillar](./)
-> * [Key Security Areas](./key-security-areas)
-> * [Edge Networking](./edge-networking)
-> * [Virtual Machines](./virtual-machines)
-> * [Internal Networking](./internal-networking)
-> * [Security as a Service](./security-as-a-service)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
+> * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
+> * [Edge Networking]({{ site.navigation.Security }}edge-networking)
+> * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)
+> * [Internal Networking]({{ site.navigation.Security }}internal-networking)
+> * [Security as a Service]({{ site.navigation.Security }}security-as-a-service)

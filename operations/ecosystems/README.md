@@ -61,24 +61,24 @@ As customers consider establishing new and more diverse data ecosystems, Skytap 
 
 ##### Design Patterns:
 
-<!-- -   [Azure Native Solutions](./azure-native/)-->
--   [SAP Workloads](./azurenative/solutions/SAP/README.md)
--   [Azure NetApp Files](./azurenative/solutions/AzureNetAppFiles/Skytap+AzureNetAppFiles.md)
+<!-- - [Azure Native Solutions]({{ site.navigation.Operations }}ecosystems/azure-native/) -->
+- [SAP Workloads]({{ site.navigation.Operations }}ecosystems/azure-native/sap-workloads)
+- [Azure NetApp Files]({{ site.navigation.Operations }}ecosystems/azure-native/skytap+netapp-files)
 
 
-#### Next steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../README.md)
->* [Power Discovery](../Discovery/README.md)
->* [Connectivity](../connectivity/README.md)
->* [Ecosystems](./README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/README.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

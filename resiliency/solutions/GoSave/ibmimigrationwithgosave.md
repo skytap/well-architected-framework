@@ -2,6 +2,7 @@
 title: IBM i workload migration using Go Save/Restore, Option 22-23
 description: Skytap Cold Migration Solution - IBM i workload migration using Go Save/Restore, Option 22-23
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect
+permalink: /resiliency/solutions/GoSave/
 ---
 
 # IBM i workload migration using Go Save/Restore, Option 22-23
@@ -995,28 +996,28 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 
 ###### *[Back to the Top](#toc)*
 
-## Next Steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](../solutions/cold-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

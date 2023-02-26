@@ -2,7 +2,7 @@
 Title: iSCSI VTL backups - IBM i
 Description: iSCSI VTL implementation in Skytap IBM i LPARs and the process to perform bare metal recovery
 Authors: Ateesh Sharma - Cloud Solutions Architect
-
+permalink: /resiliency/solutions/VTL/IBMi-iSCSI-VTL-Backups/
 ---
 # iSCSI VTL backups for IBM i running on Skytap on Azure
 
@@ -51,10 +51,7 @@ This document covers the following topics:
 
 ### Prerequisites<a name="prerequisites"></a>
 
--   On prem-server should be at the latest **Program Temporary Fix (PTFs)** level. The link below provides the minimum level of PTFs for each OS version:
-    [https://www.ibm.com/support/pages/system/files/inline-files/IBM i
-    Support for iSCSI VTL
-    1.4.pdf](https://www.ibm.com/support/pages/system/files/inline-files/IBM%20i%20Support%20for%20iSCSI%20VTL%201.4.pdf)
+-   On prem-server should be at the latest **Program Temporary Fix (PTFs)** level. The link below provides the minimum level of PTFs for each OS version: <a href="https://www.ibm.com/support/pages/system/files/inline-files/IBM%20i%20Support%20for%20iSCSI%20VTL%201.4.pdf" target="_blank">https://www.ibm.com/support/pages/system/files/inline-files/IBM i Support for iSCSI VTL 1.4.pdf</a>
 
 -   Source, target and NFS LPARs should be at a supported OS version
 
@@ -396,28 +393,28 @@ At this stage, the full system restore of the LPAR is completed and the LPAR can
 
 ###### *[Back to the Top](#toc)*
 
-## Next Steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](../solutions/cold-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

@@ -50,8 +50,8 @@ limitations and move to a more flexible and resilient cloud-based model.
 
 ##### Design Solutions:
 
--   [Internal Networking](../../security/internal-networking)
--   [Edge Networking](../../security/edge-networking)
+-   [Internal Networking]({{ site.navigation.Security }}internal-networking)
+-   [Edge Networking]({{ site.navigation.Security }}edge-networking)
 
 ## Considerations on Reliability
 
@@ -93,29 +93,27 @@ Once a connectivity pattern into Skytap networks is chosen, either via VPN or pr
 
 ## Getting Started with Networking
 
-* [Getting Started with Azure Networking](./azure)
-
-* [Getting Started with IBM Cloud Networking](./ibm)
+* [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure/)
+* [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm/)
 
 <hr>
 
-#### Next steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../)
->* [Power Discovery](../Discovery/)
->* [Connectivity](./) > [Getting Started with Azure Networking](./azure)
->* [Connectivity](./) > [Getting Started with IBM Cloud Networking](./ibm)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
-
->**Design**
->* [Design Considerations for Azure](../../resiliency/design-considerations-azure)
->* [Design Considerations for IBM Cloud](../../resiliency/design-considerations-ibm)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

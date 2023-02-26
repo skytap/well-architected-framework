@@ -2,6 +2,7 @@
 Title: Azure NetApp Files for Skytap on Azure
 Description: Connecting Azure NetApp Files to Skytap AIX machines Skytap on Azure
 Authors: Abhishek Jain – Cloud Solution Architect, Jeffry Lane – Sr. Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
+permalink: /operations/ecosystems/azure-native/skytap+netapp-files
 ---
 # Azure NetApp Files for Skytap on Azure
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
@@ -97,7 +98,7 @@ Here is sample pricing for 5TB capacity for each Service Level:
 
 ## Azure Documentation<a name="azure-documentation"></a>
 
-<https://docs.microsoft.com/en-us/azure/azure-netapp-files/>
+<a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files</a>
 
 ###### *[Back to the Top](#toc)*
 
@@ -109,7 +110,7 @@ Here is sample pricing for 5TB capacity for each Service Level:
 
 (Subscription needs to whitelisted to use ANF)
 
-1)  <https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal>
+1)  <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal</a>
 
 Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
@@ -119,7 +120,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 ## Create Pools<a name="create-pools"></a>
 
-1)  <https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool>
+1)  <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool</a>
 
 2)  Minimum 4 TB pool size allowed.
 
@@ -131,7 +132,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 ## Create Volumes<a name="create-volumes"></a>
 
-1)  <https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes>
+1)  <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes</a>
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image12.png" width="700">
 
@@ -193,19 +194,19 @@ ls -l
 
 ###### *[Back to the Top](#toc)*
 
-## Next steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar](../../../../README.md)
-> * [Power Discovery](../../../../Discovery/README.md)
-> * [Connectivity](../../../../connectivity/README.md)
-> * [Ecosystems](../../../../ecosystems/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../../../resiliency/README.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar](../../../../../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
