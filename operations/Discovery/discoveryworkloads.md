@@ -1,7 +1,7 @@
 ---
 title: Skytap Power Discovery - Workloads
 author: George Stamos, Director, Solutions Architect- Business Development
-permalink: /operations/Discovery/workloads
+permalink: /operations/Discovery/workloads/
 ---
 # Skytap Power Discovery - Workloads
 #### The following section outlines IBM Power Workload discovery: <a name="toc"></a>
@@ -68,11 +68,11 @@ organization during the discovery phase aligned to three key areas:
 
 ### Skytap Power Discovery for Workloads - Skytap for Azure Support and Limits (AIX and IBM i)<a name="designforazure"></a>
 
-> * [Design Considerations for Azure](../../resiliency/design-considerations-azure)
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
 
 <!--- ### Skytap Power Discovery for Workloads - Skytap for IBM Cloud Support and Limits (AIX and IBM i)<a name="designforibm"></a>
 
-> * [Design Considerations for IBM Cloud](../../resiliency/design-considerations-ibm) --->
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm) --->
 
 ### Skytap Power Discovery for Workloads - Sample Outputs<a name="samples"></a>
 
@@ -96,31 +96,32 @@ following commands and catalog into the BOM for the migration.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/image3.png">
 
 ###### *[Back to the Top](#toc)*
-## Next steps
+
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../)
->* [Power Discovery](../Discovery/) > [Power Discovery & Design - Ecosystems](./ecosystems)
->* [Connectivity](../connectivity/)
->* [Ecosystems](../ecosystems/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/) > [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../../resiliency/)
->* [Migration](../../resiliency/migrations)
->* [Protection](../../resiliency/backups)
->* [Disaster Recovery](../../resiliency/disaster-recovery)
->* [High Availability](../../resiliency/ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../../resiliency/solutions/hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](../../resiliency/solutions/cold-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../../resiliency/design-considerations-azure)
->* [Design Considerations for IBM Cloud](../../resiliency/design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

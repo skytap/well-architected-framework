@@ -136,23 +136,23 @@ Skytap on Azure.
 
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
-| [Power Discovery & Design - Ecosystems](./ecosystems) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage.  |
-| [Power Discovery & Design - Workloads](./workloads) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements. |
+| [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems) | Provides guidance on how to identify and document your IBM Power estate - Hardware level identification - LPAR size, CPU count, RAM, Storage.  |
+| [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads) | Provides guidance on how to identify and document your IBM Power estate - software level identification - Application requirements. |
 
-## Next steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../)
->* [Power Discovery & Design - Ecosystems](./ecosystems)
->* [Power Discovery & Design - Workloads](./workloads)
->* [Connectivity](../connectivity/)
->* [Ecosystems](../ecosystems/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
+> * [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

@@ -1,7 +1,7 @@
 ---
 title: Internal Networking
 author: John Bradshaw, Principal Architect
-permalink: /security/internal-networking
+permalink: /security/internal-networking/
 ---
 
 ## Internal Networking
@@ -99,23 +99,24 @@ Inbound proxies deployed within a workload environment are typically used to han
 
 -------------------------------------------------------------
 
-## Next steps
+### Next steps
+
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
->* [Connectivity Overview](../operations/connectivity/)
->* [Getting Started with Azure Networking](../operations/connectivity/azure)
->* [Getting Started with IBM Cloud Networking](../operations/connectivity/ibm)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Connectivity Overview]({{ site.navigation.Operations }}connectivity/)
+> * [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+> * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}/connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
->[Skytap Security Pillar](./)
-> * [Key Security Areas](./key-security-areas)
-> * [Security Management](./security-management)
-> * [Edge Networking](./edge-networking)
-> * [Virtual Machines](./virtual-machines)
-> * [Security as a Service](./security-as-a-service)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
+> * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
+> * [Security Management]({{ site.navigation.Security }}security-management)
+> * [Edge Networking]({{ site.navigation.Security }}edge-networking)
+> * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)
+> * [Security as a Service]({{ site.navigation.Security }}security-as-a-service)

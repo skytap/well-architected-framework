@@ -152,7 +152,7 @@ The **Rename VM** dialogue displays.
 
 5.  Resize the Windows boot volume to use the extra space you allocated earlier.
 
-***NOTE***: *For detailed instructions, see [**Extend a basic volume**](https://docs.microsoft.com/en-us/windows-server/storage/disk-management/extend-a-basic-volume).*
+***NOTE***: *For detailed instructions, see <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/extend-a-basic-volume" target="_blank">**Extend a basic volume**</a>.*
 
 ###### *[Back to the Top](#toc)*
 
@@ -883,28 +883,28 @@ Now that the user data has been restored onto the server, the customer can decid
 ***NOTE***: *Manual steps are required to change the IP address and hostname to match the original server. These steps are detailed in the IBM Power series guides. Users should also check the status of any private authorities that existed in the environment.*
 
 
-## Next Steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](./hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

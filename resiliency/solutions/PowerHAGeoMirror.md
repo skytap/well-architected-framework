@@ -1,8 +1,8 @@
 ---
 Title: IBM i PowerHA -- Geo Mirror -- Skytap Configuration
-
 Description: Skytap HA Solution - Skytap on Azure using IBM i PowerHA - Geo Mirror.
 Authors: Mike Neil - Vice President, Technical Field Operations
+permalink: /resiliency/solutions/PowerHAGeoMirror/
 ---
 # IBM i PowerHA -- Geo Mirror -- Skytap Configuration<a name="objective"></a>
 
@@ -95,7 +95,7 @@ To configure geographic mirroring using IBM Navigator for i, follow the steps be
 
 In a web browser, create a session with the URL system:2001, where the system is the hostname of the system. To configure using Green Screen, follow the steps below:
 
-### Create cluster ([CRTCLU](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtclu.htm)) and start cluster nodes ([STRCLUNOD](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/strclunod.htm))<a name="createandstartnodes"></a>
+### Create cluster (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtclu.htm" target="_blank">CRTCLU</a>) and start cluster nodes (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/strclunod.htm" target="_blank">STRCLUNOD</a>)<a name="createandstartnodes"></a>
 
 ```bash
 CRTCLU CLUSTER(\<ClusterName>)) NODE((\<PrimaryNodeName>(\<PrimaryNode_IP_Interface>))(\<BackupNodeName>(\<BackupNode_IP_Interface>))
@@ -117,7 +117,7 @@ STRCLUNOD CLUSTER(GCLUSTER1) NODE(BACKUP)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image7.png" width="600">
 
-### Add nodes to the device domain ([ADDDEVDMNE](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/adddevdmne.htm))<a name="addnodes"></a>
+### Add nodes to the device domain (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/adddevdmne.htm" target="_blank">ADDDEVDMNE</a>)<a name="addnodes"></a>
 
 ```bash
 ADDDEVDMNE CLUSTER(CLUSTER1) DEVDMN(DEVDMN) NODE(PRIMARY)
@@ -129,7 +129,7 @@ ADDDEVDMNE CLUSTER(CLUSTER1) DEVDMN(DEVDMN) NODE(BACKUP)
 
 **Note:** Before you continue, check the previous work. Ensure both nodes show they are part of the device domain, using the **DSPCLUINF** command, or **WRKCLU, Opt 7**.
 
-### Create independent ASP ([CFGDEVASP](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/cfgdevasp.htm))<a name="createindependentasp"></a>
+### Create independent ASP (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/cfgdevasp.htm" target="_blank">CFGDEVASP</a>)<a name="createindependentasp"></a>
 
 Create the iASP from a command line interface from the primary node:
 
@@ -141,7 +141,7 @@ CFGDEVASP ASPDEV(PHAIASP) ACTION(\*CREATE) TYPE(\*PRIMARY) PROTECT(\*NO) ENCRYPT
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image10.png" width="600">
 
-### Create iASP Device Description on Backup Node ([CRTDEVASP](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtdevasp.htm))<a name="creatiASPBackup"></a>
+### Create iASP Device Description on Backup Node (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtdevasp.htm" target="_blank">CRTDEVASP</a>)<a name="creatiASPBackup"></a>
 
 ```bash
 CRTDEVASP DEVD(PHAIASP) RSRCNAME(PHAIASP)
@@ -149,7 +149,7 @@ CRTDEVASP DEVD(PHAIASP) RSRCNAME(PHAIASP)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image11.png" width=600>
 
-#### Create the Device CRG (Cluster Resource Group), but do NOT start the CRG yet ([CRTCRG](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtcrg.htm))<a name="createcrg"></a>
+#### Create the Device CRG (Cluster Resource Group), but do NOT start the CRG yet (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtcrg.htm" target="_blank">CRTCRG</a>)<a name="createcrg"></a>
 
 ```bash
 **CRTCRG CLUSTER(CLUSTER1) CRG(PHACRG) CRGTYPE(\*DEV) EXITPGM(\*NONE) USRPRF(\*NONE) RCYDMN((PRIMARY \*PRIMARY \*LAST PRIMARY (10.0.0.1))(BACKUP \*BACKUP 1 BACKUP (10.0.0.2)) CFGOBJ((GEOIASP))**
@@ -160,7 +160,7 @@ CRTDEVASP DEVD(PHAIASP) RSRCNAME(PHAIASP)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image14.png" width="600">
 
-### Configure Geographic Mirroring ([CFGGEOMIR](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/cfggeomir.htm))<a name="configuregeomirror"></a>
+### Configure Geographic Mirroring (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/cfggeomir.htm" target="_blank">CFGGEOMIR</a>)<a name="configuregeomirror"></a>
 
 ```bash
 CFGGEOMIR ASPDEV(PHAIASP) ACTION(\*CREATE) SRCSITE(\*) TGTSITE(\*) SSN(BACKUP/PRIMARY/PHASSN) DELIVERY(\*SYNC) UNIT (\*SELECT) CLUSTER(\*) CRG(\*) MODE(\*SYNC) PRIORITY(\*HIGH)
@@ -170,13 +170,13 @@ CFGGEOMIR ASPDEV(PHAIASP) ACTION(\*CREATE) SRCSITE(\*) TGTSITE(\*) SSN(BACKUP/PR
 
 Once the command finishes successfully, post that and perform the following steps.
 
-#### Start the CRG ([STRCRG](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/strcrg.htm))<a name="startcrg"></a>
+#### Start the CRG (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/strcrg.htm" target="_blank">STRCRG</a>)<a name="startcrg"></a>
 
 ```bash
 STRCRG CLUSTER(CLUSTER1) CRG(PHACRG)
 ```
 
-#### Vary on the IASP ([VRYCFG](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/vrycfg.htm))<a name="varyoniasp"></a>
+#### Vary on the IASP (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/vrycfg.htm" target="_blank">VRYCFG</a>)<a name="varyoniasp"></a>
 
 ```bash
 VRYCFG CFGOBJ(PHAIASP) CFGTYPE(\*DEV) STATUS(\*ON)
@@ -188,7 +188,7 @@ Once varied on, you should see the following message.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image17.png" width="600">
 
-#### Start the ASP session ([DSPASPSSN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/dspaspssn.htm))<a name="startaspsession"></a>
+#### Start the ASP session (<a href="https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/dspaspssn.htm" target="_blank">DSPASPSSN</a>)<a name="startaspsession"></a>
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/powerha-geomirror-media/image18.png" width="600">
 
@@ -200,28 +200,28 @@ Once varied on, you should see the following message.
 
 In summary, Skytap on Azure combined with the power and flexibility of IBM PowerHA SystemMirror for i (PowerHA) offers a complete end-to-end cloud platform to support an organization\'s mission-critical applications as a part of its overall cloud strategy. This solution can be deployed to support both Primary and HA/DR systems fully in Skytap on Azure, or a hybrid approach where the Primary or HA/DR system remains on-prem.
 
-#### Next steps<a name="nextsteps"></a>
+### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../hadr.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](./ColdMigrationsOverview.md)
->* [Hot Migrations (Replication Sync)](./HotMigrationOverview.md)
+> **Migration Solutions**
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

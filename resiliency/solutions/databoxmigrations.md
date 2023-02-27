@@ -2,6 +2,7 @@
 Title: IBM i workload migration from on-prem to Skytap on Azure using Microsoft Azure Data Box
 Description: Skytap Cold Migration Solution - IBM i workload migration from on-premises to Skytap on Azure using Microsoft Azure Data Box
 Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer, Richard Field – Skytap Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
+permalink: /resiliency/solutions/databoxmigrations/
 ---
 # IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
@@ -55,7 +56,7 @@ The objective of this document is to capture steps to perform the following acti
 
 * On prem-server should be at the latest PTF levels
 
-* Customer should have an existing <A href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure subscription</a>
+* Customer should have an existing <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure subscription</a>
 
 * The on-prem LPAR should be on V7R2 or later OS version of IBM i
 
@@ -208,7 +209,7 @@ You can choose from the below backup solutions depending on your migration strat
 
 -   GO save 21
 
--  <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank">Go save 22+23</a>
+-  [Go save 22+23]({{ site.navigation.Resiliency }}solutions/go-save)
 
 -   Individual libraries backups
 
@@ -250,7 +251,7 @@ After this, the Azure Data Box is ready to be shipped to Microsoft.
 
 3.  Restore from a GO save 22+23 backup referring to the document below:
 
-    > <a href="https://skytap.github.io/well-architected-framework/resiliency/solutions/go-save" target="_blank"> IBM i migration to Skytap -- GO save   option 22+23</a>
+    > [IBM i migration to Skytap -- GO save   option 22+23]({{ site.navigation.Resiliency }}solutions/go-save)
 
 4.  Restore the individual libraries backups libraries from the .ISO image file by loading it on an image catalog and using RSTLIB command
 
@@ -284,28 +285,28 @@ Running 2 parallel copy gave the best speed in our tests
 
 Parallel FTP did not increase the overall speed. Be sure that the IBM i FTP parameters are tuned to give the best transfer speed.
 
-#### Next steps<a name="nextsteps"></a>
+### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Migration](../migrations.md)
->* [Protection](../backups.md)
->* [Disaster Recovery](../disasterrecovery.md)
->* [High Availability](../ibmihadr.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](./ColdMigrationsOverview.md)
->* [Hot Migrations (Replication Sync)](./HotMigrationOverview.md)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](../designconsiderationsibm.md)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

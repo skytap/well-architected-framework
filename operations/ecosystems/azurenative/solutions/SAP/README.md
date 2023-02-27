@@ -1,6 +1,7 @@
 ---
 title: SAP NetWeaver Ecosystems in Skytap on Azure
 author: George Stamos - Director, Solutions Architect - Business Development
+permalink: /operations/ecosystems/azure-native/sap-workloads
 ---
 
 # SAP on Azure Deployments 
@@ -154,19 +155,19 @@ SAP granted Skytap Cloud and Infrastructure Operations Certification based on su
 
 -   Storage per LPAR: [\<]{.ul}64TB per LPAR
 
-## Next steps
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../../../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar](../../../../README.md)
-> * [Power Discovery](../../../../Discovery/README.md)
-> * [Connectivity](../../../../connectivity/README.md)
-> * [Ecosystems](../../../../ecosystems/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../../../resiliency/README.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar](../../../../../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

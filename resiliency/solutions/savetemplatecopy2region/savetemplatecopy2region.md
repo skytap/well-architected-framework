@@ -2,11 +2,12 @@
 title: Save Template and Copy to Region
 description: Skytap Cold Migration Solution - Power workload migration using Azure Runbooks and Skytap APIs
 author: Randy Courtright - Cloud Solutions Architect
+permalink: /resiliency/solutions/Save-Template-Copy-To-Region/
 ---
 
 # Save-Template-Copy-To-Region
 
-Demonstrates use of Azure runbooks and leveraging [Skytap's API](https://help.skytap.com/api-quick-start.html#rest-api-quick-start) to: 
+Demonstrates use of Azure runbooks and leveraging <a href="https://help.skytap.com/api-quick-start.html#rest-api-quick-start" target="_blank">Skytap's API</a> to: 
 1. Create template can be created from a live environment
 1. Copy template to another region
 1. Use projects to organize
@@ -16,9 +17,9 @@ Demonstrates use of Azure runbooks and leveraging [Skytap's API](https://help.sk
 
 Often times the 'Before you Begin' steps seems to be the longest part of the journey.  The script can be run from powershell directly but for extending it we can add to Azure Runbooks 
 
-- In Azure create an [Automation Account](https://learn.microsoft.com/en-us/azure/automation/automation-create-standalone-account?tabs=azureportal) and open the resource.
+- In Azure create an <a href="https://learn.microsoft.com/en-us/azure/automation/automation-create-standalone-account?tabs=azureportal" target="_blank">Automation Account</a> and open the resource.
 - In Shared Resources 
-    - Create Credentials providing Skytap username and [API key](https://help.skytap.com/kb-find-api-token.html)
+    - Create Credentials providing Skytap username and <a href="https://help.skytap.com/kb-find-api-token.html" target="_blank">API key<a>
     - Create variables for 
       - env_to_backup (id of environment to backup)
       - sleeptime (time delay for checking busy state of template)
@@ -148,29 +149,29 @@ if($null -ne $template_copy.id){
 	set_skytap ($project_templates + $create_template.id)
 }
 ```
-## Next Steps
+
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../solutions/hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](../solutions/cold-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../../security/)
-
+> [Skytap Security Pillar]({{ site.navigation.Security }})

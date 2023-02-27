@@ -1,7 +1,7 @@
 ---
 title: EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
 author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager 
-permalink: /operations/connectivity/express-route
+permalink: /operations/connectivity/express-route/
 ---
 
 # EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
@@ -25,7 +25,7 @@ permalink: /operations/connectivity/express-route
 
 Create the initial Skytap environment that contains your VMs or LPARs.
 
-1. Login to the [Azure portal](https://portal.azure.com) and access your Skytap subscription.
+1. Login to the <a href="https://portal.azure.com" target="_blank">Azure portal</a> and access your Skytap subscription.
    
 You should land on the Dashboard page of Skytap.
 
@@ -331,24 +331,24 @@ ping 10.1.77.4
 
 Your Skytap AIX LPAR is now communicating with a VM in Azure Native.
 ###### *[Back to the Top](#toc)*
-## Next steps
+
+### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations)
->* [Power Discovery](../../operations/Discovery/)
->* [Connectivity](./) > [Getting Started with Azure Networking](./azure)
->* [Connectivity](./) > [Getting Started with IBM Cloud Networking](./ibm)
->* [Ecosystems](../../ecosystems/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../../../resiliency/)
-
->**Design**
->* [Design Considerations for Azure](../../../resiliency/design-considerations-azure)
->* [Design Considerations for IBM Cloud](../../../resiliency/design-considerations-ibm)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar](../../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

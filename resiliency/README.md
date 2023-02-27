@@ -156,29 +156,28 @@ These are the disciplines we group in the Reliability Pillar:
 
 | Operational Excellence Disciplines | Description |
 |-------------------|-------------|
-| [Migration](./migrations) | The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap.   |
-| [Protection](./backups) | In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component by keeping your data safe; in this situation, RPO is more critical than RTO.  |
-| [Disaster Recovery](./disasterrecovery.md) | Disaster recovery is the process of restoring application functionality in the wake of a catastrophic loss. A comprehensive disaster recovery solution that can restore data quickly and completely is required to meet low RPO and RTO thresholds. |
-| [High Availability](./hadr.md) | Avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
+| [Migration]({{ site.navigation.Resiliency }}migrations) | The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap.   |
+| [Protection]({{ site.navigation.Resiliency }}backups) | In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component by keeping your data safe; in this situation, RPO is more critical than RTO.  |
+| [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery) | Disaster recovery is the process of restoring application functionality in the wake of a catastrophic loss. A comprehensive disaster recovery solution that can restore data quickly and completely is required to meet low RPO and RTO thresholds. |
+| [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery) | Avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-
->* [Migration](./migrations)
->* [Protection](./backups)
->* [Disaster Recovery](./disasterrecovery.md)
->* [High Availability](./hadr.md)
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Design**
->* [Design Considerations for Azure](./designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](./designconsiderationsibm.md)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
 

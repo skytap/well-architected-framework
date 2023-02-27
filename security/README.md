@@ -80,20 +80,18 @@ each workload and each platform.
 ## Next step
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> * [Key Security Areas](./key-security-areas)
-> * [Security Management](./security-management)
-> * [Edge Networking](./edge-networking)
-> * [Virtual Machines](./virtual-machines)
-> * [Internal Networking](./internal-networking)
-> * [Security as a Service](./security-as-a-service)
-
-
+> * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
+> * [Security Management]({{ site.navigation.Security }}security-management)
+> * [Edge Networking]({{ site.navigation.Security }}edge-networking)
+> * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)
+> * [Internal Networking]({{ site.navigation.Security }}internal-networking)
+> * [Security as a Service]({{ site.navigation.Security }}security-as-a-service)

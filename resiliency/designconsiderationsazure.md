@@ -1,7 +1,7 @@
 ---
 title: Reliability Design Considerations for Azure
 author: George Stamos - Director, Solutions Architect * Business Development
-permalink: /resiliency/design-considerations-azure
+permalink: /resiliency/design-considerations-azure/
 ---
 
 ***Skytap for Azure Support and Limits (IBM i)***
@@ -78,24 +78,23 @@ LPAR Sizing and OS Support for Power
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
->* [Connectivity Overview](../operations/connectivity/)
->* [Getting Started with Azure Networking](../operations/connectivity/azure)
->* [Getting Started with IBM Cloud Networking](../operations/connectivity/ibm)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Connectivity Overview]({{ site.navigation.Operations }}connectivity/)
+> * [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+> * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}/connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](./)
->* [Migration](./migrations)
->* [Protection](./backups)
->* [Disaster Recovery](./disaster-recovery)
->* [High Availability](./ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Design**
->* [Design Considerations for IBM Cloud](./design-considerations-ibm)
+> **Design**
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../security/)
-
+> [Skytap Security Pillar]({{ site.navigation.Security }})

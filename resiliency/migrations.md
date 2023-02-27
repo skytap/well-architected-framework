@@ -2,7 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: George Stamos - Director, Solutions Architect - Business Development
-permalink: /resiliency/migrations
+permalink: /resiliency/migrations/
 ---
 
 # Principles of the reliability pillar
@@ -113,26 +113,24 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](./../README.md)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../README.md)
->* [Protection](./backups)
->* [Disaster Recovery](./disasterrecovery.md)
->* [High Availability](./hadr.md)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](./solutions/HotMigrationOverview.md)
->* [Cold (Warm) Migrations (Backup and Restore)](./solutions/ColdMigrationsOverview.md)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](./designconsiderationsazure.md)
->* [Design Considerations for IBM Cloud](./designconsiderationsibm.md)
-
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](./../security/README.md)
-
+> [Skytap Security Pillar]({{ site.navigation.Security }})

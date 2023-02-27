@@ -2,7 +2,7 @@
 title: Hot Migration Overview
 description: Skytap Hot Migration Partner Solutions
 author: George Stamos, Director, Solutions Architect - Business Development
-permalink: /resiliency/solutions/hot-migrations
+permalink: /resiliency/solutions/hot-migrations/
 ---
 
 ## Skytap on Azure + Precisely for High Availability Scenarios
@@ -80,29 +80,29 @@ The following outlines popular Precisely migration scenarios available for you t
 
 #### Additional Solutions
 
-- **[Skytap Live Clone Feature](./live-clone)**
+- **[Skytap Live Clone Feature]({{ site.navigation.Resiliency }}solutions/live-clone)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Cold (Warm) Migrations (Backup and Restore)](./cold-migrations)
+> **Migration Solutions**
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

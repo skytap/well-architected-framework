@@ -1,14 +1,13 @@
 ---
 title: Importing Power LPARs into Skytap with PowerVC
 author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
-permalink: /resiliency/solutions/power-vc
+permalink: /resiliency/solutions/power-vc/
 ---
 # Importing Power LPARs into Skytap with PowerVC - A field enablement guide
 
 ### Table of Contents <a name="toc"></a>
 
--   [Overview of using PowerVC for
-    export](#overview-of-using-powervc-for-export)
+-   [Overview of using PowerVC for export](#overview-of-using-powervc-for-export)
 
 -   [Preparing for PowerVC](#preparing-for-powervc)
 
@@ -247,8 +246,7 @@ Link to Sign in:
 
 ## Installing the software
 
-[**Installing IBM Power Virtualization Center from
-download**](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_installing_download_hmc.html)
+<a href="https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_installing_download_hmc.html" target="_blank">**Installing IBM Power Virtualization Center from download**</a>
 
 Extracting the tar image to an installation directory:
 
@@ -258,8 +256,8 @@ cd <installer location>
 tar --xvf <dvd_mount_point> powervc-install-ppc-rhel-1.3.3.0.tgz
 ```
 
-[**Installing IBM Power Virtualization Center from
-media**](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_installing_media_hmc.html)
+<a href="https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_installing_media_hmc.html" target="_blank">**Installing IBM Power Virtualization Center from
+media**</a>
 
 Mounting the DVD and extracting the installer media
 
@@ -555,25 +553,25 @@ PowerVC:
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
->* [Migration](../migrations)
->* [Protection](../backups)
->* [Disaster Recovery](../disaster-recovery)
->* [High Availability](../ibmi-disaster-recovery)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> * [Migration]({{ site.navigation.Resiliency }}migrations)
+> * [Protection]({{ site.navigation.Resiliency }}backups)
+> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
 >
->**Migration Solutions**
->* [Hot Migrations (Replication Sync)](../hot-migrations)
->* [Cold (Warm) Migrations (Backup and Restore)](../cold-migrations)
+> **Migration Solutions**
+> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
+> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
 >
->**Design**
->* [Design Considerations for Azure](../design-considerations-azure)
->* [Design Considerations for IBM Cloud](../design-considerations-ibm)
+> **Design**
+> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
+> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../security/)
+> [Skytap Security Pillar]({{ site.navigation.Security }})

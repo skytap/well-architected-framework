@@ -1,7 +1,7 @@
 ---
 title: Security as a Service
 author: John Bradshaw, Principal Architect
-permalink: /security/security-as-a-service
+permalink: /security/security-as-a-service/
 ---
 
 ## Security as a Service
@@ -44,22 +44,23 @@ wider cloud strategy.
 
 
 
-## Next steps
+### Next steps
+
 **Main Overview**
-> [Skytap Well-Architected Framework](../)
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/)
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/)
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
->[Skytap Security Pillar](./)
-> * [Key Security Areas](./key-security-areas)
-> * [Security Management](./security-management)
-> * [Edge Networking](./edge-networking)
-> * [Virtual Machines](./virtual-machines)
-> * [Internal Networking](./internal-networking)
+> [Skytap Security Pillar]({{ site.navigation.Security }})
+> * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
+> * [Security Management]({{ site.navigation.Security }}security-management)
+> * [Edge Networking]({{ site.navigation.Security }}edge-networking)
+> * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)
+> * [Internal Networking]({{ site.navigation.Security }}internal-networking)
 
 [^1]: *Cloud Security Alliance. <a href="https://downloads.cloudsecurityalliance.org/assets/research/security-as-a-service/csa-categories-securities-prep.pdf" target="_blank">[\"Defined Categories of Security as a Service\"]{.ul}</a> (PDF). Cloud Security Alliance. Retrieved 5 June 2017.*
