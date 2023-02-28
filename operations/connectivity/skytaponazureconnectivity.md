@@ -25,7 +25,7 @@ Even though Skytap on Azure is running within an Azure data center, Azure treats
   * [Connect your Skytap application to *both* On-Premises and an Azure vNet](#expressroute2vnetandonprem)
   * [Connect your Skytap application over an existing On-Premises ExpressRoute circuit, when the connection between Skytap and Azure is a VPN](#expressroute2vnetandonprem+vpn)
   * [Connect your Skytap application to *both* On-Premises and an Azure vNet, when you need transitive routing](#expressroute2vnetandonpremtransroute)
-
+* [Next steps](#next-steps)
 
 ###### *[Back to the Top](#toc)*
 
@@ -156,7 +156,7 @@ This approach will give you transitive routing between on-premises and Skytap on
         dependent on the region deployed. The IP's listed in the
         Appendix are based on the intended region for deployment.
 
-**Recommend Path**
+**Recommended Path**
 
 The recommended path to connect Skytap on Azure to on-premises and Azure
 resources is a customer-managed ExpressRoute from Skytap that has Global
