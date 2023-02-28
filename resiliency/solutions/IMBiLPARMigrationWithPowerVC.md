@@ -246,7 +246,7 @@ Link to Sign in:
 
 ## Installing the software
 
-<a href="https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_installing_download_hmc.html" target="_blank">**Installing IBM Power Virtualization Center from download**</a>
+<a href="https://www.ibm.com/docs/en/powervc/2.1.0?topic=center-installing-power-virtualization-from-download" target="_blank">**Installing IBM Power Virtualization Center from download**</a>
 
 Extracting the tar image to an installation directory:
 
@@ -256,7 +256,7 @@ cd <installer location>
 tar --xvf <dvd_mount_point> powervc-install-ppc-rhel-1.3.3.0.tgz
 ```
 
-<a href="https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_installing_media_hmc.html" target="_blank">**Installing IBM Power Virtualization Center from
+<a href="https://www.ibm.com/docs/en/powervc/2.1.0?topic=center-installing-power-virtualization-from-media" target="_blank">**Installing IBM Power Virtualization Center from
 media**</a>
 
 Mounting the DVD and extracting the installer media
@@ -454,7 +454,7 @@ powervc-image export \--image aix71
 ```
 The link below explains in detail on how to export an image, depending
 on the PowerVC version used:
-<a href="https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html</a>
+<a href="https://www.ibm.com/docs/en/powervc-cloud/2.1.0?topic=images-exporting-importing" target="_blank">https://www.ibm.com/docs/en/powervc-cloud/2.1.0?topic=images-exporting-importing</a>
 
 ###### *[Back to the Top](#toc)*
 
@@ -503,7 +503,7 @@ You can find more information here:
 
 **Q:** Do IBM PowerVC Standard Edition and IBM Cloud PowerVC Manager both can export images?
 
-**A:** Both can export images. For more information, see: <a href="https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_features_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_features_cloud.html</a>
+**A:** Both can export images. For more information, see: <a href="https://www.ibm.com/docs/en/powervc-cloud/2.1.0?topic=images-exporting-importing" target="_blank">https://www.ibm.com/docs/en/powervc-cloud/2.1.0?topic=images-exporting-importing</a>
 
 **Q:** What is the limitation to the size of LPAR export?
 
@@ -538,15 +538,9 @@ PowerVC:
 
 ## Additional resources<a  name="additionalresources"></a>
 
-- <a href="https://developer.ibm.com/powervc/2018/01/05/move-images-cloud-providers-using-powervc/" target="_blank">Move images between cloud providers -- IBM PowerVC</a>
-
 - <a href="http://www.redbooks.ibm.com/abstracts/sg248199.html?Open" target="_blank">IBM PowerVC Version 1.3.2 Introduction and Configuration</a> (Redbook)
 
-- <a href="https://developer.ibm.com/powervc/2018/01/19/whats-inside-powervc-image-ova/" target="_blank">What's Inside a PowerVC Image OVA Package -- IBM PowerVC</a>
-
-- <a href="https://developer.ibm.com/powervc/2018/04/04/exporting-importing-images-via-cli-deep-dive/" target="_blank">Exporting and importing images via the CLI: a deep dive -- IBM PowerVC</a>
-
-- <a href="https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html" target="_blank">https://www.ibm.com/support/knowledgecenter/en/SSVSPA_1.4.3/com.ibm.powervc.cloud.help.doc/powervc_export_image_cloud.html</a>
+- <a href="https://www.ibm.com/docs/en/powervc-cloud/2.1.0?topic=upgrading-powervc-210-private-cloud" target="_blank">Upgrading to PowerVC 2.1.0 Private Cloud</a>
 
 ###### *[Back to the Top](#toc)*
 
