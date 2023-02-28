@@ -48,7 +48,9 @@ Route Connection.
 
 In Skytap – Establish Private Network Connection with Express Route and Configure a Virtual Network Gateway in Azure for ExpressRoute, then Connect the ExpressRoute Circuit to the Virtual Network Gateway. To do this, you will create an Express Route definition in Skytap using the following steps.
 
-![Express Route Topo](media/ExpressRouteTopo.png)
+[Express Route Topo](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/ExpressRouteTopo.png)
+
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/ExpressRouteTopo.png">
 
 1. From the Manage Tab, Select **Public IP**
 
