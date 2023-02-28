@@ -2,7 +2,7 @@
 title: Principles of the reliability pillar
 description: Describes the principles of the reliability pillar.
 author: Lagath Gunasinghe - Cloud Solutions Architect
-permalink: /resiliency/ibmi-disaster-recovery/
+permalink: /resiliency/high-availability/
 ---
 
 # IBM I -- High Availability and Disaster Recovery
