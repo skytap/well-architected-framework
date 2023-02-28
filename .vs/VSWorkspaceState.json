@@ -3,13 +3,12 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\operations\\connectivity",
-    "\\operations\\connectivity\\ExpressRoute",
     "\\resiliency",
     "\\resiliency\\solutions",
+    "\\security",
     "\\_includes",
     "\\_layouts"
   ],
-  "SelectedNode": "\\resiliency\\solutions\\IMBiLPARMigrationWithPowerVC.md",
+  "SelectedNode": "\\security\\virtualmachines.md",
   "PreviewInSolutionExplorer": false
 }
