@@ -47,7 +47,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
-> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 >
 > **Design**
 > * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)

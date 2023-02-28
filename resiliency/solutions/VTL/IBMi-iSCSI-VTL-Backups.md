@@ -406,7 +406,7 @@ At this stage, the full system restore of the LPAR is completed and the LPAR can
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
-> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 >
 > **Migration Solutions**
 > * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)

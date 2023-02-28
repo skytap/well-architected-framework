@@ -63,7 +63,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
-> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 
 **Security**
 > [Skytap Security Pillar]({{ site.navigation.Security }})

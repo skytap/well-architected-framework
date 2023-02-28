@@ -91,7 +91,7 @@ LPAR Sizing and OS Support for Power
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
-> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 >
 > **Design**
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)

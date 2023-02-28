@@ -896,7 +896,7 @@ Now that the user data has been restored onto the server, the customer can decid
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
-> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 >
 > **Migration Solutions**
 > * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)

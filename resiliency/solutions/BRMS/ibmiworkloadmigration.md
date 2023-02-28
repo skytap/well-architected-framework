@@ -560,7 +560,7 @@ partition, you must specify the following:
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
-> * [High Availability]({{ site.navigation.Resiliency }}ibmi-disaster-recovery)
+> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 >
 > **Migration Solutions**
 > * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
