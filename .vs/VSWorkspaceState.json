@@ -3,12 +3,15 @@
     "",
     "\\assets",
     "\\assets\\css",
+    "\\operations",
+    "\\operations\\connectivity",
     "\\resiliency",
     "\\resiliency\\solutions",
+    "\\resiliency\\solutions\\savetemplatecopy2region",
     "\\security",
     "\\_includes",
     "\\_layouts"
   ],
-  "SelectedNode": "\\security\\virtualmachines.md",
+  "SelectedNode": "\\resiliency\\migrations.md",
   "PreviewInSolutionExplorer": false
 }
