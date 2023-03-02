@@ -82,7 +82,7 @@ Note: It may take around 5 minutes for the VTL resources to show up in IBM i. Th
 
 ###### *[Back to the Top](#toc)*
 
-### Backup<a name="backup"></a>
+### Backup<a name="backups"></a>
 
 1.  From your IBM i Secure Remote Access (SRA) console in Skytap use the following commands: <tt>INZBRM \* Device</tt> to add the VTL in BRMS.
 
