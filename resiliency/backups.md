@@ -34,6 +34,7 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Additional Solutions
 
 - **[iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups)**
+- **[DSI iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/DSI-iSCSI-VTL-Backups)**
 
 ### Next steps
 
