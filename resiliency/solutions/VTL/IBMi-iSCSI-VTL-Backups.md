@@ -6,7 +6,7 @@ permalink: /resiliency/solutions/VTL/IBMi-iSCSI-VTL-Backups/
 ---
 # iSCSI VTL backups for IBM i running on Skytap on Azure
 
-This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
+This guide is provided "as-is". Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
 
