@@ -4,7 +4,7 @@ Description: DSI iSCSI VTL implementation in Skytap IBM i LPARs and the process 
 Authors: Mayank Kumar - Cloud Solutions Architect
 permalink: /resiliency/solutions/VTL/DSI-iSCSI-VTL-Backups/
 ---
-# iSCSI VTL backups for IBM i running on Skytap on Azure
+# DSI iSCSI VTL backups for IBM i running on Skytap on Azure
 
 This guide is provided "as-is". Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
