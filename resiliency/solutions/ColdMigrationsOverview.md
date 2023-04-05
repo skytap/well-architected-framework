@@ -30,6 +30,8 @@ for AIX and IBM i (AS400).
 - **[IBM i workload migration using Go Save/Restore, Option-22,23]({{ site.navigation.Resiliency }}solutions/GoSave/)**
 
 - **[iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups/)**
+  
+- **[DSI iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions//VTL/DSI-iSCSI-VTL-Backups/)**
 
 - **[IBM i workload migration from on-prem to Skytap using BRMS ICC]({{ site.navigation.Resiliency }}solutions/brms/)**
 
