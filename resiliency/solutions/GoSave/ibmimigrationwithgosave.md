@@ -35,6 +35,8 @@ These are some key takeaway for developers and operators to consider from this g
 
 #### Before you begin<a name="begin"></a>
 
+* Perform review to ensure there are no corrupted objects on the source LPAR
+
 * Install latest PTFs on IBM i with below individual PTFs installed
 
   * <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels" target="_blank">Minimum</a> PTF level for IBM i
