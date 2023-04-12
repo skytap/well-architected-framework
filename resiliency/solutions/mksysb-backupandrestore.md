@@ -346,6 +346,49 @@ Note: System will enter in SMS menu.
 
 10. It will take approximately 10 to 20 mins. to restore Mksysb and server will reboot with the Mksysb restored.
 
+## **Savevg Backup and Restore in Skytap**
+
+1. Backup and restore data volumes using savevg
+
+    a. Prechecks:
+    * Minimize  active read/writing to disk to avoid file or database corruption
+    * Verify enough free space to backup volume group to your filesystem
+    
+    b. Backup execution - verify volume group has desired volumes:
+
+    * Run # lsvg and #lsvg - an app to review volumes to be backed up
+
+    * Run backup to location with sufficient space with the command # savevg -r -f /tmp/backup/app.image app
+
+    c. Copy backup to Skytap LPAR (see copy methods above for mksysb)
+
+    d. Prepare system in Skytap to restore volumes. Note: if you want to shrink your volumes when restoring, you should pick smaller sizes that are still 
+       sufficient for the data in the volume group.
+
+    * Identify physical volumes associated with the volume and their sizes
+
+      Run # lspv and # lspv hdisk1 to confirm the size in megabytes of any necessary disks
+
+    * In Skytap, add disks to your restore target of sufficient size
+
+    e. Shut down the restore LPAR in Skytap, go to edit VM and add disks
+
+    f. Pick how much storage you need and select “Save”
+
+    g. Repeat for any additional physical disks you need to add
+
+    h. Start LPAR when disks added 
+
+2. Run restores for savevg
+
+   a. Identify the sizes of your disks to make sure you are restoring to the correct locations with # lspv and # bootinfo -s hdisk1
+
+   b. Run # ls savevg -f app.image -l to confirm contents of savevg file
+
+   c. Run restore # restvg -f app.image hdisk1 (add flag -s to restore with minimum size, you can specify multiple disks if desired)
+
+   d. Finished!
+
 ### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
