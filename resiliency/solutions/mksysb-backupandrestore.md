@@ -358,6 +358,9 @@ Note: System will enter in SMS menu.
 
     * Run # lsvg and #lsvg - an app to review volumes to be backed up
 
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/mk_img1.png" width="600">
+
+
     * Run backup to location with sufficient space with the command # savevg -r -f /tmp/backup/app.image app
 
     c. Copy backup to Skytap LPAR (see copy methods above for mksysb)
