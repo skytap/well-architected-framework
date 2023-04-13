@@ -23,7 +23,7 @@ This document does not provide you with any legal rights to any intellectual pro
 <!---  * [Configure NIM Server](#configure-nim-server)--->
   * [Set up Client on NIM Server to Restore Mksysb](#set-up-client-on-nim-server-to-restore-mksysb)
 * [Setup New LPAR and restore the Mksysb](#setup-new-lpar-and-restore-the-mksysb)
-* [Savevg Backup and Restore in Skytap](#Savevg-Backup-and-Restore-in-Skytap)[
+* [Savevg Backup and Restore in Skytap](#Savevg-Backup-and-Restore-in-Skytap)
 
 #  Prechecks<a name="prechecks"></a>
 
