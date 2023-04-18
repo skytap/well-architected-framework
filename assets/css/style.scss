@@ -11,6 +11,7 @@ $font-family-fa:        "Font Awesome 5 Free";
 
 // Colors
 
+$skytap-blue:       #2890CA;
 $navbar-col:        {{ site.navbar-col }};          // #EAEAEA
 $navbar-text-col:   {{ site.navbar-text-col }};     // #404040;
 $navbar-border-col: {{ site.navbar-border-col }};   // #DDDDDD
@@ -49,6 +50,7 @@ body {
     a {
         text-decoration: none;
         font-weight: 300;
+        color: $skytap-blue;
 
         &:hover, &:focus {
             font-weight: 300;
@@ -78,7 +80,7 @@ h6 { font-size: 16px; }
     > .navbar {
         border-bottom: solid 1px $navbar-border-col;
         padding: 10px 8px;
-        background-color: $link-col;
+        background-color: $skytap-blue;
 
         .navbar-brand {
             svg { fill: $page-col; }
@@ -133,12 +135,12 @@ h6 { font-size: 16px; }
                         .icon {
                             transition: color 0.3s ease;
                             margin-right: 5px;
-                            color: $link-col;
+                            color: $skytap-blue;
                         }
 
                         &:hover {
                             color: $black;
-                            .icon { color: darken($link-col, 10%); }
+                            .icon { color: darken($skytap-blue, 10%); }
                         }
                     }
                 }
@@ -176,9 +178,7 @@ h6 { font-size: 16px; }
                 .nav-link {
                     color: $navbar-text-col;
 
-                    &:hover {
-                        color: #1f90ce;
-                    }
+                    &:hover { color: $skytap-blue; }
                 }
 
                 .dropdown-menu {
@@ -258,9 +258,7 @@ h6 { font-size: 16px; }
             }
         }
 
-        svg {
-            fill: $link-col;
-        }
+        svg { fill: $skytap-blue; }
 
         p.copyright { display: none; }
     }
