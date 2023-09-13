@@ -75,6 +75,7 @@ Figure 1: Skytap on Azure Physical Storage Architecture for Power Workloads
 
 Figure 2: Skytap on Azure Physical to Virtual Storage Architecture for Power Workloads
 
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg2.png" width=400>
 
 ### Caching
 
@@ -152,6 +153,8 @@ The primary factors that impact application performance are block size, number o
 
 Figure 3: Optimizing IOPS, throughput and latency for IBM Power workloads 
 
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg3.png" width=650>
+
 Understanding the IO requirements of your application is important and starts at the migration planning stage. SOA storage technology differs from on-premises.  For example, on-premises Power workloads often used Fiber Channel based Storage Area Networks (SANs) vs. Skytap on Azure using iSCSI across a ZFS based storage subsystem using SSD JBODS (Just a bunch of disks).
 
  
@@ -170,6 +173,7 @@ Figure 4 below summarizes the best performing configurations by block size.  The
 
 Figure 4: Skytap on Azure Power Storage Performance for IBM Power workloads by Block Size 
 
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg4.png" width=650>
 
 ## Conclusion
 
