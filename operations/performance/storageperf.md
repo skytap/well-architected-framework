@@ -75,7 +75,7 @@ Figure 1: Skytap on Azure Physical Storage Architecture for Power Workloads
 
 Figure 2: Skytap on Azure Physical to Virtual Storage Architecture for Power Workloads
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg2.png" width=400>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg5.png" width=505>
 
 ### Caching
 
@@ -173,7 +173,7 @@ Figure 4 below summarizes the best performing configurations by block size.  The
 
 Figure 4: Skytap on Azure Power Storage Performance for IBM Power workloads by Block Size 
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg4.png" width=650>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg6.png" width=650>
 
 ## Conclusion
 
