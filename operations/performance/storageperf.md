@@ -71,7 +71,7 @@ All of this is transparent to the LPAR as it sees standard SCSI disks made avail
 
 Figure 1: Skytap on Azure Physical Storage Architecture for Power Workloads 
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/performance/media/spimg1.png" width="700"> 
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg1.png" width=550>
 
 Figure 2: Skytap on Azure Physical to Virtual Storage Architecture for Power Workloads
 
