@@ -32,6 +32,7 @@ These are the disciplines we group in the operational excellence pillar:
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Ecosystems]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
