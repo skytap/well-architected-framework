@@ -1,7 +1,7 @@
 ---
 title: Skytap Operational Excellence - Performance
 author:  Mike Neil, VP of Solutions and Performance Engineering, Skytap
-permalink: /operations/performance/
+permalink: /operations/performance
 ---
 
 # Performance
