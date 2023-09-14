@@ -1,9 +1,8 @@
-
 ---
 title: Overview of the operational excellence pillar
 description: Describes the operational excellence pillar.
 author: Matthew Romero, Technical Product Marketing Manager
-permalink: /operations/performance/
+permalink: /operations/
 ---
 
 # Overview of the operational excellence pillar
