@@ -1,3 +1,10 @@
+---
+title: Overview of the performance pillar
+description: Describes the performance pillar.
+author: Mike Neil - Vice President, Solutions and Performance Engineering
+permalink: /operations/Discovery/
+---
+
 # **Skytap on Azure Storage Architecture and Performance Tuning for Skytap IBM Power Logical Partitions (LPARs)**
 
  
