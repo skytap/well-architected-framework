@@ -76,6 +76,7 @@ As customers consider establishing new and more diverse data ecosystems, Skytap 
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})

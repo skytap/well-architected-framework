@@ -146,10 +146,12 @@ Skytap on Azure.
 
 **Operational Excellence**
 > [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
-> * [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
-> * [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads)
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+    * [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
+    * [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})

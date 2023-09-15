@@ -540,8 +540,10 @@ However, if you need to connect several (or complex topologies of) vNets, you ca
 **Operational Excellence**
 > [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+  * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>
