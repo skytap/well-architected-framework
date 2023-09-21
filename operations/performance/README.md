@@ -198,15 +198,30 @@ In all cases, a Queue Depth of 10 provided the best performance, and it’s impo
 * For applications that require throughput, a 64K block size yielded the best performance.
 * For applications that are sensitive to peaks in disk latency, a block size of 8K is ideal yielding both good throughput and high IOPS.
 
- 
-
 
 ## Summary
-
- 
 
 Skytap on Azure provides a robust storage architecture designed and optimized for cloud-based IBM Power workloads. When a user is looking to migrate workloads to the Cloud, an understanding of Skytap on Azure's storage architecture and performance characteristics is critical in the design and deployment of applications.  Administrators and Architects must determine how to achieve the optimal Input/Output per second (IOPS) and data throughput requirements of their applications while minimizing latency with their decisions.
 
 <sup>[1]</sup> Adding additional disks above 32 and increasing the number of Controllers may require a disk policy to be applied to your LPAR.  This an be done by contacting Skytap support and support@skytap.com
 
 <sup>[2]</sup> IOPS and Throughput results are reported from the client LPAR
+
+
+### Next steps
+
+**Main Overview**
+> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+
+**Operational Excellence**
+> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
+
+**Resiliency**
+> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+
+**Security**
+> [Skytap Security Pillar]({{ site.navigation.Security }})

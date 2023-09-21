@@ -106,8 +106,11 @@ Once a connectivity pattern into Skytap networks is chosen, either via VPN or pr
 **Operational Excellence**
 > [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+	* [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+	* [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
+> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>

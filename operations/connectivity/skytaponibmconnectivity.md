@@ -59,8 +59,10 @@ connectivity</a> between each server.
 **Operational Excellence**
 > [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
+> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
+	* [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>

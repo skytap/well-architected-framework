@@ -104,9 +104,11 @@ following commands and catalog into the BOM for the migration.
 
 **Operational Excellence**
 > [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
-> * [Power Discovery]({{ site.navigation.Operations }}Discovery/) > [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
+> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
+    * [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
+> * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
 > [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
