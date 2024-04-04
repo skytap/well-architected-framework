@@ -45,8 +45,6 @@ for AIX and IBM i (AS400).
 
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf" target="_blank">IBM i – Migration to Skytap using Commvault</a>**
 
-- **[Commvault + Skytap - IBM i Full Backup and Restore Runbook - Version 1.2]({{ site.navigation.Resiliency }}solutions/commvault/)**
-
 ### Additional Resources
 
 - **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/commvault-iseries-protection-technical-whitepaper.pdf" target="_blank">Commvault Data Protection/Recovery for IBM iSeries Technical White Paper</a>**
