@@ -84,6 +84,7 @@ h6 { font-size: 16px; }
 
         .navbar-brand {
             svg { fill: $page-col; }
+            img { width: 180px; }
         }
 
         #skytapNavBar { flex: initial; }
@@ -100,8 +101,8 @@ h6 { font-size: 16px; }
         font-size: 16px;
 
         .navbar {
-            padding-top: 4px;
-            padding-bottom: 4px;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         .navbar-collapse {
@@ -248,7 +249,7 @@ h6 { font-size: 16px; }
         position: static;
         max-width: none;
         border-top: solid 1px $navbar-border-col;
-        padding: 20px 20px;
+        padding: 10px 20px;
         font-size: 16px;
         color: $text-col;
 
@@ -259,6 +260,8 @@ h6 { font-size: 16px; }
         }
 
         svg { fill: $skytap-blue; }
+
+        .footer-logo img { width: 120px; }
 
         p.copyright { display: none; }
     }
@@ -281,11 +284,11 @@ h6 { font-size: 16px; }
     }
     
     #main_content_wrap {
-        padding-top: 110px;
-        padding-bottom: 75px;
+        padding-top: 140px;
+        padding-bottom: 67px;
 
         .sidebar {
-            top: 110px; bottom: 75px;
+            top: 140px; bottom: 67px;
             left: 0;
             overflow-y: scroll;
         }
