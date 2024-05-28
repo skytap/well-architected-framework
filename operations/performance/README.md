@@ -193,7 +193,7 @@ In all cases, a Queue Depth of 10 provided the best performance, and it’s impo
 
 
 * Queue Depth of 10 (AIX) is ideal for multi-disk workloads regardless as the number of disks, controllers, and block size.
-* To achieve optimal performance, multiple disks and controllers are needed, but too many can be detrimental.
+* To achieve optimal performance, multiple disks and controllers are needed, but too many can be detrimental. We found the highest throughput with 6 Controllers with 192 disks. However, with multiple controllers and disks, disk latency will increase and that must be considered for your workload.
 * For applications that use a smaller block size, 4K block sizes yielded the best performance.
 * For applications that require throughput, a 64K block size yielded the best performance.
 * For applications that are sensitive to peaks in disk latency, a block size of 8K is ideal yielding both good throughput and high IOPS.
