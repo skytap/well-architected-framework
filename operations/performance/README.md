@@ -182,7 +182,7 @@ Figure 4 below summarizes the best performing configurations by block size.  The
 
 Figure 4: Skytap on Azure Power Storage Performance for IBM Power workloads by Block Size 
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg6.png" width=650>
+<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg4a.png" width=650>
 
 ## Conclusion
 
