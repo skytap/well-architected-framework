@@ -6,7 +6,7 @@ author: Matthew Romero, Technical Product Marketing Manager
 
 # Get started with the Skytap Well-Architected Framework
 
-The Skytap Well-Architected Framework helps you get started with several different guides. This article groups the guides to help you find the one that best aligns with the current state of your workloads and goals in moving to Skytap on Azure.
+The {{site.Brand}} Well-Architected Framework helps you get started with several different guides. This article groups the guides to help you find the one that best aligns with the current state of your workloads and goals in moving to Skytap on Azure.
 
 The following section details questions that are typically asked when an organization is trying to accomplish one or many goals during its cloud adoption journey.
 
