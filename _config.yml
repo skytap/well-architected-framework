@@ -44,7 +44,6 @@ share-links:
   facebook: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fskytap.github.io%2Fwell-architected-framework%2F
   email: mailto:?subject=%5BShared%20Article%5D%20Skytap%20Well-Architected%20Framework%20%7C%20Skytap%20Docs&body=Skytap%20Well-Architected%20Framework%20%7C%20Skytap%20Docs%0A%0Ahttps%3A%2F%2Fskytap.github.io%2Fwell-architected-framework%2F
 
-
 # --- Footer social media links --- #
 
 # Select the social network links that you want to show in the footer.
@@ -78,7 +77,7 @@ linkedin: https://www.linkedin.com/company/skytap/
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: 
+rss-description:
 
 # --- General options --- #
 
@@ -235,38 +234,68 @@ kramdown:
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
-      path: "" # any file that's not a post will be a "page" layout by default
-    values:
-      layout: "page"
+
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "post"
+    comments: true # add comments to all blog posts
+    social-share: true # add social media sharing buttons to all blog posts
+
+- scope:
+    path: "" # any file that's not a post will be a "page" layout by default
+  values:
+    layout: "page"
 
 # Serving
-detach              : false
-port                : 4000
-host                : 127.0.0.1
-baseurl             : "/well-architected-framework" # does not include hostname
-show_dir_listing    : false
+detach: false
+port: 4000
+host: 127.0.0.1
+baseurl: "/well-architected-framework" # does not include hostname
+show_dir_listing: false
 
 # Exclude these files from production site
 exclude:
-  - CHANGELOG.md
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - screenshot.png
-  
+- CHANGELOG.md
+- CNAME
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- screenshot.png
+
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-readme-index
-  - jekyll-remote-theme
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-readme-index
+- jekyll-remote-theme
+
+########################################
+# site variables                       #
+########################################
+
+APIdomain: https://cloud.skytap.com
+Azure: Microsoft Azure
+Brand: Skytap
+BrandName: Skytap, Inc.
+BrandURL: https://cloud.skytap.com
+ConnectivityCheckerURL: https://cloud.skytap.com/connectivity
+HelpSiteURL: https://help.skytap.com
+HTML5client: SRA client
+mimix: Assure MIMIX™ Software
+mimixbs: Precisely Assure MIMIX™ Software
+ProdName: Skytap
+ProductSiteStatic: https://cloud.skytapstatic.com
+ProductSiteURL: https://cloud.skytap.com
+soa: Skytap on Azure
+SpeedTestURL: http://speedtest.skytap.com
+SupportContact: support@skytap.com
+SupportName: Skytap Support
+SupportPortalURL: https://support.skytap.com/
+SupportRequestName: Skytap Support request
+SupportRequestURL: https://support.skytap.com/
+SupportTierLink: https://www.skytap.com/wp-content/uploads/2024/03/Skytap_Support_Offerings.pdf
+SupportTierLinkName: Support Offerings
+SupportURL: https://www.skytap.com/wp-content/uploads/2024/03/Skytap_Support_Offerings.pdf
+TrainingSiteName: Skytap Academy
+TrainingURL: https://learn.skytap.com
