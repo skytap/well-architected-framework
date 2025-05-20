@@ -10,26 +10,20 @@
 
         <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
         <!--[if lt IE 9]>
 		    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<![endif]-->
     </head>
 
     <body>
-
         <!-- HEADER -->
         <div id="header_wrap" class="header">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid justify-content-between">
-                    <a href="{{ site.navigation.Home }}" class="navbar-brand main-logo">
-                        {{ site.skytap-logo }}
-                    </a>
-
+                    <a href="{{ site.navigation.Home }}" class="navbar-brand main-logo">{{ site.skytap-logo }}</a>
                     <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#skytapNavBar" aria-controls="skytapNavBar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="skytapNavBar">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
@@ -47,7 +41,6 @@
                     </div> -->
                 </div>
             </nav>
-
             <div id="subheader_wrap">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid justify-content-end">
@@ -55,7 +48,6 @@
                             <ul class="navbar-nav me-auto mb-0">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="shareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="far fa-share-square"></i> Share </a>
-                                    
                                     <ul class="dropdown-menu" aria-labelledby="shareDropdown">
                                         <li>
                                             <a class="button button-clear button-sm button-block has-inner-focus share-twitter" target="_blank" data-bi-name="twitter" href="{{ site.share-links.twitter }}">
@@ -65,7 +57,6 @@
                                                 <span>Twitter</span>
                                             </a>
                                         </li>
-
                                         <li>
                                             <a class="button button-clear button-sm button-block has-inner-focus share-linkedin" target="_blank" data-bi-name="linkedin" href="{{ site.share-links.linkedin }}">
                                                 <span class="icon">
@@ -74,7 +65,6 @@
                                                 <span>LinkedIn</span>
                                             </a>
                                         </li>
-
                                         <li>
                                             <a class="button button-clear button-sm button-block has-inner-focus share-facebook" target="_blank" data-bi-name="facebook" href="{{ site.share-links.facebook }}">
                                                 <span class="icon">
@@ -83,7 +73,6 @@
                                                 <span>Facebook</span>
                                             </a>
                                         </li>
-
                                         <li>
                                             <a class="button button-clear button-sm button-block has-inner-focus share-email" target="_blank" data-bi-name="email" href="{{ site.share-links.email }}">
                                                 <span class="icon">
@@ -114,10 +103,7 @@
             <div class="row">
                 <div class="sidebar col-12 col-sm-4 col-lg-3">
                     <ul class="nav nav-pills flex-column">
-                        <li class="nav-item">
-                            <a href="{{ site.navigation.Home }}" class="nav-link">Home</a>
-                        </li>
-
+                        <li class="nav-item"><a href="{{ site.navigation.Home }}" class="nav-link">Home</a></li>
                         <li class="nav-item dropdown">
                             <a href="{{ site.navigation.Operations }}" class="nav-link">Operational Excellence</a>
                             <div class="dropdown-menu show">
@@ -126,21 +112,16 @@
                                     <a href="{{ site.navigation.Operations }}Discovery/ecosystems" class="dropdown-item inner-item">Ecosystem Discovery</a>
                                     <a href="{{ site.navigation.Operations }}Discovery/workloads" class="dropdown-item inner-item">Workload Discovery</a>
                                 </div>
-
                                 <a href="{{ site.navigation.Operations }}connectivity/" class="dropdown-item">Connectivity</a>
                                 <div class="inner-menu">
                                     <a href="{{ site.navigation.Operations }}connectivity/azure" class="dropdown-item inner-item">Azure Networking</a>
-                                    <a href="{{ site.navigation.Operations }}connectivity/ibm" class="dropdown-item inner-item">IBM Cloud Networking</a>
+                                    <a href="{{ site.navigation.Operations }}connectivity/ibm" class="dropdown-item inner-item">{{site.ICloud}} Networking</a>
                                 </div>
-
                                 <a href="{{ site.navigation.Operations }}ecosystems" class="dropdown-item">Ecosystems</a>
-
                                 <a href="{{ site.navigation.Operations }}performance" class="dropdown-item">Performance</a>
                             </div>
                         </li>
-
-                        <li class="nav-item dropdown">
-                            <a href="{{ site.navigation.Resiliency }}" class="nav-link">Resiliency - HA\DR\Migration</a>
+                        <li class="nav-item dropdown"><a href="{{ site.navigation.Resiliency }}" class="nav-link">Resiliency - HA\DR\Migration</a>
                             <div class="dropdown-menu show">
                                 <label for="excellenceDisciplinesMenu" class="dropdown-item">Skytap Resiliency Pillar</label>
                                 <div id="excellenceDisciplinesMenu" class="inner-menu">
@@ -149,13 +130,11 @@
                                     <a href="{{ site.navigation.Resiliency }}disaster-recovery" class="dropdown-item inner-item">Disaster Recovery</a>
                                     <a href="{{ site.navigation.Resiliency }}high-availability" class="dropdown-item inner-item">High Availability</a>
                                 </div>
-
                                 <label for="MigrationSolutionsMenu" class="dropdown-item">Migration Solutions</label>
                                 <div id="MigrationSolutionsMenu" class="inner-menu">
                                     <a href="{{ site.navigation.Resiliency }}solutions/hot-migrations" class="dropdown-item inner-item">Hot Migrations</a>
                                     <a href="{{ site.navigation.Resiliency }}solutions/cold-migrations" class="dropdown-item inner-item">Cold Migrations</a>
                                 </div>
-
                                 <label for="designConsiderationsMenu" class="dropdown-item">Design Considerations</label>
                                 <div id="designConsiderationsMenu" class="inner-menu">
                                     <a href="{{ site.navigation.Resiliency }}design-considerations-azure" class="dropdown-item inner-item">Azure</a>
@@ -163,9 +142,7 @@
                                 </div>
                             </div>
                         </li>
-
-                        <li class="nav-item">
-                            <a href="{{ site.navigation.Security }}" class="nav-link">Security</a>
+                        <li class="nav-item"><a href="{{ site.navigation.Security }}" class="nav-link">Security</a>
                             <div class="dropdown-menu show">
                                 <a href="{{ site.navigation.Security }}key-security-areas" class="dropdown-item">Key Security Areas</a>
                                 <a href="{{ site.navigation.Security }}security-management" class="dropdown-item">Security Management</a>
@@ -177,7 +154,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="content col-12 col-sm-8 col-lg-9">
                     <div id="main_content" class="inner">
                         {{ content }}
@@ -185,24 +161,18 @@
                 </div>
             </div>
         </div>
-
         <!-- FOOTER  -->
         <div id="footer_wrap" class="footer">
             <div class="footer-content">
                 <div class="row justify-content-center justify-content-lg-between align-items-center">
-                    <a href="https://www.skytap.com/" target="_blank" class="footer-logo">
-                        {{ site.skytap-footer-logo }}
-                    </a>
-
+                    <a href="https://www.skytap.com/" target="_blank" class="footer-logo">{{ site.skytap-footer-logo }}</a>
                     <span>Copyright &copy; {{ 'now' | date: "%Y" }} Skytap. All Rights Reserved</span>
                 </div>
-
                 {% if site.github.is_project_page %}
-                    <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+                <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
                 {% endif %}
             </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     </body>
