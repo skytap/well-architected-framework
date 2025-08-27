@@ -21,7 +21,7 @@ Accompanying this document is a **{{site.Brand}} - Security Controls Workbook** 
 
 Similar to other cloud services, {{site.Brand}} operates a shared responsibility model with regards to security. {{site.Brand}} is accountable for the platform and customers are accountable for the way they use that platform.
 
-![Sytap Secuurity Control Map](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image3.png)
+![Sytap Secuurity Control Map](https://skytap.github.io/well-architected-framework/security//media/image3.png)
 
 _Figure 2 -- Shared Responsibility Model_
 
