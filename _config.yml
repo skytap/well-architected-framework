@@ -288,7 +288,8 @@ mimixbs: Precisely Assure MIMIX™ Software
 ProdName: Skytap
 ProductSiteStatic: https://cloud.skytapstatic.com
 ProductSiteURL: https://cloud.skytap.com
-soa: Skytap on Azure
+SoA: Skytap on Azure
+SoI: Skytap on IBM Cloud
 SpeedTestURL: http://speedtest.skytap.com
 SupportContact: support@skytap.com
 SupportName: Skytap Support
