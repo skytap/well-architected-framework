@@ -267,6 +267,15 @@ h6 { font-size: 16px; }
     }
 }
 
+td .y:before {
+    content: "✔";
+    color: #00AA00;
+}
+
+img {
+    max-width:1024px;
+}
+
 // fixed breakpoint
 
 @media(min-width: $fixed-breakpoint) {
