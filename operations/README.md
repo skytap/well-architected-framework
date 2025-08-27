@@ -15,7 +15,7 @@ These are the disciplines we group in the operational excellence pillar:
 | [Power Discovery]({{ site.navigation.Operations }}Discovery) | IBM Power Workloads have been in use for over thirty years and have unique considerations and require a deep understanding of what is in your environments when migrating them to a Cloud Platform.  |
 | [Connectivity]({{ site.navigation.Operations }}connectivity) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
 | [Ecosystems]({{ site.navigation.Operations }}ecosystems) | IBM Power Workload best practices Design patterns. |
-| [Performance]({{ site.navigation.Operations }}performance) | Optimizing IBM Power workloads for storage performance in Skytap. | 
+| [Performance]({{ site.navigation.Operations }}performance) | Optimizing IBM Power workloads for storage performance in {{site.Brand}}. | 
 
 <!--
 | [Phase 01C - Sizing and Design](./Sizing_Design/) | The monitoring and management of performance and availability of software applications through DevOps |
@@ -25,17 +25,17 @@ These are the disciplines we group in the operational excellence pillar:
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 > * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

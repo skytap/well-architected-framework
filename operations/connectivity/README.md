@@ -15,7 +15,7 @@ the goal is to minimize the effects of a single failing component.
 
 ## Key Points
 
-**Skytap-owned versus customer-owned responsibilities**
+**{{site.Brand}}-owned versus customer-owned responsibilities**
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image1.png" width="400">
 
@@ -38,11 +38,11 @@ strategy for migrating your existing data to the cloud; and many, many
 others.
 
 While every application is unique, most apps do have a lot in common
-with each other. Skytap's Cloud Solutions Architects are accustomed to
+with each other. {{site.Brand}} Cloud Solutions Architects are accustomed to
 looking for the important inflection points in your application's
 design, and making a recommendation based on your application's current
 and future needs. "Lift and Shift" migration options exist for the x86
-and Power platforms supported in Skytap, and in simpler cases can mean
+and Power platforms supported in {{site.Brand}}, and in simpler cases can mean
 very little change is required from a hosting and network perspective to
 your individual VMs and LPARs. However, cloud migration does offer many
 opportunities to revisit current hosting- and network-based design
@@ -71,52 +71,27 @@ Virtual Network Gateways and other components. If you are not using
 vWAN, then you need to consider the availability of your gateway
 components and third party NVAs as well. A fault tolerant private
 circuit connection into Azure may still have multiple single points of
-failure if the remaining components connecting to your Skytap subnets
+failure if the remaining components connecting to your {{site.Brand}} subnets
 are not also fault tolerant.
 
 A decision to standardize on IPSec VPN tunnels versus private circuit
 connections like Equinix Virtual circuits or ExpressRoute often times
-focuses primarily on cost. With VPNs in Skytap, there are no specific
+focuses primarily on cost. With VPNs in {{site.Brand}}, there are no specific
 charges for the virtual VPN endpoint created, or with ingress and egress
 traffic. This is not typically the case with private circuits, as they
 do not rely on the internet, they provide dedicated network paths and
 more consistent bandwidth. However, VPNs should not necessarily be equated with
 less reliability in many cases. In use cases where you are
-looking to create connections from networks in your Skytap account to
+looking to create connections from networks in your {{site.Brand}} account to
 VNets in your Azure subscription(s), traffic does not actually leave the
 Azure edge and traverse the internet. Also, while the connection in an
 IPSec VPN tunnel does not traverse a private line, it is encrypted by
 nature. Private circuits are just that by default, they are private but
 the traffic across them is not encrypted.
 
-Once a connectivity pattern into Skytap networks is chosen, either via VPN or private circuit connections, the WAN implementation is very similar. In both cases, Skytap exposes networks in an account via a WAN interface. Local Skytap subnets must fall within an address space assigned to the WAN, and remote subnets are specified to direct traffic over the WAN connection. Skytap does not provide automated fault-tolerance for these virtual WAN devices, so manual fail-over from a primary to secondary WAN connection must be architected separately.
+Once a connectivity pattern into {{site.Brand}} networks is chosen, either via VPN or private circuit connections, the WAN implementation is very similar. In both cases, {{site.Brand}} exposes networks in an account via a WAN interface. Local {{site.Brand}} subnets must fall within an address space assigned to the WAN, and remote subnets are specified to direct traffic over the WAN connection. {{site.Brand}} does not provide automated fault-tolerance for these virtual WAN devices, so manual fail-over from a primary to secondary WAN connection must be architected separately.
 
 ## Getting Started with Networking
 
 * [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure/)
 * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm/)
-
-<hr>
-
-### Next steps
-
-**Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
-
-**Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
-> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
-	* [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
-	* [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
-> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
-> * [Performance]({{ site.navigation.Operations }}performance/)
-
-**Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>
-> **Design**
-> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
-> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
-
-**Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})

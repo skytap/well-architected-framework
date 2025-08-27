@@ -4,9 +4,9 @@ description: Well-Architected Framework describes five pillars of cost optimizat
 author: Matthew Romero, Technical Product Marketing Manager
 ---
 
-# Get started with the Skytap Well-Architected Framework
+# Get started with the {{site.Brand}} Well-Architected Framework
 
-The {{site.Brand}} Well-Architected Framework helps you get started with several different guides. This article groups the guides to help you find the one that best aligns with the current state of your workloads and goals in moving to Skytap on Azure.
+The {{site.Brand}} Well-Architected Framework helps you get started with several different guides. This article groups the guides to help you find the one that best aligns with the current state of your workloads and goals in moving to {{site.soa.
 
 The following section details questions that are typically asked when an organization is trying to accomplish one or many goals during its cloud adoption journey.
 
@@ -14,10 +14,10 @@ The following section details questions that are typically asked when an organiz
 
 * [Improve design and deployments to ensure proper operations of the cloud]({{ site.navigation.Operations }})
 
-#  Skytap Well-Architected Framework 
+#  {{site.Brand}} Well-Architected Framework 
 
 As your cloud adoption journey progresses, a solid operating model can help ensure that wise decisions are made. 
-The Skytap Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architectural excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce high quality, stable, and efficient cloud architectures.
+The {{site.Brand}} Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architectural excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security. Incorporating these pillars helps produce high quality, stable, and efficient cloud architectures.
 
 | Section | Question | Pillar | Description |
 | ----- | -------- | ------ | ----------- |

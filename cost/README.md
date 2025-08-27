@@ -4,7 +4,7 @@ author: Matthew Romero, Technical Product Marketing Manager
 permalink: /cost/
 ---
 
-# Principles of cost optimization
+# {{page.title}}
 
 **Cost Optimization**
 
@@ -22,7 +22,7 @@ When you are designing a cloud solution, focus on generating incremental value e
 
 **Keep within the cost constraints**
 
-Every design choice has cost implications. Before choosing an architectural pattern, Skytap service, or a price model for the service, consider the budget constraints set by the company. As part of design, identify acceptable boundaries on scale, redundancy, and performance against cost. After estimating the initial cost, set budgets and alerts at different scopes to measure the cost. One of the cost drivers can be unrestricted resources. These resources typically need to scale and consume more cost to meet demand. 
+Every design choice has cost implications. Before choosing an architectural pattern, {{site.Brand}} service, or a price model for the service, consider the budget constraints set by the company. As part of design, identify acceptable boundaries on scale, redundancy, and performance against cost. After estimating the initial cost, set budgets and alerts at different scopes to measure the cost. One of the cost drivers can be unrestricted resources. These resources typically need to scale and consume more cost to meet demand. 
 
 **Aim for scalable costs**
 
@@ -30,7 +30,7 @@ A key benefit of the cloud is the ability to scale dynamically. The workload cos
 
 **Pay for consumption**
 
-Adopt a leasing model instead of owning infrastructure. Skytap offers many SaaS and PaaS resources that simplify overall architecture. The cost of hardware, software, development, operations, security, and data center space is included in the pricing model. 
+Adopt a leasing model instead of owning infrastructure. {{site.Brand}} offers many SaaS and PaaS resources that simplify overall architecture. The cost of hardware, software, development, operations, security, and data center space is included in the pricing model. 
 
 Also, choose pay-as-you-go over fixed pricing. That way, as a consumer, you're charged only for what you use.
 
@@ -49,13 +49,13 @@ If you're just starting in this process review [enable success during a cloud ad
 ## Next step
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [{{site.Brand}} Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[{{site.Brand}} Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](../resiliency/README.md)
+> [{{site.Brand}} Resiliency Pillar](../resiliency/README.md)
 
 **Security**
-> [Skytap Security Pillar](../security/README.md)
+> [{{site.Brand}} Security Pillar](../security/README.md)

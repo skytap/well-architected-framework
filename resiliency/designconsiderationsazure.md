@@ -4,7 +4,7 @@ author: George Stamos - Director, Solutions Architect * Business Development
 permalink: /resiliency/design-considerations-azure/
 ---
 
-***Skytap for Azure Support and Limits (IBM i)***
+***{{site.Brand}} for Azure Support and Limits (IBM i)***
 
 
 **Compute**
@@ -26,7 +26,7 @@ for Power
 
 **Network**
 
-* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+* IPSec (SDN) / PNC Connectivity Between {{site.Brand}} and On-Premises
   * Range: 750 Mbps Limit
 * Layer 2 networking in environment
   * Range: Burst to 2.7 Gbps Limit
@@ -41,7 +41,7 @@ for Power
 * Storage performance scalability with VM/LPAR RAM capacity
 * IOPS up to 30K per LPAR
 
-***Skytap for Azure Support and Limits (AIX)***
+***{{site.Brand}} for Azure Support and Limits (AIX)***
 
 **Compute**
 
@@ -60,7 +60,7 @@ LPAR Sizing and OS Support for Power
 
 **Network**
 
-* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+* IPSec (SDN) / PNC Connectivity Between {{site.Brand}} and On-Premises
   * Range: 750 Mbps Limit
 * Layer 2 networking in environment
   * Range: Burst to 2.7 Gbps Limit
@@ -78,16 +78,16 @@ LPAR Sizing and OS Support for Power
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Connectivity Overview]({{ site.navigation.Operations }}connectivity/)
 > * [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
 > * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}/connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -97,4 +97,4 @@ LPAR Sizing and OS Support for Power
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

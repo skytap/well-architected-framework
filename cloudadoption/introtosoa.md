@@ -1,4 +1,4 @@
-**An Introduction to Skytap on Azure**
+**An Introduction to {{site.SoA}}**
 
 Get cloud scale value for IBM Power Workloads
 
@@ -53,9 +53,9 @@ inter-connected and often complex. Organizations seek to evolve these
 applications in the cloud to realize cloud-scale benefits, business
 agility and innovation, and minimize costs and risk.
 
-**Skytap on Azure**\
+**{{site.SoA}}**\
 A cloud service that natively runs IBM Power and x86 traditional
-enterprise applications in Azure. Benefits of Skytap on Azure include:
+enterprise applications in Azure. Benefits of {{site.SoA}} include:
 
 -   Easily migrate traditional IBM Power Workloads to Azure without
     refactoring or rewriting
@@ -66,7 +66,7 @@ enterprise applications in Azure. Benefits of Skytap on Azure include:
 
 -   Enable greater app innovation with Azure native services
 
-Skytap on Azure supports easy migration of traditional IBM Power
+{{site.SoA}} supports easy migration of traditional IBM Power
 workloads to Azure:
 
 -   Migrate at your own pace
@@ -75,12 +75,12 @@ workloads to Azure:
 
 -   Runs on latest IBM Power 9 hardware in Azure
 
--   Easily integrate into existing automation with Skytap APIs
+-   Easily integrate into existing automation with {{site.Brand}} APIs
 
--   Securely connect between on-premises and Azure with Skytap's native
+-   Securely connect between on-premises and Azure with {{site.Brand}} native
     ExpressRoute compatibility
 
-Skytap on Azure enables you to modernize at your own pace
+{{site.SoA}} enables you to modernize at your own pace
 
 -   Integrate IBM Power workloads with other workloads on Azure
 
@@ -93,10 +93,10 @@ Skytap on Azure enables you to modernize at your own pace
 -   Use existing ExpressRoute connections to current on-premises data
     centers
 
-Skytap partners
+{{site.Brand}} partners
 
-Skytap has a history of collaboration and strategic partnership with
-both Microsoft and IBM. Other Skytap technology partners include:
+{{site.Brand}} has a history of collaboration and strategic partnership with
+both Microsoft and IBM. Other {{site.Brand}} technology partners include:
 
 -   Precisely
 
@@ -112,7 +112,7 @@ both Microsoft and IBM. Other Skytap technology partners include:
 
 -   Maxava
 
-Skytap on Azure datacenter locations
+{{site.SoA}} datacenter locations
 
 -   South Central US (San Antonio, TX)
 
@@ -128,5 +128,5 @@ Skytap on Azure datacenter locations
 
 -   North Europe (Dublin)
 
-Sign up for Skytap on Azure in the [Azure
+Sign up for {{site.SoA}} in the [Azure
 Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=Overview).

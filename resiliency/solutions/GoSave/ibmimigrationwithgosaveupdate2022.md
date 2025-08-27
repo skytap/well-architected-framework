@@ -19,7 +19,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Create virtual optical media](#createvom)
 * [Save, Option 22 to virtual optical media](#gosave)
 * [Create virtual tape media](#createvtm)
-* [Deploy IBM i in Skytap cloud](#deployinskytap)
+* [Deploy IBM i in {{site.Brand}} cloud](#deployinskytap)
 * [Network configuration](#netconfig)
 * [Go Restore, Option 23](#gorestore)
 * [APPENDIX](#appendix)
@@ -30,7 +30,7 @@ This document does not provide you with any legal rights to any intellectual pro
 ### Key Takeaways<a name="takeaways"></a>
 
 This documentation will demonstrate how an IBM I workload can be
-migrated to an LPAR on Skytap using an IBM i backup and recovery method
+migrated to an LPAR on {{site.Brand}} using an IBM i backup and recovery method
 referred to as "Go, Save Option 22,23", because of the commands which
 are used to take and restore the backups on the IBM i system.
 
@@ -181,7 +181,7 @@ Create virtual tape image Catalog for Option 23 data
 6.  On the "Specify Command Defaults" screen, specify device name
     according to your environment. Page down and Press Enter.
 
-**Step 5: Deploy IBM i in Skytap cloud (using NFS LPAR and Target
+**Step 5: Deploy IBM i in {{site.Brand}} cloud (using NFS LPAR and Target
 System)**
 
 1.  Before we initialize the target system, we must first transfer the
@@ -225,7 +225,7 @@ file was created.
 ## **5A.3: Add image to Image Catalog**
 
 -   ADDIMGCLGE IMGCLG(ORTPREM)
-    FROMFILE('***/IMGCATALOG/Skytap30GB.iso***')
+    FROMFILE('***/IMGCATALOG/{{site.Brand}}30GB.iso***')
     TOFILE('\****fromfile***')
 
 -   Use F10 to see all parameters when adding
@@ -398,7 +398,7 @@ Use Option 1 to Vary On the optical device.
 
 **This completes step sections 5A and 5B.** **The next steps will
 continue with Step 5 which is the process of initializing and
-configuring the target system in Skytap.**
+configuring the target system in {{site.Brand}}.**
 
 2.  **Installing LIC:**
 
@@ -757,13 +757,13 @@ VARY OFF any other VETHLINE
 ### Next Steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -778,4 +778,4 @@ VARY OFF any other VETHLINE
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

@@ -8,10 +8,10 @@ permalink: /operations/Discovery/ecosystems/
 
 Gathering infrastructure and/or performance data is an important step to
 shortening the time required to optimize the performance of IBM Power in
-Skytap on Azure or Skytap on IBM Cloud.
+{{site.SoA}} or {{site.SoI}}.
 
 The only way to ensure the best performance experience for IBM Power in
-Skytap's infrastructure is to have a complete understanding of your
+{{site.Brand}} infrastructure is to have a complete understanding of your
 current hardware configuration(s) and performance data. This includes
 the IBM Power model, IBM PowerVM settings, disk models and
 configuration, memory allocation(s) and performance metrics for all the
@@ -171,14 +171,14 @@ An example of the spreadsheet is below. Note the tab at the bottom which shows a
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image1.png" width="700">
 
-6. Send the resulting spreadsheet to Skytap for analysis.
+6. Send the resulting spreadsheet to {{site.Brand}} for analysis.
 
 *Note: If you do not provide a password on the command line, the scanner will use on Unix the public key located in \$HOME/.ssh/id_rsa or the one provided with the -key parameter (the key must not have a password). If no key is available, the scanner will ask for the password interactively (not suited for batch processing)*
 
 ###### *[Back to the Top](#toc)*
 ## Native Power Discovery for IBM i<a name="NativeIBMiDiscovery"></a>
 
-IBM i operating systems automatically collect hardware and performance data via Collection Services. This data has more detailed data regarding hardware resource consumption and memory and disk configuration / performance. There are 3 options to package this data and send it to Skytap for analysis.
+IBM i operating systems automatically collect hardware and performance data via Collection Services. This data has more detailed data regarding hardware resource consumption and memory and disk configuration / performance. There are 3 options to package this data and send it to {{site.Brand}} for analysis.
 
 [Option 1: Manually create a save file of \*MGTCOL](#savefile)
 
@@ -211,9 +211,9 @@ IBM i operating systems automatically collect hardware and performance data via 
 
 > savf(qgpl/pfrcustnam) dtacpr(\*yes)
 ```
-Then send the save file pfrcustnam to Skytap.
+Then send the save file pfrcustnam to {{site.Brand}}.
 
-A Skytap Cloud Solutions Architect or Cloud Solutions Engineer will then do the following on an IBM i VM for your data:
+A {{site.Brand}} Cloud Solutions Architect or Cloud Solutions Engineer will then do the following on an IBM i VM for your data:
 
 ```bash
 
@@ -309,9 +309,9 @@ This option will create a save file of one or more Collection Services data. Th
 
       d. Select the first QxxxHHMMSS member not in use and hit enter
 
-3. Send Skytap the save file that is created in the IFS in directory /tmp/IBMCSDATA/IBMDATA002 
+3. Send {{site.Brand}} the save file that is created in the IFS in directory /tmp/IBMCSDATA/IBMDATA002 
 
-4. If all Skytap needs access to is the disk metrics then do the following:
+4. If all {{site.Brand}} needs access to is the disk metrics then do the following:
 
        a. Go to the Must Gather Tools menu - GO QMGTOOLS/MG
 
@@ -323,7 +323,7 @@ This option will create a save file of one or more Collection Services data. Th
 
 This will create a zip file in /tmp/diskmetrics\_\<sysnam>.zip
 
-       e. Send Skytap the diskmetrics zip file
+       e. Send {{site.Brand}} the diskmetrics zip file
 
 ***NOTE***: *There will be 70+ .csv or txt files available.*
 
@@ -366,7 +366,7 @@ sos_serial#xx.GpD. Note the directory in the log.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image9.png" width="500">
 
-8. Then email Skytap the SOS files. They are usually very small (1-3MB).
+8. Then email {{site.Brand}} the SOS files. They are usually very small (1-3MB).
 
 9. Upload SOS file to IBM i VM:
 
@@ -404,7 +404,7 @@ performance data.
 ###### *[Back to the Top](#toc)*
 ### Option 01: Collecting Topas data<a name="topas"></a>
 
-1.  Obtain the rackdata.tar.gz file from Skytap or:
+1.  Obtain the rackdata.tar.gz file from {{site.Brand}} or:
 
     a.  Using WinScp or FileZilla, download rackdata.tar.gz from
         <a href="ftp://ftp.mpginc.com" target="_blank">[ftp.mpginc.com]{.ul}</a>
@@ -454,7 +454,7 @@ It will launch the browser to view the data for the one day with Google Chart. J
 ###### *[Back to the Top](#toc)*
 ### Option 02: Collecting existing nmon data<a name="existingnmon"></a>
 
-1.  Obtain your pnbuild.tar.gz file from Skytap or:
+1.  Obtain your pnbuild.tar.gz file from {{site.Brand}} or:
 
     a.  Using WinScp or FileZilla, download pnbuild.tar.gz from
         <a href="ftp://ftp.mpginc.com" target="_blank">[ftp.mpginc.com]{.ul}</a>
@@ -464,9 +464,9 @@ It will launch the browser to view the data for the one day with Google Chart. J
 3.  Unzip and untar - **cd /tmp;gunzip -f pnbuild.tar.gz:tar -xvf
     pnbuild.tar; ./pnbmpgd2gzip.sh**
 
-4.  Send file called pninfo_multiple_AIX.tar.gz to Skytap
+4.  Send file called pninfo_multiple_AIX.tar.gz to {{site.Brand}}
 
-**Pros**: If you already have existing nmon data, Skytap can use this
+**Pros**: If you already have existing nmon data, {{site.Brand}} can use this
 data. Nmon data has more info than Topas. Usually more than seven days.
 If you normally consolidate nmon data to a single shared directory, one
 script will gather data from all partitions for free.
@@ -497,14 +497,14 @@ Includes graphic view of last 7 day with Google graphs for free.
 
 4.  Wait a week or two to collect a month end
 
-5.  Send file in /usr/local/mpg called pninfo\_\<hostname>\_AIX.tar.gz to Skytap
+5.  Send file in /usr/local/mpg called pninfo\_\<hostname>\_AIX.tar.gz to {{site.Brand}}
 
 To connect the data to the Performance Navigator client see above.
 
 ###### *[Back to the Top](#toc)*
 ## Power Discovery for Linux<a name="NativeLinuxDiscovery"></a>
 
-***NOTE***: ***Linux operating systems do NOT collect hardware and performance data by default. Skytap uses the HelpSystems Performance Navigator to automate the collection of hardware and performance for Linux across all platforms using open source nmon for Linux. This data will show how your current hardware is configured and how it is being used. This data will be used to then optimize the configuration in the Skytap environment.***
+***NOTE***: ***Linux operating systems do NOT collect hardware and performance data by default. {{site.Brand}} uses the HelpSystems Performance Navigator to automate the collection of hardware and performance for Linux across all platforms using open source nmon for Linux. This data will show how your current hardware is configured and how it is being used. This data will be used to then optimize the configuration in the {{site.Brand}} environment.***
 
 ### Option 01: collect historical nmon data<a name="historicnmon2"></a>
 
@@ -524,7 +524,7 @@ Includes graphic view of the last 7 days with Google graphs for free.
     powernav.tar; ./install.sh
 
 4.  Send file in /usr/local/mpg called pninfo\_\<hostname>\_Linux.tar.gz
-    to Skytap
+    to {{site.Brand}}
 
 ***NOTE***: *To connect your data to the Performance Navigator client see above.*
 
@@ -533,10 +533,10 @@ Includes graphic view of the last 7 days with Google graphs for free.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
     * [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
@@ -544,7 +544,7 @@ Includes graphic view of the last 7 days with Google graphs for free.
 > * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

@@ -6,7 +6,7 @@ permalink: /security/virtual-machines/
 
 ### Virtual Machines
 
-The Virtual Machines capability encompasses VM Templates; Authentication, Authorization and Accounting; Patching; Antivirus; HIDS/HIPS; and Firewall. This area relates to the Environments running in Skytap and any templates associated with them.
+The Virtual Machines capability encompasses VM Templates; Authentication, Authorization and Accounting; Patching; Antivirus; HIDS/HIPS; and Firewall. This area relates to the Environments running in {{site.Brand}} and any templates associated with them.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/virtualmachinesmedia/media/image1.png" width="800">
 
@@ -14,17 +14,17 @@ The Virtual Machines capability encompasses VM Templates; Authentication, Author
 
 #### VM Templates
 
-In Skytap the Virtual Machine template contains a point in time and idempotent copy of an entire Environment. An Environment or Template includes any connectivity it may have, such as Internet access or VPN connections, the state of any x86 or Power Virtual Machines (LPARs) including their memory state (if x86), disks, MAC addresses and other configuration items.
+In {{site.Brand}} the Virtual Machine template contains a point in time and idempotent copy of an entire Environment. An Environment or Template includes any connectivity it may have, such as Internet access or VPN connections, the state of any x86 or Power Virtual Machines (LPARs) including their memory state (if x86), disks, MAC addresses and other configuration items.
 
-Pre-configured templates should be made available to users of the Skytap platform that conform to organizational security policies. These templates should have pre-installed anti-virus and Host-Based Intrusion Detection Systems/Host-Based Intrusion Prevention Systems; installed licenses; up to date patching for security vulnerabilities of operating systems and applications; and an enabled Firewall.
+Pre-configured templates should be made available to users of the {{site.Brand}} platform that conform to organizational security policies. These templates should have pre-installed anti-virus and Host-Based Intrusion Detection Systems/Host-Based Intrusion Prevention Systems; installed licenses; up to date patching for security vulnerabilities of operating systems and applications; and an enabled Firewall.
 
-From these base templates or Golden Images, users on the Skytap platform can build or operate their workloads from a known good configuration. The use of Golden Images prevents accidental misconfiguration or unauthorized use of operating systems which may not align with organizational standards or software licensing exposure.
+From these base templates or Golden Images, users on the {{site.Brand}} platform can build or operate their workloads from a known good configuration. The use of Golden Images prevents accidental misconfiguration or unauthorized use of operating systems which may not align with organizational standards or software licensing exposure.
 
 These base templates can be made available to users via Projects, as described earlier in this document.
 
 #### Authentication, Authorization and Accounting
 
-Access to Virtual Machines and LPARs in Skytap Environments should be centralized, and the use of a directory service enables that. A local directory server, in the Environment, can be made available to Virtual Machines and LPARs or authentication traffic can be passed to the Shared Services environment.
+Access to Virtual Machines and LPARs in {{site.Brand}} Environments should be centralized, and the use of a directory service enables that. A local directory server, in the Environment, can be made available to Virtual Machines and LPARs or authentication traffic can be passed to the Shared Services environment.
 
 Password-based authentication should be avoided in most cases, with public/private key being preferred. Certificate authentication for users is atypical in Windows deployments but is supportable and considerably more secure.
 
@@ -47,7 +47,7 @@ The regular updating of operating systems and applications with security
 patches prevents vulnerabilities being exposed and exploited by bad
 actors. A patching service should be configured to regularly apply new
 security patches, these patches should also be integrated into any
-master/gold templates in use on the Skytap platform.
+master/gold templates in use on the {{site.Brand}} platform.
 
 ##### Supported Implementations
 
@@ -91,7 +91,7 @@ In some production systems, any direct login to a Virtual Machine or∫ LPAR is 
 
 #### OS Firewall
 
-Skytap enables local network communication by default and OS level firewall protection should be enabled to restrict open ports only to those that are approved. For example, a database server should only allow database traffic from known application servers; any other attempts to connect to a database management port should be ignored and reported.
+{{site.Brand}} enables local network communication by default and OS level firewall protection should be enabled to restrict open ports only to those that are approved. For example, a database server should only allow database traffic from known application servers; any other attempts to connect to a database management port should be ignored and reported.
 
 ##### Supported Implementations
 
@@ -109,17 +109,17 @@ Skytap enables local network communication by default and OS level firewall prot
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
 > * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
 > * [Security Management]({{ site.navigation.Security }}security-management)
 > * [Edge Networking]({{ site.navigation.Security }}edge-networking)

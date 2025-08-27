@@ -6,7 +6,7 @@ permalink: /resiliency/backups/
 ---
 
 
-# Backup for Skytap workloads
+# Backup for {{site.Brand}} workloads
 
 In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component. As such we recommend that you be prepared for when they fail. When this happens, having backup and recovery strategies becomes important.
 
@@ -33,19 +33,19 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 
 ### Additional Solutions
 
-- **[iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups)**
-- **[DSI iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/DSI-iSCSI-VTL-Backups)**
+- **[iSCSI VTL backups for IBM i running on {{site.SoA}}]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups)**
+- **[DSI iSCSI VTL backups for IBM i running on {{site.SoA}}]({{ site.navigation.Resiliency }}solutions/VTL/DSI-iSCSI-VTL-Backups)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
 > * [High Availability]({{ site.navigation.Resiliency }}high-availability)
@@ -55,4 +55,4 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

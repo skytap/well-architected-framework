@@ -22,10 +22,10 @@ For Disaster Recovery, SKYTAP supports any variations of the above
 software where they provide high RPO (Recovery Point Objective) and RTO
 (Recovery Time Objective) with reduced license fee.
 
-Skytap also support Commvault solutions where they offer DR
+{{site.Brand}} also support Commvault solutions where they offer DR
 
 
-## Skytap on Azure IBM Power I HA/DR Considerations
+## {{site.SoA}} IBM Power I HA/DR Considerations
 
 ### Defining RPO (Recovery Point Objective)
 
@@ -58,24 +58,24 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 
 -   **High availability** means avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
 
-### Sample HA design on Skytap on Azure
+### Sample HA design on {{site.SoA}}
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/hadrmedia/media/image1.png" width="700">
 
 ### Additional Solutions
 
-- **[IBM i PowerHA -- Geo Mirror -- Skytap Configuration]({{ site.navigation.Resiliency }}solutions/PowerHAGeoMirror/)**
+- **[IBM i PowerHA -- Geo Mirror -- {{site.Brand}} Configuration]({{ site.navigation.Resiliency }}solutions/PowerHAGeoMirror/)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -85,4 +85,4 @@ Finding the right balance of features and price to meet your RPO and RTO is one 
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

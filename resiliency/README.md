@@ -9,9 +9,9 @@ permalink: /resiliency/
 
 Building a reliable application in the cloud is different from traditional application development. While historically you may have purchased levels of redundant higher-end hardware to minimize the chance of an entire application platform failing, in the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component.
 
-**Skytap on Azure General Architecture**
+**{{site.SoA}} General Architecture**
 
-Here is a high-level look at the Skytap on Azure general architecture.
+Here is a high-level look at the {{site.SoA}} general architecture.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image1.png" width="800">
 
@@ -29,9 +29,9 @@ Here is a high-level look at the Skytap on Azure general architecture.
 
 - **Address security-related risks -** Identifying and addressing security-related risks helps to minimize application downtime and data loss caused by unexpected security exposures.
 
-**Skytap Service Layers**
+**{{site.Brand}} Service Layers**
 
-Skytap is comprised of three service layer tiers as depicted below:
+{{site.Brand}} is comprised of three service layer tiers as depicted below:
 
 -   Data Platform Tier -- includes Bare Metal infrastructure, hosting
     service, storage service and network service.
@@ -45,21 +45,21 @@ Skytap is comprised of three service layer tiers as depicted below:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image2.png" width="600">
 
-**Skytap on Azure: Azure Region, Skytap Region and connection to Azure
+**{{site.SoA}}: Azure Region, {{site.Brand}} Region and connection to Azure
 Native Services**
 
-Within a given Azure region, Skytap Standard Power VMs and x86 VMs and
+Within a given Azure region, {{site.Brand}} Standard Power VMs and x86 VMs and
 Azure Dedicated S922 and x86 Bare Metal and Storage are connected via
 ExpressRoute to Azure Native Services as depicted below.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image3.png" width="600">
 
-**Skytap Discovery and Migration -- Support and Limits**
+**{{site.Brand}} Discovery and Migration -- Support and Limits**
 
-The following section outlines Skytap on Azure support and limits for
+The following section outlines {{site.SoA}} support and limits for
 IBM i and AIX.
 
-***Skytap for Azure Support and Limits (IBM i)***
+***{{site.Brand}} for Azure Support and Limits (IBM i)***
 
 
 **Compute**
@@ -81,7 +81,7 @@ for Power
   
 **Network**
 
-* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+* IPSec (SDN) / PNC Connectivity Between {{site.Brand}} and On-Premises
   * Range: 750 Mbps Limit
 * Layer 2 networking in environment
   * Range: Burst to 2.7 Gbps Limit
@@ -96,7 +96,7 @@ for Power
 * Storage performance scalability with VM/LPAR RAM capacity
 * IOPS up to 30K per LPAR
 
-***Skytap for Azure Support and Limits (AIX)***
+***{{site.Brand}} for Azure Support and Limits (AIX)***
 
 **Compute**
 
@@ -115,7 +115,7 @@ LPAR Sizing and OS Support for Power
 
 **Network**
 
-* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+* IPSec (SDN) / PNC Connectivity Between {{site.Brand}} and On-Premises
   * Range: 750 Mbps Limit
 * Layer 2 networking in environment
   * Range: Burst to 2.7 Gbps Limit
@@ -130,9 +130,9 @@ LPAR Sizing and OS Support for Power
 * All SSD technology and encrypted
 * IOPS up to 30K per LPAR
 
-High-Level Considerations for Migration to Skytap on Azure
+High-Level Considerations for Migration to {{site.SoA}}
 
-Migration to Skytap on Azure can be migrated via a hot or cold/warm
+Migration to {{site.SoA}} can be migrated via a hot or cold/warm
 migration as depicted here. 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image6.png" width="600">
@@ -156,16 +156,16 @@ These are the disciplines we group in the Reliability Pillar:
 
 | Operational Excellence Disciplines | Description |
 |-------------------|-------------|
-| [Migration]({{ site.navigation.Resiliency }}migrations) | The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap.   |
+| [Migration]({{ site.navigation.Resiliency }}migrations) | The following section provides an overview of {{site.SoA}} Architecture and is used as a lens to assess the reliability of an environment deployed in {{site.Brand}}.   |
 | [Protection]({{ site.navigation.Resiliency }}backups) | In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component by keeping your data safe; in this situation, RPO is more critical than RTO.  |
 | [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery) | Disaster recovery is the process of restoring application functionality in the wake of a catastrophic loss. A comprehensive disaster recovery solution that can restore data quickly and completely is required to meet low RPO and RTO thresholds. |
 | [High Availability]({{ site.navigation.Resiliency }}high-availability) | Avoiding down time and keeping your critical applications and data online -- a high availability solution is required for high RPO and RTO.
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
@@ -179,5 +179,5 @@ These are the disciplines we group in the Reliability Pillar:
 
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
 

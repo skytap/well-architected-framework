@@ -4,12 +4,12 @@ author: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, M
 permalink: /operations/connectivity/express-route/
 ---
 
-# EXPRESS ROUTE Inter-Connect from Skytap to Azure Native
+# {{page.title}}
 
 ## Table of Contents<a name="toc"></a>
 
-* [Create Skytap Environment](#createskytapenvironment)
-* [Create an Express Route Definition in Skytap](#createroutedefinition)
+* [Create {{site.Brand}} Environment](#createskytapenvironment)
+* [Create an Express Route Definition in {{site.Brand}}](#createroutedefinition)
 * [Create a Resource Group in the Azure Portal](#createazureresourcegroup)
 * [Create a Virtual Network to attach the ExpressRoute](#createazurevnet)
 * [Create an address space and subnet](#createazureaddressspace)
@@ -17,17 +17,17 @@ permalink: /operations/connectivity/express-route/
 * [Create Local Network Gateway](#createazureLNG)
 * [Add all components to the Virtual Network Gateway](#hookupazureVNG)
 * [Create test VM inside of Azure Native](#createazuretestvm)
-* [Test end-to-end connection from Skytap to Azure Native](#testconnection)
+* [Test end-to-end connection from {{site.Brand}} to Azure Native](#testconnection)
 * [APPENDIX](#appendix)
   * [Connect AIX LPAR to Express Route](#connectaixviaexpressroute)
 
-## Create Skytap Environment<a name="createskytapenvironment"></a>
+## Create {{site.Brand}} Environment<a name="createskytapenvironment"></a>
 
-Create the initial Skytap environment that contains your VMs or LPARs.
+Create the initial {{site.Brand}} environment that contains your VMs or LPARs.
 
-1. Login to the <a href="https://portal.azure.com" target="_blank">Azure portal</a> and access your Skytap subscription.
+1. Login to the <a href="https://portal.azure.com" target="_blank">Azure portal</a> and access your {{site.Brand}} subscription.
    
-You should land on the Dashboard page of Skytap.
+You should land on the Dashboard page of {{site.Brand}}.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image6.png" width="700">
 <br>
@@ -44,9 +44,9 @@ Route Connection.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image45.png" width="700">
 
 ###### *[Back to the Top](#toc)*
-## Create an Express Route Definition in Skytap<a name="createroutedefinition"></a>
+## Create an Express Route Definition in {{site.Brand}}<a name="createroutedefinition"></a>
 
-In Skytap – Establish Private Network Connection with Express Route and Configure a Virtual Network Gateway in Azure for ExpressRoute, then Connect the ExpressRoute Circuit to the Virtual Network Gateway. To do this, you will create an Express Route definition in Skytap using the following steps.
+In {{site.Brand}} – Establish Private Network Connection with Express Route and Configure a Virtual Network Gateway in Azure for ExpressRoute, then Connect the ExpressRoute Circuit to the Virtual Network Gateway. To do this, you will create an Express Route definition in {{site.Brand}} using the following steps.
 
 [Express Route Topo](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/ExpressRouteTopo.png)
 
@@ -77,7 +77,7 @@ the Express Route connection.*
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image18.png" width="500">
 
-5. Now define a new WAN connection in the Skytap user interface.
+5. Now define a new WAN connection in the {{site.Brand}} user interface.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image39.png" width="500">
 <br>
@@ -98,7 +98,7 @@ Express Route endpoint on the Azure Native side of the connection.
 
 If you know what subnet(s) that will be accessed in native Azure, you
 can add them now or later. The subnet 10.1.77.0/24 is what will be
-defined as the VNET in Azure that the Skytap environment will talk to.
+defined as the VNET in Azure that the {{site.Brand}} environment will talk to.
 
 7. Add the remote subnet on the right side of the page.
 
@@ -111,7 +111,7 @@ defined as the VNET in Azure that the Skytap environment will talk to.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image25.png" width="600">
 
-2. Give the Resource Group a name: (Example **Skytap DR ExpressRoute-RG**)
+2. Give the Resource Group a name: (Example **{{site.Brand}} DR ExpressRoute-RG**)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image14.png" width="600">
 
@@ -141,7 +141,7 @@ Resource Group.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image38.png" width="500">
 
-3. Name this subnet something like the following example: **Skytap-DR-ExpressRoute-SN**
+3. Name this subnet something like the following example: **{{site.Brand}}-DR-ExpressRoute-SN**
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image21.png" width="500">
 
@@ -154,7 +154,7 @@ You should now have 1 subnet defined:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image7.png" width="500">
 
-1. Create a virtual network gateway, and name it similar to the following example: **Skytap-DR-ExpressRoute-VNG**
+1. Create a virtual network gateway, and name it similar to the following example: **{{site.Brand}}-DR-ExpressRoute-VNG**
 
 ***NOTE***: *The virtual network gateway creates an IP endpoint that the Azure user interface calls **Public IP Address**. The Express Route connection created in this example **does not** send traffic to the public Internet. All the traffic will stay within the Azure Data center.*
 
@@ -183,7 +183,7 @@ Define and create a Local Network Gateway.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image32.png" width="700">
 
-***NOTE***: *In our example 20.94.177.25 is the IP endpoint defined for the Skytap side of the Express Route Connection, and 10.0.0.0/24 is the address space used by the Skytap environment that we defined.*
+***NOTE***: *In our example 20.94.177.25 is the IP endpoint defined for the {{site.Brand}} side of the Express Route Connection, and 10.0.0.0/24 is the address space used by the {{site.Brand}} environment that we defined.*
 
 2. Click **Review and create** to create the Local Network Gateway.
 
@@ -198,7 +198,7 @@ Define and create a Local Network Gateway.
 
 1. Search for your previously defined Virtual Network Gateway (VNG) 
 
-(Example: **Skytap-DR-ExpressRoute-VNG**)
+(Example: **{{site.Brand}}-DR-ExpressRoute-VNG**)
 
 2. Click **Connections**.
 
@@ -211,17 +211,17 @@ Define and create a Local Network Gateway.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image47.png" width="400">
 
 * Authorization Key = The **Authorization Key** shown in the WAN
-definition within Skytap.
+definition within {{site.Brand}}.
 
 * Peer circuit URI = The **Resource ID** shown in the WAN definition
-within Skytap.
+within {{site.Brand}}.
 
 ###### *[Back to the Top](#toc)*
 ## Create test VM inside of Azure Native<a name="createazuretestvm"></a>
 
-In order to test the connection from Skytap to Azure, add a VM to the
+In order to test the connection from {{site.Brand}} to Azure, add a VM to the
 defined subnet in the Azure VNet and attempt to **ping** it from the
-Skytap WAN page.
+{{site.Brand}} WAN page.
 
 1. Add a VM to the subnet defined in Azure.
 
@@ -253,9 +253,9 @@ Skytap WAN page.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image5.png" width="400">
 
 ###### *[Back to the Top](#toc)*
-## Test end-to-end connection from Skytap to Azure Native<a name="testconnection"></a>
+## Test end-to-end connection from {{site.Brand}} to Azure Native<a name="testconnection"></a>
 
-1. In the Skytap portal, go to the WAN definition that was created:\
+1. In the {{site.Brand}} portal, go to the WAN definition that was created:\
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image19.png" width="700">
 
 2. Click **Test** and enter the Private IP address from the Azure portal
@@ -264,13 +264,13 @@ page. In our example: 10.1.77.4
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image17.png" width="400">
 
 3. If everything is working, you should get **Pass** when pinging the Azure
-VM from Skytap.
+VM from {{site.Brand}}.
 
-4. Enable the Express Route Connection in Skytap:
+4. Enable the Express Route Connection in {{site.Brand}}:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image3.png" width="300">
 
-Once enabled, you can now attach Skytap environments that includes VM
+Once enabled, you can now attach {{site.Brand}} environments that includes VM
 and LPARs to this Express Route Connection.
 
 ###### *[Back to the Top](#toc)*
@@ -279,9 +279,9 @@ and LPARs to this Express Route Connection.
 ## Connect AIX LPAR to Express Route<a name="connectaixviaexpressroute"></a>
 
 Now that the Express Route Connection is working, start the AIX LPAR in
-your Skytap Environment and attach the Express Route to it.
+your {{site.Brand}} Environment and attach the Express Route to it.
 
-1. Find the original environment that you created in Skytap:
+1. Find the original environment that you created in {{site.Brand}}:
 
 Once you click on it, you'll see this page.
 
@@ -331,26 +331,5 @@ ping 10.1.77.4
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image12.png" width="500">
 
-Your Skytap AIX LPAR is now communicating with a VM in Azure Native.
+Your {{site.Brand}} AIX LPAR is now communicating with a VM in Azure Native.
 ###### *[Back to the Top](#toc)*
-
-### Next steps
-
-**Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
-
-**Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
-> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/) > [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}connectivity/ibm)
-> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
-
-**Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})<br><br>
-> **Design**
-> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
-> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
-
-**Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})

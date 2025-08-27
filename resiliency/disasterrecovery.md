@@ -5,7 +5,7 @@ author: George Stamos - Director, Solutions Architect - Business Development
 permalink: /resiliency/disaster-recovery/
 ---
 
-# Backup and disaster recovery for Skytap workloads
+# Backup and disaster recovery for {{site.Brand}} workloads
 
 *Disaster recovery* is the process of restoring workload functionality in the wake of a catastrophic loss.
 
@@ -26,7 +26,7 @@ Consider the following suggestions when creating and testing your disaster recov
 - Document the process, especially any manual steps.
 - Automate the process as much as possible.
 - Establish a backup strategy for all reference and transactional data, and test backup restoration regularly.
-- Set up alerts for the stack of the Skytap services consumed by your workload.
+- Set up alerts for the stack of the {{site.Brand}} services consumed by your workload.
 - Train operations staff to execute the plan.
 - Perform regular disaster simulations to validate and improve the plan.
 
@@ -54,16 +54,16 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [High Availability]({{ site.navigation.Resiliency }}high-availability)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

@@ -4,14 +4,14 @@ Description: Connecting Azure NetApp Files to Skytap AIX machines Skytap on Azur
 Authors: Abhishek Jain – Cloud Solution Architect, Jeffry Lane – Sr. Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
 permalink: /operations/ecosystems/azure-native/skytap+netapp-files
 ---
-# Azure NetApp Files for Skytap on Azure
+# Azure NetApp Files for {{site.SoA}}
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for internal reference purposes.
 
 # Table of Contents<a name="toc"></a>
 
-* [Azure NetApp Files for Skytap](#azure-netapp-files-for-skytap)
+* [Azure NetApp Files for {{site.Brand}}](#azure-netapp-files-for-skytap)
   * [Reference Architecture](#reference-architecture)
 * [Azure NetApp files (ANF)](#azure-netapp-files-anf)
   * [Performance](#performance)
@@ -25,23 +25,23 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Create Volumes](#create-volumes)
 * [Mount NFS volumes on Client](#mount-nfs-volumes-on-client)
   * [Linux on Azure](#linux-on-azure)
-  * [AIX on Skytap](#aix-on-skytap)
+  * [AIX on {{site.Brand}}](#aix-on-skytap)
 
-# Azure NetApp Files for Skytap<a name="azure-netapp-files-for-skytap"></a>
+# Azure NetApp Files for {{site.Brand}}<a name="azure-netapp-files-for-skytap"></a>
 
-Skytap customers are looking for a cost-effective Azure native shared
-files solution to share files across Azure and their Skytap environments
+{{site.Brand}} customers are looking for a cost-effective Azure native shared
+files solution to share files across Azure and their {{site.Brand}} environments
 which is secured and able to support both NFS and SMB protocols. Azure
 NetApp Files (ANF) solves most of these challenges and can therefore be
 a go-to solution for customers who are looking to have a shared files
-solution on Skytap.
+solution on {{site.Brand}}.
 
 ###### *[Back to the Top](#toc)*
 
 ## Reference Architecture<a name="reference-architecture"></a>
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg" width="700">
-Figure 1 : Azure Netapp files for Skytap
+Figure 1 : Azure Netapp files for {{site.Brand}}
 
 ###### *[Back to the Top](#toc)*
 
@@ -147,7 +147,7 @@ Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
 ###### *[Back to the Top](#toc)*
 
-### AIX on Skytap<a name="aix-on-skytap"></a>
+### AIX on {{site.Brand}}<a name="aix-on-skytap"></a>
 
 1)  Check if AIX LPAR can reach NetApp volume IP - (check if VPN/ExR is
     configured and ready to use)
@@ -197,16 +197,16 @@ ls -l
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
 > * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

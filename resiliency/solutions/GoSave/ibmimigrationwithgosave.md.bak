@@ -18,7 +18,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Create virtual optical media](#createvom)
 * [Save, Option 22 to virtual optical media](#gosave)
 * [Create virtual tape media](#createvtm)
-* [Deploy IBM i in Skytap cloud](#deployinskytap)
+* [Deploy IBM i in {{site.Brand}} cloud](#deployinskytap)
 * [Network configuration](#netconfig)
 * [Go Restore, Option 23](#gorestore)
 * [APPENDIX](#appendix)
@@ -30,7 +30,7 @@ This document does not provide you with any legal rights to any intellectual pro
 
 These are some key takeaway for developers and operators to consider from this guide:
 
-* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save/Restore, Option 22-23.
+* Demonstrate how an IBM i workload can be migrated to {{site.SoA}} using Go Save/Restore, Option 22-23.
 
 * Full-system recovery including LIC, OS installation
 
@@ -166,11 +166,11 @@ STRNFSSVR \*ALL
 
     -   Mount NFS exported directory from IBM i server to Linux/Windows machine 
 
-    -   Load Skytap portal in browser of desktop session on Linux/Windows machine
+    -   Load {{site.Brand}} portal in browser of desktop session on Linux/Windows machine
 
-    -   Log into Skytap, Click on 'Assets'
+    -   Log into {{site.Brand}}, Click on 'Assets'
 
-    -   Upload ISO to Skytap account, select region where your LPAR(s) to be restored in Skytap will be hosted
+    -   Upload ISO to {{site.Brand}} account, select region where your LPAR(s) to be restored in {{site.Brand}} will be hosted
 
 ###### *[Back to the Top](#toc)*
 #### Create virtual tape media (on Source System)<a name="createvtm"></a>
@@ -246,7 +246,7 @@ Linux Example:
  ```
 
 ###### *[Back to the Top](#toc)*
-#### Deploy IBM i in Skytap (using NFS LPAR and Target System<a name="deployinskytap"></a>
+#### Deploy IBM i in {{site.Brand}} (using NFS LPAR and Target System<a name="deployinskytap"></a>
 
 Before we initialize the target system, we must first transfer the Optical ISO image to IBM i NFS server. The file transfer method is up to user choice- examples of file transfer methods include FTP, AZCopy using Azure storage account, or BRMS + ICC. After transferring these files to the NFS LPAR, Follow the steps for IBM i recovery using IBM i NFS server to transfer files to the target system:
 
@@ -283,7 +283,7 @@ file was created.
 ## **5A.3: Add image to Image Catalog**
 
 -   ADDIMGCLGE IMGCLG(ORTPREM)
-    FROMFILE('***/IMGCATALOG/Skytap30GB.iso***')
+    FROMFILE('***/IMGCATALOG/{{site.Brand}}30GB.iso***')
     TOFILE('\****fromfile***')
 
 -   Use F10 to see all parameters when adding
@@ -456,7 +456,7 @@ Use Option 1 to Vary On the optical device.
 
 **This completes step sections 5A and 5B.** **The next steps will
 continue with Step 5 which is the process of initializing and
-configuring the target system in Skytap.**
+configuring the target system in {{site.Brand}}.**
 
 2.  **Installing LIC:**
 
@@ -815,13 +815,13 @@ VARY OFF any other VETHLINE
 ## Next Steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../../../)
+> [{{site.Brand}} Well-Architected Framework](../../../)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../../../operations/)
+>[{{site.Brand}} Operational Excellence Pillar](../../../operations/)
 
 **Resiliency**
->[Skytap Resiliency Pillar](../)
+>[{{site.Brand}} Resiliency Pillar](../)
 >* [Migration](../migrations)
 >* [Protection](../backups)
 >* [Disaster Recovery](../disaster-recovery)
@@ -836,4 +836,4 @@ VARY OFF any other VETHLINE
 >* [Design Considerations for IBM Cloud](../design-considerations-ibm)
 
 **Security**
-> * [Skytap Security Pillar](../../../security/)
+> * [{{site.Brand}} Security Pillar](../../../security/)

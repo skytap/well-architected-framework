@@ -21,7 +21,7 @@ Two additional services present in the environment internal networking, a Servic
 
 #### Firewall
 
-Internal network firewalls can be deployed where it is necessary to restrict or control traffic between networks running inside Skytap. These firewalls are deployed as virtual machines within your Skytap environments.
+Internal network firewalls can be deployed where it is necessary to restrict or control traffic between networks running inside {{site.Brand}}. These firewalls are deployed as virtual machines within your {{site.Brand}} environments.
 
 ##### Recommended Implementations
 
@@ -36,7 +36,7 @@ Internal network firewalls can be deployed where it is necessary to restrict or 
 
 A Service Mesh can connect multiple application components or
 microservices together in a way that simplifies their use. For example,
-a Database running on AIX in Skytap could be connected to a frontend
+a Database running on AIX in {{site.Brand}} could be connected to a frontend
 application hosted in a hyperscale cloud provider without having to
 manually configure routing at each layer.
 
@@ -59,7 +59,7 @@ network appliances (such as load balancers).
 
 Within an environment a DNS service can be used to provide information
 to applications on where to send traffic without using the IP address.
-This is beneficial on the Skytap platform even though IP address
+This is beneficial on the {{site.Brand}} platform even though IP address
 portability is Recommended, in case multiple concurrent environments are
 running.
 
@@ -102,19 +102,19 @@ Inbound proxies deployed within a workload environment are typically used to han
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Connectivity Overview]({{ site.navigation.Operations }}connectivity/)
 > * [Getting Started with Azure Networking]({{ site.navigation.Operations }}connectivity/azure)
 > * [Getting Started with IBM Cloud Networking]({{ site.navigation.Operations }}/connectivity/ibm)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
 > * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
 > * [Security Management]({{ site.navigation.Security }}security-management)
 > * [Edge Networking]({{ site.navigation.Security }}edge-networking)

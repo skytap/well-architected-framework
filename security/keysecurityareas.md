@@ -6,7 +6,7 @@ permalink: /security/key-security-areas/
 
 ## Key Security Areas
 
-Within Skytap, there are five areas to build a control framework around:
+Within {{site.Brand}}, there are five areas to build a control framework around:
 Platform, Resource Management, Internal Networking, Edge Networking, and
 Virtual Machines.
 
@@ -15,7 +15,7 @@ standardized designs and partner points of contact where appropriate.
 
 ### Platform
 
-The Skytap platform provides controls for Security Policies;
+The {{site.Brand}} platform provides controls for Security Policies;
 Notifications; Authentication, Authorization and Accounting; and
 Auditing.
 
@@ -29,15 +29,15 @@ The security policies control access to the platform for authenticated
 users. This can restrict connectivity to approved IP addresses (such as
 those on the corporate network), password complexity rules (for those
 not using SSO) and session timeouts (prompting for re-authentication).
-Skytap recommends that access is limited to the corporate network
+{{site.Brand}} recommends that access is limited to the corporate network
 subnets, or alternatively use a virtual machine as a Bastion host to
-access the Skytap dashboard securely from the Skytap infrastructure.
+access the {{site.Brand}} dashboard securely from the {{site.Brand}} infrastructure.
 More information on access policies is available
 [here]](https://help.skytap.com/setting-access-policies.html)
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image5.png" width="800">
 
-*Figure 2 - Access Policies available within the Skytap Dashboard*
+*Figure 2 - Access Policies available within the {{site.Brand}} Dashboard*
 
 #### Notifications
 
@@ -74,7 +74,7 @@ they can consume. A user may be a member of a single Department.
 The restricted role is best for users who need tightly controlled access
 to a limited number of resources. The standard role is for trusted
 individuals who need the ability to deploy virtual machines and
-resources within Skytap. The user manager role is best for users who
+resources within {{site.Brand}}. The user manager role is best for users who
 need to manage and organize users and groups but who don't need full
 administrator capabilities. The administrator role is best for trusted
 users in your organization who need to manage users, resources, and
@@ -104,7 +104,7 @@ a restricted user a project owner.\
 ‡ An administrator must grant reporting privileges for a user to create
 and view reports.*
 
-Skytap has additional permissions that can be enabled or disabled for
+{{site.Brand}} has additional permissions that can be enabled or disabled for
 each user. Some of these permissions are displayed only when specific
 features are enabled in the platform. The table below shows the
 additional permissions that are **optional (O)** for each type of user.
@@ -119,28 +119,28 @@ additional permissions that are **optional (O)** for each type of user.
 |      Restricted     |      Standard     |      User Manager     |      Administrator     |      Permission                                                                                                                                                                     |
 |---------------------|-------------------|-----------------------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     O               |     O             |     O                 |     M                  |     This user is able to   access public   templates and public assets.                                                                                                             |
-|                     |     O             |     O                 |     M                  |     This user is able to import VMs into   Skytap.                                                                                                                                  |
-|                     |     O             |     O                 |     M                  |     This user is able to export VMs from Skytap.                                                                                                                                    |
-|                     |     O             |     O                 |     M                  |     This user is able to generate reports from   Skytap.     Reporting can be enabled for   the entire account or just the user's department.                                       |
-|                     |     O             |     O                 |     O                  |     This user is able to set promiscuous   mode on VM network adapters for Skytap.    This permission is displayed when your customer account is enabled for promiscuous   mode.    |
+|                     |     O             |     O                 |     M                  |     This user is able to import VMs into   {{site.Brand}}.                                                                                                                                  |
+|                     |     O             |     O                 |     M                  |     This user is able to export VMs from {{site.Brand}}.                                                                                                                                    |
+|                     |     O             |     O                 |     M                  |     This user is able to generate reports from   {{site.Brand}}.     Reporting can be enabled for   the entire account or just the user's department.                                       |
+|                     |     O             |     O                 |     O                  |     This user is able to set promiscuous   mode on VM network adapters for {{site.Brand}}.    This permission is displayed when your customer account is enabled for promiscuous   mode.    |
 
 #### Groups
 
 Groups help you manage large numbers of user permissions across multiple
 projects. A user can belong to multiple groups and the groups can be
-given permissions within Skytap. The platform supports up to 100 groups;
+given permissions within {{site.Brand}}. The platform supports up to 100 groups;
 groups are managed by administrators and user managers.
 
 #### Projects
 
-Projects grant users access to other resources within Skytap. Users
+Projects grant users access to other resources within {{site.Brand}}. Users
 always use the most permissive access rights granted, so if a named user
 is granted Editor rights but is also member of a group with Viewer
 permissions, they can use the Editor rights to perform actions on the
 project.
 
 Projects support the concept of an Automatic Role; this role is granted
-to every new user on Skytap. This feature should be used sparingly to
+to every new user on {{site.Brand}}. This feature should be used sparingly to
 prevent excessive user permissions.
 
 *Project Permissions*
@@ -200,12 +200,12 @@ templates (template users).
 
         -   Add users to the project or remove users from the project.
 
-    -   Add all other Skytap users to the project in
+    -   Add all other {{site.Brand}} users to the project in
         the **Participant** role. **Participants** can create
         environments from templates in the project.
 
 Enable an **automatic role** on the project. With this setting, every
-new Skytap user is automatically added to this project as
+new {{site.Brand}} user is automatically added to this project as
 a **Participant**.
 
 -   **Staging** -- Use this project to share in-progress environments
@@ -215,19 +215,19 @@ a **Participant**.
 
     -   Add template creators to the project in the **Manager** role.
 
-    -   Do not add other Skytap users to this project. Because they
+    -   Do not add other {{site.Brand}} users to this project. Because they
         don't have project access, they cannot view or use environments
         and templates in this project.
 
 #### Departments
 
 Departments allow you to model company departments, business units, or
-project teams within the Skytap. With department monitoring and limits,
+project teams within the {{site.Brand}}. With department monitoring and limits,
 you can:
 
 -   Create usage limits to cap the amount of storage, RAM hours, or
     concurrent RAM that department users can consume; this can guarantee
-    that Skytap resources remain available to critical departments.
+    that {{site.Brand}} resources remain available to critical departments.
 
 -   Create usage reports to track and charge-back usage by each
     department.
@@ -237,7 +237,7 @@ Each user can belong to one department, and the platform supports up to
 
 #### Single Sign-On
 
-Skytap can be configured for SAML based Single Sign-On, thus making it
+{{site.Brand}} can be configured for SAML based Single Sign-On, thus making it
 compatible with Azure Directory Services, Corporate Active Directory and
 authentication services such as Ping Identity or Okta. By integrating
 with Single Sign-On organizations can enforce additional authentication
@@ -293,16 +293,16 @@ prevent cloud sprawl or an economic denial of service.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
 > * [Security Management]({{ site.navigation.Security }}security-management)
 > * [Edge Networking]({{ site.navigation.Security }}edge-networking)
 > * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)

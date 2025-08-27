@@ -20,7 +20,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Save, Option 22 to virtual optical media](#gosave)
 * [Save QGPL and QUSRSYS and append to existing ISO in Optical device](#appendiso)
 * [Create virtual tape media](#createvtm)
-* [Deploy IBM i in Skytap cloud](#deployinskytap)
+* [Deploy IBM i in {{site.Brand}} cloud](#deployinskytap)
 * [APPENDIX](#appendix)
   * [Example Commands](#examplecommands)
 
@@ -29,7 +29,7 @@ This document does not provide you with any legal rights to any intellectual pro
 
 These are some key takeaway for developers and operators to consider from this guide:
 
-* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using Go Save/Restore, Option 22-23.
+* Demonstrate how an IBM i workload can be migrated to {{site.SoA}} using Go Save/Restore, Option 22-23.
 
 * Full-system recovery including LIC, OS installation
 
@@ -167,11 +167,11 @@ STRNFSSVR \*ALL
 
     -   Mount NFS exported directory from IBM i server to Linux/Windows machine 
 
-    -   Load Skytap portal in browser of desktop session on Linux/Windows machine
+    -   Load {{site.Brand}} portal in browser of desktop session on Linux/Windows machine
 
-    -   Log into Skytap, Click on 'Assets'
+    -   Log into {{site.Brand}}, Click on 'Assets'
 
-    -   Upload ISO to Skytap account, select region where your LPAR(s) to be restored in Skytap will be hosted
+    -   Upload ISO to {{site.Brand}} account, select region where your LPAR(s) to be restored in {{site.Brand}} will be hosted
 
 ###### *[Back to the Top](#toc)*
 #### Create virtual tape media (on Source System)<a name="createvtm"></a>
@@ -247,7 +247,7 @@ Linux Example:
  ```
 
 ###### *[Back to the Top](#toc)*
-#### Deploy IBM i in Skytap (using NFS LPAR and Target System)<a name="deployinskytap"></a>
+#### Deploy IBM i in {{site.Brand}} (using NFS LPAR and Target System)<a name="deployinskytap"></a>
 
 Before we initialize the target system, we must first transfer the Optical ISO image to IBM i NFS server. The file transfer method is up to user choice- examples of file transfer methods include FTP, AZCopy using Azure storage account, or BRMS + ICC. After transferring these files to the NFS LPAR, Follow the steps for IBM i recovery using IBM i NFS server to transfer files to the target system:
 
@@ -283,7 +283,7 @@ file was created.
 ##### Add Image to Image Catalog<a name="addimagetocatalog"></a>
 1.  From the NFS LPAR use the following commands:
 ```bash
-ADDIMGCLGE IMGCLG(ORTPREM) FROMFILE('***/IMGCATALOG/Skytap30GB.iso***') TOFILE('\****fromfile***')
+ADDIMGCLGE IMGCLG(ORTPREM) FROMFILE('***/IMGCATALOG/{{site.Brand}}30GB.iso***') TOFILE('\****fromfile***')
 ```
 
 2.  Use F10 to see all parameters when adding
@@ -464,7 +464,7 @@ Use Option 1 to Vary On the optical device.
 
 **This completes step sections 5A and 5B.** **The next steps will
 continue with Step 5 which is the process of initializing and
-configuring the target system in Skytap.**
+configuring the target system in {{site.Brand}}.**
 
 2.  **Installing LIC:**
 
@@ -824,13 +824,13 @@ VARY OFF any other VETHLINE
 
 1. Deploy IBM i from template
 
-2. Delete load source drive from hardware settings in Skytap GUI
+2. Delete load source drive from hardware settings in {{site.Brand}} GUI
 
 3. Add new disk(s) for System ASP
 
 4. Set boot mode to D Manual mode in hardware settings
 
-5. Boot LPAR from Skytap UI and wait to reach C200 4130 boot code (No Load source Found)
+5. Boot LPAR from {{site.Brand}} UI and wait to reach C200 4130 boot code (No Load source Found)
 
 6. Click button in UI to mount Option 22 ISO from Assets to LPAR
 
@@ -932,7 +932,7 @@ STRNFSSVR \*ALL
 
 4. Boot and configure root and secondary users in CentOS
 
-5. Mount NFS directory from IBM i server in Skytap on Linux machine:
+5. Mount NFS directory from IBM i server in {{site.Brand}} on Linux machine:
 
 Example:
 ```bash
@@ -949,7 +949,7 @@ Example:
 ```bash
 tar -xvf azcopy\_linux\_amd64\_10.12.2.tar.gz
 ```
-8.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBM i server in Skytap
+8.  Copy save files from Azure blob storage container to mounted NFS export directory on target IBM i server in {{site.Brand}}
 
 <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory" target="_blank">https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-upload?toc=/azure/storage/blobs/toc.json\#upload-a-directory</a>
 
@@ -959,7 +959,7 @@ azcopy copy \'https://\<storage-account-name\>.\<blob or dfs\>.core.windows.net/
 ```
 Linux Example:
 ```bash
-./azcopy copy https://\<myStorageAccount>\.blob.core.windows.net/containerName?\<SAS-Key\>'/home/LinuxUserinSkytapCentos/localNFSDirectory'\ --recursive
+./azcopy copy https://\<myStorageAccount>\.blob.core.windows.net/containerName?\<SAS-Key\>'/home/LinuxUserin{{site.Brand}}Centos/localNFSDirectory'\ --recursive
 ```
 
 9. Create virtual tape image catalog in /scratchASP/vtapes
@@ -1001,13 +1001,13 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -1022,4 +1022,4 @@ showmount -e 10.0.0.1 (IP address for IBMi LPAR)
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

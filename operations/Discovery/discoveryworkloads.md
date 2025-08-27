@@ -3,7 +3,7 @@ title: Skytap Power Discovery - Workloads
 author: George Stamos, Director, Solutions Architect- Business Development
 permalink: /operations/Discovery/workloads/
 ---
-# Skytap Power Discovery - Workloads
+# {{site.Brand}} Power Discovery - Workloads
 #### The following section outlines IBM Power Workload discovery: <a name="toc"></a>
 
 * [Goals](#goals)
@@ -11,23 +11,23 @@ permalink: /operations/Discovery/workloads/
   * [Organizational](#qandaorg)
   * [Application](#qandaapp)
   * [Scenario](#qandascene)
-* [Skytap on Azure Support and Limits](#designforazure)
-* [Skytap on IBM Cloud Support and Limits](#designforibm)
+* [{{site.SoA}} Support and Limits](#designforazure)
+* [{{site.SoI}} Support and Limits](#designforibm)
 * [Sample Outputs](#samples)
 
-### Skytap Power Discovery for Workloads - Goals <a name="goals"></a>
+### {{site.Brand}} Power Discovery for Workloads - Goals <a name="goals"></a>
 
 The goal of discovery is to develop the proper framework for your
-workloads running in Skytap. It can be further defined by these
+workloads running in {{site.Brand}}. It can be further defined by these
 supporting goals:
 
 * Uncover exact on-premises workloads to be migrated at the LPAR/VM level
-* Match existing data center workloads as closely as possible in Skytap
+* Match existing data center workloads as closely as possible in {{site.Brand}}
 * Match or exceed existing data center performance
 * Deeply understand usage patterns
 *  Deliver a well-reasoned cost proposal and practical migration approach
 
-### Skytap Power Discovery for Workloads - Considerations and Questions <a name="qanda"></a>
+### {{site.Brand}} Power Discovery for Workloads - Considerations and Questions <a name="qanda"></a>
 
 There are relevant considerations to be made and questions to ask your
 organization during the discovery phase aligned to three key areas:
@@ -66,15 +66,15 @@ organization during the discovery phase aligned to three key areas:
 3.  What are the approximate number of active users in your IBM Power
     environment? Which time zones do your users operate in?
 
-### Skytap Power Discovery for Workloads - Skytap for Azure Support and Limits (AIX and IBM i)<a name="designforazure"></a>
+### {{site.Brand}} Power Discovery for Workloads - {{site.Brand}} for Azure Support and Limits (AIX and IBM i)<a name="designforazure"></a>
 
 > * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
 
-<!--- ### Skytap Power Discovery for Workloads - Skytap for IBM Cloud Support and Limits (AIX and IBM i)<a name="designforibm"></a>
+<!--- ### {{site.Brand}} Power Discovery for Workloads - {{site.Brand}} for IBM Cloud Support and Limits (AIX and IBM i)<a name="designforibm"></a>
 
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm) --->
 
-### Skytap Power Discovery for Workloads - Sample Outputs<a name="samples"></a>
+### {{site.Brand}} Power Discovery for Workloads - Sample Outputs<a name="samples"></a>
 
 **AIX**
 
@@ -100,10 +100,10 @@ following commands and catalog into the BOM for the migration.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
     * [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
 > * [Connectivity]({{ site.navigation.Operations }}connectivity/)
@@ -111,7 +111,7 @@ following commands and catalog into the BOM for the migration.
 > * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -126,4 +126,4 @@ following commands and catalog into the BOM for the migration.
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

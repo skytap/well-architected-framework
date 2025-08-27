@@ -123,7 +123,7 @@
                         </li>
                         <li class="nav-item dropdown"><a href="{{ site.navigation.Resiliency }}" class="nav-link">Resiliency - HA\DR\Migration</a>
                             <div class="dropdown-menu show">
-                                <label for="excellenceDisciplinesMenu" class="dropdown-item">Skytap Resiliency Pillar</label>
+                                <label for="excellenceDisciplinesMenu" class="dropdown-item">{{site.Brand}} Resiliency Pillar</label>
                                 <div id="excellenceDisciplinesMenu" class="inner-menu">
                                     <a href="{{ site.navigation.Resiliency }}migrations" class="dropdown-item inner-item">Migration</a>
                                     <a href="{{ site.navigation.Resiliency }}backups" class="dropdown-item inner-item">Protection</a>
@@ -166,7 +166,7 @@
             <div class="footer-content">
                 <div class="row justify-content-center justify-content-lg-between align-items-center">
                     <a href="https://www.skytap.com/" target="_blank" class="footer-logo">{{ site.skytap-footer-logo }}</a>
-                    <span>Copyright &copy; {{ 'now' | date: "%Y" }} Skytap. All Rights Reserved</span>
+                    <span>Copyright &copy; {{ 'now' | date: "%Y" }} {{site.Brand}}. All Rights Reserved</span>
                 </div>
                 {% if site.github.is_project_page %}
                 <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>

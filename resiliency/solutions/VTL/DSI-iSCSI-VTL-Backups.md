@@ -4,7 +4,7 @@ Description: DSI iSCSI VTL implementation in Skytap IBM i LPARs and the process 
 Authors: Mayank Kumar - Cloud Solutions Architect
 permalink: /resiliency/solutions/VTL/DSI-iSCSI-VTL-Backups/
 ---
-# DSI iSCSI VTL backups for IBM i running on Skytap on Azure
+# DSI iSCSI VTL backups for IBM i running on {{site.SoA}}
 
 This guide is provided "as-is". Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
@@ -29,13 +29,13 @@ mechanical errors that can occur with physical tapes and drives.
 IBM i LPARs should be upgraded to the latest PTFs prior to VTL
 installation.
 
-Skytap has pre-built templates that can be used to configure the DSI VTL in a Skytap environment.
+{{site.Brand}} has pre-built templates that can be used to configure the DSI VTL in a {{site.Brand}} environment.
 
 ### Installation<a name="install"></a>
 
 IBM i can be configured using SQL services or advanced analysis macro from the service tool. SQL services is the preferred method and the steps are documented below:
 
-1.  From your IBM i Secure Remote Access (SRA) console in Skytap use the following commands:
+1.  From your IBM i Secure Remote Access (SRA) console in {{site.Brand}} use the following commands:
 
 ```bash
 Strsql
@@ -84,7 +84,7 @@ Note: It may take around 5 minutes for the VTL resources to show up in IBM i. Th
 
 ### Backup<a name="backups"></a>
 
-1.  From your IBM i Secure Remote Access (SRA) console in Skytap use the following commands: <tt>INZBRM \* Device</tt> to add the VTL in BRMS.
+1.  From your IBM i Secure Remote Access (SRA) console in {{site.Brand}} use the following commands: <tt>INZBRM \* Device</tt> to add the VTL in BRMS.
 
 2.  You can create a new media class or edit the existing one with command <tt>WRKCLSBRM</tt>.
 
@@ -109,13 +109,13 @@ Note: For automated weekly full system backups use control groups <tt>QNFSSYSFUL
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -130,4 +130,4 @@ Note: For automated weekly full system backups use control groups <tt>QNFSSYSFUL
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

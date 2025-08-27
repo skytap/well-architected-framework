@@ -5,9 +5,9 @@ author: George Stamos, Director, Solutions Architect - Business Development
 permalink: /resiliency/solutions/hot-migrations/
 ---
 
-## Skytap on Azure + Precisely for High Availability Scenarios
+## {{site.SoA}} + Precisely for High Availability Scenarios
 
-For hot migrations, Skytap partners with Precisely, the market leader for high availability scenarios. Precisely supports IBM i and AIX. How Precisely supports the Skytap on Azure hot migration for IBM i is depicted below.
+For hot migrations, {{site.Brand}} partners with Precisely, the market leader for high availability scenarios. Precisely supports IBM i and AIX. How Precisely supports the {{site.SoA}} hot migration for IBM i is depicted below.
 
 ### What is Precisely for IBM iSeries?
 
@@ -60,7 +60,7 @@ The following outlines popular Precisely migration scenarios available for you t
 
 #### Additional Resources
 
-- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/SKYTAP-Systemi-MIMIX-Runbook.pdf" target="_blank">Skytap + Precisely MIMIX Runbook for IBM iSeries</a>**
+- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/SKYTAP-Systemi-MIMIX-Runbook.pdf" target="_blank">{{site.Brand}} + Precisely MIMIX Runbook for IBM iSeries</a>**
 
 ### What's different about AIX?
 
@@ -76,22 +76,22 @@ The following outlines popular Precisely migration scenarios available for you t
 
 #### Additional Resources
 
-- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/Mimix-AIX-Runbook-V522.pdf">Skytap + Precisely MIMIX Runbook for AIX</a>**
+- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/Mimix-AIX-Runbook-V522.pdf">{{site.Brand}} + Precisely MIMIX Runbook for AIX</a>**
 
 #### Additional Solutions
 
-- **[Skytap Live Clone Feature]({{ site.navigation.Resiliency }}solutions/live-clone)**
+- **[{{site.Brand}} Live Clone Feature]({{ site.navigation.Resiliency }}solutions/live-clone)**
 
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -105,4 +105,4 @@ The following outlines popular Precisely migration scenarios available for you t
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

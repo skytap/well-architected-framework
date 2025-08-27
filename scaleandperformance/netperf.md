@@ -7,7 +7,7 @@ author: Vivian Su, Senior Engineering Manager - Networking
 
 ## Features Overview
 
--   Includes information on how to set up networks in Skytap, connect Environments together, how to avoid overlapping IP spaces in multiple scenarios, connect to outbound Internet, etc.
+-   Includes information on how to set up networks in {{site.Brand}}, connect Environments together, how to avoid overlapping IP spaces in multiple scenarios, connect to outbound Internet, etc.
 
 -   [https://help.skytap.com/network-overview.html](https://help.skytap.com/network-overview.html)
 
@@ -17,7 +17,7 @@ author: Vivian Su, Senior Engineering Manager - Networking
 
 -   [https://help.skytap.com/vm-network-settings.html](https://help.skytap.com/vm-network-settings.html)
 
-<!-- ## Skytap Platform Limits
+<!-- ## {{site.Brand}} Platform Limits
 
 -   Talk to Product Management and ask for most up-to-date: "*[Limits
     > Document (Select Customers Only) TECHNICAL PAPER Configuration

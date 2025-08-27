@@ -359,13 +359,13 @@ Commvault's IBM iDataAgent relies on the same proven Commvault Data Platform tha
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework](../README.md)
+> [{{site.Brand}} Well-Architected Framework](../README.md)
 
 **Operational Excellence**
->[Skytap Operational Excellence Pillar](../operations/README.md)
+>[{{site.Brand}} Operational Excellence Pillar](../operations/README.md)
 
 **Resiliency**
-> [Skytap Resiliency Pillar](README.md)
+> [{{site.Brand}} Resiliency Pillar](README.md)
 >* [Migration](migrations.md)
 >* [Protection](backups.md)
 >* [Disaster Recovery](disasterrecovery.md)
@@ -376,4 +376,4 @@ Commvault's IBM iDataAgent relies on the same proven Commvault Data Platform tha
 >* [Design Considerations for IBM Cloud](designconsiderationsibm.md)
 
 **Security**
-> * [Skytap Security Pillar](../security/README.md)
+> * [{{site.Brand}} Security Pillar](../security/README.md)

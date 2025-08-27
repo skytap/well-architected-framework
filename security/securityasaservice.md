@@ -11,7 +11,7 @@ vendors, the changing threat landscape, and the need to support modern
 and legacy workloads in the enterprise space, it can be difficult for
 organizations to provide those services internally.
 
-Skytap works with a variety of Security as a Service vendors who can
+{{site.Brand}} works with a variety of Security as a Service vendors who can
 manage your cloud workloads and who have expert knowledge in securing
 cloud workloads. These partners can supplement an organization's
 internal security support team and should be considered as part of a
@@ -47,16 +47,16 @@ wider cloud strategy.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
 > * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
 > * [Security Management]({{ site.navigation.Security }}security-management)
 > * [Edge Networking]({{ site.navigation.Security }}edge-networking)

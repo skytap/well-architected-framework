@@ -5,10 +5,10 @@ author: George Stamos, Director, Solutions Architect - Business Development
 permalink: /resiliency/solutions/cold-migrations/
 ---
 
-## Skytap on Azure Architecture: Skytap + Commvault
+## {{site.SoA}} Architecture: {{site.Brand}} + Commvault
 
-Skytap leverages best-in-class tools to accommodate both migrations
-associated with these operating systems. Skytap has an engineering
+{{site.Brand}} leverages best-in-class tools to accommodate both migrations
+associated with these operating systems. {{site.Brand}} has an engineering
 partnership with Commvault to facilitate seamless migrations. The result
 is a one-touch solution to migrate your workloads into Azure.
 
@@ -16,7 +16,7 @@ Here is an overview of Commvault.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image7.png">
 
-Here is an overview of how Skytap on Azure and Commvault work together
+Here is an overview of how {{site.SoA}} and Commvault work together
 for AIX and IBM i (AS400).
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image8.png">
@@ -29,21 +29,21 @@ for AIX and IBM i (AS400).
 
 - **[IBM i workload migration using Go Save/Restore, Option-22,23]({{ site.navigation.Resiliency }}solutions/GoSave/)**
 
-- **[iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups/)**
+- **[iSCSI VTL backups for IBM i running on {{site.SoA}}]({{ site.navigation.Resiliency }}solutions/VTL/IBMi-iSCSI-VTL-Backups/)**
   
-- **[DSI iSCSI VTL backups for IBM i running on Skytap on Azure]({{ site.navigation.Resiliency }}solutions//VTL/DSI-iSCSI-VTL-Backups/)**
+- **[DSI iSCSI VTL backups for IBM i running on {{site.SoA}}]({{ site.navigation.Resiliency }}solutions//VTL/DSI-iSCSI-VTL-Backups/)**
 
-- **[IBM i workload migration from on-prem to Skytap using BRMS ICC]({{ site.navigation.Resiliency }}solutions/brms/)**
+- **[IBM i workload migration from on-prem to {{site.Brand}} using BRMS ICC]({{ site.navigation.Resiliency }}solutions/brms/)**
 
-- **[Importing Power LPARs into Skytap with PowerVC - A field enablement guide]({{ site.navigation.Resiliency }}solutions/power-vc/)**
+- **[Importing Power LPARs into {{site.Brand}} with PowerVC - A field enablement guide]({{ site.navigation.Resiliency }}solutions/power-vc/)**
 
-- **[IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box]({{ site.navigation.Resiliency }}solutions/databoxmigrations/)**
+- **[IBM i Migration to {{site.SoA}} Using Microsoft Azure Data Box]({{ site.navigation.Resiliency }}solutions/databoxmigrations/)**
 
-- **[Backup and Restore to Skytap on Azure using Mksysb]({{ site.navigation.Resiliency }}solutions/mksysb-backupandrestore/)**
+- **[Backup and Restore to {{site.SoA}} using Mksysb]({{ site.navigation.Resiliency }}solutions/mksysb-backupandrestore/)**
 
-- **[Save Skytap Environment as Template and Copy to New Region]({{ site.navigation.Resiliency }}solutions/Save-Template-Copy-To-Region/)**
+- **[Save {{site.Brand}} Environment as Template and Copy to New Region]({{ site.navigation.Resiliency }}solutions/Save-Template-Copy-To-Region/)**
 
-- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_Skytap_using_Commvault.pdf" target="_blank">IBM i – Migration to Skytap using Commvault</a>**
+- **<a href="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/IBM_i_Migration_to_{{site.Brand}}_using_Commvault.pdf" target="_blank">IBM i – Migration to {{site.Brand}} using Commvault</a>**
 
 ### Additional Resources
 
@@ -52,13 +52,13 @@ for AIX and IBM i (AS400).
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -72,4 +72,4 @@ for AIX and IBM i (AS400).
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

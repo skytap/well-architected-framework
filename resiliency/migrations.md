@@ -11,11 +11,11 @@ Building a reliable application in the cloud is different from traditional appli
 
 ## Considerations for Migration
 
-The following section provides an overview of Skytap on Azure Architecture and is used as a lens to assess the reliability of an environment deployed in Skytap. 
+The following section provides an overview of {{site.SoA}} Architecture and is used as a lens to assess the reliability of an environment deployed in {{site.Brand}}. 
 
 Migration Considerations include:
 
--   Skytap on Azure General Architecture
+-   {{site.SoA}} General Architecture
 
 -   Supported LPARs
 
@@ -23,12 +23,12 @@ Migration Considerations include:
 
 -   [Hot Migrations (Replication Sync)](./solutions/HotMigrationOverview.md)
 
-**Skytap Discovery and Migration -- Support and Limits**
+**{{site.Brand}} Discovery and Migration -- Support and Limits**
 
-The following section outlines Skytap on Azure support and limits for
+The following section outlines {{site.SoA}} support and limits for
 IBM i and AIX.
 
-***Skytap for Azure Support and Limits (IBM i)***
+***{{site.Brand}} for Azure Support and Limits (IBM i)***
 
 
 **Compute**
@@ -45,7 +45,7 @@ for Power
 
 **Network**
 
-* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+* IPSec (SDN) / PNC Connectivity Between {{site.Brand}} and On-Premises
   * Range: 750 Mbps Limit
 * Layer 2 networking in environment
   * Range: Burst to 2.7 Gbps Limit
@@ -60,7 +60,7 @@ for Power
 * Storage performance scalability with VM/LPAR RAM capacity
 * IOPS up to 30K per LPAR
 
-***Skytap for Azure Support and Limits (AIX)***
+***{{site.Brand}} for Azure Support and Limits (AIX)***
 
 **Compute**
 
@@ -77,7 +77,7 @@ LPAR Sizing and OS Support for Power
 
 **Network**
 
-* IPSec (SDN) / PNC Connectivity Between Skytap and On-Premises
+* IPSec (SDN) / PNC Connectivity Between {{site.Brand}} and On-Premises
   * Range: 750 Mbps Limit
 * Layer 2 networking in environment
   * Range: Burst to 2.7 Gbps Limit
@@ -92,9 +92,9 @@ LPAR Sizing and OS Support for Power
 * All SSD technology and encrypted
 * IOPS up to 30K per LPAR
 
-High-Level Considerations for Migration to Skytap on Azure
+High-Level Considerations for Migration to {{site.SoA}}
 
-Migration to Skytap on Azure can be migrated via a hot or cold/warm
+Migration to {{site.SoA}} can be migrated via a hot or cold/warm
 migration as depicted here. 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image6.png" width="600">
@@ -113,13 +113,13 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
 > * [High Availability]({{ site.navigation.Resiliency }}high-availability)
@@ -133,4 +133,4 @@ This is VERY similar to a WARM versus HOT migration, and the same tools may be u
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

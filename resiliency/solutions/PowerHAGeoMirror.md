@@ -4,10 +4,10 @@ Description: Skytap HA Solution - Skytap on Azure using IBM i PowerHA - Geo Mirr
 Authors: Mike Neil - Vice President, Technical Field Operations
 permalink: /resiliency/solutions/PowerHAGeoMirror/
 ---
-# IBM i PowerHA -- Geo Mirror -- Skytap Configuration<a name="objective"></a>
+# IBM i PowerHA -- Geo Mirror -- {{site.Brand}} Configuration<a name="objective"></a>
 
 This document explains how to configure a basic two-node geographic
-mirroring environment within Skytap on Azure across different regions
+mirroring environment within {{site.SoA}} across different regions
 with Network connectivity in place, leveraging local storage to the
 partition. We will use an IBM i PowerHA two-node cluster (Primary node
 configured in Region 1 and Backup Node in Region 2) with Geo Mirroring.
@@ -37,9 +37,9 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Next Steps](#nextsteps)
 
 ##  Overview <a name="overview"></a>
-Skytap on Azure is the ultimate solution for IT professionals who use IBM Power hardware. It offers a specialized cloud environment specifically designed for IBM Power and x86 workloads, seamlessly bridging the gap between legacy systems and cutting-edge cloud innovation. With the increasing demand for hybrid cloud providers, IT professionals can now easily migrate their existing applications and create new ones, all while extending their strategy to include traditional IBM Power Systems workloads, including those running on the trusted IBM i Operating System.
+{{site.SoA}} is the ultimate solution for IT professionals who use IBM Power hardware. It offers a specialized cloud environment specifically designed for IBM Power and x86 workloads, seamlessly bridging the gap between legacy systems and cutting-edge cloud innovation. With the increasing demand for hybrid cloud providers, IT professionals can now easily migrate their existing applications and create new ones, all while extending their strategy to include traditional IBM Power Systems workloads, including those running on the trusted IBM i Operating System.
 
-IBM i customers rely on Skytap for both production and disaster recovery/high availability (DR/HA) use cases. For DR/HA, they have the flexibility to host just the DR/HA environment in Skytap while keeping the production environment on-premises, or they can opt to have both environments fully hosted in Skytap on Azure. This allows them to easily implement a comprehensive DR/HA strategy that meets their specific business needs.
+IBM i customers rely on {{site.Brand}} for both production and disaster recovery/high availability (DR/HA) use cases. For DR/HA, they have the flexibility to host just the DR/HA environment in {{site.Brand}} while keeping the production environment on-premises, or they can opt to have both environments fully hosted in {{site.SoA}}. This allows them to easily implement a comprehensive DR/HA strategy that meets their specific business needs.
 
 Several technologies are native to IBM i that can be used to provide a data replication solution for the platform. One such solution is IBM PowerHA SystemMirror for i (PowerHA).
 
@@ -198,18 +198,18 @@ Once varied on, you should see the following message.
 
 *NOTE: Customer is responsible for restoring the data to the i ASP on the primary.*
 
-In summary, Skytap on Azure combined with the power and flexibility of IBM PowerHA SystemMirror for i (PowerHA) offers a complete end-to-end cloud platform to support an organization\'s mission-critical applications as a part of its overall cloud strategy. This solution can be deployed to support both Primary and HA/DR systems fully in Skytap on Azure, or a hybrid approach where the Primary or HA/DR system remains on-prem.
+In summary, {{site.SoA}} combined with the power and flexibility of IBM PowerHA SystemMirror for i (PowerHA) offers a complete end-to-end cloud platform to support an organization\'s mission-critical applications as a part of its overall cloud strategy. This solution can be deployed to support both Primary and HA/DR systems fully in {{site.SoA}}, or a hybrid approach where the Primary or HA/DR system remains on-prem.
 
 ### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -224,4 +224,4 @@ In summary, Skytap on Azure combined with the power and flexibility of IBM Power
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

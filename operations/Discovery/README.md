@@ -75,7 +75,7 @@ The common <a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framew
 
 ### Updated Cloud Rationalization and IBM Power Workloads 
 
-Prior to existence of Skytap on Azure, organizations would consider all of the
+Prior to existence of {{site.SoA}}, organizations would consider all of the
 approaches above for their Power applications, but after years of
 organization moving their applications to the Cloud, there are still thousands of 
 applications running in the data center that are
@@ -87,18 +87,18 @@ landscape of Cloud rationalization. Let's revisit each of them in more
 detail to describe how organizations may want to reconsider this process
 for Power applications.
 
-* **Rehost**: Prior to Skytap on Azure, there was not an easy way to rehost
+* **Rehost**: Prior to {{site.SoA}}, there was not an easy way to rehost
     an application in Azure or another hyperscale provider. The "next
     best" option was to run Power applications in a colocation provider
     with a direct connection to the Cloud provider of choice. This has
     the disadvantage of having to still maintain physical
-    infrastructure. Skytap on Azure allows you move those workloads into
+    infrastructure. {{site.SoA}} allows you move those workloads into
     Azure directly while maintaining the ability for them to run on **Native** IBM Power hardware. At the same time, these workloads are
-    in close proximity to their Skytap x86, Azure x86 and Azure native
+    in close proximity to their {{site.Brand}} x86, Azure x86 and Azure native
     Cloud Services which allows for continued high-performance and
     easier manageability. Rehost is essentially a new option for Power
     workloads that didn't exist before in hyperscale Cloud providers
-    that is now a new reality with Skytap on Azure.
+    that is now a new reality with {{site.SoA}}.
 
 * **Refactor**: With the ability to run Power based applications in
     Azure, the amount of refactoring you must do is greatly diminished.
@@ -109,7 +109,7 @@ for Power applications.
     x86 or Cloud-native solutions.
 
 * **Rearchitect**: It is beneficial to run large applications where the Power
-    component is the "system of record" natively in Skytap on Azure.
+    component is the "system of record" natively in {{site.SoA}}.
     Examples include IBM i applications that are used for logistics or
     warehouse management where 90% of the application can be
     Rearchitected to create a next-gen mobile application, or one that
@@ -120,19 +120,19 @@ for Power applications.
 * **Rebuild**: There are plenty of IBM Power applications that are
     meeting user needs today and tomorrow. If there is a Cloud-first
     strategy, does it make sense to rebuild it to be cloud-native?
-    Instead of rebuilding it, it can simply be rehosted in Skytap on
+    Instead of rebuilding it, it can simply be rehosted in {{site.Brand}} on
     Azure.
 
 
 Once you understand your IBM Power estate, you can start the
 process of discovery to determine what and how you will be migrating to
-Skytap on Azure.
+{{site.SoA}}.
 
 --------------------------------------------------------------------- ------------- ----------------------------------------
 
 
 
-#### IBM Power Discovery for on-premises workloads for migration to Skytap on Azure
+#### IBM Power Discovery for on-premises workloads for migration to {{site.SoA}}
 
 | Operational Excellence Power Discovery & Design | Description |
 |-------------------|-------------|
@@ -142,10 +142,10 @@ Skytap on Azure.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 > * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
     * [Power Discovery & Design - Ecosystems]({{ site.navigation.Operations }}Discovery/ecosystems)
     * [Power Discovery & Design - Workloads]({{ site.navigation.Operations }}Discovery/workloads)
@@ -154,7 +154,7 @@ Skytap on Azure.
 > * [Performance]({{ site.navigation.Operations }}performance/)
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

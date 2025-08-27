@@ -4,7 +4,7 @@ Author: Matthew Romero, Technical Product Marketing Manager
 permalink: /resiliency/solutions/commvault
 ---
 
-# Utilizing Commvault in Skytap with IBM Power Workloads in Azure
+# Utilizing Commvault in {{site.Brand}} with IBM Power Workloads in Azure
 
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
@@ -14,8 +14,8 @@ This document does not provide you with any legal rights to any intellectual pro
 # Table of Contents <a name="toc"></a>
 
 * [Key Takeaways](#takeaways)
-* [Setting Up Commvault Within Skytap](#setup)
-  * [Create a new Skytap Environment](#createnewenv)
+* [Setting Up Commvault Within {{site.Brand}}](#setup)
+  * [Create a new {{site.Brand}} Environment](#createnewenv)
   * [Update the environment details](#updateenvdetails)
 * [Deploying the Commvault software into the CommServer VM](#deploycommvault)
   * [Configuring the VM to run Commvault](#configurecommvaultvm)
@@ -25,14 +25,14 @@ This document does not provide you with any legal rights to any intellectual pro
 
 ## Key Takeaways<a name="takeaways"></a>
 
-Commvault may be used to migrate, protect, and recover IBM i LPARs on Skytap for Azure. This guide will walk you through all the steps required to get up and running with Commvault in Skytap.
+Commvault may be used to migrate, protect, and recover IBM i LPARs on {{site.Brand}} for Azure. This guide will walk you through all the steps required to get up and running with Commvault in {{site.Brand}}.
 
-Here is an overview of how Skytap on Azure and Commvault work together
+Here is an overview of how {{site.SoA}} and Commvault work together
 for AIX and IBM i (as400).
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image8.png">
 
-For the overall architecture, please refer to the sample reference architecture shown below. In the example shown in *Figure 1*, a 1--*n* set of IBM i LPARs resides on-premises in a data center facility. In the example architecture, Commvault is used to back up the IBM i selected LPAR data to Commvault proxy MediaAgents to be transferred to Azure Blob Storage. The Commvault CommServer controls the orchestration and automation of the backup within Azure. The data, once transferred, may then be restored to Skytap for Azure, unchanged.
+For the overall architecture, please refer to the sample reference architecture shown below. In the example shown in *Figure 1*, a 1--*n* set of IBM i LPARs resides on-premises in a data center facility. In the example architecture, Commvault is used to back up the IBM i selected LPAR data to Commvault proxy MediaAgents to be transferred to Azure Blob Storage. The Commvault CommServer controls the orchestration and automation of the backup within Azure. The data, once transferred, may then be restored to {{site.Brand}} for Azure, unchanged.
 <hr>
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image1.png">
 
@@ -42,15 +42,15 @@ For the overall architecture, please refer to the sample reference architecture 
 
 <hr>
 
-# Setting Up Commvault Within Skytap to protect an IBM Power system in the Skytap environments.<a name="setup"></a>
+# Setting Up Commvault Within {{site.Brand}} to protect an IBM Power system in the {{site.Brand}} environments.<a name="setup"></a>
 
-### Staging Your Skytap Environment for Commvault<a name="step1"></a>
+### Staging Your {{site.Brand}} Environment for Commvault<a name="step1"></a>
 
-#### Create a new Skytap Environment<a name="createnewenv"></a>
+#### Create a new {{site.Brand}} Environment<a name="createnewenv"></a>
 
-1.  Navigate to <a href="https://cloud.skytap.com" target="_blank">**cloud.skytap.com**</a>. The Skytap Dashboard page will then display.
+1.  Navigate to <a href="https://cloud.skytap.com" target="_blank">**cloud.skytap.com**</a>. The {{site.Brand}} Dashboard page will then display.
 
-2.  Once you have signed into the portal with your **Skytap account**, click the **Environments** tab at the top of the window. The **Manage Environments and VMs** page will then display.
+2.  Once you have signed into the portal with your **{{site.Brand}} account**, click the **Environments** tab at the top of the window. The **Manage Environments and VMs** page will then display.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image3.png" width="800">
 
@@ -74,7 +74,7 @@ For the overall architecture, please refer to the sample reference architecture 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image9.png" width ="500">
 
-2.  From within the **Edit environment** dialogue, type a new **Environment Name**, such as **Skytap & Commvault Solution Infrastructure**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="65">
+2.  From within the **Edit environment** dialogue, type a new **Environment Name**, such as **{{site.Brand}} & Commvault Solution Infrastructure**, and then click the **Save** button <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/protectionmedia/media2/image10.png" width="65">
 
 ***NOTE***: *After the environment is created, make the following hardware modifications to the VM to ensure stability and performance.*
 
@@ -273,7 +273,7 @@ not match where the tool actually downloads it).
 
 ### Deploying the Commvault MediaAgent Proxy on an Ubuntu x86 VM as a Decoupled install and connecting it to the CommServer.
 
-Our next step is from within the Skytap environment, where we will add a
+Our next step is from within the {{site.Brand}} environment, where we will add a
 Linux Operating System VM that will serve as the Commvault MediaAgent
 Proxy within the environment.
 
@@ -659,7 +659,7 @@ Once the packages are installed, the configuration utility will start.
 
 ### Deploying the IBM I Workload machine, and connecting it to the Commvault Server.
 
-Our next step is from within the Skytap environment, where we will add
+Our next step is from within the {{site.Brand}} environment, where we will add
 an IBM i LPAR that will serve as the Workload within the environment.
 
 1.  Starting from the Environment details window, within the Machine
@@ -810,7 +810,7 @@ Familiarize yourself with the pre-defined user sub-clients:
 DRSubclient is not supported at this time. Backing up all sub-clients
 (but not DR Subclient) will backup the entirety of the LPAR but not the
 IBM I licensing. **PLEASE NOTE: Before the full backup, ensure PTFs are
-updated to Match the Target LPAR in Skytap -- OS version must also
+updated to Match the Target LPAR in {{site.Brand}} -- OS version must also
 match.**
 
 All other sub-clients (**\*ALLDLO**, **\*ALLUSR**, **\*IBM**, **\*HST
@@ -862,7 +862,7 @@ target guest:
 3.  Select all of the data, and then target an IBM i machine to recover
     the data to. This machine must have a Commvault agent installed on
     it. If this is disaster recovery or migration, deploy a fresh
-    machine in Skytap from a template to be the target, and install the
+    machine in {{site.Brand}} from a template to be the target, and install the
     CommVault agent so that the machine is visible within the Commvault
     GUI
 
@@ -886,13 +886,13 @@ Now that the user data has been restored onto the server, the customer can decid
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -907,4 +907,4 @@ Now that the user data has been restored onto the server, the customer can decid
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

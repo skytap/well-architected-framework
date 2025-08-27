@@ -7,7 +7,7 @@ permalink: /resiliency/solutions/Save-Template-Copy-To-Region/
 
 # Save-Template-Copy-To-Region
 
-Demonstrates use of Azure runbooks and leveraging <a href="https://help.skytap.com/api-quick-start.html#rest-api-quick-start" target="_blank">Skytap's API</a> to: 
+Demonstrates use of Azure runbooks and leveraging the <a href="https://help.skytap.com/api-quick-start.html#rest-api-quick-start" target="_blank">{{site.Brand}} API</a> to: 
 1. Create template can be created from a live environment
 1. Copy template to another region
 1. Use projects to organize
@@ -19,7 +19,7 @@ Often times the 'Before you Begin' steps seems to be the longest part of the jou
 
 - In Azure create an <a href="https://learn.microsoft.com/en-us/azure/automation/automation-create-standalone-account?tabs=azureportal" target="_blank">Automation Account</a> and open the resource.
 - In Shared Resources 
-    - Create Credentials providing Skytap username and <a href="https://help.skytap.com/kb-find-api-token.html" target="_blank">API key<a>
+    - Create Credentials providing {{site.Brand}} username and <a href="https://help.skytap.com/kb-find-api-token.html" target="_blank">API key<a>
     - Create variables for 
       - env_to_backup (id of environment to backup)
       - sleeptime (time delay for checking busy state of template)
@@ -29,22 +29,22 @@ Often times the 'Before you Begin' steps seems to be the longest part of the jou
   
 # Description of code
 
-Establish header information to connect to Skytap
+Establish header information to connect to {{site.Brand}}
 
 ``` powershell
 # Get header setup to connect and make requests.  This leverages credential assets already in Azure
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType] 'Tls12'
-$cred = Get-AutomationPSCredential -Name 'Skytap-cred'
+$cred = Get-AutomationPSCredential -Name '{{site.Brand}}-cred'
 $content = 'application/json'
 $baseAuth = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $cred.UserName, $cred.GetNetworkCredential().Password)))
 $header =  @{"Accept" = $content; Authorization=("Basic {0}" -f $baseAuth); "Content_type" = $content}
 $uri = 'https://cloud.skytap.com/'
 ```
 
-Connect to Skytap
+Connect to {{site.Brand}}
 
 ``` powershell
-# Connect to Skytap
+# Connect to {{site.Brand}}
 Invoke-RestMethod -uri $uri -Headers $header -Method GET -sessionvariable session
 ```
 
@@ -153,13 +153,13 @@ if($null -ne $template_copy.id){
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -174,4 +174,4 @@ if($null -ne $template_copy.id){
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

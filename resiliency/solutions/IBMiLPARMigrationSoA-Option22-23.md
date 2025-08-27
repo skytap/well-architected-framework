@@ -4,7 +4,7 @@ description: Skytap Cold Migration Solution - IBM i workload migration using Go 
 author: Sarah Allen - Cloud Solutions Architect
 ---
 
-# IBMi LPAR Migration to Skytap on Azure
+# IBMi LPAR Migration to {{site.SoA}}
 Updated February 2022
 
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
@@ -19,7 +19,7 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Create virtual optical media](#createvom)
 * [Save, Option 22 to virtual optical media](#gosave)
 * [Create virtual tape media](#createvtm)
-* [Deploy IBM i in Skytap cloud](#deployinskytap)
+* [Deploy IBM i in {{site.Brand}} cloud](#deployinskytap)
 * [Network configuration](#netconfig)
 * [Go Restore, Option 23](#gorestore)
 * [APPENDIX](#appendix)
@@ -31,14 +31,14 @@ This document does not provide you with any legal rights to any intellectual pro
 
 The purpose of this document is to provide the steps and instructions
 necessary to migrate an IBMi LPAR from on premise to an environment
-within Skytap on Azure.
+within {{site.SoA}}.
 
 There are various strategies that can be used to migrate IBMi LPARs to
-Skytap, including BRMS + ICC, restoration using a NIS server, and Go
+{{site.Brand}}, including BRMS + ICC, restoration using a NIS server, and Go
 Save/Restore with Option 22 and 23. This document will describe the
 process to perform the migration using Go Save/Restore Option 22 and 23.
 
-Supplemental links to Skytap and IBM documentation will be included
+Supplemental links to {{site.Brand}} and IBM documentation will be included
 throughout.
 
 #### Before you begin<a name="begin"></a>
@@ -58,14 +58,14 @@ IBM i Workload Migration
 
 High level summary of steps
 
-1.  Create Azure Subscription for Skytap on Azure
+1.  Create Azure Subscription for {{site.SoA}}
 
-> Link to Skytap documentation:
+> Link to {{site.Brand}} documentation:
 > <https://help.skytap.com/creating-a-skytap-on-azure-account.html>
 
-2.  Create Skytap Users to support the POC
+2.  Create {{site.Brand}} Users to support the POC
 
-> Link to Skytap documentation:
+> Link to {{site.Brand}} documentation:
 > <https://help.skytap.com/users-create.html#:~:text=Click%20Create%20New%20User.,also%20activates%20the%20user's%20browser>.
 
 3.  Free up space on LPAR - Add extra disk storage to get usage below
@@ -82,11 +82,11 @@ High level summary of steps
 > Azcopy SFTP documentation:
 > <https://docs.microsoft.com/en-us/azure/storage/blobs/secure-file-transfer-protocol-support-how-to?tabs=azure-portal>
 
-6.  Provide credentials to this Storage Account to Skytap
+6.  Provide credentials to this Storage Account to {{site.Brand}}
 
 > <https://help.skytap.com/kb-import-azure-blob-storage.html#how-do-i-find-the-details-for-my-microsoft-azure-blob-storage-container>
 
-7.  Build shell LPARs in Skytap
+7.  Build shell LPARs in {{site.Brand}}
 
 8.  Install LIC and initialize system
 
@@ -110,7 +110,7 @@ High level summary of steps
 
 15. Creation of template for each restored LPAR
 
-> Link to Skytap documentation:
+> Link to {{site.Brand}} documentation:
 > <https://help.skytap.com/saving-an-environment-as-a-template.html>
 
 16. Start each LPAR and confirm successful IPL
@@ -121,7 +121,7 @@ Using Go Save/Restore, Option-22,23
 
 1.  **Objective**:
 
--   Demonstrate how an IBM i workload can be migrated to Skytap cloud
+-   Demonstrate how an IBM i workload can be migrated to {{site.Brand}} cloud
     using Go Save, Option 22,23.
 
 -   Full-system recovery including LIC, OS installation
@@ -136,7 +136,7 @@ Using Go Save/Restore, Option-22,23
 [[https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used]{.ul}](https://www.ibm.com/support/pages/reducing-system-asp-disk-space-dasd-storage-used)
 
 ![Diagram Description automatically
-generated](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image1.png){width="6.268055555555556in"
+generated](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image1.png){width="6.268055555555556in"
 height="8.646527777777777in"}
 
 3.  **High level Steps:**
@@ -216,12 +216,12 @@ height="8.646527777777777in"}
 
 ![A screenshot of a computer Description automatically generated with
 medium
-confidence](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image2.png){width="6.134722222222222in"
+confidence](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image2.png){width="6.134722222222222in"
 height="3.0555293088363955in"}
 
 ![A screenshot of a computer Description automatically generated with
 medium
-confidence](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image3.png){width="6.134830489938758in"
+confidence](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image3.png){width="6.134830489938758in"
 height="2.8847222222222224in"}
 
 1.  End subsystems again to save QGPL and QUSRSYS
@@ -257,7 +257,7 @@ Create virtual tape image Catalog for Option 23 data
 ```{=html}
 <!-- -->
 ```
-8.  **Deploy IBM i in Skytap cloud**
+8.  **Deploy IBM i in {{site.Brand}} cloud**
 
 ```{=html}
 <!-- -->
@@ -271,7 +271,7 @@ Create virtual tape image Catalog for Option 23 data
 
 > ![Graphical user interface, text Description automatically generated
 > with medium
-> confidence](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image4.png){width="6.268055555555556in"
+> confidence](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image4.png){width="6.268055555555556in"
 > height="1.4965277777777777in"}
 
 3.  Post LIC installation, do disk configuration
@@ -282,14 +282,14 @@ Create virtual tape image Catalog for Option 23 data
 
 ![A screenshot of a computer Description automatically generated with
 medium
-confidence](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image5.png){width="6.268055555555556in"
+confidence](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image5.png){width="6.268055555555556in"
 height="2.875in"}
 
 6.  Enable automatic configuration -- Y on set major system option
     screen.
 
 ![Graphical user interface Description automatically generated with low
-confidence](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image6.png){width="6.0in"
+confidence](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image6.png){width="6.0in"
 height="1.4256944444444444in"}
 
 7.  Change following on next screen:
@@ -382,7 +382,7 @@ height="1.4256944444444444in"}
 
 ![A screenshot of a computer Description automatically generated with
 medium
-confidence](I:\Repos\Skytap\WAF\resiliency\migrationmedia2\/media/image7.png){width="5.916666666666667in"
+confidence](I:\Repos\{{site.Brand}}\WAF\resiliency\migrationmedia2\/media/image7.png){width="5.916666666666667in"
 height="2.2604166666666665in"}
 
 6.  Check for job log once the restore is completed using DSPJOBLOG

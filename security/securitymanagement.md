@@ -8,13 +8,13 @@ permalink: /security/security-management/
 
 The Management layer sometimes referred to as *Shared Services*,
 contains the components necessary to secure and enforce compliance on
-the workloads running on Skytap.
+the workloads running on {{site.Brand}}.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image1.png" width="800">
 
 *Figure 8 - Management Required Capabilities*
 
-The Skytap cloud service runs IBM Power, with operating systems such as
+The {{site.Brand}} cloud service runs IBM Power, with operating systems such as
 AIX, IBM i, Linux and x86 workloads, with operating systems such as
 Linux and Windows. Although Operating Systems that run on Power are less
 numerous than x86, threat actors still target these platforms given they
@@ -24,20 +24,20 @@ then represent a vector for malware to propagate to other systems and
 services.
 
 [A]{.smallcaps} **Patching** strategy should encompass all workloads in
-Skytap, including Development, Test and Production. Application Vendors
+{{site.Brand}}, including Development, Test and Production. Application Vendors
 and Operating System Vendors are continually releasing security
 hotfixes, and functionality improvements and these should be applied
-judiciously to Virtual Machines and LPARs running in the Skytap Cloud.
+judiciously to Virtual Machines and LPARs running in the {{site.Brand}} Cloud.
 
 **Authentication, Authorization and Accounting** should support all
-workloads operating in Skytap; a centralized repository of credential
+workloads operating in {{site.Brand}}; a centralized repository of credential
 information reduces the operational burden of managing multiple
 directories on a per Environment basis but also improves security by
 consolidating the logging and administration of users and service
 accounts.
 
 A [**Backup**](../resiliency/) strategy should encompass the native capabilities of the
-Skytap platform, such as Templates which create a point in time clone of
+{{site.Brand}} platform, such as Templates which create a point in time clone of
 an entire workload from network configuration to data. However,
 Templates are not designed to replace regular backups and are not
 intended to help recover a single row in a database that was deleted by
@@ -54,10 +54,10 @@ period, therefore if the VM is compromised the security of the database
 server is not.
 
 **Log Management** should be used to consolidate security and
-application logs from Virtual Machines or LPARs running in Skytap.
+application logs from Virtual Machines or LPARs running in {{site.Brand}}.
 Centralised logging can assist operations or development teams in
 understanding application performance, an incident resolution. Many
-workloads in the cloud, and in particular Skytap, are short-lived; this
+workloads in the cloud, and in particular {{site.Brand}}, are short-lived; this
 makes discovering and mitigating threats from bad actors particularly
 challenging because by the time an incident has been discovered the
 suspect Virtual Machine or LPAR may well have been destroyed.
@@ -71,11 +71,11 @@ following:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image7.png" width="500">
 
-*Figure 9 - Example Management Architecture implemented in Skytap*
+*Figure 9 - Example Management Architecture implemented in {{site.Brand}}*
 
 These services are controlled and managed by corporate administrators
 accessing via the VPN/Private Connection. The services are then made
-available to workloads within Skytap through the use of an Inter
+available to workloads within {{site.Brand}} through the use of an Inter
 Configuration Network Routing
 ([ICNR](https://help.skytap.com/Networking_Between_Environments.html#ICNRoverview)),
 this is a low touch automated mechanism to connect logically distinct
@@ -140,7 +140,7 @@ This process uses BigFix in fully automated mode to minimize patching
 effort and ensure that all instances are patched every time they are
 deployed
 
-A.  Deployment Patch Check: When the Skytap instance is deployed and
+A.  Deployment Patch Check: When the {{site.Brand}} instance is deployed and
     active, the application platforms in the Template check-in with the
     Big-Fix Server.
 
@@ -169,7 +169,7 @@ A Gold Template is established for each environment, which is used to
 create copies for development and test environments.
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image10.png" width="800">
 
-A.  Gold Template Patch Check: A Skytap Administrator brings up a Gold
+A.  Gold Template Patch Check: A {{site.Brand}} Administrator brings up a Gold
     Template of an Application Environment and has Big Fix automatically
     patch it.
 
@@ -187,7 +187,7 @@ B.  Developers Pull Down Gold Template: Developers copy the Gold
 
 To simplify access control, and ultimately improve usability,
 centralising the Authentication, Authorization, Accounting for
-Environments on the Skytap platform should be delivered at a management
+Environments on the {{site.Brand}} platform should be delivered at a management
 layer.
 
 ##### Recommended Implementations
@@ -199,7 +199,7 @@ layer.
 
 #### Backup
 
-While the Skytap platform has a point in time cloning system, using the
+While the {{site.Brand}} platform has a point in time cloning system, using the
 <a href="https://help.skytap.com/saving-an-environment-as-a-template.html" target="_blank">Template an Environment feature</a>,
 this is not designed to replace a comprehensive backup strategy. It is
 not a replacement for live systems such as online Databases or
@@ -207,7 +207,7 @@ Application servers.
 
 Most organisations will already have a defined backup strategy and
 preferred vendors, assuming these vendors do not require a physical
-appliance to be installed into Skytap they should be compatible with the
+appliance to be installed into {{site.Brand}} they should be compatible with the
 platform.
 
 ##### Recommended Implementations
@@ -223,7 +223,7 @@ platform.
 
 #### Secrets Management
 
-The Skytap platform utilizes at rest encryption on all storage and
+The {{site.Brand}} platform utilizes at rest encryption on all storage and
 strong in transit controls through our portal or API. However, these
 aren't designed to protect application secrets that may become
 compromised due to development errors; application or operating system
@@ -262,16 +262,16 @@ for onwards propagation to the log management solution.
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
 > * [Key Security Areas]({{ site.navigation.Security }}key-security-areas)
 > * [Edge Networking]({{ site.navigation.Security }}edge-networking)
 > * [Virtual Machines]({{ site.navigation.Security }}virtual-machines)

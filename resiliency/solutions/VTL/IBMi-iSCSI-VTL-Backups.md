@@ -4,7 +4,7 @@ Description: iSCSI VTL implementation in Skytap IBM i LPARs and the process to p
 Authors: Ateesh Sharma - Cloud Solutions Architect
 permalink: /resiliency/solutions/VTL/IBMi-iSCSI-VTL-Backups/
 ---
-# iSCSI VTL backups for IBM i running on Skytap on Azure
+# iSCSI VTL backups for IBM i running on {{site.SoA}}
 
 This guide is provided "as-is". Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
@@ -31,13 +31,13 @@ VTLs are common in backup implementations in IBM i environments. The features li
 
 Most of the VTLs work using Fiber connection, but Power FC connections are not allowed in all cloud providers due to architectural constraints. Therefore, in cloud implementations, we must use iSCSI-based VTLs. A limitation of iSCSI VTL is that it cannot take any backups which need a server to be in restricted mode (Go Save 21,22,23/\*SYSTEM etc.) because the server shuts down the TCP during these backups. As a workaround, you can use specially created control groups which help in automating the restricted backups on IBM i servers.
 
-This document overviews the iSCSI VTL implementation in Skytap IBM i LPARs and the process to perform bare metal recovery (full system backups and recovery to target LPAR).
+This document overviews the iSCSI VTL implementation in {{site.Brand}} IBM i LPARs and the process to perform bare metal recovery (full system backups and recovery to target LPAR).
 
 ### Scope<a name="takeaways"></a>
 
 This document covers the following topics:
 
--   Overview of iSCSI VTL implementation on IBM i LPARs in Skytap
+-   Overview of iSCSI VTL implementation on IBM i LPARs in {{site.Brand}}
 
 -   Configuration of control groups for restricted backups on iSCSI VTL
 
@@ -175,7 +175,7 @@ To perform a full system backup for migration, perform the below steps on the so
 ###### *[Back to the Top](#toc)*
 ### Section 3 - Recovery to target LPAR using NFS<a name="_Toc125454670"></a>
 
-On Skytap, you need to create 2 LPARs (NFS and Target) and assign VTL to both. All the steps we are going to follow now will be in the system recovery report generated in the last step. Below explains the steps for better understanding.
+On {{site.Brand}}, you need to create 2 LPARs (NFS and Target) and assign VTL to both. All the steps we are going to follow now will be in the system recovery report generated in the last step. Below explains the steps for better understanding.
 
 #### Section 3.1 NFS server steps<a name="nfs-server-steps"></a>
 
@@ -396,13 +396,13 @@ At this stage, the full system restore of the LPAR is completed and the LPAR can
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -417,4 +417,4 @@ At this stage, the full system restore of the LPAR is completed and the LPAR can
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

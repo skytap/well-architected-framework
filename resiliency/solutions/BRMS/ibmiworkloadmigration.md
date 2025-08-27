@@ -4,7 +4,7 @@ Description: Skytap Cold Migration Solution - IBM i workload migration from on-p
 Authors: Tony Perez - Sales Engineer, Mayank Kumar - Cloud Solutions Architect, Matthew Romero, Technical Product Marketing Manager
 permalink: /resiliency/solutions/brms/
 ---
-# IBM i workload migration from on-premises to Skytap using BRMS ICC
+# IBM i workload migration from on-premises to {{site.Brand}} using BRMS ICC
 
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
@@ -31,7 +31,7 @@ This document does not provide you with any legal rights to any intellectual pro
 
 Here are key takeaways for developers and operators to consider from this guide:
 
-* Demonstrate how an IBM i workload can be migrated to Skytap on Azure using BRMS ICC. In this document you will learn how to take backup on IBM i using BRMS ICC and transfer it to cloud using FTP.
+* Demonstrate how an IBM i workload can be migrated to {{site.SoA}} using BRMS ICC. In this document you will learn how to take backup on IBM i using BRMS ICC and transfer it to cloud using FTP.
 
  * Full-system recovery in the cloud using IBM i as NFS server to an IBM i
      VM as target system.
@@ -75,7 +75,7 @@ Create ICC FTP resource where IBM i backup will be transferred. FTP resource can
 
 In the case of large data, it is recommended to use Linux system On-Prem and transfer the data to Linux system on cloud using AZCopy.
 
-***NOTE***: *If you have 5 disk arms on-prem with xyz storage, then re-create that setup in your Skytap LPAR.*
+***NOTE***: *If you have 5 disk arms on-prem with xyz storage, then re-create that setup in your {{site.Brand}} LPAR.*
 
 1. Create FTP resource using the below command: 
 
@@ -550,13 +550,13 @@ partition, you must specify the following:
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -571,4 +571,4 @@ partition, you must specify the following:
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

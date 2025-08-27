@@ -4,7 +4,7 @@ Description: Skytap Cold Migration Solution - IBM i workload migration from on-p
 Authors: Ateesh Sharma – Skytap Cloud Solutions Engineer, Richard Field – Skytap Cloud Solutions Architect, Matthew Romero - Technical Product Marketing Manager
 permalink: /resiliency/solutions/databoxmigrations/
 ---
-# IBM i Migration to Skytap on Azure Using Microsoft Azure Data Box
+# IBM i Migration to {{site.SoA}} Using Microsoft Azure Data Box
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for internal reference purposes.
@@ -21,18 +21,18 @@ This document does not provide you with any legal rights to any intellectual pro
 * [Performing Backups of LPARs on the Azure Data Box](#backup2databox)
 * [Copying Backup .ISO files from Windows to the Azure Data Box](#isocopy)
 * [Shipping the Azure Data Box to Microsoft](#ship2azure)
-* [Restoring data to the Skytap hosted LPAR](#restoreLPAR)
+* [Restoring data to the {{site.Brand}} hosted LPAR](#restoreLPAR)
 * [Timing Estimates](#estimates)
 * [Next Steps](#nextsteps)
 
 ## Introduction <a name="intro"></a>
-There are multiple strategies to migrate IBM i LPARs to <a href="https://www.skytap.com/skytap-on-azure/" target="_blank">Skytap on Azure</a>. 
+There are multiple strategies to migrate IBM i LPARs to <a href="https://www.skytap.com/skytap-on-azure/" target="_blank">{{site.SoA}}</a>. 
 
 Migration using <a href="https://www.youtube.com/watch?v=DKREXDCuGqkMicrosoft" target="_blank">Azure Data Box</a> is suitable when the customer has multiple Terabytes (TB) (>10) of data on an LPAR. The Azure Data Box is delivered to a customer data center and attached to a Windows server using SMB. The Windows server folder is then mounted to the IBM i LPAR using NFS. Data is then written from IBM i to the Windows folder and copied manually to the mounted Azure Data Box path. 
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/databoxmigrationsmedia/media/databox.png">
 
-This document provides an overview of the steps of this process and how to perform a restore on a Skytap hosted LPAR.
+This document provides an overview of the steps of this process and how to perform a restore on a {{site.Brand}} hosted LPAR.
 
 Data cannot be copied directly from IBM i to MDM as they used different transfer protocols. Any host-based replication tool can be used to perform the delta sync between the on-prem LPAR and cloud LPAR after the initial restore is done using the Microsoft Azure Data Box.
 
@@ -50,13 +50,13 @@ The objective of this document is to capture steps to perform the following acti
 
 1.  Copy backup from Windows folder to Azure Data Box drive
 
-1.  Send Azure Data box to Microsoft Azure Data Center and restore data to Skytap hosted virtual LPAR
+1.  Send Azure Data box to Microsoft Azure Data Center and restore data to {{site.Brand}} hosted virtual LPAR
 
 ## Prerequisites <a name="Begin"></a>
 
 * On prem-server should be at the latest PTF levels
 
-* Customer should have an existing <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overviewSkytap" target="_blank">Skytap on Azure subscription</a>
+* Customer should have an existing <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview" target="_blank">Azure Storage Account</a> and an active <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skytapinc.skytap-on-azure-main1?tab=overview{{site.Brand}}" target="_blank">{{site.SoA}} subscription</a>
 
 * The on-prem LPAR should be on V7R2 or later OS version of IBM i
 
@@ -241,17 +241,17 @@ After this, the Azure Data Box is ready to be shipped to Microsoft.
 
 > Please reference <a href="https://learn.microsoft.com/en-us/azure/DataBox/data-box-deploy-picked-up?tabs=in-europe%2Cin-japan&pivots=americas" target="_blank">Tutorial to return Azure Data Box</a> document
 
-## Restoring data to a Skytap Hosted LPAR<a name="restoreLPAR"></a>
+## Restoring data to a {{site.Brand}} Hosted LPAR<a name="restoreLPAR"></a>
 
 **The Azure Data Box data will be copied to your Azure Storage Account as Block Blob.**
 
-1. The ISO files need to be downloaded from Azure blob to your Skytap hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
+1. The ISO files need to be downloaded from Azure blob to your {{site.Brand}} hosted Windows VM to restore the LPAR. Azure Storage Explorer is the recommended tool to perform this action.
 
-2. Once the backup .ISO files are downloaded to Skytap Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy.
+2. Once the backup .ISO files are downloaded to {{site.Brand}} Windows VM, FTP the required files to NFS IBM i LPAR or target IBM i LPAR depending on backups strategy.
 
 3.  Restore from a GO save 22+23 backup referring to the document below:
 
-    > [IBM i migration to Skytap -- GO save   option 22+23]({{ site.navigation.Resiliency }}solutions/go-save)
+    > [IBM i migration to {{site.Brand}} -- GO save   option 22+23]({{ site.navigation.Resiliency }}solutions/go-save)
 
 4.  Restore the individual libraries backups libraries from the .ISO image file by loading it on an image catalog and using RSTLIB command
 
@@ -288,13 +288,13 @@ Parallel FTP did not increase the overall speed. Be sure that the IBM i FTP para
 ### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -309,4 +309,4 @@ Parallel FTP did not increase the overall speed. Be sure that the IBM i FTP para
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

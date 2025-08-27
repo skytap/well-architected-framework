@@ -3,7 +3,7 @@ title: Importing Power LPARs into Skytap with PowerVC
 author: Prabhakar Varadarajan, Program Manager/Product Manager @ Skytap
 permalink: /resiliency/solutions/power-vc/
 ---
-# Importing Power LPARs into Skytap with PowerVC - A field enablement guide
+# Importing Power LPARs into {{site.Brand}} with PowerVC - A field enablement guide
 
 ### Table of Contents <a name="toc"></a>
 
@@ -17,7 +17,7 @@ permalink: /resiliency/solutions/power-vc/
 
 -   [Uninstalling PowerVC](#uninstalling-powervc)
 
--   [Importing to Skytap](#importing-to-skytap)
+-   [Importing to {{site.Brand}}](#importing-to-skytap)
 
 -   [FAQ](#FAQ)
  
@@ -25,7 +25,7 @@ permalink: /resiliency/solutions/power-vc/
 
 ### Key Takeaways<a name="takeaways"></a>
 
-This guide describes how to use PowerVC to export a Power LPAR for import into Skytap. To learn more about PowerVC, see the **Additional resources** section.
+This guide describes how to use PowerVC to export a Power LPAR for import into {{site.Brand}}. To learn more about PowerVC, see the **Additional resources** section.
 
 ## Overview of using PowerVC for export<a name="overview-of-using-powervc-for-export"></a>
 **High-level process description<a name="High-level_process_description"></a>**
@@ -38,7 +38,7 @@ IBM Cloud PowerVC Manager, an Infrastructure-as-a-service (IaaS) offering, provi
 
 *Traditional Setup vs PowerVC coexistence*
 
-The sections below explain how to install and configure IBM PowerVC Standard Edition and IBM Cloud PowerVC Manager, in an environment with HMC (Hardware Management Console) and NovaLink. IBM PowerVC provides the ability to perform virtual image capture and can take a snapshot of a VM and export it as an OVA. Once this is done, Skytap can recognize the OVA and import the LPAR using our existing import process.
+The sections below explain how to install and configure IBM PowerVC Standard Edition and IBM Cloud PowerVC Manager, in an environment with HMC (Hardware Management Console) and NovaLink. IBM PowerVC provides the ability to perform virtual image capture and can take a snapshot of a VM and export it as an OVA. Once this is done, {{site.Brand}} can recognize the OVA and import the LPAR using our existing import process.
 
 **What is VIOS?<a name="whatisVIOS"></a>**
 
@@ -493,9 +493,9 @@ You can find more information here:
 
 ###### *[Back to the Top](#toc)*
 
-## Importing to Skytap<a name="importing-to-skytap"></a>
+## Importing to {{site.Brand}}<a name="importing-to-skytap"></a>
 
-<a href="https://help.skytap.com/Imports.html" target="_blank">Importing VMs using the VM Imports page</a> -- This help article describes how to import power VMs with the Skytap import tool: <a href="https://cloud.skytap.com/imports" target="_blank">https://cloud.skytap.com/imports</a>.
+<a href="https://help.skytap.com/Imports.html" target="_blank">Importing VMs using the VM Imports page</a> -- This help article describes how to import power VMs with the {{site.Brand}} import tool: <a href="https://cloud.skytap.com/imports" target="_blank">https://cloud.skytap.com/imports</a>.
 
 ###### *[Back to the Top](#toc)*
 
@@ -522,7 +522,7 @@ PowerVC:
 
 **A:** No, this won't have any impact on the LPAR, apart from shutting down the LPAR.
 
-**Q:** How do I export and move LPARs that are larger than 30TB into Skytap?
+**Q:** How do I export and move LPARs that are larger than 30TB into {{site.Brand}}?
 
 **A:** The available local storage capacity must be at least twice the combined size of the volumes you plan to export.
 
@@ -547,13 +547,13 @@ PowerVC:
 ### Next steps
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -568,4 +568,4 @@ PowerVC:
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})

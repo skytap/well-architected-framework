@@ -5,7 +5,7 @@ Authors: Chris Eigbrett - Director, Skytap Service Delivery, Abhishek Jain – C
 permalink: /resiliency/solutions/mksysb-backupandrestore/
 ---
 
-# Backup and Restore to Skytap on Azure using Mksysb
+# Backup and Restore to {{site.SoA}} using Mksysb
 This guide is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice and usage of the included material assumes this risk.
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for your internal, reference purposes.
@@ -14,16 +14,16 @@ This document does not provide you with any legal rights to any intellectual pro
 
 * [Prechecks](#prechecks)
 * [Backing up On-Prem System using Mksysb Backup Execution](#backing-up-on-prem-system-using-mksysb-backup-execution)
-* [Transferring Mksysb to Skytap](#transferring-mksysb-to-skytap)
+* [Transferring Mksysb to {{site.Brand}}](#transferring-mksysb-to-skytap)
   * [Option 1 - Direct Connectivity](#option-1---direct-connectivity)
   * [Option 2 - Published Service](#option-2---published-service)
   * [Option 3 - Azure Blob](#option-3---azure-blob)
-* [Restore In Skytap](#restore-in-skytap)
-  * [Initiate a NIM server in Skytap](#initiate-a-nim-server-in-skytap)
+* [Restore In {{site.Brand}}](#restore-in-skytap)
+  * [Initiate a NIM server in {{site.Brand}}](#initiate-a-nim-server-in-skytap)
 <!---  * [Configure NIM Server](#configure-nim-server)--->
   * [Set up Client on NIM Server to Restore Mksysb](#set-up-client-on-nim-server-to-restore-mksysb)
 * [Setup New LPAR and restore the Mksysb](#setup-new-lpar-and-restore-the-mksysb)
-* [Savevg Backup and Restore in Skytap](#savevg-backup-and-restore-in-skytap)
+* [Savevg Backup and Restore in {{site.Brand}}](#savevg-backup-and-restore-in-skytap)
 
 #  Prechecks<a name="prechecks"></a>
 
@@ -54,7 +54,7 @@ Note: It may take some time to complete the backup
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image3.png" width="400">
 
 ###### *[Back to the Top](#toc)*
-## Transferring Mksysb to Skytap<a name="transferring-mksysb-to-skytap"></a>
+## Transferring Mksysb to {{site.Brand}}<a name="transferring-mksysb-to-skytap"></a>
 
 ### Option 1 - Direct Connectivity<a name="option-1---direct-connectivity"></a>
 
@@ -76,9 +76,9 @@ Note: It may take some time to complete the backup
 
 -   Fastest and cheapest to deploy
 
--   Native Skytap support
+-   Native {{site.Brand}} support
 
--   Only the NIM server in Skytap is required to start data transfer
+-   Only the NIM server in {{site.Brand}} is required to start data transfer
 
 -   Encrypted data transfer over public Internet
 
@@ -98,15 +98,15 @@ Note: It may take some time to complete the backup
 
 -   Future proof
 
--   Data can be copied over even before Skytap service is started
+-   Data can be copied over even before {{site.Brand}} service is started
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image6.png" width="700">
 
 ###### *[Back to the Top](#toc)*
 
-# Restore In Skytap<a name="restore-in-skytap"></a>
+# Restore In {{site.Brand}}<a name="restore-in-skytap"></a>
 
-##  Initiate a NIM server in Skytap<a name="initiate-a-nim-server-in-skytap"></a>
+##  Initiate a NIM server in {{site.Brand}}<a name="initiate-a-nim-server-in-skytap"></a>
 
 1.  Deploy a new NIM AIX template using public templates (latest AIX level recommended).
 
@@ -285,7 +285,7 @@ d.  Continue installation.
 
 ## Setup New LPAR and restore the Mksysb<a name="setup-new-lpar-and-restore-the-mksysb"></a>
 
-1.  From the Skytap dashboard, add a new LPAR in your existing
+1.  From the {{site.Brand}} dashboard, add a new LPAR in your existing
     Environment.
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/image41.png" width="700">
@@ -347,7 +347,7 @@ Note: System will enter in SMS menu.
 
 10. It will take approximately 10 to 20 mins. to restore Mksysb and server will reboot with the Mksysb restored.
 
-## **Savevg Backup and Restore in Skytap**
+## **Savevg Backup and Restore in {{site.Brand}}**
 1. Backup and restore data volumes using savevg
 
 a. Prechecks:
@@ -364,9 +364,9 @@ b. Backup execution - verify volume group has desired volumes:
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/mk_img2.png" width="600">
 
-c. Copy backup to Skytap LPAR (see copy methods above for mksysb)
+c. Copy backup to {{site.Brand}} LPAR (see copy methods above for mksysb)
 
-d. Prepare system in Skytap to restore volumes. Note: if you want to shrink your volumes when restoring, you should pick smaller sizes that are still 
+d. Prepare system in {{site.Brand}} to restore volumes. Note: if you want to shrink your volumes when restoring, you should pick smaller sizes that are still 
 sufficient for the data in the volume group.
 
 * Identify physical volumes associated with the volume and their sizes
@@ -375,9 +375,9 @@ Run # lspv and # lspv hdisk1 to confirm the size in megabytes of any necessary d
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/mk_img3.png" width="600">
 
-* In Skytap, add disks to your restore target of sufficient size
+* In {{site.Brand}}, add disks to your restore target of sufficient size
 
-e. Shut down the restore LPAR in Skytap, go to edit VM and add disks
+e. Shut down the restore LPAR in {{site.Brand}}, go to edit VM and add disks
 
 <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/solutions/mksysbmedia/media/mk_img4.png" width="600">
 
@@ -408,13 +408,13 @@ d. Finished
 ### Next steps<a name="nextsteps"></a>
 
 **Main Overview**
-> [Skytap Well-Architected Framework]({{ site.navigation.Home }})
+> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
 
 **Operational Excellence**
-> [Skytap Operational Excellence Pillar]({{ site.navigation.Operations }})
+> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
 
 **Resiliency**
-> [Skytap Resiliency Pillar]({{ site.navigation.Resiliency }})
+> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
 > * [Migration]({{ site.navigation.Resiliency }}migrations)
 > * [Protection]({{ site.navigation.Resiliency }}backups)
 > * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
@@ -429,4 +429,4 @@ d. Finished
 > * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
 
 **Security**
-> [Skytap Security Pillar]({{ site.navigation.Security }})
+> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
