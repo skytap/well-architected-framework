@@ -11,7 +11,7 @@ permalink: /security/
 
 Securely running workloads in a cloud environment requires a multi-layered approach which covers both how workloads are deployed and maintained within your account and the management of your {{site.Brand}} account itself. This document outlines architectural elements necessary to achieve a robust implementation on the {{site.Brand}} platform and best practices for how your {{site.Brand}} account should be configured.
 
-![control map](/security/media/image2.png)
+![control map](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image2.png)
 
 _Figure 1 - Control Map_
 
@@ -21,7 +21,7 @@ Accompanying this document is a **{{site.Brand}} - Security Controls Workbook** 
 
 Similar to other cloud services, {{site.Brand}} operates a shared responsibility model with regards to security. {{site.Brand}} is accountable for the platform and customers are accountable for the way they use that platform.
 
-![Sytap Secuurity Control Map](/security/media/image3.png)
+![Sytap Secuurity Control Map](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image3.png)
 
 _Figure 2 -- Shared Responsibility Model_
 
@@ -35,7 +35,7 @@ Additionally, resources deployed into {{site.Brand}} should have a clearly defin
 
 The approach to the cloud must be integrated within your organisation's Target Operating Model; this allows for the appropriate security controls to be accounted for, architected and implemented.
 
-![Example Target Operating Model (TOM)](/security/landminemedia/media/image3.png)
+![Example Target Operating Model (TOM)](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/landminemedia/media/image3.png)
 
 <!--(https://www.lucidchart.com/documents/edit/f5794a4f-e45d-4a70-9e12-9f0abf4579bb/0?callback=close&name=docs&callback_type=back&v=1701&s=612)-->
 
