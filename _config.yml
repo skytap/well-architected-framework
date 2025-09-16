@@ -276,8 +276,8 @@ plugins:
 
 APIdomain: https://cloud.skytap.com
 Azure: Microsoft Azure
-Brand: Kyndryl Cloud Uplift
-BrandName: Kyndryl Cloud Uplift
+Brand: Skytap
+BrandName: Skytap
 BrandURL: https://cloud.skytap.com
 ConnectivityCheckerURL: https://cloud.skytap.com/connectivity
 HelpSiteURL: https://help.skytap.com
@@ -285,19 +285,19 @@ HTML5client: SRA client
 ICloud: IBM Cloud
 mimix: Assure MIMIX™ Software
 mimixbs: Precisely Assure MIMIX™ Software
-ProdName: Kyndryl Cloud Uplift
+ProdName: Skytap
 ProductSiteStatic: https://cloud.skytapstatic.com
 ProductSiteURL: https://cloud.skytap.com
-SoA: Kyndryl Cloud Uplift on Azure
-SoI: Kyndryl Cloud Uplift on IBM Cloud
+SoA: Skytap on Azure
+SoI: Skytap on IBM Cloud
 SpeedTestURL: http://speedtest.skytap.com
 SupportContact: support@skytap.com
-SupportName: Kyndryl Cloud Uplift Support
+SupportName: Skytap Support
 SupportPortalURL: https://support.skytap.com/
 SupportRequestName: Skytap Support request
 SupportRequestURL: https://support.skytap.com/
 SupportTierLink: https://www.skytap.com/wp-content/uploads/2024/03/Skytap_Support_Offerings.pdf
 SupportTierLinkName: Support Offerings
 SupportURL: https://www.skytap.com/wp-content/uploads/2024/03/Skytap_Support_Offerings.pdf
-TrainingSiteName: Kyndryl Cloud Uplift Academy
+TrainingSiteName: Skytap Academy
 TrainingURL: https://learn.skytap.com
