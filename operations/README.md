@@ -2,7 +2,7 @@
 
 **Operational Excellence**
 
-This pillar covers the operational best practices and processes that keep workloads running in production. 
+This pillar covers the operational best practices and processes that keep workloads running in production.
 
 Deployments and maintenance must be reliable and predictable. Both should be automated to reduce the chance of human error and include fast and routine processes, so they don't slow down the release of new features or bug fixes. Equally important, you must be able to quickly roll back or roll forward if an update has problems.
 
@@ -15,7 +15,7 @@ These are the disciplines we group in the operational excellence pillar:
 | [Power Discovery]({{ site.navigation.Operations }}Discovery) | IBM Power Workloads have been in use for over thirty years and have unique considerations and require a deep understanding of what is in your environments when migrating them to a Cloud Platform.  |
 | [Connectivity]({{ site.navigation.Operations }}connectivity) | Building a reliable network in the cloud is different from traditional on-premises environments with the goal to minimize the effects of a single failing component. |
 | [Ecosystems]({{ site.navigation.Operations }}ecosystems) | IBM Power Workload best practices Design patterns. |
-| [Performance]({{ site.navigation.Operations }}performance) | Optimizing IBM Power workloads for storage performance in {{site.Brand}}. | 
+| [Performance]({{ site.navigation.Operations }}performance) | Optimizing IBM Power workloads for storage performance in {{site.Brand}}. |
 
 <!--
 | [Phase 01C - Sizing and Design](./Sizing_Design/) | The monitoring and management of performance and availability of software applications through DevOps |
