@@ -9,7 +9,9 @@ This guide is provided “as-is”. Information and views expressed in this docu
 
 This document does not provide you with any legal rights to any intellectual property in any product. You may copy and use this document for internal reference purposes.
 
-# Table of Contents<a name="toc"></a>
+<a name="toc"></a>
+
+# Table of Contents
 
 * [Azure NetApp Files for {{site.Brand}}](#azure-netapp-files-for-skytap)
   * [Reference Architecture](#reference-architecture)
@@ -27,186 +29,158 @@ This document does not provide you with any legal rights to any intellectual pro
   * [Linux on Azure](#linux-on-azure)
   * [AIX on {{site.Brand}}](#aix-on-skytap)
 
-# Azure NetApp Files for {{site.Brand}}<a name="azure-netapp-files-for-skytap"></a>
+<a name="azure-netapp-files-for-skytap"></a>
 
-{{site.Brand}} customers are looking for a cost-effective Azure native shared
-files solution to share files across Azure and their {{site.Brand}} environments
-which is secured and able to support both NFS and SMB protocols. Azure
-NetApp Files (ANF) solves most of these challenges and can therefore be
-a go-to solution for customers who are looking to have a shared files
-solution on {{site.Brand}}.
+# Azure NetApp Files for {{site.Brand}}
 
-###### *[Back to the Top](#toc)*
+{{site.Brand}} customers are looking for a cost-effective Azure native shared files solution to share files across Azure and their {{site.Brand}} environments which is secured and able to support both NFS and SMB protocols. Azure NetApp Files (ANF) solves most of these challenges and can therefore be a go-to solution for customers who are looking to have a shared files solution on {{site.Brand}}.
 
-## Reference Architecture<a name="reference-architecture"></a>
+<a name="reference-architecture"></a>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg" width="700">
-Figure 1 : Azure Netapp files for {{site.Brand}}
+## Reference Architecture
 
-###### *[Back to the Top](#toc)*
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg)
+_Figure 1 : Azure Netapp files for {{site.Brand}}_
 
-# Azure NetApp files (ANF)<a name="azure-netapp-files-anf"></a>
+<a name="azure-netapp-files-anf"></a>
 
-The Azure NetApp Files (ANF) service is an enterprise-class,
-high-performance, metered file storage service. It supports any workload
-type and is highly available by default. You can select service and
-performance levels and set up snapshots through the service.
+# Azure NetApp files (ANF)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image3.png" width="700">
-Figure 2: Storage Hierarchy for ANF
+The Azure NetApp Files (ANF) service is an enterprise-class, high-performance, metered file storage service. It supports any workload type and is highly available by default. You can select service and performance levels and set up snapshots through the service.
 
-###### *[Back to the Top](#toc)*
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image3.png)
+_Figure 2: Storage Hierarchy for ANF_
 
-## Performance<a name="performance"></a>
+<a name="performance"></a>
+
+## Performance
 
 Azure NetApp Files supports three storage service levels: .
 
--   Ultra: provides up to 128 MiB/s of throughput per 1 TiB of volume quota assigned.
+* Ultra: provides up to 128 MiB/s of throughput per 1 TiB of volume quota assigned.
+* Premium: provides up to 64 MiB/s of throughput per 1 TiB of volume quota assigned.
+* Standard: provides up to 16 MiB/s of throughput per 1 TiB of volume quota assigned.
 
--   Premium: provides up to 64 MiB/s of throughput per 1 TiB of volume quota assigned.
+<a name="protocols"></a>
 
--   Standard: provides up to 16 MiB/s of throughput per 1 TiB of volume quota assigned.
+## Protocols
 
-###### *[Back to the Top](#toc)*
-
-## Protocols<a name="protocols"></a>
-
-Azure NetApp Files supports SMB 2.1 and SMB 3.1 (which includes support
-for SMB 3.0)\*.
+Azure NetApp Files supports SMB 2.1 and SMB 3.1 (which includes support for SMB 3.0)\*.
 
 Azure NetApp Files supports NFSv3 and NFSv4.1.
 
 \* Requires active directory.
 
-###### *[Back to the Top](#toc)*
+<a name="region-availability"></a>
 
-## Region Availability<a name="region-availability"></a>
+## Region Availability
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image4.png" width="700">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image4.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image5.png" width="700">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image5.png)
 
-###### *[Back to the Top](#toc)*
+<a name="pricing"></a>
 
-## Pricing<a name="pricing"></a>
+## Pricing
 
 Here is sample pricing for 5TB capacity for each Service Level:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image9.png" width="700">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image9.png)
 
-###### *[Back to the Top](#toc)*
+<a name="azure-documentation"></a>
 
-## Azure Documentation<a name="azure-documentation"></a>
+## Azure Documentation
 
-<a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files</a>
+[https://docs.microsoft.com/en-us/azure/azure-netapp-files](https://docs.microsoft.com/en-us/azure/azure-netapp-files)
 
-###### *[Back to the Top](#toc)*
+<a name="provisioning-azure-netapp-files"></a>
 
-# Provisioning Azure NetApp Files<a name="provisioning-azure-netapp-files"></a>
+# Provisioning Azure NetApp Files
 
-###### *[Back to the Top](#toc)*
+<a name="create-azure-netapp-account"></a>
 
-## Create Azure NetApp account<a name="create-azure-netapp-account"></a>
+## Create Azure NetApp account
 
-(Subscription needs to whitelisted to use ANF)
+(Subscription must be whitelisted to use ANF)
 
-1)  <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal</a>
+1. [https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes?tabs=azure-portal)
 
-Once Subscription is whitelisted, you are ready to create Pools and Volumes.
+    Once Subscription is whitelisted, you are ready to create Pools and Volumes.
 
-###### *[Back to the Top](#toc)*
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image10.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image10.png" width="700">
+<a name="create-pools"></a>
 
-## Create Pools<a name="create-pools"></a>
+## Create Pools
 
-1)  <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool</a>
+1. [https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool)
+1. Minimum 4 TB pool size allowed.
+1. Customer charged for complete pool size.
 
-2)  Minimum 4 TB pool size allowed.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image11.png)
 
-3)  Customer charged for complete pool size.
+<a name="create-volumes"></a>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image11.png" width="700">
+## Create Volumes
 
-###### *[Back to the Top](#toc)*
+1.[https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes)
 
-## Create Volumes<a name="create-volumes"></a>
+  ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image12.png)
 
-1)  <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes" target="_blank">https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes</a>
+<a name="mount-nfs-volumes-on-client"></a>
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image12.png" width="700">
+## Mount NFS volumes on Client
 
-###### *[Back to the Top](#toc)*
+<a name="linux-on-azure"></a>
 
-## Mount NFS volumes on Client <a name="mount-nfs-volumes-on-client"></a>
-### Linux on Azure<a name="linux-on-azure"></a>
+### Linux on Azure
 
 (Mount Instructions for every volume can be found within Azure portal)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image13.png" width="700">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image13.png)
 
-###### *[Back to the Top](#toc)*
+<a name="aix-on-skytap"></a>
 
-### AIX on {{site.Brand}}<a name="aix-on-skytap"></a>
+### AIX on {{site.Brand}}
 
-1)  Check if AIX LPAR can reach NetApp volume IP - (check if VPN/ExR is
-    configured and ready to use)
+1. Check if AIX LPAR can reach NetApp volume IP - (check if VPN/ExR is configured and ready to use)
 
-``` powershell
-showmount -e \<IP>
-```
+    ``` powershell
+    showmount -e \<IP>
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image14.png" width="300">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image14.png)
 
-2)  Create required directory and Mount the filesystem
+1. Create required directory and Mount the filesystem
 
-``` powershell
-mkdir -p \<mount point>
-```
+    ``` powershell
+    mkdir -p \<mount point>
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image15.png" width="150">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image15.png)
 
-``` powershell
-mount \<remote IP>:/\<volumename>\<mount point>
-```
+    ``` powershell
+    mount \<remote IP>:/\<volumename>\<mount point>
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image16.png" width="400">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image16.png)
 
-``` powershell
-df -g \<mount point>
-```
+    ``` powershell
+    df -g \<mount point>
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image17.png" width="400">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image17.png)
 
-3)  List Files in NFS share.
+1. List Files in NFS share.
 
-``` powershell
-cd \<mount Point>
-```
+    ``` powershell
+    cd \<mount Point>
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image18.png" width="100">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image18.png)
 
-``` powershell
-ls -l
-```
+    ``` powershell
+    ls -l
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image19.png" width="400">
-
-###### *[Back to the Top](#toc)*
-
-### Next steps
-
-**Main Overview**
-> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
-
-**Operational Excellence**
-> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
-> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
-> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
-
-**Resiliency**
-> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
-
-**Security**
-> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image19.png)

@@ -32,32 +32,21 @@ This document does not provide you with any legal rights to any intellectual pro
 Here are key takeaways for developers and operators to consider from this guide:
 
 * Demonstrate how an IBM i workload can be migrated to {{site.SoA}} using BRMS ICC. In this document you will learn how to take backup on IBM i using BRMS ICC and transfer it to cloud using FTP.
-
- * Full-system recovery in the cloud using IBM i as NFS server to an IBM i
-     VM as target system.
+* Full-system recovery in the cloud using IBM i as NFS server to an IBM i VM as target system.
 
 ## Before you begin <a name="begin"></a>
 
 The below LPPs need to be installed on IBM i LPAR:
 
 * 5770-SS1 Option 18: Media and Storage Extensions
-
 * 5770-SS1 Option 44: Encrypted Backup Enablement (Optional)
-
 * 5770-BR1 \*BASE
-
 * 5770-BR1 Option 1: Network feature (Optional)
-
 * 5770-BR1 Option 2: Advanced Functions feature (Optional)
-
 * 5733ICC \*BASE IBM Cloud Storage Solutions for i
-
 * 5733ICC Option 1: Cloud Storage
-
 * 5733ICC Option 2: Advanced
-
 * 5733ICC Option 3: Reserved -- Option 3,4,5,6,7\
-
 * Install latest PTFs on IBM i with below individual PTFs installed
 
   * <a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels" target="_blank">Minimum</a>
@@ -77,7 +66,7 @@ In the case of large data, it is recommended to use Linux system On-Prem and tra
 
 ***NOTE***: *If you have 5 disk arms on-prem with xyz storage, then re-create that setup in your {{site.Brand}} LPAR.*
 
-1. Create FTP resource using the below command: 
+1. Create FTP resource using the below command:
 
 ```
 ===> CRTFPRICC
@@ -104,13 +93,9 @@ Once you press \<ENTER\> wait for the command to complete, there is no confirmat
 This command will automatically create the below control groups for the Test1 resource created in the previous step.
 
 * QCLDBGRP01
-
 * QCLDBIPL01
-
 * QCLDBSYS01
-
 * QCLDBUSR01
-
 
 2. Put the system in restricted state using the below command:
 
@@ -230,7 +215,6 @@ You should see a screen similar to this:
 ![](media/image13.png)
 
 8. And press \<ENTER\>
-
 
 ***NOTE***: *QCLDBIPL01 will use virtual optical media and QCLDBSYS01 will use virtual tape media.*
 
@@ -544,31 +528,4 @@ partition, you must specify the following:
 
 >   DSPJOBLOG Output(\*Print)
 ```
-28. Change the system values as required and do a Normal IPL of the
-    system.
-
-### Next steps
-
-**Main Overview**
-> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
-
-**Operational Excellence**
-> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
-
-**Resiliency**
-> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
-> * [Migration]({{ site.navigation.Resiliency }}migrations)
-> * [Protection]({{ site.navigation.Resiliency }}backups)
-> * [Disaster Recovery]({{ site.navigation.Resiliency }}disaster-recovery)
-> * [High Availability]({{ site.navigation.Resiliency }}high-availability)
->
-> **Migration Solutions**
-> * [Hot Migrations (Replication Sync)]({{ site.navigation.Resiliency }}solutions/hot-migrations)
-> * [Cold (Warm) Migrations (Backup and Restore)]({{ site.navigation.Resiliency }}solutions/cold-migrations)
->
-> **Design**
-> * [Design Considerations for Azure]({{ site.navigation.Resiliency }}design-considerations-azure)
-> * [Design Considerations for IBM Cloud]({{ site.navigation.Resiliency }}design-considerations-ibm)
-
-**Security**
-> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
+28. Change the system values as required and do a Normal IPL of the system.

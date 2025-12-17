@@ -18,7 +18,7 @@ permalink: /operations/connectivity/express-route/
 * [Add all components to the Virtual Network Gateway](#hookupazureVNG)
 * [Create test VM inside of Azure Native](#createazuretestvm)
 * [Test end-to-end connection from {{site.Brand}} to Azure Native](#testconnection)
-* [APPENDIX](#appendix)
+* [Appendix](#appendix)
   * [Connect AIX LPAR to Express Route](#connectaixviaexpressroute)
 
 ## Create {{site.Brand}} Environment<a name="createskytapenvironment"></a>
@@ -26,310 +26,295 @@ permalink: /operations/connectivity/express-route/
 Create the initial {{site.Brand}} environment that contains your VMs or LPARs.
 
 1. Login to the <a href="https://portal.azure.com" target="_blank">Azure portal</a> and access your {{site.Brand}} subscription.
-   
-You should land on the Dashboard page of {{site.Brand}}.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image6.png" width="700">
-<br>
+    You should land on the Dashboard page of {{site.Brand}}.
 
-2. Select **AIX 7.1** in the search field. Select **US-Texas-M-1** as the
-Region. Finally, select the AIX Template that matches your criteria.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image6.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image30.png" width="700">
+1. Select **AIX 7.1** in the search field. Select **US-Texas-M-1** as the Region. Finally, select the AIX Template that matches your criteria.
 
-You should see the following page, make note of the default subnet that is
-created, you will use that value (as an example: 10.0.0.0/24) when defining your Express
-Route Connection.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image30.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image45.png" width="700">
+    You should see the following page, make note of the default subnet that is created, you will use that value (as an example: 10.0.0.0/24) when defining your Express Route Connection.
 
-###### *[Back to the Top](#toc)*
-## Create an Express Route Definition in {{site.Brand}}<a name="createroutedefinition"></a>
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image45.png)
+
+<a name="createroutedefinition"></a>
+
+## Create an Express Route Definition in {{site.Brand}}
 
 In {{site.Brand}} – Establish Private Network Connection with Express Route and Configure a Virtual Network Gateway in Azure for ExpressRoute, then Connect the ExpressRoute Circuit to the Virtual Network Gateway. To do this, you will create an Express Route definition in {{site.Brand}} using the following steps.
 
 [Express Route Topo](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/ExpressRouteTopo.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/ExpressRouteTopo.png">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/ExpressRouteTopo.png)
 
 1. From the Manage Tab, Select **Public IP**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image33.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image33.png)
 
-2. Allocate a public IP address.
+1. Allocate a public IP address.
 
-***NOTE***: *Even though the end-point for the Express Route connection is
-label **public IP** in the user interface, the connection described in
-this document does not send traffic onto the public Internet, all the
-traffic stays within the Azure data-center.*
+    _**Note** Even though the end-point for the Express Route connection is label **public IP** in the user interface, the connection described in this document does not send traffic onto the public Internet, all the traffic stays within the Azure data-center._
 
-3. Click **+ Static public IP address**:
+1. Click **+ Static public IP address**:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image4.png" width="300">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image4.png)
 
-4. Select the region where the connection will be created, in this case,
-Texas-M1 which is **South Central** in Azure.
+1. Select the region where the connection will be created, in this case, Texas-M1 which is **South Central** in Azure.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image24.png" width="500">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image24.png)
 
-***NOTE***: *The new unattached IP address will be used in defining the Azure side of
-the Express Route connection.*
+    _**Note** The new unattached IP address will be used in defining the Azure side of the Express Route connection._
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image18.png" width="500">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image18.png)
 
-5. Now define a new WAN connection in the {{site.Brand}} user interface.
+1. Now define a new WAN connection in the {{site.Brand}} user interface.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image39.png" width="500">
-<br>
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image35.png" width="300">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image39.png)
 
-6. Fill in the page and press **Save**.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image35.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image49.png" width="700">
+1. Fill in the page and press **Save**.
 
-***NOTE***: *You'll see the following message while the connection is being built:*
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image49.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image20.png" width="700">
+    _**Note** You'll see the following message while the connection is being built:_
 
-Once finished, you\'ll see the service keys required to define the
-Express Route endpoint on the Azure Native side of the connection.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image20.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image11.png" width="700">
+    Once finished, you\'ll see the service keys required to define the Express Route endpoint on the Azure Native side of the connection.
 
-If you know what subnet(s) that will be accessed in native Azure, you
-can add them now or later. The subnet 10.1.77.0/24 is what will be
-defined as the VNET in Azure that the {{site.Brand}} environment will talk to.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image11.png)
 
-7. Add the remote subnet on the right side of the page.
+    If you know what subnet(s) that will be accessed in native Azure, you can add them now or later. The subnet 10.1.77.0/24 is what will be defined as the VNET in Azure that the {{site.Brand}} environment will talk to.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image40.png" width="700">
+1. Add the remote subnet on the right side of the page.
 
-###### *[Back to the Top](#toc)*
-## Create a Resource Group in the Azure Portal<a name="createazureresourcegroup"></a>
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image40.png)
+
+    <a name="createazureresourcegroup"></a>
+
+## Create a Resource Group in the Azure Portal
 
 1. From the Azure Portal, create a Resource Group:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image25.png" width="600">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image25.png)
 
-2. Give the Resource Group a name: (Example **{{site.Brand}} DR ExpressRoute-RG**)
+1. Give the Resource Group a name: (Example **{{site.Brand}} DR ExpressRoute-RG**)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image14.png" width="600">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image14.png)
 
-3. Click **Review & create** and then **Create** to finish creating the
-Resource Group.
+1. Click **Review & create** and then **Create** to finish creating the Resource Group.
 
-###### *[Back to the Top](#toc)*
-## Create a Virtual Network to attach the ExpressRoute<a name="createazurevnet"></a>
+<a name="createazurevnet"></a>
 
-1. <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image13.png" width="600">
+## Create a Virtual Network to attach the ExpressRoute
 
-2. <img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image22.png" width="600">
+1. ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image13.png)
+1. ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image22.png)
+1. Click: Go to Resource
 
-3. Click: Go to Resource
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image1.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image1.png" width="200">
+<a name="createazureaddressspace"></a>
 
-###### *[Back to the Top](#toc)*
-## Create an address space and subnet<a name="createazureaddressspace"></a>
+## Create an address space and subnet
 
 1. Create an address space: (Example:10.1.0.0/16)
 
-***NOTE***: *If there are any other address spaces already defined, delete them. See example, remove 10.8.0.0/16 if it exists.*
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image9.png" width="800">
+    _**Note** If there are any other address spaces already defined, delete them. See example, remove 10.8.0.0/16 if it exists._
 
-2. Now create a /24 subnet that fits within that address space. (Example: 10.1.77.0/24 in the 10.1.0.0/16)
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image9.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image38.png" width="500">
+1. Now create a /24 subnet that fits within that address space. (Example: 10.1.77.0/24 in the 10.1.0.0/16)
 
-3. Name this subnet something like the following example: **{{site.Brand}}-DR-ExpressRoute-SN**
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image38.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image21.png" width="500">
+1. Name this subnet something like the following example: **{{site.Brand}}-DR-ExpressRoute-SN**
 
-You should now have 1 subnet defined:
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image21.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image8.png" width="500">
+    You should now have one subnet defined:
 
-###### *[Back to the Top](#toc)*
-## Create a Virtual Network Gateway<a name="createazureVNG"></a>
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image8.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image7.png" width="500">
+<a name="createazureVNG"></a>
+
+## Create a Virtual Network Gateway
+
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image7.png)
 
 1. Create a virtual network gateway, and name it similar to the following example: **{{site.Brand}}-DR-ExpressRoute-VNG**
 
-***NOTE***: *The virtual network gateway creates an IP endpoint that the Azure user interface calls **Public IP Address**. The Express Route connection created in this example **does not** send traffic to the public Internet. All the traffic will stay within the Azure Data center.*
+    _**Note** The virtual network gateway creates an IP endpoint that the Azure user interface calls **Public IP Address**. The Express Route connection created in this example **does not** send traffic to the public Internet. All the traffic will stay within the Azure Data center._
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image29.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image29.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image28.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image28.png)
 
-2. Click **Review + create**.
+1. Click **Review + create**.
 
-***NOTE***: *This Azure process can take 30+ minutes to complete.*
+    _**Note** This Azure process can take 30+ minutes to complete._
 
-3. Once done, click **Go to Resource**.
+1. Once done, click **Go to Resource**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image2.png" width="200">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image2.png)
 
-4. Review the values of your definition.
+1. Review the values of your definition.
 
-###### *[Back to the Top](#toc)*
-## Create Local Network Gateway<a name="createazureLNG"></a>
+<a name="createazureLNG"></a>
+
+## Create Local Network Gateway
 
 Define and create a Local Network Gateway.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image31.png" width="500">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image31.png)
 
 1. Fill out the values based on what has been defined so far:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image32.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image32.png)
 
-***NOTE***: *In our example 20.94.177.25 is the IP endpoint defined for the {{site.Brand}} side of the Express Route Connection, and 10.0.0.0/24 is the address space used by the {{site.Brand}} environment that we defined.*
+    _**Note** In our example 20.94.177.25 is the IP endpoint defined for the {{site.Brand}} side of the Express Route Connection, and 10.0.0.0/24 is the address space used by the {{site.Brand}} environment that we defined._
 
-2. Click **Review and create** to create the Local Network Gateway.
+1. Click **Review and create** to create the Local Network Gateway.
 
-***NOTE***: *This Azure process can take few minutes to complete.*
+    _**Note** This Azure process can take few minutes to complete._
 
-3. Click on **Go to Resource** to review your connection configuration.
+1. Click on **Go to Resource** to review your connection configuration.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image2.png" width="200">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image2.png)
 
-###### *[Back to the Top](#toc)*
-## Add all components to the Virtual Network Gateway<a name="hookupazureVNG"></a>
+<a name="hookupazureVNG"></a>
 
-1. Search for your previously defined Virtual Network Gateway (VNG) 
+## Add all components to the Virtual Network Gateway
 
-(Example: **{{site.Brand}}-DR-ExpressRoute-VNG**)
+1. Search for your previously defined Virtual Network Gateway (VNG)
 
-2. Click **Connections**.
+    (Example: **{{site.Brand}}-DR-ExpressRoute-VNG**)
 
-3. Click **+ Add**.
+1. Click **Connections**.
+1. Click **+ Add**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image23.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image23.png)
 
-4. Define the new connection inside the VNG:
+1. Define the new connection inside the VNG:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image47.png" width="400">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image47.png)
 
-* Authorization Key = The **Authorization Key** shown in the WAN
-definition within {{site.Brand}}.
+    * Authorization Key = The **Authorization Key** shown in the WAN definition within {{site.Brand}}.
+    * Peer circuit URI = The **Resource ID** shown in the WAN definition within {{site.Brand}}.
 
-* Peer circuit URI = The **Resource ID** shown in the WAN definition
-within {{site.Brand}}.
+<a name="createazuretestvm"></a>
 
-###### *[Back to the Top](#toc)*
-## Create test VM inside of Azure Native<a name="createazuretestvm"></a>
+## Create test VM inside of Azure Native
 
-In order to test the connection from {{site.Brand}} to Azure, add a VM to the
-defined subnet in the Azure VNet and attempt to **ping** it from the
-{{site.Brand}} WAN page.
+In order to test the connection from {{site.Brand}} to Azure, add a VM to the defined subnet in the Azure VNet and attempt to **ping** it from the {{site.Brand}} WAN page.
 
 1. Add a VM to the subnet defined in Azure.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image44.png" width="600">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image44.png)
 
-2. Create the test VM with these values:\
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image37.png" width="600">
+1. Create the test VM with these values:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image46.png" width="600">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image37.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image36.png" width="600">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image46.png)
 
-***NOTE***: *Set **Public IP** to **None** if you don't want access to the VM from the Internet. The VM will only have a private IP visible only from within Azure.*
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image36.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image48.png" width="600">
+    _**Note** Set **Public IP** to **None** if you don't want access to the VM from the Internet. The VM will only have a private IP visible only from within Azure._
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image26.png" width="600">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image48.png)
 
-3. Click **Review + create** to get to the final page.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image26.png)
 
-4. Click **Create** to create the VM in the Azure subnet.
+1. Click **Review + create** to get to the final page.
 
-***NOTE***: *It takes several minutes for the VM to be created in Azure.*
+1. Click **Create** to create the VM in the Azure subnet.
 
-5. Once created, click **Go to resource** and make sure the status says **Running**.
+    _**Note** It takes several minutes for the VM to be created in Azure._
 
-6. On the VM details page, look for the **Private IP Address**:
+1. Once created, click **Go to resource** and make sure the status says **Running**.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image5.png" width="400">
+1. On the VM details page, look for the **Private IP Address**:
 
-###### *[Back to the Top](#toc)*
-## Test end-to-end connection from {{site.Brand}} to Azure Native<a name="testconnection"></a>
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image5.png)
 
-1. In the {{site.Brand}} portal, go to the WAN definition that was created:\
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image19.png" width="700">
+<a name="testconnection"></a>
 
-2. Click **Test** and enter the Private IP address from the Azure portal
-page. In our example: 10.1.77.4
+## Test end-to-end connection from {{site.Brand}} to Azure Native
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image17.png" width="400">
+1. In the {{site.Brand}} portal, go to the WAN definition that was created:
 
-3. If everything is working, you should get **Pass** when pinging the Azure
-VM from {{site.Brand}}.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image19.png)
 
-4. Enable the Express Route Connection in {{site.Brand}}:
+1. Click **Test** and enter the Private IP address from the Azure portal page. In our example: 10.1.77.4
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image3.png" width="300">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image17.png)
 
-Once enabled, you can now attach {{site.Brand}} environments that includes VM
-and LPARs to this Express Route Connection.
+1. If everything is working, you should get **Pass** when pinging the Azure VM from {{site.Brand}}.
+1. Enable the Express Route Connection in {{site.Brand}}:
 
-###### *[Back to the Top](#toc)*
-## APPENDIX:<a name="appendix"></a>
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image3.png)
 
-## Connect AIX LPAR to Express Route<a name="connectaixviaexpressroute"></a>
+    Once enabled, you can now attach {{site.Brand}} environments that includes VM and LPARs to this Express Route Connection.
 
-Now that the Express Route Connection is working, start the AIX LPAR in
-your {{site.Brand}} Environment and attach the Express Route to it.
+<a name="appendix"></a>
+
+## Appendix
+
+<a name="connectaixviaexpressroute"></a>
+
+## Connect AIX LPAR to Express Route
+
+Now that the Express Route Connection is working, start the AIX LPAR in your {{site.Brand}} Environment and attach the Express Route to it.
 
 1. Find the original environment that you created in {{site.Brand}}:
 
-Once you click on it, you'll see this page.
+    Once you click on it, you'll see this page.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image27.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image27.png)
 
-2. Click on the **Power On** button to start the LPAR.
+1. Click on the **Power On** button to start the LPAR.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image41.png" width="300">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image41.png)
 
-***NOTE***: *Once powered on, the background of the LPAR will turn **green**, and you'll see some text on the little console icon.*
+    _**Note** Once powered on, the background of the LPAR will turn **green**, and you'll see some text on the little console icon._
 
-3. Click on **Network Settings**
+1. Click on **Network Settings**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image34.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image34.png)
 
-4. Then **Attach to WANs**
+1. Then **Attach to WANs**
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image42.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image42.png)
 
-5. Select the WAN definition that was previously created:
+1. Select the WAN definition that was previously created:
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image16.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image16.png)
 
-6. Click **Attach**, and then **Connect**.
+1. Click **Attach**, and then **Connect**.
+1. Then click **Close**.
+1. Click **Back** button in the upper left corner.
 
-7. Then click **Close**.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image10.png)
 
-8. Click **Back** button in the upper left corner.
+1. Open the AIX console.
+1. Click on the console icon, the terminal will open.
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image10.png" width="700">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image15.png)
 
-9. Open the AIX console.
+    _**Note** The default user and password below_
 
-10. Click on the console icon, the terminal will open.
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image43.png)
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image15.png" width="400">
+1. Finally ping the VM in Azure:
 
-***NOTE***: *The default user and password below*
+    ```bash
+    ping 10.1.77.4
+    ```
 
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image43.png" width="500">
-
-11. Finally ping the VM in Azure:
-
-```bash
-ping 10.1.77.4
-```
-
-<img src="https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image12.png" width="500">
+    ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/ExpressRoute/media/image12.png)
 
 Your {{site.Brand}} AIX LPAR is now communicating with a VM in Azure Native.
-###### *[Back to the Top](#toc)*

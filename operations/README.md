@@ -21,21 +21,3 @@ These are the disciplines we group in the operational excellence pillar:
 | [Phase 01C - Sizing and Design](./Sizing_Design/) | The monitoring and management of performance and availability of software applications through DevOps |
 | [Phase 01D - EcoSystem](./Ecosystems/) | How you deploy your application code is going to be one of the key factors that will determine your application stability  |
 | [Phase 01E - Testing](./Testing/) | Testing is fundamental to being prepared for the unexpected and to catch mistakes before they impact users | -->
-
-### Next steps
-
-**Main Overview**
-> [{{site.Brand}} Well-Architected Framework]({{ site.navigation.Home }})
-
-**Operational Excellence**
-> [{{site.Brand}} Operational Excellence Pillar]({{ site.navigation.Operations }})
-> * [Power Discovery]({{ site.navigation.Operations }}Discovery/)
-> * [Connectivity]({{ site.navigation.Operations }}connectivity/)
-> * [Ecosystems]({{ site.navigation.Operations }}ecosystems/)
-> * [Performance]({{ site.navigation.Operations }}performance/)
-
-**Resiliency**
-> [{{site.Brand}} Resiliency Pillar]({{ site.navigation.Resiliency }})
-
-**Security**
-> [{{site.Brand}} Security Pillar]({{ site.navigation.Security }})
