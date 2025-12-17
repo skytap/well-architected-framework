@@ -56,7 +56,8 @@ This document does not provide you with any legal rights to any intellectual pro
 **Requirements:**
 
 * HMC Scanner runs on the Java Runtime Environment (Version 8) can be downloaded from the link below.
-    ![https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
+
+    [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
 
 * Requires network access from the Windows PC to the HMC.
 * This requires access to the HMC, hscroot ID and PW.
@@ -97,9 +98,9 @@ The tool is constantly updated to match changes in tool syntax, to manage new da
 
 This tool is not officially supported by IBM. No guarantee is given or implied, and you cannot obtain help from IBM. It is a personal project of the author, Federico Vagnini (IBM Italy).
 
-See also <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/pGraph" target="_blank">pGraph</a> page form the same author. It allows multiple nmon, vmstat, iostat, sar, lslparutil files to be loaded regardless of their size. Graphs are provided together with a very useful \"time zoom\" that allows you to select the time period to show.
+See also [pGraph](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/pGraph) page form the same author. It allows multiple nmon, vmstat, iostat, sar, lslparutil files to be loaded regardless of their size. Graphs are provided together with a very useful \"time zoom\" that allows you to select the time period to show.
 
-<a href="https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats" target="_blank">https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats</a>
+[https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats](https://www.ibm.com/support/pages/hmc-scanner-power-server-config-and-performance-stats)
 
 ### Running HMC Scanner on Windows PC<a name="HMCWindows"></a>
 
@@ -153,11 +154,13 @@ IBM i operating systems automatically collect hardware and performance data via 
 <hr>
 
 ##### Examples of IBM i commands from each partition:
+
 ```bash
 > crtsavf qgpl/pfrcustnam
 > savobj obj(\*mgtcol) lib(qpfrdata) dev(\*savf)
 > savf(qgpl/pfrcustnam) dtacpr(\*yes)
 ```
+
 Then send the save file pfrcustnam to {{site.Brand}}.
 
 A {{site.Brand}} Cloud Solutions Architect or Cloud Solutions Engineer will then do the following on an IBM i VM for your data:
@@ -344,11 +347,11 @@ File should be between 5-10MB.
 
 2. Click on one of the hostname_date_topas_cvs to see the one day with Google Chart
 
-![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image15.png" width="300">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image15.png)
 
 It will launch the browser to view the data for the one day with Google Chart. Just click on any of the tabs at the top. The example below is the Physical CPU graph:
 
-![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image16.png" width="700">
+![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/powerdiscoveryinframedia/media/image16.png)
 
 ### Option 02: Collecting existing nmon data<a name="existingnmon"></a>
 
