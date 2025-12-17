@@ -9,6 +9,7 @@ permalink: /security/internal-networking/
 Several of these architectural building blocks are duplicated in the Edge Networking section and this is by design, each environment should be secured independently of each other by creating a defense in depth approach. This means that if one layer is compromised the crown jewels will still be secure.
 
 ![Internal networking required capabilities](https://skytap.github.io/well-architected-framework/security/internalnetworkingmedia/media/image1.png)
+
 _Figure 1 – Internal networking required capabilities_
 
 Two additional services present in the environment internal networking, a Service Mesh and DNS/Service Discovery. A Service Mesh allows for secured communication between application components or virtual machines, though typically microservices, but can also fulfil some of the functionality of a firewall. DNS and Service Discovery allows the automated discovery of application services within an environment, for example Domain Services.

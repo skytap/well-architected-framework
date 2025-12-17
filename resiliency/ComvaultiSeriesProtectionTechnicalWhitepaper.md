@@ -133,6 +133,7 @@ The Commvault IBM iDataAgent supports the IBM i/OS versions 6.1, 7.1, 7.2 and 7.
 The Commvault iDataAgent has a minimal footprint on each Logical Partition (LPAR) on which it is installed. The agent also requires a location for the job results and logging directory. Other requirements include the use of a TCP/IP port with sufficient bandwidth to manage the data backup load within the planned backup window. The agent uses a Linux Proxy for data streaming and communications between the IBM i and the data repository target.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image4.png)
+
 _Figure 1 – Linux proxy architecture options_
 
 The Linux Proxy can be either a physical or virtual system and can be hosted on the IBM i host system (as a Linux LPAR) or be a separate entity on its own. If deduplication is to be used the Media Agent managing the deduplication database must be on an X86 architecture system.
@@ -148,6 +149,7 @@ _IBM TivoliStorage Manager (TSM) Version 6.2 reached End of Support (EOS) on Apr
 Similar to IBM's BRMS Control Groups and Policies, Commvault software uses Backup Sets, SubClients and Policies to allow the complete and unattended data protection for the IBM i application libraries, objects and files. Figure 2 below illustrates the relationship between the logical hierarchy of Client systems, Data Sets, and subclients as depicted within the system's graphical interface.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image5a.png)
+
 _Figure 2 – Client, backup set and subclient logical hierarchy_
 
 <a name="backupsets"></a>
@@ -178,6 +180,7 @@ As part of the IBM i IFS backup capabilities, Commvault software provides a pre-
 Figure 3, illustrates the Pre-defined BRMS Equivalency SubClient Option.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image7a.png)
+
 _Figure 3: BRMS equivalency subclient content options_
 
 Selecting all six of the BRMS equivalent Control Group check boxes in the Commvault Pre-Defined subclient interface would backup the same
@@ -220,6 +223,7 @@ _**Table 1 – Commvault Pre-Defined Content and Minimal OS Tape image vs. BRMS 
 The Library File System architecture used by the IBM i application libraries is unique. It is an object oriented file system relying heavily on the internal DB2 database of the OS to manage application libraries and their objects and members. Hence, like other of Commvault's application aware and database agents, the IBM iDataAgent must be aware of the elements it is working with, their type and relationships (physical, and logical associations and hierarchy) to other elements and their current state.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image11.jpeg)
+
 _Figure 4: Save-while-active options_
 
 Many of the application libraries need to be quiesced and/or synchronized before being backed up. Several options are allowed for by the IBM i API for managing this need. Commvault software uses the Save-While-Active API (Figure 4), to enable consistent backups of these database dependent application libraries.
@@ -227,6 +231,7 @@ Many of the application libraries need to be quiesced and/or synchronized before
 In tandem with these Save-While-Active options, are settings for Wait-Time which determines how long to pause for the libraries to quiesce and synch. If they fail to reach a synchronized state the item will fail and the backup will proceed. Failed items will be listed in the log files, the job details and the Jobs Report and if desired an email or SNMP alert can be generated. As shown in Figure 5 below, there are additional enablement settings for the SYNCLIB option.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/commvaultmedia/image12.jpeg)
+
 _Figure 5: Save-while-active SYNCLIB options_
 
 The Synchronization Queue is used to specify the message queue that the IBM i save operation uses to notify the user that the checkpoint process for a library is complete. If there is a command that needs to be run to synchronize an application, it can be set in the synchronization command line field. Commvault software also supports pre- and post-scripts for all backup and restore jobs. The order in which these commands would be executed (if they were all used within a single job) is:

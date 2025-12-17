@@ -40,7 +40,8 @@ This document does not provide you with any legal rights to any intellectual pro
 ## Reference Architecture
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image2.jpeg)
-_Figure 1 : Azure Netapp files for {{site.Brand}}_
+
+_Figure 1 – Azure Netapp files for {{site.Brand}}_
 
 <a name="azure-netapp-files-anf"></a>
 
@@ -49,7 +50,8 @@ _Figure 1 : Azure Netapp files for {{site.Brand}}_
 The Azure NetApp Files (ANF) service is an enterprise-class, high-performance, metered file storage service. It supports any workload type and is highly available by default. You can select service and performance levels and set up snapshots through the service.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/ecosystems/azurenative/solutions/AzureNetAppFiles/media/image3.png)
-_Figure 2: Storage Hierarchy for ANF_
+
+_Figure 2 – Storage Hierarchy for ANF_
 
 <a name="performance"></a>
 

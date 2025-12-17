@@ -15,6 +15,7 @@ For each of these areas and subsections this document will provide standardized 
 The {{site.Brand}} platform provides controls for security policies; notifications; authentication, authorization and accounting, and auditing.
 
 ![Platform required capabilities](https://skytap.github.io/well-architected-framework/security/media/image4.png)
+
 _Figure 1 – Platform required capabilities_
 
 ### Security Policies
@@ -24,6 +25,7 @@ The security policies control access to the platform for authenticated users. Th
 More information on access policies is available [here](https://help.skytap.com/setting-access-policies.html).
 
 ![Access policies available within the {{site.Brand}} dashboard](https://skytap.github.io/well-architected-framework/security/media/image5.png)
+
 _Figure 2 - Access policies available within the {{site.Brand}} dashboard_
 
 ### Notifications
@@ -127,6 +129,7 @@ Projects support the concept of an Automatic Role; this role is granted to every
 **Scenario:** The organization wants to control and manage a set of company-wide golden templates in your customer account. A small set of users to maintain the templates (template creators), and all other users in the account will have permission to create environments from those templates (template users).
 
 ![Example of project implementation](https://skytap.github.io/well-architected-framework/security/media/image6.png)
+
 _Figure 3 - Example of project implementation_
 
 **Solution:** Create 2 projects:

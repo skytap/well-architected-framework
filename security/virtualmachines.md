@@ -9,6 +9,7 @@ permalink: /security/virtual-machines/
 The virtual machines capability encompasses VM templates; authentication, authorization, and accounting; patching; antivirus; HIDS/HIPS; and firewall. This area relates to the environments running in {{site.Brand}} and any templates associated with them.
 
 ![Virtual Machine Required Capabilities](https://skytap.github.io/well-architected-framework/security/virtualmachinesmedia/media/image1.png)
+
 _Figure 15 – virtual machine required capabilities_
 
 #### VM templates

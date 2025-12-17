@@ -9,6 +9,7 @@ permalink: /security/security-management/
 The Management layer sometimes referred to as *shared services*, contains the components necessary to secure and enforce compliance on the workloads running on {{site.Brand}}.
 
 ![Management required capabilities_](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/edgenetworkingmedia/media/image1.png)
+
 _Figure 8 – Management required capabilities_
 
 The {{site.Brand}} cloud service runs IBM Power, with operating systems such as AIX, IBM i, Linux, and x86 workloads, with operating systems such as Linux and Windows. Although operating systems that run on Power are less numerous than x86, threat actors still target these platforms given they are more likely to hold valuable data. Also, should these workloads be connected back to corporate assets in other clouds or on-premises they then represent a vector for malware to propagate to other systems and services.
@@ -28,11 +29,13 @@ A [**Backup**](../resiliency/) strategy should encompass the native capabilities
 These components translate into an architecture that approximates the following:
 
 ![Example management architecture implemented in {{site.Brand}}](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image7.png)
+
 _Figure 9 – Example management architecture implemented in {{site.Brand}}_
 
 These services are controlled and managed by corporate administrators accessing via the VPN/private connection. The services are then made available to workloads within {{site.Brand}} through the use of an Inter Configuration Network Routing ([ICNR](https://help.skytap.com/Networking_Between_Environments.html#ICNRoverview)), this is a low touch automated mechanism to connect logically distinct environments. Transit through an ICNRs is not possible; therefore, multiple environments of a different security profile can be connected via a Shared environment, but traffic cannot flow.
 
 ![Transit ICNR traffic is automatically denied](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image8.png)
+
 _Figure 10 – Transit ICNR traffic is automatically denied_
 
 #### Antivirus
@@ -76,6 +79,7 @@ This process uses BigFix in fully automated mode to minimize patching effort and
 1. Deployment patch check: When the {{site.Brand}} instance is deployed and active, the application platforms in the template check-in with the Big-Fix server.
 
 ![Server instances are verified and patching updates are identified.](https://raw.githubusercontent.com/skytap/well-architected-framework/master/security/media/image9.png)
+
 _Figure 11 – Server instances are verified and patching updates are identified._
 
 1. Pull patches down: For those application instances requiring an update, the patches are deployed and applied to the necessary instances.

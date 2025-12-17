@@ -49,9 +49,11 @@ All of this is transparent to the LPAR as it sees standard SCSI disks made avail
 ** **
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg1.png)
+
 _Figure 1 – {{site.SoA}} Physical Storage Architecture for Power Workloads_
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg5.png)
+
 _Figure 2 – {{site.SoA}} Physical to Virtual Storage Architecture for Power Workloads_
 
 ### Caching
@@ -100,6 +102,7 @@ Before data reaches {{site.Brand}}’s storage subsystem, CPU, memory, and netwo
 The primary factors that impact application performance are block size, number of disks, number of controllers, multi-threading, and queue depth. Not all applications may allow you to control all aspects. For example, IBM i doesn’t allow you to change queue depth and uses a default queue depth of 32. Oracle databases often are configured at a specific block size of 4K and it can’t be changed unless you back up the database and restore it to a new one with the new block size.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg3.png)
+
 _Figure 3 – Optimizing IOPS, throughput and latency for IBM Power workloads_
 
 Understanding the IO requirements of your application is important and starts at the migration planning stage. {{site.SoA}} storage technology differs from on-premises. For example, on-premises Power workloads often used Fiber Channel based Storage Area Networks (SANs) vs. {{site.SoA}} using iSCSI across a ZFS based storage subsystem using SSD JBODS (Just a bunch of disks).
@@ -111,6 +114,7 @@ Understanding the IO requirements of your application is important and starts at
 Figure 4 below summarizes the best performing configurations by block size. These tests were done using NDISK64 running on AIX with data evenly distributed across all disks. A read/write ratio of 80%/20% was used as that is common in many databases. It is important to note that we look at the average **peak** latency as a relationship to block size instead of average latency. The reason is that average latency tends to be in the range of .2ms to .5ms, and it is the peak latencies that increase when the LPAR is under heavy IO load that causes application issues.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/Discovery/discoveryworkloadsmedia/spimg4a.png)
+
 _Figure 4 – {{site.SoA}} Power Storage Performance for IBM Power workloads by Block Size_
 
 ## Conclusion

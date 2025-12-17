@@ -18,11 +18,13 @@ Firewalls, Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (I
 When providing Internet or VPN access, this stack is typically implemented, as below. With the reverse being true for outbound traffic.
 
 ![Typical traffic flow](https://skytap.github.io/well-architected-framework/security/edgenetworkingmedia/media/image2.png)
+
 _Figure 1 - Typical traffic flow_[^1]
 
 #### Example high-level design
 
 ![Example Internet and VPN connection scheme](https://skytap.github.io/well-architected-framework/security/edgenetworkingmedia/media/image3.png)
+
 _Figure 2 – Example Internet and VPN connection scheme_
 
 ----------------------------------------------------------------------------------
@@ -69,6 +71,7 @@ The {{site.Brand}} [site-to-site VPN](https://help.skytap.com/vpn-configuration-
 The {{site.Brand}} site-to-site VPN secures traffic that traverses the public Internet, but not private connectivity. Multiple VPNs can be created for high availability and to connect multiple corporate data centers to {{site.Brand}}.
 
 ![Example VPN connection scheme](https://skytap.github.io/well-architected-framework/security/edgenetworkingmedia/media/image4.png)
+
 _Figure 3 - Example VPN connection scheme_
 
 ##### Private Network Connection (PNC)
@@ -78,6 +81,7 @@ An Azure ExpressRoute or Equinix Cloud Hub connection are referred to as Private
 In the example below, the PNC connects the on-premises data center with the {{site.Brand}} cloud environments. It should be noted that while this connection is private, using Multiprotocol Label Switching (MPLS), which logically isolates traffic;  it is not encrypted, however.
 
 ![Example private connection scheme](https://skytap.github.io/well-architected-framework/security/edgenetworkingmedia/media/image5.png)
+
 _Figure 4 - Example private connection scheme_
 
 When a PNC is used traffic between {{site.Brand}} and the on-premises data center or other cloud providers should be encrypted at the edge of the environment using a firewall to create the site-to-site connection or by using point-to-point encryption from a service mesh network. Service mesh networking is covered in the **Internal networking** section of this document.

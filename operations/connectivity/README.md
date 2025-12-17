@@ -13,6 +13,7 @@ Building a reliable network in the cloud is different from traditional on-premis
 **{{site.Brand}}-owned versus customer-owned responsibilities**
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/operations/connectivity/media/image1.png)
+
 _Figure 2 – Shared Responsibility Model_
 
 ## Choosing the right design
