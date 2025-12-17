@@ -33,7 +33,7 @@ Here is a high-level look at the {{site.SoA}} general architecture.
 
 ![](https://raw.githubusercontent.com/skytap/well-architected-framework/master/resiliency/migrationmedia/media/image2.png)
 
-## {site.SoA}}: {{site.Azure}} region, {{site.Brand}} region and connection to {{site.Azure}} native services
+## {{site.SoA}}: {{site.Azure}} region, {{site.Brand}} region and connection to {{site.Azure}} native services
 
 Within a given {{site.Azure}} region, {{site.Brand}} standard Power VMs and x86 VMs and {{site.Azure}}-dedicated S922 and x86 bare metal and storage are connected via ExpressRoute to {{site.Azure}} native services.
 
